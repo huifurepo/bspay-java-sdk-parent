@@ -11,9 +11,38 @@
 
 ## 安装依赖
 推荐通过Maven来管理项目依赖，您只需在项目的`pom.xml`文件中声明如下依赖
-```xml
-张卿提供
-```
+        
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.70</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+            <version>4.5.2</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpmime</artifactId>
+            <version>4.5.2</version>
+        </dependency>
+
+        <!-- util -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.6</version>
+        </dependency>
+
+        <!-- okhttp -->
+        <dependency>
+            <groupId>com.squareup.okhttp3</groupId>
+            <artifactId>okhttp</artifactId>
+            <version>4.9.1</version>
+        </dependency>
 
 ## 快速使用
 1. 安装好依赖库保证运行环境没问题，可直接运行SDK demo，如调用商户详细信息查询正常返回说明运行环境配置成功；
