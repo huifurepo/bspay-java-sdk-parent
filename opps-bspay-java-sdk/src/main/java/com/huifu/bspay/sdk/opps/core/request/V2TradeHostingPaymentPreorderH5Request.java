@@ -1,0 +1,124 @@
+package com.huifu.bspay.sdk.opps.core.request;
+
+import com.alibaba.fastjson.annotation.JSONField;
+import com.huifu.bspay.sdk.opps.core.enums.FunctionCodeEnum;
+
+/**
+ * H5、PC预下单接口
+ *
+ * @author sdk-generator
+ * @Description
+ */
+public class V2TradeHostingPaymentPreorderH5Request extends BaseRequest {
+
+    /**
+     * 请求日期
+     */
+    @JSONField(name = "req_date")
+    private String reqDate;
+    /**
+     * 请求流水号
+     */
+    @JSONField(name = "req_seq_id")
+    private String reqSeqId;
+    /**
+     * 商户号
+     */
+    @JSONField(name = "huifu_id")
+    private String huifuId;
+    /**
+     * 交易金额
+     */
+    @JSONField(name = "trans_amt")
+    private String transAmt;
+    /**
+     * 商品描述
+     */
+    @JSONField(name = "goods_desc")
+    private String goodsDesc;
+    /**
+     * 预下单类型
+     */
+    @JSONField(name = "pre_order_type")
+    private String preOrderType;
+    /**
+     * 半支付托管扩展参数集合
+     */
+    @JSONField(name = "hosting_data")
+    private String hostingData;
+
+    @Override
+    public FunctionCodeEnum getFunctionCode() {
+        return FunctionCodeEnum.V2_TRADE_HOSTING_PAYMENT_PREORDER;
+    }
+
+    public V2TradeHostingPaymentPreorderH5Request() {
+    }
+
+    public V2TradeHostingPaymentPreorderH5Request(String reqDate, String reqSeqId, String huifuId, String transAmt, String goodsDesc, String preOrderType, String hostingData) {
+        this.reqDate = reqDate;
+        this.reqSeqId = reqSeqId;
+        this.huifuId = huifuId;
+        this.transAmt = transAmt;
+        this.goodsDesc = goodsDesc;
+        this.preOrderType = preOrderType;
+        this.hostingData = hostingData;
+    }
+
+    public String getReqDate() {
+        return reqDate;
+    }
+
+    public void setReqDate(String reqDate) {
+        this.reqDate = reqDate;
+    }
+
+    public String getReqSeqId() {
+        return reqSeqId;
+    }
+
+    public void setReqSeqId(String reqSeqId) {
+        this.reqSeqId = reqSeqId;
+    }
+
+    public String getHuifuId() {
+        return huifuId;
+    }
+
+    public void setHuifuId(String huifuId) {
+        this.huifuId = huifuId;
+    }
+
+    public String getTransAmt() {
+        return transAmt;
+    }
+
+    public void setTransAmt(String transAmt) {
+        this.transAmt = transAmt;
+    }
+
+    public String getGoodsDesc() {
+        return goodsDesc;
+    }
+
+    public void setGoodsDesc(String goodsDesc) {
+        this.goodsDesc = goodsDesc;
+    }
+
+    public String getPreOrderType() {
+        return preOrderType;
+    }
+
+    public void setPreOrderType(String preOrderType) {
+        this.preOrderType = preOrderType;
+    }
+
+    public String getHostingData() {
+        return hostingData;
+    }
+
+    public void setHostingData(String hostingData) {
+        this.hostingData = hostingData;
+    }
+
+}

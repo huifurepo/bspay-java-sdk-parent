@@ -1,0 +1,20 @@
+[如何打包]
+1，修改版本
+1.1修改sdk pom文件中的打包版本
+opps-bspay-java-sdk\pom.xml 1处
+bspay-java-sdk-sample\pom.xml 2处（本身版本1个、依赖1个）
+1.2修改埋点版本
+com.huifu.bspay.sdk.opps.core.net.AbstractRequest 中SDK_VERSION的版本，保持上述版本一致
+
+2，执行打包命令
+cd 进入bspay-java-sdk-parent目录
+执行mvn clean install -Dmaven.test.skip=true
+
+3,拷贝生成物
+目录 bspay-java-sdk-sample/target 下源码包
+dg-demo-version-sources.jar
+目录 bspay-java-sdk-sample/target 下源码包和jar包
+dg-java-sdk-version.jar
+dg-java-sdk-version-sources.jar
+
+4 所有jar包总体打成一个zip传递给产品
