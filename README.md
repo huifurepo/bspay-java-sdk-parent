@@ -6,12 +6,17 @@
 1.  斗拱SDK for Java 需要使用`JKD 1.8`或其以上版本。
 2.  SDK接入准备
    - 提交商户材料完成进件及相关业务配置；
-   - 登录控台获取/配置密钥，参见[《商户密钥操作说明》](sdk_java_myczsm.md)；
+   - 登录控台获取/配置密钥，参见[《商户密钥操作说明》](http://paas.huifutest.com/partners/devtools/#/sdk_java_myczsm)；
 3.  准备工作完成后，注意保存如下信息，后续将作为使用SDK的输入。`商户的私钥`、`商户的公钥`、`汇付的公钥`；
 
 ## 安装依赖
 推荐通过Maven来管理项目依赖，您只需在项目的`pom.xml`文件中声明如下依赖
         
+        <dependency>
+          <groupId>com.huifu.bspay.sdk</groupId>
+          <artifactId>dg-java-sdk</artifactId>
+          <version>3.0.2</version>
+        </dependency>
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>
