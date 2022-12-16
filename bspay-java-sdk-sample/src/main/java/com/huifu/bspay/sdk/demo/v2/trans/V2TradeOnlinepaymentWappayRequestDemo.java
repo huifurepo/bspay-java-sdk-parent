@@ -11,7 +11,7 @@ import com.huifu.bspay.sdk.demo.core.Identify;
 import com.huifu.bspay.sdk.opps.core.request.V2TradeOnlinepaymentWappayRequest;
 
 /**
- * 手机网页支付 - 示例
+ * 手机WAP支付 - 示例
  *
  * @author sdk-generator
  * @Description
@@ -40,8 +40,6 @@ public class V2TradeOnlinepaymentWappayRequestDemo extends BaseCommonDemo {
         request.setRiskCheckData(getRiskCheckData());
         // 设备信息
         request.setTerminalDeviceData(getTerminalDeviceData());
-        // 银行卡号
-        request.setBankCardNo("6222021102043040313");
         // 页面跳转地址
         request.setFrontUrl("http://www.baidu.com");
         // 异步通知地址
@@ -65,6 +63,8 @@ public class V2TradeOnlinepaymentWappayRequestDemo extends BaseCommonDemo {
         Map<String, Object> extendInfoMap = new HashMap<>();
         // 分账对象
         extendInfoMap.put("acct_split_bunch", getAcctSplitBunchRucan());
+        // 银行卡号
+        extendInfoMap.put("bank_card_no", "6222021102043040313");
         // 延时标记
         extendInfoMap.put("delay_acct_flag", "N");
         // 交易有效期
@@ -85,17 +85,17 @@ public class V2TradeOnlinepaymentWappayRequestDemo extends BaseCommonDemo {
         // 设备类型
         dto.put("device_type", "1");
         // 交易设备gps
-        dto.put("device_gps", "");
+        // dto.put("device_gps", "");
         // 交易设备iccid
-        dto.put("device_icc_id", "");
+        // dto.put("device_icc_id", "");
         // 交易设备imei
-        dto.put("device_imei", "");
+        // dto.put("device_imei", "");
         // 交易设备imsi
-        dto.put("device_imsi", "");
+        // dto.put("device_imsi", "");
         // 交易设备mac
-        dto.put("device_mac", "");
+        // dto.put("device_mac", "");
         // 交易设备wifimac
-        dto.put("device_wifi_mac", "");
+        // dto.put("device_wifi_mac", "");
 
         return dto.toJSONString();
     }
@@ -105,11 +105,11 @@ public class V2TradeOnlinepaymentWappayRequestDemo extends BaseCommonDemo {
         // ip地址
         dto.put("ip_addr", "111");
         // 基站地址
-        dto.put("base_atation", "");
+        // dto.put("base_atation", "");
         // 纬度
-        dto.put("latitude", "");
+        // dto.put("latitude", "");
         // 经度
-        dto.put("longitude", "");
+        // dto.put("longitude", "");
 
         return dto.toJSONString();
     }
@@ -117,9 +117,11 @@ public class V2TradeOnlinepaymentWappayRequestDemo extends BaseCommonDemo {
     private static JSON getAcctInfos() {
         JSONObject dto = new JSONObject();
         // 支付金额
-        dto.put("div_amt", "");
+        // dto.put("div_amt", "");
         // 被分账方ID
-        dto.put("huifu_id", "");
+        // dto.put("huifu_id", "");
+        // 账户号
+        // dto.put("acct_id", "");
 
         JSONArray dtoList = new JSONArray();
         dtoList.add(dto);

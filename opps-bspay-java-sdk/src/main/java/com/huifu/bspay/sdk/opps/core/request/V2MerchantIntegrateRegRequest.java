@@ -71,6 +71,16 @@ public class V2MerchantIntegrateRegRequest extends BaseRequest {
      */
     @JSONField(name = "card_info")
     private String cardInfo;
+    /**
+     * 取现配置列表jsonArray格式 ；
+     */
+    @JSONField(name = "cash_config")
+    private String cashConfig;
+    /**
+     * 结算配置jsonObject格式；
+     */
+    @JSONField(name = "settle_config")
+    private String settleConfig;
 
     @Override
     public FunctionCodeEnum getFunctionCode() {
@@ -80,7 +90,7 @@ public class V2MerchantIntegrateRegRequest extends BaseRequest {
     public V2MerchantIntegrateRegRequest() {
     }
 
-    public V2MerchantIntegrateRegRequest(String reqSeqId, String reqDate, String upperHuifuId, String entType, String regName, String busiType, String detailAddr, String provId, String areaId, String districtId, String contactInfo, String cardInfo) {
+    public V2MerchantIntegrateRegRequest(String reqSeqId, String reqDate, String upperHuifuId, String entType, String regName, String busiType, String detailAddr, String provId, String areaId, String districtId, String contactInfo, String cardInfo, String cashConfig, String settleConfig) {
         this.reqSeqId = reqSeqId;
         this.reqDate = reqDate;
         this.upperHuifuId = upperHuifuId;
@@ -93,6 +103,8 @@ public class V2MerchantIntegrateRegRequest extends BaseRequest {
         this.districtId = districtId;
         this.contactInfo = contactInfo;
         this.cardInfo = cardInfo;
+        this.cashConfig = cashConfig;
+        this.settleConfig = settleConfig;
     }
 
     public String getReqSeqId() {
@@ -189,6 +201,22 @@ public class V2MerchantIntegrateRegRequest extends BaseRequest {
 
     public void setCardInfo(String cardInfo) {
         this.cardInfo = cardInfo;
+    }
+
+    public String getCashConfig() {
+        return cashConfig;
+    }
+
+    public void setCashConfig(String cashConfig) {
+        this.cashConfig = cashConfig;
+    }
+
+    public String getSettleConfig() {
+        return settleConfig;
+    }
+
+    public void setSettleConfig(String settleConfig) {
+        this.settleConfig = settleConfig;
     }
 
 }

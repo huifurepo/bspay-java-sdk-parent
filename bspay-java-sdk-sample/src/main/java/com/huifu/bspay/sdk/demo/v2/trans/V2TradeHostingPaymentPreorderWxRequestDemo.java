@@ -65,6 +65,8 @@ public class V2TradeHostingPaymentPreorderWxRequestDemo extends BaseCommonDemo {
         extendInfoMap.put("acct_split_bunch", getAcctSplitBunchRucan());
         // 异步通知地址
         extendInfoMap.put("notify_url", "https://callback.service.com/xx");
+        // 交易失效时间
+        // extendInfoMap.put("time_expire", "");
         return extendInfoMap;
     }
 
@@ -85,7 +87,7 @@ public class V2TradeHostingPaymentPreorderWxRequestDemo extends BaseCommonDemo {
         // 应用ID
         dto.put("seq_id", "系统应用ID");
         // 私有信息
-        dto.put("private_info", "");
+        // dto.put("private_info", "");
 
         return dto.toJSONString();
     }

@@ -6,13 +6,73 @@ package com.huifu.bspay.sdk.opps.core.enums;
  */
 public enum FunctionCodeEnum {
     /**
+     * 网银支付接口
+     */
+    V2_TRADE_ONLINEPAYMENT_BANKING_FRONTPAY("v2.trade.onlinepayment.banking.frontpay", "网银支付接口"),
+    /**
+     * 微信支付宝预授权完成撤销
+     */
+    V2_TRADE_PAYMENT_PREAUTHPAYCANCEL_REFUND("v2.trade.payment.preauthpaycancel.refund", "微信支付宝预授权完成撤销"),
+    /**
+     * 微信支付宝预授权完成
+     */
+    V2_TRADE_PREAUTHPAY("v2.trade.preauthpay", "微信支付宝预授权完成"),
+    /**
+     * 微信支付宝预授权撤销
+     */
+    V2_TRADE_PAYMENT_PREAUTHCANCEL_REFUND("v2.trade.payment.preauthcancel.refund", "微信支付宝预授权撤销"),
+    /**
+     * 微信支付宝预授权
+     */
+    V2_TRADE_PREAUTH("v2.trade.preauth", "微信支付宝预授权"),
+    /**
+     * 支付宝申诉提交凭证
+     */
+    V2_MERCHANT_COMPLAINT_SUBMIT_CERTIFICATES("v2.merchant.complaint.submit.certificates", "支付宝申诉提交凭证"),
+    /**
+     * 支付宝申诉查询
+     */
+    V2_MERCHANT_COMPLAINT_QUERY_STATUS("v2.merchant.complaint.query.status", "支付宝申诉查询"),
+    /**
+     * 支付宝申诉请求凭证
+     */
+    V2_MERCHANT_COMPLAINT_REQUEST_CERTIFICATES("v2.merchant.complaint.request.certificates", "支付宝申诉请求凭证"),
+    /**
+     * 支付宝投诉查询
+     */
+    V2_MERCHANT_COMPLAINT_ALI_RISKINFO_QUERY("v2.merchant.complaint.ali.riskinfo.query", "支付宝投诉查询"),
+    /**
+     * 查询投诉协商历史
+     */
+    V2_MERCHANT_COMPLAINT_HISTORY_QUERY("v2.merchant.complaint.history.query", "查询投诉协商历史"),
+    /**
+     * 查询投诉单列表及详情
+     */
+    V2_MERCHANT_COMPLAINT_LIST_INFO_QUERY("v2.merchant.complaint.list.info.query", "查询投诉单列表及详情"),
+    /**
+     * 图片下载
+     */
+    V2_MERCHANT_COMPLAINT_DOWNLOAD_PICTURE("v2.merchant.complaint.download.picture", "图片下载"),
+    /**
+     * 更新退款审批结果
+     */
+    V2_MERCHANT_COMPLAINT_UPDATE_REFUNDPROGRESS("v2.merchant.complaint.update.refundprogress", "更新退款审批结果"),
+    /**
+     * 回复用户
+     */
+    V2_MERCHANT_COMPLAINT_REPLY("v2.merchant.complaint.reply", "回复用户"),
+    /**
+     * 反馈处理完成
+     */
+    V2_MERCHANT_COMPLAINT_COMPLETE("v2.merchant.complaint.complete", "反馈处理完成"),
+    /**
      * 商户统一进件（页面版）
      */
     V2_MERCHANT_URL_FORWARD("v2.merchant.url.forward", "商户统一进件（页面版）"),
     /**
-     * 商户AT商户号查询
+     * 商户微信支付宝ID查询
      */
-    V2_MERCHANT_BUSI_MERCODE_QUERY("v2.merchant.busi.mercode.query", "商户AT商户号查询"),
+    V2_MERCHANT_BUSI_MERCODE_QUERY("v2.merchant.busi.mercode.query", "商户微信支付宝ID查询"),
     /**
      * 银行转账资金流水查询
      */
@@ -138,9 +198,9 @@ public enum FunctionCodeEnum {
      */
     V2_TERMINALDEVICE_DEVICEINFO_ADD("v2.terminaldevice.deviceInfo.add", "新增终端报备"),
     /**
-     * 商户终端信息查询
+     * 绑定终端信息查询
      */
-    V2_TERMINALDEVICE_DEVICEINFO_QUERY("v2.terminaldevice.deviceInfo.query", "商户终端信息查询"),
+    V2_TERMINALDEVICE_DEVICEINFO_QUERY("v2.terminaldevice.deviceInfo.query", "绑定终端信息查询"),
     /**
      * 银联活动商户信息查询
      */
@@ -186,9 +246,9 @@ public enum FunctionCodeEnum {
      */
     V2_TRADE_ONLINEPAYMENT_BANKPAY_PAGEINFO("v2.trade.onlinepayment.bankpay.pageinfo", "网银支付"),
     /**
-     * 手机网页支付
+     * 手机WAP支付
      */
-    V2_TRADE_ONLINEPAYMENT_WAPPAY("v2.trade.onlinepayment.wappay", "手机网页支付"),
+    V2_TRADE_ONLINEPAYMENT_WAPPAY("v2.trade.onlinepayment.wappay", "手机WAP支付"),
     /**
      * 网银付款银行账户查询
      */
@@ -198,9 +258,9 @@ public enum FunctionCodeEnum {
      */
     V2_TRADE_WXUSERMARK_QUERY("v2.trade.wxusermark.query", "微信用户标识查询接口"),
     /**
-     * 银联APP支付接口
+     * 银联统一在线收银台接口
      */
-    V2_TRADE_ONLINEPAYMENT_UNIONPAY("v2.trade.onlinepayment.unionpay", "银联APP支付接口"),
+    V2_TRADE_ONLINEPAYMENT_UNIONPAY("v2.trade.onlinepayment.unionpay", "银联统一在线收银台接口"),
     /**
      * 获取银联用户标识接口
      */
@@ -350,29 +410,29 @@ public enum FunctionCodeEnum {
      */
     V2_QUICKBUCKLE_APPLY("v2.quickbuckle.apply", "快捷绑卡申请接口"),
     /**
-     * 快捷/代扣绑卡确认接口
+     * 快捷绑卡确认接口
      */
-    V2_QUICKBUCKLE_CONFIRM("v2.quickbuckle.confirm", "快捷/代扣绑卡确认接口"),
+    V2_QUICKBUCKLE_CONFIRM("v2.quickbuckle.confirm", "快捷绑卡确认接口"),
     /**
      * 账户余额信息查询接口
      */
     V2_TRADE_ACCTPAYMENT_BALANCE_QUERY("v2.trade.acctpayment.balance.query", "账户余额信息查询接口"),
     /**
-     * 交易结算对账文件配置查询
+     * 交易结算对账单配置查询
      */
-    V2_MERCHANT_BUSI_BILL_QUERY("v2.merchant.busi.bill.query", "交易结算对账文件配置查询"),
+    V2_MERCHANT_BUSI_BILL_QUERY("v2.merchant.busi.bill.query", "交易结算对账单配置查询"),
     /**
      * 交易结算对账文件配置
      */
     V2_MERCHANT_BUSI_BILL_CONFIG("v2.merchant.busi.bill.config", "交易结算对账文件配置"),
     /**
-     * 交易、结算文件查询
+     * 交易结算对账单查询
      */
-    V2_TRADE_CHECK_FILEQUERY("v2.trade.check.filequery", "交易、结算文件查询"),
+    V2_TRADE_CHECK_FILEQUERY("v2.trade.check.filequery", "交易结算对账单查询"),
     /**
-     * 交易结算对账文件补生成
+     * 交易结算对账文件重新生成
      */
-    V2_TRADE_CHECK_REPLAY("v2.trade.check.replay", "交易结算对账文件补生成"),
+    V2_TRADE_CHECK_REPLAY("v2.trade.check.replay", "交易结算对账文件重新生成"),
     /**
      * 商户分期配置详情查询
      */
@@ -462,9 +522,9 @@ public enum FunctionCodeEnum {
      */
     V2_MERCHANT_BASICDATA_INDV("v2.merchant.basicdata.indv", "个人商户基本信息入驻"),
     /**
-     * 商户AT入驻信息修改
+     * 微信支付宝入驻信息修改
      */
-    V2_MERCHANT_BUSI_AT_MODIFY("v2.merchant.busi.at.modify", "商户AT入驻信息修改"),
+    V2_MERCHANT_BUSI_AT_MODIFY("v2.merchant.busi.at.modify", "微信支付宝入驻信息修改"),
     /**
      * 取现接口
      */

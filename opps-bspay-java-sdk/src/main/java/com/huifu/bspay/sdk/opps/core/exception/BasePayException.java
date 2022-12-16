@@ -29,6 +29,12 @@ public class BasePayException extends Exception {
 		this.code = codes.getFailureCode();
 	}
 
+	public BasePayException(FailureCode codes, Throwable cause) {
+		super(cause);
+		this.message = codes.getFailureMsg();
+		this.code = codes.getFailureCode();
+	}
+
 	@Override
 	public String getMessage() {
 		return this.message;

@@ -11,7 +11,7 @@ import com.huifu.bspay.sdk.demo.core.Identify;
 import com.huifu.bspay.sdk.opps.core.request.V2MerchantBusiBillQueryRequest;
 
 /**
- * 交易结算对账文件配置查询 - 示例
+ * 交易结算对账单配置查询 - 示例
  *
  * @author sdk-generator
  * @Description

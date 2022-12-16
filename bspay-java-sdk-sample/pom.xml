@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.huifu.bspay.sdk</groupId>
     <artifactId>bspay-java-sdk-sample</artifactId>
-    <version>3.0.2</version>
+    <version>3.0.4</version>
     <packaging>jar</packaging>
     <name>${project.artifactId} - ${project.version}</name>
     <inceptionYear>2021</inceptionYear>
@@ -15,7 +15,7 @@
         <dependency>
             <groupId>com.huifu.bspay.sdk</groupId>
             <artifactId>dg-java-sdk</artifactId>
-            <version>3.0.2</version>
+            <version>3.0.4</version>
         </dependency>
 
         <!-- test dependency -->

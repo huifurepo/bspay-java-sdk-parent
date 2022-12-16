@@ -31,9 +31,7 @@ public class V2TerminaldeviceDeviceinfoAddRequestDemo extends BaseCommonDemo {
         // 请求日期
         request.setReqDate(DateTools.getCurrentDateYYYYMMDD());
         // 商户号
-        request.setHuifuId("6666000121163613");
-        // 产品编号
-        request.setProductId("test");
+        request.setHuifuId("6666000104575213");
 
         // 设置非必填字段
         Map<String, Object> extendInfoMap = getExtendInfos();
@@ -59,13 +57,13 @@ public class V2TerminaldeviceDeviceinfoAddRequestDemo extends BaseCommonDemo {
     private static String getTerminalInfoList() {
         JSONObject dto = new JSONObject();
         // 终端硬件序列号
-        dto.put("sn", "660034541497012330024");
+        dto.put("sn", "433333");
         // 终端21号文编号
-        dto.put("tusn", "660034541497012330024");
+        dto.put("tusn", "J434445679");
         // 终端型号代号
-        dto.put("dev_model_code", "44");
+        dto.put("dev_model_code", "01");
         // 终端布放地址
-        dto.put("terminal_address", "广东省-佛山市-禅城区-佛山市禅城区福禄路68号首层6号铺");
+        dto.put("terminal_address", "上海额的发");
 
         JSONArray dtoList = new JSONArray();
         dtoList.add(dto);

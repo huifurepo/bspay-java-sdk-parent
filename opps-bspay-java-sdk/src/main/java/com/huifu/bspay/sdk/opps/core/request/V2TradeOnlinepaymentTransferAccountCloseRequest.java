@@ -36,11 +36,6 @@ public class V2TradeOnlinepaymentTransferAccountCloseRequest extends BaseRequest
      */
     @JSONField(name = "org_req_date")
     private String orgReqDate;
-    /**
-     * 入账标识
-     */
-    @JSONField(name = "in_acct_flag")
-    private String inAcctFlag;
 
     @Override
     public FunctionCodeEnum getFunctionCode() {
@@ -50,13 +45,12 @@ public class V2TradeOnlinepaymentTransferAccountCloseRequest extends BaseRequest
     public V2TradeOnlinepaymentTransferAccountCloseRequest() {
     }
 
-    public V2TradeOnlinepaymentTransferAccountCloseRequest(String reqSeqId, String reqDate, String huifuId, String orgReqSeqId, String orgReqDate, String inAcctFlag) {
+    public V2TradeOnlinepaymentTransferAccountCloseRequest(String reqSeqId, String reqDate, String huifuId, String orgReqSeqId, String orgReqDate) {
         this.reqSeqId = reqSeqId;
         this.reqDate = reqDate;
         this.huifuId = huifuId;
         this.orgReqSeqId = orgReqSeqId;
         this.orgReqDate = orgReqDate;
-        this.inAcctFlag = inAcctFlag;
     }
 
     public String getReqSeqId() {
@@ -97,14 +91,6 @@ public class V2TradeOnlinepaymentTransferAccountCloseRequest extends BaseRequest
 
     public void setOrgReqDate(String orgReqDate) {
         this.orgReqDate = orgReqDate;
-    }
-
-    public String getInAcctFlag() {
-        return inAcctFlag;
-    }
-
-    public void setInAcctFlag(String inAcctFlag) {
-        this.inAcctFlag = inAcctFlag;
     }
 
 }

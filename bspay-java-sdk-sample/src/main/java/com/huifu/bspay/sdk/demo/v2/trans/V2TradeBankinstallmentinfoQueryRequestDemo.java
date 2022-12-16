@@ -31,7 +31,7 @@ public class V2TradeBankinstallmentinfoQueryRequestDemo extends BaseCommonDemo {
         // 每页条数
         request.setPageSize("1");
         // 产品号
-        request.setProductId("test");
+        // request.setProductId("test");
 
         // 设置非必填字段
         Map<String, Object> extendInfoMap = getExtendInfos();
@@ -51,10 +51,10 @@ public class V2TradeBankinstallmentinfoQueryRequestDemo extends BaseCommonDemo {
         Map<String, Object> extendInfoMap = new HashMap<>();
         // 银行编码
         extendInfoMap.put("bank_code", "");
-        // 是否启用
-        extendInfoMap.put("bank_enable", "");
         // 银行名称
         extendInfoMap.put("bank_name", "");
+        // 是否启用
+        extendInfoMap.put("bank_enable", "");
         return extendInfoMap;
     }
 

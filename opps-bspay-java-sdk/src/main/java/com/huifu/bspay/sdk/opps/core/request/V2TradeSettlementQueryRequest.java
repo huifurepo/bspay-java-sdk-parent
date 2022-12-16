@@ -22,12 +22,12 @@ public class V2TradeSettlementQueryRequest extends BaseRequest {
     @JSONField(name = "org_req_date")
     private String orgReqDate;
     /**
-     * 原交易返回的全局流水号原交易返回的全局流水号、原交易请求流水号二选一必填
+     * 原交易返回的全局流水号原交易返回的全局流水号、原交易请求流水号二选一必填；&lt;br/&gt;&lt;font color&#x3D;&quot;green&quot;&gt;示例值：00470topo1A211015160805P090ac132fef00000&lt;/font&gt;
      */
     @JSONField(name = "org_hf_seq_id")
     private String orgHfSeqId;
     /**
-     * 原交易请求流水号原交易返回的全局流水号、原交易请求流水号二选一必填
+     * 原交易请求流水号原交易返回的全局流水号、原交易请求流水号二选一必填；&lt;br/&gt;&lt;font color&#x3D;&quot;green&quot;&gt;示例值：202109167745558220003&lt;/font&gt;
      */
     @JSONField(name = "org_req_seq_id")
     private String orgReqSeqId;

@@ -31,9 +31,9 @@ public class V2TerminaldeviceDeviceinfoCancelRequestDemo extends BaseCommonDemo 
         // 请求时间
         request.setReqDate(DateTools.getCurrentDateYYYYMMDD());
         // 汇付客户Id
-        request.setHuifuId("6666000120275955");
+        request.setHuifuId("6666000104575213");
         // 终端号
-        request.setDeviceId("660034800311115709101");
+        request.setDeviceId("660035140101000300901");
 
         // 设置非必填字段
         Map<String, Object> extendInfoMap = getExtendInfos();

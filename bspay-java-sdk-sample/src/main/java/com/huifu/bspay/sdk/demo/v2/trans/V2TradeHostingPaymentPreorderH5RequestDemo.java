@@ -65,6 +65,8 @@ public class V2TradeHostingPaymentPreorderH5RequestDemo extends BaseCommonDemo {
         extendInfoMap.put("acct_split_bunch", getAcctSplitBunch());
         // 异步通知地址
         extendInfoMap.put("notify_url", "https://callback.service.com/xx");
+        // 交易失效时间
+        // extendInfoMap.put("time_expire", "");
         return extendInfoMap;
     }
 

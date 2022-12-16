@@ -31,7 +31,7 @@ public class V2MerchantBusiConfigQueryRequestDemo extends BaseCommonDemo {
         // 请求时间
         request.setReqDate(DateTools.getCurrentDateYYYYMMDD());
         // 汇付客户Id
-        request.setHuifuId("6666000003168731");
+        request.setHuifuId("6666000108854952");
 
         // 设置非必填字段
         Map<String, Object> extendInfoMap = getExtendInfos();
@@ -50,7 +50,7 @@ public class V2MerchantBusiConfigQueryRequestDemo extends BaseCommonDemo {
         // 设置非必填字段
         Map<String, Object> extendInfoMap = new HashMap<>();
         // 渠道号
-        extendInfoMap.put("bank_channel_no", "JQF00001");
+        extendInfoMap.put("bank_channel_no", "");
         return extendInfoMap;
     }
 

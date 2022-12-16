@@ -52,15 +52,15 @@ public class V2UserBusiOpenRequestDemo extends BaseCommonDemo {
         // 设置非必填字段
         Map<String, Object> extendInfoMap = new HashMap<>();
         // 结算信息配置
-        extendInfoMap.put("&lt;span class&#x3D;&quot;extend settle_config&quot;&gt;settle_config&lt;/span&gt;", "");
+        // extendInfoMap.put("&lt;span class&#x3D;&quot;extend settle_config&quot;&gt;settle_config&lt;/span&gt;", "");
         // 结算卡信息
-        extendInfoMap.put("&lt;span class&#x3D;&quot;extend card_info&quot;&gt;card_info&lt;/span&gt;", "");
+        // extendInfoMap.put("&lt;span class&#x3D;&quot;extend card_info&quot;&gt;card_info&lt;/span&gt;", "");
         // 取现配置列表
-        extendInfoMap.put("&lt;span class&#x3D;&quot;extend cash_config&quot;&gt;cash_config&lt;/span&gt;", "");
+        // extendInfoMap.put("&lt;span class&#x3D;&quot;extend cash_config&quot;&gt;cash_config&lt;/span&gt;", "");
         // 文件列表
-        extendInfoMap.put("&lt;span class&#x3D;&quot;extend file_list&quot;&gt;file_list&lt;/span&gt;", "");
+        // extendInfoMap.put("&lt;span class&#x3D;&quot;extend file_list&quot;&gt;file_list&lt;/span&gt;", "");
         // 延迟入账开关
-        extendInfoMap.put("delay_flag", "");
+        // extendInfoMap.put("delay_flag", "");
         return extendInfoMap;
     }
 

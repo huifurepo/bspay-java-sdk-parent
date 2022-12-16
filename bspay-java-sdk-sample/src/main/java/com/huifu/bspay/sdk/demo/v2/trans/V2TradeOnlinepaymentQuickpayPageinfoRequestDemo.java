@@ -48,7 +48,7 @@ public class V2TradeOnlinepaymentQuickpayPageinfoRequestDemo extends BaseCommonD
         request.setExtendInfo(extendInfoMap);
 
         // 3. 发起API调用
-        Map<String, Object> response = doExecute(request);
+        Map<String, Object> response = doExecute(request, true);
         System.out.println("返回数据:" + JSONObject.toJSONString(response));
     }
 
@@ -70,7 +70,7 @@ public class V2TradeOnlinepaymentQuickpayPageinfoRequestDemo extends BaseCommonD
         // 备注
         extendInfoMap.put("remark", "remark快捷支付接口");
         // 分账串
-        extendInfoMap.put("acct_split_bunch", getAcctSplitBunchRucan());
+        // extendInfoMap.put("acct_split_bunch", getAcctSplitBunchRucan());
         // 页面跳转地址
         extendInfoMap.put("front_url", "http://www.chinapnr.com");
         return extendInfoMap;
@@ -83,17 +83,17 @@ public class V2TradeOnlinepaymentQuickpayPageinfoRequestDemo extends BaseCommonD
         // 交易设备IP
         dto.put("device_ip", "127.0.0.1");
         // 交易设备MAC
-        dto.put("device_mac", "");
+        // dto.put("device_mac", "");
         // 交易设备IMEI
-        dto.put("device_imei", "");
+        // dto.put("device_imei", "");
         // 交易设备IMSI
-        dto.put("device_imsi", "");
+        // dto.put("device_imsi", "");
         // 交易设备ICCID
-        dto.put("device_icc_id", "");
+        // dto.put("device_icc_id", "");
         // 交易设备WIFIMAC
-        dto.put("device_wifi_mac", "");
+        // dto.put("device_wifi_mac", "");
         // 交易设备GPS
-        dto.put("device_gps", "");
+        // dto.put("device_gps", "");
 
         return dto.toJSONString();
     }
@@ -103,11 +103,11 @@ public class V2TradeOnlinepaymentQuickpayPageinfoRequestDemo extends BaseCommonD
         // ip地址
         dto.put("ip_addr", "127.0.0.1");
         // 基站地址
-        dto.put("base_atation", "");
+        // dto.put("base_atation", "");
         // 纬度
-        dto.put("latitude", "");
+        // dto.put("latitude", "");
         // 经度
-        dto.put("longitude", "");
+        // dto.put("longitude", "");
 
         return dto.toJSONString();
     }
@@ -115,9 +115,11 @@ public class V2TradeOnlinepaymentQuickpayPageinfoRequestDemo extends BaseCommonD
     private static JSON getAcctInfos() {
         JSONObject dto = new JSONObject();
         // 被分账对象ID
-        dto.put("huifu_id", "test");
+        // dto.put("huifu_id", "test");
         // 分账金额
-        dto.put("div_amt", "test");
+        // dto.put("div_amt", "test");
+        // 账户号
+        // dto.put("acct_id", "");
 
         JSONArray dtoList = new JSONArray();
         dtoList.add(dto);
@@ -139,7 +141,7 @@ public class V2TradeOnlinepaymentQuickpayPageinfoRequestDemo extends BaseCommonD
     private static String getAcctSplitBunchRucan() {
         JSONObject dto = new JSONObject();
         // 分账明细
-        dto.put("acct_infos", getAcctInfos());
+        // dto.put("acct_infos", getAcctInfos());
 
         return dto.toJSONString();
     }

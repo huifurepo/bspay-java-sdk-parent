@@ -11,7 +11,7 @@ import com.huifu.bspay.sdk.demo.core.Identify;
 import com.huifu.bspay.sdk.opps.core.request.V2MerchantBusiAtModifyRequest;
 
 /**
- * 商户AT入驻信息修改 - 示例
+ * 微信支付宝入驻信息修改 - 示例
  *
  * @author sdk-generator
  * @Description
@@ -70,6 +70,44 @@ public class V2MerchantBusiAtModifyRequestDemo extends BaseCommonDemo {
         dto.put("short_name", "盈盈超市3.0");
         // 客服电话
         dto.put("service_phone", "1752***5001");
+        // 商户名称
+        // dto.put("mer_name", "");
+        // 营业执照类型
+        // dto.put("business_license_type", "");
+        // 商户营业执照号
+        // dto.put("license_code", "");
+        // 法人身份证号
+        // dto.put("legal_cert_no", "");
+        // 行业分类
+        // dto.put("cls_id", "");
+        // 申请服务
+        // dto.put("service_codes", "");
+        // 结算卡
+        // dto.put("settle_card_no", "");
+        // 结算卡户名
+        // dto.put("settle_card_name", "");
+        // 商户结算卡开卡行支行名称
+        // dto.put("mer_card_bank_branch_name", "");
+        // 支付宝登录账号
+        // dto.put("alipay_account", "");
+        // 联系人类型
+        // dto.put("contact_type", "");
+        // 联系人姓名
+        // dto.put("contact_name", "");
+        // 联系人手机号
+        // dto.put("contact_mobile", "");
+        // 联系人邮箱
+        // dto.put("contact_email", "");
+        // 商户地址
+        // dto.put("mer_addr", "");
+        // 省份编码
+        // dto.put("province_code", "");
+        // 城市编码
+        // dto.put("city_code", "");
+        // 区县编码
+        // dto.put("district_code", "");
+        // 拟申请的间联商户等级
+        // dto.put("indirect_level", "");
 
         JSONArray dtoList = new JSONArray();
         dtoList.add(dto);

@@ -54,7 +54,7 @@ public class V2PcreditSolutionModifyRequestDemo extends BaseCommonDemo {
         // 开发者的应用ID
         extendInfoMap.put("app_id", "2019090666961966");
         // 花呗分期商家贴息活动名称
-        extendInfoMap.put("activity_name", "");
+        // extendInfoMap.put("activity_name", "");
         // 活动开始时间
         extendInfoMap.put("start_time", "2019-07-08 00:00:00");
         // 活动结束时间

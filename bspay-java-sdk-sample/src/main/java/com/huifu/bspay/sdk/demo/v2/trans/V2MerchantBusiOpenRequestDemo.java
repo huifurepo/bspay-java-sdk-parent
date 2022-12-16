@@ -106,7 +106,7 @@ public class V2MerchantBusiOpenRequestDemo extends BaseCommonDemo {
         // 银联配置对象
         extendInfoMap.put("union_conf_list", getUnionConfList());
         // 银联小微入驻信息实体
-        extendInfoMap.put("union_micro_info", getUnionMicroInfo());
+        // extendInfoMap.put("union_micro_info", getUnionMicroInfo());
         // 支付宝配置对象
         extendInfoMap.put("ali_conf_list", getAliConfList());
         // 余额支付配置实体
@@ -117,7 +117,7 @@ public class V2MerchantBusiOpenRequestDemo extends BaseCommonDemo {
         extendInfoMap.put("wx_conf_list", getWxConfList());
         // 开通微信预授权
         extendInfoMap.put("wechatpay_pre_auth_flag", "N");
-        // 组合支付
+        // 营销补贴
         extendInfoMap.put("combine_pay_config", getCombinePayConfig());
         // 花呗分期费率配置实体
         extendInfoMap.put("hb_fq_fee_config", getHbFqFeeConfig());
@@ -128,44 +128,14 @@ public class V2MerchantBusiOpenRequestDemo extends BaseCommonDemo {
         // 交易异步应答地址
         extendInfoMap.put("recon_resp_addr", "[http://192.168.85.157:30031/sspm/testVirgo](http://192.168.85.157:30031/sspm/testVirgo)");
         // 线上费率配置
-        extendInfoMap.put("online_fee_conf_list", getOnlineFeeConfList());
+        // extendInfoMap.put("online_fee_conf_list", getOnlineFeeConfList());
         // 商户业务类型
-        extendInfoMap.put("mer_bus_type", "");
+        // extendInfoMap.put("mer_bus_type", "");
         // 线上手续费承担方配置
-        extendInfoMap.put("online_pay_fee_conf_list", getOnlinePayFeeConfList());
+        // extendInfoMap.put("online_pay_fee_conf_list", getOnlinePayFeeConfList());
+        // 银行大额转账对象
+        // extendInfoMap.put("bank_big_amt_pay_config", getBankBigAmtPayConfig());
         return extendInfoMap;
-    }
-
-    private static String getOnlinePayFeeConfList() {
-        JSONObject dto = new JSONObject();
-        // 业务类型
-        dto.put("pay_type", "");
-        // 交易手续费外扣时的账户类型
-        dto.put("out_fee_acct_type", "");
-        // 交易手续费外扣汇付ID
-        dto.put("out_fee_huifuid", "");
-        // 是否交易手续费外扣
-        dto.put("out_fee_flag", "");
-
-        JSONArray dtoList = new JSONArray();
-        dtoList.add(dto);
-        return dtoList.toJSONString();
-    }
-
-    private static String getBalancePayConfig() {
-        JSONObject dto = new JSONObject();
-        // 支付手续费(%)
-        dto.put("fee_rate", "2");
-        // 支付固定手续费(元)
-        dto.put("fee_fix_amt", "1");
-        // 交易手续费外扣时的账户类型
-        dto.put("out_fee_acct_type", "");
-        // 交易手续费外扣汇付ID
-        dto.put("out_fee_huifuid", "");
-        // 是否交易手续费外扣
-        dto.put("out_fee_flag", "");
-
-        return dto.toJSONString();
     }
 
     private static String getWxConfList() {
@@ -225,15 +195,15 @@ public class V2MerchantBusiOpenRequestDemo extends BaseCommonDemo {
     private static String getUnionMicroInfo() {
         JSONObject dto = new JSONObject();
         // 银联商户类别
-        dto.put("mchnt_type", "test");
+        // dto.put("mchnt_type", "test");
         // 商户经度
-        dto.put("mer_lng", "test");
+        // dto.put("mer_lng", "test");
         // 商户纬度
-        dto.put("mer_lat", "test");
+        // dto.put("mer_lat", "test");
         // 店铺名称
-        dto.put("shop_name", "test");
+        // dto.put("shop_name", "test");
         // 商户经营类目
-        dto.put("mcc", "test");
+        // dto.put("mcc", "test");
 
         return dto.toJSONString();
     }
@@ -245,11 +215,133 @@ public class V2MerchantBusiOpenRequestDemo extends BaseCommonDemo {
         // 支付固定手续费(元)
         dto.put("fee_fix_amt", "5");
         // 交易手续费外扣时的账户类型
-        dto.put("out_fee_acct_type", "");
+        // dto.put("out_fee_acct_type", "");
         // 交易手续费外扣汇付ID
-        dto.put("out_fee_huifuid", "");
+        // dto.put("out_fee_huifuid", "");
         // 是否交易手续费外扣
-        dto.put("out_fee_flag", "");
+        // dto.put("out_fee_flag", "");
+
+        return dto.toJSONString();
+    }
+
+    private static String getAgreementInfo() {
+        JSONObject dto = new JSONObject();
+        // 协议类型
+        dto.put("agreement_type", "0");
+        // 协议号
+        dto.put("agreement_no", "202106070100000380");
+        // 协议模板号
+        dto.put("agreement_model", "202106070100000380");
+        // 协议模板名称
+        dto.put("agreement_name", "电子协议签约模板");
+        // 签约日期
+        dto.put("sign_date", "20200325");
+        // 协议开始日期
+        dto.put("agree_begin_date", "20200325");
+        // 协议结束日期
+        dto.put("agree_end_date", "20400325");
+
+        return dto.toJSONString();
+    }
+
+    private static String getOnlineFeeConfList() {
+        JSONObject dto = new JSONObject();
+        // 业务类型
+        // dto.put("fee_type", "test");
+        // 银行编码
+        // dto.put("bank_id", "test");
+        // 借贷标志
+        // dto.put("dc_flag", "test");
+        // 费率状态
+        // dto.put("stat_flag", "test");
+        // 手续费（固定/元）
+        // dto.put("fix_amt", "");
+        // 费率（百分比/%）
+        // dto.put("fee_rate", "");
+        // 银行名称
+        // dto.put("bank_name", "");
+        // 银行中文简称
+        // dto.put("bank_short_chn", "");
+
+        JSONArray dtoList = new JSONArray();
+        dtoList.add(dto);
+        return dtoList.toJSONString();
+    }
+
+    private static String getUnionConfList() {
+        JSONObject dto = new JSONObject();
+        // 借记卡手续费1000以上（%）
+        dto.put("debit_fee_rate_up", "0.55");
+        // 银联二维码业务贷记卡手续费1000以上（%）
+        dto.put("credit_fee_rate_up", "0.56");
+        // 借记卡手续费1000以下（%）
+        dto.put("debit_fee_rate_down", "0.38");
+        // 银联二维码业务贷记卡手续费1000以下（%）
+        dto.put("credit_fee_rate_down", "0.38");
+        // 银联业务手续费类型
+        dto.put("charge_cate_code", "03");
+        // 借记卡封顶1000以上
+        dto.put("debit_fee_limit_up", "20");
+        // 借记卡封顶1000以下
+        dto.put("debit_fee_limit_down", "10");
+        // 商户经营类目
+        dto.put("mcc", "5411");
+
+        JSONArray dtoList = new JSONArray();
+        dtoList.add(dto);
+        return dtoList.toJSONString();
+    }
+
+    private static String getOnlinePayFeeConfList() {
+        JSONObject dto = new JSONObject();
+        // 业务类型
+        // dto.put("pay_type", "");
+        // 交易手续费外扣时的账户类型
+        // dto.put("out_fee_acct_type", "");
+        // 交易手续费外扣汇付ID
+        // dto.put("out_fee_huifuid", "");
+        // 是否交易手续费外扣
+        // dto.put("out_fee_flag", "");
+
+        JSONArray dtoList = new JSONArray();
+        dtoList.add(dto);
+        return dtoList.toJSONString();
+    }
+
+    private static String getBalancePayConfig() {
+        JSONObject dto = new JSONObject();
+        // 支付手续费(%)
+        dto.put("fee_rate", "2");
+        // 支付固定手续费(元)
+        dto.put("fee_fix_amt", "1");
+        // 交易手续费外扣时的账户类型
+        // dto.put("out_fee_acct_type", "");
+        // 交易手续费外扣汇付ID
+        // dto.put("out_fee_huifuid", "");
+        // 是否交易手续费外扣
+        // dto.put("out_fee_flag", "");
+
+        return dto.toJSONString();
+    }
+
+    private static String getBankBigAmtPayConfig() {
+        JSONObject dto = new JSONObject();
+        // 大额转账调账标识申请类型
+        // dto.put("biz_type", "");
+        // 费率（百分比/%）
+        // dto.put("fee_rate", "");
+        // 交易手续费（固定/元）
+        // dto.put("fee_fix_amt", "");
+        // 手续费外扣标记
+        // dto.put("out_fee_flag", "");
+        // 手续费外扣时的汇付ID
+        // dto.put("out_fee_huifuid", "");
+        // 外扣手续费费承担账户号
+        // dto.put("out_fee_acct_id", "");
+        // 银行大额转账单笔额度
+        // dto.put("big_amt_limit_per_time", "");
+        // 银行大额转账单日额度
+        // dto.put("big_amt_limit_per_day", "");
 
         return dto.toJSONString();
     }
@@ -276,26 +368,6 @@ public class V2MerchantBusiOpenRequestDemo extends BaseCommonDemo {
         return dto.toJSONString();
     }
 
-    private static String getAgreementInfo() {
-        JSONObject dto = new JSONObject();
-        // 协议类型
-        dto.put("agreement_type", "0");
-        // 协议号
-        dto.put("agreement_no", "202106070100000380");
-        // 协议模板号
-        dto.put("agreement_model", "202106070100000380");
-        // 协议模板名称
-        dto.put("agreement_name", "电子协议签约模板");
-        // 签约日期
-        dto.put("sign_date", "20200325");
-        // 协议开始日期
-        dto.put("agree_begin_date", "20200325");
-        // 协议结束日期
-        dto.put("agree_end_date", "20400325");
-
-        return dto.toJSONString();
-    }
-
     private static String getAliConfList() {
         JSONObject dto = new JSONObject();
         // 支付场景
@@ -308,54 +380,6 @@ public class V2MerchantBusiOpenRequestDemo extends BaseCommonDemo {
         dto.put("pay_channel_id", "JQF00001");
         // 拟申请的间联商户等级
         dto.put("indirect_level", "");
-
-        JSONArray dtoList = new JSONArray();
-        dtoList.add(dto);
-        return dtoList.toJSONString();
-    }
-
-    private static String getOnlineFeeConfList() {
-        JSONObject dto = new JSONObject();
-        // 业务类型
-        dto.put("fee_type", "test");
-        // 银行编码
-        dto.put("bank_id", "test");
-        // 借贷标志
-        dto.put("dc_flag", "test");
-        // 费率状态
-        dto.put("stat_flag", "test");
-        // 手续费（固定/元）
-        dto.put("fix_amt", "");
-        // 费率（百分比/%）
-        dto.put("fee_rate", "");
-        // 银行名称
-        dto.put("bank_name", "");
-        // 银行中文简称
-        dto.put("bank_short_chn", "");
-
-        JSONArray dtoList = new JSONArray();
-        dtoList.add(dto);
-        return dtoList.toJSONString();
-    }
-
-    private static String getUnionConfList() {
-        JSONObject dto = new JSONObject();
-        // 借记卡手续费1000以上（%）
-        dto.put("debit_fee_rate_up", "0.55");
-        // 银联二维码业务贷记卡手续费1000以上（%）
-        dto.put("credit_fee_rate_up", "0.56");
-        // 借记卡手续费1000以下（%）
-        dto.put("debit_fee_rate_down", "0.38");
-        // 银联二维码业务贷记卡手续费1000以下（%）
-        dto.put("credit_fee_rate_down", "0.38");
-        // 银联业务手续费类型
-        dto.put("charge_cate_code", "03");
-        // 借记卡封顶1000以上
-        dto.put("debit_fee_limit_up", "20");
-        // 借记卡封顶1000以下
-        dto.put("debit_fee_limit_down", "10");
-        // 商户经营类目
-        dto.put("mcc", "5411");
 
         JSONArray dtoList = new JSONArray();
         dtoList.add(dto);

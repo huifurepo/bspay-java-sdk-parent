@@ -54,7 +54,7 @@ public class V2MerchantBasicdataModifyRequestDemo extends BaseCommonDemo {
         // 商户简称
         extendInfoMap.put("short_name", "尼博网络");
         // 营业执照类型
-        extendInfoMap.put("license_type", "");
+        // extendInfoMap.put("license_type", "");
         // 营业执照有效期类型
         extendInfoMap.put("license_validity_type", "0");
         // 营业执照有效期开始日期
@@ -110,17 +110,17 @@ public class V2MerchantBasicdataModifyRequestDemo extends BaseCommonDemo {
         // 异步通知地址
         extendInfoMap.put("async_return_url", "archer://C_SSPM_NSPOSM_BUSIRESULT");
         // D1结算协议图片文件
-        extendInfoMap.put("settle_agree_pic", "");
+        // extendInfoMap.put("settle_agree_pic", "");
         // 商户英文名称
-        extendInfoMap.put("mer_en_name", "");
+        // extendInfoMap.put("mer_en_name", "");
         // 商户主页URL
-        extendInfoMap.put("mer_url", "");
+        // extendInfoMap.put("mer_url", "");
         // 商户ICP备案编号
-        extendInfoMap.put("mer_icp", "");
+        // extendInfoMap.put("mer_icp", "");
         // 基本存款账户编号或核准号
-        extendInfoMap.put("open_licence_no", "");
+        // extendInfoMap.put("open_licence_no", "");
         // 签约人
-        extendInfoMap.put("sign_user_info", getSignUserInfo());
+        // extendInfoMap.put("sign_user_info", getSignUserInfo());
         return extendInfoMap;
     }
 
@@ -145,13 +145,13 @@ public class V2MerchantBasicdataModifyRequestDemo extends BaseCommonDemo {
         // 节假日结算手续费率
         dto.put("fixed_ratio", "2.00");
         // 结算批次号
-        dto.put("settle_batch_no", "");
+        // dto.put("settle_batch_no", "");
         // 结算方式
-        dto.put("settle_pattern", "");
+        // dto.put("settle_pattern", "");
         // 是否优先到账
-        dto.put("is_priority_receipt", "");
+        // dto.put("is_priority_receipt", "");
         // 自定义结算处理时间
-        dto.put("settle_time", "");
+        // dto.put("settle_time", "");
 
         return dto.toJSONString();
     }
@@ -213,19 +213,19 @@ public class V2MerchantBasicdataModifyRequestDemo extends BaseCommonDemo {
     private static String getSignUserInfo() {
         JSONObject dto = new JSONObject();
         // 签约人类型
-        dto.put("type", "test");
+        // dto.put("type", "test");
         // 姓名
-        dto.put("name", "");
+        // dto.put("name", "");
         // 手机号
-        dto.put("mobile_no", "");
+        // dto.put("mobile_no", "");
         // 身份证
-        dto.put("cert_no", "");
+        // dto.put("cert_no", "");
         // 身份证照片-人像面
-        dto.put("identity_front_file_id", "");
+        // dto.put("identity_front_file_id", "");
         // 身份证照片-国徽面
-        dto.put("identity_back_file_id", "");
+        // dto.put("identity_back_file_id", "");
         // 法人授权书
-        dto.put("auth_file_id", "");
+        // dto.put("auth_file_id", "");
 
         return dto.toJSONString();
     }
@@ -241,11 +241,11 @@ public class V2MerchantBasicdataModifyRequestDemo extends BaseCommonDemo {
         // 提现手续费（固定/元）
         dto.put("fix_amt", "4.00");
         // 是否交易手续费外扣
-        dto.put("out_fee_flag", "");
+        // dto.put("out_fee_flag", "");
         // 手续费承担方
-        dto.put("out_fee_huifu_id", "");
+        // dto.put("out_fee_huifu_id", "");
         // 手续费外扣的账户类型
-        dto.put("out_fee_acct_type", "");
+        // dto.put("out_fee_acct_type", "");
 
         JSONArray dtoList = new JSONArray();
         dtoList.add(dto);

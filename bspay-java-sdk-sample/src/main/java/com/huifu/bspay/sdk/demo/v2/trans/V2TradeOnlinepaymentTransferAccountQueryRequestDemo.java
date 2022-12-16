@@ -36,11 +36,7 @@ public class V2TradeOnlinepaymentTransferAccountQueryRequestDemo extends BaseCom
         request.setOrgReqSeqId("20211659949882");
         // 原请求日期
         request.setOrgReqDate("20220808");
-        // 入账标识
-        request.setInAcctFlag("YDNI2NDJIKKPAFGQ");
-        // 交易开始日期
-        request.setTransStartDate("20220801");
-        // 交易结束日期
+        // 打款结束日期
         request.setTransEndDate("20220808");
 
         // 设置非必填字段
@@ -61,8 +57,10 @@ public class V2TradeOnlinepaymentTransferAccountQueryRequestDemo extends BaseCom
         Map<String, Object> extendInfoMap = new HashMap<>();
         // 银行卡号
         extendInfoMap.put("bank_card_no", "Xmjm1RB4AAOaFYQ+PgjBlpugXbd8VAYAGB3J2zrbLfC42Bh5xiB47OOV1EdXyGpBq4H8je7mB/MlyEEs6O8PX6aoI4QHumr8VglrLM6uzbVNCIc3S5RPSmi2M+9+EdIQ6nlWd5+XQ7RJXX5Uvnegn74XzQBcN1d4gd04buwKbLpUPV3tWd1qjQwEE8w4gwEtH3L5AP75Mynz+wHFrUKJF3BTiW2/zJlcq5GJomOl06GEW52AZkXwn6U2suP3a0ySd0Rxbf1yQ1lj3SP56NeeEzuBaFLQWB7mEqJfZF3pE9MHNfi6tR1xwLdcxt98bdIqlteKdNAmgfQzcS13UcwH+w==");
-        // 收款方名称
+        // 付款方名称
         extendInfoMap.put("certificate_name", "沈显龙");
+        // 入账标识
+        extendInfoMap.put("in_acct_flag", "YDNI2NDJIKKPAFGQ");
         return extendInfoMap;
     }
 

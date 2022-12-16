@@ -50,7 +50,7 @@ public class V2TerminaldeviceManageQueryRequestDemo extends BaseCommonDemo {
         // 渠道商号
         extendInfoMap.put("upper_huifu_id", "6666000104633228");
         // 终端号
-        extendInfoMap.put("deviceId", "");
+        // extendInfoMap.put("deviceId", "");
         // 绑定状态
         extendInfoMap.put("is_bind", "Y");
         // 当前页码

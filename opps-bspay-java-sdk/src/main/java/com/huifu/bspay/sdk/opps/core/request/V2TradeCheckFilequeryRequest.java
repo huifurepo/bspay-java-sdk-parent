@@ -4,7 +4,7 @@ import com.alibaba.fastjson.annotation.JSONField;
 import com.huifu.bspay.sdk.opps.core.enums.FunctionCodeEnum;
 
 /**
- * 交易、结算文件查询
+ * 交易结算对账单查询
  *
  * @author sdk-generator
  * @Description
@@ -31,11 +31,6 @@ public class V2TradeCheckFilequeryRequest extends BaseRequest {
      */
     @JSONField(name = "file_date")
     private String fileDate;
-    /**
-     * 对账单类型
-     */
-    @JSONField(name = "check_order_type")
-    private String checkOrderType;
 
     @Override
     public FunctionCodeEnum getFunctionCode() {
@@ -45,12 +40,11 @@ public class V2TradeCheckFilequeryRequest extends BaseRequest {
     public V2TradeCheckFilequeryRequest() {
     }
 
-    public V2TradeCheckFilequeryRequest(String reqDate, String reqSeqId, String huifuId, String fileDate, String checkOrderType) {
+    public V2TradeCheckFilequeryRequest(String reqDate, String reqSeqId, String huifuId, String fileDate) {
         this.reqDate = reqDate;
         this.reqSeqId = reqSeqId;
         this.huifuId = huifuId;
         this.fileDate = fileDate;
-        this.checkOrderType = checkOrderType;
     }
 
     public String getReqDate() {
@@ -83,14 +77,6 @@ public class V2TradeCheckFilequeryRequest extends BaseRequest {
 
     public void setFileDate(String fileDate) {
         this.fileDate = fileDate;
-    }
-
-    public String getCheckOrderType() {
-        return checkOrderType;
-    }
-
-    public void setCheckOrderType(String checkOrderType) {
-        this.checkOrderType = checkOrderType;
     }
 
 }

@@ -65,6 +65,8 @@ public class V2TradeHostingPaymentPreorderAliRequestDemo extends BaseCommonDemo 
         extendInfoMap.put("acct_split_bunch", getAcctSplitBunchRucan());
         // 异步通知地址
         extendInfoMap.put("notify_url", "https://callback.service.com/xx");
+        // 交易失效时间
+        // extendInfoMap.put("time_expire", "");
         return extendInfoMap;
     }
 
@@ -85,7 +87,7 @@ public class V2TradeHostingPaymentPreorderAliRequestDemo extends BaseCommonDemo 
         // 小程序返回码
         dto.put("app_schema", "app跳转链接");
         // 私有信息
-        dto.put("private_info", "");
+        // dto.put("private_info", "");
 
         return dto.toJSONString();
     }

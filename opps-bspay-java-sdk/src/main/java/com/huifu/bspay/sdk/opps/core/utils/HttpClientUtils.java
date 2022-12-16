@@ -357,7 +357,7 @@ public class HttpClientUtils {
             if (BasePay.debug) {
                 e.printStackTrace();
             }
-            throw new BasePayException(FailureCode.SYSTEM_EXCEPTION);
+            throw new BasePayException(FailureCode.SYSTEM_EXCEPTION, e);
         } finally {
             if (null != br) {
                 try {

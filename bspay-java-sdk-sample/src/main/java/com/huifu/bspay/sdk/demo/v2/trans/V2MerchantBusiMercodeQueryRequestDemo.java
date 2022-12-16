@@ -11,7 +11,7 @@ import com.huifu.bspay.sdk.demo.core.Identify;
 import com.huifu.bspay.sdk.opps.core.request.V2MerchantBusiMercodeQueryRequest;
 
 /**
- * 商户AT商户号查询 - 示例
+ * 商户微信支付宝ID查询 - 示例
  *
  * @author sdk-generator
  * @Description

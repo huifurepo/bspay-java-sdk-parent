@@ -11,7 +11,7 @@ import com.huifu.bspay.sdk.demo.core.Identify;
 import com.huifu.bspay.sdk.opps.core.request.V2TradeOnlinepaymentUnionpayRequest;
 
 /**
- * 银联APP支付接口 - 示例
+ * 银联统一在线收银台接口 - 示例
  *
  * @author sdk-generator
  * @Description
@@ -66,7 +66,7 @@ public class V2TradeOnlinepaymentUnionpayRequestDemo extends BaseCommonDemo {
         // 订单失效时间
         extendInfoMap.put("time_expire", "");
         // 分账对象
-        extendInfoMap.put("acct_split_bunch", "");
+        // extendInfoMap.put("acct_split_bunch", getAcctSplitBunchRucan());
         // 前端跳转地址
         extendInfoMap.put("front_url", "https://www.service.com/getresp");
         // 异步通知地址
@@ -81,11 +81,33 @@ public class V2TradeOnlinepaymentUnionpayRequestDemo extends BaseCommonDemo {
         // 基站地址
         dto.put("base_station", "7");
         // ip地址
-        dto.put("ip_addr", "");
+        // dto.put("ip_addr", "");
         // 纬度
         dto.put("latitude", "4");
         // 经度
         dto.put("longitude", "3");
+
+        return dto.toJSONString();
+    }
+
+    private static JSON getAcctInfos() {
+        JSONObject dto = new JSONObject();
+        // 分账金额
+        // dto.put("div_amt", "");
+        // 商户号
+        // dto.put("huifu_id", "");
+        // 账户号
+        // dto.put("acct_id", "");
+
+        JSONArray dtoList = new JSONArray();
+        dtoList.add(dto);
+        return dtoList;
+    }
+
+    private static String getAcctSplitBunchRucan() {
+        JSONObject dto = new JSONObject();
+        // 分账明细
+        // dto.put("acct_infos", getAcctInfos());
 
         return dto.toJSONString();
     }

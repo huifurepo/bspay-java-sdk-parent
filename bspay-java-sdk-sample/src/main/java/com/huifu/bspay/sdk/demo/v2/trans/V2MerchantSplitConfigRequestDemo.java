@@ -78,7 +78,7 @@ public class V2MerchantSplitConfigRequestDemo extends BaseCommonDemo {
         return extendInfoMap;
     }
 
-    private static JSON getAcctSplitBunchList() {
+    private static String getAcctSplitBunchList() {
         JSONObject dto = new JSONObject();
         // 分账比例
         dto.put("fee_rate", "100");
@@ -87,7 +87,7 @@ public class V2MerchantSplitConfigRequestDemo extends BaseCommonDemo {
 
         JSONArray dtoList = new JSONArray();
         dtoList.add(dto);
-        return dtoList;
+        return dtoList.toJSONString();
     }
 
 }

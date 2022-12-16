@@ -4,7 +4,7 @@ import com.alibaba.fastjson.annotation.JSONField;
 import com.huifu.bspay.sdk.opps.core.enums.FunctionCodeEnum;
 
 /**
- * 快捷/代扣绑卡确认接口
+ * 快捷绑卡确认接口
  *
  * @author sdk-generator
  * @Description
@@ -72,15 +72,20 @@ public class V2QuickbuckleConfirmRequest extends BaseRequest {
     @JSONField(name = "verify_code")
     private String verifyCode;
     /**
-     * CVV2信用卡代扣专用需要密文传输，使用商户RSA私钥加密(加密前3位，加密后最长2048位）&lt;br/&gt;&lt;font color&#x3D;&quot;green&quot;&gt;示例值：Ly+fnExeyPOTzfOtgRRur77nJB9TAe4PGgK9MB96o3LW2xINIxSA+B1jXDyvKNmJ5iE3wL+bbNoGd6tQXn6fmrY4vgeX8diCtP0PQVyS4UZkXzH4w8twgI+FduIukqTTl7o5/rrnL3H1HaP/Vutw3yBWrGq0l0NTebfc6XJXZss&#x3D;&lt;/font&gt;
+     * CVV2信用卡代扣专用需要密文传输，使用商户RSA私钥加密(加密前3位，加密后最长2048位），[参见参考文档](https://paas.huifu.com/partners/guide/#/api_jiami_jiemi)；&lt;br/&gt;&lt;font color&#x3D;&quot;green&quot;&gt;示例值：Ly+fnExeyPOTzf……rGq0l0NTebfc6XJXZss&#x3D;&lt;/font&gt;
      */
     @JSONField(name = "vip_code")
     private String vipCode;
     /**
-     * 卡有效期信用卡代扣专用，格式：MMYY，需要密文传输。&lt;br/&gt;使用商户RSA私钥加密(加密前4位，加密后最长2048位）&lt;br/&gt;&lt;font color&#x3D;&quot;green&quot;&gt;示例值：Ly+fnExeyPOTzfOtgRRur77nJB9TAe4PGgK9MB96o3LW2xINIxSA+B1jXDyvKNmJ5iE3wL+bbNoGd6tQXn6fmrY4vgeX8diCtP0PQVyS4UZkXzH4w8twgI+FduIukqTTl7o5/rrnL3H1HaP/Vutw3yBWrGq0l0NTebfc6XJXZss&#x3D;&lt;/font&gt;
+     * 卡有效期信用卡代扣专用，格式：MMYY，需要密文传输。&lt;br/&gt;使用商户RSA私钥加密(加密前4位，加密后最长2048位），[参见参考文档](https://paas.huifu.com/partners/guide/#/api_jiami_jiemi)；&lt;br/&gt;&lt;font color&#x3D;&quot;green&quot;&gt;示例值：Ly+fnExeyPO……ebfc6XJXZss&#x3D;&lt;/font&gt;
      */
     @JSONField(name = "expiration")
     private String expiration;
+    /**
+     * 设备信息域 
+     */
+    @JSONField(name = "trx_device_inf")
+    private String trxDeviceInf;
 
     @Override
     public FunctionCodeEnum getFunctionCode() {
@@ -90,7 +95,7 @@ public class V2QuickbuckleConfirmRequest extends BaseRequest {
     public V2QuickbuckleConfirmRequest() {
     }
 
-    public V2QuickbuckleConfirmRequest(String reqDate, String reqSeqId, String huifuId, String outCustId, String orderId, String orderDate, String cardId, String cardName, String certType, String certId, String cardMp, String verifyCode, String vipCode, String expiration) {
+    public V2QuickbuckleConfirmRequest(String reqDate, String reqSeqId, String huifuId, String outCustId, String orderId, String orderDate, String cardId, String cardName, String certType, String certId, String cardMp, String verifyCode, String vipCode, String expiration, String trxDeviceInf) {
         this.reqDate = reqDate;
         this.reqSeqId = reqSeqId;
         this.huifuId = huifuId;
@@ -105,6 +110,7 @@ public class V2QuickbuckleConfirmRequest extends BaseRequest {
         this.verifyCode = verifyCode;
         this.vipCode = vipCode;
         this.expiration = expiration;
+        this.trxDeviceInf = trxDeviceInf;
     }
 
     public String getReqDate() {
@@ -217,6 +223,14 @@ public class V2QuickbuckleConfirmRequest extends BaseRequest {
 
     public void setExpiration(String expiration) {
         this.expiration = expiration;
+    }
+
+    public String getTrxDeviceInf() {
+        return trxDeviceInf;
+    }
+
+    public void setTrxDeviceInf(String trxDeviceInf) {
+        this.trxDeviceInf = trxDeviceInf;
     }
 
 }

@@ -22,11 +22,6 @@ public class V2TradeAcctpaymentPayRequest extends BaseRequest {
     @JSONField(name = "req_date")
     private String reqDate;
     /**
-     * 商户号
-     */
-    @JSONField(name = "huifu_id")
-    private String huifuId;
-    /**
      * 出款方商户号
      */
     @JSONField(name = "out_huifu_id")
@@ -55,10 +50,9 @@ public class V2TradeAcctpaymentPayRequest extends BaseRequest {
     public V2TradeAcctpaymentPayRequest() {
     }
 
-    public V2TradeAcctpaymentPayRequest(String reqSeqId, String reqDate, String huifuId, String outHuifuId, String ordAmt, String acctSplitBunch, String riskCheckData) {
+    public V2TradeAcctpaymentPayRequest(String reqSeqId, String reqDate, String outHuifuId, String ordAmt, String acctSplitBunch, String riskCheckData) {
         this.reqSeqId = reqSeqId;
         this.reqDate = reqDate;
-        this.huifuId = huifuId;
         this.outHuifuId = outHuifuId;
         this.ordAmt = ordAmt;
         this.acctSplitBunch = acctSplitBunch;
@@ -79,14 +73,6 @@ public class V2TradeAcctpaymentPayRequest extends BaseRequest {
 
     public void setReqDate(String reqDate) {
         this.reqDate = reqDate;
-    }
-
-    public String getHuifuId() {
-        return huifuId;
-    }
-
-    public void setHuifuId(String huifuId) {
-        this.huifuId = huifuId;
     }
 
     public String getOutHuifuId() {

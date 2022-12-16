@@ -108,8 +108,8 @@ public class V2MerchantBusiModifyRequestDemo extends BaseCommonDemo {
         // 微信配置对象
         extendInfoMap.put("wx_conf_list", getWxConfList());
         // 开通微信预授权
-        extendInfoMap.put("wechatpay_pre_auth_flag", "");
-        // 组合支付
+        // extendInfoMap.put("wechatpay_pre_auth_flag", "");
+        // 营销补贴
         extendInfoMap.put("combine_pay_config", getCombinePayConfig());
         // 余额支付配置对象
         extendInfoMap.put("balance_pay_config", getBalancePayConfig());
@@ -120,24 +120,26 @@ public class V2MerchantBusiModifyRequestDemo extends BaseCommonDemo {
         // 交易异步应答地址
         extendInfoMap.put("recon_resp_addr", "[http://192.168.85.157:30031/sspm/testVirgo](http://192.168.85.157:30031/sspm/testVirgo)");
         // 线上费率配置
-        extendInfoMap.put("online_fee_conf_list", getOnlineFeeConfList());
+        // extendInfoMap.put("online_fee_conf_list", getOnlineFeeConfList());
         // 商户业务类型
-        extendInfoMap.put("mer_bus_type", "");
+        // extendInfoMap.put("mer_bus_type", "");
         // 线上手续费承担方配置
-        extendInfoMap.put("online_pay_fee_conf_list", getOnlinePayFeeConfList());
+        // extendInfoMap.put("online_pay_fee_conf_list", getOnlinePayFeeConfList());
+        // 银行大额转账对象
+        // extendInfoMap.put("bank_big_amt_pay_config", getBankBigAmtPayConfig());
         return extendInfoMap;
     }
 
     private static String getOnlinePayFeeConfList() {
         JSONObject dto = new JSONObject();
         // 业务类型
-        dto.put("pay_type", "");
+        // dto.put("pay_type", "");
         // 交易手续费外扣时的账户类型
-        dto.put("out_fee_acct_type", "");
+        // dto.put("out_fee_acct_type", "");
         // 交易手续费外扣汇付ID
-        dto.put("out_fee_huifuid", "");
+        // dto.put("out_fee_huifuid", "");
         // 是否交易手续费外扣
-        dto.put("out_fee_flag", "");
+        // dto.put("out_fee_flag", "");
 
         JSONArray dtoList = new JSONArray();
         dtoList.add(dto);
@@ -173,11 +175,35 @@ public class V2MerchantBusiModifyRequestDemo extends BaseCommonDemo {
         // 费率开关
         dto.put("switch_state", "1");
         // 交易手续费外扣时的账户类型
-        dto.put("out_fee_acct_type", "");
+        // dto.put("out_fee_acct_type", "");
         // 交易手续费外扣汇付ID
-        dto.put("out_fee_huifuid", "");
+        // dto.put("out_fee_huifuid", "");
         // 是否交易手续费外扣
-        dto.put("out_fee_flag", "");
+        // dto.put("out_fee_flag", "");
+
+        return dto.toJSONString();
+    }
+
+    private static String getBankBigAmtPayConfig() {
+        JSONObject dto = new JSONObject();
+        // 开关状态
+        // dto.put("switch_state", "");
+        // 大额调账标识申请类型
+        // dto.put("biz_type", "");
+        // 费率（百分比/%）
+        // dto.put("fee_rate", "");
+        // 交易手续费（固定/元）
+        // dto.put("fee_fix_amt", "");
+        // 手续费外扣标记
+        // dto.put("out_fee_flag", "");
+        // 手续费外扣时的汇付ID
+        // dto.put("out_fee_huifuid", "");
+        // 外扣手续费费承担账户号
+        // dto.put("out_fee_acct_id", "");
+        // 银行大额转账单笔额度
+        // dto.put("big_amt_limit_per_time", "");
+        // 银行大额转账单日额度
+        // dto.put("big_amt_limit_per_day", "");
 
         return dto.toJSONString();
     }
@@ -223,11 +249,11 @@ public class V2MerchantBusiModifyRequestDemo extends BaseCommonDemo {
         // 支付固定手续费(元)
         dto.put("fee_fix_amt", "5");
         // 交易手续费外扣时的账户类型
-        dto.put("out_fee_acct_type", "");
+        // dto.put("out_fee_acct_type", "");
         // 交易手续费外扣汇付ID
-        dto.put("out_fee_huifuid", "");
+        // dto.put("out_fee_huifuid", "");
         // 是否交易手续费外扣
-        dto.put("out_fee_flag", "");
+        // dto.put("out_fee_flag", "");
 
         return dto.toJSONString();
     }
@@ -273,21 +299,21 @@ public class V2MerchantBusiModifyRequestDemo extends BaseCommonDemo {
     private static String getOnlineFeeConfList() {
         JSONObject dto = new JSONObject();
         // 业务类型
-        dto.put("fee_type", "test");
+        // dto.put("fee_type", "test");
         // 银行编码
-        dto.put("bank_id", "test");
+        // dto.put("bank_id", "test");
         // 借贷标志
-        dto.put("dc_flag", "test");
+        // dto.put("dc_flag", "test");
         // 费率状态
-        dto.put("stat_flag", "test");
+        // dto.put("stat_flag", "test");
         // 手续费（固定/元）
-        dto.put("fix_amt", "");
+        // dto.put("fix_amt", "");
         // 费率（百分比/%）
-        dto.put("fee_rate", "");
+        // dto.put("fee_rate", "");
         // 银行名称
-        dto.put("bank_name", "");
+        // dto.put("bank_name", "");
         // 银行中文简称
-        dto.put("bank_short_chn", "");
+        // dto.put("bank_short_chn", "");
 
         JSONArray dtoList = new JSONArray();
         dtoList.add(dto);

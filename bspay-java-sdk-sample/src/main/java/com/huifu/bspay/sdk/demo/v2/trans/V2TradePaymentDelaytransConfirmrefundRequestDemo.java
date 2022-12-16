@@ -56,11 +56,11 @@ public class V2TradePaymentDelaytransConfirmrefundRequestDemo extends BaseCommon
         // 分账对象
         extendInfoMap.put("acct_split_bunch", getAcctSplitBunch());
         // 是否垫资退款
-        extendInfoMap.put("loan_flag", "");
+        // extendInfoMap.put("loan_flag", "");
         // 垫资承担者
-        extendInfoMap.put("loan_undertaker", "");
+        // extendInfoMap.put("loan_undertaker", "");
         // 垫资账户类型
-        extendInfoMap.put("loan_acct_type", "");
+        // extendInfoMap.put("loan_acct_type", "");
         return extendInfoMap;
     }
 
@@ -79,7 +79,7 @@ public class V2TradePaymentDelaytransConfirmrefundRequestDemo extends BaseCommon
         // 分账金额
         dto.put("div_amt", "0.01");
         // 垫资金额
-        dto.put("part_loan_amt", "");
+        // dto.put("part_loan_amt", "");
 
         JSONArray dtoList = new JSONArray();
         dtoList.add(dto);

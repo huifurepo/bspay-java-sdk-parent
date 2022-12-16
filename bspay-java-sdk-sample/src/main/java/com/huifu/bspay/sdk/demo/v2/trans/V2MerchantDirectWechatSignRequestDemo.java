@@ -149,7 +149,7 @@ public class V2MerchantDirectWechatSignRequestDemo extends BaseCommonDemo {
         // 证书有效期开始日期
         dto.put("cert_begin_date", "20200420");
         // 文件列表
-        dto.put("file_list", getFileList());
+        // dto.put("file_list", getFileList());
         // 证书有效期截止日期
         dto.put("cert_end_date", "20400420");
 

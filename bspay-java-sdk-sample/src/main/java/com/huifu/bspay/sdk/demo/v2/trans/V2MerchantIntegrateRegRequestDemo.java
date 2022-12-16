@@ -50,6 +50,10 @@ public class V2MerchantIntegrateRegRequestDemo extends BaseCommonDemo {
         request.setContactInfo(getContactInfo());
         // 卡信息配置实体
         request.setCardInfo(getCardInfo());
+        // 取现配置列表jsonArray格式 ；
+        request.setCashConfig(getCashConfig());
+        // 结算配置jsonObject格式；
+        request.setSettleConfig(getSettleConfig());
 
         // 设置非必填字段
         Map<String, Object> extendInfoMap = getExtendInfos();
@@ -103,16 +107,12 @@ public class V2MerchantIntegrateRegRequestDemo extends BaseCommonDemo {
         extendInfoMap.put("open_licence_no", "123456789");
         // 法人信息
         extendInfoMap.put("legal_info", getLegalInfo());
+        // 签约人
+        // extendInfoMap.put("sign_user_info", getSignUserInfo());
         // 管理员账号
         extendInfoMap.put("login_name", "LG02022072707540497330158089012");
         // 是否发送短信通知商户标识
         extendInfoMap.put("sms_send_flag", "1");
-        // 取现配置列表
-        extendInfoMap.put("cash_config", getCashConfig());
-        // 结算配置实体
-        extendInfoMap.put("settle_config", getSettleConfig());
-        // 文件列表
-        extendInfoMap.put("file_info", getFileInfo());
         // 协议信息实体
         extendInfoMap.put("agreement_info", getAgreementInfo());
         // 业务开关配置
@@ -133,22 +133,22 @@ public class V2MerchantIntegrateRegRequestDemo extends BaseCommonDemo {
         extendInfoMap.put("bank_card_conf", getBankCardConf());
         // 花呗分期费率配置实体
         extendInfoMap.put("hb_fq_fee_config", getHbFqFeeConfig());
-        // 支付补贴
+        // 营销补贴
         extendInfoMap.put("combine_pay_config", getCombinePayConfig());
+        // 商户业务类型
+        // extendInfoMap.put("mer_bus_type", "");
+        // 线上费率配置
+        // extendInfoMap.put("online_fee_conf_list", getOnlineFeeConfList());
+        // 线上手续费承担方配置
+        // extendInfoMap.put("online_pay_fee_conf_list", getOnlinePayFeeConfList());
+        // 文件列表
+        extendInfoMap.put("file_info", getFileInfo());
         // 异步消息接收地址
         extendInfoMap.put("async_return_url", "rmq://C_SSPM_YMFZ_AUDIT");
         // 业务开通结果异步消息接收地址
         extendInfoMap.put("busi_async_return_url", "virgo://http://192.168.85.157:30031/sspm/testVirgo");
         // 交易异步应答地址
         extendInfoMap.put("recon_resp_addr", "archer://C_SSPM_NSPOSM_BUSIRESULT");
-        // 签约人
-        extendInfoMap.put("sign_user_info", getSignUserInfo());
-        // 线上费率配置
-        extendInfoMap.put("online_fee_conf_list", getOnlineFeeConfList());
-        // 线上手续费承担方配置
-        extendInfoMap.put("online_pay_fee_conf_list", getOnlinePayFeeConfList());
-        // 商户业务类型
-        extendInfoMap.put("mer_bus_type", "");
         return extendInfoMap;
     }
 
@@ -355,21 +355,21 @@ public class V2MerchantIntegrateRegRequestDemo extends BaseCommonDemo {
     private static String getOnlineFeeConfList() {
         JSONObject dto = new JSONObject();
         // 业务类型
-        dto.put("fee_type", "test");
+        // dto.put("fee_type", "test");
         // 银行编码
-        dto.put("bank_id", "test");
+        // dto.put("bank_id", "test");
         // 借贷标志
-        dto.put("dc_flag", "test");
+        // dto.put("dc_flag", "test");
         // 费率状态
-        dto.put("stat_flag", "test");
+        // dto.put("stat_flag", "test");
         // 手续费（固定/元）
-        dto.put("fix_amt", "");
+        // dto.put("fix_amt", "");
         // 费率（百分比/%）
-        dto.put("fee_rate", "");
+        // dto.put("fee_rate", "");
         // 银行名称
-        dto.put("bank_name", "");
+        // dto.put("bank_name", "");
         // 银行中文简称
-        dto.put("bank_short_chn", "");
+        // dto.put("bank_short_chn", "");
 
         JSONArray dtoList = new JSONArray();
         dtoList.add(dto);
@@ -417,7 +417,7 @@ public class V2MerchantIntegrateRegRequestDemo extends BaseCommonDemo {
         // 是否交易手续费外扣
         dto.put("out_fee_flag", "1");
         // 手续费承担方
-        dto.put("out_fee_huifu_id", "");
+        // dto.put("out_fee_huifu_id", "");
 
         JSONArray dtoList = new JSONArray();
         dtoList.add(dto);
@@ -427,13 +427,13 @@ public class V2MerchantIntegrateRegRequestDemo extends BaseCommonDemo {
     private static String getOnlinePayFeeConfList() {
         JSONObject dto = new JSONObject();
         // 业务类型
-        dto.put("pay_type", "");
+        // dto.put("pay_type", "");
         // 交易手续费外扣时的账户类型
-        dto.put("out_fee_acct_type", "");
+        // dto.put("out_fee_acct_type", "");
         // 交易手续费外扣汇付ID
-        dto.put("out_fee_huifuid", "");
+        // dto.put("out_fee_huifuid", "");
         // 是否交易手续费外扣
-        dto.put("out_fee_flag", "");
+        // dto.put("out_fee_flag", "");
 
         JSONArray dtoList = new JSONArray();
         dtoList.add(dto);
@@ -459,9 +459,9 @@ public class V2MerchantIntegrateRegRequestDemo extends BaseCommonDemo {
     private static String getQualificationInfoList() {
         JSONObject dto = new JSONObject();
         // 行业类目id
-        dto.put("mcc_code", "test");
+        // dto.put("mcc_code", "test");
         // 行业经营许可证资质照片
-        dto.put("image_list", "test");
+        // dto.put("image_list", "test");
 
         JSONArray dtoList = new JSONArray();
         dtoList.add(dto);
@@ -561,13 +561,13 @@ public class V2MerchantIntegrateRegRequestDemo extends BaseCommonDemo {
         // 持卡人其它证件照片
         dto.put("cert_other_pic", "398bbd13-40c9-37ce-8265-f6c1ecd317fa");
         // 签约人身份证照片-人像面
-        dto.put("sign_identity_front_file_id", "");
+        // dto.put("sign_identity_front_file_id", "");
         // 签约人身份证照片-国徽面
-        dto.put("sign_identity_back_file_id", "");
+        // dto.put("sign_identity_back_file_id", "");
         // 签约人法人授权书
-        dto.put("sign_auth_file_id", "");
+        // dto.put("sign_auth_file_id", "");
         // 支付宝授权函照片
-        dto.put("contact_ali_busi_auth_pic", "");
+        // dto.put("contact_ali_busi_auth_pic", "");
 
         return dto.toJSONString();
     }
@@ -583,7 +583,7 @@ public class V2MerchantIntegrateRegRequestDemo extends BaseCommonDemo {
         // 联系人证件号码
         dto.put("contact_id_card_number", "210411198701140000");
         // 实名认证类型
-        dto.put("realname_info_type", "");
+        // dto.put("realname_info_type", "");
         // 子渠道号
         dto.put("pay_channel_id", "JP00001");
         // 联系人类型
@@ -619,7 +619,7 @@ public class V2MerchantIntegrateRegRequestDemo extends BaseCommonDemo {
         // 受益人信息
         dto.put("ubo_info_list", getUboInfo());
         // 经营许可证
-        dto.put("qualification_info_list", getQualificationInfoList());
+        // dto.put("qualification_info_list", getQualificationInfoList());
 
         return dto.toJSONString();
     }
@@ -715,7 +715,21 @@ public class V2MerchantIntegrateRegRequestDemo extends BaseCommonDemo {
         // 联系人电子邮箱
         dto.put("contact_email", "jeff.peng@huifu.com");
         // 联系人身份证号
-        dto.put("contact_cert_no", "");
+        // dto.put("contact_cert_no", "");
+
+        return dto.toJSONString();
+    }
+
+    private static String getSignUserInfo() {
+        JSONObject dto = new JSONObject();
+        // 签约人类型
+        // dto.put("type", "test");
+        // 姓名
+        // dto.put("sign_name", "");
+        // 手机号
+        // dto.put("sign_mobile_no", "");
+        // 身份证
+        // dto.put("sign_cert_no", "");
 
         return dto.toJSONString();
     }
@@ -742,20 +756,6 @@ public class V2MerchantIntegrateRegRequestDemo extends BaseCommonDemo {
         JSONArray dtoList = new JSONArray();
         dtoList.add(dto);
         return dtoList.toJSONString();
-    }
-
-    private static String getSignUserInfo() {
-        JSONObject dto = new JSONObject();
-        // 签约人类型
-        dto.put("type", "test");
-        // 姓名
-        dto.put("sign_name", "");
-        // 手机号
-        dto.put("sign_mobile_no", "");
-        // 身份证
-        dto.put("sign_cert_no", "");
-
-        return dto.toJSONString();
     }
 
 }

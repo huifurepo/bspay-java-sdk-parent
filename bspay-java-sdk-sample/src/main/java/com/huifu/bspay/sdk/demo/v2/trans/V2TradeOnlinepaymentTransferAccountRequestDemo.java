@@ -32,6 +32,10 @@ public class V2TradeOnlinepaymentTransferAccountRequestDemo extends BaseCommonDe
         request.setReqDate(DateTools.getCurrentDateYYYYMMDD());
         // 收款方商户号
         request.setHuifuId("6666000003100616");
+        // 付款方名称
+        request.setCertificateName("沈显龙");
+        // 付款方银行卡号
+        request.setBankCardNo("Xmjm1RB4AAOaFYQ+PgjBlpugXbd8VAYAGB3J2zrbLfC42Bh5xiB47OOV1EdXyGpBq4H8je7mB/MlyEEs6O8PX6aoI4QHumr8VglrLM6uzbVNCIc3S5RPSmi2M+9+EdIQ6nlWd5+XQ7RJXX5Uvnegn74XzQBcN1d4gd04buwKbLpUPV3tWd1qjQwEE8w4gwEtH3L5AP75Mynz+wHFrUKJF3BTiW2/zJlcq5GJomOl06GEW52AZkXwn6U2suP3a0ySd0Rxbf1yQ1lj3SP56NeeEzuBaFLQWB7mEqJfZF3pE9MHNfi6tR1xwLdcxt98bdIqlteKdNAmgfQzcS13UcwH+w==");
         // 交易金额
         request.setTransAmt("10.00");
         // 异步通知地址
@@ -59,12 +63,10 @@ public class V2TradeOnlinepaymentTransferAccountRequestDemo extends BaseCommonDe
         extendInfoMap.put("user_huifu_id", "6666000103905031");
         // 收款方账户号
         extendInfoMap.put("acct_id", "A01199826");
-        // 付款方名称
-        extendInfoMap.put("certificate_name", "沈显龙");
-        // 付款方银行卡号
-        extendInfoMap.put("bank_card_no", "Xmjm1RB4AAOaFYQ+PgjBlpugXbd8VAYAGB3J2zrbLfC42Bh5xiB47OOV1EdXyGpBq4H8je7mB/MlyEEs6O8PX6aoI4QHumr8VglrLM6uzbVNCIc3S5RPSmi2M+9+EdIQ6nlWd5+XQ7RJXX5Uvnegn74XzQBcN1d4gd04buwKbLpUPV3tWd1qjQwEE8w4gwEtH3L5AP75Mynz+wHFrUKJF3BTiW2/zJlcq5GJomOl06GEW52AZkXwn6U2suP3a0ySd0Rxbf1yQ1lj3SP56NeeEzuBaFLQWB7mEqJfZF3pE9MHNfi6tR1xwLdcxt98bdIqlteKdNAmgfQzcS13UcwH+w==");
         // 备注
         extendInfoMap.put("remark", "标记123");
+        // 订单类型
+        // extendInfoMap.put("order_type", "");
         return extendInfoMap;
     }
 

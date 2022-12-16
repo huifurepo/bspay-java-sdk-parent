@@ -11,7 +11,7 @@ import com.huifu.bspay.sdk.demo.core.Identify;
 import com.huifu.bspay.sdk.opps.core.request.V2TradeCheckFilequeryRequest;
 
 /**
- * 交易、结算文件查询 - 示例
+ * 交易结算对账单查询 - 示例
  *
  * @author sdk-generator
  * @Description
@@ -34,8 +34,6 @@ public class V2TradeCheckFilequeryRequestDemo extends BaseCommonDemo {
         request.setHuifuId("6666000108854952");
         // 文件生成日期
         request.setFileDate("20220822");
-        // 对账单类型
-        request.setCheckOrderType("2");
 
         // 设置非必填字段
         Map<String, Object> extendInfoMap = getExtendInfos();
@@ -53,8 +51,8 @@ public class V2TradeCheckFilequeryRequestDemo extends BaseCommonDemo {
     private static Map<String, Object> getExtendInfos() {
         // 设置非必填字段
         Map<String, Object> extendInfoMap = new HashMap<>();
-        // 对账单推送类型
-        extendInfoMap.put("send_type", "0");
+        // 文件类型
+        // extendInfoMap.put("file_type_query", "");
         return extendInfoMap;
     }
 

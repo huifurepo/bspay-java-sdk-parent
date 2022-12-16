@@ -60,7 +60,7 @@ public class V2UserBusiModifyRequestDemo extends BaseCommonDemo {
         // 文件列表
         extendInfoMap.put("file_list", getFileList());
         // 延迟入账开关
-        extendInfoMap.put("delay_flag", "");
+        // extendInfoMap.put("delay_flag", "");
         // 异步请求地址
         extendInfoMap.put("async_return_url", "//http://service.example.com/to/path");
         return extendInfoMap;

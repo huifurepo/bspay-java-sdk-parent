@@ -82,9 +82,9 @@ public class V2MerchantBasicdataIndvRequestDemo extends BaseCommonDemo {
         // D1结算协议图片文件
         extendInfoMap.put("settle_agree_pic", "119bc780-b1c5-3a9c-8b18-f911de6ff28c");
         // 商户主页URL
-        extendInfoMap.put("mer_url", "");
+        // extendInfoMap.put("mer_url", "");
         // 商户ICP备案编号
-        extendInfoMap.put("mer_icp", "");
+        // extendInfoMap.put("mer_icp", "");
         return extendInfoMap;
     }
 
@@ -103,29 +103,29 @@ public class V2MerchantBasicdataIndvRequestDemo extends BaseCommonDemo {
         // 手续费外扣标记
         dto.put("out_settle_flag", "2");
         // 结算手续费外扣账户类型
-        dto.put("out_settle_acct_type", "");
+        // dto.put("out_settle_acct_type", "");
         // 节假日结算手续费率（%）
         dto.put("fixed_ratio", "5.00");
         // 结算方式
-        dto.put("settle_pattern", "");
+        // dto.put("settle_pattern", "");
         // 结算批次号
-        dto.put("settle_batch_no", "");
+        // dto.put("settle_batch_no", "");
         // 是否优先到账
-        dto.put("is_priority_receipt", "");
+        // dto.put("is_priority_receipt", "");
         // 自定义结算处理时间
-        dto.put("settle_time", "");
+        // dto.put("settle_time", "");
         // 节假日结算手续费固定金额（元）
-        dto.put("constant_amt", "");
+        // dto.put("constant_amt", "");
         // 结算卡反面
-        dto.put("settle_card_back_pic", "");
+        // dto.put("settle_card_back_pic", "");
         // 结算卡正面
-        dto.put("settle_card_front_pic", "");
+        // dto.put("settle_card_front_pic", "");
         // 法人身份证反面
-        dto.put("legal_cert_back_pic", "");
+        // dto.put("legal_cert_back_pic", "");
         // 法人身份证正面
-        dto.put("legal_cert_front_pic", "");
+        // dto.put("legal_cert_front_pic", "");
         // 授权委托书
-        dto.put("auth_enturst_pic", "");
+        // dto.put("auth_enturst_pic", "");
 
         return dto.toJSONString();
     }
@@ -167,11 +167,11 @@ public class V2MerchantBasicdataIndvRequestDemo extends BaseCommonDemo {
         // 取现手续费率（%）fix_amt与fee_rate至少填写一项，单位%，需保留小数点后两位，取值范围[0.00,100.00]，不收费请填写0.00；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：0.05&lt;/font&gt;&lt;br/&gt;注：如果fix_amt与fee_rate都填写了则手续费&#x3D;fix_amt+支付金额*fee_rate
         dto.put("fee_rate", "");
         // 是否交易手续费外扣
-        dto.put("out_fee_flag", "");
+        // dto.put("out_fee_flag", "");
         // 手续费承担方
-        dto.put("out_fee_huifu_id", "");
+        // dto.put("out_fee_huifu_id", "");
         // 交易手续费外扣的账户类型
-        dto.put("out_fee_acct_type", "");
+        // dto.put("out_fee_acct_type", "");
 
         JSONArray dtoList = new JSONArray();
         dtoList.add(dto);

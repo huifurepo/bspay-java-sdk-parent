@@ -41,6 +41,11 @@ public class V2TradeTransWxSurrogateRequest extends BaseRequest {
      */
     @JSONField(name = "user_name")
     private String userName;
+    /**
+     * 代发备注
+     */
+    @JSONField(name = "remark")
+    private String remark;
 
     @Override
     public FunctionCodeEnum getFunctionCode() {
@@ -50,13 +55,14 @@ public class V2TradeTransWxSurrogateRequest extends BaseRequest {
     public V2TradeTransWxSurrogateRequest() {
     }
 
-    public V2TradeTransWxSurrogateRequest(String reqSeqId, String reqDate, String outHuifuId, String transAmt, String openId, String userName) {
+    public V2TradeTransWxSurrogateRequest(String reqSeqId, String reqDate, String outHuifuId, String transAmt, String openId, String userName, String remark) {
         this.reqSeqId = reqSeqId;
         this.reqDate = reqDate;
         this.outHuifuId = outHuifuId;
         this.transAmt = transAmt;
         this.openId = openId;
         this.userName = userName;
+        this.remark = remark;
     }
 
     public String getReqSeqId() {
@@ -105,6 +111,14 @@ public class V2TradeTransWxSurrogateRequest extends BaseRequest {
 
     public void setUserName(String userName) {
         this.userName = userName;
+    }
+
+    public String getRemark() {
+        return remark;
+    }
+
+    public void setRemark(String remark) {
+        this.remark = remark;
     }
 
 }

@@ -64,28 +64,28 @@ public class V2TradeOnlinepaymentQuickpayApplyRequestDemo extends BaseCommonDemo
         // 设置非必填字段
         Map<String, Object> extendInfoMap = new HashMap<>();
         // 订单类型
-        extendInfoMap.put("order_type", "");
+        // extendInfoMap.put("order_type", "");
         // 备注
-        extendInfoMap.put("remark", "");
+        // extendInfoMap.put("remark", "");
         // 订单失效时间
-        extendInfoMap.put("time_expire", "");
-        // 支付补贴信息
-        extendInfoMap.put("combinedpay_data", getCombinedpayData());
+        // extendInfoMap.put("time_expire", "");
+        // 营销补贴信息
+        // extendInfoMap.put("combinedpay_data", getCombinedpayData());
         // 分账对象
-        extendInfoMap.put("acct_split_bunch", getAcctSplitBunchRucan());
+        // extendInfoMap.put("acct_split_bunch", getAcctSplitBunchRucan());
         return extendInfoMap;
     }
 
     private static String getCombinedpayData() {
         JSONObject dto = new JSONObject();
         // 补贴方汇付编号
-        dto.put("huifu_id", "test");
+        // dto.put("huifu_id", "test");
         // 补贴方类型
-        dto.put("user_type", "test");
+        // dto.put("user_type", "test");
         // 补贴方账户号
-        dto.put("acct_id", "test");
+        // dto.put("acct_id", "test");
         // 补贴金额
-        dto.put("amount", "test");
+        // dto.put("amount", "test");
 
         JSONArray dtoList = new JSONArray();
         dtoList.add(dto);
@@ -99,17 +99,17 @@ public class V2TradeOnlinepaymentQuickpayApplyRequestDemo extends BaseCommonDemo
         // 设备类型
         dto.put("device_type", "1");
         // 交易设备gps
-        dto.put("device_gps", "");
+        // dto.put("device_gps", "");
         // 交易设备iccid
-        dto.put("device_icc_id", "");
+        // dto.put("device_icc_id", "");
         // 交易设备imei
-        dto.put("device_imei", "");
+        // dto.put("device_imei", "");
         // 交易设备imsi
-        dto.put("device_imsi", "");
+        // dto.put("device_imsi", "");
         // 交易设备mac
-        dto.put("device_mac", "");
+        // dto.put("device_mac", "");
         // 交易设备wifimac
-        dto.put("device_wifi_mac", "");
+        // dto.put("device_wifi_mac", "");
 
         return dto.toJSONString();
     }
@@ -119,11 +119,11 @@ public class V2TradeOnlinepaymentQuickpayApplyRequestDemo extends BaseCommonDemo
         // ip地址
         dto.put("ip_addr", "106.33.180.238");
         // 基站地址
-        dto.put("base_atation", "");
+        // dto.put("base_atation", "");
         // 纬度
-        dto.put("latitude", "");
+        // dto.put("latitude", "");
         // 经度
-        dto.put("longitude", "");
+        // dto.put("longitude", "");
 
         return dto.toJSONString();
     }
@@ -131,9 +131,11 @@ public class V2TradeOnlinepaymentQuickpayApplyRequestDemo extends BaseCommonDemo
     private static JSON getAcctInfos() {
         JSONObject dto = new JSONObject();
         // 分账金额
-        dto.put("div_amt", "");
+        // dto.put("div_amt", "");
         // 被分账方ID
-        dto.put("huifu_id", "");
+        // dto.put("huifu_id", "");
+        // 账户号
+        // dto.put("acct_id", "");
 
         JSONArray dtoList = new JSONArray();
         dtoList.add(dto);
@@ -143,9 +145,9 @@ public class V2TradeOnlinepaymentQuickpayApplyRequestDemo extends BaseCommonDemo
     private static String getExtendPayData() {
         JSONObject dto = new JSONObject();
         // 业务种类
-        dto.put("biz_tp", "test");
+        // dto.put("biz_tp", "test");
         // 商品简称
-        dto.put("goods_short_name", "test");
+        // dto.put("goods_short_name", "test");
         // 网关支付受理渠道
         dto.put("gw_chnnl_tp", "99");
 
@@ -155,7 +157,7 @@ public class V2TradeOnlinepaymentQuickpayApplyRequestDemo extends BaseCommonDemo
     private static String getAcctSplitBunchRucan() {
         JSONObject dto = new JSONObject();
         // 分账信息列表
-        dto.put("acct_infos", getAcctInfos());
+        // dto.put("acct_infos", getAcctInfos());
 
         return dto.toJSONString();
     }

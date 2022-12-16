@@ -11,7 +11,7 @@ import com.huifu.bspay.sdk.demo.core.Identify;
 import com.huifu.bspay.sdk.opps.core.request.V2TradeCheckReplayRequest;
 
 /**
- * 交易结算对账文件补生成 - 示例
+ * 交易结算对账文件重新生成 - 示例
  *
  * @author sdk-generator
  * @Description

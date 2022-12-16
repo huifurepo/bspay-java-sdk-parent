@@ -49,12 +49,12 @@ public class V2TradeAcctpaymentAcctlogQueryRequestDemo extends BaseCommonDemo {
     private static Map<String, Object> getExtendInfos() {
         // 设置非必填字段
         Map<String, Object> extendInfoMap = new HashMap<>();
-        // 账户类型
-        extendInfoMap.put("acct_type", "01");
         // 每页条数
         extendInfoMap.put("page_size", "10");
         // 分页页码
         extendInfoMap.put("page_num", "1");
+        // 账户号
+        // extendInfoMap.put("acct_id", "");
         return extendInfoMap;
     }
 

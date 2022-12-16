@@ -60,7 +60,7 @@ public class V2TradeAcctpaymentRefundRequestDemo extends BaseCommonDemo {
         // 原余额支付支付全局流水号
         extendInfoMap.put("org_hf_seq_id", "");
         // 分账对象
-        extendInfoMap.put("acct_split_bunch", getAcctSplitBunch());
+        // extendInfoMap.put("acct_split_bunch", getAcctSplitBunch());
         // 安全信息
         extendInfoMap.put("risk_check_data", getRiskCheckData());
         return extendInfoMap;
@@ -69,7 +69,7 @@ public class V2TradeAcctpaymentRefundRequestDemo extends BaseCommonDemo {
     private static String getAcctSplitBunch() {
         JSONObject dto = new JSONObject();
         // 退账明细
-        dto.put("acct_infos", getAcctInfos());
+        // dto.put("acct_infos", getAcctInfos());
 
         return dto.toJSONString();
     }
@@ -87,9 +87,9 @@ public class V2TradeAcctpaymentRefundRequestDemo extends BaseCommonDemo {
     private static JSON getAcctInfos() {
         JSONObject dto = new JSONObject();
         // 退款金额
-        dto.put("div_amt", "test");
+        // dto.put("div_amt", "test");
         // 退款方ID
-        dto.put("huifu_id", "test");
+        // dto.put("huifu_id", "test");
 
         JSONArray dtoList = new JSONArray();
         dtoList.add(dto);

@@ -61,7 +61,7 @@ public class V2PcreditFeeConfigRequestDemo extends BaseCommonDemo {
         // 商户汇付Id
         dto.put("huifu_id", "6666000003156435");
         // 花呗分期状态
-        dto.put("hb_fq_status", "");
+        // dto.put("hb_fq_status", "");
         // 花呗分期3期开关
         dto.put("hb_three_period_switch", "Y");
         // 花呗收单分期3期费率（%）
@@ -90,7 +90,7 @@ public class V2PcreditFeeConfigRequestDemo extends BaseCommonDemo {
         return dtoList.toJSONString();
     }
 
-    private static String getBankFqFeeList() {
+    private static JSON getBankFqFeeList() {
         JSONObject dto = new JSONObject();
         // 银行编号
         dto.put("bank_code", "01040000");
@@ -119,7 +119,7 @@ public class V2PcreditFeeConfigRequestDemo extends BaseCommonDemo {
 
         JSONArray dtoList = new JSONArray();
         dtoList.add(dto);
-        return dtoList.toJSONString();
+        return dtoList;
     }
 
     private static String getBankFqList() {

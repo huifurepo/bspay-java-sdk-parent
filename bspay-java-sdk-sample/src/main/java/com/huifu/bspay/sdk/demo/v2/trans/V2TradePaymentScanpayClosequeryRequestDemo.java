@@ -52,7 +52,7 @@ public class V2TradePaymentScanpayClosequeryRequestDemo extends BaseCommonDemo {
         // 设置非必填字段
         Map<String, Object> extendInfoMap = new HashMap<>();
         // 原交易返回的全局流水号
-        extendInfoMap.put("org_hf_seq_id", "");
+        // extendInfoMap.put("org_hf_seq_id", "");
         // 原交易请求流水号
         extendInfoMap.put("org_req_seq_id", "202109187312431237001");
         return extendInfoMap;

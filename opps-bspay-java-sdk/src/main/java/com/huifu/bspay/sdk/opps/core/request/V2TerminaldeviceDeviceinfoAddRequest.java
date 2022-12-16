@@ -26,11 +26,6 @@ public class V2TerminaldeviceDeviceinfoAddRequest extends BaseRequest {
      */
     @JSONField(name = "huifu_id")
     private String huifuId;
-    /**
-     * 产品编号
-     */
-    @JSONField(name = "product_id")
-    private String productId;
 
     @Override
     public FunctionCodeEnum getFunctionCode() {
@@ -40,11 +35,10 @@ public class V2TerminaldeviceDeviceinfoAddRequest extends BaseRequest {
     public V2TerminaldeviceDeviceinfoAddRequest() {
     }
 
-    public V2TerminaldeviceDeviceinfoAddRequest(String reqSeqId, String reqDate, String huifuId, String productId) {
+    public V2TerminaldeviceDeviceinfoAddRequest(String reqSeqId, String reqDate, String huifuId) {
         this.reqSeqId = reqSeqId;
         this.reqDate = reqDate;
         this.huifuId = huifuId;
-        this.productId = productId;
     }
 
     public String getReqSeqId() {
@@ -69,14 +63,6 @@ public class V2TerminaldeviceDeviceinfoAddRequest extends BaseRequest {
 
     public void setHuifuId(String huifuId) {
         this.huifuId = huifuId;
-    }
-
-    public String getProductId() {
-        return productId;
-    }
-
-    public void setProductId(String productId) {
-        this.productId = productId;
     }
 
 }

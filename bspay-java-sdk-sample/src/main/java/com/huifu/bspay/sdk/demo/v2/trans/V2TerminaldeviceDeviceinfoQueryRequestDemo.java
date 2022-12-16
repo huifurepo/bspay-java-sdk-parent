@@ -11,7 +11,7 @@ import com.huifu.bspay.sdk.demo.core.Identify;
 import com.huifu.bspay.sdk.opps.core.request.V2TerminaldeviceDeviceinfoQueryRequest;
 
 /**
- * 商户终端信息查询 - 示例
+ * 绑定终端信息查询 - 示例
  *
  * @author sdk-generator
  * @Description
@@ -31,9 +31,9 @@ public class V2TerminaldeviceDeviceinfoQueryRequestDemo extends BaseCommonDemo {
         // 请求时间
         request.setReqDate(DateTools.getCurrentDateYYYYMMDD());
         // 汇付客户Id
-        request.setHuifuId("6666000116230108");
+        request.setHuifuId("6666000104487240");
         // 分页大小
-        request.setPageSize("1");
+        request.setPageSize("5");
         // 当前页码
         request.setPageNum("1");
 
@@ -54,7 +54,7 @@ public class V2TerminaldeviceDeviceinfoQueryRequestDemo extends BaseCommonDemo {
         // 设置非必填字段
         Map<String, Object> extendInfoMap = new HashMap<>();
         // 终端号
-        extendInfoMap.put("device_id", "SPINXN36651g916623001");
+        extendInfoMap.put("device_id", "660035140101200268801");
         return extendInfoMap;
     }
 

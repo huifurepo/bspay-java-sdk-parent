@@ -36,8 +36,6 @@ public class V2TradeOnlinepaymentTransferAccountCloseRequestDemo extends BaseCom
         request.setOrgReqSeqId("1399999399862667");
         // 原请求日期
         request.setOrgReqDate("20221020");
-        // 入账标识
-        request.setInAcctFlag("YDNUCSV2JV7BAXYN");
 
         // 设置非必填字段
         Map<String, Object> extendInfoMap = getExtendInfos();
@@ -57,6 +55,8 @@ public class V2TradeOnlinepaymentTransferAccountCloseRequestDemo extends BaseCom
         Map<String, Object> extendInfoMap = new HashMap<>();
         // 银行卡号
         extendInfoMap.put("bank_card_no", "Xmjm1RB4AAOaFYQ+PgjBlpugXbd8VAYAGB3J2zrbLfC42Bh5xiB47OOV1EdXyGpBq4H8je7mB/MlyEEs6O8PX6aoI4QHumr8VglrLM6uzbVNCIc3S5RPSmi2M+9+EdIQ6nlWd5+XQ7RJXX5Uvnegn74XzQBcN1d4gd04buwKbLpUPV3tWd1qjQwEE8w4gwEtH3L5AP75Mynz+wHFrUKJF3BTiW2/zJlcq5GJomOl06GEW52AZkXwn6U2suP3a0ySd0Rxbf1yQ1lj3SP56NeeEzuBaFLQWB7mEqJfZF3pE9MHNfi6tR1xwLdcxt98bdIqlteKdNAmgfQzcS13UcwH+w==");
+        // 入账标识
+        extendInfoMap.put("in_acct_flag", "YDNUCSV2JV7BAXYN");
         return extendInfoMap;
     }
 

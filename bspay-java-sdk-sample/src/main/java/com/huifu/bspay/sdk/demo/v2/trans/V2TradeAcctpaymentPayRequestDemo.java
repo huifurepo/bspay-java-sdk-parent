@@ -30,8 +30,6 @@ public class V2TradeAcctpaymentPayRequestDemo extends BaseCommonDemo {
         request.setReqSeqId(SequenceTools.getReqSeqId32());
         // 请求日期
         request.setReqDate(DateTools.getCurrentDateYYYYMMDD());
-        // 商户号
-        request.setHuifuId("6666000018344461");
         // 出款方商户号
         request.setOutHuifuId("6666000018344461");
         // 支付金额
@@ -57,14 +55,18 @@ public class V2TradeAcctpaymentPayRequestDemo extends BaseCommonDemo {
     private static Map<String, Object> getExtendInfos() {
         // 设置非必填字段
         Map<String, Object> extendInfoMap = new HashMap<>();
+        // ~~发起方商户号~~
+        // extendInfoMap.put("~~huifu_id~~", "");
         // 商品描述
-        extendInfoMap.put("good_desc", "");
+        // extendInfoMap.put("good_desc", "");
         // 备注
-        extendInfoMap.put("remark", "");
+        // extendInfoMap.put("remark", "");
         // 是否延迟交易
-        extendInfoMap.put("delay_acct_flag", "");
+        // extendInfoMap.put("delay_acct_flag", "");
         // 设备信息
         extendInfoMap.put("terminal_device_data", getTerminalDeviceData());
+        // 出款方账户号
+        // extendInfoMap.put("out_acct_id", "");
         return extendInfoMap;
     }
 
@@ -75,17 +77,17 @@ public class V2TradeAcctpaymentPayRequestDemo extends BaseCommonDemo {
         // 交易设备IP
         dto.put("device_ip", "10.10.0.1");
         // 交易设备MAC
-        dto.put("device_mac", "");
+        // dto.put("device_mac", "");
         // 交易设备GPS
-        dto.put("device_gps", "");
+        // dto.put("device_gps", "");
         // 交易设备IMEI
-        dto.put("device_imei", "");
+        // dto.put("device_imei", "");
         // 交易设备IMSI
-        dto.put("device_imsi", "");
+        // dto.put("device_imsi", "");
         // 交易设备ICCID
-        dto.put("device_icc_id", "");
+        // dto.put("device_icc_id", "");
         // 交易设备WIFIMAC
-        dto.put("device_wifi_mac", "");
+        // dto.put("device_wifi_mac", "");
 
         return dto.toJSONString();
     }
@@ -105,13 +107,13 @@ public class V2TradeAcctpaymentPayRequestDemo extends BaseCommonDemo {
         // 产品子类
         dto.put("sub_product", "1");
         // 纬度
-        dto.put("latitude", "");
+        // dto.put("latitude", "");
         // 经度
-        dto.put("longitude", "");
+        // dto.put("longitude", "");
         // 基站地址
-        dto.put("base_atation", "");
+        // dto.put("base_atation", "");
         // IP地址
-        dto.put("ip_addr", "");
+        // dto.put("ip_addr", "");
 
         return dto.toJSONString();
     }
@@ -122,6 +124,8 @@ public class V2TradeAcctpaymentPayRequestDemo extends BaseCommonDemo {
         dto.put("div_amt", "0.01");
         // 被分账方ID
         dto.put("huifu_id", "6666000018344461");
+        // 被分账方账户号
+        // dto.put("acct_id", "");
 
         JSONArray dtoList = new JSONArray();
         dtoList.add(dto);

@@ -38,6 +38,8 @@ public class V2TradeTransWxSurrogateRequestDemo extends BaseCommonDemo {
         request.setOpenId("o-MYE42l80oelYMDE34nYD456Xoy");
         // 微信收款用户姓名
         request.setUserName("王大锤");
+        // 代发备注
+        request.setRemark("测试用");
 
         // 设置非必填字段
         Map<String, Object> extendInfoMap = getExtendInfos();
@@ -57,10 +59,12 @@ public class V2TradeTransWxSurrogateRequestDemo extends BaseCommonDemo {
         Map<String, Object> extendInfoMap = new HashMap<>();
         // 账户类型
         extendInfoMap.put("out_acct_type", "05");
-        // 代发备注
-        extendInfoMap.put("remark", "测试用");
         // 异步通知地址
         extendInfoMap.put("notify_url", "http://www.gangcai.com");
+        // 子商户号
+        // extendInfoMap.put("sub_mch_id", "");
+        // 子商户应用Id
+        // extendInfoMap.put("sub_app_id", "");
         return extendInfoMap;
     }
 

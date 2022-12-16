@@ -57,43 +57,47 @@ public class V2TradeOnlinepaymentRefundRequestDemo extends BaseCommonDemo {
         Map<String, Object> extendInfoMap = new HashMap<>();
         // 原交易全局流水号
         extendInfoMap.put("org_hf_seq_id", "");
-        // 原交易请求日期
-        extendInfoMap.put("org_req_date", "20221110");
         // 原交易请求流水号
         extendInfoMap.put("org_req_seq_id", "RQ1212333113");
+        // 原交易请求日期
+        extendInfoMap.put("org_req_date", "20221110");
         // 异步通知地址
         extendInfoMap.put("notify_url", "http://www.baidu.com");
         // 备注
         extendInfoMap.put("remark", "remark123");
         // 分账对象
-        extendInfoMap.put("acct_split_bunch", getAcctSplitBunch());
-        // 支付补贴信息
+        extendInfoMap.put("acct_split_bunch", getAcctSplitBunchRucan());
+        // 营销补贴信息
         extendInfoMap.put("combinedpay_data", getCombinedpayData());
         return extendInfoMap;
+    }
+
+    private static JSON getAcctInfosRucan() {
+        JSONObject dto = new JSONObject();
+        // 商户号
+        // dto.put("huifu_id", "");
+        // 支付金额
+        // dto.put("div_amt", "");
+
+        JSONArray dtoList = new JSONArray();
+        dtoList.add(dto);
+        return dtoList;
     }
 
     private static String getCombinedpayData() {
         JSONObject dto = new JSONObject();
         // 补贴方汇付编号
-        dto.put("huifu_id", "test");
+        // dto.put("huifu_id", "test");
         // 补贴方类型
-        dto.put("user_type", "test");
+        // dto.put("user_type", "test");
         // 补贴方账户号
-        dto.put("acct_id", "test");
+        // dto.put("acct_id", "test");
         // 补贴金额
-        dto.put("amount", "test");
+        // dto.put("amount", "test");
 
         JSONArray dtoList = new JSONArray();
         dtoList.add(dto);
         return dtoList.toJSONString();
-    }
-
-    private static String getAcctSplitBunch() {
-        JSONObject dto = new JSONObject();
-        // 分账信息列表
-        dto.put("acct_infos", getAcctInfos());
-
-        return dto.toJSONString();
     }
 
     private static String getTerminalDeviceData() {
@@ -120,28 +124,24 @@ public class V2TradeOnlinepaymentRefundRequestDemo extends BaseCommonDemo {
 
     private static String getRiskCheckData() {
         JSONObject dto = new JSONObject();
-        // 基站地址
-        dto.put("base_station", "");
         // ip地址
-        dto.put("ip_addr", "");
+        // dto.put("ip_addr", "");
+        // 基站地址
+        // dto.put("base_atation", "");
         // 纬度
-        dto.put("latitude", "");
+        // dto.put("latitude", "");
         // 经度
-        dto.put("longitude", "");
+        // dto.put("longitude", "");
 
         return dto.toJSONString();
     }
 
-    private static JSON getAcctInfos() {
+    private static String getAcctSplitBunchRucan() {
         JSONObject dto = new JSONObject();
-        // 商户号
-        dto.put("huifu_id", "");
-        // 支付金额
-        dto.put("div_amt", "");
+        // 分账信息列表
+        // dto.put("acct_infos", getAcctInfosRucan());
 
-        JSONArray dtoList = new JSONArray();
-        dtoList.add(dto);
-        return dtoList;
+        return dto.toJSONString();
     }
 
 }

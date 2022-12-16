@@ -60,18 +60,18 @@ public class V2UserBasicdataIndvModifyRequestDemo extends BaseCommonDemo {
         // 手机号
         extendInfoMap.put("mobile_no", "15556622000");
         // 文件列表
-        extendInfoMap.put("file_list", getFileList());
+        // extendInfoMap.put("file_list", getFileList());
         return extendInfoMap;
     }
 
     private static String getFileList() {
         JSONObject dto = new JSONObject();
         // 文件类型
-        dto.put("file_type", "test");
+        // dto.put("file_type", "test");
         // 文件jfileID
-        dto.put("file_id", "test");
+        // dto.put("file_id", "test");
         // 文件名称
-        dto.put("file_name", "");
+        // dto.put("file_name", "");
 
         JSONArray dtoList = new JSONArray();
         dtoList.add(dto);

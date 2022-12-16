@@ -37,17 +37,7 @@ public class V2TradeOnlinepaymentTransferAccountQueryRequest extends BaseRequest
     @JSONField(name = "org_req_date")
     private String orgReqDate;
     /**
-     * 入账标识
-     */
-    @JSONField(name = "in_acct_flag")
-    private String inAcctFlag;
-    /**
-     * 交易开始日期
-     */
-    @JSONField(name = "trans_start_date")
-    private String transStartDate;
-    /**
-     * 交易结束日期
+     * 打款结束日期
      */
     @JSONField(name = "trans_end_date")
     private String transEndDate;
@@ -60,14 +50,12 @@ public class V2TradeOnlinepaymentTransferAccountQueryRequest extends BaseRequest
     public V2TradeOnlinepaymentTransferAccountQueryRequest() {
     }
 
-    public V2TradeOnlinepaymentTransferAccountQueryRequest(String reqSeqId, String reqDate, String huifuId, String orgReqSeqId, String orgReqDate, String inAcctFlag, String transStartDate, String transEndDate) {
+    public V2TradeOnlinepaymentTransferAccountQueryRequest(String reqSeqId, String reqDate, String huifuId, String orgReqSeqId, String orgReqDate, String transEndDate) {
         this.reqSeqId = reqSeqId;
         this.reqDate = reqDate;
         this.huifuId = huifuId;
         this.orgReqSeqId = orgReqSeqId;
         this.orgReqDate = orgReqDate;
-        this.inAcctFlag = inAcctFlag;
-        this.transStartDate = transStartDate;
         this.transEndDate = transEndDate;
     }
 
@@ -109,22 +97,6 @@ public class V2TradeOnlinepaymentTransferAccountQueryRequest extends BaseRequest
 
     public void setOrgReqDate(String orgReqDate) {
         this.orgReqDate = orgReqDate;
-    }
-
-    public String getInAcctFlag() {
-        return inAcctFlag;
-    }
-
-    public void setInAcctFlag(String inAcctFlag) {
-        this.inAcctFlag = inAcctFlag;
-    }
-
-    public String getTransStartDate() {
-        return transStartDate;
-    }
-
-    public void setTransStartDate(String transStartDate) {
-        this.transStartDate = transStartDate;
     }
 
     public String getTransEndDate() {

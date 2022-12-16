@@ -64,9 +64,9 @@ public class V2TradePaymentJspayRequestDemo extends BaseCommonDemo {
         // 渠道号
         extendInfoMap.put("channel_no", "");
         // 手续费扣款标志
-        extendInfoMap.put("fee_flag", "");
-        // 支付补贴信息
-        extendInfoMap.put("combinedpay_data", getCombinedpayData());
+        // extendInfoMap.put("fee_flag", "");
+        // 营销补贴信息
+        // extendInfoMap.put("combinedpay_data", getCombinedpayData());
         // 场景类型
         extendInfoMap.put("pay_scene", "02");
         // 安全信息
@@ -78,13 +78,13 @@ public class V2TradePaymentJspayRequestDemo extends BaseCommonDemo {
         // 传入分帐遇到优惠的处理规则
         extendInfoMap.put("term_div_coupon_type", "0");
         // 聚合正扫微信拓展参数集合
-        extendInfoMap.put("wx_data", getWxData());
+        // extendInfoMap.put("wx_data", getWxData());
         // 支付宝扩展参数集合
         extendInfoMap.put("alipay_data", getAlipayData());
         // 银联参数集合
-        extendInfoMap.put("unionpay_data", getUnionpayData());
+        // extendInfoMap.put("unionpay_data", getUnionpayData());
         // 数字人民币参数集合
-        extendInfoMap.put("dc_data", getDcData());
+        // extendInfoMap.put("dc_data", getDcData());
         // 商户贴息标记
         extendInfoMap.put("fq_mer_discount_flag", "N");
         // 异步通知地址
@@ -97,13 +97,13 @@ public class V2TradePaymentJspayRequestDemo extends BaseCommonDemo {
     private static JSON getPayeeInfo() {
         JSONObject dto = new JSONObject();
         // 商户类别
-        dto.put("mer_cat_code", "");
+        // dto.put("mer_cat_code", "");
         // 二级商户代码
-        dto.put("sub_id", "");
+        // dto.put("sub_id", "");
         // 二级商户名称
-        dto.put("sub_name", "");
+        // dto.put("sub_name", "");
         // 终端号
-        dto.put("term_id", "");
+        // dto.put("term_id", "");
 
         return dto;
     }
@@ -120,7 +120,7 @@ public class V2TradePaymentJspayRequestDemo extends BaseCommonDemo {
         dto.put("quantity", "20");
         // 商品描述信息
         dto.put("body", "");
-        // 商品的展示地址
+        // 商品类目树
         dto.put("categories_tree", "string");
         // 商品类目
         dto.put("goods_category", "");
@@ -135,13 +135,13 @@ public class V2TradePaymentJspayRequestDemo extends BaseCommonDemo {
     private static JSON getStoreInfo() {
         JSONObject dto = new JSONObject();
         // 门店id
-        dto.put("id", "");
+        // dto.put("id", "");
         // 门店名称
-        dto.put("name", "");
+        // dto.put("name", "");
         // 门店行政区划码
-        dto.put("area_code", "");
+        // dto.put("area_code", "");
         // 门店详细地址
-        dto.put("address", "");
+        // dto.put("address", "");
 
         JSONArray dtoList = new JSONArray();
         dtoList.add(dto);
@@ -151,13 +151,13 @@ public class V2TradePaymentJspayRequestDemo extends BaseCommonDemo {
     private static String getCombinedpayData() {
         JSONObject dto = new JSONObject();
         // 补贴方汇付编号
-        dto.put("huifu_id", "test");
+        // dto.put("huifu_id", "test");
         // 补贴方类型
-        dto.put("user_type", "test");
+        // dto.put("user_type", "test");
         // 补贴方账户号
-        dto.put("acct_id", "test");
+        // dto.put("acct_id", "test");
         // 补贴金额
-        dto.put("amount", "test");
+        // dto.put("amount", "test");
 
         JSONArray dtoList = new JSONArray();
         dtoList.add(dto);
@@ -167,9 +167,9 @@ public class V2TradePaymentJspayRequestDemo extends BaseCommonDemo {
     private static JSON getAcctInfosRucan() {
         JSONObject dto = new JSONObject();
         // 分账金额
-        dto.put("div_amt", "test");
+        // dto.put("div_amt", "test");
         // 被分账方ID
-        dto.put("huifu_id", "test");
+        // dto.put("huifu_id", "test");
 
         JSONArray dtoList = new JSONArray();
         dtoList.add(dto);
@@ -179,7 +179,7 @@ public class V2TradePaymentJspayRequestDemo extends BaseCommonDemo {
     private static String getTerminalDeviceData() {
         JSONObject dto = new JSONObject();
         // 商户设备类型
-        dto.put("mer_device_type", "test");
+        // dto.put("mer_device_type", "test");
         // 汇付机具号
         dto.put("devs_id", "SPINTP357338300264411");
         // 设备类型
@@ -199,21 +199,21 @@ public class V2TradePaymentJspayRequestDemo extends BaseCommonDemo {
         // 交易设备GPS
         dto.put("device_gps", "192.168.0.0");
         // 商户终端应用程序版本
-        dto.put("app_version", "");
+        // dto.put("app_version", "");
         // SIM 卡卡号
-        dto.put("icc_id", "");
+        // dto.put("icc_id", "");
         // 商户终端实时经纬度信息
-        dto.put("location", "");
+        // dto.put("location", "");
         // 商户交易设备IP
-        dto.put("mer_device_ip", "");
+        // dto.put("mer_device_ip", "");
         // 移动国家代码
-        dto.put("mobile_country_cd", "");
+        // dto.put("mobile_country_cd", "");
         // 移动网络号码
-        dto.put("mobile_net_num", "");
+        // dto.put("mobile_net_num", "");
         // 商户终端入网认证编号
-        dto.put("network_license", "");
+        // dto.put("network_license", "");
         // 商户终端序列号
-        dto.put("serial_num", "");
+        // dto.put("serial_num", "");
 
         return dto.toJSONString();
     }
@@ -221,7 +221,7 @@ public class V2TradePaymentJspayRequestDemo extends BaseCommonDemo {
     private static String getAcctSplitBunch() {
         JSONObject dto = new JSONObject();
         // 分账明细
-        dto.put("acct_infos", getAcctInfosRucan());
+        // dto.put("acct_infos", getAcctInfosRucan());
 
         return dto.toJSONString();
     }
@@ -243,27 +243,27 @@ public class V2TradePaymentJspayRequestDemo extends BaseCommonDemo {
     private static String getUnionpayData() {
         JSONObject dto = new JSONObject();
         // 收款方附加数据
-        dto.put("acq_addn_data", "");
+        // dto.put("acq_addn_data", "");
         // 地区信息
-        dto.put("area_info", "");
+        // dto.put("area_info", "");
         // 持卡人ip
-        dto.put("customer_ip", "");
+        // dto.put("customer_ip", "");
         // 前台通知地址
-        dto.put("front_url", "");
+        // dto.put("front_url", "");
         // 订单描述
-        dto.put("order_desc", "");
+        // dto.put("order_desc", "");
         // 收款方附言
-        dto.put("payee_comments", "");
+        // dto.put("payee_comments", "");
         // 收款方信息
-        dto.put("payee_info", getPayeeInfo());
+        // dto.put("payee_info", getPayeeInfo());
         // 银联分配的服务商机构标识码
-        dto.put("pnr_ins_id_cd", "");
+        // dto.put("pnr_ins_id_cd", "");
         // 请求方自定义域
-        dto.put("req_reserved", "");
+        // dto.put("req_reserved", "");
         // 终端信息
-        dto.put("term_info", "");
+        // dto.put("term_info", "");
         // 云闪付用户标识
-        dto.put("user_id", "");
+        // dto.put("user_id", "");
 
         return dto.toJSONString();
     }
@@ -271,7 +271,7 @@ public class V2TradePaymentJspayRequestDemo extends BaseCommonDemo {
     private static String getDcData() {
         JSONObject dto = new JSONObject();
         // 数字货币银行编号
-        dto.put("digital_bank_no", "");
+        // dto.put("digital_bank_no", "");
 
         return dto.toJSONString();
     }
@@ -279,7 +279,7 @@ public class V2TradePaymentJspayRequestDemo extends BaseCommonDemo {
     private static JSON getSceneInfo() {
         JSONObject dto = new JSONObject();
         // 门店信息
-        dto.put("store_info", getStoreInfo());
+        // dto.put("store_info", getStoreInfo());
 
         return dto;
     }
@@ -287,29 +287,29 @@ public class V2TradePaymentJspayRequestDemo extends BaseCommonDemo {
     private static String getWxData() {
         JSONObject dto = new JSONObject();
         // 子商户公众账号id
-        dto.put("sub_appid", "");
+        // dto.put("sub_appid", "");
         // 用户标识
-        dto.put("openid", "");
+        // dto.put("openid", "");
         // 子商户用户标识
-        dto.put("sub_openid", "");
+        // dto.put("sub_openid", "");
         // 附加数据
-        dto.put("attach", "");
+        // dto.put("attach", "");
         // 商品描述
-        dto.put("body", "");
+        // dto.put("body", "");
         // 商品详情
-        dto.put("detail", getDetail());
+        // dto.put("detail", getDetail());
         // 设备号
-        dto.put("device_info", "");
+        // dto.put("device_info", "");
         // 订单优惠标记
-        dto.put("goods_tag", "");
+        // dto.put("goods_tag", "");
         // 实名支付
-        dto.put("identity", "");
+        // dto.put("identity", "");
         // 开发票入口开放标识
-        dto.put("receipt", "");
+        // dto.put("receipt", "");
         // 场景信息
-        dto.put("scene_info", getSceneInfo());
+        // dto.put("scene_info", getSceneInfo());
         // 终端ip
-        dto.put("spbill_create_ip", "");
+        // dto.put("spbill_create_ip", "");
 
         return dto.toJSONString();
     }
@@ -336,10 +336,10 @@ public class V2TradePaymentJspayRequestDemo extends BaseCommonDemo {
 
     private static String getAlipayData() {
         JSONObject dto = new JSONObject();
-        // 支付宝的店铺编号
-        dto.put("alipay_store_id", "");
         // 买家的支付宝唯一用户号
         dto.put("buyer_id", "2088502835860454");
+        // 支付宝的店铺编号
+        dto.put("alipay_store_id", "");
         // 买家支付宝账号
         dto.put("buyer_logon_id", "string");
         // 业务扩展参数
@@ -363,11 +363,11 @@ public class V2TradePaymentJspayRequestDemo extends BaseCommonDemo {
     private static JSON getDetail() {
         JSONObject dto = new JSONObject();
         // 单品列表
-        dto.put("goods_detail", getGoodsDetailWxRucan());
+        // dto.put("goods_detail", getGoodsDetailWxRucan());
         // 订单原价(元)
-        dto.put("cost_price", "");
+        // dto.put("cost_price", "");
         // 商品小票ID
-        dto.put("receipt_id", "");
+        // dto.put("receipt_id", "");
 
         return dto;
     }
@@ -375,15 +375,15 @@ public class V2TradePaymentJspayRequestDemo extends BaseCommonDemo {
     private static JSON getGoodsDetailWxRucan() {
         JSONObject dto = new JSONObject();
         // 商品编码
-        dto.put("goods_id", "");
+        // dto.put("goods_id", "");
         // 商品名称
-        dto.put("goods_name", "");
+        // dto.put("goods_name", "");
         // 商品单价(元)
-        dto.put("price", "");
+        // dto.put("price", "");
         // 商品数量
-        dto.put("quantity", "");
+        // dto.put("quantity", "");
         // 微信侧商品编码
-        dto.put("wxpay_goods_id", "");
+        // dto.put("wxpay_goods_id", "");
 
         JSONArray dtoList = new JSONArray();
         dtoList.add(dto);

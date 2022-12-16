@@ -60,7 +60,7 @@ public class V2TradePaymentDelaytransConfirmRequestDemo extends BaseCommonDemo {
         // 安全信息
         extendInfoMap.put("risk_check_data", getRiskCheckData());
         // 交易类型
-        extendInfoMap.put("pay_type", "");
+        // extendInfoMap.put("pay_type", "");
         // 备注
         extendInfoMap.put("remark", "remark123");
         return extendInfoMap;
@@ -72,6 +72,8 @@ public class V2TradePaymentDelaytransConfirmRequestDemo extends BaseCommonDemo {
         dto.put("div_amt", "0.01");
         // 被分账方ID
         dto.put("huifu_id", "6666000103423237");
+        // 被分账方账户号
+        dto.put("acct_id", "C01400109");
 
         JSONArray dtoList = new JSONArray();
         dtoList.add(dto);
@@ -89,17 +91,17 @@ public class V2TradePaymentDelaytransConfirmRequestDemo extends BaseCommonDemo {
     private static String getRiskCheckData() {
         JSONObject dto = new JSONObject();
         // ip地址
-        dto.put("ip_addr", "");
+        // dto.put("ip_addr", "");
         // 基站地址
-        dto.put("base_atation", "");
+        // dto.put("base_atation", "");
         // 纬度
         dto.put("latitude", "2");
         // 经度
         dto.put("longitude", "1");
         // 产品子类
-        dto.put("sub_product", "");
+        // dto.put("sub_product", "");
         // 转账原因
-        dto.put("transfer_type", "");
+        // dto.put("transfer_type", "");
 
         return dto.toJSONString();
     }

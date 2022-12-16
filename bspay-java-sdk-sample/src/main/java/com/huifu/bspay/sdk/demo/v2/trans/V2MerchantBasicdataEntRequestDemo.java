@@ -93,7 +93,7 @@ public class V2MerchantBasicdataEntRequestDemo extends BaseCommonDemo {
         // 基本存款账户编号或核准号基本存款账户信息请填写基本存款账户编号；开户许可证请填写核准号 ；&lt;br/&gt;当注册地址或经营地址为如下地区时必填：浙江,海南,重庆,河南,江苏,宁波市,黑龙江,吉林,湖南,贵州,陕西,湖北 &lt;br/&gt;当使用总部资质时不填 ；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：J2900123456789&lt;/font&gt;
         request.setOpenLicenceNo("");
         // 总部汇付Id如果headOfficeFlag&#x3D;0，useHeadInfoFlag&#x3D;Y,且head_huifu_id不为空则基本信息部分复用总部的基本信息。&lt;br/&gt;如果head_office_flag&#x3D;0，则字段必填,如果head_office_flag&#x3D;1，总部汇付Id不可传&lt;br/&gt;&lt;font color&#x3D;&quot;green&quot;&gt;示例值：6666000123123123&lt;/font&gt;
-        request.setHeadHuifuId("test");
+        // request.setHeadHuifuId("test");
 
         // 设置非必填字段
         Map<String, Object> extendInfoMap = getExtendInfos();
@@ -132,44 +132,34 @@ public class V2MerchantBasicdataEntRequestDemo extends BaseCommonDemo {
         // 商户ICP备案编号
         extendInfoMap.put("mer_icp", "");
         // 签约人
-        extendInfoMap.put("sign_user_info", getSignUserInfo());
+        // extendInfoMap.put("sign_user_info", getSignUserInfo());
         // 是否总部商户
-        extendInfoMap.put("head_office_flag", "");
+        // extendInfoMap.put("head_office_flag", "");
         // 使用总部资料
-        extendInfoMap.put("use_head_info_flag", "");
-        // 协议配置
-        extendInfoMap.put("agreement_config", getAgreementConfig());
+        // extendInfoMap.put("use_head_info_flag", "");
         // 开户许可证
-        extendInfoMap.put("reg_acct_pic", "");
+        // extendInfoMap.put("reg_acct_pic", "");
         // 结算卡反面
-        extendInfoMap.put("settle_card_back_pic", "");
+        // extendInfoMap.put("settle_card_back_pic", "");
         // 结算卡正面
-        extendInfoMap.put("settle_card_front_pic", "");
+        // extendInfoMap.put("settle_card_front_pic", "");
         // 结算人身份证反面
-        extendInfoMap.put("settle_cert_back_pic", "");
+        // extendInfoMap.put("settle_cert_back_pic", "");
         // 结算人身份证正面
-        extendInfoMap.put("settle_cert_front_pic", "");
+        // extendInfoMap.put("settle_cert_front_pic", "");
         // 税务登记证
-        extendInfoMap.put("tax_reg_pic", "");
+        // extendInfoMap.put("tax_reg_pic", "");
         // 法人身份证反面
-        extendInfoMap.put("legal_cert_back_pic", "");
+        // extendInfoMap.put("legal_cert_back_pic", "");
         // 法人身份证正面
-        extendInfoMap.put("legal_cert_front_pic", "");
+        // extendInfoMap.put("legal_cert_front_pic", "");
         // 营业执照图片
-        extendInfoMap.put("license_pic", "");
+        // extendInfoMap.put("license_pic", "");
         // 授权委托书
-        extendInfoMap.put("auth_enturst_pic", "");
+        // extendInfoMap.put("auth_enturst_pic", "");
         // 组织机构代码证
-        extendInfoMap.put("org_code_pic", "");
+        // extendInfoMap.put("org_code_pic", "");
         return extendInfoMap;
-    }
-
-    private static String getAgreementConfig() {
-        JSONObject dto = new JSONObject();
-        // 协议短信链接发送模式
-        dto.put("message_send_sype", "");
-
-        return dto.toJSONString();
     }
 
     private static String getSettleConfig() {
@@ -199,7 +189,7 @@ public class V2MerchantBasicdataEntRequestDemo extends BaseCommonDemo {
         // 自定义结算处理时间
         dto.put("settle_time", "");
         // 节假日结算手续费固定金额（元）
-        dto.put("constant_amt", "");
+        // dto.put("constant_amt", "");
 
         return dto.toJSONString();
     }
@@ -222,10 +212,10 @@ public class V2MerchantBasicdataEntRequestDemo extends BaseCommonDemo {
         dto.put("branch_code", "103290040169");
         // 支行名称开户支行名称。 当card_type&#x3D;0时必填， 当card_type&#x3D;1或2时非必填； &lt;br/&gt;&lt;font color&#x3D;&quot;green&quot;&gt;示例值：中国工商银行上海市中山北路支行&lt;/font&gt;
         dto.put("branch_name", "中国农业银行股份有限公司上海马当路支行");
+        // 持卡人证件类型持卡人证件类型，参见《[自然人证件类型](https://paas.huifu.com/partners/api/#/api_ggcsbm?id&#x3D;%e8%87%aa%e7%84%b6%e4%ba%ba%e8%af%81%e4%bb%b6%e7%b1%bb%e5%9e%8b)》。&lt;br/&gt; 当card_type&#x3D;0时为空， 当card_type&#x3D;1或2时必填； &lt;font color&#x3D;&quot;green&quot;&gt;示例值：00&lt;/font&gt;
+        dto.put("cert_type", "00");
         // 持卡人证件有效期截止日期日期格式：yyyyMMdd，以北京时间为准。&lt;font color&#x3D;&quot;green&quot;&gt;示例值：20220125&lt;/font&gt;&lt;br/&gt;  当cert_validity_type&#x3D;0时必填；当cert_validity_type&#x3D;1时为空
         dto.put("cert_end_date", "20301201");
-        // 持卡人证件类型
-        dto.put("cert_type", "00");
         // 持卡人证件号码
         dto.put("cert_no", "321084198912066512");
         // 持卡人证件有效期类型
@@ -241,19 +231,19 @@ public class V2MerchantBasicdataEntRequestDemo extends BaseCommonDemo {
     private static String getSignUserInfo() {
         JSONObject dto = new JSONObject();
         // 签约人类型
-        dto.put("type", "test");
+        // dto.put("type", "test");
         // 姓名
-        dto.put("name", "");
+        // dto.put("name", "");
         // 手机号
-        dto.put("mobile_no", "");
+        // dto.put("mobile_no", "");
         // 身份证
-        dto.put("cert_no", "");
+        // dto.put("cert_no", "");
         // 身份证照片-人像面
-        dto.put("identity_front_file_id", "");
+        // dto.put("identity_front_file_id", "");
         // 身份证照片-国徽面
-        dto.put("identity_back_file_id", "");
+        // dto.put("identity_back_file_id", "");
         // 法人授权书
-        dto.put("auth_file_id", "");
+        // dto.put("auth_file_id", "");
 
         return dto.toJSONString();
     }
@@ -267,11 +257,11 @@ public class V2MerchantBasicdataEntRequestDemo extends BaseCommonDemo {
         // 取现类型
         dto.put("cash_type", "D0");
         // 是否交易手续费外扣
-        dto.put("out_fee_flag", "");
+        // dto.put("out_fee_flag", "");
         // 手续费承担方
-        dto.put("out_fee_huifu_id", "");
+        // dto.put("out_fee_huifu_id", "");
         // 交易手续费外扣的账户类型
-        dto.put("out_fee_acct_type", "");
+        // dto.put("out_fee_acct_type", "");
 
         JSONArray dtoList = new JSONArray();
         dtoList.add(dto);

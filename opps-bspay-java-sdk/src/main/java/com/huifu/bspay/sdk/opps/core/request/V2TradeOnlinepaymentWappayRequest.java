@@ -4,7 +4,7 @@ import com.alibaba.fastjson.annotation.JSONField;
 import com.huifu.bspay.sdk.opps.core.enums.FunctionCodeEnum;
 
 /**
- * 手机网页支付
+ * 手机WAP支付
  *
  * @author sdk-generator
  * @Description
@@ -47,11 +47,6 @@ public class V2TradeOnlinepaymentWappayRequest extends BaseRequest {
     @JSONField(name = "terminal_device_data")
     private String terminalDeviceData;
     /**
-     * 银行卡号
-     */
-    @JSONField(name = "bank_card_no")
-    private String bankCardNo;
-    /**
      * 页面跳转地址
      */
     @JSONField(name = "front_url")
@@ -70,7 +65,7 @@ public class V2TradeOnlinepaymentWappayRequest extends BaseRequest {
     public V2TradeOnlinepaymentWappayRequest() {
     }
 
-    public V2TradeOnlinepaymentWappayRequest(String reqDate, String reqSeqId, String huifuId, String transAmt, String extendPayData, String riskCheckData, String terminalDeviceData, String bankCardNo, String frontUrl, String notifyUrl) {
+    public V2TradeOnlinepaymentWappayRequest(String reqDate, String reqSeqId, String huifuId, String transAmt, String extendPayData, String riskCheckData, String terminalDeviceData, String frontUrl, String notifyUrl) {
         this.reqDate = reqDate;
         this.reqSeqId = reqSeqId;
         this.huifuId = huifuId;
@@ -78,7 +73,6 @@ public class V2TradeOnlinepaymentWappayRequest extends BaseRequest {
         this.extendPayData = extendPayData;
         this.riskCheckData = riskCheckData;
         this.terminalDeviceData = terminalDeviceData;
-        this.bankCardNo = bankCardNo;
         this.frontUrl = frontUrl;
         this.notifyUrl = notifyUrl;
     }
@@ -137,14 +131,6 @@ public class V2TradeOnlinepaymentWappayRequest extends BaseRequest {
 
     public void setTerminalDeviceData(String terminalDeviceData) {
         this.terminalDeviceData = terminalDeviceData;
-    }
-
-    public String getBankCardNo() {
-        return bankCardNo;
-    }
-
-    public void setBankCardNo(String bankCardNo) {
-        this.bankCardNo = bankCardNo;
     }
 
     public String getFrontUrl() {

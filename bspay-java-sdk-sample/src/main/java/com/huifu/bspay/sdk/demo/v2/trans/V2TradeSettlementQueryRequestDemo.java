@@ -30,9 +30,9 @@ public class V2TradeSettlementQueryRequestDemo extends BaseCommonDemo {
         request.setHuifuId("6666000021290000");
         // 原交易请求日期
         request.setOrgReqDate("20210916");
-        // 原交易返回的全局流水号原交易返回的全局流水号、原交易请求流水号二选一必填
-        request.setOrgHfSeqId("test");
-        // 原交易请求流水号原交易返回的全局流水号、原交易请求流水号二选一必填
+        // 原交易返回的全局流水号原交易返回的全局流水号、原交易请求流水号二选一必填；&lt;br/&gt;&lt;font color&#x3D;&quot;green&quot;&gt;示例值：00470topo1A211015160805P090ac132fef00000&lt;/font&gt;
+        // request.setOrgHfSeqId("test");
+        // 原交易请求流水号原交易返回的全局流水号、原交易请求流水号二选一必填；&lt;br/&gt;&lt;font color&#x3D;&quot;green&quot;&gt;示例值：202109167745558220003&lt;/font&gt;
         request.setOrgReqSeqId("202109160899013231200005");
 
         // 设置非必填字段

@@ -53,6 +53,12 @@ public class V2MerchantBusiBillConfigRequestDemo extends BaseCommonDemo {
     private static Map<String, Object> getExtendInfos() {
         // 设置非必填字段
         Map<String, Object> extendInfoMap = new HashMap<>();
+        // SFTP地址
+        // extendInfoMap.put("ftp_addr", "");
+        // SFTP用户名
+        // extendInfoMap.put("ftp_user", "");
+        // SFTP密码
+        // extendInfoMap.put("ftp_pwd", "");
         return extendInfoMap;
     }
 
