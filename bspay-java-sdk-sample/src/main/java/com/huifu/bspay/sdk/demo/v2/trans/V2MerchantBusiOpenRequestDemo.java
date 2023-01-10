@@ -135,6 +135,8 @@ public class V2MerchantBusiOpenRequestDemo extends BaseCommonDemo {
         // extendInfoMap.put("online_pay_fee_conf_list", getOnlinePayFeeConfList());
         // 银行大额转账对象
         // extendInfoMap.put("bank_big_amt_pay_config", getBankBigAmtPayConfig());
+        // 微信直连配置对象
+        // extendInfoMap.put("wx_zl_conf", getWxZlConf());
         return extendInfoMap;
     }
 
@@ -146,8 +148,8 @@ public class V2MerchantBusiOpenRequestDemo extends BaseCommonDemo {
         dto.put("fee_rate", "0.38");
         // 费率规则号
         dto.put("fee_rule_id", "758");
-        // 商户经营类目
-        dto.put("mcc", "111");
+        // ~~商户经营类目~~
+        // dto.put("~~mcc~~", "");
         // 子渠道号
         dto.put("pay_channel_id", "JP00001");
         // 申请服务
@@ -292,6 +294,16 @@ public class V2MerchantBusiOpenRequestDemo extends BaseCommonDemo {
         return dtoList.toJSONString();
     }
 
+    private static String getWxZlConf() {
+        JSONObject dto = new JSONObject();
+        // 微信子商户号
+        // dto.put("sub_mch_id", "test");
+        // 配置集合
+        // dto.put("wx_zl_pay_conf_list", getWxZlPayConfList());
+
+        return dto.toJSONString();
+    }
+
     private static String getOnlinePayFeeConfList() {
         JSONObject dto = new JSONObject();
         // 业务类型
@@ -344,6 +356,22 @@ public class V2MerchantBusiOpenRequestDemo extends BaseCommonDemo {
         // dto.put("big_amt_limit_per_day", "");
 
         return dto.toJSONString();
+    }
+
+    private static JSON getWxZlPayConfList() {
+        JSONObject dto = new JSONObject();
+        // 申请服务
+        // dto.put("service_code", "test");
+        // 功能服务appid
+        // dto.put("sub_app_id", "test");
+        // 功能开关
+        // dto.put("switch_state", "test");
+        // 功能费率(%)
+        // dto.put("fee_rate", "test");
+
+        JSONArray dtoList = new JSONArray();
+        dtoList.add(dto);
+        return dtoList;
     }
 
     private static String getHbFqFeeConfig() {

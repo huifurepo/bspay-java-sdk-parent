@@ -63,6 +63,8 @@ public class V2TradePaymentDelaytransConfirmRequestDemo extends BaseCommonDemo {
         // extendInfoMap.put("pay_type", "");
         // 备注
         extendInfoMap.put("remark", "remark123");
+        // 原交易商户订单号
+        // extendInfoMap.put("org_mer_ord_id", "");
         return extendInfoMap;
     }
 

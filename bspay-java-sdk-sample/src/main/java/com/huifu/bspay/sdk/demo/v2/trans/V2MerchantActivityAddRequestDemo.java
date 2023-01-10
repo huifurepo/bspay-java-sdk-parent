@@ -113,6 +113,8 @@ public class V2MerchantActivityAddRequestDemo extends BaseCommonDemo {
         extendInfoMap.put("industry_photo", "");
         // 负责人授权函图片
         extendInfoMap.put("legal_person_auth_photo", "");
+        // 食堂经营相关资质
+        // extendInfoMap.put("food_qualification_proof", "");
         return extendInfoMap;
     }
 

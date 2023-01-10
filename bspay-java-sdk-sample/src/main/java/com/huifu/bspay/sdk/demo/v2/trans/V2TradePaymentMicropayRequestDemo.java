@@ -87,6 +87,8 @@ public class V2TradePaymentMicropayRequestDemo extends BaseCommonDemo {
         extendInfoMap.put("notify_url", "http://www.baidu.com");
         // 交易备注
         extendInfoMap.put("remark", "");
+        // 账户号
+        // extendInfoMap.put("acct_id", "");
         return extendInfoMap;
     }
 
@@ -152,6 +154,8 @@ public class V2TradePaymentMicropayRequestDemo extends BaseCommonDemo {
         // dto.put("div_amt", "test");
         // 被分账方ID
         // dto.put("huifu_id", "test");
+        // 账户号
+        // dto.put("acct_id", "");
 
         JSONArray dtoList = new JSONArray();
         dtoList.add(dto);

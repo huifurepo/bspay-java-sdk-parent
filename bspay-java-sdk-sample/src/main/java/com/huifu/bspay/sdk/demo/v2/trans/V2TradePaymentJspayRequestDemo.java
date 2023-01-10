@@ -91,6 +91,8 @@ public class V2TradePaymentJspayRequestDemo extends BaseCommonDemo {
         extendInfoMap.put("notify_url", "http://www.baidu.com");
         // 备注
         extendInfoMap.put("remark", "string");
+        // 账户号
+        // extendInfoMap.put("acct_id", "");
         return extendInfoMap;
     }
 
@@ -170,6 +172,8 @@ public class V2TradePaymentJspayRequestDemo extends BaseCommonDemo {
         // dto.put("div_amt", "test");
         // 被分账方ID
         // dto.put("huifu_id", "test");
+        // 账户号
+        // dto.put("acct_id", "");
 
         JSONArray dtoList = new JSONArray();
         dtoList.add(dto);
@@ -330,6 +334,8 @@ public class V2TradePaymentJspayRequestDemo extends BaseCommonDemo {
         dto.put("parking_id", "123wsx");
         // 系统商编号
         dto.put("sys_service_provider_id", "1111111");
+        // 信用卡分期资产方式
+        // dto.put("fq_channels", "");
 
         return dto;
     }

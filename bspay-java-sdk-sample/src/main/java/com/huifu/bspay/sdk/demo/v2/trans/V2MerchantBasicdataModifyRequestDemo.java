@@ -170,8 +170,6 @@ public class V2MerchantBasicdataModifyRequestDemo extends BaseCommonDemo {
         dto.put("area_id", "310100");
         // 支行联行号参考：[银行支行编码](https://paas.huifu.com/partners/api/#/csfl/api_csfl_yhzhbm) 当card_type&#x3D;0时必填， 当card_type&#x3D;1或2时非必填 &lt;font color&#x3D;&quot;green&quot;&gt;示例值：102290026507&lt;/font&gt;
         dto.put("branch_code", "102290026507");
-        // 开户支行名称开户支行名称。 当card_type&#x3D;0时必填， 当card_type&#x3D;1或2时非必填； &lt;font color&#x3D;&quot;green&quot;&gt;示例值：中国工商银行上海市中山北路支行&lt;/font&gt;
-        dto.put("branch_name", "中国工商银行股份有限公司上海市中山北路支行");
         // 持卡人证件类型持卡人证件类型，参见《[自然人证件类型](https://paas.huifu.com/partners/api/#/api_ggcsbm?id&#x3D;%e8%87%aa%e7%84%b6%e4%ba%ba%e8%af%81%e4%bb%b6%e7%b1%bb%e5%9e%8b)》。&lt;br/&gt; 当card_type&#x3D;0时为空， 当card_type&#x3D;1或2时必填； &lt;font color&#x3D;&quot;green&quot;&gt;示例值：00&lt;/font&gt;
         dto.put("cert_type", "00");
         // 持卡人证件有效期类型0：非长期有效, 1：长期有效, &lt;font color&#x3D;&quot;green&quot;&gt;示例值：0&lt;/font&gt;&lt;br/&gt;当card_type&#x3D;0时为空； 当card_type&#x3D;1或2时必填；
@@ -202,6 +200,8 @@ public class V2MerchantBasicdataModifyRequestDemo extends BaseCommonDemo {
         dto.put("settle_cert_back_pic", "d1451277-85c6-3177-ac3d-a8be47b9ae9d");
         // 银行编码
         dto.put("bank_code", "01020000");
+        // 开户支行名称
+        dto.put("branch_name", "中国工商银行股份有限公司上海市中山北路支行");
         // 持卡人证件号码
         dto.put("cert_no", "320923199111206319");
         // 银行卡绑定手机号
@@ -234,7 +234,7 @@ public class V2MerchantBasicdataModifyRequestDemo extends BaseCommonDemo {
         JSONObject dto = new JSONObject();
         // 状态
         dto.put("switch_state", "1");
-        // 取现手续费率（%）fix_amt与fee_rat至少填写一项，单位%，需保留小数点后两位，取值范围[0.00,100.00]，不收费请填写0.00；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：0.05&lt;/font&gt;&lt;br/&gt;注：如果fix_amt与fee_rate都填写了则手续费&#x3D;fix_amt+支付金额*fee_rate
+        // 取现手续费率（%）fix_amt与fee_rat至少填写一项，单位%，需保留小数点后两位，取值范围[0.00,100.00]，不收费请填写0.00；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：0.05&lt;/font&gt;&lt;br/&gt;注：如果fix_amt与fee_rate都填写了则手续费&#x3D;fix_amt+支付金额\*fee_rate
         dto.put("fee_rate", "5.50");
         // 业务类型
         dto.put("cash_type", "D0");

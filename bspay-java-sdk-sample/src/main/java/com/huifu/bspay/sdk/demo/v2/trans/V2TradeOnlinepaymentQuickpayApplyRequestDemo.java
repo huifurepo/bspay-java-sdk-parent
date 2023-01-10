@@ -73,6 +73,8 @@ public class V2TradeOnlinepaymentQuickpayApplyRequestDemo extends BaseCommonDemo
         // extendInfoMap.put("combinedpay_data", getCombinedpayData());
         // 分账对象
         // extendInfoMap.put("acct_split_bunch", getAcctSplitBunchRucan());
+        // 是否延迟交易
+        // extendInfoMap.put("delay_acct_flag", "");
         return extendInfoMap;
     }
 

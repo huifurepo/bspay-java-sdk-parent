@@ -12,6 +12,16 @@ import com.huifu.bspay.sdk.opps.core.enums.FunctionCodeEnum;
 public class V2TradeOnlinepaymentBankpayPayerqueryRequest extends BaseRequest {
 
     /**
+     * 请求日期
+     */
+    @JSONField(name = "req_date")
+    private String reqDate;
+    /**
+     * 请求流水号
+     */
+    @JSONField(name = "req_seq_id")
+    private String reqSeqId;
+    /**
      * 商户号
      */
     @JSONField(name = "huifu_id")
@@ -26,21 +36,6 @@ public class V2TradeOnlinepaymentBankpayPayerqueryRequest extends BaseRequest {
      */
     @JSONField(name = "org_req_seq_id")
     private String orgReqSeqId;
-    /**
-     * 请求日期
-     */
-    @JSONField(name = "req_date")
-    private String reqDate;
-    /**
-     * 请求流水号
-     */
-    @JSONField(name = "req_seq_id")
-    private String reqSeqId;
-    /**
-     * 原交易汇付全局流水号
-     */
-    @JSONField(name = "org_hf_seq_id")
-    private String orgHfSeqId;
 
     @Override
     public FunctionCodeEnum getFunctionCode() {
@@ -50,13 +45,28 @@ public class V2TradeOnlinepaymentBankpayPayerqueryRequest extends BaseRequest {
     public V2TradeOnlinepaymentBankpayPayerqueryRequest() {
     }
 
-    public V2TradeOnlinepaymentBankpayPayerqueryRequest(String huifuId, String orgReqDate, String orgReqSeqId, String reqDate, String reqSeqId, String orgHfSeqId) {
+    public V2TradeOnlinepaymentBankpayPayerqueryRequest(String reqDate, String reqSeqId, String huifuId, String orgReqDate, String orgReqSeqId) {
+        this.reqDate = reqDate;
+        this.reqSeqId = reqSeqId;
         this.huifuId = huifuId;
         this.orgReqDate = orgReqDate;
         this.orgReqSeqId = orgReqSeqId;
+    }
+
+    public String getReqDate() {
+        return reqDate;
+    }
+
+    public void setReqDate(String reqDate) {
         this.reqDate = reqDate;
+    }
+
+    public String getReqSeqId() {
+        return reqSeqId;
+    }
+
+    public void setReqSeqId(String reqSeqId) {
         this.reqSeqId = reqSeqId;
-        this.orgHfSeqId = orgHfSeqId;
     }
 
     public String getHuifuId() {
@@ -81,30 +91,6 @@ public class V2TradeOnlinepaymentBankpayPayerqueryRequest extends BaseRequest {
 
     public void setOrgReqSeqId(String orgReqSeqId) {
         this.orgReqSeqId = orgReqSeqId;
-    }
-
-    public String getReqDate() {
-        return reqDate;
-    }
-
-    public void setReqDate(String reqDate) {
-        this.reqDate = reqDate;
-    }
-
-    public String getReqSeqId() {
-        return reqSeqId;
-    }
-
-    public void setReqSeqId(String reqSeqId) {
-        this.reqSeqId = reqSeqId;
-    }
-
-    public String getOrgHfSeqId() {
-        return orgHfSeqId;
-    }
-
-    public void setOrgHfSeqId(String orgHfSeqId) {
-        this.orgHfSeqId = orgHfSeqId;
     }
 
 }

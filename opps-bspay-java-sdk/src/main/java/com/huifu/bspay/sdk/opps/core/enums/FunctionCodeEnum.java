@@ -6,6 +6,18 @@ package com.huifu.bspay.sdk.opps.core.enums;
  */
 public enum FunctionCodeEnum {
     /**
+     * 子账户开通配置
+     */
+    V2_MERCHANT_SETTLE_CONFIG("v2.merchant.settle.config", "子账户开通配置"),
+    /**
+     * 修改子账户配置
+     */
+    V2_MERCHANT_SETTLE_MODIFY("v2.merchant.settle.modify", "修改子账户配置"),
+    /**
+     * 批量交易状态查询
+     */
+    V2_TRADE_TRANSSTAT_QUERY("v2.trade.transstat.query", "批量交易状态查询"),
+    /**
      * 网银支付接口
      */
     V2_TRADE_ONLINEPAYMENT_BANKING_FRONTPAY("v2.trade.onlinepayment.banking.frontpay", "网银支付接口"),

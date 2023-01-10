@@ -32,16 +32,6 @@ public class V2MerchantSplitConfigRequest extends BaseRequest {
     @JSONField(name = "rule_origin")
     private String ruleOrigin;
     /**
-     * 分账是否支持撤销交易
-     */
-    @JSONField(name = "repeal_flag")
-    private String repealFlag;
-    /**
-     * 分账是否支持退货交易
-     */
-    @JSONField(name = "refund_flag")
-    private String refundFlag;
-    /**
      * 分账开关
      */
     @JSONField(name = "div_flag")
@@ -65,13 +55,11 @@ public class V2MerchantSplitConfigRequest extends BaseRequest {
     public V2MerchantSplitConfigRequest() {
     }
 
-    public V2MerchantSplitConfigRequest(String reqSeqId, String reqDate, String huifuId, String ruleOrigin, String repealFlag, String refundFlag, String divFlag, String applyRatio, String startType) {
+    public V2MerchantSplitConfigRequest(String reqSeqId, String reqDate, String huifuId, String ruleOrigin, String divFlag, String applyRatio, String startType) {
         this.reqSeqId = reqSeqId;
         this.reqDate = reqDate;
         this.huifuId = huifuId;
         this.ruleOrigin = ruleOrigin;
-        this.repealFlag = repealFlag;
-        this.refundFlag = refundFlag;
         this.divFlag = divFlag;
         this.applyRatio = applyRatio;
         this.startType = startType;
@@ -107,22 +95,6 @@ public class V2MerchantSplitConfigRequest extends BaseRequest {
 
     public void setRuleOrigin(String ruleOrigin) {
         this.ruleOrigin = ruleOrigin;
-    }
-
-    public String getRepealFlag() {
-        return repealFlag;
-    }
-
-    public void setRepealFlag(String repealFlag) {
-        this.repealFlag = repealFlag;
-    }
-
-    public String getRefundFlag() {
-        return refundFlag;
-    }
-
-    public void setRefundFlag(String refundFlag) {
-        this.refundFlag = refundFlag;
     }
 
     public String getDivFlag() {
