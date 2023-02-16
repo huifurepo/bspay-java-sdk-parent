@@ -84,20 +84,12 @@ public class V2TradeOnlinepaymentRefundRequestDemo extends BaseCommonDemo {
         return dtoList;
     }
 
-    private static String getCombinedpayData() {
+    private static String getAcctSplitBunchRucan() {
         JSONObject dto = new JSONObject();
-        // 补贴方汇付编号
-        // dto.put("huifu_id", "test");
-        // 补贴方类型
-        // dto.put("user_type", "test");
-        // 补贴方账户号
-        // dto.put("acct_id", "test");
-        // 补贴金额
-        // dto.put("amount", "test");
+        // 分账信息列表
+        // dto.put("acct_infos", getAcctInfosRucan());
 
-        JSONArray dtoList = new JSONArray();
-        dtoList.add(dto);
-        return dtoList.toJSONString();
+        return dto.toJSONString();
     }
 
     private static String getTerminalDeviceData() {
@@ -136,12 +128,20 @@ public class V2TradeOnlinepaymentRefundRequestDemo extends BaseCommonDemo {
         return dto.toJSONString();
     }
 
-    private static String getAcctSplitBunchRucan() {
+    private static String getCombinedpayData() {
         JSONObject dto = new JSONObject();
-        // 分账信息列表
-        // dto.put("acct_infos", getAcctInfosRucan());
+        // 补贴方汇付编号
+        // dto.put("huifu_id", "test");
+        // 补贴方类型
+        // dto.put("user_type", "test");
+        // 补贴方账户号
+        // dto.put("acct_id", "test");
+        // 补贴金额
+        // dto.put("amount", "test");
 
-        return dto.toJSONString();
+        JSONArray dtoList = new JSONArray();
+        dtoList.add(dto);
+        return dtoList.toJSONString();
     }
 
 }

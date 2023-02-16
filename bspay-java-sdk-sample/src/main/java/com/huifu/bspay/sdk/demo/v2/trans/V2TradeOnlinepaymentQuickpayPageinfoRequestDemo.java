@@ -73,7 +73,31 @@ public class V2TradeOnlinepaymentQuickpayPageinfoRequestDemo extends BaseCommonD
         // extendInfoMap.put("acct_split_bunch", getAcctSplitBunchRucan());
         // 页面跳转地址
         extendInfoMap.put("front_url", "http://www.chinapnr.com");
+        // 延时标记
+        // extendInfoMap.put("delay_acct_flag", "");
         return extendInfoMap;
+    }
+
+    private static JSON getAcctInfos() {
+        JSONObject dto = new JSONObject();
+        // 被分账对象ID
+        // dto.put("huifu_id", "test");
+        // 分账金额
+        // dto.put("div_amt", "test");
+        // 账户号
+        // dto.put("acct_id", "");
+
+        JSONArray dtoList = new JSONArray();
+        dtoList.add(dto);
+        return dtoList;
+    }
+
+    private static String getAcctSplitBunchRucan() {
+        JSONObject dto = new JSONObject();
+        // 分账明细
+        // dto.put("acct_infos", getAcctInfos());
+
+        return dto.toJSONString();
     }
 
     private static String getTerminalDeviceData() {
@@ -98,34 +122,6 @@ public class V2TradeOnlinepaymentQuickpayPageinfoRequestDemo extends BaseCommonD
         return dto.toJSONString();
     }
 
-    private static String getRiskCheckData() {
-        JSONObject dto = new JSONObject();
-        // ip地址
-        dto.put("ip_addr", "127.0.0.1");
-        // 基站地址
-        // dto.put("base_atation", "");
-        // 纬度
-        // dto.put("latitude", "");
-        // 经度
-        // dto.put("longitude", "");
-
-        return dto.toJSONString();
-    }
-
-    private static JSON getAcctInfos() {
-        JSONObject dto = new JSONObject();
-        // 被分账对象ID
-        // dto.put("huifu_id", "test");
-        // 分账金额
-        // dto.put("div_amt", "test");
-        // 账户号
-        // dto.put("acct_id", "");
-
-        JSONArray dtoList = new JSONArray();
-        dtoList.add(dto);
-        return dtoList;
-    }
-
     private static String getExtendPayData() {
         JSONObject dto = new JSONObject();
         // 网关支付受理渠道
@@ -138,10 +134,16 @@ public class V2TradeOnlinepaymentQuickpayPageinfoRequestDemo extends BaseCommonD
         return dto.toJSONString();
     }
 
-    private static String getAcctSplitBunchRucan() {
+    private static String getRiskCheckData() {
         JSONObject dto = new JSONObject();
-        // 分账明细
-        // dto.put("acct_infos", getAcctInfos());
+        // ip地址
+        dto.put("ip_addr", "127.0.0.1");
+        // 基站地址
+        // dto.put("base_atation", "");
+        // 纬度
+        // dto.put("latitude", "");
+        // 经度
+        // dto.put("longitude", "");
 
         return dto.toJSONString();
     }

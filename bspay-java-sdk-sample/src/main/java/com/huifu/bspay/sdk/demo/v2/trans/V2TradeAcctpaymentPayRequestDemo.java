@@ -92,6 +92,20 @@ public class V2TradeAcctpaymentPayRequestDemo extends BaseCommonDemo {
         return dto.toJSONString();
     }
 
+    private static JSON getAcctInfos() {
+        JSONObject dto = new JSONObject();
+        // 分账金额
+        dto.put("div_amt", "0.01");
+        // 被分账方ID
+        dto.put("huifu_id", "6666000018344461");
+        // 被分账方账户号
+        // dto.put("acct_id", "");
+
+        JSONArray dtoList = new JSONArray();
+        dtoList.add(dto);
+        return dtoList;
+    }
+
     private static String getAcctSplitBunch() {
         JSONObject dto = new JSONObject();
         // 分账明细
@@ -116,20 +130,6 @@ public class V2TradeAcctpaymentPayRequestDemo extends BaseCommonDemo {
         // dto.put("ip_addr", "");
 
         return dto.toJSONString();
-    }
-
-    private static JSON getAcctInfos() {
-        JSONObject dto = new JSONObject();
-        // 分账金额
-        dto.put("div_amt", "0.01");
-        // 被分账方ID
-        dto.put("huifu_id", "6666000018344461");
-        // 被分账方账户号
-        // dto.put("acct_id", "");
-
-        JSONArray dtoList = new JSONArray();
-        dtoList.add(dto);
-        return dtoList;
     }
 
 }

@@ -76,20 +76,6 @@ public class V2TradeOnlinepaymentUnionpayRequestDemo extends BaseCommonDemo {
         return extendInfoMap;
     }
 
-    private static String getRiskCheckData() {
-        JSONObject dto = new JSONObject();
-        // 基站地址
-        dto.put("base_station", "7");
-        // ip地址
-        // dto.put("ip_addr", "");
-        // 纬度
-        dto.put("latitude", "4");
-        // 经度
-        dto.put("longitude", "3");
-
-        return dto.toJSONString();
-    }
-
     private static JSON getAcctInfos() {
         JSONObject dto = new JSONObject();
         // 分账金额
@@ -108,6 +94,20 @@ public class V2TradeOnlinepaymentUnionpayRequestDemo extends BaseCommonDemo {
         JSONObject dto = new JSONObject();
         // 分账明细
         // dto.put("acct_infos", getAcctInfos());
+
+        return dto.toJSONString();
+    }
+
+    private static String getRiskCheckData() {
+        JSONObject dto = new JSONObject();
+        // 基站地址
+        dto.put("base_station", "7");
+        // ip地址
+        // dto.put("ip_addr", "");
+        // 纬度
+        dto.put("latitude", "4");
+        // 经度
+        dto.put("longitude", "3");
 
         return dto.toJSONString();
     }

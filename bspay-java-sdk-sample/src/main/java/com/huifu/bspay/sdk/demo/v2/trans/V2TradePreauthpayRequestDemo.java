@@ -84,6 +84,20 @@ public class V2TradePreauthpayRequestDemo extends BaseCommonDemo {
         return extendInfoMap;
     }
 
+    private static String getRiskCheckData() {
+        JSONObject dto = new JSONObject();
+        // 基站地址
+        dto.put("base_station", "192.168.1.1");
+        // ip地址
+        dto.put("ip_addr", "180.167.105.130");
+        // 纬度
+        dto.put("latitude", "33.3");
+        // 经度
+        dto.put("longitude", "33.3");
+
+        return dto.toJSONString();
+    }
+
     private static String getTerminalDeviceData() {
         JSONObject dto = new JSONObject();
         // 商户终端序列号
@@ -122,20 +136,6 @@ public class V2TradePreauthpayRequestDemo extends BaseCommonDemo {
         dto.put("network_license", "P3111");
         // 商户终端序列号
         dto.put("serial_num", "");
-
-        return dto.toJSONString();
-    }
-
-    private static String getRiskCheckData() {
-        JSONObject dto = new JSONObject();
-        // 基站地址
-        dto.put("base_station", "192.168.1.1");
-        // ip地址
-        dto.put("ip_addr", "180.167.105.130");
-        // 纬度
-        dto.put("latitude", "33.3");
-        // 经度
-        dto.put("longitude", "33.3");
 
         return dto.toJSONString();
     }

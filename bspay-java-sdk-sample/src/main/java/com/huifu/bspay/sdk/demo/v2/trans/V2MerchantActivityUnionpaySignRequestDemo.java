@@ -62,22 +62,6 @@ public class V2MerchantActivityUnionpaySignRequestDemo extends BaseCommonDemo {
         return extendInfoMap;
     }
 
-    private static String getEnlistImgMakings() {
-        JSONObject dto = new JSONObject();
-        // 活动材料编号
-        dto.put("makings_id", "18");
-        // 活动材料类型
-        dto.put("makings_type", "IMG");
-        // 活动材料名称
-        dto.put("makings_name", "门头照片");
-        // 材料值
-        dto.put("makings_value", "42204258-967e-373c-88d2-1afa4c7bb8ef");
-
-        JSONArray dtoList = new JSONArray();
-        dtoList.add(dto);
-        return dtoList.toJSONString();
-    }
-
     private static String getEnlistTxtMakings() {
         JSONObject dto = new JSONObject();
         // 活动材料编号
@@ -88,6 +72,22 @@ public class V2MerchantActivityUnionpaySignRequestDemo extends BaseCommonDemo {
         dto.put("makings_name", "银联云闪付商户号");
         // 材料值
         dto.put("makings_value", "82339SP5411019L");
+
+        JSONArray dtoList = new JSONArray();
+        dtoList.add(dto);
+        return dtoList.toJSONString();
+    }
+
+    private static String getEnlistImgMakings() {
+        JSONObject dto = new JSONObject();
+        // 活动材料编号
+        dto.put("makings_id", "18");
+        // 活动材料类型
+        dto.put("makings_type", "IMG");
+        // 活动材料名称
+        dto.put("makings_name", "门头照片");
+        // 材料值
+        dto.put("makings_value", "42204258-967e-373c-88d2-1afa4c7bb8ef");
 
         JSONArray dtoList = new JSONArray();
         dtoList.add(dto);

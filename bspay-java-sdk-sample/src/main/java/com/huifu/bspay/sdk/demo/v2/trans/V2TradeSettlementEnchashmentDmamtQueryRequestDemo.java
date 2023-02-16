@@ -8,16 +8,16 @@ import com.huifu.bspay.sdk.demo.init.OppsMerchantConfigDemo;
 import com.huifu.bspay.sdk.opps.core.utils.DateTools;
 import com.huifu.bspay.sdk.opps.core.utils.SequenceTools;
 import com.huifu.bspay.sdk.demo.core.Identify;
-import com.huifu.bspay.sdk.opps.core.request.V2MerchantComplaintDownloadPictureRequest;
+import com.huifu.bspay.sdk.opps.core.request.V2TradeSettlementEnchashmentDmamtQueryRequest;
 
 /**
- * 投诉图片下载 - 示例
+ * DM取现额度查询 - 示例
  *
  * @author sdk-generator
  * @Description
  */
-@Identify(requestClass = V2MerchantComplaintDownloadPictureRequest.class)
-public class V2MerchantComplaintDownloadPictureRequestDemo extends BaseCommonDemo {
+@Identify(requestClass = V2TradeSettlementEnchashmentDmamtQueryRequest.class)
+public class V2TradeSettlementEnchashmentDmamtQueryRequestDemo extends BaseCommonDemo {
 
     public static void main(String[] args) throws Exception {
 
@@ -25,15 +25,9 @@ public class V2MerchantComplaintDownloadPictureRequestDemo extends BaseCommonDem
         doInit(OppsMerchantConfigDemo.getMerchantConfig());
 
         // 2.组装请求参数
-        V2MerchantComplaintDownloadPictureRequest request = new V2MerchantComplaintDownloadPictureRequest();
-        // 请求流水号
-        request.setReqSeqId(SequenceTools.getReqSeqId32());
-        // 请求时间
-        request.setReqDate(DateTools.getCurrentDateYYYYMMDD());
-        // 下载图片的url
-        request.setMediaUrl("https://api.mch.weixin.qq.com/v3/merchant-service/images/ChsyMDAwMDAwMjAyMjEwMTkyMjAwMzI0MjEzODUYACCN78OaBigBMAE4AQ%3D%3D");
-        // 微信商户号
-        request.setMchId("1502074861");
+        V2TradeSettlementEnchashmentDmamtQueryRequest request = new V2TradeSettlementEnchashmentDmamtQueryRequest();
+        // 商户号
+        request.setHuifuId("6666000021291985");
 
         // 设置非必填字段
         Map<String, Object> extendInfoMap = getExtendInfos();
@@ -51,6 +45,8 @@ public class V2MerchantComplaintDownloadPictureRequestDemo extends BaseCommonDem
     private static Map<String, Object> getExtendInfos() {
         // 设置非必填字段
         Map<String, Object> extendInfoMap = new HashMap<>();
+        // 账户号
+        extendInfoMap.put("acct_id", "F00598600");
         return extendInfoMap;
     }
 

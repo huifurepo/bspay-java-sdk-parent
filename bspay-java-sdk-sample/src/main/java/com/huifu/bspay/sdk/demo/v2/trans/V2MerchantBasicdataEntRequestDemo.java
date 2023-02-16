@@ -162,38 +162,6 @@ public class V2MerchantBasicdataEntRequestDemo extends BaseCommonDemo {
         return extendInfoMap;
     }
 
-    private static String getSettleConfig() {
-        JSONObject dto = new JSONObject();
-        // 结算周期
-        dto.put("settle_cycle", "D1");
-        // 结算手续费外扣商户号填写承担手续费的汇付商户号；当out_settle_flag&#x3D;1时必填，否则非必填；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：6666000123123123&lt;/font&gt;
-        dto.put("out_settle_huifuid", "");
-        // 起结金额
-        dto.put("min_amt", "1.00");
-        // 留存金额
-        dto.put("remained_amt", "2.00");
-        // 结算摘要
-        dto.put("settle_abstract", "abstract");
-        // 手续费外扣标记
-        dto.put("out_settle_flag", "2");
-        // 结算手续费外扣账户类型
-        dto.put("out_settle_acct_type", "");
-        // 节假日结算手续费率（%）
-        dto.put("fixed_ratio", "5.00");
-        // 结算方式
-        dto.put("settle_pattern", "");
-        // 结算批次号
-        dto.put("settle_batch_no", "");
-        // 是否优先到账
-        dto.put("is_priority_receipt", "");
-        // 自定义结算处理时间
-        dto.put("settle_time", "");
-        // 节假日结算手续费固定金额（元）
-        // dto.put("constant_amt", "");
-
-        return dto.toJSONString();
-    }
-
     private static String getCardInfo() {
         JSONObject dto = new JSONObject();
         // 结算账户类型
@@ -228,26 +196,6 @@ public class V2MerchantBasicdataEntRequestDemo extends BaseCommonDemo {
         return dto.toJSONString();
     }
 
-    private static String getSignUserInfo() {
-        JSONObject dto = new JSONObject();
-        // 签约人类型
-        // dto.put("type", "test");
-        // 姓名
-        // dto.put("name", "");
-        // 手机号
-        // dto.put("mobile_no", "");
-        // 身份证
-        // dto.put("cert_no", "");
-        // 身份证照片-人像面
-        // dto.put("identity_front_file_id", "");
-        // 身份证照片-国徽面
-        // dto.put("identity_back_file_id", "");
-        // 法人授权书
-        // dto.put("auth_file_id", "");
-
-        return dto.toJSONString();
-    }
-
     private static String getCashConfig() {
         JSONObject dto = new JSONObject();
         // 取现固定手续费（元）fix_amt与fee_rate至少填写一项，单位元，需保留小数点后两位，不收费请填写0.00； &lt;font color&#x3D;&quot;green&quot;&gt;示例值：1.00&lt;/font&gt;
@@ -266,6 +214,58 @@ public class V2MerchantBasicdataEntRequestDemo extends BaseCommonDemo {
         JSONArray dtoList = new JSONArray();
         dtoList.add(dto);
         return dtoList.toJSONString();
+    }
+
+    private static String getSettleConfig() {
+        JSONObject dto = new JSONObject();
+        // 结算周期
+        dto.put("settle_cycle", "D1");
+        // 结算手续费外扣商户号填写承担手续费的汇付商户号；当out_settle_flag&#x3D;1时必填，否则非必填；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：6666000123123123&lt;/font&gt;
+        dto.put("out_settle_huifuid", "");
+        // 起结金额
+        dto.put("min_amt", "1.00");
+        // 留存金额
+        dto.put("remained_amt", "2.00");
+        // 结算摘要
+        dto.put("settle_abstract", "abstract");
+        // 手续费外扣标记
+        dto.put("out_settle_flag", "2");
+        // 结算手续费外扣账户类型
+        dto.put("out_settle_acct_type", "");
+        // 节假日结算手续费率（%）
+        dto.put("fixed_ratio", "5.00");
+        // 结算方式
+        dto.put("settle_pattern", "");
+        // 结算批次号
+        dto.put("settle_batch_no", "");
+        // 是否优先到账
+        dto.put("is_priority_receipt", "");
+        // 自定义结算处理时间
+        dto.put("settle_time", "");
+        // 节假日结算手续费固定金额（元）
+        // dto.put("constant_amt", "");
+
+        return dto.toJSONString();
+    }
+
+    private static String getSignUserInfo() {
+        JSONObject dto = new JSONObject();
+        // 签约人类型
+        // dto.put("type", "test");
+        // 姓名
+        // dto.put("name", "");
+        // 手机号
+        // dto.put("mobile_no", "");
+        // 身份证
+        // dto.put("cert_no", "");
+        // 身份证照片-人像面
+        // dto.put("identity_front_file_id", "");
+        // 身份证照片-国徽面
+        // dto.put("identity_back_file_id", "");
+        // 法人授权书
+        // dto.put("auth_file_id", "");
+
+        return dto.toJSONString();
     }
 
 }

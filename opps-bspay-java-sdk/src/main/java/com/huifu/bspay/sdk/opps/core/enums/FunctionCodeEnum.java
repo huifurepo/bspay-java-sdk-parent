@@ -6,6 +6,14 @@ package com.huifu.bspay.sdk.opps.core.enums;
  */
 public enum FunctionCodeEnum {
     /**
+     * 一键绑卡
+     */
+    V2_QUICKBUCKLE_ONEKEY_CARDBIND("v2.quickbuckle.onekey.cardbind", "一键绑卡"),
+    /**
+     * DM取现额度查询
+     */
+    V2_TRADE_SETTLEMENT_ENCHASHMENT_DMAMT_QUERY("v2.trade.settlement.enchashment.dmamt.query", "DM取现额度查询"),
+    /**
      * 子账户开通配置
      */
     V2_MERCHANT_SETTLE_CONFIG("v2.merchant.settle.config", "子账户开通配置"),
@@ -62,9 +70,9 @@ public enum FunctionCodeEnum {
      */
     V2_MERCHANT_COMPLAINT_LIST_INFO_QUERY("v2.merchant.complaint.list.info.query", "查询投诉单列表及详情"),
     /**
-     * 图片下载
+     * 投诉图片下载
      */
-    V2_MERCHANT_COMPLAINT_DOWNLOAD_PICTURE("v2.merchant.complaint.download.picture", "图片下载"),
+    V2_MERCHANT_COMPLAINT_DOWNLOAD_PICTURE("v2.merchant.complaint.download.picture", "投诉图片下载"),
     /**
      * 更新退款审批结果
      */

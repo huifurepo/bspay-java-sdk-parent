@@ -88,6 +88,54 @@ public class V2MerchantBasicdataIndvRequestDemo extends BaseCommonDemo {
         return extendInfoMap;
     }
 
+    private static String getCardInfo() {
+        JSONObject dto = new JSONObject();
+        // 卡户名
+        dto.put("card_name", "张天德");
+        // 结算账号
+        dto.put("card_no", "4367421217494235081");
+        // 银行所在省
+        dto.put("prov_id", "310000");
+        // 银行所在市
+        dto.put("area_id", "310100");
+        // 持卡人证件类型
+        dto.put("cert_type", "00");
+        // 持卡人证件号码
+        dto.put("cert_no", "321084198912066512");
+        // 持卡人证件有效期类型
+        dto.put("cert_validity_type", "0");
+        // 持卡人证件有效期开始
+        dto.put("cert_begin_date", "20180824");
+        // 持卡人证件有效期截止日期格式yyyyMMdd，以北京时间为准。&lt;font color&#x3D;&quot;green&quot;&gt;示例值：20220125&lt;/font&gt;&lt;br/&gt;当cert_validity_type&#x3D;0时必填  &lt;br/&gt;当cert_validity_type&#x3D;1时为空
+        dto.put("cert_end_date", "20380824");
+        // 银行卡绑定手机号
+        dto.put("mp", "13700000214");
+        // 银行编号
+        dto.put("bank_code", "01030000");
+
+        return dto.toJSONString();
+    }
+
+    private static String getCashConfig() {
+        JSONObject dto = new JSONObject();
+        // 取现类型
+        dto.put("cash_type", "D1");
+        // 取现固定手续费（元）fix_amt与fee_rate至少填写一项，单位元，需保留小数点后两位，不收费请填写0.00； &lt;font color&#x3D;&quot;green&quot;&gt;示例值：1.00&lt;/font&gt;
+        dto.put("fix_amt", "1.00");
+        // 取现手续费率（%）fix_amt与fee_rate至少填写一项，单位%，需保留小数点后两位，取值范围[0.00,100.00]，不收费请填写0.00；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：0.05&lt;/font&gt;&lt;br/&gt;注：如果fix_amt与fee_rate都填写了则手续费&#x3D;fix_amt+支付金额\*fee_rate
+        dto.put("fee_rate", "");
+        // 是否交易手续费外扣
+        // dto.put("out_fee_flag", "");
+        // 手续费承担方
+        // dto.put("out_fee_huifu_id", "");
+        // 交易手续费外扣的账户类型
+        // dto.put("out_fee_acct_type", "");
+
+        JSONArray dtoList = new JSONArray();
+        dtoList.add(dto);
+        return dtoList.toJSONString();
+    }
+
     private static String getSettleConfig() {
         JSONObject dto = new JSONObject();
         // 结算周期
@@ -128,54 +176,6 @@ public class V2MerchantBasicdataIndvRequestDemo extends BaseCommonDemo {
         // dto.put("auth_enturst_pic", "");
 
         return dto.toJSONString();
-    }
-
-    private static String getCardInfo() {
-        JSONObject dto = new JSONObject();
-        // 卡户名
-        dto.put("card_name", "张天德");
-        // 结算账号
-        dto.put("card_no", "4367421217494235081");
-        // 银行所在省
-        dto.put("prov_id", "310000");
-        // 银行所在市
-        dto.put("area_id", "310100");
-        // 持卡人证件类型
-        dto.put("cert_type", "00");
-        // 持卡人证件号码
-        dto.put("cert_no", "321084198912066512");
-        // 持卡人证件有效期类型
-        dto.put("cert_validity_type", "0");
-        // 持卡人证件有效期开始
-        dto.put("cert_begin_date", "20180824");
-        // 持卡人证件有效期截止日期日期格式：yyyyMMdd，以北京时间为准。&lt;font color&#x3D;&quot;green&quot;&gt;示例值：20220125&lt;br/&gt;当cert_validity_type&#x3D;0时必填  &lt;br/&gt;当cert_validity_type&#x3D;1时为空
-        dto.put("cert_end_date", "20380824");
-        // 银行卡绑定手机号
-        dto.put("mp", "13700000214");
-        // 银行编号
-        dto.put("bank_code", "01030000");
-
-        return dto.toJSONString();
-    }
-
-    private static String getCashConfig() {
-        JSONObject dto = new JSONObject();
-        // 取现类型
-        dto.put("cash_type", "D1");
-        // 取现固定手续费（元）fix_amt与fee_rate至少填写一项，单位元，需保留小数点后两位，不收费请填写0.00； &lt;font color&#x3D;&quot;green&quot;&gt;示例值：1.00&lt;/font&gt;
-        dto.put("fix_amt", "1.00");
-        // 取现手续费率（%）fix_amt与fee_rate至少填写一项，单位%，需保留小数点后两位，取值范围[0.00,100.00]，不收费请填写0.00；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：0.05&lt;/font&gt;&lt;br/&gt;注：如果fix_amt与fee_rate都填写了则手续费&#x3D;fix_amt+支付金额*fee_rate
-        dto.put("fee_rate", "");
-        // 是否交易手续费外扣
-        // dto.put("out_fee_flag", "");
-        // 手续费承担方
-        // dto.put("out_fee_huifu_id", "");
-        // 交易手续费外扣的账户类型
-        // dto.put("out_fee_acct_type", "");
-
-        JSONArray dtoList = new JSONArray();
-        dtoList.add(dto);
-        return dtoList.toJSONString();
     }
 
 }

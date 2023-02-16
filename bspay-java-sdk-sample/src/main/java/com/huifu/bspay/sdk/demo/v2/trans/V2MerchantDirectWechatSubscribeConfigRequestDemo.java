@@ -64,6 +64,16 @@ public class V2MerchantDirectWechatSubscribeConfigRequestDemo extends BaseCommon
         return extendInfoMap;
     }
 
+    private static String getBindAppIdConfList() {
+        JSONObject dto = new JSONObject();
+        // 关联APPID
+        dto.put("sub_appid", "oQOa46X2FxRqEy6F4YmwIRCrA7Mk");
+
+        JSONArray dtoList = new JSONArray();
+        dtoList.add(dto);
+        return dtoList.toJSONString();
+    }
+
     private static String getSubscribeConfList() {
         JSONObject dto = new JSONObject();
         // 关联APPID
@@ -72,16 +82,6 @@ public class V2MerchantDirectWechatSubscribeConfigRequestDemo extends BaseCommon
         dto.put("subscribe_appid", "oQOa46X2FxRqEy6F4YmwIRCrA7Mk");
         // 支付凭证推荐小程序appid需为通过微信认证的小程序appid，且认证主体与服务商主体一致；与subscribe_appid二选一；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：wx852a790f100000fe&lt;/font&gt;
         dto.put("receipt_appid", "wx852a790f100000fe");
-
-        JSONArray dtoList = new JSONArray();
-        dtoList.add(dto);
-        return dtoList.toJSONString();
-    }
-
-    private static String getBindAppIdConfList() {
-        JSONObject dto = new JSONObject();
-        // 关联APPID
-        dto.put("sub_appid", "oQOa46X2FxRqEy6F4YmwIRCrA7Mk");
 
         JSONArray dtoList = new JSONArray();
         dtoList.add(dto);

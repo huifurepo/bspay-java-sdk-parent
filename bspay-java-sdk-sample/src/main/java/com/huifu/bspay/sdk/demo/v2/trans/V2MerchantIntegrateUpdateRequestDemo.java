@@ -100,6 +100,250 @@ public class V2MerchantIntegrateUpdateRequestDemo extends BaseCommonDemo {
         return extendInfoMap;
     }
 
+    private static String getLegalInfo() {
+        JSONObject dto = new JSONObject();
+        // 法人姓名
+        // dto.put("legal_name", "test");
+        // 法人证件类型
+        // dto.put("legal_cert_type", "test");
+        // 法人证件号码
+        // dto.put("legal_cert_no", "test");
+        // 法人证件有效期类型
+        // dto.put("legal_cert_validity_type", "test");
+        // 法人证件有效期开始日期
+        // dto.put("legal_cert_begin_date", "test");
+        // 法人证件有效期截止日期
+        // dto.put("legal_cert_end_date", "");
+
+        return dto.toJSONString();
+    }
+
+    private static String getContactInfo() {
+        JSONObject dto = new JSONObject();
+        // 联系人姓名
+        // dto.put("contact_name", "test");
+        // 联系人手机号
+        // dto.put("contact_mobile_no", "test");
+        // 联系人电子邮箱
+        // dto.put("contact_email", "test");
+        // 联系人身份证号
+        // dto.put("contact_cert_no", "");
+
+        return dto.toJSONString();
+    }
+
+    private static String getSignUserInfo() {
+        JSONObject dto = new JSONObject();
+        // 签约人类型
+        // dto.put("type", "test");
+        // 姓名
+        // dto.put("sign_name", "");
+        // 手机号
+        // dto.put("sign_mobile_no", "");
+        // 身份证
+        // dto.put("sign_cert_no", "");
+
+        return dto.toJSONString();
+    }
+
+    private static String getBasicInfo() {
+        JSONObject dto = new JSONObject();
+        // 经营简称
+        dto.put("short_name", "张三");
+        // 小票名称
+        dto.put("receipt_name", "");
+        // 商户英文名称
+        dto.put("mer_en_name", "");
+        // 所属行业
+        dto.put("mcc", "");
+        // 营业执照类型
+        dto.put("license_type", "");
+        // 营业执照有效期开始日期
+        dto.put("license_begin_date", "");
+        // 营业执照有效期截止日期
+        dto.put("license_end_date", "");
+        // 营业执照有效期类型
+        dto.put("license_validity_type", "");
+        // 注册详细地址
+        dto.put("reg_detail", "");
+        // 注册省
+        dto.put("reg_prov_id", "");
+        // 注册市
+        dto.put("reg_area_id", "");
+        // 注册区
+        dto.put("reg_district_id", "");
+        // 经营详细地址
+        dto.put("detail_addr", "");
+        // 经营省
+        dto.put("prov_id", "");
+        // 经营市
+        dto.put("area_id", "");
+        // 经营区
+        dto.put("district_id", "");
+        // 客服电话
+        dto.put("service_phone", "");
+        // 商户主页URL
+        dto.put("mer_url", "");
+        // 商户ICP备案编号
+        dto.put("mer_icp", "");
+        // 开户许可证核准号
+        dto.put("open_licence_no", "");
+        // 法人信息
+        // dto.put("legal_info", getLegalInfo());
+        // 联系人信息
+        // dto.put("contact_info", getContactInfo());
+        // 签约人
+        // dto.put("sign_user_info", getSignUserInfo());
+
+        return dto.toJSONString();
+    }
+
+    private static String getCardInfo() {
+        JSONObject dto = new JSONObject();
+        // 结算类型
+        // dto.put("card_type", "test");
+        // 银行所在省
+        // dto.put("prov_id", "test");
+        // 银行所在市
+        // dto.put("area_id", "test");
+        // 结算账户名
+        // dto.put("card_name", "test");
+        // 结算账号
+        // dto.put("card_no", "test");
+        // 银行编码
+        // dto.put("bank_code", "");
+        // 联行号
+        // dto.put("branch_code", "");
+        // 支行名称
+        // dto.put("branch_name", "");
+        // 持卡人证件有效期类型
+        // dto.put("cert_validity_type", "");
+        // 持卡人证件有效期（起始）
+        // dto.put("cert_begin_date", "");
+        // 持卡人证件有效期（截止）
+        // dto.put("cert_end_date", "");
+        // 持卡人证件号码
+        // dto.put("cert_no", "");
+        // 持卡人证件类型
+        // dto.put("cert_type", "");
+        // 银行卡绑定手机号
+        // dto.put("mp", "");
+
+        return dto.toJSONString();
+    }
+
+    private static String getAgreementInfo() {
+        JSONObject dto = new JSONObject();
+        // 协议类型
+        // dto.put("agreement_type", "test");
+        // 协议号
+        // dto.put("agreement_no", "");
+        // 协议模板号
+        // dto.put("agreement_model", "");
+        // 协议模板名称
+        // dto.put("agreement_name", "");
+        // 签约日期
+        // dto.put("sign_date", "");
+        // 协议开始日期
+        // dto.put("agree_begin_date", "");
+        // 协议结束日期
+        // dto.put("agree_end_date", "");
+
+        return dto.toJSONString();
+    }
+
+    private static String getCombinePayConfig() {
+        JSONObject dto = new JSONObject();
+        // 支付手续费(%)
+        // dto.put("fee_rate", "");
+        // 支付固定手续费(元)
+        // dto.put("fee_fix_amt", "");
+        // 交易手续费外扣时的账户类型
+        // dto.put("out_fee_acct_type", "");
+        // 交易手续费外扣汇付ID
+        // dto.put("out_fee_huifuid", "");
+        // 是否交易手续费外扣
+        // dto.put("out_fee_flag", "");
+
+        return dto.toJSONString();
+    }
+
+    private static String getCashConfig() {
+        JSONObject dto = new JSONObject();
+        // 是否开通取现
+        // dto.put("switch_state", "test");
+        // 业务类型
+        // dto.put("cash_type", "test");
+        // 取现手续费率（%）fix_amt与fee_rate至少填写一项，单位%，需保留小数点后两位，取值范围[0.00,100.00]，不收费请填写0.00；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：0.05&lt;/font&gt;&lt;br/&gt;注：如果fix_amt与fee_rate都填写了则手续费&#x3D;fix_amt+支付金额*fee_rate
+        // dto.put("fee_rate", "test");
+        // 提现手续费（固定/元）
+        // dto.put("fix_amt", "");
+        // 是否交易手续费外扣
+        // dto.put("out_fee_flag", "");
+        // 手续费承担方
+        // dto.put("out_fee_huifu_id", "");
+
+        JSONArray dtoList = new JSONArray();
+        dtoList.add(dto);
+        return dtoList.toJSONString();
+    }
+
+    private static String getSettleConfig() {
+        JSONObject dto = new JSONObject();
+        // 结算周期
+        // dto.put("settle_cycle", "test");
+        // 节假日结算手续费率
+        // dto.put("fixed_ratio", "");
+        // 起结金额
+        // dto.put("min_amt", "");
+        // 结算手续费外扣时的账户类型
+        // dto.put("out_settle_acct_type", "");
+        // 结算手续费外扣时的汇付ID
+        // dto.put("out_settle_huifuid", "");
+        // 手续费外扣标记
+        // dto.put("out_settle_flag", "");
+        // 留存金额
+        // dto.put("remained_amt", "");
+        // 结算摘要
+        // dto.put("settle_abstract", "");
+        // 结算批次号
+        // dto.put("settle_batch_no", "");
+        // 结算方式
+        // dto.put("settle_pattern", "");
+        // 是否优先到账
+        // dto.put("is_priority_receipt", "");
+        // 自定义结算处理时间
+        // dto.put("settle_time", "");
+
+        return dto.toJSONString();
+    }
+
+    private static String getBizConf() {
+        JSONObject dto = new JSONObject();
+        // 延迟入账开关
+        // dto.put("delay_flag", "");
+        // 商户开通强制延迟标记
+        // dto.put("forced_delay_flag", "");
+        // 是否开通网银
+        // dto.put("online_flag", "");
+        // 是否开通快捷
+        // dto.put("quick_flag", "");
+        // 是否开通代扣
+        // dto.put("withhold_flag", "");
+        // 是否开通微信预授权
+        // dto.put("wechatpay_pre_auth_flag", "");
+        // 是否开通支付宝预授权
+        // dto.put("alipay_pre_auth_flag", "");
+        // 是否开通营销补贴
+        // dto.put("combine_pay_flag", "");
+        // 是否开通余额支付
+        // dto.put("balance_pay_flag", "");
+        // 是否开通结算
+        // dto.put("settle_flag", "");
+
+        return dto.toJSONString();
+    }
+
     private static String getWxConfList() {
         JSONObject dto = new JSONObject();
         // 支付场景
@@ -124,6 +368,150 @@ public class V2MerchantIntegrateUpdateRequestDemo extends BaseCommonDemo {
         // dto.put("wx_applet_secret", "");
         // 申请服务 
         // dto.put("service_codes", "");
+        // 交易手续费外扣时的账户类型
+        // dto.put("out_fee_acct_type", "");
+        // 交易手续费外扣汇付ID
+        // dto.put("out_fee_huifuid", "");
+        // 是否交易手续费外扣
+        // dto.put("out_fee_flag", "");
+
+        JSONArray dtoList = new JSONArray();
+        dtoList.add(dto);
+        return dtoList.toJSONString();
+    }
+
+    private static String getUboInfo() {
+        JSONObject dto = new JSONObject();
+        // 证件类型
+        // dto.put("ubo_id_doc_type", "test");
+        // 证件正面照片
+        // dto.put("ubo_id_doc_copy", "test");
+        // 证件姓名
+        // dto.put("ubo_id_doc_name", "test");
+        // 证件号码
+        // dto.put("ubo_id_doc_number", "test");
+        // 证件居住地址
+        // dto.put("ubo_id_doc_address", "test");
+        // 证件有效期开始时间
+        // dto.put("ubo_period_begin", "test");
+        // 证件有效期结束时间
+        // dto.put("ubo_period_end", "test");
+        // 证件反面照片
+        // dto.put("ubo_id_doc_copy_back", "");
+
+        JSONArray dtoList = new JSONArray();
+        dtoList.add(dto);
+        return dtoList.toJSONString();
+    }
+
+    private static String getWxRealnameInfo() {
+        JSONObject dto = new JSONObject();
+        // 支付场景
+        // dto.put("pay_scene", "test");
+        // 联系人姓名
+        // dto.put("name", "test");
+        // 联系人手机号
+        // dto.put("mobile", "test");
+        // 联系人证件号码
+        // dto.put("contact_id_card_number", "test");
+        // 实名认证类型
+        // dto.put("realname_info_type", "");
+        // 子渠道号
+        // dto.put("pay_channel_id", "");
+        // 联系人类型
+        // dto.put("contact_type", "");
+        // 联系人证件类型
+        // dto.put("contact_id_doc_type", "");
+        // 联系人证件有效期开始时间
+        // dto.put("contact_period_begin_date", "");
+        // 联系人证件有效期结束时间
+        // dto.put("contact_period_end_date", "");
+        // 证书类型
+        // dto.put("cert_type", "");
+        // 证书编号
+        // dto.put("cert_number", "");
+        // 经营者/法人是否为受益人
+        // dto.put("owner", "");
+        // 法人证件居住地址
+        // dto.put("legal_identification_address", "");
+        // 小微经营类型
+        // dto.put("micro_biz_type", "");
+        // 门店名称
+        // dto.put("store_name", "");
+        // 门店省市编码
+        // dto.put("store_address_code", "");
+        // 门店地址
+        // dto.put("store_address", "");
+        // 特殊行业Id
+        // dto.put("category_id", "");
+        // 是否金融机构
+        // dto.put("finance_institution_flag", "");
+        // 金融机构类型
+        // dto.put("finance_type", "");
+        // 受益人信息
+        // dto.put("ubo_info_list", getUboInfo());
+
+        return dto.toJSONString();
+    }
+
+    private static String getAliConfList() {
+        JSONObject dto = new JSONObject();
+        // 支付场景
+        // dto.put("pay_scene", "test");
+        // 手续费（%）
+        // dto.put("fee_rate", "test");
+        // 商户经营类目
+        // dto.put("mcc", "");
+        // 子渠道号
+        // dto.put("pay_channel_id", "");
+        // 拟申请的间联商户等级
+        // dto.put("indirect_level", "");
+        // 交易手续费外扣时的账户类型
+        // dto.put("out_fee_acct_type", "");
+        // 交易手续费外扣汇付ID
+        // dto.put("out_fee_huifuid", "");
+        // 是否交易手续费外扣
+        // dto.put("out_fee_flag", "");
+
+        JSONArray dtoList = new JSONArray();
+        dtoList.add(dto);
+        return dtoList.toJSONString();
+    }
+
+    private static String getUnionMicroInfo() {
+        JSONObject dto = new JSONObject();
+        // 银联商户类别
+        // dto.put("mchnt_type", "test");
+        // 商户经度
+        // dto.put("mer_lng", "test");
+        // 商户纬度
+        // dto.put("mer_lat", "test");
+        // 店铺名称
+        // dto.put("shop_name", "test");
+        // 商户经营类目
+        // dto.put("mcc", "test");
+
+        return dto.toJSONString();
+    }
+
+    private static String getUnionConfList() {
+        JSONObject dto = new JSONObject();
+        // 借记卡手续费1000以上（%）
+        // dto.put("debit_fee_rate_up", "test");
+        // 银联二维码业务贷记卡手续费1000以上（%）
+        // dto.put("credit_fee_rate_up", "test");
+        // 借记卡手续费1000以下（%）
+        // dto.put("debit_fee_rate_down", "test");
+        // 银联二维码业务贷记卡手续费1000以下（%）
+        // dto.put("credit_fee_rate_down", "test");
+        // 银联业务手续费类型
+        // dto.put("charge_cate_code", "");
+        // 借记卡封顶1000以上（元）
+        // dto.put("debit_fee_limit_up", "");
+        // 借记卡封顶1000以下（元）
+        // dto.put("debit_fee_limit_down", "");
+        // 商户经营类目
+        // dto.put("mcc", "");
         // 交易手续费外扣时的账户类型
         // dto.put("out_fee_acct_type", "");
         // 交易手续费外扣汇付ID
@@ -176,41 +564,7 @@ public class V2MerchantIntegrateUpdateRequestDemo extends BaseCommonDemo {
         return dto.toJSONString();
     }
 
-    private static String getLegalInfo() {
-        JSONObject dto = new JSONObject();
-        // 法人姓名
-        // dto.put("legal_name", "test");
-        // 法人证件类型
-        // dto.put("legal_cert_type", "test");
-        // 法人证件号码
-        // dto.put("legal_cert_no", "test");
-        // 法人证件有效期类型
-        // dto.put("legal_cert_validity_type", "test");
-        // 法人证件有效期开始日期
-        // dto.put("legal_cert_begin_date", "test");
-        // 法人证件有效期截止日期
-        // dto.put("legal_cert_end_date", "");
-
-        return dto.toJSONString();
-    }
-
-    private static String getUnionMicroInfo() {
-        JSONObject dto = new JSONObject();
-        // 银联商户类别
-        // dto.put("mchnt_type", "test");
-        // 商户经度
-        // dto.put("mer_lng", "test");
-        // 商户纬度
-        // dto.put("mer_lat", "test");
-        // 店铺名称
-        // dto.put("shop_name", "test");
-        // 商户经营类目
-        // dto.put("mcc", "test");
-
-        return dto.toJSONString();
-    }
-
-    private static String getCombinePayConfig() {
+    private static String getBalancePayConfig() {
         JSONObject dto = new JSONObject();
         // 支付手续费(%)
         // dto.put("fee_rate", "");
@@ -226,82 +580,30 @@ public class V2MerchantIntegrateUpdateRequestDemo extends BaseCommonDemo {
         return dto.toJSONString();
     }
 
-    private static String getAgreementInfo() {
+    private static String getHbFqFeeConfig() {
         JSONObject dto = new JSONObject();
-        // 协议类型
-        // dto.put("agreement_type", "test");
-        // 协议号
-        // dto.put("agreement_no", "");
-        // 协议模板号
-        // dto.put("agreement_model", "");
-        // 协议模板名称
-        // dto.put("agreement_name", "");
-        // 签约日期
-        // dto.put("sign_date", "");
-        // 协议开始日期
-        // dto.put("agree_begin_date", "");
-        // 协议结束日期
-        // dto.put("agree_end_date", "");
-
-        return dto.toJSONString();
-    }
-
-    private static String getBizConf() {
-        JSONObject dto = new JSONObject();
-        // 延迟入账开关
-        // dto.put("delay_flag", "");
-        // 商户开通强制延迟标记
-        // dto.put("forced_delay_flag", "");
-        // 是否开通网银
-        // dto.put("online_flag", "");
-        // 是否开通快捷
-        // dto.put("quick_flag", "");
-        // 是否开通代扣
-        // dto.put("withhold_flag", "");
-        // 是否开通微信预授权
-        // dto.put("wechatpay_pre_auth_flag", "");
-        // 是否开通支付宝预授权
-        // dto.put("alipay_pre_auth_flag", "");
-        // 是否开通营销补贴
-        // dto.put("combine_pay_flag", "");
-        // 是否开通余额支付
-        // dto.put("balance_pay_flag", "");
-        // 是否开通结算
-        // dto.put("settle_flag", "");
-
-        return dto.toJSONString();
-    }
-
-    private static String getCardInfo() {
-        JSONObject dto = new JSONObject();
-        // 结算类型
-        // dto.put("card_type", "test");
-        // 银行所在省
-        // dto.put("prov_id", "test");
-        // 银行所在市
-        // dto.put("area_id", "test");
-        // 结算账户名
-        // dto.put("card_name", "test");
-        // 结算账号
-        // dto.put("card_no", "test");
-        // 银行编码
-        // dto.put("bank_code", "");
-        // 联行号
-        // dto.put("branch_code", "");
-        // 支行名称
-        // dto.put("branch_name", "");
-        // 持卡人证件有效期类型
-        // dto.put("cert_validity_type", "");
-        // 持卡人证件有效期（起始）
-        // dto.put("cert_begin_date", "");
-        // 持卡人证件有效期（截止）
-        // dto.put("cert_end_date", "");
-        // 持卡人证件号码
-        // dto.put("cert_no", "");
-        // 持卡人证件类型
-        // dto.put("cert_type", "");
-        // 银行卡绑定手机号
-        // dto.put("mp", "");
+        // 花呗收单分期3期（%）分期费率不为空时，收单费率必填，大于0，保留2位小数，不小于渠道商成本；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：1.0&lt;/font&gt;代表费率为1.00%
+        // dto.put("acq_three_period", "test");
+        // 花呗收单分期6期（%）分期费率不为空时，收单费率必填，大于0，保留2位小数，不小于渠道商成本；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：1.0&lt;/font&gt;代表费率为1.00%
+        // dto.put("acq_six_period", "test");
+        // 花呗收单分期12期（%）分期费率不为空时，收单费率必填，大于0，保留2位小数，不小于渠道商成本；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：1.0&lt;/font&gt;代表费率为1.00%
+        // dto.put("acq_twelve_period", "test");
+        // 花呗分期3期（%）
+        // dto.put("three_period", "");
+        // 花呗分期6期（%）
+        // dto.put("six_period", "");
+        // 花呗分期12期（%）
+        // dto.put("twelve_period", "");
+        // 商户经营类目
+        // dto.put("ali_mcc", "");
+        // 支付场景
+        // dto.put("pay_scene", "");
+        // 交易手续费外扣时的账户类型
+        // dto.put("out_fee_acct_type", "");
+        // 交易手续费外扣汇付ID
+        // dto.put("out_fee_huifuid", "");
+        // 是否交易手续费外扣
+        // dto.put("out_fee_flag", "");
 
         return dto.toJSONString();
     }
@@ -330,56 +632,6 @@ public class V2MerchantIntegrateUpdateRequestDemo extends BaseCommonDemo {
         return dtoList.toJSONString();
     }
 
-    private static String getUnionConfList() {
-        JSONObject dto = new JSONObject();
-        // 借记卡手续费1000以上（%）
-        // dto.put("debit_fee_rate_up", "test");
-        // 银联二维码业务贷记卡手续费1000以上（%）
-        // dto.put("credit_fee_rate_up", "test");
-        // 借记卡手续费1000以下（%）
-        // dto.put("debit_fee_rate_down", "test");
-        // 银联二维码业务贷记卡手续费1000以下（%）
-        // dto.put("credit_fee_rate_down", "test");
-        // 银联业务手续费类型
-        // dto.put("charge_cate_code", "");
-        // 借记卡封顶1000以上（元）
-        // dto.put("debit_fee_limit_up", "");
-        // 借记卡封顶1000以下（元）
-        // dto.put("debit_fee_limit_down", "");
-        // 商户经营类目
-        // dto.put("mcc", "");
-        // 交易手续费外扣时的账户类型
-        // dto.put("out_fee_acct_type", "");
-        // 交易手续费外扣汇付ID
-        // dto.put("out_fee_huifuid", "");
-        // 是否交易手续费外扣
-        // dto.put("out_fee_flag", "");
-
-        JSONArray dtoList = new JSONArray();
-        dtoList.add(dto);
-        return dtoList.toJSONString();
-    }
-
-    private static String getCashConfig() {
-        JSONObject dto = new JSONObject();
-        // 是否开通取现
-        // dto.put("switch_state", "test");
-        // 业务类型
-        // dto.put("cash_type", "test");
-        // 取现手续费率（%）fix_amt与fee_rate至少填写一项，单位%，需保留小数点后两位，取值范围[0.00,100.00]，不收费请填写0.00；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：0.05&lt;/font&gt;&lt;br/&gt;注：如果fix_amt与fee_rate都填写了则手续费&#x3D;fix_amt+支付金额*fee_rate
-        // dto.put("fee_rate", "test");
-        // 提现手续费（固定/元）
-        // dto.put("fix_amt", "");
-        // 是否交易手续费外扣
-        // dto.put("out_fee_flag", "");
-        // 手续费承担方
-        // dto.put("out_fee_huifu_id", "");
-
-        JSONArray dtoList = new JSONArray();
-        dtoList.add(dto);
-        return dtoList.toJSONString();
-    }
-
     private static String getOnlinePayFeeConfList() {
         JSONObject dto = new JSONObject();
         // 业务类型
@@ -394,22 +646,6 @@ public class V2MerchantIntegrateUpdateRequestDemo extends BaseCommonDemo {
         JSONArray dtoList = new JSONArray();
         dtoList.add(dto);
         return dtoList.toJSONString();
-    }
-
-    private static String getBalancePayConfig() {
-        JSONObject dto = new JSONObject();
-        // 支付手续费(%)
-        // dto.put("fee_rate", "");
-        // 支付固定手续费(元)
-        // dto.put("fee_fix_amt", "");
-        // 交易手续费外扣时的账户类型
-        // dto.put("out_fee_acct_type", "");
-        // 交易手续费外扣汇付ID
-        // dto.put("out_fee_huifuid", "");
-        // 是否交易手续费外扣
-        // dto.put("out_fee_flag", "");
-
-        return dto.toJSONString();
     }
 
     private static String getFileInfo() {
@@ -522,242 +758,6 @@ public class V2MerchantIntegrateUpdateRequestDemo extends BaseCommonDemo {
         // dto.put("contact_ali_busi_auth_pic", "");
 
         return dto.toJSONString();
-    }
-
-    private static String getWxRealnameInfo() {
-        JSONObject dto = new JSONObject();
-        // 支付场景
-        // dto.put("pay_scene", "test");
-        // 联系人姓名
-        // dto.put("name", "test");
-        // 联系人手机号
-        // dto.put("mobile", "test");
-        // 联系人证件号码
-        // dto.put("contact_id_card_number", "test");
-        // 实名认证类型
-        // dto.put("realname_info_type", "");
-        // 子渠道号
-        // dto.put("pay_channel_id", "");
-        // 联系人类型
-        // dto.put("contact_type", "");
-        // 联系人证件类型
-        // dto.put("contact_id_doc_type", "");
-        // 联系人证件有效期开始时间
-        // dto.put("contact_period_begin_date", "");
-        // 联系人证件有效期结束时间
-        // dto.put("contact_period_end_date", "");
-        // 证书类型
-        // dto.put("cert_type", "");
-        // 证书编号
-        // dto.put("cert_number", "");
-        // 经营者/法人是否为受益人
-        // dto.put("owner", "");
-        // 法人证件居住地址
-        // dto.put("legal_identification_address", "");
-        // 小微经营类型
-        // dto.put("micro_biz_type", "");
-        // 门店名称
-        // dto.put("store_name", "");
-        // 门店省市编码
-        // dto.put("store_address_code", "");
-        // 门店地址
-        // dto.put("store_address", "");
-        // 特殊行业Id
-        // dto.put("category_id", "");
-        // 是否金融机构
-        // dto.put("finance_institution_flag", "");
-        // 金融机构类型
-        // dto.put("finance_type", "");
-        // 受益人信息
-        // dto.put("ubo_info_list", getUboInfo());
-
-        return dto.toJSONString();
-    }
-
-    private static String getHbFqFeeConfig() {
-        JSONObject dto = new JSONObject();
-        // 花呗收单分期3期（%）分期费率不为空时，收单费率必填，大于0，保留2位小数，不小于渠道商成本；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：1.0&lt;/font&gt;代表费率为1.00%
-        // dto.put("acq_three_period", "test");
-        // 花呗收单分期6期（%）分期费率不为空时，收单费率必填，大于0，保留2位小数，不小于渠道商成本；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：1.0&lt;/font&gt;代表费率为1.00%
-        // dto.put("acq_six_period", "test");
-        // 花呗收单分期12期（%）分期费率不为空时，收单费率必填，大于0，保留2位小数，不小于渠道商成本；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：1.0&lt;/font&gt;代表费率为1.00%
-        // dto.put("acq_twelve_period", "test");
-        // 花呗分期3期（%）
-        // dto.put("three_period", "");
-        // 花呗分期6期（%）
-        // dto.put("six_period", "");
-        // 花呗分期12期（%）
-        // dto.put("twelve_period", "");
-        // 商户经营类目
-        // dto.put("ali_mcc", "");
-        // 支付场景
-        // dto.put("pay_scene", "");
-        // 交易手续费外扣时的账户类型
-        // dto.put("out_fee_acct_type", "");
-        // 交易手续费外扣汇付ID
-        // dto.put("out_fee_huifuid", "");
-        // 是否交易手续费外扣
-        // dto.put("out_fee_flag", "");
-
-        return dto.toJSONString();
-    }
-
-    private static String getAliConfList() {
-        JSONObject dto = new JSONObject();
-        // 支付场景
-        // dto.put("pay_scene", "test");
-        // 手续费（%）
-        // dto.put("fee_rate", "test");
-        // 商户经营类目
-        // dto.put("mcc", "");
-        // 子渠道号
-        // dto.put("pay_channel_id", "");
-        // 拟申请的间联商户等级
-        // dto.put("indirect_level", "");
-        // 交易手续费外扣时的账户类型
-        // dto.put("out_fee_acct_type", "");
-        // 交易手续费外扣汇付ID
-        // dto.put("out_fee_huifuid", "");
-        // 是否交易手续费外扣
-        // dto.put("out_fee_flag", "");
-
-        JSONArray dtoList = new JSONArray();
-        dtoList.add(dto);
-        return dtoList.toJSONString();
-    }
-
-    private static String getSettleConfig() {
-        JSONObject dto = new JSONObject();
-        // 结算周期
-        // dto.put("settle_cycle", "test");
-        // 节假日结算手续费率
-        // dto.put("fixed_ratio", "");
-        // 起结金额
-        // dto.put("min_amt", "");
-        // 结算手续费外扣时的账户类型
-        // dto.put("out_settle_acct_type", "");
-        // 结算手续费外扣时的汇付ID
-        // dto.put("out_settle_huifuid", "");
-        // 手续费外扣标记
-        // dto.put("out_settle_flag", "");
-        // 留存金额
-        // dto.put("remained_amt", "");
-        // 结算摘要
-        // dto.put("settle_abstract", "");
-        // 结算批次号
-        // dto.put("settle_batch_no", "");
-        // 结算方式
-        // dto.put("settle_pattern", "");
-        // 是否优先到账
-        // dto.put("is_priority_receipt", "");
-        // 自定义结算处理时间
-        // dto.put("settle_time", "");
-
-        return dto.toJSONString();
-    }
-
-    private static String getContactInfo() {
-        JSONObject dto = new JSONObject();
-        // 联系人姓名
-        // dto.put("contact_name", "test");
-        // 联系人手机号
-        // dto.put("contact_mobile_no", "test");
-        // 联系人电子邮箱
-        // dto.put("contact_email", "test");
-        // 联系人身份证号
-        // dto.put("contact_cert_no", "");
-
-        return dto.toJSONString();
-    }
-
-    private static String getBasicInfo() {
-        JSONObject dto = new JSONObject();
-        // 经营简称
-        dto.put("short_name", "张三");
-        // 小票名称
-        dto.put("receipt_name", "");
-        // 商户英文名称
-        dto.put("mer_en_name", "");
-        // 所属行业
-        dto.put("mcc", "");
-        // 营业执照类型
-        dto.put("license_type", "");
-        // 营业执照有效期开始日期
-        dto.put("license_begin_date", "");
-        // 营业执照有效期截止日期
-        dto.put("license_end_date", "");
-        // 营业执照有效期类型
-        dto.put("license_validity_type", "");
-        // 注册详细地址
-        dto.put("reg_detail", "");
-        // 注册省
-        dto.put("reg_prov_id", "");
-        // 注册市
-        dto.put("reg_area_id", "");
-        // 注册区
-        dto.put("reg_district_id", "");
-        // 经营详细地址
-        dto.put("detail_addr", "");
-        // 经营省
-        dto.put("prov_id", "");
-        // 经营市
-        dto.put("area_id", "");
-        // 经营区
-        dto.put("district_id", "");
-        // 客服电话
-        dto.put("service_phone", "");
-        // 商户主页URL
-        dto.put("mer_url", "");
-        // 商户ICP备案编号
-        dto.put("mer_icp", "");
-        // 开户许可证核准号
-        dto.put("open_licence_no", "");
-        // 法人信息
-        // dto.put("legal_info", getLegalInfo());
-        // 联系人信息
-        // dto.put("contact_info", getContactInfo());
-        // 签约人
-        // dto.put("sign_user_info", getSignUserInfo());
-
-        return dto.toJSONString();
-    }
-
-    private static String getSignUserInfo() {
-        JSONObject dto = new JSONObject();
-        // 签约人类型
-        // dto.put("type", "test");
-        // 姓名
-        // dto.put("sign_name", "");
-        // 手机号
-        // dto.put("sign_mobile_no", "");
-        // 身份证
-        // dto.put("sign_cert_no", "");
-
-        return dto.toJSONString();
-    }
-
-    private static String getUboInfo() {
-        JSONObject dto = new JSONObject();
-        // 证件类型
-        // dto.put("ubo_id_doc_type", "test");
-        // 证件正面照片
-        // dto.put("ubo_id_doc_copy", "test");
-        // 证件姓名
-        // dto.put("ubo_id_doc_name", "test");
-        // 证件号码
-        // dto.put("ubo_id_doc_number", "test");
-        // 证件居住地址
-        // dto.put("ubo_id_doc_address", "test");
-        // 证件有效期开始时间
-        // dto.put("ubo_period_begin", "test");
-        // 证件有效期结束时间
-        // dto.put("ubo_period_end", "test");
-        // 证件反面照片
-        // dto.put("ubo_id_doc_copy_back", "");
-
-        JSONArray dtoList = new JSONArray();
-        dtoList.add(dto);
-        return dtoList.toJSONString();
     }
 
 }

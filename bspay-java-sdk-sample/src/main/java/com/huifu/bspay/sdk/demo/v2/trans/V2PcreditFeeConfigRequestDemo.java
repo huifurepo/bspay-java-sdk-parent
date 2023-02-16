@@ -56,40 +56,6 @@ public class V2PcreditFeeConfigRequestDemo extends BaseCommonDemo {
         return extendInfoMap;
     }
 
-    private static String getHbFqFeeList() {
-        JSONObject dto = new JSONObject();
-        // 商户汇付Id
-        dto.put("huifu_id", "6666000003156435");
-        // 花呗分期状态
-        // dto.put("hb_fq_status", "");
-        // 花呗分期3期开关
-        dto.put("hb_three_period_switch", "Y");
-        // 花呗收单分期3期费率（%）
-        dto.put("hb_three_acq_period", "5");
-        // 花呗分期3期利率（%）
-        dto.put("hb_three_period", "10");
-        // 花呗分期6期开关
-        dto.put("hb_six_period_switch", "Y");
-        // 花呗收单分期6期费率（%）
-        dto.put("hb_six_acq_period", "5");
-        // 花呗分期6期利率（%）
-        dto.put("hb_six_period", "10");
-        // 花呗分期12期开关
-        dto.put("hb_twelve_period_switch", "Y");
-        // 花呗收单分期12期费率（%）
-        dto.put("hb_twelve_acq_period", "15");
-        // 花呗分期12期利率（%）
-        dto.put("hb_twelve_period", "11");
-        // 交易手续费外扣标记
-        dto.put("out_fee_flag", "");
-        // 手续费外扣的汇付商户号
-        dto.put("out_fee_huifu_id", "");
-
-        JSONArray dtoList = new JSONArray();
-        dtoList.add(dto);
-        return dtoList.toJSONString();
-    }
-
     private static JSON getBankFqFeeList() {
         JSONObject dto = new JSONObject();
         // 银行编号
@@ -134,6 +100,40 @@ public class V2PcreditFeeConfigRequestDemo extends BaseCommonDemo {
         dto.put("bank_fq_fee_list", getBankFqFeeList());
         // 贴息模式
         dto.put("fee_model", "1");
+
+        JSONArray dtoList = new JSONArray();
+        dtoList.add(dto);
+        return dtoList.toJSONString();
+    }
+
+    private static String getHbFqFeeList() {
+        JSONObject dto = new JSONObject();
+        // 商户汇付Id
+        dto.put("huifu_id", "6666000003156435");
+        // 花呗分期状态
+        // dto.put("hb_fq_status", "");
+        // 花呗分期3期开关
+        dto.put("hb_three_period_switch", "Y");
+        // 花呗收单分期3期费率（%）
+        dto.put("hb_three_acq_period", "5");
+        // 花呗分期3期利率（%）
+        dto.put("hb_three_period", "10");
+        // 花呗分期6期开关
+        dto.put("hb_six_period_switch", "Y");
+        // 花呗收单分期6期费率（%）
+        dto.put("hb_six_acq_period", "5");
+        // 花呗分期6期利率（%）
+        dto.put("hb_six_period", "10");
+        // 花呗分期12期开关
+        dto.put("hb_twelve_period_switch", "Y");
+        // 花呗收单分期12期费率（%）
+        dto.put("hb_twelve_acq_period", "15");
+        // 花呗分期12期利率（%）
+        dto.put("hb_twelve_period", "11");
+        // 交易手续费外扣标记
+        dto.put("out_fee_flag", "");
+        // 手续费外扣的汇付商户号
+        dto.put("out_fee_huifu_id", "");
 
         JSONArray dtoList = new JSONArray();
         dtoList.add(dto);

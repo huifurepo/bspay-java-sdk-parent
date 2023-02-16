@@ -66,6 +66,18 @@ public class V2TradeAcctpaymentRefundRequestDemo extends BaseCommonDemo {
         return extendInfoMap;
     }
 
+    private static JSON getAcctInfos() {
+        JSONObject dto = new JSONObject();
+        // 退款金额
+        // dto.put("div_amt", "test");
+        // 退款方ID
+        // dto.put("huifu_id", "test");
+
+        JSONArray dtoList = new JSONArray();
+        dtoList.add(dto);
+        return dtoList;
+    }
+
     private static String getAcctSplitBunch() {
         JSONObject dto = new JSONObject();
         // 退账明细
@@ -82,18 +94,6 @@ public class V2TradeAcctpaymentRefundRequestDemo extends BaseCommonDemo {
         dto.put("sub_product", "卡券推广类");
 
         return dto.toJSONString();
-    }
-
-    private static JSON getAcctInfos() {
-        JSONObject dto = new JSONObject();
-        // 退款金额
-        // dto.put("div_amt", "test");
-        // 退款方ID
-        // dto.put("huifu_id", "test");
-
-        JSONArray dtoList = new JSONArray();
-        dtoList.add(dto);
-        return dtoList;
     }
 
 }

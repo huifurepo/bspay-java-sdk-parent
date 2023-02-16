@@ -78,24 +78,36 @@ public class V2TradeOnlinepaymentWappayRequestDemo extends BaseCommonDemo {
         return extendInfoMap;
     }
 
-    private static String getTerminalDeviceData() {
+    private static JSON getAcctInfos() {
         JSONObject dto = new JSONObject();
-        // 交易设备ip
-        dto.put("device_ip", "127.0.0.1");
-        // 设备类型
-        dto.put("device_type", "1");
-        // 交易设备gps
-        // dto.put("device_gps", "");
-        // 交易设备iccid
-        // dto.put("device_icc_id", "");
-        // 交易设备imei
-        // dto.put("device_imei", "");
-        // 交易设备imsi
-        // dto.put("device_imsi", "");
-        // 交易设备mac
-        // dto.put("device_mac", "");
-        // 交易设备wifimac
-        // dto.put("device_wifi_mac", "");
+        // 支付金额
+        // dto.put("div_amt", "");
+        // 被分账方ID
+        // dto.put("huifu_id", "");
+        // 账户号
+        // dto.put("acct_id", "");
+
+        JSONArray dtoList = new JSONArray();
+        dtoList.add(dto);
+        return dtoList;
+    }
+
+    private static String getAcctSplitBunchRucan() {
+        JSONObject dto = new JSONObject();
+        // 分账信息列表
+        dto.put("acct_infos", getAcctInfos());
+
+        return dto.toJSONString();
+    }
+
+    private static String getExtendPayData() {
+        JSONObject dto = new JSONObject();
+        // 商品简称
+        dto.put("goods_short_name", "一般商品");
+        // 网关支付受理渠道
+        dto.put("gw_chnnl_tp", "01");
+        // 业务种类
+        dto.put("biz_tp", "123456");
 
         return dto.toJSONString();
     }
@@ -114,36 +126,24 @@ public class V2TradeOnlinepaymentWappayRequestDemo extends BaseCommonDemo {
         return dto.toJSONString();
     }
 
-    private static JSON getAcctInfos() {
+    private static String getTerminalDeviceData() {
         JSONObject dto = new JSONObject();
-        // 支付金额
-        // dto.put("div_amt", "");
-        // 被分账方ID
-        // dto.put("huifu_id", "");
-        // 账户号
-        // dto.put("acct_id", "");
-
-        JSONArray dtoList = new JSONArray();
-        dtoList.add(dto);
-        return dtoList;
-    }
-
-    private static String getExtendPayData() {
-        JSONObject dto = new JSONObject();
-        // 商品简称
-        dto.put("goods_short_name", "一般商品");
-        // 网关支付受理渠道
-        dto.put("gw_chnnl_tp", "01");
-        // 业务种类
-        dto.put("biz_tp", "123456");
-
-        return dto.toJSONString();
-    }
-
-    private static String getAcctSplitBunchRucan() {
-        JSONObject dto = new JSONObject();
-        // 分账信息列表
-        dto.put("acct_infos", getAcctInfos());
+        // 交易设备ip
+        dto.put("device_ip", "127.0.0.1");
+        // 设备类型
+        dto.put("device_type", "1");
+        // 交易设备gps
+        // dto.put("device_gps", "");
+        // 交易设备iccid
+        // dto.put("device_icc_id", "");
+        // 交易设备imei
+        // dto.put("device_imei", "");
+        // 交易设备imsi
+        // dto.put("device_imsi", "");
+        // 交易设备mac
+        // dto.put("device_mac", "");
+        // 交易设备wifimac
+        // dto.put("device_wifi_mac", "");
 
         return dto.toJSONString();
     }

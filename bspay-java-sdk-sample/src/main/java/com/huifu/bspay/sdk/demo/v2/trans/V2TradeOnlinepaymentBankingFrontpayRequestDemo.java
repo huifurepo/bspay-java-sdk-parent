@@ -86,6 +86,18 @@ public class V2TradeOnlinepaymentBankingFrontpayRequestDemo extends BaseCommonDe
         return extendInfoMap;
     }
 
+    private static String getExtendPayData() {
+        JSONObject dto = new JSONObject();
+        // 商品简称
+        dto.put("goods_short_name", "011111");
+        // 网关支付受理渠道
+        dto.put("gw_chnnl_tp", "01");
+        // 业务种类
+        dto.put("biz_tp", "123451");
+
+        return dto.toJSONString();
+    }
+
     private static String getTerminalDeviceData() {
         JSONObject dto = new JSONObject();
         // 交易设备类型
@@ -108,20 +120,6 @@ public class V2TradeOnlinepaymentBankingFrontpayRequestDemo extends BaseCommonDe
         return dto.toJSONString();
     }
 
-    private static String getRiskCheckData() {
-        JSONObject dto = new JSONObject();
-        // ip地址
-        dto.put("ip_addr", "1");
-        // 基站地址
-        // dto.put("base_atation", "");
-        // 纬度
-        dto.put("latitude", "3");
-        // 经度
-        dto.put("longitude", "4");
-
-        return dto.toJSONString();
-    }
-
     private static JSON getAcctInfos() {
         JSONObject dto = new JSONObject();
         // 分账金额
@@ -136,22 +134,24 @@ public class V2TradeOnlinepaymentBankingFrontpayRequestDemo extends BaseCommonDe
         return dtoList;
     }
 
-    private static String getExtendPayData() {
-        JSONObject dto = new JSONObject();
-        // 商品简称
-        dto.put("goods_short_name", "011111");
-        // 网关支付受理渠道
-        dto.put("gw_chnnl_tp", "01");
-        // 业务种类
-        dto.put("biz_tp", "123451");
-
-        return dto.toJSONString();
-    }
-
     private static String getAcctSplitBunchRucan() {
         JSONObject dto = new JSONObject();
         // 分账明细
         // dto.put("acct_infos", getAcctInfos());
+
+        return dto.toJSONString();
+    }
+
+    private static String getRiskCheckData() {
+        JSONObject dto = new JSONObject();
+        // ip地址
+        dto.put("ip_addr", "1");
+        // 基站地址
+        // dto.put("base_atation", "");
+        // 纬度
+        dto.put("latitude", "3");
+        // 经度
+        dto.put("longitude", "4");
 
         return dto.toJSONString();
     }

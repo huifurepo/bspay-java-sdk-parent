@@ -82,20 +82,20 @@ public class V2TradeHostingPaymentPreorderWxRequestDemo extends BaseCommonDemo {
         return dtoList;
     }
 
+    private static String getAcctSplitBunchRucan() {
+        JSONObject dto = new JSONObject();
+        // 分账明细
+        dto.put("acct_infos", getAcctInfosRucan());
+
+        return dto.toJSONString();
+    }
+
     private static String getMiniappDataRucan() {
         JSONObject dto = new JSONObject();
         // 应用ID
         dto.put("seq_id", "系统应用ID");
         // 私有信息
         // dto.put("private_info", "");
-
-        return dto.toJSONString();
-    }
-
-    private static String getAcctSplitBunchRucan() {
-        JSONObject dto = new JSONObject();
-        // 分账明细
-        dto.put("acct_infos", getAcctInfosRucan());
 
         return dto.toJSONString();
     }

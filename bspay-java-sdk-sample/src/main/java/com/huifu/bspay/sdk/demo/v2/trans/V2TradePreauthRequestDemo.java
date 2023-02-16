@@ -94,6 +94,150 @@ public class V2TradePreauthRequestDemo extends BaseCommonDemo {
         return extendInfoMap;
     }
 
+    private static String getExtendParams() {
+        JSONObject dto = new JSONObject();
+        // 卡类型
+        dto.put("card_type", "");
+        // 支付宝点餐场景类型
+        dto.put("food_order_type", "qr_order");
+        // 花呗分期数
+        dto.put("hb_fq_num", "");
+        // 手续费百分比
+        dto.put("hb_fq_seller_percent", "");
+        // 行业数据回流信息
+        dto.put("industry_reflux_info", "");
+        // 停车场ID
+        dto.put("parking_id", "123wsx");
+        // 系统商编号
+        dto.put("sys_service_provider_id", "");
+
+        return dto.toJSONString();
+    }
+
+    private static JSON getAliGoodsDetail() {
+        JSONObject dto = new JSONObject();
+        // 商品的编号
+        dto.put("goods_id", "12345678901234567890123456789012");
+        // 商品名称
+        dto.put("goods_name", "111");
+        // 商品单价
+        dto.put("price", "1.01");
+        // 商品数量
+        dto.put("quantity", "1");
+        // 商品描述信息
+        dto.put("body", "");
+        // 商品类目树
+        dto.put("categories_tree", "");
+        // 商品类目
+        dto.put("goods_category", "");
+        // 商品的展示地址
+        dto.put("show_url", "321313");
+
+        JSONArray dtoList = new JSONArray();
+        dtoList.add(dto);
+        return dtoList;
+    }
+
+    private static String getAlipayData() {
+        JSONObject dto = new JSONObject();
+        // 支付宝的店铺编号
+        dto.put("alipay_store_id", "");
+        // 业务扩展参数
+        dto.put("extend_params", getExtendParams());
+        // 订单包含的商品列表信息
+        dto.put("goods_detail", getAliGoodsDetail());
+        // 商户操作员编号
+        dto.put("operator_id", "1234567890123456789012345678");
+        // 商户门店编号
+        dto.put("store_id", "");
+
+        return dto.toJSONString();
+    }
+
+    private static JSON getWxGoodsDetailRucan() {
+        JSONObject dto = new JSONObject();
+        // 商品编码
+        dto.put("goods_id", "1232131");
+        // 商品名称
+        dto.put("goods_name", "汇付天下");
+        // 商品单价
+        dto.put("price", "0.50");
+        // 商品数量
+        dto.put("quantity", 0);
+        // 微信侧商品编码
+        dto.put("wxpay_goods_id", "");
+
+        JSONArray dtoList = new JSONArray();
+        dtoList.add(dto);
+        return dtoList;
+    }
+
+    private static JSON getWxGoodsRucan() {
+        JSONObject dto = new JSONObject();
+        // 单品列表
+        dto.put("goods_detail", getWxGoodsDetailRucan());
+        // 订单原价
+        dto.put("cost_price", "1");
+        // 商品小票ID
+        dto.put("receipt_id", "");
+
+        return dto;
+    }
+
+    private static JSON getWxStoreRucan() {
+        JSONObject dto = new JSONObject();
+        // 门店详细地址
+        dto.put("address", "汇付天下桂林路");
+        // 门店行政区划码
+        dto.put("area_code", "310");
+        // 门店id
+        dto.put("id", "1232131");
+        // 门店名称
+        dto.put("name", "测试");
+
+        return dto;
+    }
+
+    private static JSON getWxSceneRucan() {
+        JSONObject dto = new JSONObject();
+        // 门店信息
+        dto.put("store_info", getWxStoreRucan());
+
+        return dto;
+    }
+
+    private static String getWxData() {
+        JSONObject dto = new JSONObject();
+        // 附加数据
+        dto.put("attach", "");
+        // 商品详情
+        dto.put("detail", getWxGoodsRucan());
+        // 设备号
+        dto.put("device_info", "");
+        // 订单优惠标记
+        dto.put("goods_tag", "12321312");
+        // 场景信息
+        dto.put("scene_info", getWxSceneRucan());
+        // 子商户公众账号ID
+        dto.put("sub_appid", "wx48abf94e085e98e1");
+
+        return dto.toJSONString();
+    }
+
+    private static String getRiskCheckData() {
+        JSONObject dto = new JSONObject();
+        // 基站地址
+        dto.put("base_station", "192.168.1.1");
+        // ip地址
+        dto.put("ip_addr", "180.167.105.130");
+        // 纬度
+        dto.put("latitude", "33.3");
+        // 经度
+        dto.put("longitude", "33.3");
+
+        return dto.toJSONString();
+    }
+
     private static String getTerminalDeviceData() {
         JSONObject dto = new JSONObject();
         // 商户终端版本号
@@ -134,150 +278,6 @@ public class V2TradePreauthRequestDemo extends BaseCommonDemo {
         dto.put("serial_num", "");
 
         return dto.toJSONString();
-    }
-
-    private static JSON getWxSceneRucan() {
-        JSONObject dto = new JSONObject();
-        // 门店信息
-        dto.put("store_info", getWxStoreRucan());
-
-        return dto;
-    }
-
-    private static String getRiskCheckData() {
-        JSONObject dto = new JSONObject();
-        // 基站地址
-        dto.put("base_station", "192.168.1.1");
-        // ip地址
-        dto.put("ip_addr", "180.167.105.130");
-        // 纬度
-        dto.put("latitude", "33.3");
-        // 经度
-        dto.put("longitude", "33.3");
-
-        return dto.toJSONString();
-    }
-
-    private static JSON getWxGoodsDetailRucan() {
-        JSONObject dto = new JSONObject();
-        // 商品编码
-        dto.put("goods_id", "1232131");
-        // 商品名称
-        dto.put("goods_name", "汇付天下");
-        // 商品单价
-        dto.put("price", "0.50");
-        // 商品数量
-        dto.put("quantity", 0);
-        // 微信侧商品编码
-        dto.put("wxpay_goods_id", "");
-
-        JSONArray dtoList = new JSONArray();
-        dtoList.add(dto);
-        return dtoList;
-    }
-
-    private static String getWxData() {
-        JSONObject dto = new JSONObject();
-        // 附加数据
-        dto.put("attach", "");
-        // 商品详情
-        dto.put("detail", getWxGoodsRucan());
-        // 设备号
-        dto.put("device_info", "");
-        // 订单优惠标记
-        dto.put("goods_tag", "12321312");
-        // 场景信息
-        dto.put("scene_info", getWxSceneRucan());
-        // 子商户公众账号ID
-        dto.put("sub_appid", "wx48abf94e085e98e1");
-
-        return dto.toJSONString();
-    }
-
-    private static String getExtendParams() {
-        JSONObject dto = new JSONObject();
-        // 卡类型
-        dto.put("card_type", "");
-        // 支付宝点餐场景类型
-        dto.put("food_order_type", "qr_order");
-        // 花呗分期数
-        dto.put("hb_fq_num", "");
-        // 手续费百分比
-        dto.put("hb_fq_seller_percent", "");
-        // 行业数据回流信息
-        dto.put("industry_reflux_info", "");
-        // 停车场ID
-        dto.put("parking_id", "123wsx");
-        // 系统商编号
-        dto.put("sys_service_provider_id", "");
-
-        return dto.toJSONString();
-    }
-
-    private static JSON getWxStoreRucan() {
-        JSONObject dto = new JSONObject();
-        // 门店详细地址
-        dto.put("address", "汇付天下桂林路");
-        // 门店行政区划码
-        dto.put("area_code", "310");
-        // 门店id
-        dto.put("id", "1232131");
-        // 门店名称
-        dto.put("name", "测试");
-
-        return dto;
-    }
-
-    private static String getAlipayData() {
-        JSONObject dto = new JSONObject();
-        // 支付宝的店铺编号
-        dto.put("alipay_store_id", "");
-        // 业务扩展参数
-        dto.put("extend_params", getExtendParams());
-        // 订单包含的商品列表信息
-        dto.put("goods_detail", getAliGoodsDetail());
-        // 商户操作员编号
-        dto.put("operator_id", "1234567890123456789012345678");
-        // 商户门店编号
-        dto.put("store_id", "");
-
-        return dto.toJSONString();
-    }
-
-    private static JSON getWxGoodsRucan() {
-        JSONObject dto = new JSONObject();
-        // 单品列表
-        dto.put("goods_detail", getWxGoodsDetailRucan());
-        // 订单原价
-        dto.put("cost_price", "1");
-        // 商品小票ID
-        dto.put("receipt_id", "");
-
-        return dto;
-    }
-
-    private static JSON getAliGoodsDetail() {
-        JSONObject dto = new JSONObject();
-        // 商品的编号
-        dto.put("goods_id", "12345678901234567890123456789012");
-        // 商品名称
-        dto.put("goods_name", "111");
-        // 商品单价
-        dto.put("price", "1.01");
-        // 商品数量
-        dto.put("quantity", "1");
-        // 商品描述信息
-        dto.put("body", "");
-        // 商品类目树
-        dto.put("categories_tree", "");
-        // 商品类目
-        dto.put("goods_category", "");
-        // 商品的展示地址
-        dto.put("show_url", "321313");
-
-        JSONArray dtoList = new JSONArray();
-        dtoList.add(dto);
-        return dtoList;
     }
 
 }

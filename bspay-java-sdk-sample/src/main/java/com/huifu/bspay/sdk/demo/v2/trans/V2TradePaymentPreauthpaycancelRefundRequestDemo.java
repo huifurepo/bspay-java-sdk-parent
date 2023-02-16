@@ -82,6 +82,20 @@ public class V2TradePaymentPreauthpaycancelRefundRequestDemo extends BaseCommonD
         return extendInfoMap;
     }
 
+    private static String getRiskCheckInfo() {
+        JSONObject dto = new JSONObject();
+        // 基站地址
+        dto.put("base_station", "192.168.1.1");
+        // ip地址
+        dto.put("ip_addr", "192.168.1.1");
+        // 纬度
+        dto.put("latitude", "33.3");
+        // 经度
+        dto.put("longitude", "33.3");
+
+        return dto.toJSONString();
+    }
+
     private static JSON getTerminalDeviceInfo() {
         JSONObject dto = new JSONObject();
         // 交易设备GPS
@@ -108,20 +122,6 @@ public class V2TradePaymentPreauthpaycancelRefundRequestDemo extends BaseCommonD
         dto.put("pnr_dev_id", "");
 
         return dto;
-    }
-
-    private static String getRiskCheckInfo() {
-        JSONObject dto = new JSONObject();
-        // 基站地址
-        dto.put("base_station", "192.168.1.1");
-        // ip地址
-        dto.put("ip_addr", "192.168.1.1");
-        // 纬度
-        dto.put("latitude", "33.3");
-        // 经度
-        dto.put("longitude", "33.3");
-
-        return dto.toJSONString();
     }
 
 }

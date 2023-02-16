@@ -82,20 +82,20 @@ public class V2TradeHostingPaymentPreorderAliRequestDemo extends BaseCommonDemo 
         return dtoList;
     }
 
+    private static String getAcctSplitBunchRucan() {
+        JSONObject dto = new JSONObject();
+        // 分账明细
+        dto.put("acct_infos", getAcctInfosRucan());
+
+        return dto.toJSONString();
+    }
+
     private static String getAppData() {
         JSONObject dto = new JSONObject();
         // 小程序返回码
         dto.put("app_schema", "app跳转链接");
         // 私有信息
         // dto.put("private_info", "");
-
-        return dto.toJSONString();
-    }
-
-    private static String getAcctSplitBunchRucan() {
-        JSONObject dto = new JSONObject();
-        // 分账明细
-        dto.put("acct_infos", getAcctInfosRucan());
 
         return dto.toJSONString();
     }

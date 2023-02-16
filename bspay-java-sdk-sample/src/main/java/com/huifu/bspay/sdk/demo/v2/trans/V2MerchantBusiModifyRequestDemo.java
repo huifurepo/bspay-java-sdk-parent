@@ -132,20 +132,42 @@ public class V2MerchantBusiModifyRequestDemo extends BaseCommonDemo {
         return extendInfoMap;
     }
 
-    private static String getWxConfList() {
+    private static String getAgreementInfo() {
         JSONObject dto = new JSONObject();
-        // 手续费（%）
-        dto.put("fee_rate", "2.15");
-        // 支付场景
-        dto.put("pay_scene", "10");
-        // ~~商户经营类目~~
-        // dto.put("~~mcc~~", "");
-        // 费率规则ID
-        dto.put("fee_rule_id", "765");
-        // 子渠道号
-        dto.put("pay_channel_id", "JP00001");
-        // 申请服务
-        dto.put("service_codes", "");
+        // 协议类型
+        dto.put("agreement_type", "0");
+        // 协议开始日期
+        dto.put("agree_begin_date", "20200325");
+        // 协议结束日期
+        dto.put("agree_end_date", "20400325");
+        // 协议模板号
+        dto.put("agreement_model", "202106070100000380");
+        // 协议模板名称
+        dto.put("agreement_name", "电子协议签约模板");
+        // 协议号
+        dto.put("agreement_no", "202106070100000380");
+        // 签约日期
+        dto.put("sign_date", "20200325");
+
+        return dto.toJSONString();
+    }
+
+    private static String getUnionConfList() {
+        JSONObject dto = new JSONObject();
+        // 银联二维码1000以上借记卡费率
+        dto.put("debit_fee_rate_up", "6");
+        // 银联二维码1000以下借记卡费率
+        dto.put("debit_fee_rate_down", "2.55");
+        // 银联二维码1000以下贷记卡费率
+        dto.put("credit_fee_rate_down", "1");
+        // 银联二维码1000以上贷记卡费率
+        dto.put("credit_fee_rate_up", "6.566");
+        // 银行业务手续费类型
+        dto.put("charge_cate_code", "");
+        // 银联二维码1000以上借记卡费率封顶值
+        dto.put("debit_fee_limit_up", "641");
+        // 银联二维码1000以下借记卡费率封顶值
+        dto.put("debit_fee_limit_down", "11.3");
 
         JSONArray dtoList = new JSONArray();
         dtoList.add(dto);
@@ -184,6 +206,44 @@ public class V2MerchantBusiModifyRequestDemo extends BaseCommonDemo {
         return dto.toJSONString();
     }
 
+    private static String getAliConfList() {
+        JSONObject dto = new JSONObject();
+        // 手续费（%）
+        dto.put("fee_rate", "3.15");
+        // 支付场景
+        dto.put("pay_scene", "1");
+        // 商户经营类目
+        dto.put("mcc", "2016062900190337");
+        // 子渠道号
+        dto.put("pay_channel_id", "10000001");
+        // 拟申请的间联商户等级
+        dto.put("indirect_level", "");
+
+        JSONArray dtoList = new JSONArray();
+        dtoList.add(dto);
+        return dtoList.toJSONString();
+    }
+
+    private static String getWxConfList() {
+        JSONObject dto = new JSONObject();
+        // 手续费（%）
+        dto.put("fee_rate", "2.15");
+        // 支付场景
+        dto.put("pay_scene", "10");
+        // ~~商户经营类目~~
+        // dto.put("~~mcc~~", "");
+        // 费率规则ID
+        dto.put("fee_rule_id", "765");
+        // 子渠道号
+        dto.put("pay_channel_id", "JP00001");
+        // 申请服务
+        dto.put("service_codes", "");
+
+        JSONArray dtoList = new JSONArray();
+        dtoList.add(dto);
+        return dtoList.toJSONString();
+    }
+
     private static String getCombinePayConfig() {
         JSONObject dto = new JSONObject();
         // 开通状态
@@ -202,22 +262,20 @@ public class V2MerchantBusiModifyRequestDemo extends BaseCommonDemo {
         return dto.toJSONString();
     }
 
-    private static String getAgreementInfo() {
+    private static String getBalancePayConfig() {
         JSONObject dto = new JSONObject();
-        // 协议类型
-        dto.put("agreement_type", "0");
-        // 协议开始日期
-        dto.put("agree_begin_date", "20200325");
-        // 协议结束日期
-        dto.put("agree_end_date", "20400325");
-        // 协议模板号
-        dto.put("agreement_model", "202106070100000380");
-        // 协议模板名称
-        dto.put("agreement_name", "电子协议签约模板");
-        // 协议号
-        dto.put("agreement_no", "202106070100000380");
-        // 签约日期
-        dto.put("sign_date", "20200325");
+        // 支付手续费(%)
+        dto.put("fee_rate", "2");
+        // 支付固定手续费(元)
+        dto.put("fee_fix_amt", "1");
+        // 费率开关
+        dto.put("switch_state", "1");
+        // 交易手续费外扣时的账户类型
+        // dto.put("out_fee_acct_type", "");
+        // 交易手续费外扣汇付ID
+        // dto.put("out_fee_huifuid", "");
+        // 是否交易手续费外扣
+        // dto.put("out_fee_flag", "");
 
         return dto.toJSONString();
     }
@@ -246,38 +304,6 @@ public class V2MerchantBusiModifyRequestDemo extends BaseCommonDemo {
         return dtoList.toJSONString();
     }
 
-    private static String getUnionConfList() {
-        JSONObject dto = new JSONObject();
-        // 银联二维码1000以上借记卡费率
-        dto.put("debit_fee_rate_up", "6");
-        // 银联二维码1000以下借记卡费率
-        dto.put("debit_fee_rate_down", "2.55");
-        // 银联二维码1000以下贷记卡费率
-        dto.put("credit_fee_rate_down", "1");
-        // 银联二维码1000以上贷记卡费率
-        dto.put("credit_fee_rate_up", "6.566");
-        // 银行业务手续费类型
-        dto.put("charge_cate_code", "");
-        // 银联二维码1000以上借记卡费率封顶值
-        dto.put("debit_fee_limit_up", "641");
-        // 银联二维码1000以下借记卡费率封顶值
-        dto.put("debit_fee_limit_down", "11.3");
-
-        JSONArray dtoList = new JSONArray();
-        dtoList.add(dto);
-        return dtoList.toJSONString();
-    }
-
-    private static String getWxZlConf() {
-        JSONObject dto = new JSONObject();
-        // 微信子商户号
-        // dto.put("sub_mch_id", "test");
-        // 配置集合
-        // dto.put("wx_zl_pay_conf_list", getWxZlPayConfList());
-
-        return dto.toJSONString();
-    }
-
     private static String getOnlinePayFeeConfList() {
         JSONObject dto = new JSONObject();
         // 业务类型
@@ -292,24 +318,6 @@ public class V2MerchantBusiModifyRequestDemo extends BaseCommonDemo {
         JSONArray dtoList = new JSONArray();
         dtoList.add(dto);
         return dtoList.toJSONString();
-    }
-
-    private static String getBalancePayConfig() {
-        JSONObject dto = new JSONObject();
-        // 支付手续费(%)
-        dto.put("fee_rate", "2");
-        // 支付固定手续费(元)
-        dto.put("fee_fix_amt", "1");
-        // 费率开关
-        dto.put("switch_state", "1");
-        // 交易手续费外扣时的账户类型
-        // dto.put("out_fee_acct_type", "");
-        // 交易手续费外扣汇付ID
-        // dto.put("out_fee_huifuid", "");
-        // 是否交易手续费外扣
-        // dto.put("out_fee_flag", "");
-
-        return dto.toJSONString();
     }
 
     private static String getBankBigAmtPayConfig() {
@@ -352,22 +360,14 @@ public class V2MerchantBusiModifyRequestDemo extends BaseCommonDemo {
         return dtoList;
     }
 
-    private static String getAliConfList() {
+    private static String getWxZlConf() {
         JSONObject dto = new JSONObject();
-        // 手续费（%）
-        dto.put("fee_rate", "3.15");
-        // 支付场景
-        dto.put("pay_scene", "1");
-        // 商户经营类目
-        dto.put("mcc", "2016062900190337");
-        // 子渠道号
-        dto.put("pay_channel_id", "10000001");
-        // 拟申请的间联商户等级
-        dto.put("indirect_level", "");
+        // 微信子商户号
+        // dto.put("sub_mch_id", "test");
+        // 配置集合
+        // dto.put("wx_zl_pay_conf_list", getWxZlPayConfList());
 
-        JSONArray dtoList = new JSONArray();
-        dtoList.add(dto);
-        return dtoList.toJSONString();
+        return dto.toJSONString();
     }
 
 }

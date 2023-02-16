@@ -64,14 +64,6 @@ public class V2TradePaymentDelaytransConfirmrefundRequestDemo extends BaseCommon
         return extendInfoMap;
     }
 
-    private static String getAcctSplitBunch() {
-        JSONObject dto = new JSONObject();
-        // 分账明细
-        dto.put("acct_infos", getAcctInfos());
-
-        return dto.toJSONString();
-    }
-
     private static JSON getAcctInfos() {
         JSONObject dto = new JSONObject();
         // 被分账方ID
@@ -84,6 +76,14 @@ public class V2TradePaymentDelaytransConfirmrefundRequestDemo extends BaseCommon
         JSONArray dtoList = new JSONArray();
         dtoList.add(dto);
         return dtoList;
+    }
+
+    private static String getAcctSplitBunch() {
+        JSONObject dto = new JSONObject();
+        // 分账明细
+        dto.put("acct_infos", getAcctInfos());
+
+        return dto.toJSONString();
     }
 
 }

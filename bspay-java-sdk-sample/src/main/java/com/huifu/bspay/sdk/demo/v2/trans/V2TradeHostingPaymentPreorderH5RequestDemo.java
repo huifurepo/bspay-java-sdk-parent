@@ -74,7 +74,7 @@ public class V2TradeHostingPaymentPreorderH5RequestDemo extends BaseCommonDemo {
         JSONObject dto = new JSONObject();
         // 分账金额
         dto.put("div_amt", "0.08");
-        // 补分账方ID
+        // 被分账方ID
         dto.put("huifu_id", "6666000111546360");
 
         JSONArray dtoList = new JSONArray();

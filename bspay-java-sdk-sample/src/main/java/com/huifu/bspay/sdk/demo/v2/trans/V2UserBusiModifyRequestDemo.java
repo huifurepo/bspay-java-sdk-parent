@@ -66,20 +66,6 @@ public class V2UserBusiModifyRequestDemo extends BaseCommonDemo {
         return extendInfoMap;
     }
 
-    private static String getFileList() {
-        JSONObject dto = new JSONObject();
-        // 文件类型
-        dto.put("file_type", "F02");
-        // 文件jfileID
-        dto.put("file_id", "99e00421-dad7-3334-9538-4f2ad10612d5");
-        // 文件名称
-        dto.put("file_name", "企业营业执照1.jpg");
-
-        JSONArray dtoList = new JSONArray();
-        dtoList.add(dto);
-        return dtoList.toJSONString();
-    }
-
     private static String getSettleConfig() {
         JSONObject dto = new JSONObject();
         // 开通状态
@@ -162,6 +148,20 @@ public class V2UserBusiModifyRequestDemo extends BaseCommonDemo {
         dto.put("out_fee_huifu_id", "6666000104633228");
         // 交易手续费外扣的账户类型
         dto.put("out_fee_acct_type", "05");
+
+        JSONArray dtoList = new JSONArray();
+        dtoList.add(dto);
+        return dtoList.toJSONString();
+    }
+
+    private static String getFileList() {
+        JSONObject dto = new JSONObject();
+        // 文件类型
+        dto.put("file_type", "F02");
+        // 文件jfileID
+        dto.put("file_id", "99e00421-dad7-3334-9538-4f2ad10612d5");
+        // 文件名称
+        dto.put("file_name", "企业营业执照1.jpg");
 
         JSONArray dtoList = new JSONArray();
         dtoList.add(dto);
