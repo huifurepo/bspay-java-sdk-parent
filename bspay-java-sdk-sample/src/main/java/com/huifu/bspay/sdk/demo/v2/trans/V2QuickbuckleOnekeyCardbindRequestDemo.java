@@ -77,6 +77,8 @@ public class V2QuickbuckleOnekeyCardbindRequestDemo extends BaseCommonDemo {
         extendInfoMap.put("protocol_no", "");
         // 风控信息
         // extendInfoMap.put("risk_info", getRiskInfo());
+        // 回调页面地址
+        // extendInfoMap.put("verify_front_url", "");
         return extendInfoMap;
     }
 

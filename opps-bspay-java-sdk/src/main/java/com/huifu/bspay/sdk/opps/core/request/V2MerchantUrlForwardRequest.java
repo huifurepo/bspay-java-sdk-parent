@@ -27,15 +27,10 @@ public class V2MerchantUrlForwardRequest extends BaseRequest {
     @JSONField(name = "upper_huifu_id")
     private String upperHuifuId;
     /**
-     * 手机号
-     */
-    @JSONField(name = "phone")
-    private String phone;
-    /**
      * 门店号
      */
-    @JSONField(name = "storeId")
-    private String storeid;
+    @JSONField(name = "store_id")
+    private String storeId;
 
     @Override
     public FunctionCodeEnum getFunctionCode() {
@@ -45,12 +40,11 @@ public class V2MerchantUrlForwardRequest extends BaseRequest {
     public V2MerchantUrlForwardRequest() {
     }
 
-    public V2MerchantUrlForwardRequest(String reqSeqId, String reqDate, String upperHuifuId, String phone, String storeid) {
+    public V2MerchantUrlForwardRequest(String reqSeqId, String reqDate, String upperHuifuId, String storeId) {
         this.reqSeqId = reqSeqId;
         this.reqDate = reqDate;
         this.upperHuifuId = upperHuifuId;
-        this.phone = phone;
-        this.storeid = storeid;
+        this.storeId = storeId;
     }
 
     public String getReqSeqId() {
@@ -77,20 +71,12 @@ public class V2MerchantUrlForwardRequest extends BaseRequest {
         this.upperHuifuId = upperHuifuId;
     }
 
-    public String getPhone() {
-        return phone;
+    public String getStoreId() {
+        return storeId;
     }
 
-    public void setPhone(String phone) {
-        this.phone = phone;
-    }
-
-    public String getStoreid() {
-        return storeid;
-    }
-
-    public void setStoreid(String storeid) {
-        this.storeid = storeid;
+    public void setStoreId(String storeId) {
+        this.storeId = storeId;
     }
 
 }

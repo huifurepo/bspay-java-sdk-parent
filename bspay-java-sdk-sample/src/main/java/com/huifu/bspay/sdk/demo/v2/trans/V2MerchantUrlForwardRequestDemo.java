@@ -32,10 +32,8 @@ public class V2MerchantUrlForwardRequestDemo extends BaseCommonDemo {
         request.setReqDate(DateTools.getCurrentDateYYYYMMDD());
         // 渠道商号
         request.setUpperHuifuId("6666000123123123");
-        // 手机号
-        request.setPhone("13917352618");
         // 门店号
-        request.setStoreid("SH001");
+        // request.setStoreId("test");
 
         // 设置非必填字段
         Map<String, Object> extendInfoMap = getExtendInfos();
@@ -53,8 +51,14 @@ public class V2MerchantUrlForwardRequestDemo extends BaseCommonDemo {
     private static Map<String, Object> getExtendInfos() {
         // 设置非必填字段
         Map<String, Object> extendInfoMap = new HashMap<>();
-        // 跳转地址失效时间(毫秒)
+        // 手机号
+        extendInfoMap.put("phone", "13917352618");
+        // 跳转地址失效时间
         extendInfoMap.put("expires", "50000");
+        // 返回页面URL
+        // extendInfoMap.put("back_page_url", "");
+        // 异步接收URL
+        // extendInfoMap.put("async_receive_url", "");
         return extendInfoMap;
     }
 

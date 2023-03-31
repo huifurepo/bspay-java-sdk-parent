@@ -8,16 +8,16 @@ import com.huifu.bspay.sdk.demo.init.OppsMerchantConfigDemo;
 import com.huifu.bspay.sdk.opps.core.utils.DateTools;
 import com.huifu.bspay.sdk.opps.core.utils.SequenceTools;
 import com.huifu.bspay.sdk.demo.core.Identify;
-import com.huifu.bspay.sdk.opps.core.request.V2TradeCheckFilequeryRequest;
+import com.huifu.bspay.sdk.opps.core.request.V2TradeOnlinepaymentTransferRemittanceorderRequest;
 
 /**
- * 交易结算对账单查询 - 示例
+ * 汇付入账查询 - 示例
  *
  * @author sdk-generator
  * @Description
  */
-@Identify(requestClass = V2TradeCheckFilequeryRequest.class)
-public class V2TradeCheckFilequeryRequestDemo extends BaseCommonDemo {
+@Identify(requestClass = V2TradeOnlinepaymentTransferRemittanceorderRequest.class)
+public class V2TradeOnlinepaymentTransferRemittanceorderRequestDemo extends BaseCommonDemo {
 
     public static void main(String[] args) throws Exception {
 
@@ -25,15 +25,13 @@ public class V2TradeCheckFilequeryRequestDemo extends BaseCommonDemo {
         doInit(OppsMerchantConfigDemo.getMerchantConfig());
 
         // 2.组装请求参数
-        V2TradeCheckFilequeryRequest request = new V2TradeCheckFilequeryRequest();
-        // 请求日期
-        request.setReqDate(DateTools.getCurrentDateYYYYMMDD());
-        // 请求流水号
-        request.setReqSeqId(SequenceTools.getReqSeqId32());
-        // 汇付客户Id
-        request.setHuifuId("6666000108854952");
-        // 文件生成日期
-        request.setFileDate("20220822");
+        V2TradeOnlinepaymentTransferRemittanceorderRequest request = new V2TradeOnlinepaymentTransferRemittanceorderRequest();
+        // 商户号
+        request.setHuifuId("6666000003100615");
+        // 原请求开始日期
+        request.setOrgReqStartDate("20230110");
+        // 原请求结束日期
+        request.setOrgReqEndDate("20230110");
 
         // 设置非必填字段
         Map<String, Object> extendInfoMap = getExtendInfos();
@@ -51,8 +49,16 @@ public class V2TradeCheckFilequeryRequestDemo extends BaseCommonDemo {
     private static Map<String, Object> getExtendInfos() {
         // 设置非必填字段
         Map<String, Object> extendInfoMap = new HashMap<>();
-        // 文件类型
-        extendInfoMap.put("file_type_query", "2");
+        // 原请求流水号
+        extendInfoMap.put("org_req_seq_id", "20230110155433defaultit655128593");
+        // 原请求日期
+        extendInfoMap.put("org_req_date", "20230110");
+        // 原汇款订单号
+        extendInfoMap.put("org_remittance_order_id", "20230110155433defaultit655128591");
+        // 每页条数
+        extendInfoMap.put("page_size", "1");
+        // 分页页码
+        extendInfoMap.put("page_no", "1");
         return extendInfoMap;
     }
 

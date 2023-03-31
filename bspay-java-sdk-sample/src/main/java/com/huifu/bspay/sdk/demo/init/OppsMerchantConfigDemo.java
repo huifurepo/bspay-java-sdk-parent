@@ -31,7 +31,7 @@ public class OppsMerchantConfigDemo {
          * MODE_PROD = "prod"; // 生产环境
          * MODE_TEST = "test"; // 线上联调环境(针对商户联调测试)
          */
-        BasePay.prodMode = BasePay.MODE_PROD;
+        BasePay.prodMode = BasePay.MODE_INNER_TEST;
 
         /**
          * 单商户模式
@@ -41,7 +41,6 @@ public class OppsMerchantConfigDemo {
         merConfig.setSysId(DemoTestConstants.DEMO_SYS_ID);
         merConfig.setRsaPrivateKey(DemoTestConstants.DEMO_RSA_PRIVATE_KEY);
         merConfig.setRsaPublicKey(DemoTestConstants.DEMO_RSA_PUBLIC_KEY);
-        merConfig.setHuifuId(DemoTestConstants.DEMO_HUIFU_ID);
         return merConfig;
     }
 }

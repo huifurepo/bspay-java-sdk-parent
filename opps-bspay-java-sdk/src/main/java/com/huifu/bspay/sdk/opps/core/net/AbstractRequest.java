@@ -21,7 +21,7 @@ import java.util.*;
  */
 public abstract class AbstractRequest {
 
-    public static final String SDK_VERSION = "3.0.6";
+    public static final String SDK_VERSION = "3.0.7";
 
     protected static enum RequestMethod {
         GET, POST, DELETE, PUT;
@@ -70,11 +70,6 @@ public abstract class AbstractRequest {
         Map<String, String> headers = new HashMap<>(4);
         // 传递SDK版本
         headers.put("sdk_version", "javaSDK_" + SDK_VERSION);
-        // 配置中的商户信息，放入params里
-        Object requestHuifuId = params.get("huifu_id");
-        if (requestHuifuId == null || requestHuifuId.equals("")) {
-            params.put("huifu_id", config.getHuifuId());
-        }
         String reqData = JSONObject.toJSONString(params);
 
         String privateKey = config.getRsaPrivateKey();

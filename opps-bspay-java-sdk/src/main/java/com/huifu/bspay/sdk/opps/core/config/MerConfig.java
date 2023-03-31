@@ -8,38 +8,31 @@ import com.alibaba.fastjson.annotation.JSONField;
 
 /**
  * 商户配置
+ *
  * @author kefeng.zheng
  * @version v 0.1
  */
-public class MerConfig
-{
+public class MerConfig {
     /**
      * 商户私钥，用于商户给交易信息签名
      */
-    @JSONField(name="rsa_private_key")
+    @JSONField(name = "rsa_private_key")
     private String rsaPrivateKey;
     /**
      * 公钥，商户用公钥对汇付返回的信息进行验签
      */
-    @JSONField(name="rsa_public_key")
+    @JSONField(name = "rsa_public_key")
     private String rsaPublicKey;
     /**
      * 产品号，由汇付分配
      */
-    @JSONField(name="product_id")
+    @JSONField(name = "product_id")
     private String procutId;
     /**
      * 系统号，由汇付分配
      */
-    @JSONField(name="sys_id")
+    @JSONField(name = "sys_id")
     private String sysId;
-
-    /**
-     * 商户号，由汇付分配
-     */
-    @JSONField(name="huifu_id")
-    private String huifuId;
-
 
     public String getRsaPrivateKey() {
         return rsaPrivateKey;
@@ -73,11 +66,4 @@ public class MerConfig
         this.sysId = sysId;
     }
 
-    public String getHuifuId() {
-        return huifuId;
-    }
-
-    public void setHuifuId(String huifuId) {
-        this.huifuId = huifuId;
-    }
 }

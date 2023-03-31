@@ -39,7 +39,7 @@ public class V2TradeOnlinepaymentTransferAccountRequestDemo extends BaseCommonDe
         // 交易金额
         request.setTransAmt("10.00");
         // 异步通知地址
-        request.setNotifyUrl("archer://C_TOPAT_NOTIFY");
+        request.setNotifyUrl("http://www.huifu.com/getResp");
         // 商品描述
         request.setGoodsDesc("商品描述001");
 

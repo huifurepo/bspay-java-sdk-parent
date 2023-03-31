@@ -323,7 +323,7 @@ public class V2TradePaymentJspayRequestDemo extends BaseCommonDemo {
     private static String getAlipayData() {
         JSONObject dto = new JSONObject();
         // 买家的支付宝唯一用户号
-        dto.put("buyer_id", "2088502835860454");
+        dto.put("buyer_id", "20880414938706770000");
         // 支付宝的店铺编号
         dto.put("alipay_store_id", "");
         // 买家支付宝账号

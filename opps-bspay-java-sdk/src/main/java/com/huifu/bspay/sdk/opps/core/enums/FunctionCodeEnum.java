@@ -6,6 +6,14 @@ package com.huifu.bspay.sdk.opps.core.enums;
  */
 public enum FunctionCodeEnum {
     /**
+     * 汇付入账确认
+     */
+    V2_TRADE_ONLINEPAYMENT_TRANSFER_REMITTANCE("v2.trade.onlinepayment.transfer.remittance", "汇付入账确认"),
+    /**
+     * 汇付入账查询
+     */
+    V2_TRADE_ONLINEPAYMENT_TRANSFER_REMITTANCEORDER("v2.trade.onlinepayment.transfer.remittanceorder", "汇付入账查询"),
+    /**
      * 一键绑卡
      */
     V2_QUICKBUCKLE_ONEKEY_CARDBIND("v2.quickbuckle.onekey.cardbind", "一键绑卡"),

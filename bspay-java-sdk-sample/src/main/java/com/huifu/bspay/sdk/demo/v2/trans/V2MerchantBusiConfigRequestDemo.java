@@ -63,6 +63,8 @@ public class V2MerchantBusiConfigRequestDemo extends BaseCommonDemo {
         extendInfoMap.put("wx_applet_secret", "1323a4165a662d6e4f9f51b3f7a58e3f");
         // 渠道号
         extendInfoMap.put("bank_channel_no", "JQF00001");
+        // 异步消息接收地址
+        // extendInfoMap.put("async_return_url", "");
         return extendInfoMap;
     }
 

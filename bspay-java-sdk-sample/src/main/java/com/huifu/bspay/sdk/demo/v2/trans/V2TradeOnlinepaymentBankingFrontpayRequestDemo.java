@@ -83,6 +83,8 @@ public class V2TradeOnlinepaymentBankingFrontpayRequestDemo extends BaseCommonDe
         extendInfoMap.put("remark", "网银支付接口");
         // 页面跳转地址
         extendInfoMap.put("front_url", "http://www.chinapnr.com");
+        // 手续费扣款标志
+        // extendInfoMap.put("fee_flag", "");
         return extendInfoMap;
     }
 
