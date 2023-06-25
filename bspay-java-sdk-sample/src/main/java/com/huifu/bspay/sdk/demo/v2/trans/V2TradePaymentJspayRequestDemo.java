@@ -65,7 +65,7 @@ public class V2TradePaymentJspayRequestDemo extends BaseCommonDemo {
         extendInfoMap.put("channel_no", "");
         // 手续费扣款标志
         // extendInfoMap.put("fee_flag", "");
-        // 营销补贴信息
+        // 补贴支付信息
         // extendInfoMap.put("combinedpay_data", getCombinedpayData());
         // 场景类型
         extendInfoMap.put("pay_scene", "02");

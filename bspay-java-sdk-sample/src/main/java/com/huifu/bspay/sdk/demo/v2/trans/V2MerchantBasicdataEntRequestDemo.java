@@ -113,7 +113,7 @@ public class V2MerchantBasicdataEntRequestDemo extends BaseCommonDemo {
         Map<String, Object> extendInfoMap = new HashMap<>();
         // 营业执照类型
         extendInfoMap.put("license_type", "");
-        // 商户短信通知标识
+        // 商户通知标识
         extendInfoMap.put("sms_send_flag", "Y");
         // 管理员账号
         extendInfoMap.put("login_name", "LG20220422267883697");
@@ -143,9 +143,9 @@ public class V2MerchantBasicdataEntRequestDemo extends BaseCommonDemo {
         // extendInfoMap.put("settle_card_front_pic", "");
         // 结算卡反面
         // extendInfoMap.put("settle_card_back_pic", "");
-        // 结算人身份证反面
+        // 结算人身份证人像面
         // extendInfoMap.put("settle_cert_back_pic", "");
-        // 结算人身份证正面
+        // 结算人身份证国徽面
         // extendInfoMap.put("settle_cert_front_pic", "");
         // 税务登记证
         // extendInfoMap.put("tax_reg_pic", "");
@@ -190,7 +190,7 @@ public class V2MerchantBasicdataEntRequestDemo extends BaseCommonDemo {
         dto.put("cert_validity_type", "1");
         // 持卡人证件有效期开始日期
         dto.put("cert_begin_date", "20121201");
-        // 银行卡绑定手机号
+        // 结算人手机号
         dto.put("mp", "13700000214");
 
         return dto.toJSONString();

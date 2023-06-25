@@ -69,7 +69,7 @@ public class V2TradeOnlinepaymentQuickpayApplyRequestDemo extends BaseCommonDemo
         // extendInfoMap.put("remark", "");
         // 订单失效时间
         // extendInfoMap.put("time_expire", "");
-        // 营销补贴信息
+        // 补贴支付信息
         // extendInfoMap.put("combinedpay_data", getCombinedpayData());
         // 分账对象
         // extendInfoMap.put("acct_split_bunch", getAcctSplitBunchRucan());
@@ -85,7 +85,7 @@ public class V2TradeOnlinepaymentQuickpayApplyRequestDemo extends BaseCommonDemo
         // ip地址
         dto.put("ip_addr", "106.33.180.238");
         // 基站地址
-        // dto.put("base_atation", "");
+        // dto.put("base_station", "");
         // 纬度
         // dto.put("latitude", "");
         // 经度

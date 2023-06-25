@@ -22,12 +22,12 @@ public class V2MerchantSettleModifyRequest extends BaseRequest {
     @JSONField(name = "req_date")
     private String reqDate;
     /**
-     * 商户汇付Id
+     * 商户/用户汇付Id
      */
     @JSONField(name = "huifu_id")
     private String huifuId;
     /**
-     * 渠道商汇付Id
+     * 上级汇付Id
      */
     @JSONField(name = "upper_huifu_id")
     private String upperHuifuId;

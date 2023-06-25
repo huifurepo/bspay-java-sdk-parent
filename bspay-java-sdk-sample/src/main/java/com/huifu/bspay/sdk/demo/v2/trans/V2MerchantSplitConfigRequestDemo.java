@@ -59,11 +59,11 @@ public class V2MerchantSplitConfigRequestDemo extends BaseCommonDemo {
         Map<String, Object> extendInfoMap = new HashMap<>();
         // 分账明细
         extendInfoMap.put("acct_split_bunch_list", getAcctSplitBunchList());
-        // 交易手续费外扣开关
+        // 分账手续费外扣开关
         extendInfoMap.put("out_fee_flag", "1");
-        // 交易手续费外扣时的账户类型
+        // 分账手续费外扣时的账户类型
         extendInfoMap.put("out_fee_acct_type", "01");
-        // 交易手续费外扣汇付ID
+        // 分账手续费外扣汇付ID
         extendInfoMap.put("out_fee_huifuid", "6666000105582434");
         // 固定手续费
         extendInfoMap.put("split_fee_rate", "10.89");

@@ -95,6 +95,8 @@ public class V2UserBasicdataEntRequestDemo extends BaseCommonDemo {
         extendInfoMap.put("expand_id", "");
         // 文件列表
         // extendInfoMap.put("file_list", getFileList());
+        // 公司类型
+        // extendInfoMap.put("ent_type", "");
         return extendInfoMap;
     }
 

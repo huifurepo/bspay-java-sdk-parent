@@ -61,8 +61,6 @@ public class V2TradeOnlinepaymentBankingFrontpayRequestDemo extends BaseCommonDe
     private static Map<String, Object> getExtendInfos() {
         // 设置非必填字段
         Map<String, Object> extendInfoMap = new HashMap<>();
-        // 收款用户客户号
-        extendInfoMap.put("user_huifu_id", "");
         // 收款汇付账户号
         extendInfoMap.put("acct_id", "");
         // 订单类型
@@ -149,7 +147,7 @@ public class V2TradeOnlinepaymentBankingFrontpayRequestDemo extends BaseCommonDe
         // ip地址
         dto.put("ip_addr", "1");
         // 基站地址
-        // dto.put("base_atation", "");
+        dto.put("base_station", "2");
         // 纬度
         dto.put("latitude", "3");
         // 经度

@@ -6,6 +6,62 @@ package com.huifu.bspay.sdk.opps.core.enums;
  */
 public enum FunctionCodeEnum {
     /**
+     * 统一进件页面版查询
+     */
+    V2_MERCHANT_BUSI_STATUS_QUERY("v2.merchant.busi.status.query", "统一进件页面版查询"),
+    /**
+     * 银行列表查询
+     */
+    V2_QUICKBUCKLE_BANK_QUERY("v2.quickbuckle.bank.query", "银行列表查询"),
+    /**
+     * 商户短信发送
+     */
+    V2_MERCHANT_BASICDATA_SMS_SEND("v2.merchant.basicdata.sms.send", "商户短信发送"),
+    /**
+     * 批量出金交易查询
+     */
+    V2_TRADE_BATCHTRANSLOG_QUERY("v2.trade.batchtranslog.query", "批量出金交易查询"),
+    /**
+     * 快捷支付页面版接口
+     */
+    V2_TRADE_ONLINEPAYMENT_QUICKPAY_FRONTPAY("v2.trade.onlinepayment.quickpay.frontpay", "快捷支付页面版接口"),
+    /**
+     * 快捷支付短信预校验
+     */
+    V2_TRADE_ONLINEPAYMENT_QUICKPAY_SMSCHECK("v2.trade.onlinepayment.quickpay.smscheck", "快捷支付短信预校验"),
+    /**
+     * 跳转电子小票页面
+     */
+    V2_TRADE_ELECTRON_RECEIPTS_JUMPINFO("v2.trade.electron.receipts.jumpinfo", "跳转电子小票页面"),
+    /**
+     * 图片上传
+     */
+    V2_TRADE_ELECTRON_RECEIPTS_PICTURE_UPLOAD("v2.trade.electron.receipts.picture.upload", "图片上传"),
+    /**
+     * 上传电子小票图片
+     */
+    V2_TRADE_ELECTRON_RECEIPTS_UPLOAD("v2.trade.electron.receipts.upload", "上传电子小票图片"),
+    /**
+     * 查询小票自定义入口
+     */
+    V2_TRADE_ELECTRON_RECEIPTS_CUSTOMENTRANCES_QUERY("v2.trade.electron.receipts.customentrances.query", "查询小票自定义入口"),
+    /**
+     * 创建修改小票自定义入口
+     */
+    V2_TRADE_ELECTRON_RECEIPTS_CUSTOMENTRANCES_CREATE("v2.trade.electron.receipts.customentrances.create", "创建修改小票自定义入口"),
+    /**
+     * 代扣支付
+     */
+    V2_TRADE_ONLINEPAYMENT_WITHHOLDPAY("v2.trade.onlinepayment.withholdpay", "代扣支付"),
+    /**
+     * 代扣绑卡申请
+     */
+    V2_QUICKBUCKLE_WITHHOLD_APPLY("v2.quickbuckle.withhold.apply", "代扣绑卡申请"),
+    /**
+     * 代扣绑卡查询
+     */
+    V2_QUICKBUCKLE_WITHHOLD_QUERY("v2.quickbuckle.withhold.query", "代扣绑卡查询"),
+    /**
      * 汇付入账确认
      */
     V2_TRADE_ONLINEPAYMENT_TRANSFER_REMITTANCE("v2.trade.onlinepayment.transfer.remittance", "汇付入账确认"),

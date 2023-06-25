@@ -59,7 +59,7 @@ public class V2MerchantIntegrateUpdateRequestDemo extends BaseCommonDemo {
         // extendInfoMap.put("card_info", getCardInfo());
         // 协议信息实体
         // extendInfoMap.put("agreement_info", getAgreementInfo());
-        // 营销补贴
+        // 补贴支付
         // extendInfoMap.put("combine_pay_config", getCombinePayConfig());
         // 取现配置列表
         // extendInfoMap.put("cash_config", getCashConfig());
@@ -226,7 +226,7 @@ public class V2MerchantIntegrateUpdateRequestDemo extends BaseCommonDemo {
         // dto.put("cert_no", "");
         // 持卡人证件类型
         // dto.put("cert_type", "");
-        // 银行卡绑定手机号
+        // 结算人手机号
         // dto.put("mp", "");
 
         return dto.toJSONString();
@@ -236,18 +236,18 @@ public class V2MerchantIntegrateUpdateRequestDemo extends BaseCommonDemo {
         JSONObject dto = new JSONObject();
         // 协议类型
         // dto.put("agreement_type", "test");
+        // 纸质协议开始日期&lt;font color&#x3D;&quot;green&quot;&gt;示例值：20220822&lt;/font&gt;
+        // dto.put("agree_begin_date", "test");
+        // 纸质协议结束日期&lt;font color&#x3D;&quot;green&quot;&gt;示例值：20230822&lt;/font&gt;
+        // dto.put("agree_end_date", "test");
         // 协议号
         // dto.put("agreement_no", "");
-        // 协议模板号
+        // 纸质协议模板号
         // dto.put("agreement_model", "");
-        // 协议模板名称
+        // 纸质协议模板名称
         // dto.put("agreement_name", "");
-        // 签约日期
+        // 纸质签约日期
         // dto.put("sign_date", "");
-        // 协议开始日期
-        // dto.put("agree_begin_date", "");
-        // 协议结束日期
-        // dto.put("agree_end_date", "");
 
         return dto.toJSONString();
     }
@@ -334,7 +334,7 @@ public class V2MerchantIntegrateUpdateRequestDemo extends BaseCommonDemo {
         // dto.put("wechatpay_pre_auth_flag", "");
         // 是否开通支付宝预授权
         // dto.put("alipay_pre_auth_flag", "");
-        // 是否开通营销补贴
+        // 是否开通补贴支付
         // dto.put("combine_pay_flag", "");
         // 是否开通余额支付
         // dto.put("balance_pay_flag", "");
@@ -662,9 +662,9 @@ public class V2MerchantIntegrateUpdateRequestDemo extends BaseCommonDemo {
         // dto.put("store_indoor_pic", "");
         // 公司照片三
         // dto.put("store_cashier_desk_pic", "");
-        // 法人身份证反面
+        // 法人身份证人像面
         // dto.put("legal_cert_back_pic", "");
-        // 法人身份证正面
+        // 法人身份证国徽面
         // dto.put("legal_cert_front_pic", "");
         // 营业执照图片
         // dto.put("license_pic", "");
@@ -676,9 +676,9 @@ public class V2MerchantIntegrateUpdateRequestDemo extends BaseCommonDemo {
         // dto.put("settle_card_back_pic", "");
         // 结算卡正面
         // dto.put("settle_card_front_pic", "");
-        // 结算人身份证反面
+        // 结算人身份证人像面
         // dto.put("settle_cert_back_pic", "");
-        // 结算人身份证正面
+        // 结算人身份证国徽面
         // dto.put("settle_cert_front_pic", "");
         // 税务登记证
         // dto.put("tax_reg_pic", "");
@@ -700,9 +700,9 @@ public class V2MerchantIntegrateUpdateRequestDemo extends BaseCommonDemo {
         // dto.put("finance_license_pic4", "");
         // 金融机构许可证图片5
         // dto.put("finance_license_pic5", "");
-        // 联系人身份证正面照
+        // 联系人身份证国徽面
         // dto.put("contact_id_front_pic", "");
-        // 联系人身份证反面照
+        // 联系人身份证人像面照
         // dto.put("contact_id_back_pic", "");
         // 联系人护照人像面
         // dto.put("contact_passport_img_pic", "");

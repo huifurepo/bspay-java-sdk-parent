@@ -77,7 +77,7 @@ public class V2TradePaymentScanpayRefundRequestDemo extends BaseCommonDemo {
         // extendInfoMap.put("loan_undertaker", "");
         // 垫资账户类型
         // extendInfoMap.put("loan_acct_type", "");
-        // 营销补贴信息
+        // 补贴支付信息
         // extendInfoMap.put("combinedpay_data", getCombinedpayData());
         return extendInfoMap;
     }
@@ -87,7 +87,7 @@ public class V2TradePaymentScanpayRefundRequestDemo extends BaseCommonDemo {
         // ip地址
         // dto.put("ip_addr", "");
         // 基站地址
-        // dto.put("base_atation", "");
+        // dto.put("base_station", "");
         // 纬度
         // dto.put("latitude", "");
         // 经度

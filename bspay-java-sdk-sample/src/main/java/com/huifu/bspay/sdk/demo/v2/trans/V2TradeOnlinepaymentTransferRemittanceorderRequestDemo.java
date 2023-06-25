@@ -59,6 +59,8 @@ public class V2TradeOnlinepaymentTransferRemittanceorderRequestDemo extends Base
         extendInfoMap.put("page_size", "1");
         // 分页页码
         extendInfoMap.put("page_no", "1");
+        // 入账批次号
+        // extendInfoMap.put("org_batch_no", "");
         return extendInfoMap;
     }
 

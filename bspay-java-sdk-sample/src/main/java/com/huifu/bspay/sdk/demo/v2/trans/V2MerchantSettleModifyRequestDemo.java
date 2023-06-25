@@ -30,9 +30,9 @@ public class V2MerchantSettleModifyRequestDemo extends BaseCommonDemo {
         request.setReqSeqId(SequenceTools.getReqSeqId32());
         // 请求日期
         request.setReqDate(DateTools.getCurrentDateYYYYMMDD());
-        // 商户汇付Id
+        // 商户/用户汇付Id
         request.setHuifuId("6666000106071234");
-        // 渠道商汇付Id
+        // 上级汇付Id
         request.setUpperHuifuId("6666000106065087");
         // 子账户号
         request.setAcctId("C01571234");
@@ -59,6 +59,8 @@ public class V2MerchantSettleModifyRequestDemo extends BaseCommonDemo {
         extendInfoMap.put("settle_config", getSettleConfig());
         // 异步请求地址
         extendInfoMap.put("async_return_url", "");
+        // 汇总结算配置实体
+        // extendInfoMap.put("collection_settle_config", getCollectionSettleConfig());
         return extendInfoMap;
     }
 
@@ -90,7 +92,7 @@ public class V2MerchantSettleModifyRequestDemo extends BaseCommonDemo {
         dto.put("cert_validity_type", "0");
         // 持卡人证件有效期开始
         dto.put("cert_begin_date", "20220101");
-        // 银行卡绑定手机号
+        // 结算人手机号
         dto.put("mp", "17521216927");
 
         return dto.toJSONString();
@@ -128,6 +130,24 @@ public class V2MerchantSettleModifyRequestDemo extends BaseCommonDemo {
         dto.put("constant_amt", "66.99");
         // 卡序列号
         dto.put("token_no", "");
+
+        return dto.toJSONString();
+    }
+
+    private static String getCollectionSettleConfig() {
+        JSONObject dto = new JSONObject();
+        // 归集留存金(元)
+        // dto.put("out_resv_amt", "test");
+        // 转入账户
+        // dto.put("in_acct_id", "test");
+        // 转入商户号
+        // dto.put("in_huifu_id", "test");
+        // 生效日期
+        // dto.put("valid_date", "test");
+        // 功能开关
+        // dto.put("switch_state", "");
+        // 转出账户
+        // dto.put("out_acct_id", "");
 
         return dto.toJSONString();
     }

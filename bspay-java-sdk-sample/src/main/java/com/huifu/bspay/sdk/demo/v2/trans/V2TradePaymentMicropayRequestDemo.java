@@ -67,7 +67,7 @@ public class V2TradePaymentMicropayRequestDemo extends BaseCommonDemo {
         extendInfoMap.put("delay_acct_flag", "Y");
         // 渠道号
         extendInfoMap.put("channel_no", "");
-        // 营销补贴信息
+        // 补贴支付信息
         // extendInfoMap.put("combinedpay_data", getCombinedpayData());
         // 场景类型
         extendInfoMap.put("pay_scene", "");
@@ -287,7 +287,7 @@ public class V2TradePaymentMicropayRequestDemo extends BaseCommonDemo {
         // ip地址
         // dto.put("ip_addr", "");
         // 基站地址
-        // dto.put("base_atation", "");
+        dto.put("base_station", "3");
         // 纬度
         dto.put("latitude", "2");
         // 经度

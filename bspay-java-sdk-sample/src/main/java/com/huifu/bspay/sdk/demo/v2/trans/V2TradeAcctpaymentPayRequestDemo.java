@@ -125,7 +125,7 @@ public class V2TradeAcctpaymentPayRequestDemo extends BaseCommonDemo {
         // 经度
         // dto.put("longitude", "");
         // 基站地址
-        // dto.put("base_atation", "");
+        // dto.put("base_station", "");
         // IP地址
         // dto.put("ip_addr", "");
 

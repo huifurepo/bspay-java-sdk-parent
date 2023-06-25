@@ -117,7 +117,7 @@ public class V2TradeOnlinepaymentWappayRequestDemo extends BaseCommonDemo {
         // ip地址
         dto.put("ip_addr", "111");
         // 基站地址
-        // dto.put("base_atation", "");
+        // dto.put("base_station", "");
         // 纬度
         // dto.put("latitude", "");
         // 经度

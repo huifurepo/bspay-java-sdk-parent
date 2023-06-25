@@ -65,10 +65,6 @@ public class V2TradePreauthpayRequestDemo extends BaseCommonDemo {
         extendInfoMap.put("org_req_seq_id", "");
         // 预授权汇付全局流水号
         extendInfoMap.put("pre_auth_hf_seq_id", "0029000topB221031163126P798c0a8305400000");
-        // 交易发起时间
-        extendInfoMap.put("send_time", "12345678901234567");
-        // 是否立即入账
-        extendInfoMap.put("is_settled", "1");
         // 备注
         extendInfoMap.put("remark", "123451111");
         // 批次号

@@ -69,7 +69,7 @@ public class V2MerchantBasicdataIndvRequestDemo extends BaseCommonDemo {
         Map<String, Object> extendInfoMap = new HashMap<>();
         // 商户简称
         extendInfoMap.put("short_name", "张天德");
-        // 商户短信通知标识
+        // 商户通知标识
         extendInfoMap.put("sms_send_flag", "1");
         // 管理员账号
         extendInfoMap.put("login_name", "tinysword0116");
@@ -85,6 +85,16 @@ public class V2MerchantBasicdataIndvRequestDemo extends BaseCommonDemo {
         // extendInfoMap.put("mer_url", "");
         // 商户ICP备案编号
         // extendInfoMap.put("mer_icp", "");
+        // 结算卡反面
+        // extendInfoMap.put("settle_card_back_pic", "");
+        // 结算卡正面
+        // extendInfoMap.put("settle_card_front_pic", "");
+        // 法人身份证反面
+        // extendInfoMap.put("legal_cert_back_pic", "");
+        // 法人身份证正面
+        // extendInfoMap.put("legal_cert_front_pic", "");
+        // 授权委托书
+        // extendInfoMap.put("auth_enturst_pic", "");
         return extendInfoMap;
     }
 
@@ -108,7 +118,7 @@ public class V2MerchantBasicdataIndvRequestDemo extends BaseCommonDemo {
         dto.put("cert_begin_date", "20180824");
         // 持卡人证件有效期截止日期格式yyyyMMdd，以北京时间为准。&lt;font color&#x3D;&quot;green&quot;&gt;示例值：20220125&lt;/font&gt;&lt;br/&gt;当cert_validity_type&#x3D;0时必填  &lt;br/&gt;当cert_validity_type&#x3D;1时为空
         dto.put("cert_end_date", "20380824");
-        // 银行卡绑定手机号
+        // 结算人手机号
         dto.put("mp", "13700000214");
         // 银行编号
         dto.put("bank_code", "01030000");
@@ -164,16 +174,6 @@ public class V2MerchantBasicdataIndvRequestDemo extends BaseCommonDemo {
         // dto.put("settle_time", "");
         // 节假日结算手续费固定金额（元）
         // dto.put("constant_amt", "");
-        // 结算卡反面
-        // dto.put("settle_card_back_pic", "");
-        // 结算卡正面
-        // dto.put("settle_card_front_pic", "");
-        // 法人身份证反面
-        // dto.put("legal_cert_back_pic", "");
-        // 法人身份证正面
-        // dto.put("legal_cert_front_pic", "");
-        // 授权委托书
-        // dto.put("auth_enturst_pic", "");
 
         return dto.toJSONString();
     }

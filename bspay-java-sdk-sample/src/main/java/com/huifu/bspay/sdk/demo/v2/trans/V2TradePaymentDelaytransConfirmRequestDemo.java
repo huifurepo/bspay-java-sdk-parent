@@ -95,7 +95,7 @@ public class V2TradePaymentDelaytransConfirmRequestDemo extends BaseCommonDemo {
         // ip地址
         // dto.put("ip_addr", "");
         // 基站地址
-        // dto.put("base_atation", "");
+        dto.put("base_station", "3");
         // 纬度
         dto.put("latitude", "2");
         // 经度

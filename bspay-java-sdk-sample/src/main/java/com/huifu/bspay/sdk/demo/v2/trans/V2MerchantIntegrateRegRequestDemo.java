@@ -111,7 +111,7 @@ public class V2MerchantIntegrateRegRequestDemo extends BaseCommonDemo {
         // extendInfoMap.put("sign_user_info", getSignUserInfo());
         // 管理员账号
         extendInfoMap.put("login_name", "LG02022072707540497330158089012");
-        // 是否发送短信通知商户标识
+        // 是否通知商户标识
         extendInfoMap.put("sms_send_flag", "1");
         // 协议信息实体
         extendInfoMap.put("agreement_info", getAgreementInfo());
@@ -133,7 +133,7 @@ public class V2MerchantIntegrateRegRequestDemo extends BaseCommonDemo {
         extendInfoMap.put("bank_card_conf", getBankCardConf());
         // 花呗分期费率配置实体
         extendInfoMap.put("hb_fq_fee_config", getHbFqFeeConfig());
-        // 营销补贴
+        // 补贴支付
         extendInfoMap.put("combine_pay_config", getCombinePayConfig());
         // 商户业务类型
         // extendInfoMap.put("mer_bus_type", "");
@@ -226,7 +226,7 @@ public class V2MerchantIntegrateRegRequestDemo extends BaseCommonDemo {
         dto.put("cert_no", "110101199305182000");
         // 持卡人证件类型
         dto.put("cert_type", "00");
-        // 银行卡绑定手机号
+        // 结算人手机号
         dto.put("mp", "1865590000");
 
         return dto.toJSONString();

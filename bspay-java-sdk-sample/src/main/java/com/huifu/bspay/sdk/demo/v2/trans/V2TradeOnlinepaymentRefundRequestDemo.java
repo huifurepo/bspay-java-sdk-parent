@@ -67,7 +67,7 @@ public class V2TradeOnlinepaymentRefundRequestDemo extends BaseCommonDemo {
         extendInfoMap.put("remark", "remark123");
         // 分账对象
         extendInfoMap.put("acct_split_bunch", getAcctSplitBunchRucan());
-        // 营销补贴信息
+        // 补贴支付信息
         extendInfoMap.put("combinedpay_data", getCombinedpayData());
         return extendInfoMap;
     }
@@ -119,7 +119,7 @@ public class V2TradeOnlinepaymentRefundRequestDemo extends BaseCommonDemo {
         // ip地址
         // dto.put("ip_addr", "");
         // 基站地址
-        // dto.put("base_atation", "");
+        // dto.put("base_station", "");
         // 纬度
         // dto.put("latitude", "");
         // 经度

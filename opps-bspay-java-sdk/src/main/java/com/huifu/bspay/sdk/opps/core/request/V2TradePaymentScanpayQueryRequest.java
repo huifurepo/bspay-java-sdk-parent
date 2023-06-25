@@ -12,40 +12,30 @@ import com.huifu.bspay.sdk.opps.core.enums.FunctionCodeEnum;
 public class V2TradePaymentScanpayQueryRequest extends BaseRequest {
 
     /**
-     * 原机构请求日期
-     */
-    @JSONField(name = "org_req_date")
-    private String orgReqDate;
-    /**
-     * 商户号
+     * 汇付商户号
      */
     @JSONField(name = "huifu_id")
     private String huifuId;
     /**
-     * 商户订单号线下POS、扫码机具发起的交易需要提供；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：22577563652260773965&lt;/font&gt;
+     * 汇付服务订单号out_order_no,org_hf_seq_id,org_req_seq_id 必填其一；汇付生成的服务订单号；&lt;br/&gt;&lt;font color&#x3D;&quot;green&quot;&gt;示例值：1234323JKHDFE1243252&lt;/font&gt;
      */
-    @JSONField(name = "mer_ord_id")
-    private String merOrdId;
+    @JSONField(name = "out_order_no")
+    private String outOrderNo;
     /**
-     * 交易返回的全局流水号org_hf_seq_id，org_req_seq_id，out_trans_id，party_order_id四选一；&lt;br/&gt;&lt;font color&#x3D;&quot;green&quot;&gt;示例值：00290TOP1GR210919004230P853ac13262200000&lt;/font&gt;
+     * 创建服务订单返回的汇付全局流水号out_order_no,org_hf_seq_id,org_req_seq_id 必填其一；&lt;br/&gt;&lt;font color&#x3D;&quot;green&quot;&gt;示例值：00290TOP1GR210919004230P853ac13262200000&lt;/font&gt;
      */
     @JSONField(name = "org_hf_seq_id")
     private String orgHfSeqId;
     /**
-     * 原机构请求流水号org_hf_seq_id，org_req_seq_id，out_trans_id，party_order_id四选一；&lt;br/&gt;&lt;font color&#x3D;&quot;green&quot;&gt;示例值：202110210012100005&lt;/font&gt;
+     * 服务订单创建请求流水号out_order_no,org_hf_seq_id,org_req_seq_id 必填其一；&lt;br/&gt;&lt;font color&#x3D;&quot;green&quot;&gt;示例值：202110210012100005&lt;/font&gt;
      */
     @JSONField(name = "org_req_seq_id")
     private String orgReqSeqId;
     /**
-     * 用户账单上的交易订单号org_hf_seq_id，org_req_seq_id，out_trans_id，party_order_id四选一；&lt;br/&gt;&lt;font color&#x3D;&quot;green&quot;&gt;示例值：092021091922001451301445517582&lt;/font&gt;；参见[用户账单说明](https://paas.huifu.com/partners/api/#/czsm/api_czsm_yhzd)
+     * 原机构请求日期
      */
-    @JSONField(name = "out_trans_id")
-    private String outTransId;
-    /**
-     * 用户账单上的商户订单号org_hf_seq_id，org_req_seq_id，out_trans_id，party_order_id四选一；&lt;br/&gt;&lt;font color&#x3D;&quot;green&quot;&gt;示例值：03232109190255105603561&lt;/font&gt;；参见[用户账单说明](https://paas.huifu.com/partners/api/#/czsm/api_czsm_yhzd)
-     */
-    @JSONField(name = "party_order_id")
-    private String partyOrderId;
+    @JSONField(name = "org_req_date")
+    private String orgReqDate;
 
     @Override
     public FunctionCodeEnum getFunctionCode() {
@@ -55,21 +45,11 @@ public class V2TradePaymentScanpayQueryRequest extends BaseRequest {
     public V2TradePaymentScanpayQueryRequest() {
     }
 
-    public V2TradePaymentScanpayQueryRequest(String orgReqDate, String huifuId, String merOrdId, String orgHfSeqId, String orgReqSeqId, String outTransId, String partyOrderId) {
-        this.orgReqDate = orgReqDate;
+    public V2TradePaymentScanpayQueryRequest(String huifuId, String outOrderNo, String orgHfSeqId, String orgReqSeqId, String orgReqDate) {
         this.huifuId = huifuId;
-        this.merOrdId = merOrdId;
+        this.outOrderNo = outOrderNo;
         this.orgHfSeqId = orgHfSeqId;
         this.orgReqSeqId = orgReqSeqId;
-        this.outTransId = outTransId;
-        this.partyOrderId = partyOrderId;
-    }
-
-    public String getOrgReqDate() {
-        return orgReqDate;
-    }
-
-    public void setOrgReqDate(String orgReqDate) {
         this.orgReqDate = orgReqDate;
     }
 
@@ -81,12 +61,12 @@ public class V2TradePaymentScanpayQueryRequest extends BaseRequest {
         this.huifuId = huifuId;
     }
 
-    public String getMerOrdId() {
-        return merOrdId;
+    public String getOutOrderNo() {
+        return outOrderNo;
     }
 
-    public void setMerOrdId(String merOrdId) {
-        this.merOrdId = merOrdId;
+    public void setOutOrderNo(String outOrderNo) {
+        this.outOrderNo = outOrderNo;
     }
 
     public String getOrgHfSeqId() {
@@ -105,20 +85,12 @@ public class V2TradePaymentScanpayQueryRequest extends BaseRequest {
         this.orgReqSeqId = orgReqSeqId;
     }
 
-    public String getOutTransId() {
-        return outTransId;
+    public String getOrgReqDate() {
+        return orgReqDate;
     }
 
-    public void setOutTransId(String outTransId) {
-        this.outTransId = outTransId;
-    }
-
-    public String getPartyOrderId() {
-        return partyOrderId;
-    }
-
-    public void setPartyOrderId(String partyOrderId) {
-        this.partyOrderId = partyOrderId;
+    public void setOrgReqDate(String orgReqDate) {
+        this.orgReqDate = orgReqDate;
     }
 
 }

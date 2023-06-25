@@ -121,7 +121,7 @@ public class V2MerchantBusiOpenRequestDemo extends BaseCommonDemo {
         // extendInfoMap.put("union_micro_info", getUnionMicroInfo());
         // 余额支付配置实体
         extendInfoMap.put("balance_pay_config", getBalancePayConfig());
-        // 营销补贴
+        // 补贴支付
         extendInfoMap.put("combine_pay_config", getCombinePayConfig());
         // 花呗分期费率配置实体
         extendInfoMap.put("hb_fq_fee_config", getHbFqFeeConfig());
@@ -129,6 +129,10 @@ public class V2MerchantBusiOpenRequestDemo extends BaseCommonDemo {
         // extendInfoMap.put("online_pay_fee_conf_list", getOnlinePayFeeConfList());
         // 银行大额转账对象
         // extendInfoMap.put("bank_big_amt_pay_config", getBankBigAmtPayConfig());
+        // 全域资金管理配置
+        // extendInfoMap.put("out_order_funds_config", getOutOrderFundsConfig());
+        // 汇总结算配置实体
+        // extendInfoMap.put("collection_settle_config_list", getCollectionSettleConfigList());
         // 微信直连配置对象
         // extendInfoMap.put("wx_zl_conf", getWxZlConf());
         // 是否使用总部交易信息
@@ -139,8 +143,6 @@ public class V2MerchantBusiOpenRequestDemo extends BaseCommonDemo {
         extendInfoMap.put("busi_async_return_url", "");
         // 交易异步应答地址
         extendInfoMap.put("recon_resp_addr", "[http://192.168.85.157:30031/sspm/testVirgo](http://192.168.85.157:30031/sspm/testVirgo)");
-        // 平台收款资金归集配置
-        // extendInfoMap.put("out_order_funds_config", getOutOrderFundsConfig());
         return extendInfoMap;
     }
 
@@ -214,8 +216,8 @@ public class V2MerchantBusiOpenRequestDemo extends BaseCommonDemo {
         dto.put("fee_rate", "0.38");
         // 费率规则号
         dto.put("fee_rule_id", "758");
-        // ~~商户经营类目~~
-        // dto.put("~~mcc~~", "");
+        // 商户经营类目[参见微信支付宝MCC](https://paas.huifu.com/partners/api/#/csfl/api_csfl_zfbmcc)；个体工商户、小微商户必填；微信暂不支持修改；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：5411&lt;/font&gt;&lt;br/&gt;**企业使用fee_rule_id代替原有mcc**
+        dto.put("mcc", "111");
         // 子渠道号
         dto.put("pay_channel_id", "JP00001");
         // 申请服务
@@ -392,6 +394,100 @@ public class V2MerchantBusiOpenRequestDemo extends BaseCommonDemo {
         return dto.toJSONString();
     }
 
+    private static String getOutOrderAcctCard() {
+        JSONObject dto = new JSONObject();
+        // 支行联行号card_type为0时必填，参考：[银行支行编码](https://paas.huifu.com/partners/api/#/csfl/api_csfl_yhzhbm)；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：102290026507&lt;/font&gt;
+        // dto.put("branch_code", "test");
+        // 支行名称card_type为0时必填 ,参考：[银行支行编码](https://paas.huifu.com/partners/api/#/csfl/api_csfl_yhzhbm)；&lt;br/&gt;&lt;font color&#x3D;&quot;green&quot;&gt;示例值：中国工商银行上海市中山北路支行&lt;/font&gt;
+        // dto.put("branch_name", "test");
+        // 结算账户名
+        // dto.put("card_name", "test");
+        // 银行卡号
+        // dto.put("card_no", "test");
+        // 卡类型
+        // dto.put("card_type", "test");
+        // 持卡人证件类型00:身份证；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：00&lt;/font&gt;；card_type为1时选填。
+        // dto.put("cert_type", "test");
+        // 持卡人证件有效期（起始）card_type为1时选填；格式：yyyyMMdd，&lt;font color&#x3D;&quot;green&quot;&gt;示例值：20210830&lt;/font&gt;；&lt;br/&gt;若填写cert_no，cert_validity_type，cert_type需同时填写。
+        // dto.put("cert_begin_date", "test");
+        // 持卡人证件有效期（截止）cert_validity_type变更为0时必填，格式：yyyyMMdd；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：20210830&lt;/font&gt;
+        // dto.put("cert_end_date", "test");
+        // 持卡人证件号码card_type为1时选填；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：310112200001018888&lt;/font&gt;；
+        // dto.put("cert_no", "test");
+        // 银行卡绑定手机号
+        // dto.put("mp", "test");
+        // 开户许可证核准号
+        // dto.put("open_licence_no", "test");
+        // 银行所在省
+        // dto.put("prov_id", "");
+        // 银行所在市
+        // dto.put("area_id", "");
+        // 银行编码
+        // dto.put("bank_code", "");
+        // 持卡人证件有效期类型
+        // dto.put("cert_validity_type", "");
+
+        return dto.toJSONString();
+    }
+
+    private static String getOutOrderAcctOpenFees() {
+        JSONObject dto = new JSONObject();
+        // 支付固定手续费(元)
+        // dto.put("fee_fix_amt", "test");
+        // 开户手续费外扣时的账户类型
+        // dto.put("out_fee_acct_type", "test");
+        // 开户手续费外扣汇付ID
+        // dto.put("out_fee_huifuid", "test");
+
+        return dto.toJSONString();
+    }
+
+    private static String getOutOrderFundsConfig() {
+        JSONObject dto = new JSONObject();
+        // 自动入账开关
+        // dto.put("out_order_auto_acct_flag", "test");
+        // 批次入账时间10:00-10点批次入账&lt;br/&gt;16:00-16点批次入账&lt;/br&gt;开通批次入账时必填 ，多个批次使用逗号分隔；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：10:00,16:00&lt;/font&gt;
+        // dto.put("batch_no", "test");
+        // 批量入账开关
+        // dto.put("batch_auto_acct_flag", "");
+        // 支付手续费(%)
+        // dto.put("fee_rate", "");
+        // 支付固定手续费(元)
+        // dto.put("fee_fix_amt", "");
+        // 手续费最小值(元)
+        // dto.put("fee_min_amt", "");
+        // 交易手续费外扣时的账户类型
+        // dto.put("out_fee_acct_type", "");
+        // 交易手续费外扣标记
+        // dto.put("out_fee_flag", "");
+        // 交易手续费外扣汇付ID
+        // dto.put("out_fee_huifuid", "");
+        // 全域资金开户银行卡信息
+        // dto.put("out_order_acct_card", getOutOrderAcctCard());
+        // 全域资金开户手续费
+        // dto.put("out_order_acct_open_fees", getOutOrderAcctOpenFees());
+
+        return dto.toJSONString();
+    }
+
+    private static String getCollectionSettleConfigList() {
+        JSONObject dto = new JSONObject();
+        // 归集留存金(元)
+        // dto.put("out_resv_amt", "test");
+        // 转入商户号
+        // dto.put("in_huifu_id", "test");
+        // 转入账户
+        // dto.put("in_acct_id", "test");
+        // 生效日期
+        // dto.put("valid_date", "test");
+        // 转出账户
+        // dto.put("out_acct_id", "");
+
+        JSONArray dtoList = new JSONArray();
+        dtoList.add(dto);
+        return dtoList.toJSONString();
+    }
+
     private static JSON getWxZlPayConfList() {
         JSONObject dto = new JSONObject();
         // 申请服务
@@ -414,24 +510,6 @@ public class V2MerchantBusiOpenRequestDemo extends BaseCommonDemo {
         // dto.put("sub_mch_id", "test");
         // 配置集合
         // dto.put("wx_zl_pay_conf_list", getWxZlPayConfList());
-
-        return dto.toJSONString();
-    }
-
-    private static String getOutOrderFundsConfig() {
-        JSONObject dto = new JSONObject();
-        // 自动入账开关
-        // dto.put("out_order_auto_acct_flag", "test");
-        // 支付手续费(%)
-        // dto.put("fee_rate", "");
-        // 支付固定手续费(元)
-        // dto.put("fee_fix_amt", "");
-        // 交易手续费外扣时的账户类型
-        // dto.put("out_fee_acct_type", "");
-        // 交易手续费外扣标记
-        // dto.put("out_fee_flag", "");
-        // 交易手续费外扣汇付ID
-        // dto.put("out_fee_huifuid", "");
 
         return dto.toJSONString();
     }

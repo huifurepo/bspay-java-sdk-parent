@@ -27,7 +27,7 @@ public class V2TradeSettlementEnchashmentRequest extends BaseRequest {
     @JSONField(name = "cash_amt")
     private String cashAmt;
     /**
-     * 商户号
+     * 取现方ID号
      */
     @JSONField(name = "huifu_id")
     private String huifuId;
