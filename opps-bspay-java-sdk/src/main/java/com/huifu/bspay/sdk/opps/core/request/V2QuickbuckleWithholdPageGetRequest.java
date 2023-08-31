@@ -4,12 +4,12 @@ import com.alibaba.fastjson.annotation.JSONField;
 import com.huifu.bspay.sdk.opps.core.enums.FunctionCodeEnum;
 
 /**
- * 修改子账户配置(2022)
+ * 代扣绑卡页面版
  *
  * @author sdk-generator
  * @Description
  */
-public class V2MerchantSettleModifyRequest extends BaseRequest {
+public class V2QuickbuckleWithholdPageGetRequest extends BaseRequest {
 
     /**
      * 请求流水号
@@ -17,40 +17,40 @@ public class V2MerchantSettleModifyRequest extends BaseRequest {
     @JSONField(name = "req_seq_id")
     private String reqSeqId;
     /**
-     * 请求日期
+     * 请求时间
      */
     @JSONField(name = "req_date")
     private String reqDate;
     /**
-     * 商户/用户汇付Id
+     * 汇付Id
      */
     @JSONField(name = "huifu_id")
     private String huifuId;
     /**
-     * 上级汇付Id
+     * 订单号
      */
-    @JSONField(name = "upper_huifu_id")
-    private String upperHuifuId;
+    @JSONField(name = "order_id")
+    private String orderId;
     /**
-     * 子账户号
+     * 订单日期
      */
-    @JSONField(name = "acct_id")
-    private String acctId;
+    @JSONField(name = "order_date")
+    private String orderDate;
 
     @Override
     public FunctionCodeEnum getFunctionCode() {
-        return FunctionCodeEnum.V2_MERCHANT_SETTLE_MODIFY;
+        return FunctionCodeEnum.V2_QUICKBUCKLE_WITHHOLD_PAGE_GET;
     }
 
-    public V2MerchantSettleModifyRequest() {
+    public V2QuickbuckleWithholdPageGetRequest() {
     }
 
-    public V2MerchantSettleModifyRequest(String reqSeqId, String reqDate, String huifuId, String upperHuifuId, String acctId) {
+    public V2QuickbuckleWithholdPageGetRequest(String reqSeqId, String reqDate, String huifuId, String orderId, String orderDate) {
         this.reqSeqId = reqSeqId;
         this.reqDate = reqDate;
         this.huifuId = huifuId;
-        this.upperHuifuId = upperHuifuId;
-        this.acctId = acctId;
+        this.orderId = orderId;
+        this.orderDate = orderDate;
     }
 
     public String getReqSeqId() {
@@ -77,20 +77,20 @@ public class V2MerchantSettleModifyRequest extends BaseRequest {
         this.huifuId = huifuId;
     }
 
-    public String getUpperHuifuId() {
-        return upperHuifuId;
+    public String getOrderId() {
+        return orderId;
     }
 
-    public void setUpperHuifuId(String upperHuifuId) {
-        this.upperHuifuId = upperHuifuId;
+    public void setOrderId(String orderId) {
+        this.orderId = orderId;
     }
 
-    public String getAcctId() {
-        return acctId;
+    public String getOrderDate() {
+        return orderDate;
     }
 
-    public void setAcctId(String acctId) {
-        this.acctId = acctId;
+    public void setOrderDate(String orderDate) {
+        this.orderDate = orderDate;
     }
 
 }

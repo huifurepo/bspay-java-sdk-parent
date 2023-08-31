@@ -27,10 +27,10 @@ public class V2MerchantComplaintDownloadPictureRequest extends BaseRequest {
     @JSONField(name = "media_url")
     private String mediaUrl;
     /**
-     * 微信商户号
+     * 投诉单号
      */
-    @JSONField(name = "mch_id")
-    private String mchId;
+    @JSONField(name = "complaint_id")
+    private String complaintId;
 
     @Override
     public FunctionCodeEnum getFunctionCode() {
@@ -40,11 +40,11 @@ public class V2MerchantComplaintDownloadPictureRequest extends BaseRequest {
     public V2MerchantComplaintDownloadPictureRequest() {
     }
 
-    public V2MerchantComplaintDownloadPictureRequest(String reqSeqId, String reqDate, String mediaUrl, String mchId) {
+    public V2MerchantComplaintDownloadPictureRequest(String reqSeqId, String reqDate, String mediaUrl, String complaintId) {
         this.reqSeqId = reqSeqId;
         this.reqDate = reqDate;
         this.mediaUrl = mediaUrl;
-        this.mchId = mchId;
+        this.complaintId = complaintId;
     }
 
     public String getReqSeqId() {
@@ -71,12 +71,12 @@ public class V2MerchantComplaintDownloadPictureRequest extends BaseRequest {
         this.mediaUrl = mediaUrl;
     }
 
-    public String getMchId() {
-        return mchId;
+    public String getComplaintId() {
+        return complaintId;
     }
 
-    public void setMchId(String mchId) {
-        this.mchId = mchId;
+    public void setComplaintId(String complaintId) {
+        this.complaintId = complaintId;
     }
 
 }

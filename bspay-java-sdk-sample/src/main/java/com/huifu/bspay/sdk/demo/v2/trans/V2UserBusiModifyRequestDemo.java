@@ -103,14 +103,14 @@ public class V2UserBusiModifyRequestDemo extends BaseCommonDemo {
         // 结算类型
         dto.put("card_type", "0");
         // 卡户名
-        dto.put("card_name", "陈立健");
+        dto.put("card_name", "陈立一");
         // 卡号
-        dto.put("card_no", "6217001210064762121");
+        dto.put("card_no", "6217001210064762000");
         // 银行所在省
         dto.put("prov_id", "310000");
         // 银行所在市
         dto.put("area_id", "310100");
-        // 银行号对公时必填，[参见银行编码](https://paas.huifu.com/partners/api/#/csfl/api_csfl_yhbm)；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：01020000&lt;/font&gt;
+        // 银行号对公时必填，对私可以为空；[参见银行编码](https://paas.huifu.com/partners/api/#/csfl/api_csfl_yhbm)；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：01020000&lt;/font&gt;
         dto.put("bank_code", "01050000");
         // 支行联行号对公时联行号、支行名称二选一必填，[点击查看](https://paas.huifu.com/partners/api/#/csfl/api_csfl_yhzhbm)；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：102290026507&lt;/font&gt;
         dto.put("branch_code", "105305264815");
@@ -119,7 +119,7 @@ public class V2UserBusiModifyRequestDemo extends BaseCommonDemo {
         // 持卡人证件类型
         dto.put("cert_type", "00");
         // 持卡人证件号码
-        dto.put("cert_no", "110101197003077513");
+        dto.put("cert_no", "110101197003077000");
         // 持卡人证件有效期类型
         dto.put("cert_validity_type", "0");
         // 持卡人证件有效期起始日期
@@ -127,7 +127,7 @@ public class V2UserBusiModifyRequestDemo extends BaseCommonDemo {
         // 持卡人证件有效期截止日期
         dto.put("cert_end_date", "20410806");
         // 银行卡绑定手机号
-        dto.put("mp", "15556622368");
+        dto.put("mp", "15556622000");
 
         return dto.toJSONString();
     }
@@ -136,7 +136,7 @@ public class V2UserBusiModifyRequestDemo extends BaseCommonDemo {
         JSONObject dto = new JSONObject();
         // 开通状态
         dto.put("switch_state", "1");
-        // 取现手续费率（%）fix_amt与fee_rate至少填写一项，单位%，需保留小数点后两位，取值范围[0.00,100.00]，不收费请填写0.00；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：0.05&lt;/font&gt;&lt;br/&gt;注：如果fix_amt与fee_rate都填写了则手续费&#x3D;fix_amt+支付金额*fee_rate
+        // 取现手续费率（%）fix_amt与fee_rate至少填写一项，单位%，需保留小数点后两位，取值范围[0.00,100.00]，不收费请填写0.00；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：0.05&lt;/font&gt;&lt;br/&gt;注：如果fix_amt与fee_rate都填写了则手续费&#x3D;fix_amt+支付金额\*fee_rate
         dto.put("fee_rate", "0.05");
         // 业务类型
         dto.put("cash_type", "D0");

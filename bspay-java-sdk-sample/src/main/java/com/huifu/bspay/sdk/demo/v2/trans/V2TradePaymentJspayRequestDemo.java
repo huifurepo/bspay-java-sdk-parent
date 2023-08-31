@@ -270,6 +270,10 @@ public class V2TradePaymentJspayRequestDemo extends BaseCommonDemo {
         // dto.put("scene_info", getSceneInfo());
         // 终端ip
         // dto.put("spbill_create_ip", "");
+        // 单品优惠标识
+        // dto.put("promotion_flag", "");
+        // 新增商品ID
+        // dto.put("product_id", "");
 
         return dto.toJSONString();
     }

@@ -11,7 +11,7 @@ import com.huifu.bspay.sdk.demo.core.Identify;
 import com.huifu.bspay.sdk.opps.core.request.V2MerchantBasicdataIndvRequest;
 
 /**
- * 个人商户基本信息入驻 - 示例
+ * 个人商户基本信息入驻(2022) - 示例
  *
  * @author sdk-generator
  * @Description
@@ -89,10 +89,6 @@ public class V2MerchantBasicdataIndvRequestDemo extends BaseCommonDemo {
         // extendInfoMap.put("settle_card_back_pic", "");
         // 结算卡正面
         // extendInfoMap.put("settle_card_front_pic", "");
-        // 法人身份证反面
-        // extendInfoMap.put("legal_cert_back_pic", "");
-        // 法人身份证正面
-        // extendInfoMap.put("legal_cert_front_pic", "");
         // 授权委托书
         // extendInfoMap.put("auth_enturst_pic", "");
         return extendInfoMap;

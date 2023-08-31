@@ -8,16 +8,16 @@ import com.huifu.bspay.sdk.demo.init.OppsMerchantConfigDemo;
 import com.huifu.bspay.sdk.opps.core.utils.DateTools;
 import com.huifu.bspay.sdk.opps.core.utils.SequenceTools;
 import com.huifu.bspay.sdk.demo.core.Identify;
-import com.huifu.bspay.sdk.opps.core.request.V2MerchantComplaintDownloadPictureRequest;
+import com.huifu.bspay.sdk.opps.core.request.V2TradePayscoreServiceorderQueryRequest;
 
 /**
- * 投诉图片下载 - 示例
+ * 查询支付分订单 - 示例
  *
  * @author sdk-generator
  * @Description
  */
-@Identify(requestClass = V2MerchantComplaintDownloadPictureRequest.class)
-public class V2MerchantComplaintDownloadPictureRequestDemo extends BaseCommonDemo {
+@Identify(requestClass = V2TradePayscoreServiceorderQueryRequest.class)
+public class V2TradePayscoreServiceorderQueryRequestDemo extends BaseCommonDemo {
 
     public static void main(String[] args) throws Exception {
 
@@ -25,15 +25,9 @@ public class V2MerchantComplaintDownloadPictureRequestDemo extends BaseCommonDem
         doInit(OppsMerchantConfigDemo.getMerchantConfig());
 
         // 2.组装请求参数
-        V2MerchantComplaintDownloadPictureRequest request = new V2MerchantComplaintDownloadPictureRequest();
-        // 请求流水号
-        request.setReqSeqId(SequenceTools.getReqSeqId32());
-        // 请求时间
-        request.setReqDate(DateTools.getCurrentDateYYYYMMDD());
-        // 下载图片的url
-        request.setMediaUrl("https://api.mch.weixin.qq.com/v3/merchant-service/images/ChsyMDAwMDAwMjAyMjEwMTkyMjAwMzI0MjEzODUYACCN78OaBigBMAE4AQ%3D%3D");
-        // 投诉单号
-        // request.setComplaintId("test");
+        V2TradePayscoreServiceorderQueryRequest request = new V2TradePayscoreServiceorderQueryRequest();
+        // 汇付商户号
+        request.setHuifuId("6666000108854952");
 
         // 设置非必填字段
         Map<String, Object> extendInfoMap = getExtendInfos();
@@ -51,6 +45,12 @@ public class V2MerchantComplaintDownloadPictureRequestDemo extends BaseCommonDem
     private static Map<String, Object> getExtendInfos() {
         // 设置非必填字段
         Map<String, Object> extendInfoMap = new HashMap<>();
+        // 汇付服务订单号
+        // extendInfoMap.put("out_order_no", "");
+        // 创建服务订单返回的汇付全局流水号
+        // extendInfoMap.put("org_hf_seq_id", "");
+        // 服务订单创建请求流水号
+        // extendInfoMap.put("org_req_seq_id", "");
         return extendInfoMap;
     }
 

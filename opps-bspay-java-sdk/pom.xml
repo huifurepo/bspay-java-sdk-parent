@@ -5,7 +5,7 @@
 
     <groupId>com.huifu.bspay.sdk</groupId>
     <artifactId>dg-java-sdk</artifactId>
-    <version>3.0.8</version>
+    <version>3.0.9</version>
     <packaging>jar</packaging>
     <name>${project.artifactId} - ${project.version}</name>
     <inceptionYear>2021</inceptionYear>

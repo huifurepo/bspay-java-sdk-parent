@@ -11,7 +11,7 @@ import com.huifu.bspay.sdk.demo.core.Identify;
 import com.huifu.bspay.sdk.opps.core.request.V2MerchantIntegrateRegRequest;
 
 /**
- * 商户统一进件接口 - 示例
+ * 商户统一进件接口(2022) - 示例
  *
  * @author sdk-generator
  * @Description

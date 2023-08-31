@@ -41,6 +41,11 @@ public class V2TradeOnlinepaymentTransferAccountQueryRequest extends BaseRequest
      */
     @JSONField(name = "trans_end_date")
     private String transEndDate;
+    /**
+     * 交易开始日期
+     */
+    @JSONField(name = "trans_start_date")
+    private String transStartDate;
 
     @Override
     public FunctionCodeEnum getFunctionCode() {
@@ -50,13 +55,14 @@ public class V2TradeOnlinepaymentTransferAccountQueryRequest extends BaseRequest
     public V2TradeOnlinepaymentTransferAccountQueryRequest() {
     }
 
-    public V2TradeOnlinepaymentTransferAccountQueryRequest(String reqSeqId, String reqDate, String huifuId, String orgReqSeqId, String orgReqDate, String transEndDate) {
+    public V2TradeOnlinepaymentTransferAccountQueryRequest(String reqSeqId, String reqDate, String huifuId, String orgReqSeqId, String orgReqDate, String transEndDate, String transStartDate) {
         this.reqSeqId = reqSeqId;
         this.reqDate = reqDate;
         this.huifuId = huifuId;
         this.orgReqSeqId = orgReqSeqId;
         this.orgReqDate = orgReqDate;
         this.transEndDate = transEndDate;
+        this.transStartDate = transStartDate;
     }
 
     public String getReqSeqId() {
@@ -105,6 +111,14 @@ public class V2TradeOnlinepaymentTransferAccountQueryRequest extends BaseRequest
 
     public void setTransEndDate(String transEndDate) {
         this.transEndDate = transEndDate;
+    }
+
+    public String getTransStartDate() {
+        return transStartDate;
+    }
+
+    public void setTransStartDate(String transStartDate) {
+        this.transStartDate = transStartDate;
     }
 
 }

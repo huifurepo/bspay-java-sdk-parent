@@ -11,7 +11,7 @@ import com.huifu.bspay.sdk.demo.core.Identify;
 import com.huifu.bspay.sdk.opps.core.request.V2MerchantSettleModifyRequest;
 
 /**
- * 修改子账户配置 - 示例
+ * 修改子账户配置(2022) - 示例
  *
  * @author sdk-generator
  * @Description

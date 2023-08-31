@@ -8,16 +8,16 @@ import com.huifu.bspay.sdk.demo.init.OppsMerchantConfigDemo;
 import com.huifu.bspay.sdk.opps.core.utils.DateTools;
 import com.huifu.bspay.sdk.opps.core.utils.SequenceTools;
 import com.huifu.bspay.sdk.demo.core.Identify;
-import com.huifu.bspay.sdk.opps.core.request.V2MerchantComplaintDownloadPictureRequest;
+import com.huifu.bspay.sdk.opps.core.request.V2TradePaymentDelaytransConfirmrefundqueryRequest;
 
 /**
- * 投诉图片下载 - 示例
+ * 交易确认退款查询 - 示例
  *
  * @author sdk-generator
  * @Description
  */
-@Identify(requestClass = V2MerchantComplaintDownloadPictureRequest.class)
-public class V2MerchantComplaintDownloadPictureRequestDemo extends BaseCommonDemo {
+@Identify(requestClass = V2TradePaymentDelaytransConfirmrefundqueryRequest.class)
+public class V2TradePaymentDelaytransConfirmrefundqueryRequestDemo extends BaseCommonDemo {
 
     public static void main(String[] args) throws Exception {
 
@@ -25,15 +25,15 @@ public class V2MerchantComplaintDownloadPictureRequestDemo extends BaseCommonDem
         doInit(OppsMerchantConfigDemo.getMerchantConfig());
 
         // 2.组装请求参数
-        V2MerchantComplaintDownloadPictureRequest request = new V2MerchantComplaintDownloadPictureRequest();
-        // 请求流水号
-        request.setReqSeqId(SequenceTools.getReqSeqId32());
-        // 请求时间
-        request.setReqDate(DateTools.getCurrentDateYYYYMMDD());
-        // 下载图片的url
-        request.setMediaUrl("https://api.mch.weixin.qq.com/v3/merchant-service/images/ChsyMDAwMDAwMjAyMjEwMTkyMjAwMzI0MjEzODUYACCN78OaBigBMAE4AQ%3D%3D");
-        // 投诉单号
-        // request.setComplaintId("test");
+        V2TradePaymentDelaytransConfirmrefundqueryRequest request = new V2TradePaymentDelaytransConfirmrefundqueryRequest();
+        // 商户号
+        request.setHuifuId("6666000003100615");
+        // 原交易请求日期
+        request.setOrgReqDate("20230810");
+        // 原交易请求流水号指交易确认请求流水号，org_req_seq_id和org_hf_seq_id二选一；&lt;br/&gt;&lt;font color&#x3D;&quot;green&quot;&gt;示例值：2021091708126665002&lt;/font&gt;
+        request.setOrgReqSeqId("");
+        // 原退款全局流水号 原交易确认退款全局流水号。org_req_seq_id和org_hf_seq_id二选一；&lt;br/&gt;&lt;font color&#x3D;&quot;green&quot;&gt;示例值：003500TOP2B211021163242P447ac132fd200000&lt;/font&gt;
+        request.setOrgHfSeqId("0031000topB230810132213P318c0a8316600000");
 
         // 设置非必填字段
         Map<String, Object> extendInfoMap = getExtendInfos();

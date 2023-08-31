@@ -36,12 +36,14 @@ public class V2TradeSettlementSurrogateRequestDemo extends BaseCommonDemo {
         request.setCashAmt("9.00");
         // 代发用途描述
         request.setPurposeDesc("v2测试用");
-        // 省份
+        // 省份选填，参见[代发省市地区码](https://cloudpnrcdn.oss-cn-shanghai.aliyuncs.com/opps/api/prod/download_file/area/%E6%96%97%E6%8B%B1%E4%BB%A3%E5%8F%91%E7%9C%81%E4%BB%BD%E5%9C%B0%E5%8C%BA%E7%BC%96%E7%A0%81.xlsx)；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：0013&lt;/font&gt;&lt;br/&gt;对公代发(省份+地区)与联行号信息二选一填入；对私代发非必填；
         request.setProvince("0278");
-        // 地区
+        // 地区选填，参见[代发省市地区码](https://cloudpnrcdn.oss-cn-shanghai.aliyuncs.com/opps/api/prod/download_file/area/%E6%96%97%E6%8B%B1%E4%BB%A3%E5%8F%91%E7%9C%81%E4%BB%BD%E5%9C%B0%E5%8C%BA%E7%BC%96%E7%A0%81.xlsx)；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：1301&lt;/font&gt;&lt;br/&gt;对公代发(省份+地区)与联行号信息二选一填入；对私代发非必填；
         request.setArea("2619");
         // 银行编号
         request.setBankCode("01020000");
+        // 联行号选填，参见：[银行支行编码](https://paas.huifu.com/partners/api/#/csfl/api_csfl_yhzhbm) &lt;font color&#x3D;&quot;green&quot;&gt;示例值：102290026507&lt;/font&gt;&lt;br/&gt;对公代发(省份+地区)与联行号信息二选一填入；对私代发非必填；
+        request.setCorrespondentCode("correspondentCode");
         // 银行卡用户名
         request.setBankAccountName("王大锤");
         // 对公对私标识
@@ -73,8 +75,6 @@ public class V2TradeSettlementSurrogateRequestDemo extends BaseCommonDemo {
     private static Map<String, Object> getExtendInfos() {
         // 设置非必填字段
         Map<String, Object> extendInfoMap = new HashMap<>();
-        // 联行号
-        extendInfoMap.put("correspondent_code", "correspondentCode");
         // 支行名
         extendInfoMap.put("subbranch_bank_name", "subbranchBankName");
         // 收款方三证合一码

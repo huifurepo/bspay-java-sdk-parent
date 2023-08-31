@@ -57,11 +57,25 @@ public class V2MerchantComplaintUpdateRefundprogressRequestDemo extends BaseComm
         extendInfoMap.put("launch_refund_day", "");
         // 拒绝退款原因
         extendInfoMap.put("reject_reason", "");
-        // 文件列表
-        extendInfoMap.put("file_info", "{\"reject_media_pic1\":\"a8a096a3-0dd4-3b0e-886c-9afb20d23b1a\",\"reject_media_pic2\":\"a8a096a3-0dd4-3b0e-886c-9afb20d23b2a\",\"reject_media_pic3\":\"a8a096a3-0dd4-3b0e-886c-9afb20d23b3a\",\"reject_media_pic4\":\"a8a096a3-0dd4-3b0e-886c-9afb20d23b4a\"}");
         // 备注
         extendInfoMap.put("remark", "我是备注1111101");
+        // 文件列表
+        extendInfoMap.put("file_info", getFileInfo());
         return extendInfoMap;
+    }
+
+    private static String getFileInfo() {
+        JSONObject dto = new JSONObject();
+        // 拒绝退款的举证图片1
+        dto.put("reject_media_pic1", "a8a096a3-0dd4-3b0e-886c-9afb20d23b1a");
+        // 拒绝退款的举证图片2
+        dto.put("reject_media_pic2", "a8a096a3-0dd4-3b0e-886c-9afb20d23b2a");
+        // 拒绝退款的举证图片3
+        dto.put("reject_media_pic3", "a8a096a3-0dd4-3b0e-886c-9afb20d23b3a");
+        // 拒绝退款的举证图片4
+        dto.put("reject_media_pic4", "a8a096a3-0dd4-3b0e-886c-9afb20d23b4a");
+
+        return dto.toJSONString();
     }
 
 }

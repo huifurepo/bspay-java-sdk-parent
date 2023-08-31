@@ -11,7 +11,7 @@ import com.huifu.bspay.sdk.demo.core.Identify;
 import com.huifu.bspay.sdk.opps.core.request.V2MerchantBasicdataQueryRequest;
 
 /**
- * 商户详细信息查询 - 示例
+ * 商户详细信息查询(2022) - 示例
  *
  * @author sdk-generator
  * @Description

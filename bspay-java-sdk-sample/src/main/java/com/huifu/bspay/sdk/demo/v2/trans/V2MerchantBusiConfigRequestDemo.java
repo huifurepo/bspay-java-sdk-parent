@@ -34,9 +34,11 @@ public class V2MerchantBusiConfigRequestDemo extends BaseCommonDemo {
         request.setHuifuId("6666000108854952");
         // 业务开通类型
         request.setFeeType("02");
-        // 公众号支付Appid条件必填，&lt;font color&#x3D;&quot;green&quot;&gt;示例值：wx3767c5bd01df5061&lt;/font&gt; ；wx_woa_app_id 和 wx_applet_app_id两者不能同时为空
+        // 公众号支付Appid条件必填，&lt;font color&#x3D;&quot;green&quot;&gt;示例值：wx3767c5bd01df5061&lt;/font&gt; ；wx_woa_app_id 、wx_woa_path和 wx_applet_app_id三者不能同时为空
         request.setWxWoaAppId("wx3767c5bd01df5061");
-        // 微信小程序APPID条件必填，&lt;font color&#x3D;&quot;green&quot;&gt;示例值：wx8523175fea790f10&lt;/font&gt; ；wx_woa_app_id，wx_applet_app_id两者不能同时为空
+        // 微信公众号授权目录条件必填，&lt;font color&#x3D;&quot;green&quot;&gt;示例值：https://paas.huifu.com/shouyintai/demo/h5/&lt;/font&gt;；wx_woa_app_id 、wx_woa_path和 wx_applet_app_id三者不能同时为空
+        request.setWxWoaPath("https://paas.huifu.com/shouyin/demo/h5/");
+        // 微信小程序APPID条件必填，&lt;font color&#x3D;&quot;green&quot;&gt;示例值：wx8523175fea790f10&lt;/font&gt; ；wx_woa_app_id 、wx_woa_path和 wx_applet_app_id三者不能同时为空
         request.setWxAppletAppId("wx8523175fea790f10");
 
         // 设置非必填字段
@@ -55,8 +57,6 @@ public class V2MerchantBusiConfigRequestDemo extends BaseCommonDemo {
     private static Map<String, Object> getExtendInfos() {
         // 设置非必填字段
         Map<String, Object> extendInfoMap = new HashMap<>();
-        // 微信公众号授权目录
-        extendInfoMap.put("wx_woa_path", "https://paas.huifu.com/shouyin/demo/h5/");
         // 微信公众号APPID对应的秘钥
         extendInfoMap.put("wx_woa_secret", "64afb60bef3a22ac282aa7880cdaca98");
         // 微信小程序APPID对应的秘钥

@@ -42,11 +42,6 @@ public class V2TradeOnlinepaymentTransferAccountRequest extends BaseRequest {
     @JSONField(name = "trans_amt")
     private String transAmt;
     /**
-     * 异步通知地址
-     */
-    @JSONField(name = "notify_url")
-    private String notifyUrl;
-    /**
      * 商品描述
      */
     @JSONField(name = "goods_desc")
@@ -60,14 +55,13 @@ public class V2TradeOnlinepaymentTransferAccountRequest extends BaseRequest {
     public V2TradeOnlinepaymentTransferAccountRequest() {
     }
 
-    public V2TradeOnlinepaymentTransferAccountRequest(String reqSeqId, String reqDate, String huifuId, String certificateName, String bankCardNo, String transAmt, String notifyUrl, String goodsDesc) {
+    public V2TradeOnlinepaymentTransferAccountRequest(String reqSeqId, String reqDate, String huifuId, String certificateName, String bankCardNo, String transAmt, String goodsDesc) {
         this.reqSeqId = reqSeqId;
         this.reqDate = reqDate;
         this.huifuId = huifuId;
         this.certificateName = certificateName;
         this.bankCardNo = bankCardNo;
         this.transAmt = transAmt;
-        this.notifyUrl = notifyUrl;
         this.goodsDesc = goodsDesc;
     }
 
@@ -117,14 +111,6 @@ public class V2TradeOnlinepaymentTransferAccountRequest extends BaseRequest {
 
     public void setTransAmt(String transAmt) {
         this.transAmt = transAmt;
-    }
-
-    public String getNotifyUrl() {
-        return notifyUrl;
-    }
-
-    public void setNotifyUrl(String notifyUrl) {
-        this.notifyUrl = notifyUrl;
     }
 
     public String getGoodsDesc() {

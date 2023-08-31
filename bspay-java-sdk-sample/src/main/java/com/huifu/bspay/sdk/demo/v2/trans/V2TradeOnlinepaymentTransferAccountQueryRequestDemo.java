@@ -38,6 +38,8 @@ public class V2TradeOnlinepaymentTransferAccountQueryRequestDemo extends BaseCom
         request.setOrgReqDate("20220808");
         // 打款结束日期
         request.setTransEndDate("20220808");
+        // 交易开始日期
+        request.setTransStartDate("20220801");
 
         // 设置非必填字段
         Map<String, Object> extendInfoMap = getExtendInfos();

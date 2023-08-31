@@ -61,7 +61,7 @@ public class V2TradePaymentMicropayRequestDemo extends BaseCommonDemo {
         extendInfoMap.put("time_expire", "20220918150330");
         // 手续费扣款标志
         // extendInfoMap.put("fee_flag", "");
-        // 禁用信用卡标记
+        // 禁用支付方式
         extendInfoMap.put("limit_pay_type", "");
         // 是否延迟交易
         extendInfoMap.put("delay_acct_flag", "Y");
@@ -133,13 +133,13 @@ public class V2TradePaymentMicropayRequestDemo extends BaseCommonDemo {
     private static JSON getGoodsDetailWxRucan() {
         JSONObject dto = new JSONObject();
         // 商品编码
-        // dto.put("goods_id", "");
+        // dto.put("goods_id", "test");
+        // 商品数量
+        // dto.put("quantity", "test");
         // 商品名称
         // dto.put("goods_name", "");
         // 商品单价
         // dto.put("price", "");
-        // 商品数量
-        // dto.put("quantity", "");
         // 微信侧商品编码
         // dto.put("wxpay_goods_id", "");
 
@@ -186,6 +186,8 @@ public class V2TradePaymentMicropayRequestDemo extends BaseCommonDemo {
 
     private static String getWxData() {
         JSONObject dto = new JSONObject();
+        // 收款设备IP直联模式必填字段；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：192.168.2.2&lt;/font&gt;
+        // dto.put("spbill_create_ip", "test");
         // 子商户公众账号id
         // dto.put("sub_appid", "");
         // 用户标识
@@ -200,6 +202,10 @@ public class V2TradePaymentMicropayRequestDemo extends BaseCommonDemo {
         // dto.put("detail", getDetail());
         // 场景信息
         // dto.put("scene_info", getSceneInfo());
+        // 单品优惠标识
+        // dto.put("promotion_flag", "");
+        // 电子发票入口开放标识
+        // dto.put("receipt", "");
 
         return dto.toJSONString();
     }

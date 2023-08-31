@@ -79,6 +79,8 @@ public class V2TradePaymentScanpayRefundRequestDemo extends BaseCommonDemo {
         // extendInfoMap.put("loan_acct_type", "");
         // 补贴支付信息
         // extendInfoMap.put("combinedpay_data", getCombinedpayData());
+        // 聚合正扫微信拓展参数集合
+        // extendInfoMap.put("wx_data", getWxData());
         return extendInfoMap;
     }
 
@@ -162,6 +164,38 @@ public class V2TradePaymentScanpayRefundRequestDemo extends BaseCommonDemo {
         JSONArray dtoList = new JSONArray();
         dtoList.add(dto);
         return dtoList.toJSONString();
+    }
+
+    private static JSON getGoodsDetail() {
+        JSONObject dto = new JSONObject();
+        // 商品编码
+        // dto.put("goods_id", "test");
+        // 优惠退款金额
+        // dto.put("refund_amount", "test");
+        // 商品退货数量
+        // dto.put("refund_quantity", "test");
+        // 商品单价
+        // dto.put("price", "test");
+
+        JSONArray dtoList = new JSONArray();
+        dtoList.add(dto);
+        return dtoList;
+    }
+
+    private static JSON getDetail() {
+        JSONObject dto = new JSONObject();
+        // 商品详情列表
+        // dto.put("goods_detail", getGoodsDetail());
+
+        return dto;
+    }
+
+    private static JSON getWxData() {
+        JSONObject dto = new JSONObject();
+        // 退款商品详情
+        // dto.put("detail", getDetail());
+
+        return dto;
     }
 
 }

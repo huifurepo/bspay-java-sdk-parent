@@ -55,8 +55,6 @@ public class V2TradeOnlinepaymentQuickpayConfirmRequestDemo extends BaseCommonDe
     private static Map<String, Object> getExtendInfos() {
         // 设置非必填字段
         Map<String, Object> extendInfoMap = new HashMap<>();
-        // 备注
-        extendInfoMap.put("remark", "remark6");
         return extendInfoMap;
     }
 

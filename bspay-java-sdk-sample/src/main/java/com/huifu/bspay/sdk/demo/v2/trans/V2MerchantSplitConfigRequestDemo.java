@@ -11,7 +11,7 @@ import com.huifu.bspay.sdk.demo.core.Identify;
 import com.huifu.bspay.sdk.opps.core.request.V2MerchantSplitConfigRequest;
 
 /**
- * 商户分账配置 - 示例
+ * 商户分账配置(2022) - 示例
  *
  * @author sdk-generator
  * @Description

@@ -37,12 +37,12 @@ public class V2TradeSettlementSurrogateRequest extends BaseRequest {
     @JSONField(name = "purpose_desc")
     private String purposeDesc;
     /**
-     * 省份
+     * 省份选填，参见[代发省市地区码](https://cloudpnrcdn.oss-cn-shanghai.aliyuncs.com/opps/api/prod/download_file/area/%E6%96%97%E6%8B%B1%E4%BB%A3%E5%8F%91%E7%9C%81%E4%BB%BD%E5%9C%B0%E5%8C%BA%E7%BC%96%E7%A0%81.xlsx)；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：0013&lt;/font&gt;&lt;br/&gt;对公代发(省份+地区)与联行号信息二选一填入；对私代发非必填；
      */
     @JSONField(name = "province")
     private String province;
     /**
-     * 地区
+     * 地区选填，参见[代发省市地区码](https://cloudpnrcdn.oss-cn-shanghai.aliyuncs.com/opps/api/prod/download_file/area/%E6%96%97%E6%8B%B1%E4%BB%A3%E5%8F%91%E7%9C%81%E4%BB%BD%E5%9C%B0%E5%8C%BA%E7%BC%96%E7%A0%81.xlsx)；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：1301&lt;/font&gt;&lt;br/&gt;对公代发(省份+地区)与联行号信息二选一填入；对私代发非必填；
      */
     @JSONField(name = "area")
     private String area;
@@ -51,6 +51,11 @@ public class V2TradeSettlementSurrogateRequest extends BaseRequest {
      */
     @JSONField(name = "bank_code")
     private String bankCode;
+    /**
+     * 联行号选填，参见：[银行支行编码](https://paas.huifu.com/partners/api/#/csfl/api_csfl_yhzhbm) &lt;font color&#x3D;&quot;green&quot;&gt;示例值：102290026507&lt;/font&gt;&lt;br/&gt;对公代发(省份+地区)与联行号信息二选一填入；对私代发非必填；
+     */
+    @JSONField(name = "correspondent_code")
+    private String correspondentCode;
     /**
      * 银行卡用户名
      */
@@ -95,7 +100,7 @@ public class V2TradeSettlementSurrogateRequest extends BaseRequest {
     public V2TradeSettlementSurrogateRequest() {
     }
 
-    public V2TradeSettlementSurrogateRequest(String reqSeqId, String reqDate, String huifuId, String cashAmt, String purposeDesc, String province, String area, String bankCode, String bankAccountName, String cardAcctType, String bankCardNoCrypt, String certificateNoCrypt, String certificateType, String mobileNoCrypt, String intoAcctDateType) {
+    public V2TradeSettlementSurrogateRequest(String reqSeqId, String reqDate, String huifuId, String cashAmt, String purposeDesc, String province, String area, String bankCode, String correspondentCode, String bankAccountName, String cardAcctType, String bankCardNoCrypt, String certificateNoCrypt, String certificateType, String mobileNoCrypt, String intoAcctDateType) {
         this.reqSeqId = reqSeqId;
         this.reqDate = reqDate;
         this.huifuId = huifuId;
@@ -104,6 +109,7 @@ public class V2TradeSettlementSurrogateRequest extends BaseRequest {
         this.province = province;
         this.area = area;
         this.bankCode = bankCode;
+        this.correspondentCode = correspondentCode;
         this.bankAccountName = bankAccountName;
         this.cardAcctType = cardAcctType;
         this.bankCardNoCrypt = bankCardNoCrypt;
@@ -175,6 +181,14 @@ public class V2TradeSettlementSurrogateRequest extends BaseRequest {
 
     public void setBankCode(String bankCode) {
         this.bankCode = bankCode;
+    }
+
+    public String getCorrespondentCode() {
+        return correspondentCode;
+    }
+
+    public void setCorrespondentCode(String correspondentCode) {
+        this.correspondentCode = correspondentCode;
     }
 
     public String getBankAccountName() {

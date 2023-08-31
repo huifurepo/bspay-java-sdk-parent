@@ -63,33 +63,9 @@ public class V2TradeAcctpaymentPayRequestDemo extends BaseCommonDemo {
         // extendInfoMap.put("remark", "");
         // 是否延迟交易
         // extendInfoMap.put("delay_acct_flag", "");
-        // 设备信息
-        extendInfoMap.put("terminal_device_data", getTerminalDeviceData());
         // 出款方账户号
         // extendInfoMap.put("out_acct_id", "");
         return extendInfoMap;
-    }
-
-    private static String getTerminalDeviceData() {
-        JSONObject dto = new JSONObject();
-        // 设备类型
-        dto.put("device_type", "1");
-        // 交易设备IP
-        dto.put("device_ip", "10.10.0.1");
-        // 交易设备MAC
-        // dto.put("device_mac", "");
-        // 交易设备GPS
-        // dto.put("device_gps", "");
-        // 交易设备IMEI
-        // dto.put("device_imei", "");
-        // 交易设备IMSI
-        // dto.put("device_imsi", "");
-        // 交易设备ICCID
-        // dto.put("device_icc_id", "");
-        // 交易设备WIFIMAC
-        // dto.put("device_wifi_mac", "");
-
-        return dto.toJSONString();
     }
 
     private static JSON getAcctInfos() {
