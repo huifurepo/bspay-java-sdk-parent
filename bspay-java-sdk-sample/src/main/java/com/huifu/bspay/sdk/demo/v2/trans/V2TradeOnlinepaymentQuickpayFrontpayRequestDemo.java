@@ -34,14 +34,14 @@ public class V2TradeOnlinepaymentQuickpayFrontpayRequestDemo extends BaseCommonD
         request.setHuifuId("6666000109812884");
         // 订单金额
         request.setTransAmt("0.01");
-        // 异步通知地址
-        request.setNotifyUrl("http://www.baidu.com");
         // 银行扩展信息
         request.setExtendPayData(getExtendPayData());
         // 设备信息
         request.setTerminalDeviceData(getTerminalDeviceData());
         // 安全信息
         request.setRiskCheckData(getRiskCheckData());
+        // 异步通知地址
+        request.setNotifyUrl("http://www.baidu.com");
 
         // 设置非必填字段
         Map<String, Object> extendInfoMap = getExtendInfos();
@@ -71,15 +71,37 @@ public class V2TradeOnlinepaymentQuickpayFrontpayRequestDemo extends BaseCommonD
         extendInfoMap.put("request_type", "P");
         // 延时标记
         // extendInfoMap.put("delay_acct_flag", "");
+        // 分账串
+        extendInfoMap.put("acct_split_bunch", getAcctSplitBunchRucan());
         // 手续费扣款标志
         extendInfoMap.put("fee_flag", "2");
         // 备注
         extendInfoMap.put("remark", "remark快捷支付接口");
         // 页面跳转地址
         extendInfoMap.put("front_url", "http://www.baidu.com");
-        // 分账串
-        extendInfoMap.put("acct_split_bunch", getAcctSplitBunchRucan());
         return extendInfoMap;
+    }
+
+    private static JSON getAcctInfos() {
+        JSONObject dto = new JSONObject();
+        // 被分账对象ID
+        dto.put("huifu_id", "6666000109812884");
+        // 分账金额
+        dto.put("div_amt", "0.01");
+        // 账户号
+        // dto.put("acct_id", "");
+
+        JSONArray dtoList = new JSONArray();
+        dtoList.add(dto);
+        return dtoList;
+    }
+
+    private static String getAcctSplitBunchRucan() {
+        JSONObject dto = new JSONObject();
+        // 分账明细
+        dto.put("acct_infos", getAcctInfos());
+
+        return dto.toJSONString();
     }
 
     private static String getExtendPayData() {
@@ -112,28 +134,6 @@ public class V2TradeOnlinepaymentQuickpayFrontpayRequestDemo extends BaseCommonD
         // dto.put("device_wifi_mac", "");
         // 交易设备GPS
         // dto.put("device_gps", "");
-
-        return dto.toJSONString();
-    }
-
-    private static JSON getAcctInfos() {
-        JSONObject dto = new JSONObject();
-        // 被分账对象ID
-        dto.put("huifu_id", "6666000109812884");
-        // 分账金额
-        dto.put("div_amt", "0.01");
-        // 账户号
-        // dto.put("acct_id", "");
-
-        JSONArray dtoList = new JSONArray();
-        dtoList.add(dto);
-        return dtoList;
-    }
-
-    private static String getAcctSplitBunchRucan() {
-        JSONObject dto = new JSONObject();
-        // 分账明细
-        dto.put("acct_infos", getAcctInfos());
 
         return dto.toJSONString();
     }

@@ -26,14 +26,22 @@ public class V2TradePayscorePayPayscorepayRequestDemo extends BaseCommonDemo {
 
         // 2.组装请求参数
         V2TradePayscorePayPayscorepayRequest request = new V2TradePayscorePayPayscorepayRequest();
-        // 微信扣款单号
-        // request.setOutTradeNo("test");
-        // 商品描述
-        // request.setGoodsDesc("test");
+        // 请求日期
+        request.setReqDate(DateTools.getCurrentDateYYYYMMDD());
+        // 请求流水号
+        request.setReqSeqId(SequenceTools.getReqSeqId32());
         // 商户号
-        request.setHuifuId("6666000108854952");
+        request.setHuifuId("6666000141569791");
+        // 扣款登记创建请求流水号deduct_req_seq_id与deduct_hf_seq_id二选一；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：2022012614120615001&lt;/font&gt;
+        request.setDeductReqSeqId("1726841301594394626");
+        // 扣款登记返回的汇付全局流水号deduct_req_seq_id与deduct_hf_seq_id二选一；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：00470topo1A211015160805P090ac132fef00000&lt;/font&gt;
+        // request.setDeductHfSeqId("test");
+        // 微信扣款单号
+        request.setOutTradeNo("03212311224952047516172");
+        // 商品描述
+        request.setGoodsDesc("bp充电");
         // 安全信息
-        // request.setRiskCheckData("test");
+        request.setRiskCheckData(getRiskCheckData());
 
         // 设置非必填字段
         Map<String, Object> extendInfoMap = getExtendInfos();
@@ -51,27 +59,33 @@ public class V2TradePayscorePayPayscorepayRequestDemo extends BaseCommonDemo {
     private static Map<String, Object> getExtendInfos() {
         // 设置非必填字段
         Map<String, Object> extendInfoMap = new HashMap<>();
-        // 分账对象
-        // extendInfoMap.put("acct_split_bunch", getAcctSplitBunch());
-        // 扣款登记返回的汇付全局流水号
-        // extendInfoMap.put("deduct_hf_seq_id", "");
-        // 扣款登记创建请求流水号
-        // extendInfoMap.put("deduct_req_seq_id", "");
-        // 是否延迟交易
-        // extendInfoMap.put("delay_acct_flag", "");
-        // 商户回调地址
-        // extendInfoMap.put("notify_url", "");
-        // 交易备注
-        // extendInfoMap.put("remark", "");
-        // 请求日期
-        extendInfoMap.put("req_date", DateTools.getCurrentDateYYYYMMDD());
-        // 请求流水号
-        extendInfoMap.put("req_seq_id", SequenceTools.getReqSeqId32());
-        // 设备信息
-        // extendInfoMap.put("terminal_device_info", getTerminalDeviceInfo());
         // 聚合反扫微信参数集合
         // extendInfoMap.put("wx_data", getWxData());
+        // 是否延迟交易
+        // extendInfoMap.put("delay_acct_flag", "");
+        // 分账对象
+        // extendInfoMap.put("acct_split_bunch", getAcctSplitBunch());
+        // 设备信息
+        // extendInfoMap.put("terminal_device_info", getTerminalDeviceInfo());
+        // 交易备注
+        // extendInfoMap.put("remark", "");
+        // 商户回调地址
+        // extendInfoMap.put("notify_url", "");
         return extendInfoMap;
+    }
+
+    private static String getWxData() {
+        JSONObject dto = new JSONObject();
+        // 子商户用户标识
+        // dto.put("sub_openid", "test");
+        // 子商户公众账号id
+        // dto.put("sub_appid", "");
+        // 用户标识
+        // dto.put("openid", "");
+        // 设备号
+        // dto.put("device_info", "");
+
+        return dto.toJSONString();
     }
 
     private static JSON getAcctInfos() {
@@ -90,6 +104,20 @@ public class V2TradePayscorePayPayscorepayRequestDemo extends BaseCommonDemo {
         JSONObject dto = new JSONObject();
         // 分账明细
         // dto.put("acct_infos", getAcctInfos());
+
+        return dto.toJSONString();
+    }
+
+    private static String getRiskCheckData() {
+        JSONObject dto = new JSONObject();
+        // ip地址
+        dto.put("ip_address", "127.0.0.1");
+        // 基站地址
+        // dto.put("base_station", "");
+        // 纬度
+        // dto.put("latitude", "");
+        // 经度
+        // dto.put("longitude", "");
 
         return dto.toJSONString();
     }
@@ -114,20 +142,6 @@ public class V2TradePayscorePayPayscorepayRequestDemo extends BaseCommonDemo {
         // dto.put("device_gps", "");
         // 商户终端应用程序版
         // dto.put("app_version", "");
-
-        return dto.toJSONString();
-    }
-
-    private static String getWxData() {
-        JSONObject dto = new JSONObject();
-        // 子商户公众账号id
-        // dto.put("sub_appid", "");
-        // 用户标识
-        // dto.put("openid", "");
-        // 子商户用户标识
-        // dto.put("sub_openid", "");
-        // 设备号
-        // dto.put("device_info", "");
 
         return dto.toJSONString();
     }

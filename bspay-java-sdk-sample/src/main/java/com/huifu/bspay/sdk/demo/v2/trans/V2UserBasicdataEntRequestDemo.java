@@ -32,8 +32,6 @@ public class V2UserBasicdataEntRequestDemo extends BaseCommonDemo {
         request.setReqDate(DateTools.getCurrentDateYYYYMMDD());
         // 企业用户名称
         request.setRegName("企业商户名称8225");
-        // 经营简称
-        request.setShortName("企业商户");
         // 营业执照编号
         request.setLicenseCode("20220222013747149");
         // 证照有效期类型
@@ -83,6 +81,8 @@ public class V2UserBasicdataEntRequestDemo extends BaseCommonDemo {
     private static Map<String, Object> getExtendInfos() {
         // 设置非必填字段
         Map<String, Object> extendInfoMap = new HashMap<>();
+        // 经营简称
+        extendInfoMap.put("short_name", "企业商户");
         // 联系人电子邮箱
         extendInfoMap.put("contact_email", "jeff.peng@huifu.com");
         // 管理员账号

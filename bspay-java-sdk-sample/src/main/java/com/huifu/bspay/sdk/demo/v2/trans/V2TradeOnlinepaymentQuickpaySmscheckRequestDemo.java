@@ -32,10 +32,10 @@ public class V2TradeOnlinepaymentQuickpaySmscheckRequestDemo extends BaseCommonD
         request.setReqDate(DateTools.getCurrentDateYYYYMMDD());
         // 商户号
         request.setHuifuId("6666000109812884");
-        // 原请求流水号
-        request.setOrgReqSeqId("20230418223666178210001");
         // 原请求日期
         request.setOrgReqDate("20230418");
+        // 原请求流水号
+        request.setOrgReqSeqId("20230418223666178210001");
         // 短信验证码
         request.setSmsCode("657631");
 

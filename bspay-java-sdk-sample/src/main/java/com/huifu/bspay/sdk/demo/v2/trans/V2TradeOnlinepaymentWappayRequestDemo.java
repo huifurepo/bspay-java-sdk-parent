@@ -34,6 +34,10 @@ public class V2TradeOnlinepaymentWappayRequestDemo extends BaseCommonDemo {
         request.setHuifuId("6666000103124174");
         // 交易金额
         request.setTransAmt("300.01");
+        // 分期期数分期支付时必填；支持：03、06、12、24；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：03&lt;/font&gt;；&lt;br/&gt;空值时是wap支付；
+        request.setInstalmentsNum("03");
+        // 银行卡号instalments_num不为空时必填；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：6228480031509440000&lt;/font&gt;
+        request.setBankCardNo("6222021102043040313");
         // 网联扩展数据
         request.setExtendPayData(getExtendPayData());
         // 安全信息
@@ -61,21 +65,29 @@ public class V2TradeOnlinepaymentWappayRequestDemo extends BaseCommonDemo {
     private static Map<String, Object> getExtendInfos() {
         // 设置非必填字段
         Map<String, Object> extendInfoMap = new HashMap<>();
-        // 分账对象
-        extendInfoMap.put("acct_split_bunch", getAcctSplitBunchRucan());
-        // 银行卡号
-        extendInfoMap.put("bank_card_no", "6222021102043040313");
         // 延时标记
         extendInfoMap.put("delay_acct_flag", "N");
         // 交易有效期
         extendInfoMap.put("time_expire", "20220406210038");
-        // 分期期数
-        extendInfoMap.put("instalments_num", "03");
-        // 页面失败跳转地址
-        extendInfoMap.put("front_fail_url", "http://www.baidu.com");
+        // 分账对象
+        extendInfoMap.put("acct_split_bunch", getAcctSplitBunchRucan());
         // 备注
         extendInfoMap.put("remark", "");
+        // 页面失败跳转地址
+        extendInfoMap.put("front_fail_url", "http://www.baidu.com");
         return extendInfoMap;
+    }
+
+    private static String getExtendPayData() {
+        JSONObject dto = new JSONObject();
+        // 商品简称
+        dto.put("goods_short_name", "一般商品");
+        // 网关支付受理渠道
+        dto.put("gw_chnnl_tp", "01");
+        // 业务种类
+        dto.put("biz_tp", "123456");
+
+        return dto.toJSONString();
     }
 
     private static JSON getAcctInfos() {
@@ -96,18 +108,6 @@ public class V2TradeOnlinepaymentWappayRequestDemo extends BaseCommonDemo {
         JSONObject dto = new JSONObject();
         // 分账信息列表
         dto.put("acct_infos", getAcctInfos());
-
-        return dto.toJSONString();
-    }
-
-    private static String getExtendPayData() {
-        JSONObject dto = new JSONObject();
-        // 商品简称
-        dto.put("goods_short_name", "一般商品");
-        // 网关支付受理渠道
-        dto.put("gw_chnnl_tp", "01");
-        // 业务种类
-        dto.put("biz_tp", "123456");
 
         return dto.toJSONString();
     }

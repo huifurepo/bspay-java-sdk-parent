@@ -254,6 +254,26 @@ public class V2TradePaymentMicropayRequestDemo extends BaseCommonDemo {
         return dto;
     }
 
+    private static JSON getExtUserInfo() {
+        JSONObject dto = new JSONObject();
+        // 姓名
+        // dto.put("name", "");
+        // 手机号
+        // dto.put("mobile", "");
+        // 证件类型
+        // dto.put("cert_type", "");
+        // 证件号
+        // dto.put("cert_no", "");
+        // 允许的最小买家年龄
+        // dto.put("min_age", "");
+        // 是否强制校验付款人身份信息
+        // dto.put("fix_buyer", "");
+        // 是否强制校验身份信息
+        // dto.put("need_check_info", "");
+
+        return dto;
+    }
+
     private static String getAlipayData() {
         JSONObject dto = new JSONObject();
         // 支付宝的店铺编号
@@ -266,6 +286,8 @@ public class V2TradePaymentMicropayRequestDemo extends BaseCommonDemo {
         // dto.put("operator_id", "");
         // 商户门店编号
         dto.put("store_id", "");
+        // 外部指定买家
+        // dto.put("ext_user_info", getExtUserInfo());
 
         return dto.toJSONString();
     }

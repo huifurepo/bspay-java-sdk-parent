@@ -27,6 +27,11 @@ public class V2TradePaymentJspayRequest extends BaseRequest {
     @JSONField(name = "huifu_id")
     private String huifuId;
     /**
+     * 商品描述
+     */
+    @JSONField(name = "goods_desc")
+    private String goodsDesc;
+    /**
      * 交易类型
      */
     @JSONField(name = "trade_type")
@@ -36,11 +41,6 @@ public class V2TradePaymentJspayRequest extends BaseRequest {
      */
     @JSONField(name = "trans_amt")
     private String transAmt;
-    /**
-     * 商品描述
-     */
-    @JSONField(name = "goods_desc")
-    private String goodsDesc;
 
     @Override
     public FunctionCodeEnum getFunctionCode() {
@@ -50,13 +50,13 @@ public class V2TradePaymentJspayRequest extends BaseRequest {
     public V2TradePaymentJspayRequest() {
     }
 
-    public V2TradePaymentJspayRequest(String reqDate, String reqSeqId, String huifuId, String tradeType, String transAmt, String goodsDesc) {
+    public V2TradePaymentJspayRequest(String reqDate, String reqSeqId, String huifuId, String goodsDesc, String tradeType, String transAmt) {
         this.reqDate = reqDate;
         this.reqSeqId = reqSeqId;
         this.huifuId = huifuId;
+        this.goodsDesc = goodsDesc;
         this.tradeType = tradeType;
         this.transAmt = transAmt;
-        this.goodsDesc = goodsDesc;
     }
 
     public String getReqDate() {
@@ -83,6 +83,14 @@ public class V2TradePaymentJspayRequest extends BaseRequest {
         this.huifuId = huifuId;
     }
 
+    public String getGoodsDesc() {
+        return goodsDesc;
+    }
+
+    public void setGoodsDesc(String goodsDesc) {
+        this.goodsDesc = goodsDesc;
+    }
+
     public String getTradeType() {
         return tradeType;
     }
@@ -97,14 +105,6 @@ public class V2TradePaymentJspayRequest extends BaseRequest {
 
     public void setTransAmt(String transAmt) {
         this.transAmt = transAmt;
-    }
-
-    public String getGoodsDesc() {
-        return goodsDesc;
-    }
-
-    public void setGoodsDesc(String goodsDesc) {
-        this.goodsDesc = goodsDesc;
     }
 
 }

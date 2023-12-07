@@ -63,10 +63,12 @@ public class V2TradeHostingPaymentPreorderAliRequestDemo extends BaseCommonDemo 
         extendInfoMap.put("delay_acct_flag", "N");
         // 分账对象
         extendInfoMap.put("acct_split_bunch", getAcctSplitBunchRucan());
-        // 异步通知地址
-        extendInfoMap.put("notify_url", "https://callback.service.com/xx");
         // 交易失效时间
         // extendInfoMap.put("time_expire", "");
+        // 业务信息
+        // extendInfoMap.put("biz_info", getBizInfo());
+        // 异步通知地址
+        extendInfoMap.put("notify_url", "https://callback.service.com/xx");
         return extendInfoMap;
     }
 
@@ -96,6 +98,42 @@ public class V2TradeHostingPaymentPreorderAliRequestDemo extends BaseCommonDemo 
         dto.put("app_schema", "app跳转链接");
         // 私有信息
         // dto.put("private_info", "");
+
+        return dto.toJSONString();
+    }
+
+    private static JSON getPayerCheckAli() {
+        JSONObject dto = new JSONObject();
+        // 是否提供校验身份信息
+        // dto.put("need_check_info", "");
+        // 允许的最小买家年龄
+        // dto.put("min_age", "");
+        // 是否强制校验付款人身份信息
+        // dto.put("fix_buyer", "");
+
+        return dto;
+    }
+
+    private static JSON getPersonPayer() {
+        JSONObject dto = new JSONObject();
+        // 姓名
+        // dto.put("name", "");
+        // 证件类型
+        // dto.put("cert_type", "");
+        // 证件号
+        // dto.put("cert_no", "");
+        // 手机号
+        // dto.put("mobile", "");
+
+        return dto;
+    }
+
+    private static String getBizInfo() {
+        JSONObject dto = new JSONObject();
+        // 付款人验证（支付宝）
+        // dto.put("payer_check_ali", getPayerCheckAli());
+        // 个人付款人信息
+        // dto.put("person_payer", getPersonPayer());
 
         return dto.toJSONString();
     }

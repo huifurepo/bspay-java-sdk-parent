@@ -32,6 +32,16 @@ public class V2TradeOnlinepaymentWappayRequest extends BaseRequest {
     @JSONField(name = "trans_amt")
     private String transAmt;
     /**
+     * 分期期数分期支付时必填；支持：03、06、12、24；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：03&lt;/font&gt;；&lt;br/&gt;空值时是wap支付；
+     */
+    @JSONField(name = "instalments_num")
+    private String instalmentsNum;
+    /**
+     * 银行卡号instalments_num不为空时必填；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：6228480031509440000&lt;/font&gt;
+     */
+    @JSONField(name = "bank_card_no")
+    private String bankCardNo;
+    /**
      * 网联扩展数据
      */
     @JSONField(name = "extend_pay_data")
@@ -65,11 +75,13 @@ public class V2TradeOnlinepaymentWappayRequest extends BaseRequest {
     public V2TradeOnlinepaymentWappayRequest() {
     }
 
-    public V2TradeOnlinepaymentWappayRequest(String reqDate, String reqSeqId, String huifuId, String transAmt, String extendPayData, String riskCheckData, String terminalDeviceData, String frontUrl, String notifyUrl) {
+    public V2TradeOnlinepaymentWappayRequest(String reqDate, String reqSeqId, String huifuId, String transAmt, String instalmentsNum, String bankCardNo, String extendPayData, String riskCheckData, String terminalDeviceData, String frontUrl, String notifyUrl) {
         this.reqDate = reqDate;
         this.reqSeqId = reqSeqId;
         this.huifuId = huifuId;
         this.transAmt = transAmt;
+        this.instalmentsNum = instalmentsNum;
+        this.bankCardNo = bankCardNo;
         this.extendPayData = extendPayData;
         this.riskCheckData = riskCheckData;
         this.terminalDeviceData = terminalDeviceData;
@@ -107,6 +119,22 @@ public class V2TradeOnlinepaymentWappayRequest extends BaseRequest {
 
     public void setTransAmt(String transAmt) {
         this.transAmt = transAmt;
+    }
+
+    public String getInstalmentsNum() {
+        return instalmentsNum;
+    }
+
+    public void setInstalmentsNum(String instalmentsNum) {
+        this.instalmentsNum = instalmentsNum;
+    }
+
+    public String getBankCardNo() {
+        return bankCardNo;
+    }
+
+    public void setBankCardNo(String bankCardNo) {
+        this.bankCardNo = bankCardNo;
     }
 
     public String getExtendPayData() {

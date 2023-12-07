@@ -26,12 +26,12 @@ public class V2TradePayscoreServiceorderCreateRequestDemo extends BaseCommonDemo
 
         // 2.组装请求参数
         V2TradePayscoreServiceorderCreateRequest request = new V2TradePayscoreServiceorderCreateRequest();
-        // 汇付商户号
-        request.setHuifuId("6666000108854952");
         // 请求日期
         request.setReqDate(DateTools.getCurrentDateYYYYMMDD());
         // 商户申请单号
         request.setReqSeqId(SequenceTools.getReqSeqId32());
+        // 汇付商户号
+        request.setHuifuId("6666000108854952");
         // 服务信息
         // request.setServiceIntroduction("test");
         // 服务风险金
@@ -61,22 +61,22 @@ public class V2TradePayscoreServiceorderCreateRequestDemo extends BaseCommonDemo
         // extendInfoMap.put("service_id", "");
         // 子商户公众号ID
         // extendInfoMap.put("sub_appid", "");
+        // 场景类型
+        // extendInfoMap.put("trade_scene", "");
+        // 费率类型
+        // extendInfoMap.put("pay_scene", "");
+        // 从业机构公众号下的用户标识
+        // extendInfoMap.put("openid", "");
+        // 子商户公众号下的用户标识
+        // extendInfoMap.put("sub_openid", "");
         // 后付费项目
         // extendInfoMap.put("post_payments", getPostPayments());
         // 商户优惠
         // extendInfoMap.put("post_discounts", getPostDiscounts());
         // 服务位置
         // extendInfoMap.put("location", getLocation());
-        // 从业机构公众号下的用户标识
-        // extendInfoMap.put("openid", "");
-        // 子商户公众号下的用户标识
-        // extendInfoMap.put("sub_openid", "");
         // 附加数据
         // extendInfoMap.put("attach", "");
-        // 场景类型
-        // extendInfoMap.put("trade_scene", "");
-        // 费率类型
-        // extendInfoMap.put("pay_scene", "");
         return extendInfoMap;
     }
 

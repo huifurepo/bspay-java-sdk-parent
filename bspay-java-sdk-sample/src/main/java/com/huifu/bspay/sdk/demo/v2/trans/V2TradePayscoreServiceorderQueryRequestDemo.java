@@ -46,10 +46,10 @@ public class V2TradePayscoreServiceorderQueryRequestDemo extends BaseCommonDemo 
         // 设置非必填字段
         Map<String, Object> extendInfoMap = new HashMap<>();
         // 汇付服务订单号
-        // extendInfoMap.put("out_order_no", "");
-        // 创建服务订单返回的汇付全局流水号
+        extendInfoMap.put("out_order_no", "1234323JKHDFE1243252");
+        // 汇付全局流水号
         // extendInfoMap.put("org_hf_seq_id", "");
-        // 服务订单创建请求流水号
+        // 请求流水号
         // extendInfoMap.put("org_req_seq_id", "");
         return extendInfoMap;
     }

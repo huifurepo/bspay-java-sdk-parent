@@ -32,11 +32,6 @@ public class V2TradeOnlinepaymentQuickpayFrontpayRequest extends BaseRequest {
     @JSONField(name = "trans_amt")
     private String transAmt;
     /**
-     * 异步通知地址
-     */
-    @JSONField(name = "notify_url")
-    private String notifyUrl;
-    /**
      * 银行扩展信息
      */
     @JSONField(name = "extend_pay_data")
@@ -51,6 +46,11 @@ public class V2TradeOnlinepaymentQuickpayFrontpayRequest extends BaseRequest {
      */
     @JSONField(name = "risk_check_data")
     private String riskCheckData;
+    /**
+     * 异步通知地址
+     */
+    @JSONField(name = "notify_url")
+    private String notifyUrl;
 
     @Override
     public FunctionCodeEnum getFunctionCode() {
@@ -60,15 +60,15 @@ public class V2TradeOnlinepaymentQuickpayFrontpayRequest extends BaseRequest {
     public V2TradeOnlinepaymentQuickpayFrontpayRequest() {
     }
 
-    public V2TradeOnlinepaymentQuickpayFrontpayRequest(String reqSeqId, String reqDate, String huifuId, String transAmt, String notifyUrl, String extendPayData, String terminalDeviceData, String riskCheckData) {
+    public V2TradeOnlinepaymentQuickpayFrontpayRequest(String reqSeqId, String reqDate, String huifuId, String transAmt, String extendPayData, String terminalDeviceData, String riskCheckData, String notifyUrl) {
         this.reqSeqId = reqSeqId;
         this.reqDate = reqDate;
         this.huifuId = huifuId;
         this.transAmt = transAmt;
-        this.notifyUrl = notifyUrl;
         this.extendPayData = extendPayData;
         this.terminalDeviceData = terminalDeviceData;
         this.riskCheckData = riskCheckData;
+        this.notifyUrl = notifyUrl;
     }
 
     public String getReqSeqId() {
@@ -103,14 +103,6 @@ public class V2TradeOnlinepaymentQuickpayFrontpayRequest extends BaseRequest {
         this.transAmt = transAmt;
     }
 
-    public String getNotifyUrl() {
-        return notifyUrl;
-    }
-
-    public void setNotifyUrl(String notifyUrl) {
-        this.notifyUrl = notifyUrl;
-    }
-
     public String getExtendPayData() {
         return extendPayData;
     }
@@ -133,6 +125,14 @@ public class V2TradeOnlinepaymentQuickpayFrontpayRequest extends BaseRequest {
 
     public void setRiskCheckData(String riskCheckData) {
         this.riskCheckData = riskCheckData;
+    }
+
+    public String getNotifyUrl() {
+        return notifyUrl;
+    }
+
+    public void setNotifyUrl(String notifyUrl) {
+        this.notifyUrl = notifyUrl;
     }
 
 }

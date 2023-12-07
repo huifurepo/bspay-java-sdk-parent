@@ -34,10 +34,10 @@ public class V2TradeOnlinepaymentQuickpayConfirmRequestDemo extends BaseCommonDe
         request.setHuifuId("6666000103423237");
         // 短信验证码
         request.setSmsCode("111111");
-        // 外部地址
-        request.setNotifyUrl("http://www.baidu.com");
         // 商品描述
         request.setGoodsDesc("描述6");
+        // 外部地址
+        request.setNotifyUrl("http://www.baidu.com");
 
         // 设置非必填字段
         Map<String, Object> extendInfoMap = getExtendInfos();

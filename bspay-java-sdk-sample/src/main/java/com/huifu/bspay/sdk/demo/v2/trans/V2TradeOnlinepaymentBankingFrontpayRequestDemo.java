@@ -65,25 +65,47 @@ public class V2TradeOnlinepaymentBankingFrontpayRequestDemo extends BaseCommonDe
         extendInfoMap.put("acct_id", "");
         // 订单类型
         extendInfoMap.put("order_type", "P");
+        // 付款方银行编号
+        extendInfoMap.put("bank_id", "");
         // 卡类型
         extendInfoMap.put("card_type", "D");
+        // 备注
+        extendInfoMap.put("remark", "网银支付接口");
         // 订单失效时间
         extendInfoMap.put("time_expire", "");
         // 网关支付类型
         extendInfoMap.put("gate_type", "01");
-        // 付款方银行编号
-        extendInfoMap.put("bank_id", "");
         // 延时标记
         extendInfoMap.put("delay_acct_flag", "N");
         // 分账对象
         // extendInfoMap.put("acct_split_bunch", getAcctSplitBunchRucan());
-        // 备注
-        extendInfoMap.put("remark", "网银支付接口");
-        // 页面跳转地址
-        extendInfoMap.put("front_url", "http://www.chinapnr.com");
         // 手续费扣款标志
         // extendInfoMap.put("fee_flag", "");
+        // 页面跳转地址
+        extendInfoMap.put("front_url", "http://www.chinapnr.com");
         return extendInfoMap;
+    }
+
+    private static JSON getAcctInfos() {
+        JSONObject dto = new JSONObject();
+        // 分账金额
+        // dto.put("div_amt", "");
+        // 被分账方ID
+        // dto.put("huifu_id", "");
+        // 被分账户号
+        // dto.put("acct_id", "");
+
+        JSONArray dtoList = new JSONArray();
+        dtoList.add(dto);
+        return dtoList;
+    }
+
+    private static String getAcctSplitBunchRucan() {
+        JSONObject dto = new JSONObject();
+        // 分账明细
+        // dto.put("acct_infos", getAcctInfos());
+
+        return dto.toJSONString();
     }
 
     private static String getExtendPayData() {
@@ -116,28 +138,6 @@ public class V2TradeOnlinepaymentBankingFrontpayRequestDemo extends BaseCommonDe
         // dto.put("device_wifi_mac", "");
         // 交易设备GPS
         // dto.put("device_gps", "");
-
-        return dto.toJSONString();
-    }
-
-    private static JSON getAcctInfos() {
-        JSONObject dto = new JSONObject();
-        // 分账金额
-        // dto.put("div_amt", "");
-        // 被分账方ID
-        // dto.put("huifu_id", "");
-        // 被分账户号
-        // dto.put("acct_id", "");
-
-        JSONArray dtoList = new JSONArray();
-        dtoList.add(dto);
-        return dtoList;
-    }
-
-    private static String getAcctSplitBunchRucan() {
-        JSONObject dto = new JSONObject();
-        // 分账明细
-        // dto.put("acct_infos", getAcctInfos());
 
         return dto.toJSONString();
     }

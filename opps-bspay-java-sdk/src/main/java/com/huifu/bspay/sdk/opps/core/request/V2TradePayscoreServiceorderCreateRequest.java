@@ -12,11 +12,6 @@ import com.huifu.bspay.sdk.opps.core.enums.FunctionCodeEnum;
 public class V2TradePayscoreServiceorderCreateRequest extends BaseRequest {
 
     /**
-     * 汇付商户号
-     */
-    @JSONField(name = "huifu_id")
-    private String huifuId;
-    /**
      * 请求日期
      */
     @JSONField(name = "req_date")
@@ -26,6 +21,11 @@ public class V2TradePayscoreServiceorderCreateRequest extends BaseRequest {
      */
     @JSONField(name = "req_seq_id")
     private String reqSeqId;
+    /**
+     * 汇付商户号
+     */
+    @JSONField(name = "huifu_id")
+    private String huifuId;
     /**
      * 服务信息
      */
@@ -55,22 +55,14 @@ public class V2TradePayscoreServiceorderCreateRequest extends BaseRequest {
     public V2TradePayscoreServiceorderCreateRequest() {
     }
 
-    public V2TradePayscoreServiceorderCreateRequest(String huifuId, String reqDate, String reqSeqId, String serviceIntroduction, String riskFund, String timeRange, String notifyUrl) {
-        this.huifuId = huifuId;
+    public V2TradePayscoreServiceorderCreateRequest(String reqDate, String reqSeqId, String huifuId, String serviceIntroduction, String riskFund, String timeRange, String notifyUrl) {
         this.reqDate = reqDate;
         this.reqSeqId = reqSeqId;
+        this.huifuId = huifuId;
         this.serviceIntroduction = serviceIntroduction;
         this.riskFund = riskFund;
         this.timeRange = timeRange;
         this.notifyUrl = notifyUrl;
-    }
-
-    public String getHuifuId() {
-        return huifuId;
-    }
-
-    public void setHuifuId(String huifuId) {
-        this.huifuId = huifuId;
     }
 
     public String getReqDate() {
@@ -87,6 +79,14 @@ public class V2TradePayscoreServiceorderCreateRequest extends BaseRequest {
 
     public void setReqSeqId(String reqSeqId) {
         this.reqSeqId = reqSeqId;
+    }
+
+    public String getHuifuId() {
+        return huifuId;
+    }
+
+    public void setHuifuId(String huifuId) {
+        this.huifuId = huifuId;
     }
 
     public String getServiceIntroduction() {

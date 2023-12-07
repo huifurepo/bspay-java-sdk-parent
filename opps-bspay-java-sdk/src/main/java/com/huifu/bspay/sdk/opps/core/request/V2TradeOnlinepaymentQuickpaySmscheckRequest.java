@@ -27,15 +27,15 @@ public class V2TradeOnlinepaymentQuickpaySmscheckRequest extends BaseRequest {
     @JSONField(name = "huifu_id")
     private String huifuId;
     /**
-     * 原请求流水号
-     */
-    @JSONField(name = "org_req_seq_id")
-    private String orgReqSeqId;
-    /**
      * 原请求日期
      */
     @JSONField(name = "org_req_date")
     private String orgReqDate;
+    /**
+     * 原请求流水号
+     */
+    @JSONField(name = "org_req_seq_id")
+    private String orgReqSeqId;
     /**
      * 短信验证码
      */
@@ -50,12 +50,12 @@ public class V2TradeOnlinepaymentQuickpaySmscheckRequest extends BaseRequest {
     public V2TradeOnlinepaymentQuickpaySmscheckRequest() {
     }
 
-    public V2TradeOnlinepaymentQuickpaySmscheckRequest(String reqSeqId, String reqDate, String huifuId, String orgReqSeqId, String orgReqDate, String smsCode) {
+    public V2TradeOnlinepaymentQuickpaySmscheckRequest(String reqSeqId, String reqDate, String huifuId, String orgReqDate, String orgReqSeqId, String smsCode) {
         this.reqSeqId = reqSeqId;
         this.reqDate = reqDate;
         this.huifuId = huifuId;
-        this.orgReqSeqId = orgReqSeqId;
         this.orgReqDate = orgReqDate;
+        this.orgReqSeqId = orgReqSeqId;
         this.smsCode = smsCode;
     }
 
@@ -83,20 +83,20 @@ public class V2TradeOnlinepaymentQuickpaySmscheckRequest extends BaseRequest {
         this.huifuId = huifuId;
     }
 
-    public String getOrgReqSeqId() {
-        return orgReqSeqId;
-    }
-
-    public void setOrgReqSeqId(String orgReqSeqId) {
-        this.orgReqSeqId = orgReqSeqId;
-    }
-
     public String getOrgReqDate() {
         return orgReqDate;
     }
 
     public void setOrgReqDate(String orgReqDate) {
         this.orgReqDate = orgReqDate;
+    }
+
+    public String getOrgReqSeqId() {
+        return orgReqSeqId;
+    }
+
+    public void setOrgReqSeqId(String orgReqSeqId) {
+        this.orgReqSeqId = orgReqSeqId;
     }
 
     public String getSmsCode() {

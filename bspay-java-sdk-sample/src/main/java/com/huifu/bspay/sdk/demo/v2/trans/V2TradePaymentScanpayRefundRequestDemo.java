@@ -59,29 +59,107 @@ public class V2TradePaymentScanpayRefundRequestDemo extends BaseCommonDemo {
         // extendInfoMap.put("org_party_order_id", "");
         // 原交易请求流水号
         // extendInfoMap.put("org_req_seq_id", "");
-        // 安全信息
-        // extendInfoMap.put("risk_check_data", getRiskCheckData());
-        // 设备信息
-        // extendInfoMap.put("terminal_device_data", getTerminalDeviceData());
         // 分账对象
         // extendInfoMap.put("acct_split_bunch", getAcctSplitBunchRucan());
+        // 聚合正扫微信拓展参数集合
+        // extendInfoMap.put("wx_data", getWxData());
         // 数字货币扩展参数集合
         // extendInfoMap.put("digital_currency_data", getDigitalCurrencyData());
+        // 补贴支付信息
+        // extendInfoMap.put("combinedpay_data", getCombinedpayData());
         // 备注
         // extendInfoMap.put("remark", "");
-        // 异步通知地址
-        // extendInfoMap.put("notify_url", "");
         // 是否垫资退款
         // extendInfoMap.put("loan_flag", "");
         // 垫资承担者
         // extendInfoMap.put("loan_undertaker", "");
         // 垫资账户类型
         // extendInfoMap.put("loan_acct_type", "");
-        // 补贴支付信息
-        // extendInfoMap.put("combinedpay_data", getCombinedpayData());
-        // 聚合正扫微信拓展参数集合
-        // extendInfoMap.put("wx_data", getWxData());
+        // 安全信息
+        // extendInfoMap.put("risk_check_data", getRiskCheckData());
+        // 设备信息
+        // extendInfoMap.put("terminal_device_data", getTerminalDeviceData());
+        // 异步通知地址
+        // extendInfoMap.put("notify_url", "");
         return extendInfoMap;
+    }
+
+    private static JSON getAcctInfosRucan() {
+        JSONObject dto = new JSONObject();
+        // 分账金额
+        // dto.put("div_amt", "test");
+        // 被分账方ID
+        // dto.put("huifu_id", "test");
+        // 垫资金额
+        // dto.put("part_loan_amt", "");
+
+        JSONArray dtoList = new JSONArray();
+        dtoList.add(dto);
+        return dtoList;
+    }
+
+    private static String getAcctSplitBunchRucan() {
+        JSONObject dto = new JSONObject();
+        // 分账信息列表
+        // dto.put("acct_infos", getAcctInfosRucan());
+
+        return dto.toJSONString();
+    }
+
+    private static JSON getGoodsDetail() {
+        JSONObject dto = new JSONObject();
+        // 商品编码
+        // dto.put("goods_id", "test");
+        // 优惠退款金额
+        // dto.put("refund_amount", "test");
+        // 商品退货数量
+        // dto.put("refund_quantity", "test");
+        // 商品单价
+        // dto.put("price", "test");
+
+        JSONArray dtoList = new JSONArray();
+        dtoList.add(dto);
+        return dtoList;
+    }
+
+    private static JSON getDetail() {
+        JSONObject dto = new JSONObject();
+        // 商品详情列表
+        // dto.put("goods_detail", getGoodsDetail());
+
+        return dto;
+    }
+
+    private static JSON getWxData() {
+        JSONObject dto = new JSONObject();
+        // 退款商品详情
+        // dto.put("detail", getDetail());
+
+        return dto;
+    }
+
+    private static String getDigitalCurrencyData() {
+        JSONObject dto = new JSONObject();
+        // 退款原因
+        // dto.put("refund_desc", "");
+
+        return dto.toJSONString();
+    }
+
+    private static String getCombinedpayData() {
+        JSONObject dto = new JSONObject();
+        // 补贴方汇付编号
+        // dto.put("huifu_id", "test");
+        // 补贴方类型
+        // dto.put("user_type", "test");
+        // 补贴方账户号
+        // dto.put("acct_id", "test");
+        // 补贴金额
+        // dto.put("amount", "test");
+
+        JSONArray dtoList = new JSONArray();
+        dtoList.add(dto);
+        return dtoList.toJSONString();
     }
 
     private static String getRiskCheckData() {
@@ -118,84 +196,6 @@ public class V2TradePaymentScanpayRefundRequestDemo extends BaseCommonDemo {
         // dto.put("device_gps", "");
 
         return dto.toJSONString();
-    }
-
-    private static JSON getAcctInfosRucan() {
-        JSONObject dto = new JSONObject();
-        // 分账金额
-        // dto.put("div_amt", "test");
-        // 被分账方ID
-        // dto.put("huifu_id", "test");
-        // 垫资金额
-        // dto.put("part_loan_amt", "");
-
-        JSONArray dtoList = new JSONArray();
-        dtoList.add(dto);
-        return dtoList;
-    }
-
-    private static String getAcctSplitBunchRucan() {
-        JSONObject dto = new JSONObject();
-        // 分账信息列表
-        // dto.put("acct_infos", getAcctInfosRucan());
-
-        return dto.toJSONString();
-    }
-
-    private static String getDigitalCurrencyData() {
-        JSONObject dto = new JSONObject();
-        // 退款原因
-        // dto.put("refund_desc", "");
-
-        return dto.toJSONString();
-    }
-
-    private static String getCombinedpayData() {
-        JSONObject dto = new JSONObject();
-        // 补贴方汇付编号
-        // dto.put("huifu_id", "test");
-        // 补贴方类型
-        // dto.put("user_type", "test");
-        // 补贴方账户号
-        // dto.put("acct_id", "test");
-        // 补贴金额
-        // dto.put("amount", "test");
-
-        JSONArray dtoList = new JSONArray();
-        dtoList.add(dto);
-        return dtoList.toJSONString();
-    }
-
-    private static JSON getGoodsDetail() {
-        JSONObject dto = new JSONObject();
-        // 商品编码
-        // dto.put("goods_id", "test");
-        // 优惠退款金额
-        // dto.put("refund_amount", "test");
-        // 商品退货数量
-        // dto.put("refund_quantity", "test");
-        // 商品单价
-        // dto.put("price", "test");
-
-        JSONArray dtoList = new JSONArray();
-        dtoList.add(dto);
-        return dtoList;
-    }
-
-    private static JSON getDetail() {
-        JSONObject dto = new JSONObject();
-        // 商品详情列表
-        // dto.put("goods_detail", getGoodsDetail());
-
-        return dto;
-    }
-
-    private static JSON getWxData() {
-        JSONObject dto = new JSONObject();
-        // 退款商品详情
-        // dto.put("detail", getDetail());
-
-        return dto;
     }
 
 }

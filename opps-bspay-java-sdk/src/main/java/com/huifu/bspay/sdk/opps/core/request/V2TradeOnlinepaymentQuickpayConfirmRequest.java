@@ -32,15 +32,15 @@ public class V2TradeOnlinepaymentQuickpayConfirmRequest extends BaseRequest {
     @JSONField(name = "sms_code")
     private String smsCode;
     /**
-     * 外部地址
-     */
-    @JSONField(name = "notify_url")
-    private String notifyUrl;
-    /**
      * 商品描述
      */
     @JSONField(name = "goods_desc")
     private String goodsDesc;
+    /**
+     * 外部地址
+     */
+    @JSONField(name = "notify_url")
+    private String notifyUrl;
 
     @Override
     public FunctionCodeEnum getFunctionCode() {
@@ -50,13 +50,13 @@ public class V2TradeOnlinepaymentQuickpayConfirmRequest extends BaseRequest {
     public V2TradeOnlinepaymentQuickpayConfirmRequest() {
     }
 
-    public V2TradeOnlinepaymentQuickpayConfirmRequest(String reqDate, String reqSeqId, String huifuId, String smsCode, String notifyUrl, String goodsDesc) {
+    public V2TradeOnlinepaymentQuickpayConfirmRequest(String reqDate, String reqSeqId, String huifuId, String smsCode, String goodsDesc, String notifyUrl) {
         this.reqDate = reqDate;
         this.reqSeqId = reqSeqId;
         this.huifuId = huifuId;
         this.smsCode = smsCode;
-        this.notifyUrl = notifyUrl;
         this.goodsDesc = goodsDesc;
+        this.notifyUrl = notifyUrl;
     }
 
     public String getReqDate() {
@@ -91,20 +91,20 @@ public class V2TradeOnlinepaymentQuickpayConfirmRequest extends BaseRequest {
         this.smsCode = smsCode;
     }
 
-    public String getNotifyUrl() {
-        return notifyUrl;
-    }
-
-    public void setNotifyUrl(String notifyUrl) {
-        this.notifyUrl = notifyUrl;
-    }
-
     public String getGoodsDesc() {
         return goodsDesc;
     }
 
     public void setGoodsDesc(String goodsDesc) {
         this.goodsDesc = goodsDesc;
+    }
+
+    public String getNotifyUrl() {
+        return notifyUrl;
+    }
+
+    public void setNotifyUrl(String notifyUrl) {
+        this.notifyUrl = notifyUrl;
     }
 
 }

@@ -68,9 +68,9 @@ public class V2TradePaymentDelaytransConfirmrefundRequestDemo extends BaseCommon
         JSONObject dto = new JSONObject();
         // 被分账方ID
         dto.put("huifu_id", "6666000003109208");
-        // 分账金额
+        // 分账金额(元)
         dto.put("div_amt", "0.01");
-        // 垫资金额
+        // 垫资金额(元)
         // dto.put("part_loan_amt", "");
 
         JSONArray dtoList = new JSONArray();

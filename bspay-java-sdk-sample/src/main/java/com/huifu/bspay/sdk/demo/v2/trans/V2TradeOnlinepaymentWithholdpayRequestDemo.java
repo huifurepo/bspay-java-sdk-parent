@@ -32,24 +32,24 @@ public class V2TradeOnlinepaymentWithholdpayRequestDemo extends BaseCommonDemo {
         request.setReqSeqId(SequenceTools.getReqSeqId32());
         // 商户号
         request.setHuifuId("6666000109812884");
-        // 异步通知地址
-        request.setNotifyUrl("http://www.chinapnr.com/");
-        // 订单金额
-        request.setTransAmt("0.01");
-        // 绑卡id
-        request.setCardBindId("10024597199");
         // 用户客户号
         request.setUserHuifuId("6666000109818115");
+        // 绑卡id
+        request.setCardBindId("10024597199");
+        // 订单金额
+        request.setTransAmt("0.01");
         // 商品描述
         request.setGoodsDesc("代扣test");
+        // 代扣类型
+        request.setWithholdType("2");
+        // 银行扩展数据
+        request.setExtendPayData(getExtendPayData());
         // 风控信息
         request.setRiskCheckData(getRiskCheckData());
         // 设备信息数据
         request.setTerminalDeviceData(getTerminalDeviceData());
-        // 银行扩展数据
-        request.setExtendPayData(getExtendPayData());
-        // 代扣类型
-        request.setWithholdType("2");
+        // 异步通知地址
+        request.setNotifyUrl("http://www.chinapnr.com/");
 
         // 设置非必填字段
         Map<String, Object> extendInfoMap = getExtendInfos();
@@ -69,13 +69,45 @@ public class V2TradeOnlinepaymentWithholdpayRequestDemo extends BaseCommonDemo {
         Map<String, Object> extendInfoMap = new HashMap<>();
         // 备注
         extendInfoMap.put("remark", "reamrk123");
+        // 账户号
+        // extendInfoMap.put("acct_id", "");
         // 订单失效时间
         extendInfoMap.put("time_expire", "20221212121212");
         // 分账对象
         // extendInfoMap.put("acct_split_bunch", getAcctSplitBunch());
-        // 账户号
-        // extendInfoMap.put("acct_id", "");
         return extendInfoMap;
+    }
+
+    private static JSON getAcctInfos() {
+        JSONObject dto = new JSONObject();
+        // 支付金额
+        // dto.put("div_amt", "");
+        // 商户号
+        // dto.put("huifu_id", "");
+
+        JSONArray dtoList = new JSONArray();
+        dtoList.add(dto);
+        return dtoList;
+    }
+
+    private static JSON getAcctSplitBunch() {
+        JSONObject dto = new JSONObject();
+        // 分账信息列表
+        // dto.put("acct_infos", getAcctInfos());
+
+        return dto;
+    }
+
+    private static String getExtendPayData() {
+        JSONObject dto = new JSONObject();
+        // 业务种类
+        dto.put("biz_tp", "012345");
+        // 商品简称
+        dto.put("goods_short_name", "看看");
+        // 网关支付受理渠道
+        // dto.put("gw_chnnl_tp", "test");
+
+        return dto.toJSONString();
     }
 
     private static String getRiskCheckData() {
@@ -110,38 +142,6 @@ public class V2TradeOnlinepaymentWithholdpayRequestDemo extends BaseCommonDemo {
         // dto.put("device_mac", "");
         // 交易设备wifimac
         // dto.put("device_wifi_mac", "");
-
-        return dto.toJSONString();
-    }
-
-    private static JSON getAcctInfos() {
-        JSONObject dto = new JSONObject();
-        // 支付金额
-        // dto.put("div_amt", "");
-        // 商户号
-        // dto.put("huifu_id", "");
-
-        JSONArray dtoList = new JSONArray();
-        dtoList.add(dto);
-        return dtoList;
-    }
-
-    private static JSON getAcctSplitBunch() {
-        JSONObject dto = new JSONObject();
-        // 分账信息列表
-        // dto.put("acct_infos", getAcctInfos());
-
-        return dto;
-    }
-
-    private static String getExtendPayData() {
-        JSONObject dto = new JSONObject();
-        // 业务种类
-        dto.put("biz_tp", "012345");
-        // 商品简称
-        dto.put("goods_short_name", "看看");
-        // 网关支付受理渠道
-        // dto.put("gw_chnnl_tp", "test");
 
         return dto.toJSONString();
     }

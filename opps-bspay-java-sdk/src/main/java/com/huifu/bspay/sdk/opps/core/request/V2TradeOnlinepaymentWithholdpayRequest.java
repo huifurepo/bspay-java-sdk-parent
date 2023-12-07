@@ -27,30 +27,35 @@ public class V2TradeOnlinepaymentWithholdpayRequest extends BaseRequest {
     @JSONField(name = "huifu_id")
     private String huifuId;
     /**
-     * 异步通知地址
+     * 用户客户号
      */
-    @JSONField(name = "notify_url")
-    private String notifyUrl;
-    /**
-     * 订单金额
-     */
-    @JSONField(name = "trans_amt")
-    private String transAmt;
+    @JSONField(name = "user_huifu_id")
+    private String userHuifuId;
     /**
      * 绑卡id
      */
     @JSONField(name = "card_bind_id")
     private String cardBindId;
     /**
-     * 用户客户号
+     * 订单金额
      */
-    @JSONField(name = "user_huifu_id")
-    private String userHuifuId;
+    @JSONField(name = "trans_amt")
+    private String transAmt;
     /**
      * 商品描述
      */
     @JSONField(name = "goods_desc")
     private String goodsDesc;
+    /**
+     * 代扣类型
+     */
+    @JSONField(name = "withhold_type")
+    private String withholdType;
+    /**
+     * 银行扩展数据
+     */
+    @JSONField(name = "extend_pay_data")
+    private String extendPayData;
     /**
      * 风控信息
      */
@@ -62,15 +67,10 @@ public class V2TradeOnlinepaymentWithholdpayRequest extends BaseRequest {
     @JSONField(name = "terminal_device_data")
     private String terminalDeviceData;
     /**
-     * 银行扩展数据
+     * 异步通知地址
      */
-    @JSONField(name = "extend_pay_data")
-    private String extendPayData;
-    /**
-     * 代扣类型
-     */
-    @JSONField(name = "withhold_type")
-    private String withholdType;
+    @JSONField(name = "notify_url")
+    private String notifyUrl;
 
     @Override
     public FunctionCodeEnum getFunctionCode() {
@@ -80,19 +80,19 @@ public class V2TradeOnlinepaymentWithholdpayRequest extends BaseRequest {
     public V2TradeOnlinepaymentWithholdpayRequest() {
     }
 
-    public V2TradeOnlinepaymentWithholdpayRequest(String reqDate, String reqSeqId, String huifuId, String notifyUrl, String transAmt, String cardBindId, String userHuifuId, String goodsDesc, String riskCheckData, String terminalDeviceData, String extendPayData, String withholdType) {
+    public V2TradeOnlinepaymentWithholdpayRequest(String reqDate, String reqSeqId, String huifuId, String userHuifuId, String cardBindId, String transAmt, String goodsDesc, String withholdType, String extendPayData, String riskCheckData, String terminalDeviceData, String notifyUrl) {
         this.reqDate = reqDate;
         this.reqSeqId = reqSeqId;
         this.huifuId = huifuId;
-        this.notifyUrl = notifyUrl;
-        this.transAmt = transAmt;
-        this.cardBindId = cardBindId;
         this.userHuifuId = userHuifuId;
+        this.cardBindId = cardBindId;
+        this.transAmt = transAmt;
         this.goodsDesc = goodsDesc;
+        this.withholdType = withholdType;
+        this.extendPayData = extendPayData;
         this.riskCheckData = riskCheckData;
         this.terminalDeviceData = terminalDeviceData;
-        this.extendPayData = extendPayData;
-        this.withholdType = withholdType;
+        this.notifyUrl = notifyUrl;
     }
 
     public String getReqDate() {
@@ -119,20 +119,12 @@ public class V2TradeOnlinepaymentWithholdpayRequest extends BaseRequest {
         this.huifuId = huifuId;
     }
 
-    public String getNotifyUrl() {
-        return notifyUrl;
+    public String getUserHuifuId() {
+        return userHuifuId;
     }
 
-    public void setNotifyUrl(String notifyUrl) {
-        this.notifyUrl = notifyUrl;
-    }
-
-    public String getTransAmt() {
-        return transAmt;
-    }
-
-    public void setTransAmt(String transAmt) {
-        this.transAmt = transAmt;
+    public void setUserHuifuId(String userHuifuId) {
+        this.userHuifuId = userHuifuId;
     }
 
     public String getCardBindId() {
@@ -143,12 +135,12 @@ public class V2TradeOnlinepaymentWithholdpayRequest extends BaseRequest {
         this.cardBindId = cardBindId;
     }
 
-    public String getUserHuifuId() {
-        return userHuifuId;
+    public String getTransAmt() {
+        return transAmt;
     }
 
-    public void setUserHuifuId(String userHuifuId) {
-        this.userHuifuId = userHuifuId;
+    public void setTransAmt(String transAmt) {
+        this.transAmt = transAmt;
     }
 
     public String getGoodsDesc() {
@@ -157,6 +149,22 @@ public class V2TradeOnlinepaymentWithholdpayRequest extends BaseRequest {
 
     public void setGoodsDesc(String goodsDesc) {
         this.goodsDesc = goodsDesc;
+    }
+
+    public String getWithholdType() {
+        return withholdType;
+    }
+
+    public void setWithholdType(String withholdType) {
+        this.withholdType = withholdType;
+    }
+
+    public String getExtendPayData() {
+        return extendPayData;
+    }
+
+    public void setExtendPayData(String extendPayData) {
+        this.extendPayData = extendPayData;
     }
 
     public String getRiskCheckData() {
@@ -175,20 +183,12 @@ public class V2TradeOnlinepaymentWithholdpayRequest extends BaseRequest {
         this.terminalDeviceData = terminalDeviceData;
     }
 
-    public String getExtendPayData() {
-        return extendPayData;
+    public String getNotifyUrl() {
+        return notifyUrl;
     }
 
-    public void setExtendPayData(String extendPayData) {
-        this.extendPayData = extendPayData;
-    }
-
-    public String getWithholdType() {
-        return withholdType;
-    }
-
-    public void setWithholdType(String withholdType) {
-        this.withholdType = withholdType;
+    public void setNotifyUrl(String notifyUrl) {
+        this.notifyUrl = notifyUrl;
     }
 
 }

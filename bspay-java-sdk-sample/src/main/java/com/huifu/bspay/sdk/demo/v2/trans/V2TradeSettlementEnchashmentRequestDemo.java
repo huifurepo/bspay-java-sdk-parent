@@ -55,12 +55,12 @@ public class V2TradeSettlementEnchashmentRequestDemo extends BaseCommonDemo {
     private static Map<String, Object> getExtendInfos() {
         // 设置非必填字段
         Map<String, Object> extendInfoMap = new HashMap<>();
-        // 异步通知地址
-        extendInfoMap.put("notify_url", "http://www.gangcai.com");
-        // 备注
-        // extendInfoMap.put("remark", "");
         // 账户号
         // extendInfoMap.put("acct_id", "");
+        // 备注
+        // extendInfoMap.put("remark", "");
+        // 异步通知地址
+        extendInfoMap.put("notify_url", "http://www.gangcai.com");
         return extendInfoMap;
     }
 

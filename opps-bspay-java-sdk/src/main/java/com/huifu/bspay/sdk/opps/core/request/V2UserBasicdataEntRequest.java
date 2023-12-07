@@ -27,11 +27,6 @@ public class V2UserBasicdataEntRequest extends BaseRequest {
     @JSONField(name = "reg_name")
     private String regName;
     /**
-     * 经营简称
-     */
-    @JSONField(name = "short_name")
-    private String shortName;
-    /**
      * 营业执照编号
      */
     @JSONField(name = "license_code")
@@ -120,11 +115,10 @@ public class V2UserBasicdataEntRequest extends BaseRequest {
     public V2UserBasicdataEntRequest() {
     }
 
-    public V2UserBasicdataEntRequest(String reqSeqId, String reqDate, String regName, String shortName, String licenseCode, String licenseValidityType, String licenseBeginDate, String licenseEndDate, String regProvId, String regAreaId, String regDistrictId, String regDetail, String legalName, String legalCertType, String legalCertNo, String legalCertValidityType, String legalCertBeginDate, String legalCertEndDate, String contactName, String contactMobile) {
+    public V2UserBasicdataEntRequest(String reqSeqId, String reqDate, String regName, String licenseCode, String licenseValidityType, String licenseBeginDate, String licenseEndDate, String regProvId, String regAreaId, String regDistrictId, String regDetail, String legalName, String legalCertType, String legalCertNo, String legalCertValidityType, String legalCertBeginDate, String legalCertEndDate, String contactName, String contactMobile) {
         this.reqSeqId = reqSeqId;
         this.reqDate = reqDate;
         this.regName = regName;
-        this.shortName = shortName;
         this.licenseCode = licenseCode;
         this.licenseValidityType = licenseValidityType;
         this.licenseBeginDate = licenseBeginDate;
@@ -165,14 +159,6 @@ public class V2UserBasicdataEntRequest extends BaseRequest {
 
     public void setRegName(String regName) {
         this.regName = regName;
-    }
-
-    public String getShortName() {
-        return shortName;
-    }
-
-    public void setShortName(String shortName) {
-        this.shortName = shortName;
     }
 
     public String getLicenseCode() {

@@ -27,25 +27,25 @@ public class V2TradeOnlinepaymentQuickpayApplyRequest extends BaseRequest {
     @JSONField(name = "huifu_id")
     private String huifuId;
     /**
-     * 订单金额
+     * 用户客户号
      */
-    @JSONField(name = "trans_amt")
-    private String transAmt;
+    @JSONField(name = "user_huifu_id")
+    private String userHuifuId;
     /**
      * 绑卡id
      */
     @JSONField(name = "card_bind_id")
     private String cardBindId;
     /**
-     * 异步通知地址
+     * 订单金额
      */
-    @JSONField(name = "notify_url")
-    private String notifyUrl;
+    @JSONField(name = "trans_amt")
+    private String transAmt;
     /**
-     * 用户客户号
+     * 银行扩展字段
      */
-    @JSONField(name = "user_huifu_id")
-    private String userHuifuId;
+    @JSONField(name = "extend_pay_data")
+    private String extendPayData;
     /**
      * 安全信息
      */
@@ -57,10 +57,10 @@ public class V2TradeOnlinepaymentQuickpayApplyRequest extends BaseRequest {
     @JSONField(name = "terminal_device_data")
     private String terminalDeviceData;
     /**
-     * 银行扩展字段
+     * 异步通知地址
      */
-    @JSONField(name = "extend_pay_data")
-    private String extendPayData;
+    @JSONField(name = "notify_url")
+    private String notifyUrl;
 
     @Override
     public FunctionCodeEnum getFunctionCode() {
@@ -70,17 +70,17 @@ public class V2TradeOnlinepaymentQuickpayApplyRequest extends BaseRequest {
     public V2TradeOnlinepaymentQuickpayApplyRequest() {
     }
 
-    public V2TradeOnlinepaymentQuickpayApplyRequest(String reqDate, String reqSeqId, String huifuId, String transAmt, String cardBindId, String notifyUrl, String userHuifuId, String riskCheckData, String terminalDeviceData, String extendPayData) {
+    public V2TradeOnlinepaymentQuickpayApplyRequest(String reqDate, String reqSeqId, String huifuId, String userHuifuId, String cardBindId, String transAmt, String extendPayData, String riskCheckData, String terminalDeviceData, String notifyUrl) {
         this.reqDate = reqDate;
         this.reqSeqId = reqSeqId;
         this.huifuId = huifuId;
-        this.transAmt = transAmt;
-        this.cardBindId = cardBindId;
-        this.notifyUrl = notifyUrl;
         this.userHuifuId = userHuifuId;
+        this.cardBindId = cardBindId;
+        this.transAmt = transAmt;
+        this.extendPayData = extendPayData;
         this.riskCheckData = riskCheckData;
         this.terminalDeviceData = terminalDeviceData;
-        this.extendPayData = extendPayData;
+        this.notifyUrl = notifyUrl;
     }
 
     public String getReqDate() {
@@ -107,12 +107,12 @@ public class V2TradeOnlinepaymentQuickpayApplyRequest extends BaseRequest {
         this.huifuId = huifuId;
     }
 
-    public String getTransAmt() {
-        return transAmt;
+    public String getUserHuifuId() {
+        return userHuifuId;
     }
 
-    public void setTransAmt(String transAmt) {
-        this.transAmt = transAmt;
+    public void setUserHuifuId(String userHuifuId) {
+        this.userHuifuId = userHuifuId;
     }
 
     public String getCardBindId() {
@@ -123,20 +123,20 @@ public class V2TradeOnlinepaymentQuickpayApplyRequest extends BaseRequest {
         this.cardBindId = cardBindId;
     }
 
-    public String getNotifyUrl() {
-        return notifyUrl;
+    public String getTransAmt() {
+        return transAmt;
     }
 
-    public void setNotifyUrl(String notifyUrl) {
-        this.notifyUrl = notifyUrl;
+    public void setTransAmt(String transAmt) {
+        this.transAmt = transAmt;
     }
 
-    public String getUserHuifuId() {
-        return userHuifuId;
+    public String getExtendPayData() {
+        return extendPayData;
     }
 
-    public void setUserHuifuId(String userHuifuId) {
-        this.userHuifuId = userHuifuId;
+    public void setExtendPayData(String extendPayData) {
+        this.extendPayData = extendPayData;
     }
 
     public String getRiskCheckData() {
@@ -155,12 +155,12 @@ public class V2TradeOnlinepaymentQuickpayApplyRequest extends BaseRequest {
         this.terminalDeviceData = terminalDeviceData;
     }
 
-    public String getExtendPayData() {
-        return extendPayData;
+    public String getNotifyUrl() {
+        return notifyUrl;
     }
 
-    public void setExtendPayData(String extendPayData) {
-        this.extendPayData = extendPayData;
+    public void setNotifyUrl(String notifyUrl) {
+        this.notifyUrl = notifyUrl;
     }
 
 }

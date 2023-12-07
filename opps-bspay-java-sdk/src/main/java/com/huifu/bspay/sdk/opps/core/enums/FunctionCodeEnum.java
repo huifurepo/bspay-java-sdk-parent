@@ -6,6 +6,82 @@ package com.huifu.bspay.sdk.opps.core.enums;
  */
 public enum FunctionCodeEnum {
     /**
+     * 钱包转账下单
+     */
+    V2_WALLET_TRADE_TRANSFER("v2.wallet.trade.transfer", "钱包转账下单"),
+    /**
+     * 钱包支付退款查询
+     */
+    V2_WALLET_TRADE_PAY_REFUND_QUERY("v2.wallet.trade.pay.refund.query", "钱包支付退款查询"),
+    /**
+     * 钱包转账下单
+     */
+    V2_WALLET_TRANSFER("v2.wallet.transfer", "钱包转账下单"),
+    /**
+     * 钱包支付下单
+     */
+    V2_WALLET_TRADE_PAY_BALANCE("v2.wallet.trade.pay.balance", "钱包支付下单"),
+    /**
+     * 钱包支付退款查询
+     */
+    V2_WALLET_PAY_REFUND_QUERY("v2.wallet.pay.refund.query", "钱包支付退款查询"),
+    /**
+     * 钱包支付退款
+     */
+    V2_WALLET_TRADE_PAY_REFUND("v2.wallet.trade.pay.refund", "钱包支付退款"),
+    /**
+     * 新增绑定卡结果查询
+     */
+    V2_WALLET_CARD_QUERY("v2.wallet.card.query", "新增绑定卡结果查询"),
+    /**
+     * 新增绑定银行卡
+     */
+    V2_WALLET_CARD_ADD("v2.wallet.card.add", "新增绑定银行卡"),
+    /**
+     * 钱包提现下单
+     */
+    V2_WALLET_TRADE_WITHDRAWAL("v2.wallet.trade.withdrawal", "钱包提现下单"),
+    /**
+     * 钱包绑定手机号验证
+     */
+    V2_WALLET_MOBILE_VERIFY("v2.wallet.mobile.verify", "钱包绑定手机号验证"),
+    /**
+     * 钱包用户查询
+     */
+    V2_WALLET_QUERY("v2.wallet.query", "钱包用户查询"),
+    /**
+     * 钱包密码修改
+     */
+    V2_WALLET_PASSWORD_MODIFY("v2.wallet.password.modify", "钱包密码修改"),
+    /**
+     * 钱包密码重置
+     */
+    V2_WALLET_PASSWORD_RESET("v2.wallet.password.reset", "钱包密码重置"),
+    /**
+     * 钱包交易查询
+     */
+    V2_WALLET_TRADE_QUERY("v2.wallet.trade.query", "钱包交易查询"),
+    /**
+     * 钱包绑卡充值下单
+     */
+    V2_WALLET_TRADE_RECHARGE_CARD("v2.wallet.trade.recharge.card", "钱包绑卡充值下单"),
+    /**
+     * 钱包开户
+     */
+    V2_WALLET_CREATE("v2.wallet.create", "钱包开户"),
+    /**
+     * 快捷绑卡查询
+     */
+    V2_QUICKBUCKLE_QUERY("v2.quickbuckle.query", "快捷绑卡查询"),
+    /**
+     * 银行大额转账差错申请查询
+     */
+    V2_TRADE_ONLINEPAYMENT_TRANSFER_BANKMISTAKE_APPLYQUERY("v2.trade.onlinepayment.transfer.bankmistake.applyquery", "银行大额转账差错申请查询"),
+    /**
+     * 银行大额转账差错申请
+     */
+    V2_TRADE_ONLINEPAYMENT_TRANSFER_BANKMISTAKE_APPLY("v2.trade.onlinepayment.transfer.bankmistake.apply", "银行大额转账差错申请"),
+    /**
      * 支付分扣款
      */
     V2_TRADE_PAYSCORE_PAY_PAYSCOREPAY("v2.trade.payscore.pay.payscorepay", "支付分扣款"),

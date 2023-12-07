@@ -63,10 +63,12 @@ public class V2TradeHostingPaymentPreorderH5RequestDemo extends BaseCommonDemo {
         extendInfoMap.put("delay_acct_flag", "N");
         // 分账对象
         extendInfoMap.put("acct_split_bunch", getAcctSplitBunch());
-        // 异步通知地址
-        extendInfoMap.put("notify_url", "https://callback.service.com/xx");
         // 交易失效时间
         // extendInfoMap.put("time_expire", "");
+        // 业务信息
+        extendInfoMap.put("biz_info", getBizInfo());
+        // 交易异步通知地址
+        extendInfoMap.put("notify_url", "https://callback.service.com/xx");
         return extendInfoMap;
     }
 
@@ -100,6 +102,54 @@ public class V2TradeHostingPaymentPreorderH5RequestDemo extends BaseCommonDemo {
         dto.put("private_info", "商户私有信息test");
         // 回调地址
         dto.put("callback_url", "https://paas.huifu.com");
+
+        return dto.toJSONString();
+    }
+
+    private static JSON getPayerCheckAli() {
+        JSONObject dto = new JSONObject();
+        // 是否提供校验身份信息
+        dto.put("need_check_info", "T");
+        // 允许的最小买家年龄
+        dto.put("min_age", "12");
+        // 是否强制校验付款人身份信息
+        dto.put("fix_buyer", "F");
+
+        return dto;
+    }
+
+    private static JSON getPayerCheckWx() {
+        JSONObject dto = new JSONObject();
+        // 指定支付者
+        dto.put("limit_payer", "ADULT");
+        // 微信实名验证
+        dto.put("real_name_flag", "Y");
+
+        return dto;
+    }
+
+    private static JSON getPersonPayer() {
+        JSONObject dto = new JSONObject();
+        // 姓名
+        dto.put("name", "张三");
+        // 证件类型
+        dto.put("cert_type", "IDENTITY_CARD");
+        // 证件号
+        dto.put("cert_no", "Mc5pjf+b/Keyi/t/wnHJtJYPHd1xXntq6tau0j8SjLzJx+q2xL2mOmKRDAYHu4uY1JSoPbWBhq9b7gT7Kxb1CYnkj7vmSlTYl8tVKfOPFyauOE66ew9cmkhmUzjzVTM1quoR63pP8+ESvZZrRPFE4YY9PXO9It9JINo8bjX22fQEFZKmXaEcqnSDcl2LUuJguvQ0LejI6zbxCJhfSHbz7HhHTIZTUchkWpKoy8YlfG27FumjXHU3rIjbrgmc+8pXbyndTNlui1+lTu6deibGKq/CpShA8z5FkHsn6/1O9ZEjLcnPnSLUwCnu75UlVVk66g+hR1OGdRrFMfYQnK7Lzw==");
+        // 手机号
+        dto.put("mobile", "15012345678");
+
+        return dto;
+    }
+
+    private static String getBizInfo() {
+        JSONObject dto = new JSONObject();
+        // 付款人验证（支付宝）
+        dto.put("payer_check_ali", getPayerCheckAli());
+        // 付款人验证（微信）
+        dto.put("payer_check_wx", getPayerCheckWx());
+        // 个人付款人信息
+        dto.put("person_payer", getPersonPayer());
 
         return dto.toJSONString();
     }
