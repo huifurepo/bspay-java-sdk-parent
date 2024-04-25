@@ -11,7 +11,7 @@ import com.huifu.bspay.sdk.demo.core.Identify;
 import com.huifu.bspay.sdk.opps.core.request.V2TradeOnlinepaymentQuickpayFrontpayRequest;
 
 /**
- * 快捷支付页面版接口 - 示例
+ * 快捷支付页面版 - 示例
  *
  * @author sdk-generator
  * @Description
@@ -84,7 +84,7 @@ public class V2TradeOnlinepaymentQuickpayFrontpayRequestDemo extends BaseCommonD
 
     private static JSON getAcctInfos() {
         JSONObject dto = new JSONObject();
-        // 被分账对象ID
+        // 分账接收方ID
         dto.put("huifu_id", "6666000109812884");
         // 分账金额
         dto.put("div_amt", "0.01");

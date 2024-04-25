@@ -5,7 +5,7 @@
 
     <groupId>com.huifu.bspay.sdk</groupId>
     <artifactId>dg-java-sdk</artifactId>
-    <version>3.0.11</version>
+    <version>3.0.13-SNAPSHOT</version>
     <packaging>jar</packaging>
     <name>${project.artifactId} - ${project.version}</name>
     <inceptionYear>2021</inceptionYear>
@@ -30,7 +30,7 @@
             <organizationUrl>https://www.huifu.com/</organizationUrl>
         </developer>
     </developers>
-    <scm>
+<!--    <scm>
         <connection>scm:git:github.com/huifurepo/bspay-java-sdk-parent.git</connection>
         <developerConnection>scm:git:github.com/huifurepo/bspay-java-sdk-parent.git</developerConnection>
         <url>github.com/huifurepo/bspay-java-sdk-parent.git</url>
@@ -43,6 +43,21 @@
         <snapshotRepository>
             <id>oss</id>
             <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+        </snapshotRepository>
+    </distributionManagement>-->
+
+
+
+    <distributionManagement>
+        <repository>
+            <id>nexus</id>
+            <name>Releases</name>
+            <url>http://nexus.huifutest.com/repository/releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>nexus</id>
+            <name>Snapshots</name>
+            <url>http://nexus.huifutest.com/repository/snapshots/</url>
         </snapshotRepository>
     </distributionManagement>
 

@@ -27,7 +27,7 @@ public class V2MerchantBusiOpenRequest extends BaseRequest {
     @JSONField(name = "huifu_id")
     private String huifuId;
     /**
-     * 上级主体ID
+     * 直属渠道号
      */
     @JSONField(name = "upper_huifu_id")
     private String upperHuifuId;

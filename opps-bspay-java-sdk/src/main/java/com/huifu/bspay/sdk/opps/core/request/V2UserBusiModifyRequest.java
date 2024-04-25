@@ -22,7 +22,7 @@ public class V2UserBusiModifyRequest extends BaseRequest {
     @JSONField(name = "req_date")
     private String reqDate;
     /**
-     * 渠道商汇付Id
+     * 渠道商/商户汇付Id
      */
     @JSONField(name = "upper_huifu_id")
     private String upperHuifuId;

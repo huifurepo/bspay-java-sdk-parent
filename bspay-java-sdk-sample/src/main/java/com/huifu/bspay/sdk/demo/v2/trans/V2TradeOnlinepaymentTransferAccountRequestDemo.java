@@ -11,7 +11,7 @@ import com.huifu.bspay.sdk.demo.core.Identify;
 import com.huifu.bspay.sdk.opps.core.request.V2TradeOnlinepaymentTransferAccountRequest;
 
 /**
- * 银行大额转账 - 示例
+ * 银行大额支付 - 示例
  *
  * @author sdk-generator
  * @Description
@@ -67,6 +67,10 @@ public class V2TradeOnlinepaymentTransferAccountRequestDemo extends BaseCommonDe
         extendInfoMap.put("remark", "标记123");
         // 异步通知地址
         extendInfoMap.put("notify_url", "http://www.huifu.com/getResp");
+        // 入账模式
+        // extendInfoMap.put("acct_mode", "");
+        // 银行模式
+        // extendInfoMap.put("bank_mode", "");
         return extendInfoMap;
     }
 

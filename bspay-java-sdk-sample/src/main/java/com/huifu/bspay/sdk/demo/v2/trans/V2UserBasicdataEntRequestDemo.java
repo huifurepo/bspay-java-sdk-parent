@@ -64,6 +64,8 @@ public class V2UserBasicdataEntRequestDemo extends BaseCommonDemo {
         request.setContactName("小的");
         // 联系人手机号
         request.setContactMobile("13764462211");
+        // 管理员账号如需短信通知则必填；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：Lg20220222013747&lt;/font&gt;
+        request.setLoginName("Lg2022022201374721361");
 
         // 设置非必填字段
         Map<String, Object> extendInfoMap = getExtendInfos();
@@ -85,8 +87,6 @@ public class V2UserBasicdataEntRequestDemo extends BaseCommonDemo {
         extendInfoMap.put("short_name", "企业商户");
         // 联系人电子邮箱
         extendInfoMap.put("contact_email", "jeff.peng@huifu.com");
-        // 管理员账号
-        extendInfoMap.put("login_name", "Lg2022022201374721361");
         // 操作员
         extendInfoMap.put("operator_id", "");
         // 是否发送短信标识

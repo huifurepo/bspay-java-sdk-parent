@@ -4,7 +4,7 @@ import com.alibaba.fastjson.annotation.JSONField;
 import com.huifu.bspay.sdk.opps.core.enums.FunctionCodeEnum;
 
 /**
- * 银行大额转账
+ * 银行大额支付
  *
  * @author sdk-generator
  * @Description

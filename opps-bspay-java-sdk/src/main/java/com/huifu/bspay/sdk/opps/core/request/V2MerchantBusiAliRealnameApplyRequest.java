@@ -27,15 +27,15 @@ public class V2MerchantBusiAliRealnameApplyRequest extends BaseRequest {
     @JSONField(name = "huifu_id")
     private String huifuId;
     /**
-     * 联系人信息
-     */
-    @JSONField(name = "contact_person_info")
-    private String contactPersonInfo;
-    /**
      * 主体信息
      */
     @JSONField(name = "auth_identity_info")
     private String authIdentityInfo;
+    /**
+     * 联系人信息
+     */
+    @JSONField(name = "contact_person_info")
+    private String contactPersonInfo;
 
     @Override
     public FunctionCodeEnum getFunctionCode() {
@@ -45,12 +45,12 @@ public class V2MerchantBusiAliRealnameApplyRequest extends BaseRequest {
     public V2MerchantBusiAliRealnameApplyRequest() {
     }
 
-    public V2MerchantBusiAliRealnameApplyRequest(String reqSeqId, String reqDate, String huifuId, String contactPersonInfo, String authIdentityInfo) {
+    public V2MerchantBusiAliRealnameApplyRequest(String reqSeqId, String reqDate, String huifuId, String authIdentityInfo, String contactPersonInfo) {
         this.reqSeqId = reqSeqId;
         this.reqDate = reqDate;
         this.huifuId = huifuId;
-        this.contactPersonInfo = contactPersonInfo;
         this.authIdentityInfo = authIdentityInfo;
+        this.contactPersonInfo = contactPersonInfo;
     }
 
     public String getReqSeqId() {
@@ -77,20 +77,20 @@ public class V2MerchantBusiAliRealnameApplyRequest extends BaseRequest {
         this.huifuId = huifuId;
     }
 
-    public String getContactPersonInfo() {
-        return contactPersonInfo;
-    }
-
-    public void setContactPersonInfo(String contactPersonInfo) {
-        this.contactPersonInfo = contactPersonInfo;
-    }
-
     public String getAuthIdentityInfo() {
         return authIdentityInfo;
     }
 
     public void setAuthIdentityInfo(String authIdentityInfo) {
         this.authIdentityInfo = authIdentityInfo;
+    }
+
+    public String getContactPersonInfo() {
+        return contactPersonInfo;
+    }
+
+    public void setContactPersonInfo(String contactPersonInfo) {
+        this.contactPersonInfo = contactPersonInfo;
     }
 
 }

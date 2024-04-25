@@ -96,7 +96,7 @@ public class V2TradeOnlinepaymentQuickpayApplyRequestDemo extends BaseCommonDemo
         JSONObject dto = new JSONObject();
         // 分账金额
         // dto.put("div_amt", "");
-        // 被分账方ID
+        // 分账接收方ID
         // dto.put("huifu_id", "");
         // 账户号
         // dto.put("acct_id", "");

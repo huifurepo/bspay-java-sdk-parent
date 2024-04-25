@@ -30,7 +30,7 @@ public class V2MerchantBasicdataEntRequestDemo extends BaseCommonDemo {
         request.setReqSeqId(SequenceTools.getReqSeqId32());
         // 请求日期
         request.setReqDate(DateTools.getCurrentDateYYYYMMDD());
-        // 上级主体ID
+        // 直属渠道号
         request.setUpperHuifuId("6666000003080000");
         // 商户名称
         request.setRegName("集成企业商户8664");

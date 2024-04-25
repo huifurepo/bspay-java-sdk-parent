@@ -57,8 +57,8 @@ public class V2TradeHostingPaymentPreorderAliRequestDemo extends BaseCommonDemo 
     private static Map<String, Object> getExtendInfos() {
         // 设置非必填字段
         Map<String, Object> extendInfoMap = new HashMap<>();
-        // 收银台ID
-        extendInfoMap.put("checkout_id", "");
+        // 收银台样式
+        // extendInfoMap.put("style_id", "");
         // 是否延迟交易
         extendInfoMap.put("delay_acct_flag", "N");
         // 分账对象
@@ -76,7 +76,7 @@ public class V2TradeHostingPaymentPreorderAliRequestDemo extends BaseCommonDemo 
         JSONObject dto = new JSONObject();
         // 分账金额
         dto.put("div_amt", "0.08");
-        // 被分账方ID
+        // 分账接收方ID
         dto.put("huifu_id", "6666000111546360");
 
         JSONArray dtoList = new JSONArray();

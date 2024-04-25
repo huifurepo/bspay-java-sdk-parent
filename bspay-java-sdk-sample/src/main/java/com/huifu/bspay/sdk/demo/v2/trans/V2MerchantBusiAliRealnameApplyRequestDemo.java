@@ -32,10 +32,10 @@ public class V2MerchantBusiAliRealnameApplyRequestDemo extends BaseCommonDemo {
         request.setReqDate(DateTools.getCurrentDateYYYYMMDD());
         // 汇付ID
         request.setHuifuId("6666000105418240");
-        // 联系人信息
-        request.setContactPersonInfo(getContactPersonInfo());
         // 主体信息
         request.setAuthIdentityInfo(getAuthIdentityInfo());
+        // 联系人信息
+        request.setContactPersonInfo(getContactPersonInfo());
 
         // 设置非必填字段
         Map<String, Object> extendInfoMap = getExtendInfos();
@@ -62,44 +62,6 @@ public class V2MerchantBusiAliRealnameApplyRequestDemo extends BaseCommonDemo {
         // 受益人信息
         extendInfoMap.put("ubo_info", getUboInfo());
         return extendInfoMap;
-    }
-
-    private static String getContactPersonInfo() {
-        JSONObject dto = new JSONObject();
-        // 联系人身份证号码
-        dto.put("id_card_number", "120103198507275017");
-        // 联系人姓名
-        dto.put("name", "谢季");
-        // 联系人手机号
-        dto.put("mobile", "18900400032");
-
-        return dto.toJSONString();
-    }
-
-    private static String getLegalPersonInfo() {
-        JSONObject dto = new JSONObject();
-        // 证件持有人类型
-        dto.put("legal_type", "SUPER");
-        // 证件类型
-        dto.put("card_type", "00");
-        // 法人姓名
-        dto.put("person_name", "李四");
-        // 证件号码
-        dto.put("card_no", "110101199909291419");
-        // 证件生效时间
-        dto.put("effect_time", "19990101");
-        // 证件过期时间
-        dto.put("expire_time", "长期");
-        // 证件正面照
-        dto.put("card_front_img", "afce08c5-1548-30f8-bf70-1752c3012f66");
-        // 证件反面照
-        dto.put("card_back_img", "51dd13bb-6268-36d0-ac84-c4cdc19eccba");
-        // 授权函照片
-        dto.put("auth_letter_img", "51dd13bb-6268-36d0-ac84-c4cdc19eccba");
-        // 是否为受益人
-        dto.put("is_benefit_person", "N");
-
-        return dto.toJSONString();
     }
 
     private static String getCertificateInfo() {
@@ -184,6 +146,44 @@ public class V2MerchantBusiAliRealnameApplyRequestDemo extends BaseCommonDemo {
         dto.put("support_credentials", getSupportCredentials());
         // 经营许可证
         dto.put("qualification_info_list", getQualificationInfoList());
+
+        return dto.toJSONString();
+    }
+
+    private static String getLegalPersonInfo() {
+        JSONObject dto = new JSONObject();
+        // 证件持有人类型
+        dto.put("legal_type", "SUPER");
+        // 证件类型
+        dto.put("card_type", "00");
+        // 法人姓名
+        dto.put("person_name", "李四");
+        // 证件号码
+        dto.put("card_no", "110101199909291419");
+        // 证件生效时间
+        dto.put("effect_time", "19990101");
+        // 证件过期时间
+        dto.put("expire_time", "长期");
+        // 证件正面照
+        dto.put("card_front_img", "afce08c5-1548-30f8-bf70-1752c3012f66");
+        // 证件反面照
+        dto.put("card_back_img", "51dd13bb-6268-36d0-ac84-c4cdc19eccba");
+        // 授权函照片
+        dto.put("auth_letter_img", "51dd13bb-6268-36d0-ac84-c4cdc19eccba");
+        // 是否为受益人
+        dto.put("is_benefit_person", "N");
+
+        return dto.toJSONString();
+    }
+
+    private static String getContactPersonInfo() {
+        JSONObject dto = new JSONObject();
+        // 联系人身份证号码
+        dto.put("id_card_number", "120103198507275017");
+        // 联系人姓名
+        dto.put("name", "谢季");
+        // 联系人手机号
+        dto.put("mobile", "18900400032");
 
         return dto.toJSONString();
     }

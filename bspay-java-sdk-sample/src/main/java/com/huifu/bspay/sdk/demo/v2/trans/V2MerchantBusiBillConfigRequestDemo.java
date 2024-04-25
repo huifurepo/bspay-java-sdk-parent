@@ -59,8 +59,14 @@ public class V2MerchantBusiBillConfigRequestDemo extends BaseCommonDemo {
         // extendInfoMap.put("ftp_user", "");
         // SFTP密码
         // extendInfoMap.put("ftp_pwd", "");
-        // 包含数据范围
-        // extendInfoMap.put("include_data_range", "");
+        // 是否跟随结算时间
+        // extendInfoMap.put("as_settle_flag", "");
+        // 跑批完成通知地址
+        // extendInfoMap.put("notify_url", "");
+        // 用户数据范围
+        // extendInfoMap.put("contain_user", "");
+        // 商户数据范围
+        // extendInfoMap.put("contain_merchant", "");
         return extendInfoMap;
     }
 

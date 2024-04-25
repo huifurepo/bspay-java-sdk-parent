@@ -11,7 +11,7 @@ import com.huifu.bspay.sdk.demo.core.Identify;
 import com.huifu.bspay.sdk.opps.core.request.V2TradeOnlinepaymentTransferAccountCloseRequest;
 
 /**
- * 银行大额转账关单 - 示例
+ * 银行大额支付关单 - 示例
  *
  * @author sdk-generator
  * @Description

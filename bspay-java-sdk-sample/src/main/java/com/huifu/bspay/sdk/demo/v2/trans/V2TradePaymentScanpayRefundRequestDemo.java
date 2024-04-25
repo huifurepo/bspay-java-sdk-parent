@@ -81,6 +81,8 @@ public class V2TradePaymentScanpayRefundRequestDemo extends BaseCommonDemo {
         // extendInfoMap.put("terminal_device_data", getTerminalDeviceData());
         // 异步通知地址
         // extendInfoMap.put("notify_url", "");
+        // 银联参数集合
+        // extendInfoMap.put("unionpay_data", getUnionpayData());
         return extendInfoMap;
     }
 
@@ -88,7 +90,7 @@ public class V2TradePaymentScanpayRefundRequestDemo extends BaseCommonDemo {
         JSONObject dto = new JSONObject();
         // 分账金额
         // dto.put("div_amt", "test");
-        // 被分账方ID
+        // 分账接收方ID
         // dto.put("huifu_id", "test");
         // 垫资金额
         // dto.put("part_loan_amt", "");
@@ -194,6 +196,14 @@ public class V2TradePaymentScanpayRefundRequestDemo extends BaseCommonDemo {
         // dto.put("device_wifi_mac", "");
         // 交易设备GPS
         // dto.put("device_gps", "");
+
+        return dto.toJSONString();
+    }
+
+    private static String getUnionpayData() {
+        JSONObject dto = new JSONObject();
+        // 收款方附加数据
+        // dto.put("addn_data", "");
 
         return dto.toJSONString();
     }

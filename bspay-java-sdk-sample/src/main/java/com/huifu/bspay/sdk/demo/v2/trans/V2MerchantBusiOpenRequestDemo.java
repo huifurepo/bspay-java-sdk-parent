@@ -32,7 +32,7 @@ public class V2MerchantBusiOpenRequestDemo extends BaseCommonDemo {
         request.setReqDate(DateTools.getCurrentDateYYYYMMDD());
         // 汇付客户Id
         request.setHuifuId("6666000104778898");
-        // 上级主体ID
+        // 直属渠道号
         request.setUpperHuifuId("6666000003080000");
 
         // 设置非必填字段
@@ -143,6 +143,10 @@ public class V2MerchantBusiOpenRequestDemo extends BaseCommonDemo {
         // extendInfoMap.put("wx_zl_conf", getWxZlConf());
         // 支付宝直连配置对象
         // extendInfoMap.put("ali_zl_conf", getAliZlConf());
+        // 开户费用值(元)
+        // extendInfoMap.put("enter_fee", "");
+        // 开户费用类型
+        // extendInfoMap.put("enter_fee_flag", "");
         return extendInfoMap;
     }
 
@@ -264,17 +268,17 @@ public class V2MerchantBusiOpenRequestDemo extends BaseCommonDemo {
         dto.put("charge_cate_code", "02");
         // 借记卡封顶值
         dto.put("debit_fee_limit", "0.56");
-        // 云闪付借记卡手续费1000以上（%）
+        // 银联手机闪付借记卡手续费1000以上（%）
         dto.put("cloud_debit_fee_rate_up", "0.56");
-        // 云闪付借记卡封顶1000以上(元)
+        // 银联手机闪付借记卡封顶1000以上(元)
         dto.put("cloud_debit_fee_limit_up", "12");
-        // 云闪付贷记卡手续费1000以上（%）
+        // 银联手机闪付贷记卡手续费1000以上（%）
         dto.put("cloud_credit_fee_rate_up", "0.59");
-        // 云闪付借记卡手续费1000以下（%）
+        // 银联手机闪付借记卡手续费1000以下（%）
         dto.put("cloud_debit_fee_rate_down", "0.37");
-        // 云闪付借记卡封顶1000以下(元)
+        // 银联手机闪付借记卡封顶1000以下(元)
         dto.put("cloud_debit_fee_limit_down", "5");
-        // 云闪付贷记卡手续费1000以下（%）
+        // 银联手机闪付贷记卡手续费1000以下（%）
         dto.put("cloud_credit_fee_rate_down", "0.36");
         // 是否开通小额双免
         dto.put("is_open_small_flag", "0");

@@ -32,11 +32,11 @@ public class V2TradeAcctpaymentRefundRequestDemo extends BaseCommonDemo {
         request.setReqDate(DateTools.getCurrentDateYYYYMMDD());
         // 商户号
         request.setHuifuId("6666000108854952");
-        // 原余额支付请求日期org_hf_seq_id和（orgReqDate+orgReqSeqId）二选一；&lt;br/&gt;格式：yyyyMMdd；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：20221023&lt;/font&gt;
+        // 原余额支付请求日期
         request.setOrgReqDate("20211021");
-        // 原余额支付请求流水号org_hf_seq_id和（orgReqDate+orgReqSeqId）二选一；&lt;br/&gt;&lt;font color&#x3D;&quot;green&quot;&gt;示例值：2021091708126665001&lt;/font&gt;
+        // 原余额支付请求流水号org_hf_seq_id和orgReqSeqId二选一；&lt;br/&gt;&lt;font color&#x3D;&quot;green&quot;&gt;示例值：2021091708126665001&lt;/font&gt;
         request.setOrgReqSeqId("202110210012100005");
-        // 原余额支付支付全局流水号org_hf_seq_id和（orgReqDate+orgReqSeqId）二选一；&lt;br/&gt;&lt;font color&#x3D;&quot;green&quot;&gt;示例值：00470topo1A211015160805P090ac132fef00000&lt;/font&gt;
+        // 原余额支付支付全局流水号org_hf_seq_id和orgReqSeqId二选一；&lt;br/&gt;&lt;font color&#x3D;&quot;green&quot;&gt;示例值：00470topo1A211015160805P090ac132fef00000&lt;/font&gt;
         request.setOrgHfSeqId("");
         // 退款金额
         request.setOrdAmt("0.01");
@@ -57,12 +57,12 @@ public class V2TradeAcctpaymentRefundRequestDemo extends BaseCommonDemo {
     private static Map<String, Object> getExtendInfos() {
         // 设置非必填字段
         Map<String, Object> extendInfoMap = new HashMap<>();
-        // 备注
-        extendInfoMap.put("remark", "1234567890");
         // 分账对象
         // extendInfoMap.put("acct_split_bunch", getAcctSplitBunch());
         // 安全信息
         extendInfoMap.put("risk_check_data", getRiskCheckData());
+        // 备注
+        extendInfoMap.put("remark", "1234567890");
         return extendInfoMap;
     }
 

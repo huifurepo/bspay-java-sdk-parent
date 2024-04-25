@@ -37,7 +37,7 @@ public class V2TradeOnlinepaymentTransferRemittanceRequest extends BaseRequest {
     @JSONField(name = "notify_url")
     private String notifyUrl;
     /**
-     * 原汇款订单号
+     * 原汇付通道流水号
      */
     @JSONField(name = "org_remittance_order_id")
     private String orgRemittanceOrderId;

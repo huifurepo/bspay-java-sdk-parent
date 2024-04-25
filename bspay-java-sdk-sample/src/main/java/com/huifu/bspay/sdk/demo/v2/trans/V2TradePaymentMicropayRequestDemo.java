@@ -68,7 +68,7 @@ public class V2TradePaymentMicropayRequestDemo extends BaseCommonDemo {
         // 渠道号
         extendInfoMap.put("channel_no", "");
         // 补贴支付信息
-        // extendInfoMap.put("combinedpay_data", getCombinedpayData());
+        // extendInfoMap.put("combinedpay_data", "");
         // 场景类型
         extendInfoMap.put("pay_scene", "");
         // 分账对象
@@ -92,27 +92,11 @@ public class V2TradePaymentMicropayRequestDemo extends BaseCommonDemo {
         return extendInfoMap;
     }
 
-    private static String getCombinedpayData() {
-        JSONObject dto = new JSONObject();
-        // 补贴方汇付编号
-        // dto.put("huifu_id", "test");
-        // 补贴方类型
-        // dto.put("user_type", "test");
-        // 补贴方账户号
-        // dto.put("acct_id", "test");
-        // 补贴金额
-        // dto.put("amount", "test");
-
-        JSONArray dtoList = new JSONArray();
-        dtoList.add(dto);
-        return dtoList.toJSONString();
-    }
-
     private static JSON getAcctInfosRucan() {
         JSONObject dto = new JSONObject();
         // 分账金额
         // dto.put("div_amt", "test");
-        // 被分账方ID
+        // 分账接收方ID
         // dto.put("huifu_id", "test");
         // 账户号
         // dto.put("acct_id", "");
@@ -190,10 +174,6 @@ public class V2TradePaymentMicropayRequestDemo extends BaseCommonDemo {
         // dto.put("spbill_create_ip", "test");
         // 子商户公众账号id
         // dto.put("sub_appid", "");
-        // 用户标识
-        // dto.put("openid", "");
-        // 子商户用户标识
-        // dto.put("sub_openid", "");
         // 设备号
         // dto.put("device_info", "");
         // 附加数据
@@ -288,6 +268,8 @@ public class V2TradePaymentMicropayRequestDemo extends BaseCommonDemo {
         dto.put("store_id", "");
         // 外部指定买家
         // dto.put("ext_user_info", getExtUserInfo());
+        // 商户业务信息
+        // dto.put("ali_business_params", "");
 
         return dto.toJSONString();
     }
@@ -306,6 +288,8 @@ public class V2TradePaymentMicropayRequestDemo extends BaseCommonDemo {
         // dto.put("specfeeinfo", "");
         // 终端号
         // dto.put("term_id", "");
+        // 收款方附加数据
+        // dto.put("addn_data", "");
 
         return dto.toJSONString();
     }

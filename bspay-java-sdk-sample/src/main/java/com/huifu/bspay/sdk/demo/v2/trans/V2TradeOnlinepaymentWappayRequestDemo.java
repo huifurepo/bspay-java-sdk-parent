@@ -94,7 +94,7 @@ public class V2TradeOnlinepaymentWappayRequestDemo extends BaseCommonDemo {
         JSONObject dto = new JSONObject();
         // 支付金额
         // dto.put("div_amt", "");
-        // 被分账方ID
+        // 分账接收方ID
         // dto.put("huifu_id", "");
         // 账户号
         // dto.put("acct_id", "");

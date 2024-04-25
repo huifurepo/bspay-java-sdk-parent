@@ -92,7 +92,7 @@ public class V2TradePayscorePayPayscorepayRequestDemo extends BaseCommonDemo {
         JSONObject dto = new JSONObject();
         // 分账金额
         // dto.put("div_amt", "test");
-        // 分账商户号
+        // 分账接收方ID
         // dto.put("huifu_id", "test");
 
         JSONArray dtoList = new JSONArray();

@@ -55,42 +55,40 @@ public class V2TradePaymentJspayRequestDemo extends BaseCommonDemo {
     private static Map<String, Object> getExtendInfos() {
         // 设置非必填字段
         Map<String, Object> extendInfoMap = new HashMap<>();
+        // 账户号
+        // extendInfoMap.put("acct_id", "");
         // 交易有效期
         extendInfoMap.put("time_expire", "20230418235959");
-        // 聚合正扫微信拓展参数集合
+        // 微信参数集合
         // extendInfoMap.put("wx_data", getWxData());
-        // 支付宝扩展参数集合
+        // 支付宝参数集合
         extendInfoMap.put("alipay_data", getAlipayData());
         // 银联参数集合
         // extendInfoMap.put("unionpay_data", getUnionpayData());
-        // 数字人民币参数集合
-        // extendInfoMap.put("dc_data", getDcData());
+        // 是否延迟交易
+        extendInfoMap.put("delay_acct_flag", "N");
+        // 手续费扣款标志
+        // extendInfoMap.put("fee_flag", "");
         // 分账对象
         extendInfoMap.put("acct_split_bunch", getAcctSplitBunch());
-        // 传入分帐遇到优惠的处理规则
+        // 传入分账遇到优惠的处理规则
         extendInfoMap.put("term_div_coupon_type", "0");
         // 补贴支付信息
         // extendInfoMap.put("combinedpay_data", getCombinedpayData());
-        // 账户号
-        // extendInfoMap.put("acct_id", "");
-        // 手续费扣款标志
-        // extendInfoMap.put("fee_flag", "");
         // 禁用信用卡标记
         extendInfoMap.put("limit_pay_type", "NO_CREDIT");
-        // 是否延迟交易
-        extendInfoMap.put("delay_acct_flag", "N");
         // 商户贴息标记
         extendInfoMap.put("fq_mer_discount_flag", "N");
         // 渠道号
         extendInfoMap.put("channel_no", "");
         // 场景类型
         extendInfoMap.put("pay_scene", "02");
+        // 备注
+        extendInfoMap.put("remark", "String");
         // 安全信息
         extendInfoMap.put("risk_check_data", getRiskCheckData());
         // 设备信息
         extendInfoMap.put("terminal_device_data", getTerminalDeviceData());
-        // 备注
-        extendInfoMap.put("remark", "String");
         // 异步通知地址
         extendInfoMap.put("notify_url", "http://www.baidu.com");
         return extendInfoMap;
@@ -194,16 +192,16 @@ public class V2TradePaymentJspayRequestDemo extends BaseCommonDemo {
         dto.put("food_order_type", "qr_order");
         // 花呗分期数
         dto.put("hb_fq_num", "");
-        // 花呗卖家承担的手续费百分比
+        // 花呗卖家手续费百分比
         dto.put("hb_fq_seller_percent", "");
         // 行业数据回流信息
         dto.put("industry_reflux_info", "String");
+        // 信用卡分期资产方式
+        // dto.put("fq_channels", "");
         // 停车场id
         dto.put("parking_id", "123wsx");
         // 系统商编号
         dto.put("sys_service_provider_id", "1111111");
-        // 信用卡分期资产方式
-        // dto.put("fq_channels", "");
 
         return dto;
     }
@@ -212,9 +210,9 @@ public class V2TradePaymentJspayRequestDemo extends BaseCommonDemo {
         JSONObject dto = new JSONObject();
         // 商品的编号
         dto.put("goods_id", "12312321");
-        // 商品名称(元)
+        // 商品名称
         dto.put("goods_name", "阿里");
-        // 商品单价
+        // 商品单价(元)
         dto.put("price", "0.01");
         // 商品数量
         dto.put("quantity", "20");
@@ -280,6 +278,10 @@ public class V2TradePaymentJspayRequestDemo extends BaseCommonDemo {
         // dto.put("subject", "");
         // 商家门店名称
         // dto.put("store_name", "");
+        // 小程序应用的appid
+        // dto.put("op_app_id", "");
+        // 商户业务信息
+        // dto.put("ali_business_params", "");
 
         return dto.toJSONString();
     }
@@ -301,7 +303,7 @@ public class V2TradePaymentJspayRequestDemo extends BaseCommonDemo {
     private static String getUnionpayData() {
         JSONObject dto = new JSONObject();
         // 收款方附加数据
-        // dto.put("acq_addn_data", "");
+        // dto.put("addn_data", "");
         // 地区信息
         // dto.put("area_info", "");
         // 持卡人ip
@@ -320,16 +322,8 @@ public class V2TradePaymentJspayRequestDemo extends BaseCommonDemo {
         // dto.put("req_reserved", "");
         // 终端信息
         // dto.put("term_info", "");
-        // 云闪付用户标识
+        // 银联用户标识
         // dto.put("user_id", "");
-
-        return dto.toJSONString();
-    }
-
-    private static String getDcData() {
-        JSONObject dto = new JSONObject();
-        // 数字货币银行编号
-        // dto.put("digital_bank_no", "");
 
         return dto.toJSONString();
     }
@@ -338,7 +332,7 @@ public class V2TradePaymentJspayRequestDemo extends BaseCommonDemo {
         JSONObject dto = new JSONObject();
         // 分账金额
         // dto.put("div_amt", "test");
-        // 被分账方ID
+        // 分账接收方ID
         // dto.put("huifu_id", "test");
         // 账户号
         // dto.put("acct_id", "");
@@ -358,7 +352,7 @@ public class V2TradePaymentJspayRequestDemo extends BaseCommonDemo {
 
     private static String getCombinedpayData() {
         JSONObject dto = new JSONObject();
-        // 补贴方汇付编号
+        // 补贴方汇付商户号
         // dto.put("huifu_id", "test");
         // 补贴方类型
         // dto.put("user_type", "test");

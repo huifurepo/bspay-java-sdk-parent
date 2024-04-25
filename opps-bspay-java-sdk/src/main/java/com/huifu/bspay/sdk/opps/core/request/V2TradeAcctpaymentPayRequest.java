@@ -41,6 +41,16 @@ public class V2TradeAcctpaymentPayRequest extends BaseRequest {
      */
     @JSONField(name = "risk_check_data")
     private String riskCheckData;
+    /**
+     * 资金类型资金类型。支付渠道为中信E管家时，资金类型必填（[详见说明](https://paas.huifu.com/partners/api/#/yuer/api_zxegjzllx)）
+     */
+    @JSONField(name = "fund_type")
+    private String fundType;
+    /**
+     * 手续费承担方标识余额支付手续费承担方标识；商户余额支付扣收规则为接口指定承担方时必填！枚举值：&lt;br/&gt;OUT：出款方；&lt;br/&gt;IN：分账接受方。&lt;br/&gt;&lt;font color&#x3D;&quot;green&quot;&gt;示例值：IN&lt;/font&gt;
+     */
+    @JSONField(name = "trans_fee_take_flag")
+    private String transFeeTakeFlag;
 
     @Override
     public FunctionCodeEnum getFunctionCode() {
@@ -50,13 +60,15 @@ public class V2TradeAcctpaymentPayRequest extends BaseRequest {
     public V2TradeAcctpaymentPayRequest() {
     }
 
-    public V2TradeAcctpaymentPayRequest(String reqSeqId, String reqDate, String outHuifuId, String ordAmt, String acctSplitBunch, String riskCheckData) {
+    public V2TradeAcctpaymentPayRequest(String reqSeqId, String reqDate, String outHuifuId, String ordAmt, String acctSplitBunch, String riskCheckData, String fundType, String transFeeTakeFlag) {
         this.reqSeqId = reqSeqId;
         this.reqDate = reqDate;
         this.outHuifuId = outHuifuId;
         this.ordAmt = ordAmt;
         this.acctSplitBunch = acctSplitBunch;
         this.riskCheckData = riskCheckData;
+        this.fundType = fundType;
+        this.transFeeTakeFlag = transFeeTakeFlag;
     }
 
     public String getReqSeqId() {
@@ -105,6 +117,22 @@ public class V2TradeAcctpaymentPayRequest extends BaseRequest {
 
     public void setRiskCheckData(String riskCheckData) {
         this.riskCheckData = riskCheckData;
+    }
+
+    public String getFundType() {
+        return fundType;
+    }
+
+    public void setFundType(String fundType) {
+        this.fundType = fundType;
+    }
+
+    public String getTransFeeTakeFlag() {
+        return transFeeTakeFlag;
+    }
+
+    public void setTransFeeTakeFlag(String transFeeTakeFlag) {
+        this.transFeeTakeFlag = transFeeTakeFlag;
     }
 
 }

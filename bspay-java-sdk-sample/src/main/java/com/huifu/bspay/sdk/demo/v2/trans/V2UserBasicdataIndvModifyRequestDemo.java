@@ -61,6 +61,8 @@ public class V2UserBasicdataIndvModifyRequestDemo extends BaseCommonDemo {
         extendInfoMap.put("mobile_no", "15556622000");
         // 文件列表
         // extendInfoMap.put("file_list", getFileList());
+        // 地址
+        // extendInfoMap.put("**address**", "");
         return extendInfoMap;
     }
 

@@ -11,7 +11,7 @@ import com.huifu.bspay.sdk.demo.core.Identify;
 import com.huifu.bspay.sdk.opps.core.request.V2TradeOnlinepaymentTransferAccountQueryRequest;
 
 /**
- * 银行转账资金流水查询 - 示例
+ * 银行大额资金流水查询 - 示例
  *
  * @author sdk-generator
  * @Description

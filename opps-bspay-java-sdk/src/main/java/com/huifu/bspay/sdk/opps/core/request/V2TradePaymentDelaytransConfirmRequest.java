@@ -26,6 +26,11 @@ public class V2TradePaymentDelaytransConfirmRequest extends BaseRequest {
      */
     @JSONField(name = "huifu_id")
     private String huifuId;
+    /**
+     * 交易类型**原交易为快捷支付必填：QUICK_PAY**，&lt;br/&gt;**原交易为余额支付必填：ACCT_PAYMENT**；&lt;br/&gt;&lt;font color&#x3D;&quot;green&quot;&gt;示例值：ACCT_PAYMENT&lt;/font&gt;
+     */
+    @JSONField(name = "pay_type")
+    private String payType;
 
     @Override
     public FunctionCodeEnum getFunctionCode() {
@@ -35,10 +40,11 @@ public class V2TradePaymentDelaytransConfirmRequest extends BaseRequest {
     public V2TradePaymentDelaytransConfirmRequest() {
     }
 
-    public V2TradePaymentDelaytransConfirmRequest(String reqDate, String reqSeqId, String huifuId) {
+    public V2TradePaymentDelaytransConfirmRequest(String reqDate, String reqSeqId, String huifuId, String payType) {
         this.reqDate = reqDate;
         this.reqSeqId = reqSeqId;
         this.huifuId = huifuId;
+        this.payType = payType;
     }
 
     public String getReqDate() {
@@ -63,6 +69,14 @@ public class V2TradePaymentDelaytransConfirmRequest extends BaseRequest {
 
     public void setHuifuId(String huifuId) {
         this.huifuId = huifuId;
+    }
+
+    public String getPayType() {
+        return payType;
+    }
+
+    public void setPayType(String payType) {
+        this.payType = payType;
     }
 
 }

@@ -66,7 +66,7 @@ public class V2TradePaymentDelaytransConfirmrefundRequestDemo extends BaseCommon
 
     private static JSON getAcctInfos() {
         JSONObject dto = new JSONObject();
-        // 被分账方ID
+        // 分账接收方ID
         dto.put("huifu_id", "6666000003109208");
         // 分账金额(元)
         dto.put("div_amt", "0.01");

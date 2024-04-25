@@ -6,6 +6,118 @@ package com.huifu.bspay.sdk.opps.core.enums;
  */
 public enum FunctionCodeEnum {
     /**
+     * 完税凭证下载
+     */
+    V2_HYC_TAX_DOWNLOAD("v2.hyc.tax.download", "完税凭证下载"),
+    /**
+     * 用户申请单状态查询
+     */
+    V2_USER_APPLY_QUERY("v2.user.apply.query", "用户申请单状态查询"),
+    /**
+     * 开通下级商户权限配置接口
+     */
+    V2_MERCHANT_BUSI_HEAD_CONFIG("v2.merchant.busi.head.config", "开通下级商户权限配置接口"),
+    /**
+     * 一键绑卡-工行卡号查询
+     */
+    V2_QUICKBUCKLE_BIND_CARDINFO_QUERY("v2.quickbuckle.bind.cardInfo.query", "一键绑卡-工行卡号查询"),
+    /**
+     * 完税凭证查询
+     */
+    V2_HYC_TAX_QUERY("v2.hyc.tax.query", "完税凭证查询"),
+    /**
+     * 申请开票
+     */
+    V2_HYC_INVOICE_APPLY("v2.hyc.invoice.apply", "申请开票"),
+    /**
+     * 商户签约查询
+     */
+    V2_HYC_MERSIGN_QUERY("v2.hyc.mersign.query", "商户签约查询"),
+    /**
+     * 开票信息查询
+     */
+    V2_HYC_INVINFO_QUERY("v2.hyc.invinfo.query", "开票信息查询"),
+    /**
+     * 开票类目查询
+     */
+    V2_HYC_INVCATEGORY_QUERY("v2.hyc.invcategory.query", "开票类目查询"),
+    /**
+     * 个人签约状态查询
+     */
+    V2_HYC_CONTRACT_QUERY("v2.hyc.contract.query", "个人签约状态查询"),
+    /**
+     * 个人签约发起
+     */
+    V2_HYC_PERSONSIGN_CREATE("v2.hyc.personsign.create", "个人签约发起"),
+    /**
+     * 用户补贴
+     */
+    V2_WALLET_TRADE_RECHARGE_TRANSFER("v2.wallet.trade.recharge.transfer", "用户补贴"),
+    /**
+     * 钱包关单
+     */
+    V2_WALLET_TRADE_ORDER_CLOSE("v2.wallet.trade.order.close", "钱包关单"),
+    /**
+     * 自助扫码开票
+     */
+    V2_INVOICE_SELFSCANOPEN("v2.invoice.selfscanopen", "自助扫码开票"),
+    /**
+     * 发票开具申请查询
+     */
+    V2_INVOICE_QUERYAPPLY("v2.invoice.queryapply", "发票开具申请查询"),
+    /**
+     * 发票开具
+     */
+    V2_INVOICE_OPEN("v2.invoice.open", "发票开具"),
+    /**
+     * 全域资金管理配置查询
+     */
+    V2_MERCHANT_BUSI_EFPDETAIL("v2.merchant.busi.efpdetail", "全域资金管理配置查询"),
+    /**
+     * 全域资金管理配置
+     */
+    V2_MERCHANT_BUSI_EFPCONFIG("v2.merchant.busi.efpconfig", "全域资金管理配置"),
+    /**
+     * 银行大额未入账流水列表查询
+     */
+    V2_TRADE_ONLINEPAYMENT_TRANSFER_BANKBLOTTER_QUERY("v2.trade.onlinepayment.transfer.bankblotter.query", "银行大额未入账流水列表查询"),
+    /**
+     * 托管交易退款查询
+     */
+    V2_TRADE_HOSTING_PAYMENT_QUERYREFUNDINFO("v2.trade.hosting.payment.queryRefundInfo", "托管交易退款查询"),
+    /**
+     * 托管交易退款
+     */
+    V2_TRADE_HOSTING_PAYMENT_HTREFUND("v2.trade.hosting.payment.htRefund", "托管交易退款"),
+    /**
+     * E账户转账及充值查询接口
+     */
+    V2_TRADE_PAYMENT_ZXE_INCASH_QUERY("v2.trade.payment.zxe.incash.query", "E账户转账及充值查询接口"),
+    /**
+     * 电子账户账务明细查询
+     */
+    V2_TRADE_PAYMENT_ZXE_ACCTDETAIL_QUERY("v2.trade.payment.zxe.acctdetail.query", "电子账户账务明细查询"),
+    /**
+     * 付款关系提交
+     */
+    V2_TRADE_PAYRELATION_APPLY("v2.trade.payrelation.apply", "付款关系提交"),
+    /**
+     * 电子账户设置默认卡
+     */
+    V2_MERCHANT_ELEC_CARD_DEFAULT("v2.merchant.elec.card.default", "电子账户设置默认卡"),
+    /**
+     * 电子账户解绑
+     */
+    V2_MERCHANT_ELEC_CARD_UNBIND("v2.merchant.elec.card.unbind", "电子账户解绑"),
+    /**
+     * 电子账户绑卡
+     */
+    V2_MERCHANT_ELEC_CARD_BIND("v2.merchant.elec.card.bind", "电子账户绑卡"),
+    /**
+     * 托管交易查询
+     */
+    V2_TRADE_HOSTING_PAYMENT_QUERYORDERINFO("v2.trade.hosting.payment.queryorderinfo", "托管交易查询"),
+    /**
      * 钱包转账下单
      */
     V2_WALLET_TRADE_TRANSFER("v2.wallet.trade.transfer", "钱包转账下单"),
@@ -74,13 +186,13 @@ public enum FunctionCodeEnum {
      */
     V2_QUICKBUCKLE_QUERY("v2.quickbuckle.query", "快捷绑卡查询"),
     /**
-     * 银行大额转账差错申请查询
+     * 银行大额支付差错申请查询
      */
-    V2_TRADE_ONLINEPAYMENT_TRANSFER_BANKMISTAKE_APPLYQUERY("v2.trade.onlinepayment.transfer.bankmistake.applyquery", "银行大额转账差错申请查询"),
+    V2_TRADE_ONLINEPAYMENT_TRANSFER_BANKMISTAKE_APPLYQUERY("v2.trade.onlinepayment.transfer.bankmistake.applyquery", "银行大额支付差错申请查询"),
     /**
-     * 银行大额转账差错申请
+     * 银行大额支付差错申请
      */
-    V2_TRADE_ONLINEPAYMENT_TRANSFER_BANKMISTAKE_APPLY("v2.trade.onlinepayment.transfer.bankmistake.apply", "银行大额转账差错申请"),
+    V2_TRADE_ONLINEPAYMENT_TRANSFER_BANKMISTAKE_APPLY("v2.trade.onlinepayment.transfer.bankmistake.apply", "银行大额支付差错申请"),
     /**
      * 支付分扣款
      */
@@ -134,9 +246,9 @@ public enum FunctionCodeEnum {
      */
     V2_TRADE_BATCHTRANSLOG_QUERY("v2.trade.batchtranslog.query", "批量出金交易查询"),
     /**
-     * 快捷支付页面版接口
+     * 快捷支付页面版
      */
-    V2_TRADE_ONLINEPAYMENT_QUICKPAY_FRONTPAY("v2.trade.onlinepayment.quickpay.frontpay", "快捷支付页面版接口"),
+    V2_TRADE_ONLINEPAYMENT_QUICKPAY_FRONTPAY("v2.trade.onlinepayment.quickpay.frontpay", "快捷支付页面版"),
     /**
      * 快捷支付短信预校验
      */
@@ -270,17 +382,17 @@ public enum FunctionCodeEnum {
      */
     V2_MERCHANT_BUSI_MERCODE_QUERY("v2.merchant.busi.mercode.query", "商户微信支付宝ID查询"),
     /**
-     * 银行转账资金流水查询
+     * 银行大额资金流水查询
      */
-    V2_TRADE_ONLINEPAYMENT_TRANSFER_ACCOUNT_QUERY("v2.trade.onlinepayment.transfer.account.query", "银行转账资金流水查询"),
+    V2_TRADE_ONLINEPAYMENT_TRANSFER_ACCOUNT_QUERY("v2.trade.onlinepayment.transfer.account.query", "银行大额资金流水查询"),
     /**
-     * 银行大额转账关单
+     * 银行大额支付关单
      */
-    V2_TRADE_ONLINEPAYMENT_TRANSFER_ACCOUNT_CLOSE("v2.trade.onlinepayment.transfer.account.close", "银行大额转账关单"),
+    V2_TRADE_ONLINEPAYMENT_TRANSFER_ACCOUNT_CLOSE("v2.trade.onlinepayment.transfer.account.close", "银行大额支付关单"),
     /**
-     * 银行大额转账
+     * 银行大额支付
      */
-    V2_TRADE_ONLINEPAYMENT_TRANSFER_ACCOUNT("v2.trade.onlinepayment.transfer.account", "银行大额转账"),
+    V2_TRADE_ONLINEPAYMENT_TRANSFER_ACCOUNT("v2.trade.onlinepayment.transfer.account", "银行大额支付"),
     /**
      * 银行卡代发
      */
@@ -454,9 +566,9 @@ public enum FunctionCodeEnum {
      */
     V2_TRADE_WXUSERMARK_QUERY("v2.trade.wxusermark.query", "微信用户标识查询接口"),
     /**
-     * 银联统一在线收银台接口
+     * 银联统一在线收银台
      */
-    V2_TRADE_ONLINEPAYMENT_UNIONPAY("v2.trade.onlinepayment.unionpay", "银联统一在线收银台接口"),
+    V2_TRADE_ONLINEPAYMENT_UNIONPAY("v2.trade.onlinepayment.unionpay", "银联统一在线收银台"),
     /**
      * 获取银联用户标识接口
      */

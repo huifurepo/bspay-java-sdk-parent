@@ -11,7 +11,7 @@ import com.huifu.bspay.sdk.demo.core.Identify;
 import com.huifu.bspay.sdk.opps.core.request.V2TradeOnlinepaymentTransferBankmistakeApplyRequest;
 
 /**
- * 银行大额转账差错申请 - 示例
+ * 银行大额支付差错申请 - 示例
  *
  * @author sdk-generator
  * @Description
@@ -74,7 +74,7 @@ public class V2TradeOnlinepaymentTransferBankmistakeApplyRequestDemo extends Bas
         // 汇款凭证文件名称
         extendInfoMap.put("file_name", "汇付电子小票验证.jpg");
         // 备注
-        extendInfoMap.put("remark", "大额转账补入账验证");
+        extendInfoMap.put("remark", "大额支付补入账验证");
         // 银行信息数据
         extendInfoMap.put("bank_info_data", getBankInfoData());
         return extendInfoMap;
@@ -82,26 +82,26 @@ public class V2TradeOnlinepaymentTransferBankmistakeApplyRequestDemo extends Bas
 
     private static String getBankInfoData() {
         JSONObject dto = new JSONObject();
+        // 省份对公代发必填，[参见省市地区码](https://cloudpnrcdn.oss-cn-shanghai.aliyuncs.com/opps/api/prod/download_file/area/%E6%96%97%E6%8B%B1%E4%BB%A3%E5%8F%91%E7%9C%81%E4%BB%BD%E5%9C%B0%E5%8C%BA%E7%BC%96%E7%A0%81.xlsx)；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：0013&lt;/font&gt;
+        dto.put("province", "0031");
+        // 地区对公代发必填，[参见省市地区码](https://cloudpnrcdn.oss-cn-shanghai.aliyuncs.com/opps/api/prod/download_file/area/%E6%96%97%E6%8B%B1%E4%BB%A3%E5%8F%91%E7%9C%81%E4%BB%BD%E5%9C%B0%E5%8C%BA%E7%BC%96%E7%A0%81.xlsx)；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：1301&lt;/font&gt;
+        dto.put("area", "3100");
         // 银行编号
         dto.put("bank_code", "03080000");
         // 联行号选填，参见：[银行支行编码](https://paas.huifu.com/partners/api/#/csfl/api_csfl_yhzhbm)； &lt;font color&#x3D;&quot;green&quot;&gt;示例值：102290026507&lt;/font&gt;&lt;br/&gt;对私代发非必填；
         dto.put("correspondent_code", "103290076178");
         // 对公对私标识
         dto.put("card_acct_type", "P");
-        // 省份
-        dto.put("province", "0031");
-        // 地区
-        dto.put("area", "3100");
-        // 支行名
-        dto.put("subbranch_bank_name", "中国农业银行股份有限公司上海联洋支行");
         // 证件类型
         dto.put("certificate_type", "01");
-        // 付款方三证合一码
-        dto.put("bank_acct_three_in_one", "92650109MA79R8E308");
         // 手机号
         dto.put("mobile_no", "oO6XYz…………Is3nZb/5dFj860Z+nQ==");
         // 证件号
         dto.put("certify_no", "yL09mhS5…………WK04Kdfyg==");
+        // 支行名
+        dto.put("subbranch_bank_name", "中国农业银行股份有限公司上海联洋支行");
+        // 付款方三证合一码
+        dto.put("bank_acct_three_in_one", "92650109MA79R8E308");
 
         return dto.toJSONString();
     }

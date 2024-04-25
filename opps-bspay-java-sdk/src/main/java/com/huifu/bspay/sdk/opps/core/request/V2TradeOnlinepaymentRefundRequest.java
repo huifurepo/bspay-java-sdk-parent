@@ -32,12 +32,12 @@ public class V2TradeOnlinepaymentRefundRequest extends BaseRequest {
     @JSONField(name = "ord_amt")
     private String ordAmt;
     /**
-     * 设备信息
+     * 设备信息条件必填，当为银行大额支付时可不填，jsonObject格式
      */
     @JSONField(name = "terminal_device_data")
     private String terminalDeviceData;
     /**
-     * 安全信息
+     * 安全信息条件必填，当为银行大额支付时可不填，jsonObject格式
      */
     @JSONField(name = "risk_check_data")
     private String riskCheckData;

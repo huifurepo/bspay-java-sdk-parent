@@ -57,6 +57,8 @@ public class V2TradeSettlementEnchashmentRequestDemo extends BaseCommonDemo {
         Map<String, Object> extendInfoMap = new HashMap<>();
         // 账户号
         // extendInfoMap.put("acct_id", "");
+        // 取现渠道
+        extendInfoMap.put("enchashment_channel", "00");
         // 备注
         // extendInfoMap.put("remark", "");
         // 异步通知地址

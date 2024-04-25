@@ -34,9 +34,9 @@ public class V2TradeOnlinepaymentRefundRequestDemo extends BaseCommonDemo {
         request.setHuifuId("6666000108854952");
         // 退款金额
         request.setOrdAmt("0.01");
-        // 设备信息
+        // 设备信息条件必填，当为银行大额支付时可不填，jsonObject格式
         request.setTerminalDeviceData(getTerminalDeviceData());
-        // 安全信息
+        // 安全信息条件必填，当为银行大额支付时可不填，jsonObject格式
         request.setRiskCheckData(getRiskCheckData());
 
         // 设置非必填字段

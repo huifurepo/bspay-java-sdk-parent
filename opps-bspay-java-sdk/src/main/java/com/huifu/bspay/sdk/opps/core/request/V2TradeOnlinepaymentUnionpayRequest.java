@@ -4,7 +4,7 @@ import com.alibaba.fastjson.annotation.JSONField;
 import com.huifu.bspay.sdk.opps.core.enums.FunctionCodeEnum;
 
 /**
- * 银联统一在线收银台接口
+ * 银联统一在线收银台
  *
  * @author sdk-generator
  * @Description
@@ -41,6 +41,11 @@ public class V2TradeOnlinepaymentUnionpayRequest extends BaseRequest {
      */
     @JSONField(name = "risk_check_data")
     private String riskCheckData;
+    /**
+     * 三方支付数据jsonObject；pay_scene为云闪付公众号与云闪付小程序时必填
+     */
+    @JSONField(name = "third_pay_data")
+    private String thirdPayData;
 
     @Override
     public FunctionCodeEnum getFunctionCode() {
@@ -50,13 +55,14 @@ public class V2TradeOnlinepaymentUnionpayRequest extends BaseRequest {
     public V2TradeOnlinepaymentUnionpayRequest() {
     }
 
-    public V2TradeOnlinepaymentUnionpayRequest(String huifuId, String reqDate, String reqSeqId, String transAmt, String orderDesc, String riskCheckData) {
+    public V2TradeOnlinepaymentUnionpayRequest(String huifuId, String reqDate, String reqSeqId, String transAmt, String orderDesc, String riskCheckData, String thirdPayData) {
         this.huifuId = huifuId;
         this.reqDate = reqDate;
         this.reqSeqId = reqSeqId;
         this.transAmt = transAmt;
         this.orderDesc = orderDesc;
         this.riskCheckData = riskCheckData;
+        this.thirdPayData = thirdPayData;
     }
 
     public String getHuifuId() {
@@ -105,6 +111,14 @@ public class V2TradeOnlinepaymentUnionpayRequest extends BaseRequest {
 
     public void setRiskCheckData(String riskCheckData) {
         this.riskCheckData = riskCheckData;
+    }
+
+    public String getThirdPayData() {
+        return thirdPayData;
+    }
+
+    public void setThirdPayData(String thirdPayData) {
+        this.thirdPayData = thirdPayData;
     }
 
 }

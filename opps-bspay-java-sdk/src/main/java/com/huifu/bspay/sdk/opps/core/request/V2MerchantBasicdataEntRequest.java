@@ -22,7 +22,7 @@ public class V2MerchantBasicdataEntRequest extends BaseRequest {
     @JSONField(name = "req_date")
     private String reqDate;
     /**
-     * 上级主体ID
+     * 直属渠道号
      */
     @JSONField(name = "upper_huifu_id")
     private String upperHuifuId;

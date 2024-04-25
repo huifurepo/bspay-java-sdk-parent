@@ -90,9 +90,9 @@ public class V2TradeOnlinepaymentBankingFrontpayRequestDemo extends BaseCommonDe
         JSONObject dto = new JSONObject();
         // 分账金额
         // dto.put("div_amt", "");
-        // 被分账方ID
+        // 分账接收方ID
         // dto.put("huifu_id", "");
-        // 被分账户号
+        // 接收方账户号
         // dto.put("acct_id", "");
 
         JSONArray dtoList = new JSONArray();

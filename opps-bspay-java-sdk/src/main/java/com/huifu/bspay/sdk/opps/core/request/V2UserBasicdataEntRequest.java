@@ -106,6 +106,11 @@ public class V2UserBasicdataEntRequest extends BaseRequest {
      */
     @JSONField(name = "contact_mobile")
     private String contactMobile;
+    /**
+     * 管理员账号如需短信通知则必填；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：Lg20220222013747&lt;/font&gt;
+     */
+    @JSONField(name = "login_name")
+    private String loginName;
 
     @Override
     public FunctionCodeEnum getFunctionCode() {
@@ -115,7 +120,7 @@ public class V2UserBasicdataEntRequest extends BaseRequest {
     public V2UserBasicdataEntRequest() {
     }
 
-    public V2UserBasicdataEntRequest(String reqSeqId, String reqDate, String regName, String licenseCode, String licenseValidityType, String licenseBeginDate, String licenseEndDate, String regProvId, String regAreaId, String regDistrictId, String regDetail, String legalName, String legalCertType, String legalCertNo, String legalCertValidityType, String legalCertBeginDate, String legalCertEndDate, String contactName, String contactMobile) {
+    public V2UserBasicdataEntRequest(String reqSeqId, String reqDate, String regName, String licenseCode, String licenseValidityType, String licenseBeginDate, String licenseEndDate, String regProvId, String regAreaId, String regDistrictId, String regDetail, String legalName, String legalCertType, String legalCertNo, String legalCertValidityType, String legalCertBeginDate, String legalCertEndDate, String contactName, String contactMobile, String loginName) {
         this.reqSeqId = reqSeqId;
         this.reqDate = reqDate;
         this.regName = regName;
@@ -135,6 +140,7 @@ public class V2UserBasicdataEntRequest extends BaseRequest {
         this.legalCertEndDate = legalCertEndDate;
         this.contactName = contactName;
         this.contactMobile = contactMobile;
+        this.loginName = loginName;
     }
 
     public String getReqSeqId() {
@@ -287,6 +293,14 @@ public class V2UserBasicdataEntRequest extends BaseRequest {
 
     public void setContactMobile(String contactMobile) {
         this.contactMobile = contactMobile;
+    }
+
+    public String getLoginName() {
+        return loginName;
+    }
+
+    public void setLoginName(String loginName) {
+        this.loginName = loginName;
     }
 
 }

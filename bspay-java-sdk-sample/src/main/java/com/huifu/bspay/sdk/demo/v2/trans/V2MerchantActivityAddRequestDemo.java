@@ -115,6 +115,12 @@ public class V2MerchantActivityAddRequestDemo extends BaseCommonDemo {
         extendInfoMap.put("legal_person_auth_photo", "");
         // 食堂经营相关资质
         // extendInfoMap.put("food_qualification_proof", "");
+        // 活动费率%
+        // extendInfoMap.put("preferential_rate", "");
+        // 活动到期后费率%
+        // extendInfoMap.put("expiration_rate", "");
+        // 学校号
+        // extendInfoMap.put("school_id", "");
         return extendInfoMap;
     }
 

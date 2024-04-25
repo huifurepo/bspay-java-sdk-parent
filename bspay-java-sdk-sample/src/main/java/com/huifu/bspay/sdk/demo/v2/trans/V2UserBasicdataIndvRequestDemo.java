@@ -71,6 +71,8 @@ public class V2UserBasicdataIndvRequestDemo extends BaseCommonDemo {
         extendInfoMap.put("expand_id", "");
         // 文件列表
         extendInfoMap.put("file_list", getFileList());
+        // 地址
+        // extendInfoMap.put("**address**", "");
         return extendInfoMap;
     }
 

@@ -38,6 +38,10 @@ public class V2TradeAcctpaymentPayRequestDemo extends BaseCommonDemo {
         request.setAcctSplitBunch(getAcctSplitBunch());
         // 安全信息
         request.setRiskCheckData(getRiskCheckData());
+        // 资金类型资金类型。支付渠道为中信E管家时，资金类型必填（[详见说明](https://paas.huifu.com/partners/api/#/yuer/api_zxegjzllx)）
+        // request.setFundType("test");
+        // 手续费承担方标识余额支付手续费承担方标识；商户余额支付扣收规则为接口指定承担方时必填！枚举值：&lt;br/&gt;OUT：出款方；&lt;br/&gt;IN：分账接受方。&lt;br/&gt;&lt;font color&#x3D;&quot;green&quot;&gt;示例值：IN&lt;/font&gt;
+        // request.setTransFeeTakeFlag("test");
 
         // 设置非必填字段
         Map<String, Object> extendInfoMap = getExtendInfos();
@@ -65,6 +69,16 @@ public class V2TradeAcctpaymentPayRequestDemo extends BaseCommonDemo {
         // extendInfoMap.put("delay_acct_flag", "");
         // 出款方账户号
         // extendInfoMap.put("out_acct_id", "");
+        // 支付渠道
+        // extendInfoMap.put("acct_channel", "");
+        // 灵活用工标志
+        // extendInfoMap.put("hyc_flag", "");
+        // 代发模式
+        // extendInfoMap.put("salary_modle_type", "");
+        // 落地公司商户号
+        // extendInfoMap.put("bmember_id", "");
+        // 异步通知地址
+        // extendInfoMap.put("notify_url", "");
         return extendInfoMap;
     }
 
@@ -72,9 +86,9 @@ public class V2TradeAcctpaymentPayRequestDemo extends BaseCommonDemo {
         JSONObject dto = new JSONObject();
         // 分账金额
         dto.put("div_amt", "0.01");
-        // 被分账方ID
+        // 分账接收方ID
         dto.put("huifu_id", "6666000018344461");
-        // 被分账方账户号
+        // 账户号
         // dto.put("acct_id", "");
 
         JSONArray dtoList = new JSONArray();

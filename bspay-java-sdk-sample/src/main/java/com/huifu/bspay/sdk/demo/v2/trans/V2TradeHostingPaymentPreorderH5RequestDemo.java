@@ -57,8 +57,8 @@ public class V2TradeHostingPaymentPreorderH5RequestDemo extends BaseCommonDemo {
     private static Map<String, Object> getExtendInfos() {
         // 设置非必填字段
         Map<String, Object> extendInfoMap = new HashMap<>();
-        // 收银台ID
-        extendInfoMap.put("checkout_id", "");
+        // 收银台样式
+        // extendInfoMap.put("style_id", "");
         // 是否延迟交易
         extendInfoMap.put("delay_acct_flag", "N");
         // 分账对象
@@ -69,6 +69,10 @@ public class V2TradeHostingPaymentPreorderH5RequestDemo extends BaseCommonDemo {
         extendInfoMap.put("biz_info", getBizInfo());
         // 交易异步通知地址
         extendInfoMap.put("notify_url", "https://callback.service.com/xx");
+        // 使用类型
+        // extendInfoMap.put("usage_type", "");
+        // 交易类型
+        // extendInfoMap.put("trans_type", "");
         return extendInfoMap;
     }
 
@@ -76,7 +80,7 @@ public class V2TradeHostingPaymentPreorderH5RequestDemo extends BaseCommonDemo {
         JSONObject dto = new JSONObject();
         // 分账金额
         dto.put("div_amt", "0.08");
-        // 被分账方ID
+        // 分账接收方ID
         dto.put("huifu_id", "6666000111546360");
 
         JSONArray dtoList = new JSONArray();
@@ -98,6 +102,8 @@ public class V2TradeHostingPaymentPreorderH5RequestDemo extends BaseCommonDemo {
         dto.put("project_title", "收银台标题");
         // 半支付托管项目号
         dto.put("project_id", "PROJECTID2022032912492559");
+        // 请求类型P:PC页面版，默认：P；M:H5页面版；指定交易类型时必填；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：M&lt;/font&gt;
+        // dto.put("request_type", "test");
         // 商户私有信息
         dto.put("private_info", "商户私有信息test");
         // 回调地址
