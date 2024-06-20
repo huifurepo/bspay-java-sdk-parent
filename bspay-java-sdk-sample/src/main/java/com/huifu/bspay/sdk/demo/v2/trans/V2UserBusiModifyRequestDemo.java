@@ -223,11 +223,15 @@ public class V2UserBusiModifyRequestDemo extends BaseCommonDemo {
         // 电子账户提现手续费承担方
         // dto.put("cash_fee_party", "test");
         // 场景
-        // dto.put("scence", "test");
+        // dto.put("scene", "test");
         // 角色类型(角色编号)
         // dto.put("role_type", "test");
+        // 电子账户开通状态
+        // dto.put("bank_status", "test");
         // 银行卡信息
         // dto.put("**elec_card_list**", getElecCardList());
+        // 银行信息
+        // dto.put("bank_message", "");
 
         return dto.toJSONString();
     }

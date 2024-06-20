@@ -52,8 +52,6 @@ public class V2SupplementaryPictureRequestDemo extends BaseCommonDemo {
         Map<String, Object> extendInfoMap = new HashMap<>();
         // 商户号
         extendInfoMap.put("huifu_id", "6666000103413615");
-        // 文件url链接
-        extendInfoMap.put("file_url", "https://example.com/image.jpg");
         return extendInfoMap;
     }
 

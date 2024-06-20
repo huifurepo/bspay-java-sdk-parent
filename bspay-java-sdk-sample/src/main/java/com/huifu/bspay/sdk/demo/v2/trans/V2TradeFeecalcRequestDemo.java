@@ -27,13 +27,13 @@ public class V2TradeFeecalcRequestDemo extends BaseCommonDemo {
         // 2.组装请求参数
         V2TradeFeecalcRequest request = new V2TradeFeecalcRequest();
         // 商户号
-        request.setHuifuId("6666000116584429");
+        request.setHuifuId("6666000109133323");
         // 请求日期
         request.setReqDate(DateTools.getCurrentDateYYYYMMDD());
         // 请求流水号
         request.setReqSeqId(SequenceTools.getReqSeqId32());
         // 交易类型
-        request.setTradeType("ENCASHMENT");
+        request.setTradeType("ONLINE_PAY");
         // 交易金额
         request.setTransAmt("1000.00");
 
@@ -54,7 +54,7 @@ public class V2TradeFeecalcRequestDemo extends BaseCommonDemo {
         // 设置非必填字段
         Map<String, Object> extendInfoMap = new HashMap<>();
         // 网银交易类型
-        extendInfoMap.put("online_trans_type", "");
+        extendInfoMap.put("online_trans_type", "3000");
         // 付款方银行编号
         extendInfoMap.put("bank_id", "01020000");
         // 卡类型

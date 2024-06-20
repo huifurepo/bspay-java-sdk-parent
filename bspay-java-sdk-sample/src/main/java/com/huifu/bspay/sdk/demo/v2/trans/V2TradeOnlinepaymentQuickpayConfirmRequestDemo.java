@@ -31,11 +31,11 @@ public class V2TradeOnlinepaymentQuickpayConfirmRequestDemo extends BaseCommonDe
         // 请求流水号
         request.setReqSeqId(SequenceTools.getReqSeqId32());
         // 商户号
-        request.setHuifuId("6666000103423237");
+        request.setHuifuId("6666000109133323");
         // 短信验证码
-        request.setSmsCode("111111");
+        request.setSmsCode("222222");
         // 商品描述
-        request.setGoodsDesc("描述6");
+        request.setGoodsDesc("描述");
         // 外部地址
         request.setNotifyUrl("http://www.baidu.com");
 

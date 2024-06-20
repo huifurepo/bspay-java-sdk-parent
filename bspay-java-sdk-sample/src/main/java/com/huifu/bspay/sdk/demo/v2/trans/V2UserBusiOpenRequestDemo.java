@@ -219,7 +219,7 @@ public class V2UserBusiOpenRequestDemo extends BaseCommonDemo {
         // 电子账户提现手续费承担方
         // dto.put("cash_fee_party", "test");
         // 场景
-        // dto.put("scence", "test");
+        // dto.put("scene", "test");
         // 角色类型(角色编号)
         // dto.put("role_type", "test");
         // 银行卡信息

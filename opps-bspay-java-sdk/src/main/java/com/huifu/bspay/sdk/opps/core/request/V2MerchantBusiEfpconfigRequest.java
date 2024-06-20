@@ -4,7 +4,7 @@ import com.alibaba.fastjson.annotation.JSONField;
 import com.huifu.bspay.sdk.opps.core.enums.FunctionCodeEnum;
 
 /**
- * 全域资金管理配置
+ * 全渠道资金管理配置
  *
  * @author sdk-generator
  * @Description
@@ -57,10 +57,15 @@ public class V2MerchantBusiEfpconfigRequest extends BaseRequest {
     @JSONField(name = "out_order_acct_open_fees")
     private String outOrderAcctOpenFees;
     /**
-     * 商户与其他支付机构签署的收单协议文件id首次开通时必填；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：57cc7f00-600a-33ab-b614-6221bbf2e530&lt;/font&gt;
+     * 全渠道资金管理补充材料id首次开通时必填；涉及文件类型：[F504-全渠道资金管理补充材料](https://paas.huifu.com/partners/api/#/csfl/api_csfl_wjlx)；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：57cc7f00-600a-33ab-b614-6221bbf2e530&lt;/font&gt;
      */
     @JSONField(name = "other_payment_institutions_pic")
     private String otherPaymentInstitutionsPic;
+    /**
+     * 新网银行数字证书及电子签名授权委托书out_funds_gate_id为xw0时必填；涉及文件类型：[F534-银行数字证书及电子签名授权委托书](https://paas.huifu.com/partners/api/#/csfl/api_csfl_wjlx)；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：57cc7f00-600a-33ab-b614-6221bbf2e530&lt;/font&gt;
+     */
+    @JSONField(name = "xw_digital_certificate_pic")
+    private String xwDigitalCertificatePic;
     /**
      * 银行类型
      */
@@ -71,6 +76,11 @@ public class V2MerchantBusiEfpconfigRequest extends BaseRequest {
      */
     @JSONField(name = "sign_user_info")
     private String signUserInfo;
+    /**
+     * 入账来源
+     */
+    @JSONField(name = "acct_source")
+    private String acctSource;
 
     @Override
     public FunctionCodeEnum getFunctionCode() {
@@ -80,7 +90,7 @@ public class V2MerchantBusiEfpconfigRequest extends BaseRequest {
     public V2MerchantBusiEfpconfigRequest() {
     }
 
-    public V2MerchantBusiEfpconfigRequest(String reqSeqId, String reqDate, String huifuId, String upperHuifuId, String switchState, String outOrderAutoAcctFlag, String outFeeHuifuid, String outOrderAcctCard, String outOrderAcctOpenFees, String otherPaymentInstitutionsPic, String outFundsGateId, String signUserInfo) {
+    public V2MerchantBusiEfpconfigRequest(String reqSeqId, String reqDate, String huifuId, String upperHuifuId, String switchState, String outOrderAutoAcctFlag, String outFeeHuifuid, String outOrderAcctCard, String outOrderAcctOpenFees, String otherPaymentInstitutionsPic, String xwDigitalCertificatePic, String outFundsGateId, String signUserInfo, String acctSource) {
         this.reqSeqId = reqSeqId;
         this.reqDate = reqDate;
         this.huifuId = huifuId;
@@ -91,8 +101,10 @@ public class V2MerchantBusiEfpconfigRequest extends BaseRequest {
         this.outOrderAcctCard = outOrderAcctCard;
         this.outOrderAcctOpenFees = outOrderAcctOpenFees;
         this.otherPaymentInstitutionsPic = otherPaymentInstitutionsPic;
+        this.xwDigitalCertificatePic = xwDigitalCertificatePic;
         this.outFundsGateId = outFundsGateId;
         this.signUserInfo = signUserInfo;
+        this.acctSource = acctSource;
     }
 
     public String getReqSeqId() {
@@ -175,6 +187,14 @@ public class V2MerchantBusiEfpconfigRequest extends BaseRequest {
         this.otherPaymentInstitutionsPic = otherPaymentInstitutionsPic;
     }
 
+    public String getXwDigitalCertificatePic() {
+        return xwDigitalCertificatePic;
+    }
+
+    public void setXwDigitalCertificatePic(String xwDigitalCertificatePic) {
+        this.xwDigitalCertificatePic = xwDigitalCertificatePic;
+    }
+
     public String getOutFundsGateId() {
         return outFundsGateId;
     }
@@ -189,6 +209,14 @@ public class V2MerchantBusiEfpconfigRequest extends BaseRequest {
 
     public void setSignUserInfo(String signUserInfo) {
         this.signUserInfo = signUserInfo;
+    }
+
+    public String getAcctSource() {
+        return acctSource;
+    }
+
+    public void setAcctSource(String acctSource) {
+        this.acctSource = acctSource;
     }
 
 }

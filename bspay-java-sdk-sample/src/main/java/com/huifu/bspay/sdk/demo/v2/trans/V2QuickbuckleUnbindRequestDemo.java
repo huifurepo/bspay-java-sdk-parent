@@ -31,7 +31,7 @@ public class V2QuickbuckleUnbindRequestDemo extends BaseCommonDemo {
         // 请求流水号
         request.setReqSeqId(SequenceTools.getReqSeqId32());
         // 汇付商户Id
-        request.setHuifuId("6666000003078984");
+        request.setHuifuId("6666000109133323");
         // 用户ID
         request.setOutCustId("6666000103633606");
         // 卡令牌

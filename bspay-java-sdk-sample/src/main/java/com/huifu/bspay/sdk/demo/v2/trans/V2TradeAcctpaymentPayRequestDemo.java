@@ -31,7 +31,7 @@ public class V2TradeAcctpaymentPayRequestDemo extends BaseCommonDemo {
         // 请求日期
         request.setReqDate(DateTools.getCurrentDateYYYYMMDD());
         // 出款方商户号
-        request.setOutHuifuId("6666000018344461");
+        request.setOutHuifuId("6666000109133323");
         // 支付金额
         request.setOrdAmt("0.01");
         // 分账对象
@@ -87,7 +87,7 @@ public class V2TradeAcctpaymentPayRequestDemo extends BaseCommonDemo {
         // 分账金额
         dto.put("div_amt", "0.01");
         // 分账接收方ID
-        dto.put("huifu_id", "6666000018344461");
+        dto.put("huifu_id", "6666000109133323");
         // 账户号
         // dto.put("acct_id", "");
 

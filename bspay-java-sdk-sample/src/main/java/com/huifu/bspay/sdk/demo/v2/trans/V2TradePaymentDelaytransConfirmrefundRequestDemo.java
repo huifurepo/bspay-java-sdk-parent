@@ -31,11 +31,11 @@ public class V2TradePaymentDelaytransConfirmrefundRequestDemo extends BaseCommon
         // 请求流水号
         request.setReqSeqId(SequenceTools.getReqSeqId32());
         // 商户号
-        request.setHuifuId("6666000103423237");
+        request.setHuifuId("6666000109133323");
         // 原交易请求日期
-        request.setOrgReqDate("20221108");
+        request.setOrgReqDate("20240513");
         // 原交易请求流水号
-        request.setOrgReqSeqId("20221108349713659620211667908395");
+        request.setOrgReqSeqId("20240513105825239x0lp7ldbus4sji");
 
         // 设置非必填字段
         Map<String, Object> extendInfoMap = getExtendInfos();
@@ -67,7 +67,7 @@ public class V2TradePaymentDelaytransConfirmrefundRequestDemo extends BaseCommon
     private static JSON getAcctInfos() {
         JSONObject dto = new JSONObject();
         // 分账接收方ID
-        dto.put("huifu_id", "6666000003109208");
+        dto.put("huifu_id", "6666000109133323");
         // 分账金额(元)
         dto.put("div_amt", "0.01");
         // 垫资金额(元)

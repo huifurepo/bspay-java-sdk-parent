@@ -53,10 +53,12 @@ public class V2TradeOnlinepaymentTransferAccountRequestDemo extends BaseCommonDe
     private static Map<String, Object> getExtendInfos() {
         // 设置非必填字段
         Map<String, Object> extendInfoMap = new HashMap<>();
-        // 收款方用户客户号
+        // 用户客户号
         extendInfoMap.put("user_huifu_id", "6666000103905031");
         // 收款方账户号
         extendInfoMap.put("acct_id", "A01199826");
+        // 页面标识
+        // extendInfoMap.put("page_flag", "");
         // 付款方名称
         extendInfoMap.put("certificate_name", "沈显龙");
         // 付款方银行卡号
@@ -71,7 +73,31 @@ public class V2TradeOnlinepaymentTransferAccountRequestDemo extends BaseCommonDe
         // extendInfoMap.put("acct_mode", "");
         // 银行模式
         // extendInfoMap.put("bank_mode", "");
+        // 延时标记
+        // extendInfoMap.put("delay_acct_flag", "");
+        // 分账对象
+        // extendInfoMap.put("acct_split_bunch", getAcctSplitBunch());
         return extendInfoMap;
+    }
+
+    private static JSON getAcctInfos() {
+        JSONObject dto = new JSONObject();
+        // 支付金额
+        // dto.put("div_amt", "");
+        // 商户号
+        // dto.put("huifu_id", "");
+
+        JSONArray dtoList = new JSONArray();
+        dtoList.add(dto);
+        return dtoList;
+    }
+
+    private static JSON getAcctSplitBunch() {
+        JSONObject dto = new JSONObject();
+        // 分账信息列表
+        // dto.put("acct_infos", getAcctInfos());
+
+        return dto;
     }
 
 }

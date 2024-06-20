@@ -11,7 +11,7 @@ import com.huifu.bspay.sdk.demo.core.Identify;
 import com.huifu.bspay.sdk.opps.core.request.V2TradeOnlinepaymentBankingFrontpayRequest;
 
 /**
- * 网银支付接口 - 示例
+ * 网银支付 - 示例
  *
  * @author sdk-generator
  * @Description
@@ -31,7 +31,7 @@ public class V2TradeOnlinepaymentBankingFrontpayRequestDemo extends BaseCommonDe
         // 请求日期
         request.setReqDate(DateTools.getCurrentDateYYYYMMDD());
         // 商户号
-        request.setHuifuId("6666000108854952");
+        request.setHuifuId("6666000109133323");
         // 订单金额
         request.setTransAmt("0.02");
         // 商品描述

@@ -27,7 +27,7 @@ public class V2TradeHostingPaymentPreorderAliRequestDemo extends BaseCommonDemo 
         // 2.组装请求参数
         V2TradeHostingPaymentPreorderAliRequest request = new V2TradeHostingPaymentPreorderAliRequest();
         // 商户号
-        request.setHuifuId("6666000111546360");
+        request.setHuifuId("6666000109133323");
         // 请求日期
         request.setReqDate(DateTools.getCurrentDateYYYYMMDD());
         // 请求流水号
@@ -77,7 +77,7 @@ public class V2TradeHostingPaymentPreorderAliRequestDemo extends BaseCommonDemo 
         // 分账金额
         dto.put("div_amt", "0.08");
         // 分账接收方ID
-        dto.put("huifu_id", "6666000111546360");
+        dto.put("huifu_id", "6666000109133323");
 
         JSONArray dtoList = new JSONArray();
         dtoList.add(dto);

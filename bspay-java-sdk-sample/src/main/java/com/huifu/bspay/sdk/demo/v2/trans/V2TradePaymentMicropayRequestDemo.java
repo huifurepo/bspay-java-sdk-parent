@@ -31,13 +31,13 @@ public class V2TradePaymentMicropayRequestDemo extends BaseCommonDemo {
         // 请求流水号
         request.setReqSeqId(SequenceTools.getReqSeqId32());
         // 商户号
-        request.setHuifuId("6666000018328947");
+        request.setHuifuId("6666000109133323");
         // 交易金额
-        request.setTransAmt("0.01");
+        request.setTransAmt("1.01");
         // 商品描述
         request.setGoodsDesc("聚合反扫消费");
         // 支付授权码
-        request.setAuthCode("2884138408701518074");
+        request.setAuthCode("131135212661863252");
         // 安全信息
         request.setRiskCheckData(getRiskCheckData());
 
@@ -58,35 +58,35 @@ public class V2TradePaymentMicropayRequestDemo extends BaseCommonDemo {
         // 设置非必填字段
         Map<String, Object> extendInfoMap = new HashMap<>();
         // 交易有效期
-        extendInfoMap.put("time_expire", "20220918150330");
+        // extendInfoMap.put("time_expire", "");
         // 手续费扣款标志
         // extendInfoMap.put("fee_flag", "");
         // 禁用支付方式
-        extendInfoMap.put("limit_pay_type", "");
+        // extendInfoMap.put("limit_pay_type", "");
         // 是否延迟交易
-        extendInfoMap.put("delay_acct_flag", "Y");
+        // extendInfoMap.put("delay_acct_flag", "");
         // 渠道号
-        extendInfoMap.put("channel_no", "");
+        // extendInfoMap.put("channel_no", "");
         // 补贴支付信息
         // extendInfoMap.put("combinedpay_data", "");
         // 场景类型
-        extendInfoMap.put("pay_scene", "");
+        // extendInfoMap.put("pay_scene", "");
         // 分账对象
         // extendInfoMap.put("acct_split_bunch", getAcctSplitBunch());
         // 传入分帐遇到优惠的处理规则
-        extendInfoMap.put("term_div_coupon_type", "3");
+        // extendInfoMap.put("term_div_coupon_type", "");
         // 聚合反扫微信参数集合
         // extendInfoMap.put("wx_data", getWxData());
         // 支付宝扩展参数集合
-        extendInfoMap.put("alipay_data", getAlipayData());
+        // extendInfoMap.put("alipay_data", getAlipayData());
         // 银联参数集合
         // extendInfoMap.put("unionpay_data", getUnionpayData());
         // 设备信息
-        extendInfoMap.put("terminal_device_info", getTerminalDeviceInfo());
+        // extendInfoMap.put("terminal_device_info", getTerminalDeviceInfo());
         // 异步通知地址
         extendInfoMap.put("notify_url", "http://www.baidu.com");
         // 交易备注
-        extendInfoMap.put("remark", "");
+        // extendInfoMap.put("remark", "");
         // 账户号
         // extendInfoMap.put("acct_id", "");
         return extendInfoMap;
@@ -155,9 +155,7 @@ public class V2TradePaymentMicropayRequestDemo extends BaseCommonDemo {
         // 门店详细地址
         // dto.put("address", "");
 
-        JSONArray dtoList = new JSONArray();
-        dtoList.add(dto);
-        return dtoList;
+        return dto;
     }
 
     private static JSON getSceneInfo() {
@@ -257,7 +255,7 @@ public class V2TradePaymentMicropayRequestDemo extends BaseCommonDemo {
     private static String getAlipayData() {
         JSONObject dto = new JSONObject();
         // 支付宝的店铺编号
-        dto.put("alipay_store_id", "");
+        // dto.put("alipay_store_id", "");
         // 订单包含的商品列表信息
         // dto.put("goods_detail", getGoodsDetail());
         // 业务扩展参数
@@ -265,7 +263,7 @@ public class V2TradePaymentMicropayRequestDemo extends BaseCommonDemo {
         // 商户操作员编号
         // dto.put("operator_id", "");
         // 商户门店编号
-        dto.put("store_id", "");
+        // dto.put("store_id", "");
         // 外部指定买家
         // dto.put("ext_user_info", getExtUserInfo());
         // 商户业务信息
@@ -315,21 +313,21 @@ public class V2TradePaymentMicropayRequestDemo extends BaseCommonDemo {
         // 汇付机具号
         // dto.put("devs_id", "test");
         // 设备类型
-        dto.put("device_type", "4");
+        // dto.put("device_type", "");
         // 交易设备IP
-        dto.put("device_ip", "10.10.0.1");
+        // dto.put("device_ip", "");
         // 交易设备MAC
-        dto.put("device_mac", "030147441006000182623");
+        // dto.put("device_mac", "");
         // 交易设备IMEI
-        dto.put("device_imei", "030147441006000182623");
+        // dto.put("device_imei", "");
         // 交易设备IMSI
-        dto.put("device_imsi", "030147441006000182623");
+        // dto.put("device_imsi", "");
         // 交易设备ICCID
-        dto.put("device_icc_id", "030147441006000182623");
+        // dto.put("device_icc_id", "");
         // 交易设备WIFIMAC
-        dto.put("device_wifi_mac", "030147441006000182623");
+        // dto.put("device_wifi_mac", "");
         // 交易设备GPS
-        dto.put("device_gps", "111");
+        // dto.put("device_gps", "");
         // 商户终端应用程序版
         // dto.put("app_version", "");
         // 加密随机因子

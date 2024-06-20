@@ -11,7 +11,7 @@ import com.huifu.bspay.sdk.demo.core.Identify;
 import com.huifu.bspay.sdk.opps.core.request.V2MerchantBusiEfpconfigRequest;
 
 /**
- * 全域资金管理配置 - 示例
+ * 全渠道资金管理配置 - 示例
  *
  * @author sdk-generator
  * @Description
@@ -44,12 +44,16 @@ public class V2MerchantBusiEfpconfigRequestDemo extends BaseCommonDemo {
         request.setOutOrderAcctCard("{\"area_id\":\"310100\",\"card_name\":\"圆务铁白事\",\"card_no\":\"4340622119959288\",\"card_type\":\"0\",\"prov_id\":\"310000\",\"bank_code\":\"01050000\",\"branch_code\":\"105290071113\",\"branch_name\":\"中国建设银行股份有限公司上海市中支行\",\"cert_begin_date\":\"20240314\",\"cert_end_date\":\"\",\"cert_no\":\"340000199810170714\",\"cert_type\":\"00\",\"cert_validity_type\":\"1\",\"mp\":\"13777842539\",\"open_licence_no\":\"123456789\"}");
         // 全域资金开户手续费首次开通时必填 jsonObject格式
         request.setOutOrderAcctOpenFees("{\"fee_fix_amt\":\"0\",\"out_fee_acct_type\":\"\",\"out_fee_huifuid\":\"\"}");
-        // 商户与其他支付机构签署的收单协议文件id首次开通时必填；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：57cc7f00-600a-33ab-b614-6221bbf2e530&lt;/font&gt;
+        // 全渠道资金管理补充材料id首次开通时必填；涉及文件类型：[F504-全渠道资金管理补充材料](https://paas.huifu.com/partners/api/#/csfl/api_csfl_wjlx)；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：57cc7f00-600a-33ab-b614-6221bbf2e530&lt;/font&gt;
         request.setOtherPaymentInstitutionsPic("8c4f6254-6c36-3b3c-ae8b-efcf24ca215e");
+        // 新网银行数字证书及电子签名授权委托书out_funds_gate_id为xw0时必填；涉及文件类型：[F534-银行数字证书及电子签名授权委托书](https://paas.huifu.com/partners/api/#/csfl/api_csfl_wjlx)；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：57cc7f00-600a-33ab-b614-6221bbf2e530&lt;/font&gt;
+        // request.setXwDigitalCertificatePic("test");
         // 银行类型
         request.setOutFundsGateId("xw0");
         // 签约人信息switch_state为1时必填 jsonObject格式
         request.setSignUserInfo("{\"type\":\"LEGAL\",\"mobile_no\":\"13777842539\"}");
+        // 入账来源
+        request.setAcctSource("01");
 
         // 设置非必填字段
         Map<String, Object> extendInfoMap = getExtendInfos();
@@ -85,8 +89,6 @@ public class V2MerchantBusiEfpconfigRequestDemo extends BaseCommonDemo {
         extendInfoMap.put("pay_every_deal", "");
         // 申请单日限额
         extendInfoMap.put("pay_every_day", "");
-        // 入账来源
-        extendInfoMap.put("acct_source", "01");
         return extendInfoMap;
     }
 

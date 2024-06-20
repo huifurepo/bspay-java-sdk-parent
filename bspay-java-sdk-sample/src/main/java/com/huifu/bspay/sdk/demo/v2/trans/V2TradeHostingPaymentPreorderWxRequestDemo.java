@@ -33,7 +33,7 @@ public class V2TradeHostingPaymentPreorderWxRequestDemo extends BaseCommonDemo {
         // 请求流水号
         request.setReqSeqId(SequenceTools.getReqSeqId32());
         // 商户号
-        request.setHuifuId("6666000003100616");
+        request.setHuifuId("6666000109133323");
         // 交易金额
         request.setTransAmt("0.13");
         // 商品描述
@@ -64,7 +64,7 @@ public class V2TradeHostingPaymentPreorderWxRequestDemo extends BaseCommonDemo {
         // 分账对象
         extendInfoMap.put("acct_split_bunch", getAcctSplitBunchRucan());
         // 交易失效时间
-        extendInfoMap.put("time_expire", "20231127233423");
+        // extendInfoMap.put("time_expire", "");
         // 业务信息
         // extendInfoMap.put("biz_info", getBizInfo());
         // 交易异步通知地址
@@ -77,7 +77,7 @@ public class V2TradeHostingPaymentPreorderWxRequestDemo extends BaseCommonDemo {
         // 分账金额
         dto.put("div_amt", "0.01");
         // 分账接收方ID
-        dto.put("huifu_id", "6666000003100616");
+        dto.put("huifu_id", "6666000109133323");
 
         JSONArray dtoList = new JSONArray();
         dtoList.add(dto);
@@ -97,7 +97,7 @@ public class V2TradeHostingPaymentPreorderWxRequestDemo extends BaseCommonDemo {
         // 是否生成scheme_code
         dto.put("need_scheme", "Y");
         // 应用ID
-        dto.put("seq_id", "APP_2022033147154783");
+        dto.put("seq_id", "APP_2022100912694428");
         // 私有信息
         dto.put("private_info", "oppsHosting://");
 

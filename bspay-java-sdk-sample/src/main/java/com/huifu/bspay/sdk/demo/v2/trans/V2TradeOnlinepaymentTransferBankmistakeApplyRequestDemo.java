@@ -77,6 +77,10 @@ public class V2TradeOnlinepaymentTransferBankmistakeApplyRequestDemo extends Bas
         extendInfoMap.put("remark", "大额支付补入账验证");
         // 银行信息数据
         extendInfoMap.put("bank_info_data", getBankInfoData());
+        // 延时标记
+        // extendInfoMap.put("delay_acct_flag", "");
+        // 分账对象
+        // extendInfoMap.put("acct_split_bunch", getAcctSplitBunch());
         return extendInfoMap;
     }
 
@@ -104,6 +108,26 @@ public class V2TradeOnlinepaymentTransferBankmistakeApplyRequestDemo extends Bas
         dto.put("bank_acct_three_in_one", "92650109MA79R8E308");
 
         return dto.toJSONString();
+    }
+
+    private static JSON getAcctInfos() {
+        JSONObject dto = new JSONObject();
+        // 支付金额
+        // dto.put("div_amt", "");
+        // 商户号
+        // dto.put("huifu_id", "");
+
+        JSONArray dtoList = new JSONArray();
+        dtoList.add(dto);
+        return dtoList;
+    }
+
+    private static JSON getAcctSplitBunch() {
+        JSONObject dto = new JSONObject();
+        // 分账信息列表
+        // dto.put("acct_infos", getAcctInfos());
+
+        return dto;
     }
 
 }

@@ -31,13 +31,13 @@ public class V2TradeOnlinepaymentQuickpayApplyRequestDemo extends BaseCommonDemo
         // 请求流水号
         request.setReqSeqId(SequenceTools.getReqSeqId32());
         // 商户号
-        request.setHuifuId("6666000119640000");
+        request.setHuifuId("6666000109133323");
         // 用户客户号
-        request.setUserHuifuId("6666000121370000");
+        request.setUserHuifuId("6666000149909053");
         // 绑卡id
-        request.setCardBindId("10032850000");
+        request.setCardBindId("10049847200");
         // 订单金额
-        request.setTransAmt("1980.00");
+        request.setTransAmt("10.00");
         // 银行扩展字段
         request.setExtendPayData(getExtendPayData());
         // 安全信息

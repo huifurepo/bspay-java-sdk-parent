@@ -51,6 +51,8 @@ public class V2MerchantBusiAtModifyRequestDemo extends BaseCommonDemo {
         Map<String, Object> extendInfoMap = new HashMap<>();
         // 业务开通结果异步消息接收地址
         extendInfoMap.put("busi_async_return_url", "http://service.example.com/to/path");
+        // 支付成功页商户LOGO图片
+        // extendInfoMap.put("ali_mer_logo", "");
         return extendInfoMap;
     }
 

@@ -31,7 +31,7 @@ public class V2TradeCheckReplayRequestDemo extends BaseCommonDemo {
         // 交易日期
         request.setReqDate(DateTools.getCurrentDateYYYYMMDD());
         // 汇付机构编号
-        request.setHuifuId("6666000003099901");
+        request.setHuifuId("6666000109133323");
         // 文件类型
         request.setFileType("2");
 

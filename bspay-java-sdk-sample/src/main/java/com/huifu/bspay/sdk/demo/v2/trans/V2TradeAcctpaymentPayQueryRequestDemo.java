@@ -27,9 +27,9 @@ public class V2TradeAcctpaymentPayQueryRequestDemo extends BaseCommonDemo {
         // 2.组装请求参数
         V2TradeAcctpaymentPayQueryRequest request = new V2TradeAcctpaymentPayQueryRequest();
         // 商户号
-        request.setHuifuId("6666000018344461");
+        request.setHuifuId("6666000109133323");
         // 原交易请求日期
-        request.setOrgReqDate("20211021");
+        request.setOrgReqDate("20240515");
 
         // 设置非必填字段
         Map<String, Object> extendInfoMap = getExtendInfos();
@@ -48,7 +48,7 @@ public class V2TradeAcctpaymentPayQueryRequestDemo extends BaseCommonDemo {
         // 设置非必填字段
         Map<String, Object> extendInfoMap = new HashMap<>();
         // 原交易请求流水号
-        extendInfoMap.put("org_req_seq_id", "202110210012100005");
+        extendInfoMap.put("org_req_seq_id", "20240515132857954fk8wpk2hvwnnfw");
         // 原交易全局流水号
         extendInfoMap.put("org_hf_seq_id", "");
         return extendInfoMap;

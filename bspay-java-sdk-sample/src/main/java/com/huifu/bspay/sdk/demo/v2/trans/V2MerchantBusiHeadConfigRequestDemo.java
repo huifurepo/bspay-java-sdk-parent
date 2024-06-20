@@ -54,7 +54,7 @@ public class V2MerchantBusiHeadConfigRequestDemo extends BaseCommonDemo {
         // 设置非必填字段
         Map<String, Object> extendInfoMap = new HashMap<>();
         // 支付宝配置对象
-        // extendInfoMap.put("ali_conf_list", getSubmberAliConfList());
+        // extendInfoMap.put("ali_conf_list", getSubmerAliConfList());
         // 微信配置对象
         // extendInfoMap.put("wx_conf_list", getSubmerWxConfList());
         // 银联二维码配置对象
@@ -70,7 +70,7 @@ public class V2MerchantBusiHeadConfigRequestDemo extends BaseCommonDemo {
         // 线上配置对象
         // extendInfoMap.put("online_fee_conf_list", getSubmerOnlineFeeConfList());
         // 余额支付配置对象
-        // extendInfoMap.put("online_fee_conf_list", getSubmerBalancePayConfig());
+        // extendInfoMap.put("balance_pay_config", getSubmerBalancePayConfig());
         // 补贴支付配置对象
         // extendInfoMap.put("combine_pay_config", getSubmerCombinePayConfig());
         // 银行大额转账配置对象
@@ -100,7 +100,7 @@ public class V2MerchantBusiHeadConfigRequestDemo extends BaseCommonDemo {
         return extendInfoMap;
     }
 
-    private static String getSubmberAliConfList() {
+    private static String getSubmerAliConfList() {
         JSONObject dto = new JSONObject();
         // 支付场景
         // dto.put("pay_scene", "test");

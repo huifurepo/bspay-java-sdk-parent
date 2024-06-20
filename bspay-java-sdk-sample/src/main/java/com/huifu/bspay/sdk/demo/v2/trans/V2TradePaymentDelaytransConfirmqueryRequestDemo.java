@@ -27,11 +27,11 @@ public class V2TradePaymentDelaytransConfirmqueryRequestDemo extends BaseCommonD
         // 2.组装请求参数
         V2TradePaymentDelaytransConfirmqueryRequest request = new V2TradePaymentDelaytransConfirmqueryRequest();
         // 原请求日期
-        request.setOrgReqDate("20210923");
+        request.setOrgReqDate("20240513");
         // 原请求流水号
-        request.setOrgReqSeqId("202109232638806002");
+        request.setOrgReqSeqId("20240513105825239x0lp7ldbus4sji");
         // 商户号
-        request.setHuifuId("6666000018328947");
+        request.setHuifuId("6666000109133323");
 
         // 设置非必填字段
         Map<String, Object> extendInfoMap = getExtendInfos();

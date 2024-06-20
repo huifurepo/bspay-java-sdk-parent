@@ -26,6 +26,11 @@ public class V2MerchantElecCardBindRequest extends BaseRequest {
      */
     @JSONField(name = "huifu_id")
     private String huifuId;
+    /**
+     * 电子卡信息
+     */
+    @JSONField(name = "elec_card_info")
+    private String elecCardInfo;
 
     @Override
     public FunctionCodeEnum getFunctionCode() {
@@ -35,10 +40,11 @@ public class V2MerchantElecCardBindRequest extends BaseRequest {
     public V2MerchantElecCardBindRequest() {
     }
 
-    public V2MerchantElecCardBindRequest(String reqSeqId, String reqDate, String huifuId) {
+    public V2MerchantElecCardBindRequest(String reqSeqId, String reqDate, String huifuId, String elecCardInfo) {
         this.reqSeqId = reqSeqId;
         this.reqDate = reqDate;
         this.huifuId = huifuId;
+        this.elecCardInfo = elecCardInfo;
     }
 
     public String getReqSeqId() {
@@ -63,6 +69,14 @@ public class V2MerchantElecCardBindRequest extends BaseRequest {
 
     public void setHuifuId(String huifuId) {
         this.huifuId = huifuId;
+    }
+
+    public String getElecCardInfo() {
+        return elecCardInfo;
+    }
+
+    public void setElecCardInfo(String elecCardInfo) {
+        this.elecCardInfo = elecCardInfo;
     }
 
 }

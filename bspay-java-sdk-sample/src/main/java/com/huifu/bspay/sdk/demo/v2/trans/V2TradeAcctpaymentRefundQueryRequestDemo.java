@@ -27,11 +27,11 @@ public class V2TradeAcctpaymentRefundQueryRequestDemo extends BaseCommonDemo {
         // 2.组装请求参数
         V2TradeAcctpaymentRefundQueryRequest request = new V2TradeAcctpaymentRefundQueryRequest();
         // 退款请求流水号
-        request.setOrgReqSeqId("20211021787214848332");
+        request.setOrgReqSeqId("20240515134124629vmalwxl5nxajgd");
         // 余额支付退款请求日期
-        request.setOrgReqDate("20211021");
+        request.setOrgReqDate("20240515");
         // 商户号
-        request.setHuifuId("6666000018344461");
+        request.setHuifuId("6666000109133323");
 
         // 设置非必填字段
         Map<String, Object> extendInfoMap = getExtendInfos();

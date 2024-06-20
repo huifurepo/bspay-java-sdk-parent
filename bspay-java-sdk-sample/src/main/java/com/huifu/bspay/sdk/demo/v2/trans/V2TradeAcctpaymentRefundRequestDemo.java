@@ -31,11 +31,11 @@ public class V2TradeAcctpaymentRefundRequestDemo extends BaseCommonDemo {
         // 请求日期
         request.setReqDate(DateTools.getCurrentDateYYYYMMDD());
         // 商户号
-        request.setHuifuId("6666000108854952");
+        request.setHuifuId("6666000109133323");
         // 原余额支付请求日期
-        request.setOrgReqDate("20211021");
+        request.setOrgReqDate("20240515");
         // 原余额支付请求流水号org_hf_seq_id和orgReqSeqId二选一；&lt;br/&gt;&lt;font color&#x3D;&quot;green&quot;&gt;示例值：2021091708126665001&lt;/font&gt;
-        request.setOrgReqSeqId("202110210012100005");
+        request.setOrgReqSeqId("20240515132857954fk8wpk2hvwnnfw");
         // 原余额支付支付全局流水号org_hf_seq_id和orgReqSeqId二选一；&lt;br/&gt;&lt;font color&#x3D;&quot;green&quot;&gt;示例值：00470topo1A211015160805P090ac132fef00000&lt;/font&gt;
         request.setOrgHfSeqId("");
         // 退款金额

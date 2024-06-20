@@ -31,7 +31,7 @@ public class V2TradeOnlinepaymentRefundRequestDemo extends BaseCommonDemo {
         // 请求流水号
         request.setReqSeqId(SequenceTools.getReqSeqId32());
         // 商户号
-        request.setHuifuId("6666000108854952");
+        request.setHuifuId("6666000109133323");
         // 退款金额
         request.setOrdAmt("0.01");
         // 设备信息条件必填，当为银行大额支付时可不填，jsonObject格式
@@ -56,19 +56,19 @@ public class V2TradeOnlinepaymentRefundRequestDemo extends BaseCommonDemo {
         // 设置非必填字段
         Map<String, Object> extendInfoMap = new HashMap<>();
         // 原交易请求日期
-        extendInfoMap.put("org_req_date", "20221110");
+        extendInfoMap.put("org_req_date", "20240401");
         // 原交易全局流水号
         extendInfoMap.put("org_hf_seq_id", "");
         // 原交易请求流水号
-        extendInfoMap.put("org_req_seq_id", "RQ1212333113");
+        extendInfoMap.put("org_req_seq_id", "295700155481522176");
         // 分账对象
-        extendInfoMap.put("acct_split_bunch", getAcctSplitBunchRucan());
+        // extendInfoMap.put("acct_split_bunch", getAcctSplitBunchRucan());
         // 补贴支付信息
-        extendInfoMap.put("combinedpay_data", getCombinedpayData());
+        // extendInfoMap.put("combinedpay_data", getCombinedpayData());
         // 大额转账支付账户信息数据
         // extendInfoMap.put("bank_info_data", getBankInfoData());
         // 备注
-        extendInfoMap.put("remark", "remark123");
+        // extendInfoMap.put("remark", "");
         // 异步通知地址
         extendInfoMap.put("notify_url", "http://www.baidu.com");
         return extendInfoMap;
@@ -151,7 +151,7 @@ public class V2TradeOnlinepaymentRefundRequestDemo extends BaseCommonDemo {
     private static String getRiskCheckData() {
         JSONObject dto = new JSONObject();
         // ip地址
-        // dto.put("ip_addr", "");
+        dto.put("ip_addr", "172.1.1.1");
         // 基站地址
         // dto.put("base_station", "");
         // 纬度

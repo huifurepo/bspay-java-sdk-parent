@@ -31,21 +31,21 @@ public class V2QuickbuckleOnekeyCardbindRequestDemo extends BaseCommonDemo {
         // 请求时间
         request.setReqDate(DateTools.getCurrentDateYYYYMMDD());
         // 汇付Id
-        request.setHuifuId("6666000003078984");
+        request.setHuifuId("6666000109133323");
         // 顾客用户号 
-        request.setOutCustId("6666000103633619");
+        request.setOutCustId("6666000150648142");
         // 银行号
-        request.setBankId("01030000");
+        request.setBankId("01050000");
         // 银行卡开户姓名 
-        request.setCardName("YTRf65hBDkH9UU1AwG16r4Nlc/X1rH6ejKbvmqT80exJ6whdHI1zB+izBtNBOJfhRNbIOhi1FrRuE5b7wnt/03Q+vwWQQLDGJXWZf92yp+eIRDHg8JdbjOgxKvF2q4Qw5704jbsjQm4UJW5fqRhzRPtnnAL9zzTSgVhuQ0KCwc8=");
+        request.setCardName("eWXk+x2M4XaCIc4Iu4etjyhnFQ7V+tFfdED6YYJJ5G55ElXs9fxi+JM7mcC7ASWQDVi6asQqSdbRfFFVDNv80HGYHa/59aFmeshMeoQHO2vqkwNfNGV5Pk305v1H+MVzkj0LVuxab1a0+O6Vz4QBwySA/2UbPL4CAw0tPxaNpCqGxZN78Esy6snVlShUW+FH1jRJCHDIOhJpcWw9/ijTBksQNojIqokGeCpQThyigBVa6P55X90N7l077vTeBbFCfRMoLdQP8XrTJbke1r3dRlrPh8UNi+ryJloEeK2hfp30njbcEjFu0lVPAF6bNqmAq6IN0pgww+Ra/UtuNDhWFA==");
         // 银行卡绑定身份证
-        request.setCertId("gk8zqa+zvIUAvzV3Bjzzw+vRgq2LgTzQI8PRoqUdbeuFMbFZ6LllQpcOhWIz6F82VtFBKzLd5kPOaCwlQCiwsXhSqUFB11zgzKUtVIuiv9lHY/EsjRwqDBhgeR5f2H9FXr3wQ9f7bI7t8ca9o93QxrXr/1MDBq7fGok0xu2ytsM=");
+        request.setCertId("WLUrnJN6/uaYbSTiVSCeMeYFgLLWdDHAPvz1yiHZdFeImh070m3sxDOW/fiWrNAL0crePQFN3svX+kpmPCri53mB5/IvSpqZapftUC9/0FdkzlOT7KTeyIcDoP4BiqJdHhfJFwf0oyX6meAmYJPZAuvs+OsW6wGi/ckFND+sHcDy3Zc6n6qHxv1Z+wcDzVkOeH2zkjaubbBTzGlpZQ2CnsMKmAh8jfuY7tj6GDQyp65MLL64Po3e5LUr4KRYwWlLgi1uB29kLJCTmdRzrVbOh+7RfMHVgjciyM7/6qFQrvNOgcnl4hWfk45FZFpbhM1aj+GrecgCiTwvxHuHx86R3g==");
         // 银行卡绑定证件类型
         request.setCertType("00");
         // 证件有效期到期日长期有效不填.格式：yyyyMMdd。&lt;font color&#x3D;&quot;green&quot;&gt;示例值：20311111&lt;/font&gt;
         request.setCertEndDate("20370121");
         // 银行卡绑定手机号 
-        request.setCardMp("e2zKkJ6PE6UtZhgz42pqgPLQh6p83/WJsG7EVSgYYgN+7MIiCzXnjTpmpv0Cgv7cYTbQTBf/NF5jqeI8BpFjP7C6gg+0cjqW2tgdVxyfqZLu2fEJRth7NgZKgS2ZKbkZ8PNfUk7V+aHbqkAVKY92bdcSQSNIuWaJCeIF34w+l+k=");
+        request.setCardMp("fD4awMK+JdxQi+Qzl1xgJbgq4jlNTKFSKlts2C9hJhFbu0J6K7mHmViRh5wG3bDdYAKbKEAz+Uzd1xyEeYZsFNi3jQgu8gRv5sTsjHZHYIbvvq1ju2nLXrzq8kTzVXnWRXB0oHxy6EnN2xuvaC3mT89sW5BND09J7qy+Va3Y/t1nTqz4oEE5qL+TTjm6Fv6BY8ac/T2mKaeHtN27Ufj4hmJnGTtcTuoS0uQ6bEksQiTHwK2QG7EBMInnoYiJD15cAPwQeR0xmZNAwEXehtxvIAAfFpAiLqe/2G9whSyoT/BlsrhYf+958bis856dTm6Lf6nAVjQbNvh6Iyhdu7H1Rw==");
         // 卡的借贷类型
         request.setDcType("D");
         // 异步请求地址
