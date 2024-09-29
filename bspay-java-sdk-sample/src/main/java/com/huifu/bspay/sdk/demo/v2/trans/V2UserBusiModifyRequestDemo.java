@@ -34,6 +34,8 @@ public class V2UserBusiModifyRequestDemo extends BaseCommonDemo {
         request.setUpperHuifuId("6666000104633228");
         // 汇付ID
         request.setHuifuId("6666000104896342");
+        // 乐接活配置当合作平台为乐接活，必填
+        // request.setLjhData(getLjhData());
 
         // 设置非必填字段
         Map<String, Object> extendInfoMap = getExtendInfos();
@@ -67,6 +69,8 @@ public class V2UserBusiModifyRequestDemo extends BaseCommonDemo {
         // extendInfoMap.put("elec_acct_config", getElecAcctConfig());
         // 灵活用工开关
         // extendInfoMap.put("open_tax_flag", "");
+        // 合作平台
+        // extendInfoMap.put("lg_platform_type", "");
         return extendInfoMap;
     }
 
@@ -76,11 +80,11 @@ public class V2UserBusiModifyRequestDemo extends BaseCommonDemo {
         dto.put("settle_status", "1");
         // 结算周期
         dto.put("settle_cycle", "D1");
-        // 结算批次号settle_pattern为P0时必填；[参见结算批次说明](https://paas.huifu.com/partners/api/#/csfl/api_csfl_jspc)
+        // 结算批次号settle_pattern为P0时必填；[参见结算批次说明](https://paas.huifu.com/open/doc/api/#/csfl/api_csfl_jspc)
         dto.put("settle_batch_no", "0");
         // 是否优先到账settle_pattern为P0时选填， Y：是 N：否（为空默认取值）；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：Y&lt;/font&gt;
         dto.put("is_priority_receipt", "Y");
-        // 自定义结算处理时间settle_pattern为P1时必填，注意：00:00到00:30不能指定；格式：HHmmss；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：103000&lt;/font&gt;
+        // 自定义结算处理时间settle_pattern为P1/P2时必填，注意：00:00到00:30不能指定；格式：HHmmss；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：103000&lt;/font&gt;
         dto.put("settle_time", "");
         // 节假日结算手续费率settle_cycle为D1时必填。单位%，需保留小数点后两位。取值范围[0.00，100.00]，不收费请填写0.00；settle_cycle&#x3D;T1时，不生效 ；settle_cycle为D1时，遇节假日按此费率结算 ；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：0.05&lt;/font&gt;
         dto.put("fixed_ratio", "0.1");
@@ -118,9 +122,9 @@ public class V2UserBusiModifyRequestDemo extends BaseCommonDemo {
         dto.put("prov_id", "310000");
         // 银行所在市
         dto.put("area_id", "310100");
-        // 银行号当card_type&#x3D;0时必填，对私可以为空；[参见银行编码](https://paas.huifu.com/partners/api/#/csfl/api_csfl_yhbm)；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：01020000&lt;/font&gt;
+        // 银行号当card_type&#x3D;0时必填，对私可以为空；[参见银行编码](https://paas.huifu.com/open/doc/api/#/csfl/api_csfl_yhbm)；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：01020000&lt;/font&gt;
         dto.put("bank_code", "01050000");
-        // 支行联行号当card_type&#x3D;0时必填，[点击查看](https://paas.huifu.com/partners/api/#/csfl/api_csfl_yhzhbm)；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：102290026507&lt;/font&gt;
+        // 支行联行号当card_type&#x3D;0时必填，[点击查看](https://paas.huifu.com/open/doc/api/#/csfl/api_csfl_yhzhbm)；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：102290026507&lt;/font&gt;
         dto.put("branch_code", "105305264815");
         // 持卡人证件类型
         dto.put("cert_type", "00");
@@ -232,6 +236,14 @@ public class V2UserBusiModifyRequestDemo extends BaseCommonDemo {
         // dto.put("**elec_card_list**", getElecCardList());
         // 银行信息
         // dto.put("bank_message", "");
+
+        return dto.toJSONString();
+    }
+
+    private static String getLjhData() {
+        JSONObject dto = new JSONObject();
+        // 税源地id当合作平台为乐接活，必填
+        // dto.put("tax_area_id", "test");
 
         return dto.toJSONString();
     }

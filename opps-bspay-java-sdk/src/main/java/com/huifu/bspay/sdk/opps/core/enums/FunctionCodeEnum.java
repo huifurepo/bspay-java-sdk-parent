@@ -6,6 +6,122 @@ package com.huifu.bspay.sdk.opps.core.enums;
  */
 public enum FunctionCodeEnum {
     /**
+     * 新建付款人
+     */
+    V2_BILL_ENT_PAYER_CREATE("v2.bill.ent.payer.create", "新建付款人"),
+    /**
+     * 修改付款人信息
+     */
+    V2_BILL_ENT_PAYER_UPDATE("v2.bill.ent.payer.update", "修改付款人信息"),
+    /**
+     * 删除付款人
+     */
+    V2_BILL_ENT_PAYER_DELETE("v2.bill.ent.payer.delete", "删除付款人"),
+    /**
+     * 企业账单状态变更
+     */
+    V2_BILL_ENT_CHANGESTAT("v2.bill.ent.changeStat", "企业账单状态变更"),
+    /**
+     * 企业账单退款查询
+     */
+    V2_BILL_ENT_REFUND_QUERY("v2.bill.ent.refund.query", "企业账单退款查询"),
+    /**
+     * 企业账单退款
+     */
+    V2_BILL_ENT_REFUND("v2.bill.ent.refund", "企业账单退款"),
+    /**
+     * 企业账单查询
+     */
+    V2_BILL_ENT_QUERY("v2.bill.ent.query", "企业账单查询"),
+    /**
+     * 付款人查询
+     */
+    V2_BILL_ENT_PAYER_QUERY("v2.bill.ent.payer.query", "付款人查询"),
+    /**
+     * 创建企业账单
+     */
+    V2_BILL_ENT_CREATE("v2.bill.ent.create", "创建企业账单"),
+    /**
+     * 申诉单详情查询
+     */
+    V2_MERCHANT_APPEAL_DETAIL_QUERY("v2.merchant.appeal.detail.query", "申诉单详情查询"),
+    /**
+     * 提交申诉
+     */
+    V2_MERCHANT_APPEAL_COMMON_SUBMIT("v2.merchant.appeal.common.submit", "提交申诉"),
+    /**
+     * 申诉文件url查询
+     */
+    V2_MERCHANT_APPEAL_FILEURL_QUERY("v2.merchant.appeal.fileurl.query", "申诉文件url查询"),
+    /**
+     * 申诉单列表查询
+     */
+    V2_MERCHANT_APPEAL_LIST_QUERY("v2.merchant.appeal.list.query", "申诉单列表查询"),
+    /**
+     * 申诉客户信息查询
+     */
+    V2_MERCHANT_APPEAL_CUSTINFO_QUERY("v2.merchant.appeal.custinfo.query", "申诉客户信息查询"),
+    /**
+     * 关联线索查询
+     */
+    V2_MERCHANT_APPEAL_RELATEDCLUE_QUERY("v2.merchant.appeal.relatedclue.query", "关联线索查询"),
+    /**
+     * 操作日志查询
+     */
+    V2_MERCHANT_APPEAL_LOG_QUERY("v2.merchant.appeal.log.query", "操作日志查询"),
+    /**
+     * 快捷绑卡申请接口
+     */
+    V3_QUICKBUCKLE_APPLY("v3.quickbuckle.apply", "快捷绑卡申请接口"),
+    /**
+     * 快捷绑卡确认接口
+     */
+    V3_QUICKBUCKLE_CONFIRM("v3.quickbuckle.confirm", "快捷绑卡确认接口"),
+    /**
+     * 新增归集配置
+     */
+    V2_TRADE_SETTLE_COLLECTION_RULE_ADD("v2.trade.settle.collection.rule.add", "新增归集配置"),
+    /**
+     * 修改归集配置
+     */
+    V2_TRADE_SETTLE_COLLECTION_RULE_MODIFY("v2.trade.settle.collection.rule.modify", "修改归集配置"),
+    /**
+     * 归集配置查询
+     */
+    V2_TRADE_SETTLE_COLLECTION_RULE_QUERY("v2.trade.settle.collection.rule.query", "归集配置查询"),
+    /**
+     * 资金归集明细查询
+     */
+    V2_TRADE_SETTLE_COLLECTION_DETAIL_QUERY("v2.trade.settle.collection.detail.query", "资金归集明细查询"),
+    /**
+     * 灵工微信代发查询
+     */
+    V2_TRADE_LGWX_SURROGATE_QUERY("v2.trade.lgwx.surrogate.query", "灵工微信代发查询"),
+    /**
+     * 灵工微信代发
+     */
+    V2_TRADE_LGWX_SURROGATE("v2.trade.lgwx.surrogate", "灵工微信代发"),
+    /**
+     * 银行大额支付解绑
+     */
+    V2_LARGEAMT_BINDCARD_UNBIND("v2.largeamt.bindcard.unbind", "银行大额支付解绑"),
+    /**
+     * 银行大额支付绑卡查询
+     */
+    V2_LARGEAMT_BINDCARD_QUERY("v2.largeamt.bindcard.query", "银行大额支付绑卡查询"),
+    /**
+     * 银行大额支付绑卡
+     */
+    V2_LARGEAMT_BINDCARD_BIND("v2.largeamt.bindcard.bind", "银行大额支付绑卡"),
+    /**
+     * 云MIS订单详情查询接口
+     */
+    V2_TRADE_CLOUDMIS_ORDER_DETAIL("v2.trade.cloudmis.order.detail", "云MIS订单详情查询接口"),
+    /**
+     * 终端云MIS接入
+     */
+    V2_TRADE_CLOUDMIS_DEVICE_INFORMATION_MIS("v2.trade.cloudmis.device.information.mis", "终端云MIS接入"),
+    /**
      * 上传短信验证码
      */
     V2_INVOICE_MER_VERIFYCODE_UPLOAD("v2.invoice.mer.verifycode.upload", "上传短信验证码"),

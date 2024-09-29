@@ -26,26 +26,6 @@ public class V2TradeOnlinepaymentTransferAccountQueryRequest extends BaseRequest
      */
     @JSONField(name = "huifu_id")
     private String huifuId;
-    /**
-     * 原请求流水号
-     */
-    @JSONField(name = "org_req_seq_id")
-    private String orgReqSeqId;
-    /**
-     * 原请求日期
-     */
-    @JSONField(name = "org_req_date")
-    private String orgReqDate;
-    /**
-     * 打款结束日期
-     */
-    @JSONField(name = "trans_end_date")
-    private String transEndDate;
-    /**
-     * 交易开始日期
-     */
-    @JSONField(name = "trans_start_date")
-    private String transStartDate;
 
     @Override
     public FunctionCodeEnum getFunctionCode() {
@@ -55,14 +35,10 @@ public class V2TradeOnlinepaymentTransferAccountQueryRequest extends BaseRequest
     public V2TradeOnlinepaymentTransferAccountQueryRequest() {
     }
 
-    public V2TradeOnlinepaymentTransferAccountQueryRequest(String reqSeqId, String reqDate, String huifuId, String orgReqSeqId, String orgReqDate, String transEndDate, String transStartDate) {
+    public V2TradeOnlinepaymentTransferAccountQueryRequest(String reqSeqId, String reqDate, String huifuId) {
         this.reqSeqId = reqSeqId;
         this.reqDate = reqDate;
         this.huifuId = huifuId;
-        this.orgReqSeqId = orgReqSeqId;
-        this.orgReqDate = orgReqDate;
-        this.transEndDate = transEndDate;
-        this.transStartDate = transStartDate;
     }
 
     public String getReqSeqId() {
@@ -87,38 +63,6 @@ public class V2TradeOnlinepaymentTransferAccountQueryRequest extends BaseRequest
 
     public void setHuifuId(String huifuId) {
         this.huifuId = huifuId;
-    }
-
-    public String getOrgReqSeqId() {
-        return orgReqSeqId;
-    }
-
-    public void setOrgReqSeqId(String orgReqSeqId) {
-        this.orgReqSeqId = orgReqSeqId;
-    }
-
-    public String getOrgReqDate() {
-        return orgReqDate;
-    }
-
-    public void setOrgReqDate(String orgReqDate) {
-        this.orgReqDate = orgReqDate;
-    }
-
-    public String getTransEndDate() {
-        return transEndDate;
-    }
-
-    public void setTransEndDate(String transEndDate) {
-        this.transEndDate = transEndDate;
-    }
-
-    public String getTransStartDate() {
-        return transStartDate;
-    }
-
-    public void setTransStartDate(String transStartDate) {
-        this.transStartDate = transStartDate;
     }
 
 }

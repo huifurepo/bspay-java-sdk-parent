@@ -57,12 +57,12 @@ public class V2InvoiceOpenRequest extends BaseRequest {
     @JSONField(name = "red_apply_source")
     private String redApplySource;
     /**
-     * 原发票代码openType&#x3D;1时必填；参见[发票右上角](https://paas.huifu.com/partners/api/#/fp/api_fp_yanglitu.md)；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：144032209110&lt;/font&gt;
+     * 原发票代码openType&#x3D;1时必填；参见[发票右上角](https://paas.huifu.com/open/doc/api/#/fp/api_fp_yanglitu.md)；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：144032209110&lt;/font&gt;
      */
     @JSONField(name = "ori_ivc_code")
     private String oriIvcCode;
     /**
-     * 原发票号码openType&#x3D;1时必填；参见[发票右上角](https://paas.huifu.com/partners/api/#/fp/api_fp_yanglitu.md)；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：20685767&lt;/font&gt;
+     * 原发票号码openType&#x3D;1时必填；参见[发票右上角](https://paas.huifu.com/open/doc/api/#/fp/api_fp_yanglitu.md)；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：20685767&lt;/font&gt;
      */
     @JSONField(name = "ori_ivc_number")
     private String oriIvcNumber;

@@ -77,6 +77,14 @@ public class V2TradeOnlinepaymentTransferAccountRequestDemo extends BaseCommonDe
         // extendInfoMap.put("delay_acct_flag", "");
         // 分账对象
         // extendInfoMap.put("acct_split_bunch", getAcctSplitBunch());
+        // 订单模式
+        // extendInfoMap.put("order_mode", "");
+        // 原汇款订单号
+        // extendInfoMap.put("org_remittance_order_id", "");
+        // 动态码标识
+        // extendInfoMap.put("dynamic_flag", "");
+        // 订单失效时间
+        // extendInfoMap.put("time_expire", "");
         return extendInfoMap;
     }
 

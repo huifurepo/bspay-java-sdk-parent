@@ -52,8 +52,8 @@ public class V2TradeOnlinepaymentTransferBankmistakeApplyRequestDemo extends Bas
         request.setNotifyUrl("http://www.baidu.com");
         // 商品描述
         // request.setGoodsDesc("test");
-        // 汇款凭证文件内容
-        request.setCertificateContent("/9j/4QCARXhpZgAATU0…………AAB//2Q==");
+        // 汇款凭证文件id
+        // request.setCertificateFileId("test");
 
         // 设置非必填字段
         Map<String, Object> extendInfoMap = getExtendInfos();
@@ -71,8 +71,6 @@ public class V2TradeOnlinepaymentTransferBankmistakeApplyRequestDemo extends Bas
     private static Map<String, Object> getExtendInfos() {
         // 设置非必填字段
         Map<String, Object> extendInfoMap = new HashMap<>();
-        // 汇款凭证文件名称
-        extendInfoMap.put("file_name", "汇付电子小票验证.jpg");
         // 备注
         extendInfoMap.put("remark", "大额支付补入账验证");
         // 银行信息数据
@@ -92,7 +90,7 @@ public class V2TradeOnlinepaymentTransferBankmistakeApplyRequestDemo extends Bas
         dto.put("area", "3100");
         // 银行编号
         dto.put("bank_code", "03080000");
-        // 联行号选填，参见：[银行支行编码](https://paas.huifu.com/partners/api/#/csfl/api_csfl_yhzhbm)； &lt;font color&#x3D;&quot;green&quot;&gt;示例值：102290026507&lt;/font&gt;&lt;br/&gt;对私代发非必填；
+        // 联行号选填，参见：[银行支行编码](https://paas.huifu.com/open/doc/api/#/csfl/api_csfl_yhzhbm)； &lt;font color&#x3D;&quot;green&quot;&gt;示例值：102290026507&lt;/font&gt;&lt;br/&gt;对私代发非必填；
         dto.put("correspondent_code", "103290076178");
         // 对公对私标识
         dto.put("card_acct_type", "P");

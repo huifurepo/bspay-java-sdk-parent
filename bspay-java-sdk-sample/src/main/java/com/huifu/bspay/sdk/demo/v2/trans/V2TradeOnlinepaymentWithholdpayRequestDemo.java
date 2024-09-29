@@ -84,6 +84,8 @@ public class V2TradeOnlinepaymentWithholdpayRequestDemo extends BaseCommonDemo {
         // dto.put("div_amt", "");
         // 商户号
         // dto.put("huifu_id", "");
+        // 分账百分比%
+        // dto.put("percentage_div", "");
 
         JSONArray dtoList = new JSONArray();
         dtoList.add(dto);
@@ -94,6 +96,10 @@ public class V2TradeOnlinepaymentWithholdpayRequestDemo extends BaseCommonDemo {
         JSONObject dto = new JSONObject();
         // 分账信息列表
         // dto.put("acct_infos", getAcctInfos());
+        // 百分比分账标志
+        // dto.put("percentage_flag", "");
+        // 是否净值分账
+        // dto.put("is_clean_split", "");
 
         return dto;
     }

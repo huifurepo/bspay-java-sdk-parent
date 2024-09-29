@@ -42,7 +42,7 @@ public class V2TradeSettlementSurrogateRequestDemo extends BaseCommonDemo {
         request.setArea("2619");
         // 银行编号
         request.setBankCode("01020000");
-        // 联行号选填，参见：[银行支行编码](https://paas.huifu.com/partners/api/#/csfl/api_csfl_yhzhbm) &lt;font color&#x3D;&quot;green&quot;&gt;示例值：102290026507&lt;/font&gt;&lt;br/&gt;对公代发(省份+地区)与联行号信息二选一填入；对私代发非必填；
+        // 联行号选填，参见：[银行支行编码](https://paas.huifu.com/open/doc/api/#/csfl/api_csfl_yhzhbm) &lt;font color&#x3D;&quot;green&quot;&gt;示例值：102290026507&lt;/font&gt;&lt;br/&gt;对公代发(省份+地区)与联行号信息二选一填入；对私代发非必填；
         request.setCorrespondentCode("correspondentCode");
         // 银行卡用户名
         request.setBankAccountName("王大锤");

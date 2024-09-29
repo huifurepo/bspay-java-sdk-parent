@@ -67,12 +67,14 @@ public class V2TradePaymentDelaytransConfirmRequestDemo extends BaseCommonDemo {
         extendInfoMap.put("remark", "remark123");
         // 灵活用工标志
         // extendInfoMap.put("hyc_flag", "");
+        // 灵活用工平台
+        // extendInfoMap.put("lg_platform_type", "");
         // 代发模式
         // extendInfoMap.put("salary_modle_type", "");
         // 落地公司商户号
         // extendInfoMap.put("bmember_id", "");
-        // 灵活用工代发批次号
-        // extendInfoMap.put("hyc_attach_id", "");
+        // 乐接活请求参数集合
+        // extendInfoMap.put("ljh_data", getLjhData());
         // 异步通知地址
         // extendInfoMap.put("notify_url", "");
         return extendInfoMap;
@@ -80,10 +82,12 @@ public class V2TradePaymentDelaytransConfirmRequestDemo extends BaseCommonDemo {
 
     private static JSON getAcctInfosRucan() {
         JSONObject dto = new JSONObject();
-        // 分账金额
+        // 分账金额(元)单位元，需保留小数点后两位，最低传入0.01 ，&lt;font color&#x3D;&quot;green&quot;&gt;示例值：1.00&lt;/font&gt; ，percentage_flag非Y时必填；&lt;br/&gt;percentage_flag&#x3D;Y时div_amt不填，div_amt&#x3D;total_div_amt*percentage_div
         dto.put("div_amt", "0.01");
         // 分账接收方ID
         dto.put("huifu_id", "6666000109133323");
+        // 分账百分比%
+        // dto.put("percentage_div", "");
         // 分账接收方账户号
         // dto.put("acct_id", "");
 
@@ -94,6 +98,10 @@ public class V2TradePaymentDelaytransConfirmRequestDemo extends BaseCommonDemo {
 
     private static String getAcctSplitBunch() {
         JSONObject dto = new JSONObject();
+        // 分账总金额（元）本次交易确认总额。需保留小数点后两位&lt;br/&gt;percentage_flag&#x3D;Y时必填。该金额与分账百分比用来计算分账金额。&lt;font color&#x3D;&quot;green&quot;&gt;示例值：10.00&lt;/font&gt;；
+        // dto.put("total_div_amt", "test");
+        // 百分比分账标志
+        // dto.put("percentage_flag", "");
         // 分账明细
         dto.put("acct_infos", getAcctInfosRucan());
 
@@ -114,6 +122,16 @@ public class V2TradePaymentDelaytransConfirmRequestDemo extends BaseCommonDemo {
         // dto.put("sub_product", "");
         // 转账原因
         // dto.put("transfer_type", "");
+
+        return dto.toJSONString();
+    }
+
+    private static String getLjhData() {
+        JSONObject dto = new JSONObject();
+        // 税源地ID
+        // dto.put("tax_area_id", "");
+        // 任务模板ID
+        // dto.put("template_id", "");
 
         return dto.toJSONString();
     }

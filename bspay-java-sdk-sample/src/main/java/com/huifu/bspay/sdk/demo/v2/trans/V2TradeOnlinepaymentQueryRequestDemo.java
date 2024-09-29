@@ -51,8 +51,6 @@ public class V2TradeOnlinepaymentQueryRequestDemo extends BaseCommonDemo {
     private static Map<String, Object> getExtendInfos() {
         // 设置非必填字段
         Map<String, Object> extendInfoMap = new HashMap<>();
-        // 原交易支付类型
-        extendInfoMap.put("pay_type", "QUICK_PAY");
         return extendInfoMap;
     }
 

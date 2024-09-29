@@ -221,6 +221,37 @@ public class HttpClientUtils {
         return httpPost(url, headers, params, false, null, false, file, fileParam);
     }
 
+    public static String httpPostNoFile(String url, Map<String, String> headers, Map<String, Object> params, File file,
+                                      String fileParam) throws BasePayException {
+        HttpPost httpPost = new HttpPost(url);
+        if (null != headers) {
+            if (BasePay.debug) {
+                System.out.println("request headers=" + JSON.toJSONString(headers));
+                System.out.println("request url = " + url);
+                System.out.println("request param = " + null);
+            }
+            for (Iterator localIterator = headers.entrySet().iterator(); localIterator.hasNext(); ) {
+                Map.Entry entry = (Map.Entry) localIterator.next();
+                httpPost.addHeader((String) entry.getKey(), (String) entry.getValue());
+            }
+        }
+
+            MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+            builder.setCharset(Charset.forName("UTF-8"));
+            builder.setMode(HttpMultipartMode.BROWSER_COMPATIBLE);
+            for (Map.Entry<String, Object> entry : params.entrySet()) {
+                if (entry.getValue() != null) {
+                    builder.addTextBody((String) entry.getKey(), entry.getValue().toString(),
+                            ContentType.APPLICATION_FORM_URLENCODED.withCharset("utf-8"));
+                }
+            }
+            httpPost.setEntity(builder.build());
+
+
+
+        return getResult(httpPost, url, false);
+
+    }
     public static String httpPost(String url, Map<String, Object> params, int connectionRequestTimeout,
                                   int connectTimeout, int socketTimeout, String json, boolean isJson) throws BasePayException {
         return httpPost(url, null, params, false, json, isJson, null, null);
@@ -245,7 +276,6 @@ public class HttpClientUtils {
             MultipartEntityBuilder builder = MultipartEntityBuilder.create();
             builder.setCharset(Charset.forName("UTF-8"));
             builder.setMode(HttpMultipartMode.BROWSER_COMPATIBLE);
-
             builder.addPart(fileParam, new FileBody(file));
             for (Map.Entry<String, Object> entry : params.entrySet()) {
                 if (entry.getValue() != null) {

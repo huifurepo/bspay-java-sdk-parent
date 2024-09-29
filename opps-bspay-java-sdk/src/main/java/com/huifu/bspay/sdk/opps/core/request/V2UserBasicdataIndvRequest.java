@@ -51,6 +51,11 @@ public class V2UserBasicdataIndvRequest extends BaseRequest {
      */
     @JSONField(name = "mobile_no")
     private String mobileNo;
+    /**
+     * 地址开通中信E管家必填
+     */
+    @JSONField(name = "address")
+    private String address;
 
     @Override
     public FunctionCodeEnum getFunctionCode() {
@@ -60,7 +65,7 @@ public class V2UserBasicdataIndvRequest extends BaseRequest {
     public V2UserBasicdataIndvRequest() {
     }
 
-    public V2UserBasicdataIndvRequest(String reqSeqId, String reqDate, String name, String certType, String certNo, String certValidityType, String certBeginDate, String mobileNo) {
+    public V2UserBasicdataIndvRequest(String reqSeqId, String reqDate, String name, String certType, String certNo, String certValidityType, String certBeginDate, String mobileNo, String address) {
         this.reqSeqId = reqSeqId;
         this.reqDate = reqDate;
         this.name = name;
@@ -69,6 +74,7 @@ public class V2UserBasicdataIndvRequest extends BaseRequest {
         this.certValidityType = certValidityType;
         this.certBeginDate = certBeginDate;
         this.mobileNo = mobileNo;
+        this.address = address;
     }
 
     public String getReqSeqId() {
@@ -133,6 +139,14 @@ public class V2UserBasicdataIndvRequest extends BaseRequest {
 
     public void setMobileNo(String mobileNo) {
         this.mobileNo = mobileNo;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
     }
 
 }

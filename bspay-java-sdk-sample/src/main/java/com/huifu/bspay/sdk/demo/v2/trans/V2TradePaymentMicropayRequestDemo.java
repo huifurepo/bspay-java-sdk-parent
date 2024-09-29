@@ -94,12 +94,14 @@ public class V2TradePaymentMicropayRequestDemo extends BaseCommonDemo {
 
     private static JSON getAcctInfosRucan() {
         JSONObject dto = new JSONObject();
-        // 分账金额
-        // dto.put("div_amt", "test");
         // 分账接收方ID
         // dto.put("huifu_id", "test");
+        // 分账金额
+        // dto.put("div_amt", "");
         // 账户号
         // dto.put("acct_id", "");
+        // 分账百分比%
+        // dto.put("percentage_div", "");
 
         JSONArray dtoList = new JSONArray();
         dtoList.add(dto);
@@ -110,6 +112,10 @@ public class V2TradePaymentMicropayRequestDemo extends BaseCommonDemo {
         JSONObject dto = new JSONObject();
         // 分账明细
         // dto.put("acct_infos", getAcctInfosRucan());
+        // 百分比分账标志
+        // dto.put("percentage_flag", "");
+        // 是否净值分账
+        // dto.put("is_clean_split", "");
 
         return dto.toJSONString();
     }
@@ -280,8 +286,8 @@ public class V2TradePaymentMicropayRequestDemo extends BaseCommonDemo {
         // dto.put("invoice_st", "");
         // 商户类别
         // dto.put("mer_cat_code", "");
-        // 银联参数集合
-        // dto.put("pnrins_id_cd", "");
+        // 服务商机构标识码
+        // dto.put("pnr_ins_id_cd", "");
         // 特殊计费信息
         // dto.put("specfeeinfo", "");
         // 终端号

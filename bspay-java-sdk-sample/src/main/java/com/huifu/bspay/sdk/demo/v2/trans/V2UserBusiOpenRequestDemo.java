@@ -34,6 +34,8 @@ public class V2UserBusiOpenRequestDemo extends BaseCommonDemo {
         request.setReqDate(DateTools.getCurrentDateYYYYMMDD());
         // 渠道商/商户汇付Id
         request.setUpperHuifuId("6666000003084836");
+        // 乐接活配置当合作平台为乐接活，必填
+        // request.setLjhData(getLjhData());
 
         // 设置非必填字段
         Map<String, Object> extendInfoMap = getExtendInfos();
@@ -67,6 +69,8 @@ public class V2UserBusiOpenRequestDemo extends BaseCommonDemo {
         // extendInfoMap.put("open_tax_flag", "");
         // 异步请求地址
         extendInfoMap.put("async_return_url", "");
+        // 合作平台
+        // extendInfoMap.put("lg_platform_type", "");
         return extendInfoMap;
     }
 
@@ -78,11 +82,11 @@ public class V2UserBusiOpenRequestDemo extends BaseCommonDemo {
         dto.put("out_settle_huifuid", "");
         // 结算手续费外扣时的账户类型外扣手续费账户类型； 01：基本户（为空时默认值）， 05：充值户；外扣时必填；&lt;br/&gt;&lt;font color&#x3D;&quot;green&quot;&gt;示例值：01&lt;/font&gt;
         dto.put("out_settle_acct_type", "");
-        // 结算批次号settle_pattern为P0时必填；[参见结算批次说明](https://paas.huifu.com/partners/api/#/csfl/api_csfl_jspc)
+        // 结算批次号settle_pattern为P0时必填；[参见结算批次说明](https://paas.huifu.com/open/doc/api/#/csfl/api_csfl_jspc)
         dto.put("settle_batch_no", "300");
         // 是否优先到账settle_pattern为P0时选填， Y：是 N：否（为空默认取值）；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：Y&lt;/font&gt;
         dto.put("is_priority_receipt", "");
-        // 自定义结算处理时间settle_pattern为P1时必填，注意：00:00到00:30不能指定；格式：HHmmss；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：103000&lt;/font&gt;
+        // 自定义结算处理时间settle_pattern为P1/P2时必填，注意：00:00到00:30不能指定；格式：HHmmss；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：103000&lt;/font&gt;
         dto.put("settle_time", "");
         // 节假日结算手续费率settle_cycle为D1时必填。单位%，需保留小数点后两位。取值范围[0.00，100.00]，不收费请填写0.00；settle_cycle&#x3D;T1时，不生效 ；settle_cycle为D1时，遇节假日按此费率结算 ；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：0.05&lt;/font&gt;
         dto.put("fixed_ratio", "2");
@@ -116,11 +120,11 @@ public class V2UserBusiOpenRequestDemo extends BaseCommonDemo {
         dto.put("prov_id", "310000");
         // 银行所在市
         dto.put("area_id", "310100");
-        // 银行号当card_type&#x3D;0时必填，对私可以为空[点击查看](https://paas.huifu.com/partners/api/#/csfl/api_csfl_yhbm)；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：01040000&lt;/font&gt;
+        // 银行号当card_type&#x3D;0时必填，对私可以为空[点击查看](https://paas.huifu.com/open/doc/api/#/csfl/api_csfl_yhbm)；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：01040000&lt;/font&gt;
         dto.put("bank_code", "01050000");
-        // 支行联行号当card_type&#x3D;0时必填，[点击查看](https://paas.huifu.com/partners/api/#/csfl/api_csfl_yhzhbm)；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：103124075619&lt;/font&gt;
+        // 支行联行号当card_type&#x3D;0时必填，[点击查看](https://paas.huifu.com/open/doc/api/#/csfl/api_csfl_yhzhbm)；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：103124075619&lt;/font&gt;
         dto.put("branch_code", "105305264815");
-        // 持卡人证件类型对私必填；参见《[自然人证件类型](https://paas.huifu.com/partners/api/#/api_ggcsbm?id&#x3D;%e8%87%aa%e7%84%b6%e4%ba%ba%e8%af%81%e4%bb%b6%e7%b1%bb%e5%9e%8b)》说明；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：00&lt;/font&gt;
+        // 持卡人证件类型对私必填；参见《[自然人证件类型](https://paas.huifu.com/open/doc/api/#/api_ggcsbm?id&#x3D;%e8%87%aa%e7%84%b6%e4%ba%ba%e8%af%81%e4%bb%b6%e7%b1%bb%e5%9e%8b)》说明；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：00&lt;/font&gt;
         dto.put("cert_type", "00");
         // 持卡人证件号码对私必填； 如:证件类型为身份证, 则填写身份证号码；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：320926198412032059&lt;/font&gt;
         dto.put("cert_no", "110101197003077513");
@@ -144,9 +148,9 @@ public class V2UserBusiOpenRequestDemo extends BaseCommonDemo {
         dto.put("fix_amt", "0.03");
         // 提现手续费率（%）fix_amt与fee_rate至少填写一项，需保留小数点后两位，取值范围[0.00,100.00]，不收费请填写0.00；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：0.05&lt;/font&gt;注：1、如果fix_amt与fee_rate都填写了则手续费&#x3D;fix_amt+支付金额\*fee_rate2、当cash_type&#x3D;D1时为节假日取现手续费
         dto.put("fee_rate", "2");
-        // D1工作日取现手续费固定金额单位元，需保留小数点后两位。不收费请填写0.00；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：1.00&lt;/font&gt;cash_type&#x3D;D1时，不生效 ；cash_type取现类型为D1时，遇工作日按此费率结算，若未配置则默认按照节假日手续费计算
+        // D1工作日取现手续费固定金额单位元，需保留小数点后两位。不收费请填写0.00；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：1.00&lt;/font&gt;D1取现配置时选填，其他取现配置无效；cash_type取现类型为D1时，遇工作日按此费率结算，若未配置则默认按照节假日手续费计算
         // dto.put("weekday_fix_amt", "test");
-        // D1工作日取现手续费率单位%，需保留小数点后两位。取值范围[0.00，100.00]，不收费请填写0.00；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：0.05&lt;/font&gt;cash_type&#x3D;D1时，不生效 ；cash_type取现类型为D1时，遇工作日按此费率结算 ，若未配置则默认按照节假日手续费计算
+        // D1工作日取现手续费率单位%，需保留小数点后两位。取值范围[0.00，100.00]，不收费请填写0.00；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：0.05&lt;/font&gt;D1取现配置时选填，其他取现配置无效；cash_type取现类型为D1时，遇工作日按此费率结算 ，若未配置则默认按照节假日手续费计算
         // dto.put("weekday_fee_rate", "test");
         // 业务类型
         dto.put("cash_type", "D1");
@@ -224,6 +228,16 @@ public class V2UserBusiOpenRequestDemo extends BaseCommonDemo {
         // dto.put("role_type", "test");
         // 银行卡信息
         // dto.put("elec_card_list", getElecCardList());
+        // 用户类型
+        // dto.put("user_type", "");
+
+        return dto.toJSONString();
+    }
+
+    private static String getLjhData() {
+        JSONObject dto = new JSONObject();
+        // 税源地id当合作平台为乐接活，必填
+        // dto.put("tax_area_id", "test");
 
         return dto.toJSONString();
     }

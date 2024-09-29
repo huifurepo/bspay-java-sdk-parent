@@ -53,6 +53,8 @@ public class V2PcreditFeeConfigRequestDemo extends BaseCommonDemo {
         extendInfoMap.put("bank_fq_list", getBankFqList());
         // 花呗分期费率
         extendInfoMap.put("hb_fq_fee_list", getHbFqFeeList());
+        // 白条分期配置对象
+        // extendInfoMap.put("jdbt_data", getJdbtData());
         return extendInfoMap;
     }
 
@@ -138,6 +140,46 @@ public class V2PcreditFeeConfigRequestDemo extends BaseCommonDemo {
         JSONArray dtoList = new JSONArray();
         dtoList.add(dto);
         return dtoList.toJSONString();
+    }
+
+    private static String getJdbtFeeData() {
+        JSONObject dto = new JSONObject();
+        // 支付场景
+        // dto.put("pay_scene", "test");
+        // 业务开通标识
+        // dto.put("open_flag", "test");
+        // 手续费率(%)
+        // dto.put("fee_rate", "");
+        // 手续费扣取方式
+        // dto.put("fee_rec_type", "");
+        // 交易手续费扣款标记
+        // dto.put("fee_flag", "");
+        // 手续费外扣的汇付商户号
+        // dto.put("out_fee_huifu_id", "");
+        // 手续费外扣的汇付账户号
+        // dto.put("out_fee_acct_id", "");
+
+        JSONArray dtoList = new JSONArray();
+        dtoList.add(dto);
+        return dtoList.toJSONString();
+    }
+
+    private static String getJdbtData() {
+        JSONObject dto = new JSONObject();
+        // 商户汇付Id
+        // dto.put("huifu_id", "test");
+        // 签约人类型
+        // dto.put("sign_user_type", "test");
+        // 签约人姓名
+        // dto.put("name", "test");
+        // 签约人手机号
+        // dto.put("mobile_no", "test");
+        // 签约人身份证号
+        // dto.put("cert_no", "test");
+        // 京东白条费率数据
+        // dto.put("jdbt_fee_data", getJdbtFeeData());
+
+        return dto.toJSONString();
     }
 
 }

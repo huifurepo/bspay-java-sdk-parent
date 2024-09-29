@@ -42,6 +42,8 @@ public class V2UserBasicdataIndvRequestDemo extends BaseCommonDemo {
         request.setCertBeginDate("20200117");
         // 手机号
         request.setMobileNo("13764462205");
+        // 地址开通中信E管家必填
+        // request.setAddress("test");
 
         // 设置非必填字段
         Map<String, Object> extendInfoMap = getExtendInfos();
@@ -71,8 +73,6 @@ public class V2UserBasicdataIndvRequestDemo extends BaseCommonDemo {
         extendInfoMap.put("expand_id", "");
         // 文件列表
         extendInfoMap.put("file_list", getFileList());
-        // 地址
-        // extendInfoMap.put("**address**", "");
         return extendInfoMap;
     }
 

@@ -89,6 +89,10 @@ public class V2MerchantBasicdataIndvRequestDemo extends BaseCommonDemo {
         // extendInfoMap.put("settle_card_back_pic", "");
         // 结算卡正面
         // extendInfoMap.put("settle_card_front_pic", "");
+        // 法人身份证反面
+        // extendInfoMap.put("legal_cert_back_pic", "");
+        // 法人身份证正面
+        // extendInfoMap.put("legal_cert_front_pic", "");
         // 授权委托书
         // extendInfoMap.put("auth_enturst_pic", "");
         return extendInfoMap;

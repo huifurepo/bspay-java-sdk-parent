@@ -220,7 +220,7 @@ public class V2MerchantBusiOpenRequestDemo extends BaseCommonDemo {
         dto.put("fee_rate", "0.38");
         // 费率规则号
         dto.put("fee_rule_id", "758");
-        // 商户经营类目[参见微信支付宝MCC](https://paas.huifu.com/partners/api/#/csfl/api_csfl_zfbmcc)；个体工商户、小微商户必填；微信暂不支持修改；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：5411&lt;/font&gt;&lt;br/&gt;**企业使用fee_rule_id代替原有mcc**
+        // 商户经营类目[参见微信支付宝MCC](https://paas.huifu.com/open/doc/api/#/csfl/api_csfl_zfbmcc)；个体工商户、小微商户必填；微信暂不支持修改；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：5411&lt;/font&gt;&lt;br/&gt;**企业使用fee_rule_id代替原有mcc**
         dto.put("mcc", "111");
         // 子渠道号
         dto.put("pay_channel_id", "JP00001");
@@ -400,9 +400,9 @@ public class V2MerchantBusiOpenRequestDemo extends BaseCommonDemo {
 
     private static String getOutOrderAcctCard() {
         JSONObject dto = new JSONObject();
-        // 支行联行号card_type为0时必填，参考：[银行支行编码](https://paas.huifu.com/partners/api/#/csfl/api_csfl_yhzhbm)；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：102290026507&lt;/font&gt;
+        // 支行联行号card_type为0时必填，参考：[银行支行编码](https://paas.huifu.com/open/doc/api/#/csfl/api_csfl_yhzhbm)；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：102290026507&lt;/font&gt;
         // dto.put("branch_code", "test");
-        // 支行名称card_type为0时必填 ,参考：[银行支行编码](https://paas.huifu.com/partners/api/#/csfl/api_csfl_yhzhbm)；&lt;br/&gt;&lt;font color&#x3D;&quot;green&quot;&gt;示例值：中国工商银行上海市中山北路支行&lt;/font&gt;
+        // 支行名称card_type为0时必填 ,参考：[银行支行编码](https://paas.huifu.com/open/doc/api/#/csfl/api_csfl_yhzhbm)；&lt;br/&gt;&lt;font color&#x3D;&quot;green&quot;&gt;示例值：中国工商银行上海市中山北路支行&lt;/font&gt;
         // dto.put("branch_name", "test");
         // 结算账户名
         // dto.put("card_name", "test");

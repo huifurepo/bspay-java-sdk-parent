@@ -63,10 +63,6 @@ public class V2TradeOnlinepaymentRefundRequestDemo extends BaseCommonDemo {
         extendInfoMap.put("org_req_seq_id", "295700155481522176");
         // 分账对象
         // extendInfoMap.put("acct_split_bunch", getAcctSplitBunchRucan());
-        // 补贴支付信息
-        // extendInfoMap.put("combinedpay_data", getCombinedpayData());
-        // 大额转账支付账户信息数据
-        // extendInfoMap.put("bank_info_data", getBankInfoData());
         // 备注
         // extendInfoMap.put("remark", "");
         // 异步通知地址
@@ -77,9 +73,11 @@ public class V2TradeOnlinepaymentRefundRequestDemo extends BaseCommonDemo {
     private static JSON getAcctInfosRucan() {
         JSONObject dto = new JSONObject();
         // 商户号
-        // dto.put("huifu_id", "");
+        // dto.put("huifu_id", "test");
         // 支付金额
         // dto.put("div_amt", "");
+        // 账户号
+        // dto.put("acct_id", "");
 
         JSONArray dtoList = new JSONArray();
         dtoList.add(dto);
@@ -90,38 +88,6 @@ public class V2TradeOnlinepaymentRefundRequestDemo extends BaseCommonDemo {
         JSONObject dto = new JSONObject();
         // 分账信息列表
         // dto.put("acct_infos", getAcctInfosRucan());
-
-        return dto.toJSONString();
-    }
-
-    private static String getCombinedpayData() {
-        JSONObject dto = new JSONObject();
-        // 补贴方汇付编号
-        // dto.put("huifu_id", "test");
-        // 补贴方类型
-        // dto.put("user_type", "test");
-        // 补贴方账户号
-        // dto.put("acct_id", "test");
-        // 补贴金额
-        // dto.put("amount", "test");
-
-        JSONArray dtoList = new JSONArray();
-        dtoList.add(dto);
-        return dtoList.toJSONString();
-    }
-
-    private static String getBankInfoData() {
-        JSONObject dto = new JSONObject();
-        // 付款方账户类型
-        // dto.put("card_acct_type", "test");
-        // 省份
-        // dto.put("province", "");
-        // 地区
-        // dto.put("area", "");
-        // 银行编号
-        // dto.put("bank_code", "");
-        // 联行号
-        // dto.put("correspondent_code", "");
 
         return dto.toJSONString();
     }
@@ -150,14 +116,14 @@ public class V2TradeOnlinepaymentRefundRequestDemo extends BaseCommonDemo {
 
     private static String getRiskCheckData() {
         JSONObject dto = new JSONObject();
+        // 经度
+        // dto.put("longitude", "test");
+        // 纬度
+        // dto.put("latitude", "test");
+        // 基站地址
+        // dto.put("base_station", "test");
         // ip地址
         dto.put("ip_addr", "172.1.1.1");
-        // 基站地址
-        // dto.put("base_station", "");
-        // 纬度
-        // dto.put("latitude", "");
-        // 经度
-        // dto.put("longitude", "");
 
         return dto.toJSONString();
     }

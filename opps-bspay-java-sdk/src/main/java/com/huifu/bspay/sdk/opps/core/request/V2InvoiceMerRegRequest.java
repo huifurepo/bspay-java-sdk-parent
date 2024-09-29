@@ -71,6 +71,11 @@ public class V2InvoiceMerRegRequest extends BaseRequest {
      */
     @JSONField(name = "prov_id")
     private String provId;
+    /**
+     * 所属市
+     */
+    @JSONField(name = "city_id")
+    private String cityId;
 
     @Override
     public FunctionCodeEnum getFunctionCode() {
@@ -80,7 +85,7 @@ public class V2InvoiceMerRegRequest extends BaseRequest {
     public V2InvoiceMerRegRequest() {
     }
 
-    public V2InvoiceMerRegRequest(String reqSeqId, String reqDate, String huifuId, String taxPayerId, String taxPayerName, String telNo, String regAddress, String bankName, String accountNo, String contactPhoneNo, String openMode, String provId) {
+    public V2InvoiceMerRegRequest(String reqSeqId, String reqDate, String huifuId, String taxPayerId, String taxPayerName, String telNo, String regAddress, String bankName, String accountNo, String contactPhoneNo, String openMode, String provId, String cityId) {
         this.reqSeqId = reqSeqId;
         this.reqDate = reqDate;
         this.huifuId = huifuId;
@@ -93,6 +98,7 @@ public class V2InvoiceMerRegRequest extends BaseRequest {
         this.contactPhoneNo = contactPhoneNo;
         this.openMode = openMode;
         this.provId = provId;
+        this.cityId = cityId;
     }
 
     public String getReqSeqId() {
@@ -189,6 +195,14 @@ public class V2InvoiceMerRegRequest extends BaseRequest {
 
     public void setProvId(String provId) {
         this.provId = provId;
+    }
+
+    public String getCityId() {
+        return cityId;
+    }
+
+    public void setCityId(String cityId) {
+        this.cityId = cityId;
     }
 
 }

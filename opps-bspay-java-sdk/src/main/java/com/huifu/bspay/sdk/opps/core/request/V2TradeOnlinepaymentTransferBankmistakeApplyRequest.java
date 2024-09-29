@@ -77,10 +77,10 @@ public class V2TradeOnlinepaymentTransferBankmistakeApplyRequest extends BaseReq
     @JSONField(name = "goods_desc")
     private String goodsDesc;
     /**
-     * 汇款凭证文件内容
+     * 汇款凭证文件id
      */
-    @JSONField(name = "certificate_content")
-    private String certificateContent;
+    @JSONField(name = "certificate_file_id")
+    private String certificateFileId;
 
     @Override
     public FunctionCodeEnum getFunctionCode() {
@@ -90,7 +90,7 @@ public class V2TradeOnlinepaymentTransferBankmistakeApplyRequest extends BaseReq
     public V2TradeOnlinepaymentTransferBankmistakeApplyRequest() {
     }
 
-    public V2TradeOnlinepaymentTransferBankmistakeApplyRequest(String reqSeqId, String reqDate, String huifuId, String transAmt, String orderType, String orgReqSeqId, String orgReqDate, String remitDate, String certificateName, String bankCardNo, String bankName, String notifyUrl, String goodsDesc, String certificateContent) {
+    public V2TradeOnlinepaymentTransferBankmistakeApplyRequest(String reqSeqId, String reqDate, String huifuId, String transAmt, String orderType, String orgReqSeqId, String orgReqDate, String remitDate, String certificateName, String bankCardNo, String bankName, String notifyUrl, String goodsDesc, String certificateFileId) {
         this.reqSeqId = reqSeqId;
         this.reqDate = reqDate;
         this.huifuId = huifuId;
@@ -104,7 +104,7 @@ public class V2TradeOnlinepaymentTransferBankmistakeApplyRequest extends BaseReq
         this.bankName = bankName;
         this.notifyUrl = notifyUrl;
         this.goodsDesc = goodsDesc;
-        this.certificateContent = certificateContent;
+        this.certificateFileId = certificateFileId;
     }
 
     public String getReqSeqId() {
@@ -211,12 +211,12 @@ public class V2TradeOnlinepaymentTransferBankmistakeApplyRequest extends BaseReq
         this.goodsDesc = goodsDesc;
     }
 
-    public String getCertificateContent() {
-        return certificateContent;
+    public String getCertificateFileId() {
+        return certificateFileId;
     }
 
-    public void setCertificateContent(String certificateContent) {
-        this.certificateContent = certificateContent;
+    public void setCertificateFileId(String certificateFileId) {
+        this.certificateFileId = certificateFileId;
     }
 
 }

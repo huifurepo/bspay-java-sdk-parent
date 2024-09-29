@@ -38,7 +38,7 @@ public class V2TradeAcctpaymentPayRequestDemo extends BaseCommonDemo {
         request.setAcctSplitBunch(getAcctSplitBunch());
         // 安全信息
         request.setRiskCheckData(getRiskCheckData());
-        // 资金类型资金类型。支付渠道为中信E管家时，资金类型必填（[详见说明](https://paas.huifu.com/partners/api/#/yuer/api_zxegjzllx)）
+        // 资金类型资金类型。支付渠道为中信E管家时，资金类型必填（[详见说明](https://paas.huifu.com/open/doc/api/#/yuer/api_zxegjzllx)）
         // request.setFundType("test");
         // 手续费承担方标识余额支付手续费承担方标识；商户余额支付扣收规则为接口指定承担方时必填！枚举值：&lt;br/&gt;OUT：出款方；&lt;br/&gt;IN：分账接受方。&lt;br/&gt;&lt;font color&#x3D;&quot;green&quot;&gt;示例值：IN&lt;/font&gt;
         // request.setTransFeeTakeFlag("test");
@@ -73,10 +73,14 @@ public class V2TradeAcctpaymentPayRequestDemo extends BaseCommonDemo {
         // extendInfoMap.put("acct_channel", "");
         // 灵活用工标志
         // extendInfoMap.put("hyc_flag", "");
+        // 灵活用工平台
+        // extendInfoMap.put("lg_platform_type", "");
         // 代发模式
         // extendInfoMap.put("salary_modle_type", "");
         // 落地公司商户号
         // extendInfoMap.put("bmember_id", "");
+        // 乐接活请求参数集合
+        // extendInfoMap.put("ljh_data", getLjhData());
         // 异步通知地址
         // extendInfoMap.put("notify_url", "");
         return extendInfoMap;
@@ -84,12 +88,14 @@ public class V2TradeAcctpaymentPayRequestDemo extends BaseCommonDemo {
 
     private static JSON getAcctInfos() {
         JSONObject dto = new JSONObject();
-        // 分账金额
-        dto.put("div_amt", "0.01");
         // 分账接收方ID
         dto.put("huifu_id", "6666000109133323");
+        // 分账金额
+        dto.put("div_amt", "0.01");
         // 账户号
         // dto.put("acct_id", "");
+        // 分账百分比%
+        // dto.put("percentage_div", "");
 
         JSONArray dtoList = new JSONArray();
         dtoList.add(dto);
@@ -100,6 +106,10 @@ public class V2TradeAcctpaymentPayRequestDemo extends BaseCommonDemo {
         JSONObject dto = new JSONObject();
         // 分账明细
         dto.put("acct_infos", getAcctInfos());
+        // 百分比分账标志
+        // dto.put("percentage_flag", "");
+        // 是否净值分账
+        // dto.put("is_clean_split", "");
 
         return dto.toJSONString();
     }
@@ -118,6 +128,16 @@ public class V2TradeAcctpaymentPayRequestDemo extends BaseCommonDemo {
         // dto.put("base_station", "");
         // IP地址
         // dto.put("ip_addr", "");
+
+        return dto.toJSONString();
+    }
+
+    private static String getLjhData() {
+        JSONObject dto = new JSONObject();
+        // 税源地ID
+        // dto.put("tax_area_id", "");
+        // 任务模板ID
+        // dto.put("template_id", "");
 
         return dto.toJSONString();
     }

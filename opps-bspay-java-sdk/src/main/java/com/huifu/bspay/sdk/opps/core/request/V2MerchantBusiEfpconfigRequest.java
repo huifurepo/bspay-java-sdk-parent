@@ -57,12 +57,12 @@ public class V2MerchantBusiEfpconfigRequest extends BaseRequest {
     @JSONField(name = "out_order_acct_open_fees")
     private String outOrderAcctOpenFees;
     /**
-     * 全渠道资金管理补充材料id首次开通时必填；涉及文件类型：[F504-全渠道资金管理补充材料](https://paas.huifu.com/partners/api/#/csfl/api_csfl_wjlx)；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：57cc7f00-600a-33ab-b614-6221bbf2e530&lt;/font&gt;
+     * 全渠道资金管理补充材料id涉及文件类型：[F504-全渠道资金管理补充材料](https://paas.huifu.com/open/doc/api/#/csfl/api_csfl_wjlx)；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：57cc7f00-600a-33ab-b614-6221bbf2e530&lt;/font&gt;
      */
     @JSONField(name = "other_payment_institutions_pic")
     private String otherPaymentInstitutionsPic;
     /**
-     * 新网银行数字证书及电子签名授权委托书out_funds_gate_id为xw0时必填；涉及文件类型：[F534-银行数字证书及电子签名授权委托书](https://paas.huifu.com/partners/api/#/csfl/api_csfl_wjlx)；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：57cc7f00-600a-33ab-b614-6221bbf2e530&lt;/font&gt;
+     * 新网银行数字证书及电子签名授权委托书out_funds_gate_id为xw0时必填；涉及文件类型：[F534-银行数字证书及电子签名授权委托书](https://paas.huifu.com/open/doc/api/#/csfl/api_csfl_wjlx)；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：57cc7f00-600a-33ab-b614-6221bbf2e530&lt;/font&gt;
      */
     @JSONField(name = "xw_digital_certificate_pic")
     private String xwDigitalCertificatePic;

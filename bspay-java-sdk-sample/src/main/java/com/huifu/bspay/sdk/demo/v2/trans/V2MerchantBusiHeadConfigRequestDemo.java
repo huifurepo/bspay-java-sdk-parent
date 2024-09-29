@@ -97,6 +97,10 @@ public class V2MerchantBusiHeadConfigRequestDemo extends BaseCommonDemo {
         // extendInfoMap.put("use_upper_mer_auth_flag", "");
         // 允许使用上级商户号发起AT交易
         // extendInfoMap.put("use_upper_mer_at_trans_flag", "");
+        // 大额支付配置
+        // extendInfoMap.put("large_amt_pay_config_list", getLargeAmtPayConfigList());
+        // 全域资金管理配置(苏商)
+        // extendInfoMap.put("out_order_funds_su_shang_config", getOutOrderFundsSuShangConfig());
         return extendInfoMap;
     }
 
@@ -340,6 +344,40 @@ public class V2MerchantBusiHeadConfigRequestDemo extends BaseCommonDemo {
         // dto.put("trans_fee_out_flag", "test");
         // 支持取现手续费外扣
         // dto.put("cash_out_fee_flag", "test");
+
+        return dto.toJSONString();
+    }
+
+    private static String getLargeAmtPayConfigList() {
+        JSONObject dto = new JSONObject();
+        // 手续费（%）
+        // dto.put("fee_rate", "test");
+        // 固定手续费(元)
+        // dto.put("fee_fix_amt", "test");
+        // 允许开通大额转账业务
+        // dto.put("open_flag", "test");
+        // 大额支付业务模式
+        // dto.put("business_model", "test");
+        // 允许用户入账
+        // dto.put("allow_user_deposit_flag", "");
+        // 银行卡绑定支付权限
+        // dto.put("mer_same_card_recharge_flag", "");
+
+        return dto.toJSONString();
+    }
+
+    private static String getOutOrderFundsSuShangConfig() {
+        JSONObject dto = new JSONObject();
+        // 手续费（%）
+        // dto.put("fee_rate", "test");
+        // 保底手续费(元)
+        // dto.put("fee_min_amt", "test");
+        // 对公固定手续费(元)
+        // dto.put("public_fee_fix_amt", "test");
+        // 对私固定手续费(元)
+        // dto.put("private_fee_fix_amt", "test");
+        // 允许开通全域资金业务(苏商)
+        // dto.put("open_flag", "test");
 
         return dto.toJSONString();
     }

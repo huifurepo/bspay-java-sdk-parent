@@ -50,6 +50,8 @@ public class V2InvoiceMerRegRequestDemo extends BaseCommonDemo {
         request.setOpenMode("2");
         // 所属省
         request.setProvId("310000");
+        // 所属市
+        request.setCityId("310100");
 
         // 设置非必填字段
         Map<String, Object> extendInfoMap = getExtendInfos();
@@ -71,8 +73,6 @@ public class V2InvoiceMerRegRequestDemo extends BaseCommonDemo {
         extendInfoMap.put("contact", "王姗");
         // 联系人身份证号
         extendInfoMap.put("id_card_no", "210123198702122747");
-        // 所属市
-        extendInfoMap.put("city_id", "310100");
         // 业务到期年限
         extendInfoMap.put("valid_period", "1");
         // 自动续约

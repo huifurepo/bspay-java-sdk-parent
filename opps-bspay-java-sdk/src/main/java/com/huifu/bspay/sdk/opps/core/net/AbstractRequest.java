@@ -21,7 +21,7 @@ import java.util.*;
  */
 public abstract class AbstractRequest {
 
-    public static final String SDK_VERSION = "3.0.14";
+    public static final String SDK_VERSION = "3.0.17";
 
     protected static enum RequestMethod {
         GET, POST, DELETE, PUT;
@@ -103,7 +103,9 @@ public abstract class AbstractRequest {
             System.out.println("request data = " + JSONObject.parseObject(reqData));
             System.out.println("requestBody param = " + requestBody);
         }
-        if ((RequestMethod.POST == method) && (file == null)) {
+        if ((RequestMethod.POST == method) && (file == null)&& "v2/supplementary/picture".equals(uri)) {
+            back = HttpClientUtils.httpPostNoFile(requestUrl.toString(), headers, request, null, fileParam);
+        } else if ((RequestMethod.POST == method) && (file == null)) {
             headers.put("Content-type", "application/json");
 //            back = OkHttpClientTools.httpPost(requestUrl.toString(), requestBody, config.getProcutId());
             back = HttpClientUtils.httpPostJson(requestUrl.toString(), headers, requestBody);

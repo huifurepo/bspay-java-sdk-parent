@@ -208,7 +208,7 @@ public class V2MerchantBusiModifyRequestDemo extends BaseCommonDemo {
         dto.put("fee_rate", "2.15");
         // 支付场景
         dto.put("pay_scene", "10");
-        // 商户经营类目[参见微信支付宝MCC](https://paas.huifu.com/partners/api/#/csfl/api_csfl_zfbmcc)；个体工商户、小微商户必填，企业使用fee_rule_id代替原有mcc
+        // 商户经营类目[参见微信支付宝MCC](https://paas.huifu.com/open/doc/api/#/csfl/api_csfl_zfbmcc)；个体工商户、小微商户必填，企业使用fee_rule_id代替原有mcc
         dto.put("mcc", "5943");
         // 费率规则ID
         dto.put("fee_rule_id", "765");

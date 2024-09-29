@@ -119,7 +119,7 @@ public class V2TradePaymentJspayRequestDemo extends BaseCommonDemo {
         // 单品列表
         dto.put("goods_detail", getGoodsDetailWxRucan());
         // 订单原价(元)
-        dto.put("cost_price", "999.00");
+        dto.put("cost_price", "43.00");
         // 商品小票ID
         dto.put("receipt_id", "20220628132043853798");
 
@@ -150,12 +150,10 @@ public class V2TradePaymentJspayRequestDemo extends BaseCommonDemo {
 
     private static String getWxData() {
         JSONObject dto = new JSONObject();
-        // 子商户公众账号id
+        // 子商户应用ID
         dto.put("sub_appid", "wxdfe9a5d141f96685");
-        // 用户标识
-        dto.put("openid", "o8jhotzittQSetZ-N0Yj4Hz91Rqc");
         // 子商户用户标识
-        dto.put("sub_openid", "");
+        dto.put("sub_openid", "o8jhotzittQSetZ-N0Yj4Hz91Rqc");
         // 附加数据
         // dto.put("attach", "");
         // 商品描述
@@ -211,9 +209,9 @@ public class V2TradePaymentJspayRequestDemo extends BaseCommonDemo {
         // 商品的编号
         dto.put("goods_id", "12312321");
         // 商品名称
-        dto.put("goods_name", "阿里");
+        dto.put("goods_name", "汇付");
         // 商品单价(元)
-        dto.put("price", "0.01");
+        dto.put("price", "43.00");
         // 商品数量
         dto.put("quantity", "20");
         // 商品描述信息
@@ -302,6 +300,8 @@ public class V2TradePaymentJspayRequestDemo extends BaseCommonDemo {
 
     private static String getUnionpayData() {
         JSONObject dto = new JSONObject();
+        // 二维码
+        // dto.put("qr_code", "");
         // 收款方附加数据
         // dto.put("addn_data", "");
         // 地区信息
@@ -338,12 +338,14 @@ public class V2TradePaymentJspayRequestDemo extends BaseCommonDemo {
 
     private static JSON getAcctInfosRucan() {
         JSONObject dto = new JSONObject();
-        // 分账金额
-        dto.put("div_amt", "0.10");
         // 分账接收方ID
         dto.put("huifu_id", "6666000109133323");
+        // 分账金额
+        dto.put("div_amt", "0.10");
         // 账户号
         // dto.put("acct_id", "");
+        // 分账百分比%
+        // dto.put("percentage_div", "");
 
         JSONArray dtoList = new JSONArray();
         dtoList.add(dto);
@@ -354,6 +356,10 @@ public class V2TradePaymentJspayRequestDemo extends BaseCommonDemo {
         JSONObject dto = new JSONObject();
         // 分账明细
         dto.put("acct_infos", getAcctInfosRucan());
+        // 百分比分账标志
+        // dto.put("percentage_flag", "");
+        // 是否净值分账
+        // dto.put("is_clean_split", "");
 
         return dto.toJSONString();
     }

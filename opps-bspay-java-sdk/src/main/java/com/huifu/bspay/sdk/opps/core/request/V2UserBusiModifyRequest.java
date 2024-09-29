@@ -31,6 +31,11 @@ public class V2UserBusiModifyRequest extends BaseRequest {
      */
     @JSONField(name = "huifu_id")
     private String huifuId;
+    /**
+     * 乐接活配置当合作平台为乐接活，必填
+     */
+    @JSONField(name = "ljh_data")
+    private String ljhData;
 
     @Override
     public FunctionCodeEnum getFunctionCode() {
@@ -40,11 +45,12 @@ public class V2UserBusiModifyRequest extends BaseRequest {
     public V2UserBusiModifyRequest() {
     }
 
-    public V2UserBusiModifyRequest(String reqSeqId, String reqDate, String upperHuifuId, String huifuId) {
+    public V2UserBusiModifyRequest(String reqSeqId, String reqDate, String upperHuifuId, String huifuId, String ljhData) {
         this.reqSeqId = reqSeqId;
         this.reqDate = reqDate;
         this.upperHuifuId = upperHuifuId;
         this.huifuId = huifuId;
+        this.ljhData = ljhData;
     }
 
     public String getReqSeqId() {
@@ -77,6 +83,14 @@ public class V2UserBusiModifyRequest extends BaseRequest {
 
     public void setHuifuId(String huifuId) {
         this.huifuId = huifuId;
+    }
+
+    public String getLjhData() {
+        return ljhData;
+    }
+
+    public void setLjhData(String ljhData) {
+        this.ljhData = ljhData;
     }
 
 }

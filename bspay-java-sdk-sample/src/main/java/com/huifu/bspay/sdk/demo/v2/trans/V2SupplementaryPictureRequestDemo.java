@@ -39,7 +39,7 @@ public class V2SupplementaryPictureRequestDemo extends BaseCommonDemo {
         request.setExtendInfo(extendInfoMap);
 
         // 3. 发起API调用
-        Map<String, Object> response = doExecute(request, new File("D:/法人身份证正反面.png"));
+        Map<String, Object> response = doExecute(request, null);
         System.out.println("返回数据:" + JSONObject.toJSONString(response));
     }
 
@@ -52,6 +52,8 @@ public class V2SupplementaryPictureRequestDemo extends BaseCommonDemo {
         Map<String, Object> extendInfoMap = new HashMap<>();
         // 商户号
         extendInfoMap.put("huifu_id", "6666000103413615");
+        // 文件url链接
+        extendInfoMap.put("file_url", "https://example.com/image.jpg");
         return extendInfoMap;
     }
 
