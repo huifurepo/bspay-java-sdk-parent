@@ -6,6 +6,38 @@ package com.huifu.bspay.sdk.opps.core.enums;
  */
 public enum FunctionCodeEnum {
     /**
+     * 服务单关闭
+     */
+    V2_TRADE_PAYAFTERUSE_CREDITBIZORDER_CLOSE("v2.trade.payafteruse.creditbizorder.close", "服务单关闭"),
+    /**
+     * 服务单查询
+     */
+    V2_TRADE_PAYAFTERUSE_CREDITBIZORDER_QUERY("v2.trade.payafteruse.creditbizorder.query", "服务单查询"),
+    /**
+     * 服务单创建
+     */
+    V2_TRADE_PAYAFTERUSE_CREDITBIZORDER_CREATE("v2.trade.payafteruse.creditbizorder.create", "服务单创建"),
+    /**
+     * 分期扣款查询
+     */
+    V2_TRADE_PAYAFTERUSE_INSTALLMENT_QUERY("v2.trade.payafteruse.installment.query", "分期扣款查询"),
+    /**
+     * 分期扣款
+     */
+    V2_TRADE_PAYAFTERUSE_INSTALLMENT_PAY("v2.trade.payafteruse.installment.pay", "分期扣款"),
+    /**
+     * 分期交易退款查询
+     */
+    V2_TRADE_PAYAFTERUSE_INSTALLMENT_REFUNDQUERY("v2.trade.payafteruse.installment.refundquery", "分期交易退款查询"),
+    /**
+     * 分期交易退款
+     */
+    V2_TRADE_PAYAFTERUSE_INSTALLMENT_REFUND("v2.trade.payafteruse.installment.refund", "分期交易退款"),
+    /**
+     * 分期单创建
+     */
+    V2_TRADE_PAYAFTERUSE_INSTALLMENT_CREATE("v2.trade.payafteruse.installment.create", "分期单创建"),
+    /**
      * 新建付款人
      */
     V2_BILL_ENT_PAYER_CREATE("v2.bill.ent.payer.create", "新建付款人"),
