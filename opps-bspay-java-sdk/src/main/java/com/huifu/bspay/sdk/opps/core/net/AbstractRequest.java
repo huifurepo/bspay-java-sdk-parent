@@ -61,6 +61,12 @@ public abstract class AbstractRequest {
         if (ServerTypeEnum.PAGE.equals(serverType)) {
             baseUrl = getUrl();
         }
+        //临时指定baseUrl
+        if(params!=null &&params.get("base_url")!=null){
+            baseUrl= (String)params.get("base_url");
+            params.remove("base_url");
+
+        }
         StringBuilder requestUrl = new StringBuilder(baseUrl);
         if (!baseUrl.endsWith("/")) {
             requestUrl.append("/");
