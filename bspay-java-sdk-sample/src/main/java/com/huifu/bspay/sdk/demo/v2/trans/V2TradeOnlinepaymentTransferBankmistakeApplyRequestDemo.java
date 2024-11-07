@@ -40,14 +40,6 @@ public class V2TradeOnlinepaymentTransferBankmistakeApplyRequestDemo extends Bas
         request.setOrgReqSeqId("202308312345678931");
         // 原请求日期
         request.setOrgReqDate("20230831");
-        // 实际打款日期
-        request.setRemitDate("20230615");
-        // 实际付款方姓名
-        request.setCertificateName("孙洁");
-        // 实际付款方银行卡号
-        request.setBankCardNo("V2olJv4Srh…………78M8A==");
-        // 实际付款方银行名称
-        request.setBankName("招商银行");
         // 异步通知地址
         request.setNotifyUrl("http://www.baidu.com");
         // 商品描述
@@ -71,6 +63,8 @@ public class V2TradeOnlinepaymentTransferBankmistakeApplyRequestDemo extends Bas
     private static Map<String, Object> getExtendInfos() {
         // 设置非必填字段
         Map<String, Object> extendInfoMap = new HashMap<>();
+        // 下单标识
+        // extendInfoMap.put("order_flag", "");
         // 备注
         extendInfoMap.put("remark", "大额支付补入账验证");
         // 银行信息数据
@@ -79,6 +73,8 @@ public class V2TradeOnlinepaymentTransferBankmistakeApplyRequestDemo extends Bas
         // extendInfoMap.put("delay_acct_flag", "");
         // 分账对象
         // extendInfoMap.put("acct_split_bunch", getAcctSplitBunch());
+        // 实际打款信息
+        // extendInfoMap.put("actual_remit_data", getActualRemitData());
         return extendInfoMap;
     }
 
@@ -94,16 +90,8 @@ public class V2TradeOnlinepaymentTransferBankmistakeApplyRequestDemo extends Bas
         dto.put("correspondent_code", "103290076178");
         // 对公对私标识
         dto.put("card_acct_type", "P");
-        // 证件类型
-        dto.put("certificate_type", "01");
-        // 手机号
-        dto.put("mobile_no", "oO6XYz…………Is3nZb/5dFj860Z+nQ==");
-        // 证件号
-        dto.put("certify_no", "yL09mhS5…………WK04Kdfyg==");
         // 支行名
         dto.put("subbranch_bank_name", "中国农业银行股份有限公司上海联洋支行");
-        // 付款方三证合一码
-        dto.put("bank_acct_three_in_one", "92650109MA79R8E308");
 
         return dto.toJSONString();
     }
@@ -126,6 +114,26 @@ public class V2TradeOnlinepaymentTransferBankmistakeApplyRequestDemo extends Bas
         // dto.put("acct_infos", getAcctInfos());
 
         return dto;
+    }
+
+    private static String getActualRemitData() {
+        JSONObject dto = new JSONObject();
+        // 实际打款日期
+        // dto.put("actual_remit_date", "test");
+        // 实际打款方姓名
+        // dto.put("actual_remit_name", "test");
+        // 实际打款金额
+        // dto.put("actual_remit_amt", "test");
+        // 实际打款方银行卡号
+        // dto.put("actual_remit_card_no", "test");
+        // 实际打款卡号银行名称
+        // dto.put("actual_bank_name", "test");
+        // 汇款凭证文件ID
+        // dto.put("certificate_file_id", "test");
+        // 退款卡标识
+        // dto.put("refund_card_flag", "test");
+
+        return dto.toJSONString();
     }
 
 }

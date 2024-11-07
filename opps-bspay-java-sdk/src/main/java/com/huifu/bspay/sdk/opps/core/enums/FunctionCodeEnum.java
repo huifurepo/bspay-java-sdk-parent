@@ -6,6 +6,34 @@ package com.huifu.bspay.sdk.opps.core.enums;
  */
 public enum FunctionCodeEnum {
     /**
+     * 分期支付
+     */
+    V2_TRADE_INSTALLMENT_PAYMENT("v2.trade.installment.payment", "分期支付"),
+    /**
+     * 快捷支付
+     */
+    V3_TRADE_ONLINEPAYMENT_QUICKPAY_PAY("v3.trade.onlinepayment.quickpay.pay", "快捷支付"),
+    /**
+     * 快捷短信发送
+     */
+    V3_TRADE_ONLINEPAYMENT_QUICKPAY_SMSSEND("v3.trade.onlinepayment.quickpay.smssend", "快捷短信发送"),
+    /**
+     * 电子账户余额查询
+     */
+    V2_BANK_BALANCE_QUERY("v2.bank.balance.query", "电子账户余额查询"),
+    /**
+     * 不明来账列表查询
+     */
+    V2_TRADE_PAYMENT_ZXE_UNKNOWNINCOME_QUERY("v2.trade.payment.zxe.unknownincome.query", "不明来账列表查询"),
+    /**
+     * 不明来账处理结果查询
+     */
+    V2_TRADE_PAYMENT_ZXE_UNKNOWNINCOME_DISPOSEQUERY("v2.trade.payment.zxe.unknownincome.disposequery", "不明来账处理结果查询"),
+    /**
+     * 不明来账处理
+     */
+    V2_TRADE_PAYMENT_ZXE_UNKNOWNINCOME_DISPOSE("v2.trade.payment.zxe.unknownincome.dispose", "不明来账处理"),
+    /**
      * 服务单关闭
      */
     V2_TRADE_PAYAFTERUSE_CREDITBIZORDER_CLOSE("v2.trade.payafteruse.creditbizorder.close", "服务单关闭"),
@@ -150,9 +178,9 @@ public enum FunctionCodeEnum {
      */
     V2_TRADE_CLOUDMIS_ORDER_DETAIL("v2.trade.cloudmis.order.detail", "云MIS订单详情查询接口"),
     /**
-     * 终端云MIS接入
+     * 终端云MIS交易
      */
-    V2_TRADE_CLOUDMIS_DEVICE_INFORMATION_MIS("v2.trade.cloudmis.device.information.mis", "终端云MIS接入"),
+    V2_TRADE_CLOUDMIS_DEVICE_INFORMATION_MIS("v2.trade.cloudmis.device.information.mis", "终端云MIS交易"),
     /**
      * 上传短信验证码
      */
@@ -267,9 +295,9 @@ public enum FunctionCodeEnum {
      */
     V2_INVOICE_SELFSCANOPEN("v2.invoice.selfscanopen", "自助扫码开票"),
     /**
-     * 发票开具申请查询
+     * 发票开具状态查询
      */
-    V2_INVOICE_QUERYAPPLY("v2.invoice.queryapply", "发票开具申请查询"),
+    V2_INVOICE_QUERYAPPLY("v2.invoice.queryapply", "发票开具状态查询"),
     /**
      * 发票开具
      */

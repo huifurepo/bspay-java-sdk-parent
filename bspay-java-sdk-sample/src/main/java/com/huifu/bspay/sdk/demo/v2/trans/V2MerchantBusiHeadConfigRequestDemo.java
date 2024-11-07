@@ -161,7 +161,7 @@ public class V2MerchantBusiHeadConfigRequestDemo extends BaseCommonDemo {
         // 借记卡手续费（%）
         // dto.put("debit_fee_rate", "test");
         // 贷记卡手续费（%）
-        // dto.put("credit_fee_limit", "test");
+        // dto.put("credit_fee_rate&lt;!--任雪梅发现要改正--&gt;", "test");
         // 允许开通银行卡业务
         // dto.put("open_flag", "test");
         // 借记卡封顶值

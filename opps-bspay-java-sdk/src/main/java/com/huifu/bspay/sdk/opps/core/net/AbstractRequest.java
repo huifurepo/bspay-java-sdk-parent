@@ -21,7 +21,7 @@ import java.util.*;
  */
 public abstract class AbstractRequest {
 
-    public static final String SDK_VERSION = "3.0.18";
+    public static final String SDK_VERSION = "3.0.19";
 
     protected static enum RequestMethod {
         GET, POST, DELETE, PUT;
@@ -61,7 +61,7 @@ public abstract class AbstractRequest {
         if (ServerTypeEnum.PAGE.equals(serverType)) {
             baseUrl = getUrl();
         }
-        //临时指定baseUrl
+        //指定baseUrl
         if(params!=null &&params.get("base_url")!=null){
             baseUrl= (String)params.get("base_url");
             params.remove("base_url");

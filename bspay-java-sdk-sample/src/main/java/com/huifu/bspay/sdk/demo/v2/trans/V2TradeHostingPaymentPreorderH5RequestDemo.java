@@ -73,6 +73,12 @@ public class V2TradeHostingPaymentPreorderH5RequestDemo extends BaseCommonDemo {
         // extendInfoMap.put("usage_type", "");
         // 交易类型
         // extendInfoMap.put("trans_type", "");
+        // 微信参数集合
+        // extendInfoMap.put("wx_data", getWxData());
+        // 支付宝参数集合
+        // extendInfoMap.put("alipay_data", getAlipayData());
+        // 银联参数集合
+        // extendInfoMap.put("unionpay_data", getUnionpayData());
         return extendInfoMap;
     }
 
@@ -156,6 +162,182 @@ public class V2TradeHostingPaymentPreorderH5RequestDemo extends BaseCommonDemo {
         dto.put("payer_check_wx", getPayerCheckWx());
         // 个人付款人信息
         dto.put("person_payer", getPersonPayer());
+
+        return dto.toJSONString();
+    }
+
+    private static JSON getGoodsDetailWxRucan() {
+        JSONObject dto = new JSONObject();
+        // 商品编码
+        // dto.put("goods_id", "");
+        // 商品名称
+        // dto.put("goods_name", "");
+        // 商品单价(元)
+        // dto.put("price", "");
+        // 商品数量
+        // dto.put("quantity", "");
+        // 微信侧商品编码
+        // dto.put("wxpay_goods_id", "");
+
+        JSONArray dtoList = new JSONArray();
+        dtoList.add(dto);
+        return dtoList;
+    }
+
+    private static JSON getDetail() {
+        JSONObject dto = new JSONObject();
+        // 单品列表
+        // dto.put("goods_detail", getGoodsDetailWxRucan());
+        // 订单原价(元)
+        // dto.put("cost_price", "");
+        // 商品小票ID
+        // dto.put("receipt_id", "");
+
+        return dto;
+    }
+
+    private static JSON getStoreInfo() {
+        JSONObject dto = new JSONObject();
+        // 门店id
+        // dto.put("id", "");
+        // 门店名称
+        // dto.put("name", "");
+        // 门店行政区划码
+        // dto.put("area_code", "");
+        // 门店详细地址
+        // dto.put("address", "");
+
+        return dto;
+    }
+
+    private static JSON getSceneInfo() {
+        JSONObject dto = new JSONObject();
+        // 门店信息
+        // dto.put("store_info", getStoreInfo());
+
+        return dto;
+    }
+
+    private static String getWxData() {
+        JSONObject dto = new JSONObject();
+        // 附加数据
+        // dto.put("attach", "");
+        // 商品详情
+        // dto.put("detail", getDetail());
+        // 订单优惠标记
+        // dto.put("goods_tag", "");
+        // 开发票入口开放标识
+        // dto.put("receipt", "");
+        // 场景信息
+        // dto.put("scene_info", getSceneInfo());
+        // 单品优惠标识
+        // dto.put("promotion_flag", "");
+        // 新增商品ID
+        // dto.put("product_id", "");
+
+        return dto.toJSONString();
+    }
+
+    private static JSON getExtendParams() {
+        JSONObject dto = new JSONObject();
+        // 卡类型
+        // dto.put("card_type", "");
+        // 支付宝点餐场景类型
+        // dto.put("food_order_type", "");
+        // 花呗分期数
+        // dto.put("hb_fq_num", "");
+        // 花呗卖家手续费百分比
+        // dto.put("hb_fq_seller_percent", "");
+        // 行业数据回流信息
+        // dto.put("industry_reflux_info", "");
+        // 信用卡分期资产方式
+        // dto.put("fq_channels", "");
+        // 停车场id
+        // dto.put("parking_id", "");
+        // 系统商编号
+        // dto.put("sys_service_provider_id", "");
+
+        return dto;
+    }
+
+    private static JSON getGoodsDetail() {
+        JSONObject dto = new JSONObject();
+        // 商品编码
+        // dto.put("goods_id", "test");
+        // 商品优惠金额
+        // dto.put("discount_amount", "test");
+        // 商品数量
+        // dto.put("quantity", "test");
+        // 商品价格
+        // dto.put("price", "test");
+        // 商品备注
+        // dto.put("goods_remark", "");
+
+        JSONArray dtoList = new JSONArray();
+        dtoList.add(dto);
+        return dtoList;
+    }
+
+    private static String getAlipayData() {
+        JSONObject dto = new JSONObject();
+        // 支付宝的店铺编号
+        // dto.put("alipay_store_id", "");
+        // 业务扩展参数
+        // dto.put("extend_params", getExtendParams());
+        // 订单包含的商品列表信息
+        // dto.put("goods_detail", getGoodsDetail());
+        // 商户原始订单号
+        // dto.put("merchant_order_no", "");
+        // 商户操作员编号
+        // dto.put("operator_id", "");
+        // 销售产品码
+        // dto.put("product_code", "");
+        // 卖家支付宝用户号
+        // dto.put("seller_id", "");
+        // 商户门店编号
+        // dto.put("store_id", "");
+        // 订单标题
+        // dto.put("subject", "");
+        // 商家门店名称
+        // dto.put("store_name", "");
+        // 商户业务信息
+        // dto.put("ali_business_params", "");
+
+        return dto.toJSONString();
+    }
+
+    private static JSON getPayeeInfo() {
+        JSONObject dto = new JSONObject();
+        // 商户类别
+        // dto.put("mer_cat_code", "");
+        // 二级商户代码
+        // dto.put("sub_id", "");
+        // 二级商户名称
+        // dto.put("sub_name", "");
+        // 终端号
+        // dto.put("term_id", "");
+
+        return dto;
+    }
+
+    private static String getUnionpayData() {
+        JSONObject dto = new JSONObject();
+        // 收款方附加数据
+        // dto.put("addn_data", "");
+        // 地区信息
+        // dto.put("area_info", "");
+        // 前台通知地址
+        // dto.put("front_url", "");
+        // 收款方附言
+        // dto.put("payee_comments", "");
+        // 收款方信息
+        // dto.put("payee_info", getPayeeInfo());
+        // 银联分配的服务商机构标识码
+        // dto.put("pnr_ins_id_cd", "");
+        // 请求方自定义域
+        // dto.put("req_reserved", "");
+        // 终端信息
+        // dto.put("term_info", "");
 
         return dto.toJSONString();
     }

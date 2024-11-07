@@ -135,7 +135,7 @@ public class V2TradePaymentJspayRequestDemo extends BaseCommonDemo {
         // 门店行政区划码
         // dto.put("area_code", "");
         // 门店详细地址
-        // dto.put("ass", "");
+        // dto.put("address", "");
 
         return dto;
     }
@@ -252,6 +252,8 @@ public class V2TradePaymentJspayRequestDemo extends BaseCommonDemo {
         JSONObject dto = new JSONObject();
         // 买家的支付宝唯一用户号
         dto.put("buyer_id", "2088702699908257");
+        // 优惠明细参数
+        // dto.put("ali_promo_params", "test");
         // 支付宝的店铺编号
         dto.put("alipay_store_id", "");
         // 买家支付宝账号
@@ -280,6 +282,8 @@ public class V2TradePaymentJspayRequestDemo extends BaseCommonDemo {
         // dto.put("op_app_id", "");
         // 商户业务信息
         // dto.put("ali_business_params", "");
+        // 订单描述
+        // dto.put("body", "");
 
         return dto.toJSONString();
     }

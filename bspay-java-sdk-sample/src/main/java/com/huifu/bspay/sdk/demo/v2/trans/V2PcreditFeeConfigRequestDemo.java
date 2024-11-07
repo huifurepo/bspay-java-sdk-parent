@@ -170,14 +170,14 @@ public class V2PcreditFeeConfigRequestDemo extends BaseCommonDemo {
         // dto.put("huifu_id", "test");
         // 签约人类型
         // dto.put("sign_user_type", "test");
-        // 签约人姓名
-        // dto.put("name", "test");
         // 签约人手机号
         // dto.put("mobile_no", "test");
-        // 签约人身份证号
-        // dto.put("cert_no", "test");
         // 京东白条费率数据
         // dto.put("jdbt_fee_data", getJdbtFeeData());
+        // 签约人姓名
+        // dto.put("name", "");
+        // 签约人身份证号
+        // dto.put("cert_no", "");
 
         return dto.toJSONString();
     }

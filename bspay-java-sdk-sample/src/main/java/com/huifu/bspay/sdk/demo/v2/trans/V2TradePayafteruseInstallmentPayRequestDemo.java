@@ -63,8 +63,6 @@ public class V2TradePayafteruseInstallmentPayRequestDemo extends BaseCommonDemo 
         extendInfoMap.put("acct_id", "C02682415");
         // 交易备注
         extendInfoMap.put("remark", "");
-        // 交易有效期
-        extendInfoMap.put("time_expire", "");
         // 是否延迟交易
         // extendInfoMap.put("delay_acct_flag", "");
         // 分账串

@@ -67,6 +67,8 @@ public class V2TradeOnlinepaymentRefundRequestDemo extends BaseCommonDemo {
         // extendInfoMap.put("remark", "");
         // 异步通知地址
         extendInfoMap.put("notify_url", "http://www.baidu.com");
+        // 大额转账支付账户信息数据
+        // extendInfoMap.put("bank_info_data", getBankInfoData());
         return extendInfoMap;
     }
 
@@ -124,6 +126,22 @@ public class V2TradeOnlinepaymentRefundRequestDemo extends BaseCommonDemo {
         // dto.put("base_station", "test");
         // ip地址
         dto.put("ip_addr", "172.1.1.1");
+
+        return dto.toJSONString();
+    }
+
+    private static String getBankInfoData() {
+        JSONObject dto = new JSONObject();
+        // 付款方账户类型
+        // dto.put("card_acct_type", "test");
+        // 省份
+        // dto.put("province", "");
+        // 地区
+        // dto.put("area", "");
+        // 银行编号
+        // dto.put("bank_code", "");
+        // 联行号
+        // dto.put("correspondent_code", "");
 
         return dto.toJSONString();
     }

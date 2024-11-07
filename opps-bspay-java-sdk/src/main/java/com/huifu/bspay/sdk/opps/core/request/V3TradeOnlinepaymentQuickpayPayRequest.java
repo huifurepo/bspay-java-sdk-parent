@@ -4,12 +4,12 @@ import com.alibaba.fastjson.annotation.JSONField;
 import com.huifu.bspay.sdk.opps.core.enums.FunctionCodeEnum;
 
 /**
- * 发票开具状态查询
+ * 快捷支付
  *
  * @author sdk-generator
  * @Description
  */
-public class V2InvoiceQueryapplyRequest extends BaseRequest {
+public class V3TradeOnlinepaymentQuickpayPayRequest extends BaseRequest {
 
     /**
      * 请求流水号
@@ -17,28 +17,34 @@ public class V2InvoiceQueryapplyRequest extends BaseRequest {
     @JSONField(name = "req_seq_id")
     private String reqSeqId;
     /**
-     * 请求时间
+     * 请求日期
      */
     @JSONField(name = "req_date")
     private String reqDate;
     /**
-     * 汇付商户号
+     * 商户号
      */
     @JSONField(name = "huifu_id")
     private String huifuId;
+    /**
+     * 短信验证码
+     */
+    @JSONField(name = "sms_code")
+    private String smsCode;
 
     @Override
     public FunctionCodeEnum getFunctionCode() {
-        return FunctionCodeEnum.V2_INVOICE_QUERYAPPLY;
+        return FunctionCodeEnum.V3_TRADE_ONLINEPAYMENT_QUICKPAY_PAY;
     }
 
-    public V2InvoiceQueryapplyRequest() {
+    public V3TradeOnlinepaymentQuickpayPayRequest() {
     }
 
-    public V2InvoiceQueryapplyRequest(String reqSeqId, String reqDate, String huifuId) {
+    public V3TradeOnlinepaymentQuickpayPayRequest(String reqSeqId, String reqDate, String huifuId, String smsCode) {
         this.reqSeqId = reqSeqId;
         this.reqDate = reqDate;
         this.huifuId = huifuId;
+        this.smsCode = smsCode;
     }
 
     public String getReqSeqId() {
@@ -63,6 +69,14 @@ public class V2InvoiceQueryapplyRequest extends BaseRequest {
 
     public void setHuifuId(String huifuId) {
         this.huifuId = huifuId;
+    }
+
+    public String getSmsCode() {
+        return smsCode;
+    }
+
+    public void setSmsCode(String smsCode) {
+        this.smsCode = smsCode;
     }
 
 }

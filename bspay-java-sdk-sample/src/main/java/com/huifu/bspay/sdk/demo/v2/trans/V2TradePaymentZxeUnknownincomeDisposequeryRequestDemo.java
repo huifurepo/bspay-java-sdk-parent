@@ -8,16 +8,16 @@ import com.huifu.bspay.sdk.demo.init.OppsMerchantConfigDemo;
 import com.huifu.bspay.sdk.opps.core.utils.DateTools;
 import com.huifu.bspay.sdk.opps.core.utils.SequenceTools;
 import com.huifu.bspay.sdk.demo.core.Identify;
-import com.huifu.bspay.sdk.opps.core.request.V2InvoiceQueryapplyRequest;
+import com.huifu.bspay.sdk.opps.core.request.V2TradePaymentZxeUnknownincomeDisposequeryRequest;
 
 /**
- * 发票开具状态查询 - 示例
+ * 不明来账处理结果查询 - 示例
  *
  * @author sdk-generator
  * @Description
  */
-@Identify(requestClass = V2InvoiceQueryapplyRequest.class)
-public class V2InvoiceQueryapplyRequestDemo extends BaseCommonDemo {
+@Identify(requestClass = V2TradePaymentZxeUnknownincomeDisposequeryRequest.class)
+public class V2TradePaymentZxeUnknownincomeDisposequeryRequestDemo extends BaseCommonDemo {
 
     public static void main(String[] args) throws Exception {
 
@@ -25,13 +25,9 @@ public class V2InvoiceQueryapplyRequestDemo extends BaseCommonDemo {
         doInit(OppsMerchantConfigDemo.getMerchantConfig());
 
         // 2.组装请求参数
-        V2InvoiceQueryapplyRequest request = new V2InvoiceQueryapplyRequest();
-        // 请求流水号
-        request.setReqSeqId(SequenceTools.getReqSeqId32());
-        // 请求时间
-        request.setReqDate(DateTools.getCurrentDateYYYYMMDD());
-        // 汇付商户号
-        request.setHuifuId("6666000103675282");
+        V2TradePaymentZxeUnknownincomeDisposequeryRequest request = new V2TradePaymentZxeUnknownincomeDisposequeryRequest();
+        // 商户号
+        request.setHuifuId("6666000109133323");
 
         // 设置非必填字段
         Map<String, Object> extendInfoMap = getExtendInfos();
@@ -49,8 +45,12 @@ public class V2InvoiceQueryapplyRequestDemo extends BaseCommonDemo {
     private static Map<String, Object> getExtendInfos() {
         // 设置非必填字段
         Map<String, Object> extendInfoMap = new HashMap<>();
-        // 开票系统流水号
-        // extendInfoMap.put("seq_id", "");
+        // 原请求流水号
+        extendInfoMap.put("org_req_seq_id", "20240925test100001");
+        // 原请求日期
+        extendInfoMap.put("org_req_date", "20240925");
+        // 原全局流水号
+        extendInfoMap.put("org_hf_seq_id", "");
         return extendInfoMap;
     }
 

@@ -75,8 +75,6 @@ public class V2TradeOnlinepaymentTransferAccountRequestDemo extends BaseCommonDe
         // extendInfoMap.put("bank_mode", "");
         // 延时标记
         // extendInfoMap.put("delay_acct_flag", "");
-        // 分账对象
-        // extendInfoMap.put("acct_split_bunch", getAcctSplitBunch());
         // 订单模式
         // extendInfoMap.put("order_mode", "");
         // 原汇款订单号
@@ -86,26 +84,6 @@ public class V2TradeOnlinepaymentTransferAccountRequestDemo extends BaseCommonDe
         // 订单失效时间
         // extendInfoMap.put("time_expire", "");
         return extendInfoMap;
-    }
-
-    private static JSON getAcctInfos() {
-        JSONObject dto = new JSONObject();
-        // 支付金额
-        // dto.put("div_amt", "");
-        // 商户号
-        // dto.put("huifu_id", "");
-
-        JSONArray dtoList = new JSONArray();
-        dtoList.add(dto);
-        return dtoList;
-    }
-
-    private static JSON getAcctSplitBunch() {
-        JSONObject dto = new JSONObject();
-        // 分账信息列表
-        // dto.put("acct_infos", getAcctInfos());
-
-        return dto;
     }
 
 }

@@ -69,6 +69,8 @@ public class V2TradeHostingPaymentPreorderWxRequestDemo extends BaseCommonDemo {
         // extendInfoMap.put("biz_info", getBizInfo());
         // 交易异步通知地址
         extendInfoMap.put("notify_url", "https://callback.service.com/xx");
+        // 微信参数集合
+        // extendInfoMap.put("wx_data", getWxData());
         return extendInfoMap;
     }
 
@@ -132,6 +134,92 @@ public class V2TradeHostingPaymentPreorderWxRequestDemo extends BaseCommonDemo {
         // dto.put("payer_check_wx", getPayCheckWx());
         // 个人付款人信息
         // dto.put("person_payer", getPersonPayer());
+
+        return dto.toJSONString();
+    }
+
+    private static JSON getGoodsDetailWxRucan() {
+        JSONObject dto = new JSONObject();
+        // 商品编码
+        // dto.put("goods_id", "");
+        // 商品名称
+        // dto.put("goods_name", "");
+        // 商品单价(元)
+        // dto.put("price", "");
+        // 商品数量
+        // dto.put("quantity", "");
+        // 微信侧商品编码
+        // dto.put("wxpay_goods_id", "");
+
+        JSONArray dtoList = new JSONArray();
+        dtoList.add(dto);
+        return dtoList;
+    }
+
+    private static JSON getDetail() {
+        JSONObject dto = new JSONObject();
+        // 单品列表
+        // dto.put("goods_detail", getGoodsDetailWxRucan());
+        // 订单原价(元)
+        // dto.put("cost_price", "");
+        // 商品小票ID
+        // dto.put("receipt_id", "");
+
+        return dto;
+    }
+
+    private static JSON getStoreInfo() {
+        JSONObject dto = new JSONObject();
+        // 门店id
+        // dto.put("id", "");
+        // 门店名称
+        // dto.put("name", "");
+        // 门店行政区划码
+        // dto.put("area_code", "");
+        // 门店详细地址
+        // dto.put("address", "");
+
+        return dto;
+    }
+
+    private static JSON getSceneInfo() {
+        JSONObject dto = new JSONObject();
+        // 门店信息
+        // dto.put("store_info", getStoreInfo());
+
+        return dto;
+    }
+
+    private static String getWxData() {
+        JSONObject dto = new JSONObject();
+        // 子商户应用ID
+        // dto.put("sub_appid", "");
+        // 子商户用户标识
+        // dto.put("sub_openid", "");
+        // 附加数据
+        // dto.put("attach", "");
+        // 商品描述
+        // dto.put("body", "");
+        // 商品详情
+        // dto.put("detail", getDetail());
+        // 设备号
+        // dto.put("device_info", "");
+        // 订单优惠标记
+        // dto.put("goods_tag", "");
+        // 实名支付
+        // dto.put("identity", "");
+        // 开发票入口开放标识
+        // dto.put("receipt", "");
+        // 场景信息
+        // dto.put("scene_info", getSceneInfo());
+        // 终端ip
+        // dto.put("spbill_create_ip", "");
+        // 单品优惠标识
+        // dto.put("promotion_flag", "");
+        // 新增商品ID
+        // dto.put("product_id", "");
+        // 指定支付者
+        // dto.put("limit_payer", "");
 
         return dto.toJSONString();
     }

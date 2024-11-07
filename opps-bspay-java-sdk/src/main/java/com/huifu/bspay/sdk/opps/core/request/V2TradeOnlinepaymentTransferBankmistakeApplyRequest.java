@@ -47,26 +47,6 @@ public class V2TradeOnlinepaymentTransferBankmistakeApplyRequest extends BaseReq
     @JSONField(name = "org_req_date")
     private String orgReqDate;
     /**
-     * 实际打款日期
-     */
-    @JSONField(name = "remit_date")
-    private String remitDate;
-    /**
-     * 实际付款方姓名
-     */
-    @JSONField(name = "certificate_name")
-    private String certificateName;
-    /**
-     * 实际付款方银行卡号
-     */
-    @JSONField(name = "bank_card_no")
-    private String bankCardNo;
-    /**
-     * 实际付款方银行名称
-     */
-    @JSONField(name = "bank_name")
-    private String bankName;
-    /**
      * 异步通知地址
      */
     @JSONField(name = "notify_url")
@@ -90,7 +70,7 @@ public class V2TradeOnlinepaymentTransferBankmistakeApplyRequest extends BaseReq
     public V2TradeOnlinepaymentTransferBankmistakeApplyRequest() {
     }
 
-    public V2TradeOnlinepaymentTransferBankmistakeApplyRequest(String reqSeqId, String reqDate, String huifuId, String transAmt, String orderType, String orgReqSeqId, String orgReqDate, String remitDate, String certificateName, String bankCardNo, String bankName, String notifyUrl, String goodsDesc, String certificateFileId) {
+    public V2TradeOnlinepaymentTransferBankmistakeApplyRequest(String reqSeqId, String reqDate, String huifuId, String transAmt, String orderType, String orgReqSeqId, String orgReqDate, String notifyUrl, String goodsDesc, String certificateFileId) {
         this.reqSeqId = reqSeqId;
         this.reqDate = reqDate;
         this.huifuId = huifuId;
@@ -98,10 +78,6 @@ public class V2TradeOnlinepaymentTransferBankmistakeApplyRequest extends BaseReq
         this.orderType = orderType;
         this.orgReqSeqId = orgReqSeqId;
         this.orgReqDate = orgReqDate;
-        this.remitDate = remitDate;
-        this.certificateName = certificateName;
-        this.bankCardNo = bankCardNo;
-        this.bankName = bankName;
         this.notifyUrl = notifyUrl;
         this.goodsDesc = goodsDesc;
         this.certificateFileId = certificateFileId;
@@ -161,38 +137,6 @@ public class V2TradeOnlinepaymentTransferBankmistakeApplyRequest extends BaseReq
 
     public void setOrgReqDate(String orgReqDate) {
         this.orgReqDate = orgReqDate;
-    }
-
-    public String getRemitDate() {
-        return remitDate;
-    }
-
-    public void setRemitDate(String remitDate) {
-        this.remitDate = remitDate;
-    }
-
-    public String getCertificateName() {
-        return certificateName;
-    }
-
-    public void setCertificateName(String certificateName) {
-        this.certificateName = certificateName;
-    }
-
-    public String getBankCardNo() {
-        return bankCardNo;
-    }
-
-    public void setBankCardNo(String bankCardNo) {
-        this.bankCardNo = bankCardNo;
-    }
-
-    public String getBankName() {
-        return bankName;
-    }
-
-    public void setBankName(String bankName) {
-        this.bankName = bankName;
     }
 
     public String getNotifyUrl() {

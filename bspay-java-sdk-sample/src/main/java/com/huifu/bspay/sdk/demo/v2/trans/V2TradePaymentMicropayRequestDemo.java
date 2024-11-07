@@ -260,6 +260,8 @@ public class V2TradePaymentMicropayRequestDemo extends BaseCommonDemo {
 
     private static String getAlipayData() {
         JSONObject dto = new JSONObject();
+        // 优惠明细参数
+        // dto.put("ali_promo_params", "test");
         // 支付宝的店铺编号
         // dto.put("alipay_store_id", "");
         // 订单包含的商品列表信息
@@ -274,6 +276,8 @@ public class V2TradePaymentMicropayRequestDemo extends BaseCommonDemo {
         // dto.put("ext_user_info", getExtUserInfo());
         // 商户业务信息
         // dto.put("ali_business_params", "");
+        // 订单描述
+        // dto.put("body", "");
 
         return dto.toJSONString();
     }
@@ -301,13 +305,13 @@ public class V2TradePaymentMicropayRequestDemo extends BaseCommonDemo {
     private static String getRiskCheckData() {
         JSONObject dto = new JSONObject();
         // ip地址
-        // dto.put("ip_addr", "");
+        dto.put("ip_addr", "180.167.105.130");
         // 基站地址
-        dto.put("base_station", "3");
+        dto.put("base_station", "192.168.1.1");
         // 纬度
-        dto.put("latitude", "2");
+        dto.put("latitude", "33.3");
         // 经度
-        dto.put("longitude", "1");
+        dto.put("longitude", "33.3");
 
         return dto.toJSONString();
     }

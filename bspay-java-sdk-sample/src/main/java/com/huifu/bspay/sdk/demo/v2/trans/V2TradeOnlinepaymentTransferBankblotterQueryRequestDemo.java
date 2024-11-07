@@ -53,6 +53,16 @@ public class V2TradeOnlinepaymentTransferBankblotterQueryRequestDemo extends Bas
     private static Map<String, Object> getExtendInfos() {
         // 设置非必填字段
         Map<String, Object> extendInfoMap = new HashMap<>();
+        // 实际付款方银行卡号
+        // extendInfoMap.put("bank_card_no", "");
+        // 实际付款方姓名
+        extendInfoMap.put("certificate_name", "沈显龙");
+        // 实际付款日期
+        // extendInfoMap.put("trans_date", "");
+        // 交易金额
+        // extendInfoMap.put("trans_amt", "");
+        // 收款账号/打款备注
+        // extendInfoMap.put("bank_remark", "");
         return extendInfoMap;
     }
 

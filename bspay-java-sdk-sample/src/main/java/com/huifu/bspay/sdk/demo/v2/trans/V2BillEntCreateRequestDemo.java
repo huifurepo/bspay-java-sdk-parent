@@ -64,7 +64,7 @@ public class V2BillEntCreateRequestDemo extends BaseCommonDemo {
         // 账单说明
         extendInfoMap.put("bill_remark", "您本次 SaaS 服务周期为[开始日期]至[结束日期]。费用包括基础服务套餐[X]元，高级功能模块[X]元，总计[X]元。");
         // 汇总信息
-        // extendInfoMap.put("bill_summary_info", "");
+        // extendInfoMap.put("bill_summary_info", getBillSummaryInfo());
         // 更多信息
         // extendInfoMap.put("bill_extend_info", getBillExtendInfo());
         // 账单推送方式
@@ -78,6 +78,16 @@ public class V2BillEntCreateRequestDemo extends BaseCommonDemo {
         // 回调地址
         extendInfoMap.put("front_url", "https://spin-test.cloudpnr.com/trade/billing/pcredit/status");
         return extendInfoMap;
+    }
+
+    private static String getBillSummaryInfo() {
+        JSONObject dto = new JSONObject();
+        // 字段名
+        // dto.put("extend_name", "test");
+        // 字段值
+        // dto.put("extend_value", "test");
+
+        return dto.toJSONString();
     }
 
     private static String getBillExtendInfo() {
