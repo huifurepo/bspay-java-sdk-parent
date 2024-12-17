@@ -6,6 +6,10 @@ package com.huifu.bspay.sdk.opps.core.enums;
  */
 public enum FunctionCodeEnum {
     /**
+     * 交易确认查询接口
+     */
+    V3_TRADE_PAYMENT_DELAYTRANS_CONFIRMQUERY("v3.trade.payment.delaytrans.confirmquery", "交易确认查询接口"),
+    /**
      * 分期支付
      */
     V2_TRADE_INSTALLMENT_PAYMENT("v2.trade.installment.payment", "分期支付"),
