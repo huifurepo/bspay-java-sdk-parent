@@ -25,4 +25,17 @@ public class DemoTestConstants {
      * 汇付公钥，用于对汇付返回报文进行签名验证
      */
     public static final String DEMO_RSA_PUBLIC_KEY = "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAkMX8p3GyMw3gk6x72h20NOk3L9+Nn9mOVP6+YoBwCe7Zs4QmYrA/etFRZw2TQrSc51wgtCkJi1/x8Wl7maPL1uH2+77JFlPv7H/F4Lr2I2LXgnllg6PtwOSw/qvGYInVVB4kL85VQl0/8ObyxBUdJ43I0z/u8hJb2gwujSudOGizbeqQXAYrwcNy+e+cjodpPy9unpJjBfa4Wz2eVLLvUYYKZKdRn6pZR2cQsMBvL30K4cFlZqlJ9iP2hTG3gaiZJ9JrjTigwki0g9pbTDXiPACfuF1nOeObvLD22zBbgn1kwgfsqoG67z7g84u2jvfUFCzX1JRgd0xfNorTRkS2RQIDAQAB";
+
+    /**
+     * 自定义的连接超时时间
+     */
+    public static final String CUSTOM_CONNECT_TIMEOUT = "20000";
+    /**
+     * 自定义的连接请求超时时间
+     */
+    public static final String CUSTOM_CONNECTION_REQUEST_TIMEOUT = "20000";
+    /**
+     * 自定义的请求超时时间
+     */
+    public static final String CUSTOM_SOCKET_TIMEOUT = "20000";
 }

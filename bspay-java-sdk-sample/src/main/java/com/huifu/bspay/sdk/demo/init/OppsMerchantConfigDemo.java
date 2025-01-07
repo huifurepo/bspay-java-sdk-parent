@@ -41,6 +41,10 @@ public class OppsMerchantConfigDemo {
         merConfig.setSysId(DemoTestConstants.DEMO_SYS_ID);
         merConfig.setRsaPrivateKey(DemoTestConstants.DEMO_RSA_PRIVATE_KEY);
         merConfig.setRsaPublicKey(DemoTestConstants.DEMO_RSA_PUBLIC_KEY);
+        //自定义超时时间
+        merConfig.setCustomSocketTimeout(DemoTestConstants.CUSTOM_SOCKET_TIMEOUT);
+        merConfig.setCustomConnectTimeout(DemoTestConstants.CUSTOM_CONNECT_TIMEOUT);
+        merConfig.setCustomConnectionRequestTimeout(DemoTestConstants.CUSTOM_CONNECTION_REQUEST_TIMEOUT);
         return merConfig;
     }
 }

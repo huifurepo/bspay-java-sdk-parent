@@ -6,8 +6,10 @@ package com.huifu.bspay.sdk.opps.core.utils;
 
 import com.alibaba.fastjson.JSON;
 import com.huifu.bspay.sdk.opps.core.BasePay;
+import com.huifu.bspay.sdk.opps.core.config.MerConfig;
 import com.huifu.bspay.sdk.opps.core.exception.BasePayException;
 import com.huifu.bspay.sdk.opps.core.exception.FailureCode;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.http.*;
 import org.apache.http.client.HttpRequestRetryHandler;
 import org.apache.http.client.config.RequestConfig;
@@ -20,6 +22,7 @@ import org.apache.http.client.protocol.HttpClientContext;
 import org.apache.http.client.utils.URIBuilder;
 import org.apache.http.config.Registry;
 import org.apache.http.config.RegistryBuilder;
+import org.apache.http.conn.ConnectTimeoutException;
 import org.apache.http.conn.routing.HttpRoute;
 import org.apache.http.conn.socket.ConnectionSocketFactory;
 import org.apache.http.conn.socket.LayeredConnectionSocketFactory;
@@ -40,6 +43,8 @@ import org.apache.http.util.EntityUtils;
 
 import javax.net.ssl.*;
 import java.io.*;
+import java.net.ConnectException;
+import java.net.SocketTimeoutException;
 import java.net.URISyntaxException;
 import java.net.URL;
 import java.net.UnknownHostException;
@@ -50,6 +55,7 @@ import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.ScheduledThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
@@ -361,6 +367,15 @@ public class HttpClientUtils {
                 httpClient = getHttpClient(url);
             } else {
                 httpClient = HttpClients.createDefault();
+
+                MerConfig merConfig= BasePay.getConfig("default");
+
+                RequestConfig requestConfig = RequestConfig.custom()
+                        .setConnectTimeout(Integer.parseInt(Optional.ofNullable(merConfig).map(MerConfig::getCustomConnectTimeout).orElse("30000")))
+                        .setSocketTimeout(Integer.parseInt(Optional.ofNullable(merConfig).map(MerConfig::getCustomSocketTimeout).orElse("30000")))
+                        .setConnectionRequestTimeout(Integer.parseInt(Optional.ofNullable(merConfig).map(MerConfig::getCustomConnectionRequestTimeout).orElse("30000")))
+                        .build();
+                httpRequest.setConfig(requestConfig);
             }
 
             response = httpClient.execute(httpRequest);
@@ -383,6 +398,14 @@ public class HttpClientUtils {
                 sb.append(response.getEntity() == null ? "" : EntityUtils.toString(response.getEntity(), "UTF-8"));
             }
             return sb.toString();
+        } catch (ConnectTimeoutException | SocketTimeoutException e) {
+            if (BasePay.debug) {
+                e.printStackTrace();
+            }
+            if (e instanceof SocketTimeoutException) {
+                throw new BasePayException(FailureCode.SOCKET_TIME_EXCEPTION.getFailureCode(), "post request  fail, socket timeout exception.");
+            }
+            throw new BasePayException(FailureCode.CONNECT_EXCEPTION.getFailureCode(), "post request fail, connection timeout.");
         } catch (UnsupportedOperationException | ParseException | IOException e) {
             if (BasePay.debug) {
                 e.printStackTrace();

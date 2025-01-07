@@ -34,6 +34,47 @@ public class MerConfig {
     @JSONField(name = "sys_id")
     private String sysId;
 
+    /**
+     * 自定义连接超时时间
+     */
+    @JSONField(name = "custom_connect_timeout")
+    private String customConnectTimeout;
+    /**
+     * 自定义连接请求超时时间
+     */
+    @JSONField(name = "custom_connection_request_timeout")
+    private String customConnectionRequestTimeout;
+
+    /**
+     * 自定义请求超时时间
+     */
+    @JSONField(name = "custom_socket_timeout")
+    private String customSocketTimeout;
+
+    public String getCustomConnectTimeout() {
+        return customConnectTimeout;
+    }
+
+    public void setCustomConnectTimeout(String customConnectTimeout) {
+        this.customConnectTimeout = customConnectTimeout;
+    }
+
+    public String getCustomConnectionRequestTimeout() {
+        return customConnectionRequestTimeout;
+    }
+
+    public void setCustomConnectionRequestTimeout(String customConnectionRequestTimeout) {
+        this.customConnectionRequestTimeout = customConnectionRequestTimeout;
+    }
+
+    public String getCustomSocketTimeout() {
+        return customSocketTimeout;
+    }
+
+    public void setCustomSocketTimeout(String customSocketTimeout) {
+        this.customSocketTimeout = customSocketTimeout;
+    }
+
     public String getRsaPrivateKey() {
         return rsaPrivateKey;
     }
