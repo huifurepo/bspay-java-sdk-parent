@@ -77,7 +77,7 @@ public class V2MerchantBusiHeadConfigRequestDemo extends BaseCommonDemo {
         // extendInfoMap.put("bank_big_amt_pay_config", getSubmerBankBigAmtPayConfig());
         // 全域资金管理配置对象（华通银行）
         // extendInfoMap.put("out_order_funds_config", getSubmerOutOrderFundsConfig());
-        // 全域资金管理配置(新网银行)
+        // 全域资金管理配置(XW银行)
         // extendInfoMap.put("out_order_funds_new_net_config", getOutOrderFundsNewNetConfig());
         // 结算配置对象
         // extendInfoMap.put("settle_config_list", getSubmerSettleConfigList());
@@ -101,6 +101,8 @@ public class V2MerchantBusiHeadConfigRequestDemo extends BaseCommonDemo {
         // extendInfoMap.put("large_amt_pay_config_list", getLargeAmtPayConfigList());
         // 全域资金管理配置(苏商)
         // extendInfoMap.put("out_order_funds_su_shang_config", getOutOrderFundsSuShangConfig());
+        // 托管支付开关
+        // extendInfoMap.put("half_pay_host_flag", "");
         return extendInfoMap;
     }
 
@@ -298,7 +300,7 @@ public class V2MerchantBusiHeadConfigRequestDemo extends BaseCommonDemo {
         // dto.put("public_fee_fix_amt", "test");
         // 对私固定手续费(元)
         // dto.put("private_fee_fix_amt", "test");
-        // 允许开通全域资金业务(新网)
+        // 允许开通全域资金业务(XW)
         // dto.put("open_flag", "test");
 
         return dto.toJSONString();
@@ -362,6 +364,8 @@ public class V2MerchantBusiHeadConfigRequestDemo extends BaseCommonDemo {
         // dto.put("allow_user_deposit_flag", "");
         // 银行卡绑定支付权限
         // dto.put("mer_same_card_recharge_flag", "");
+        // 备付金固定账号模式自动退款
+        // dto.put("provisions_auto_refund_flag", "");
 
         return dto.toJSONString();
     }

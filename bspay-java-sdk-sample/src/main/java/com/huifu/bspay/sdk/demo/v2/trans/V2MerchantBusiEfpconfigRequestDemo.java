@@ -46,7 +46,7 @@ public class V2MerchantBusiEfpconfigRequestDemo extends BaseCommonDemo {
         request.setOutOrderAcctOpenFees("{\"fee_fix_amt\":\"0\",\"out_fee_acct_type\":\"\",\"out_fee_huifuid\":\"\"}");
         // 全渠道资金管理补充材料id涉及文件类型：[F504-全渠道资金管理补充材料](https://paas.huifu.com/open/doc/api/#/csfl/api_csfl_wjlx)；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：57cc7f00-600a-33ab-b614-6221bbf2e530&lt;/font&gt;
         request.setOtherPaymentInstitutionsPic("8c4f6254-6c36-3b3c-ae8b-efcf24ca215e");
-        // 新网银行数字证书及电子签名授权委托书out_funds_gate_id为xw0时必填；涉及文件类型：[F534-银行数字证书及电子签名授权委托书](https://paas.huifu.com/open/doc/api/#/csfl/api_csfl_wjlx)；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：57cc7f00-600a-33ab-b614-6221bbf2e530&lt;/font&gt;
+        // XW银行数字证书及电子签名授权委托书out_funds_gate_id为xw0时必填；涉及文件类型：[F534-银行数字证书及电子签名授权委托书](https://paas.huifu.com/open/doc/api/#/csfl/api_csfl_wjlx)；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：57cc7f00-600a-33ab-b614-6221bbf2e530&lt;/font&gt;
         // request.setXwDigitalCertificatePic("test");
         // 银行类型
         request.setOutFundsGateId("xw0");
@@ -107,8 +107,18 @@ public class V2MerchantBusiEfpconfigRequestDemo extends BaseCommonDemo {
         // extendInfoMap.put("jd_cooperation_prove_pic", "");
         // 饿了么合作证明材料
         // extendInfoMap.put("elm_cooperation_prove_pic", "");
+        // 得物合作证明材料
+        // extendInfoMap.put("dw_cooperation_prove_pic", "");
+        // 唯品会合作证明材料
+        // extendInfoMap.put("wph_cooperation_prove_pic", "");
+        // 携程合作证明材料
+        // extendInfoMap.put("xc_cooperation_prove_pic", "");
         // 全域资金分账规则
         // extendInfoMap.put("efp_spb_config", "");
+        // 可付款最大比例配置
+        // extendInfoMap.put("max_payment_percentage_config", "");
+        // 客户ip地址
+        // extendInfoMap.put("ip_address", "");
         return extendInfoMap;
     }
 
