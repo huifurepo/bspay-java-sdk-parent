@@ -26,6 +26,11 @@ public class V2UserBasicdataEntModifyRequest extends BaseRequest {
      */
     @JSONField(name = "huifu_id")
     private String huifuId;
+    /**
+     * 法人国籍法人的证件类型为外国人居留证时，必填，参见《[国籍编码](https://cloudpnrcdn.oss-cn-shanghai.aliyuncs.com/opps/api/prod/download_file/area/%E5%9B%BD%E7%B1%8D.xlsx)》&lt;font color&#x3D;&quot;green&quot;&gt;示例值：CHN&lt;/font&gt;
+     */
+    @JSONField(name = "legal_cert_nationality")
+    private String legalCertNationality;
 
     @Override
     public FunctionCodeEnum getFunctionCode() {
@@ -35,10 +40,11 @@ public class V2UserBasicdataEntModifyRequest extends BaseRequest {
     public V2UserBasicdataEntModifyRequest() {
     }
 
-    public V2UserBasicdataEntModifyRequest(String reqDate, String reqSeqId, String huifuId) {
+    public V2UserBasicdataEntModifyRequest(String reqDate, String reqSeqId, String huifuId, String legalCertNationality) {
         this.reqDate = reqDate;
         this.reqSeqId = reqSeqId;
         this.huifuId = huifuId;
+        this.legalCertNationality = legalCertNationality;
     }
 
     public String getReqDate() {
@@ -63,6 +69,14 @@ public class V2UserBasicdataEntModifyRequest extends BaseRequest {
 
     public void setHuifuId(String huifuId) {
         this.huifuId = huifuId;
+    }
+
+    public String getLegalCertNationality() {
+        return legalCertNationality;
+    }
+
+    public void setLegalCertNationality(String legalCertNationality) {
+        this.legalCertNationality = legalCertNationality;
     }
 
 }

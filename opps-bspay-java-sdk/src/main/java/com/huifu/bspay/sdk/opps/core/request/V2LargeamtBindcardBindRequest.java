@@ -46,6 +46,11 @@ public class V2LargeamtBindcardBindRequest extends BaseRequest {
      */
     @JSONField(name = "bank_code")
     private String bankCode;
+    /**
+     * 手机号
+     */
+    @JSONField(name = "mobile_no")
+    private String mobileNo;
 
     @Override
     public FunctionCodeEnum getFunctionCode() {
@@ -55,7 +60,7 @@ public class V2LargeamtBindcardBindRequest extends BaseRequest {
     public V2LargeamtBindcardBindRequest() {
     }
 
-    public V2LargeamtBindcardBindRequest(String reqSeqId, String reqDate, String huifuId, String cardType, String cardName, String cardNo, String bankCode) {
+    public V2LargeamtBindcardBindRequest(String reqSeqId, String reqDate, String huifuId, String cardType, String cardName, String cardNo, String bankCode, String mobileNo) {
         this.reqSeqId = reqSeqId;
         this.reqDate = reqDate;
         this.huifuId = huifuId;
@@ -63,6 +68,7 @@ public class V2LargeamtBindcardBindRequest extends BaseRequest {
         this.cardName = cardName;
         this.cardNo = cardNo;
         this.bankCode = bankCode;
+        this.mobileNo = mobileNo;
     }
 
     public String getReqSeqId() {
@@ -119,6 +125,14 @@ public class V2LargeamtBindcardBindRequest extends BaseRequest {
 
     public void setBankCode(String bankCode) {
         this.bankCode = bankCode;
+    }
+
+    public String getMobileNo() {
+        return mobileNo;
+    }
+
+    public void setMobileNo(String mobileNo) {
+        this.mobileNo = mobileNo;
     }
 
 }

@@ -26,14 +26,16 @@ public class V2TradeLgwxSurrogateQueryRequestDemo extends BaseCommonDemo {
 
         // 2.组装请求参数
         V2TradeLgwxSurrogateQueryRequest request = new V2TradeLgwxSurrogateQueryRequest();
-        // 系统号
-        // request.setSysId("test");
-        // 产品号
-        // request.setProductId("test");
-        // 加签结果
-        // request.setSign("test");
-        // 数据
-        // request.setData("test");
+        // 请求日期
+        request.setReqDate(DateTools.getCurrentDateYYYYMMDD());
+        // 请求流水号
+        request.setReqSeqId(SequenceTools.getReqSeqId32());
+        // 原交易的商户号
+        request.setHuifuId("6666000107755175");
+        // 原交易请求日期
+        request.setOrgReqDate("20240621");
+        // 原交易请求流水号
+        request.setOrgReqSeqId("1399999316713470");
 
         // 设置非必填字段
         Map<String, Object> extendInfoMap = getExtendInfos();

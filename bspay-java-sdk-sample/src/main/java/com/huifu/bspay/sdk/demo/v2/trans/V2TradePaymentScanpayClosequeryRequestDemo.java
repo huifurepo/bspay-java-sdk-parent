@@ -11,7 +11,7 @@ import com.huifu.bspay.sdk.demo.core.Identify;
 import com.huifu.bspay.sdk.opps.core.request.V2TradePaymentScanpayClosequeryRequest;
 
 /**
- * 交易关单查询接口 - 示例
+ * 扫码交易关单查询 - 示例
  *
  * @author sdk-generator
  * @Description

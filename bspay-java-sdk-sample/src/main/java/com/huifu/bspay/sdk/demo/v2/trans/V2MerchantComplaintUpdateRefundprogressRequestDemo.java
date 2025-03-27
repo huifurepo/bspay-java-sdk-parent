@@ -60,11 +60,11 @@ public class V2MerchantComplaintUpdateRefundprogressRequestDemo extends BaseComm
         // 备注
         extendInfoMap.put("remark", "我是备注1111101");
         // 文件列表
-        extendInfoMap.put("file_info", getFileInfo());
+        extendInfoMap.put("file_info", get8e7653eaD27d4c589fdd887b957250c4());
         return extendInfoMap;
     }
 
-    private static String getFileInfo() {
+    private static String get8e7653eaD27d4c589fdd887b957250c4() {
         JSONObject dto = new JSONObject();
         // 拒绝退款的举证图片1
         dto.put("reject_media_pic1", "a8a096a3-0dd4-3b0e-886c-9afb20d23b1a");

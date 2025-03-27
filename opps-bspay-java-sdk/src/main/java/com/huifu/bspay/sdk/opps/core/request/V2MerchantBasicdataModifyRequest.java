@@ -4,7 +4,7 @@ import com.alibaba.fastjson.annotation.JSONField;
 import com.huifu.bspay.sdk.opps.core.enums.FunctionCodeEnum;
 
 /**
- * 商户基本信息修改(2022)
+ * 商户基本信息修改
  *
  * @author sdk-generator
  * @Description
@@ -22,7 +22,7 @@ public class V2MerchantBasicdataModifyRequest extends BaseRequest {
     @JSONField(name = "req_date")
     private String reqDate;
     /**
-     * 上级主体ID
+     * 直属渠道号
      */
     @JSONField(name = "upper_huifu_id")
     private String upperHuifuId;
@@ -31,6 +31,11 @@ public class V2MerchantBasicdataModifyRequest extends BaseRequest {
      */
     @JSONField(name = "huifu_id")
     private String huifuId;
+    /**
+     * 签约人jsonObject格式；agreement_info中选择电子签约时必填；个人商户填本人信息。
+     */
+    @JSONField(name = "sign_user_info")
+    private String signUserInfo;
 
     @Override
     public FunctionCodeEnum getFunctionCode() {
@@ -40,11 +45,12 @@ public class V2MerchantBasicdataModifyRequest extends BaseRequest {
     public V2MerchantBasicdataModifyRequest() {
     }
 
-    public V2MerchantBasicdataModifyRequest(String reqSeqId, String reqDate, String upperHuifuId, String huifuId) {
+    public V2MerchantBasicdataModifyRequest(String reqSeqId, String reqDate, String upperHuifuId, String huifuId, String signUserInfo) {
         this.reqSeqId = reqSeqId;
         this.reqDate = reqDate;
         this.upperHuifuId = upperHuifuId;
         this.huifuId = huifuId;
+        this.signUserInfo = signUserInfo;
     }
 
     public String getReqSeqId() {
@@ -77,6 +83,14 @@ public class V2MerchantBasicdataModifyRequest extends BaseRequest {
 
     public void setHuifuId(String huifuId) {
         this.huifuId = huifuId;
+    }
+
+    public String getSignUserInfo() {
+        return signUserInfo;
+    }
+
+    public void setSignUserInfo(String signUserInfo) {
+        this.signUserInfo = signUserInfo;
     }
 
 }

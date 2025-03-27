@@ -26,14 +26,16 @@ public class V2WalletTradeRechargeTransferRequestDemo extends BaseCommonDemo {
 
         // 2.组装请求参数
         V2WalletTradeRechargeTransferRequest request = new V2WalletTradeRechargeTransferRequest();
-        // 系统号
-        // request.setSysId("test");
-        // 产品号
-        // request.setProductId("test");
-        // 加签结果
-        // request.setSign("test");
-        // 数据
-        // request.setData("test");
+        // 请求流水号
+        request.setReqSeqId(SequenceTools.getReqSeqId32());
+        // 请求日期
+        request.setReqDate(DateTools.getCurrentDateYYYYMMDD());
+        // 出款方商户号
+        request.setHuifuId("6666000107309462");
+        // 收款方用户号
+        request.setUserHuifuId("6666000187364826");
+        // 转账金额
+        request.setTransAmt("0.01");
 
         // 设置非必填字段
         Map<String, Object> extendInfoMap = getExtendInfos();
@@ -51,6 +53,12 @@ public class V2WalletTradeRechargeTransferRequestDemo extends BaseCommonDemo {
     private static Map<String, Object> getExtendInfos() {
         // 设置非必填字段
         Map<String, Object> extendInfoMap = new HashMap<>();
+        // 出款方账户
+        extendInfoMap.put("acct_id", "F00598600");
+        // 转账描述
+        extendInfoMap.put("description", "用户补贴");
+        // 备注
+        extendInfoMap.put("remark", "备注");
         return extendInfoMap;
     }
 

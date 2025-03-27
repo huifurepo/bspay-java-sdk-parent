@@ -55,6 +55,8 @@ public class V2TradeBatchtranslogQueryRequestDemo extends BaseCommonDemo {
         extendInfoMap.put("page_num", "1");
         // 分页条数
         extendInfoMap.put("page_size", "10");
+        // 原支付全局流水号
+        // extendInfoMap.put("payment_hf_seq_id", "");
         return extendInfoMap;
     }
 

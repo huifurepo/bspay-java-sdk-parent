@@ -27,10 +27,15 @@ public class V2TradePaymentUsermark2QueryRequest extends BaseRequest {
     @JSONField(name = "huifu_id")
     private String huifuId;
     /**
-     * 支付授权码
+     * 授权码
      */
     @JSONField(name = "auth_code")
     private String authCode;
+    /**
+     * 银联支付标识
+     */
+    @JSONField(name = "app_up_identifier")
+    private String appUpIdentifier;
 
     @Override
     public FunctionCodeEnum getFunctionCode() {
@@ -40,11 +45,12 @@ public class V2TradePaymentUsermark2QueryRequest extends BaseRequest {
     public V2TradePaymentUsermark2QueryRequest() {
     }
 
-    public V2TradePaymentUsermark2QueryRequest(String reqDate, String reqSeqId, String huifuId, String authCode) {
+    public V2TradePaymentUsermark2QueryRequest(String reqDate, String reqSeqId, String huifuId, String authCode, String appUpIdentifier) {
         this.reqDate = reqDate;
         this.reqSeqId = reqSeqId;
         this.huifuId = huifuId;
         this.authCode = authCode;
+        this.appUpIdentifier = appUpIdentifier;
     }
 
     public String getReqDate() {
@@ -77,6 +83,14 @@ public class V2TradePaymentUsermark2QueryRequest extends BaseRequest {
 
     public void setAuthCode(String authCode) {
         this.authCode = authCode;
+    }
+
+    public String getAppUpIdentifier() {
+        return appUpIdentifier;
+    }
+
+    public void setAppUpIdentifier(String appUpIdentifier) {
+        this.appUpIdentifier = appUpIdentifier;
     }
 
 }

@@ -37,16 +37,6 @@ public class V2MerchantComplaintReplyRequest extends BaseRequest {
     @JSONField(name = "response_content")
     private String responseContent;
     /**
-     * 跳转链接
-     */
-    @JSONField(name = "jump_url")
-    private String jumpUrl;
-    /**
-     * 跳转链接文案
-     */
-    @JSONField(name = "jump_url_text")
-    private String jumpUrlText;
-    /**
      * 微信商户号
      */
     @JSONField(name = "mch_id")
@@ -60,14 +50,12 @@ public class V2MerchantComplaintReplyRequest extends BaseRequest {
     public V2MerchantComplaintReplyRequest() {
     }
 
-    public V2MerchantComplaintReplyRequest(String reqSeqId, String reqDate, String complaintId, String complaintedMchid, String responseContent, String jumpUrl, String jumpUrlText, String mchId) {
+    public V2MerchantComplaintReplyRequest(String reqSeqId, String reqDate, String complaintId, String complaintedMchid, String responseContent, String mchId) {
         this.reqSeqId = reqSeqId;
         this.reqDate = reqDate;
         this.complaintId = complaintId;
         this.complaintedMchid = complaintedMchid;
         this.responseContent = responseContent;
-        this.jumpUrl = jumpUrl;
-        this.jumpUrlText = jumpUrlText;
         this.mchId = mchId;
     }
 
@@ -109,22 +97,6 @@ public class V2MerchantComplaintReplyRequest extends BaseRequest {
 
     public void setResponseContent(String responseContent) {
         this.responseContent = responseContent;
-    }
-
-    public String getJumpUrl() {
-        return jumpUrl;
-    }
-
-    public void setJumpUrl(String jumpUrl) {
-        this.jumpUrl = jumpUrl;
-    }
-
-    public String getJumpUrlText() {
-        return jumpUrlText;
-    }
-
-    public void setJumpUrlText(String jumpUrlText) {
-        this.jumpUrlText = jumpUrlText;
     }
 
     public String getMchId() {

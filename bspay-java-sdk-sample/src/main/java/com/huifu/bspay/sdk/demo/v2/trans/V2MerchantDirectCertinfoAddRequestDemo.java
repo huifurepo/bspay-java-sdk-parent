@@ -37,7 +37,7 @@ public class V2MerchantDirectCertinfoAddRequestDemo extends BaseCommonDemo {
         // 开发者的应用ID
         request.setAppId("20220818198665087");
         // 文件列表
-        request.setFileList(getFileList());
+        request.setFileList(getD3445b35252c4ebd855b4f1aeb23cfbc());
 
         // 设置非必填字段
         Map<String, Object> extendInfoMap = getExtendInfos();
@@ -66,7 +66,7 @@ public class V2MerchantDirectCertinfoAddRequestDemo extends BaseCommonDemo {
         return extendInfoMap;
     }
 
-    private static String getFileList() {
+    private static String getD3445b35252c4ebd855b4f1aeb23cfbc() {
         JSONObject dto = new JSONObject();
         // 文件类型
         dto.put("file_type", "F53");

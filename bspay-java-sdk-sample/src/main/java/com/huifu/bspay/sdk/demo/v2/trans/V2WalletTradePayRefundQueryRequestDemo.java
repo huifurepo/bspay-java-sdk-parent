@@ -26,14 +26,10 @@ public class V2WalletTradePayRefundQueryRequestDemo extends BaseCommonDemo {
 
         // 2.组装请求参数
         V2WalletTradePayRefundQueryRequest request = new V2WalletTradePayRefundQueryRequest();
-        // 系统号
-        // request.setSysId("test");
-        // 产品号
-        // request.setProductId("test");
-        // 加签结果
-        // request.setSign("test");
-        // 数据
-        // request.setData("test");
+        // 原退款交易请求日期
+        request.setOrgReqDate("20230816");
+        // 原退款交易请求流水号
+        // request.setOrgReqSeqId("test");
 
         // 设置非必填字段
         Map<String, Object> extendInfoMap = getExtendInfos();
@@ -51,6 +47,10 @@ public class V2WalletTradePayRefundQueryRequestDemo extends BaseCommonDemo {
     private static Map<String, Object> getExtendInfos() {
         // 设置非必填字段
         Map<String, Object> extendInfoMap = new HashMap<>();
+        // 钱包用户id
+        extendInfoMap.put("user_huifu_id", "6666000136655020");
+        // 原退款交易全局流水号
+        extendInfoMap.put("org_hf_seq_id", "003100TOP1A230816150903P990ac139c0600000");
         return extendInfoMap;
     }
 

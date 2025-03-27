@@ -32,16 +32,6 @@ public class V2MerchantBusiEfpconfigRequest extends BaseRequest {
     @JSONField(name = "upper_huifu_id")
     private String upperHuifuId;
     /**
-     * 开关
-     */
-    @JSONField(name = "switch_state")
-    private String switchState;
-    /**
-     * 自动入账开关0:关闭 1:开通；switch_state为1时必填；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：1&lt;/font&gt;
-     */
-    @JSONField(name = "out_order_auto_acct_flag")
-    private String outOrderAutoAcctFlag;
-    /**
      * 支付手续费外扣汇付ID支付手续费外扣标记为1时必填；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：6666000109812123&lt;/font&gt;
      */
     @JSONField(name = "out_fee_huifuid")
@@ -90,13 +80,11 @@ public class V2MerchantBusiEfpconfigRequest extends BaseRequest {
     public V2MerchantBusiEfpconfigRequest() {
     }
 
-    public V2MerchantBusiEfpconfigRequest(String reqSeqId, String reqDate, String huifuId, String upperHuifuId, String switchState, String outOrderAutoAcctFlag, String outFeeHuifuid, String outOrderAcctCard, String outOrderAcctOpenFees, String otherPaymentInstitutionsPic, String xwDigitalCertificatePic, String outFundsGateId, String signUserInfo, String acctSource) {
+    public V2MerchantBusiEfpconfigRequest(String reqSeqId, String reqDate, String huifuId, String upperHuifuId, String outFeeHuifuid, String outOrderAcctCard, String outOrderAcctOpenFees, String otherPaymentInstitutionsPic, String xwDigitalCertificatePic, String outFundsGateId, String signUserInfo, String acctSource) {
         this.reqSeqId = reqSeqId;
         this.reqDate = reqDate;
         this.huifuId = huifuId;
         this.upperHuifuId = upperHuifuId;
-        this.switchState = switchState;
-        this.outOrderAutoAcctFlag = outOrderAutoAcctFlag;
         this.outFeeHuifuid = outFeeHuifuid;
         this.outOrderAcctCard = outOrderAcctCard;
         this.outOrderAcctOpenFees = outOrderAcctOpenFees;
@@ -137,22 +125,6 @@ public class V2MerchantBusiEfpconfigRequest extends BaseRequest {
 
     public void setUpperHuifuId(String upperHuifuId) {
         this.upperHuifuId = upperHuifuId;
-    }
-
-    public String getSwitchState() {
-        return switchState;
-    }
-
-    public void setSwitchState(String switchState) {
-        this.switchState = switchState;
-    }
-
-    public String getOutOrderAutoAcctFlag() {
-        return outOrderAutoAcctFlag;
-    }
-
-    public void setOutOrderAutoAcctFlag(String outOrderAutoAcctFlag) {
-        this.outOrderAutoAcctFlag = outOrderAutoAcctFlag;
     }
 
     public String getOutFeeHuifuid() {

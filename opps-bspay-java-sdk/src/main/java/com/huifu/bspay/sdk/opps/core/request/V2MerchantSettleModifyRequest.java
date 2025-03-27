@@ -4,7 +4,7 @@ import com.alibaba.fastjson.annotation.JSONField;
 import com.huifu.bspay.sdk.opps.core.enums.FunctionCodeEnum;
 
 /**
- * 修改子账户配置(2022)
+ * 修改子账户配置
  *
  * @author sdk-generator
  * @Description
@@ -22,7 +22,7 @@ public class V2MerchantSettleModifyRequest extends BaseRequest {
     @JSONField(name = "req_date")
     private String reqDate;
     /**
-     * 商户/用户汇付Id
+     * 商户汇付Id
      */
     @JSONField(name = "huifu_id")
     private String huifuId;
@@ -36,6 +36,16 @@ public class V2MerchantSettleModifyRequest extends BaseRequest {
      */
     @JSONField(name = "acct_id")
     private String acctId;
+    /**
+     * 结算规则配置
+     */
+    @JSONField(name = "settle_config")
+    private String settleConfig;
+    /**
+     * 结算卡信息配置新账户绑定的结算银行账户。jsonObject格式。若结算规则中上送token_no，则card_info不填。
+     */
+    @JSONField(name = "card_info")
+    private String cardInfo;
 
     @Override
     public FunctionCodeEnum getFunctionCode() {
@@ -45,12 +55,14 @@ public class V2MerchantSettleModifyRequest extends BaseRequest {
     public V2MerchantSettleModifyRequest() {
     }
 
-    public V2MerchantSettleModifyRequest(String reqSeqId, String reqDate, String huifuId, String upperHuifuId, String acctId) {
+    public V2MerchantSettleModifyRequest(String reqSeqId, String reqDate, String huifuId, String upperHuifuId, String acctId, String settleConfig, String cardInfo) {
         this.reqSeqId = reqSeqId;
         this.reqDate = reqDate;
         this.huifuId = huifuId;
         this.upperHuifuId = upperHuifuId;
         this.acctId = acctId;
+        this.settleConfig = settleConfig;
+        this.cardInfo = cardInfo;
     }
 
     public String getReqSeqId() {
@@ -91,6 +103,22 @@ public class V2MerchantSettleModifyRequest extends BaseRequest {
 
     public void setAcctId(String acctId) {
         this.acctId = acctId;
+    }
+
+    public String getSettleConfig() {
+        return settleConfig;
+    }
+
+    public void setSettleConfig(String settleConfig) {
+        this.settleConfig = settleConfig;
+    }
+
+    public String getCardInfo() {
+        return cardInfo;
+    }
+
+    public void setCardInfo(String cardInfo) {
+        this.cardInfo = cardInfo;
     }
 
 }

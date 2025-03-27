@@ -32,7 +32,7 @@ public class V2TradePaymentDelaytransConfirmrefundqueryRequestDemo extends BaseC
         request.setOrgReqDate("20240426");
         // 原交易请求流水号指交易确认请求流水号，org_req_seq_id和org_hf_seq_id二选一；&lt;br/&gt;&lt;font color&#x3D;&quot;green&quot;&gt;示例值：2021091708126665002&lt;/font&gt;
         request.setOrgReqSeqId("20211714122436");
-        // 原退款全局流水号 原交易确认退款全局流水号。org_req_seq_id和org_hf_seq_id二选一；&lt;br/&gt;&lt;font color&#x3D;&quot;green&quot;&gt;示例值：003500TOP2B211021163242P447ac132fd200000&lt;/font&gt;
+        // 原退款全局流水号原交易确认退款全局流水号。org_req_seq_id和org_hf_seq_id二选一；&lt;br/&gt;&lt;font color&#x3D;&quot;green&quot;&gt;示例值：003500TOP2B211021163242P447ac132fd200000&lt;/font&gt;
         request.setOrgHfSeqId("003100TOP1A240513112100P256ac139cc000000");
 
         // 设置非必填字段

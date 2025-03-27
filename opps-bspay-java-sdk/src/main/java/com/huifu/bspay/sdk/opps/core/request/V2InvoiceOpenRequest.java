@@ -22,6 +22,16 @@ public class V2InvoiceOpenRequest extends BaseRequest {
     @JSONField(name = "req_date")
     private String reqDate;
     /**
+     * 汇付商户号huifu_id与ext_mer_id二选一必填，汇付商户号优先；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：6666000109812123&lt;/font&gt;
+     */
+    @JSONField(name = "huifu_id")
+    private String huifuId;
+    /**
+     * 外部商户号&lt;font color&#x3D;&quot;green&quot;&gt;示例值：&lt;/font&gt;
+     */
+    @JSONField(name = "ext_mer_id")
+    private String extMerId;
+    /**
      * 渠道号汇付商户号为空时，必传；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：6666000109812124&lt;/font&gt;
      */
     @JSONField(name = "channel_id")
@@ -76,6 +86,16 @@ public class V2InvoiceOpenRequest extends BaseRequest {
      */
     @JSONField(name = "payer_info")
     private String payerInfo;
+    /**
+     * 不动产销售特殊字段specialFlag为05时，必填；jsonArray格式
+     */
+    @JSONField(name = "estate_sales")
+    private String estateSales;
+    /**
+     * 不动产租赁特殊字段specialFlag为16时，必填；jsonArray格式
+     */
+    @JSONField(name = "estate_lease")
+    private String estateLease;
 
     @Override
     public FunctionCodeEnum getFunctionCode() {
@@ -85,9 +105,11 @@ public class V2InvoiceOpenRequest extends BaseRequest {
     public V2InvoiceOpenRequest() {
     }
 
-    public V2InvoiceOpenRequest(String reqSeqId, String reqDate, String channelId, String ivcType, String openType, String buyerName, String orderAmt, String redApplyReason, String redApplySource, String oriIvcCode, String oriIvcNumber, String goodsInfos, String payerInfo) {
+    public V2InvoiceOpenRequest(String reqSeqId, String reqDate, String huifuId, String extMerId, String channelId, String ivcType, String openType, String buyerName, String orderAmt, String redApplyReason, String redApplySource, String oriIvcCode, String oriIvcNumber, String goodsInfos, String payerInfo, String estateSales, String estateLease) {
         this.reqSeqId = reqSeqId;
         this.reqDate = reqDate;
+        this.huifuId = huifuId;
+        this.extMerId = extMerId;
         this.channelId = channelId;
         this.ivcType = ivcType;
         this.openType = openType;
@@ -99,6 +121,8 @@ public class V2InvoiceOpenRequest extends BaseRequest {
         this.oriIvcNumber = oriIvcNumber;
         this.goodsInfos = goodsInfos;
         this.payerInfo = payerInfo;
+        this.estateSales = estateSales;
+        this.estateLease = estateLease;
     }
 
     public String getReqSeqId() {
@@ -115,6 +139,22 @@ public class V2InvoiceOpenRequest extends BaseRequest {
 
     public void setReqDate(String reqDate) {
         this.reqDate = reqDate;
+    }
+
+    public String getHuifuId() {
+        return huifuId;
+    }
+
+    public void setHuifuId(String huifuId) {
+        this.huifuId = huifuId;
+    }
+
+    public String getExtMerId() {
+        return extMerId;
+    }
+
+    public void setExtMerId(String extMerId) {
+        this.extMerId = extMerId;
     }
 
     public String getChannelId() {
@@ -203,6 +243,22 @@ public class V2InvoiceOpenRequest extends BaseRequest {
 
     public void setPayerInfo(String payerInfo) {
         this.payerInfo = payerInfo;
+    }
+
+    public String getEstateSales() {
+        return estateSales;
+    }
+
+    public void setEstateSales(String estateSales) {
+        this.estateSales = estateSales;
+    }
+
+    public String getEstateLease() {
+        return estateLease;
+    }
+
+    public void setEstateLease(String estateLease) {
+        this.estateLease = estateLease;
     }
 
 }

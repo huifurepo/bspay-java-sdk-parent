@@ -39,7 +39,7 @@ public class V2TradePreauthpayRequestDemo extends BaseCommonDemo {
         // 商品描述
         request.setGoodsDesc("1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567");
         // 安全信息
-        request.setRiskCheckData(getRiskCheckData());
+        request.setRiskCheckData(get4144db46B82147ec88aeE3e50491fe02());
 
         // 设置非必填字段
         Map<String, Object> extendInfoMap = getExtendInfos();
@@ -74,13 +74,13 @@ public class V2TradePreauthpayRequestDemo extends BaseCommonDemo {
         // 扩展域
         // extendInfoMap.put("mer_priv", "");
         // 设备信息
-        extendInfoMap.put("terminal_device_data", getTerminalDeviceData());
+        extendInfoMap.put("terminal_device_data", get4a4f4c37D30a405fB03aB630cd659632());
         // 异步通知地址
         extendInfoMap.put("notify_url", "http://www.baidu.com");
         return extendInfoMap;
     }
 
-    private static String getRiskCheckData() {
+    private static String get4144db46B82147ec88aeE3e50491fe02() {
         JSONObject dto = new JSONObject();
         // 基站地址
         dto.put("base_station", "192.168.1.1");
@@ -94,7 +94,7 @@ public class V2TradePreauthpayRequestDemo extends BaseCommonDemo {
         return dto.toJSONString();
     }
 
-    private static String getTerminalDeviceData() {
+    private static String get4a4f4c37D30a405fB03aB630cd659632() {
         JSONObject dto = new JSONObject();
         // 商户终端序列号
         dto.put("app_version", "");

@@ -97,6 +97,11 @@ public class V2UserBasicdataEntRequest extends BaseRequest {
     @JSONField(name = "legal_cert_end_date")
     private String legalCertEndDate;
     /**
+     * 法人国籍法人的证件类型为外国人居留证时，必填，参见《[国籍编码](https://cloudpnrcdn.oss-cn-shanghai.aliyuncs.com/opps/api/prod/download_file/area/%E5%9B%BD%E7%B1%8D.xlsx)》&lt;font color&#x3D;&quot;green&quot;&gt;示例值：CHN&lt;/font&gt;
+     */
+    @JSONField(name = "legal_cert_nationality")
+    private String legalCertNationality;
+    /**
      * 联系人姓名
      */
     @JSONField(name = "contact_name")
@@ -120,7 +125,7 @@ public class V2UserBasicdataEntRequest extends BaseRequest {
     public V2UserBasicdataEntRequest() {
     }
 
-    public V2UserBasicdataEntRequest(String reqSeqId, String reqDate, String regName, String licenseCode, String licenseValidityType, String licenseBeginDate, String licenseEndDate, String regProvId, String regAreaId, String regDistrictId, String regDetail, String legalName, String legalCertType, String legalCertNo, String legalCertValidityType, String legalCertBeginDate, String legalCertEndDate, String contactName, String contactMobile, String loginName) {
+    public V2UserBasicdataEntRequest(String reqSeqId, String reqDate, String regName, String licenseCode, String licenseValidityType, String licenseBeginDate, String licenseEndDate, String regProvId, String regAreaId, String regDistrictId, String regDetail, String legalName, String legalCertType, String legalCertNo, String legalCertValidityType, String legalCertBeginDate, String legalCertEndDate, String legalCertNationality, String contactName, String contactMobile, String loginName) {
         this.reqSeqId = reqSeqId;
         this.reqDate = reqDate;
         this.regName = regName;
@@ -138,6 +143,7 @@ public class V2UserBasicdataEntRequest extends BaseRequest {
         this.legalCertValidityType = legalCertValidityType;
         this.legalCertBeginDate = legalCertBeginDate;
         this.legalCertEndDate = legalCertEndDate;
+        this.legalCertNationality = legalCertNationality;
         this.contactName = contactName;
         this.contactMobile = contactMobile;
         this.loginName = loginName;
@@ -277,6 +283,14 @@ public class V2UserBasicdataEntRequest extends BaseRequest {
 
     public void setLegalCertEndDate(String legalCertEndDate) {
         this.legalCertEndDate = legalCertEndDate;
+    }
+
+    public String getLegalCertNationality() {
+        return legalCertNationality;
+    }
+
+    public void setLegalCertNationality(String legalCertNationality) {
+        this.legalCertNationality = legalCertNationality;
     }
 
     public String getContactName() {

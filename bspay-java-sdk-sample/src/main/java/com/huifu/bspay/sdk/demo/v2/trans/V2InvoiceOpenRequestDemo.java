@@ -30,6 +30,10 @@ public class V2InvoiceOpenRequestDemo extends BaseCommonDemo {
         request.setReqSeqId(SequenceTools.getReqSeqId32());
         // 请求时间
         request.setReqDate(DateTools.getCurrentDateYYYYMMDD());
+        // 汇付商户号huifu_id与ext_mer_id二选一必填，汇付商户号优先；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：6666000109812123&lt;/font&gt;
+        request.setHuifuId("6666000107430944");
+        // 外部商户号&lt;font color&#x3D;&quot;green&quot;&gt;示例值：&lt;/font&gt;
+        request.setExtMerId("");
         // 渠道号汇付商户号为空时，必传；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：6666000109812124&lt;/font&gt;
         // request.setChannelId("test");
         // 发票类型
@@ -49,9 +53,13 @@ public class V2InvoiceOpenRequestDemo extends BaseCommonDemo {
         // 原发票号码openType&#x3D;1时必填；参见[发票右上角](https://paas.huifu.com/open/doc/api/#/fp/api_fp_yanglitu.md)；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：20685767&lt;/font&gt;
         request.setOriIvcNumber("150000020026");
         // 开票商品信息
-        request.setGoodsInfos(getGoodsInfosRc());
+        request.setGoodsInfos(getCc865b09A9d1454588fd0ec915ac54b3());
         // 开票人信息
-        request.setPayerInfo(getPayerInfo());
+        request.setPayerInfo(getB166bc1dA4484a67A2d763b011609a76());
+        // 不动产销售特殊字段specialFlag为05时，必填；jsonArray格式
+        // request.setEstateSales(get834e08f62dcd4cdaBc97F6aadd5b60f7());
+        // 不动产租赁特殊字段specialFlag为16时，必填；jsonArray格式
+        // request.setEstateLease(get95c5269197664358A5b57488affb02da());
 
         // 设置非必填字段
         Map<String, Object> extendInfoMap = getExtendInfos();
@@ -69,10 +77,6 @@ public class V2InvoiceOpenRequestDemo extends BaseCommonDemo {
     private static Map<String, Object> getExtendInfos() {
         // 设置非必填字段
         Map<String, Object> extendInfoMap = new HashMap<>();
-        // 汇付商户号
-        extendInfoMap.put("huifu_id", "6666000107430944");
-        // 外部商户号
-        extendInfoMap.put("ext_mer_id", "");
         // 税控盘编号
         extendInfoMap.put("tax_device_id", "661919694739");
         // 购方单位识别号
@@ -99,25 +103,29 @@ public class V2InvoiceOpenRequestDemo extends BaseCommonDemo {
         extendInfoMap.put("red_info_number", "");
         // 开票结果异步通知地址
         extendInfoMap.put("callback_url", "virgo://http://192.168.85.157:30031/sspm/testVirgo");
+        // 强制开票标识
+        extendInfoMap.put("buyer_info_confirm", "");
         return extendInfoMap;
     }
 
-    private static String getGoodsInfosRc() {
+    private static String getCc865b09A9d1454588fd0ec915ac54b3() {
         JSONObject dto = new JSONObject();
         // 发票行性质
         dto.put("ivc_nature", "0");
         // 商品序号ivc_type&#x3D;1 红票必填，要与开具的蓝票商品一致；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：备注&lt;/font&gt;
         dto.put("goods_serial_num", "");
+        // 商品id二选一必填，税收分类编码优先；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：&lt;/font&gt;
+        dto.put("goods_id", "");
+        // 商品税收分类编码&lt;font color&#x3D;&quot;green&quot;&gt;示例值：&lt;/font&gt;
+        dto.put("goods_code", "6010000000000000000");
         // 商品名称goodsCode不为空时必填；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：&lt;/font&gt;
         dto.put("goods_name", "预付卡");
         // 税率goodsCode不为空时必填，最多三位小数；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：0.130&lt;/font&gt;
         dto.put("tax_rate", "0.03");
+        // 含税标识
+        dto.put("is_price_con_tax", "1");
         // 金额(元)
         dto.put("trans_amt", "70.00");
-        // 商品id
-        dto.put("goods_id", "");
-        // 商品税收分类编码
-        dto.put("goods_code", "6010000000000000000");
         // 规格型号
         dto.put("goods_model", "");
         // 计量单位
@@ -128,8 +136,6 @@ public class V2InvoiceOpenRequestDemo extends BaseCommonDemo {
         dto.put("zero_tax_rate_flag", "");
         // 增值税特殊管理
         dto.put("add_tax_spec_manage", "");
-        // 含税标识
-        dto.put("is_price_con_tax", "1");
         // 商品数量
         dto.put("goods_count", "7");
         // 单价
@@ -142,7 +148,7 @@ public class V2InvoiceOpenRequestDemo extends BaseCommonDemo {
         return dtoList.toJSONString();
     }
 
-    private static String getPayerInfo() {
+    private static String getB166bc1dA4484a67A2d763b011609a76() {
         JSONObject dto = new JSONObject();
         // 开票人
         dto.put("payer_name", "开票人");
@@ -152,6 +158,54 @@ public class V2InvoiceOpenRequestDemo extends BaseCommonDemo {
         dto.put("reviewer", "复核");
 
         return dto.toJSONString();
+    }
+
+    private static String get834e08f62dcd4cdaBc97F6aadd5b60f7() {
+        JSONObject dto = new JSONObject();
+        // 不动产地址
+        // dto.put("addr", "test");
+        // 不动产详细地址
+        // dto.put("detail_addr", "test");
+        // 跨地（市）标志
+        // dto.put("area_flag", "test");
+        // 租赁日期起
+        // dto.put("start_date", "test");
+        // 租赁日期止
+        // dto.put("end_date", "test");
+        // 房屋产权证书/不动产产权号
+        // dto.put("estate_no", "test");
+        // 不动产单位
+        // dto.put("unit", "test");
+
+        JSONArray dtoList = new JSONArray();
+        dtoList.add(dto);
+        return dtoList.toJSONString();
+    }
+
+    private static String get95c5269197664358A5b57488affb02da() {
+        JSONObject dto = new JSONObject();
+        // 不动产地址
+        // dto.put("addr", "test");
+        // 不动产详细地址
+        // dto.put("detail_addr", "test");
+        // 跨地（市）标志
+        // dto.put("area_flag", "test");
+        // 土地增值税项目编号
+        // dto.put("tax_item_no", "test");
+        // 不动产单元代码/网签合同备案编号
+        // dto.put("record_no", "test");
+        // 核定计税价格
+        // dto.put("total_amt", "test");
+        // 实际成交含税金额
+        // dto.put("deal_amt", "test");
+        // 房屋产权证书/不动产产权号
+        // dto.put("estate_no", "test");
+        // 不动产单位
+        // dto.put("unit", "test");
+
+        JSONArray dtoList = new JSONArray();
+        dtoList.add(dto);
+        return dtoList.toJSONString();
     }
 
 }

@@ -4,7 +4,7 @@ import com.alibaba.fastjson.annotation.JSONField;
 import com.huifu.bspay.sdk.opps.core.enums.FunctionCodeEnum;
 
 /**
- * 子账户开通配置(2022)
+ * 子账户开通配置
  *
  * @author sdk-generator
  * @Description
@@ -22,7 +22,7 @@ public class V2MerchantSettleConfigRequest extends BaseRequest {
     @JSONField(name = "req_date")
     private String reqDate;
     /**
-     * 商户/用户汇付Id
+     * 商户汇付Id
      */
     @JSONField(name = "huifu_id")
     private String huifuId;
@@ -41,6 +41,11 @@ public class V2MerchantSettleConfigRequest extends BaseRequest {
      */
     @JSONField(name = "acct_name")
     private String acctName;
+    /**
+     * 结算卡信息配置新账户绑定的结算银行账户。jsonObject格式。若结算规则中上送token_no，则card_info不填。
+     */
+    @JSONField(name = "card_info")
+    private String cardInfo;
 
     @Override
     public FunctionCodeEnum getFunctionCode() {
@@ -50,13 +55,14 @@ public class V2MerchantSettleConfigRequest extends BaseRequest {
     public V2MerchantSettleConfigRequest() {
     }
 
-    public V2MerchantSettleConfigRequest(String reqSeqId, String reqDate, String huifuId, String upperHuifuId, String acctType, String acctName) {
+    public V2MerchantSettleConfigRequest(String reqSeqId, String reqDate, String huifuId, String upperHuifuId, String acctType, String acctName, String cardInfo) {
         this.reqSeqId = reqSeqId;
         this.reqDate = reqDate;
         this.huifuId = huifuId;
         this.upperHuifuId = upperHuifuId;
         this.acctType = acctType;
         this.acctName = acctName;
+        this.cardInfo = cardInfo;
     }
 
     public String getReqSeqId() {
@@ -105,6 +111,14 @@ public class V2MerchantSettleConfigRequest extends BaseRequest {
 
     public void setAcctName(String acctName) {
         this.acctName = acctName;
+    }
+
+    public String getCardInfo() {
+        return cardInfo;
+    }
+
+    public void setCardInfo(String cardInfo) {
+        this.cardInfo = cardInfo;
     }
 
 }

@@ -11,7 +11,7 @@ import com.huifu.bspay.sdk.demo.core.Identify;
 import com.huifu.bspay.sdk.opps.core.request.V2TradePaymentScanpayQueryRequest;
 
 /**
- * 交易查询接口 - 示例
+ * 扫码交易查询 - 示例
  *
  * @author sdk-generator
  * @Description
@@ -28,7 +28,7 @@ public class V2TradePaymentScanpayQueryRequestDemo extends BaseCommonDemo {
         V2TradePaymentScanpayQueryRequest request = new V2TradePaymentScanpayQueryRequest();
         // 汇付商户号
         request.setHuifuId("6666000109133323");
-        // 原机构请求日期
+        // 原机构请求日期格式为yyyyMMdd，&lt;font color&#x3D;&quot;green&quot;&gt;示例值：20220125&lt;/font&gt;；&lt;/br&gt;传入org_hf_seq_id时非必填，其他场景必填；
         request.setOrgReqDate("20240405");
         // 汇付服务订单号out_ord_id,org_hf_seq_id,org_req_seq_id 必填其一；汇付生成的服务订单号；&lt;br/&gt;&lt;font color&#x3D;&quot;green&quot;&gt;示例值：1234323JKHDFE1243252&lt;/font&gt;
         // request.setOutOrdId("test");

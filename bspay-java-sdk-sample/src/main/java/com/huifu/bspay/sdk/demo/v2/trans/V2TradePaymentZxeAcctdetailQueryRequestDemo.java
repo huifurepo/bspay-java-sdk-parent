@@ -11,7 +11,7 @@ import com.huifu.bspay.sdk.demo.core.Identify;
 import com.huifu.bspay.sdk.opps.core.request.V2TradePaymentZxeAcctdetailQueryRequest;
 
 /**
- * 电子账户账务明细查询 - 示例
+ * E账户账务明细查询 - 示例
  *
  * @author sdk-generator
  * @Description

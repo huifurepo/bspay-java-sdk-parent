@@ -12,25 +12,30 @@ import com.huifu.bspay.sdk.opps.core.enums.FunctionCodeEnum;
 public class V2TradeLgwxSurrogateQueryRequest extends BaseRequest {
 
     /**
-     * 系统号
+     * 请求日期
      */
-    @JSONField(name = "sys_id")
-    private String sysId;
+    @JSONField(name = "req_date")
+    private String reqDate;
     /**
-     * 产品号
+     * 请求流水号
      */
-    @JSONField(name = "product_id")
-    private String productId;
+    @JSONField(name = "req_seq_id")
+    private String reqSeqId;
     /**
-     * 加签结果
+     * 原交易的商户号
      */
-    @JSONField(name = "sign")
-    private String sign;
+    @JSONField(name = "huifu_id")
+    private String huifuId;
     /**
-     * 数据
+     * 原交易请求日期
      */
-    @JSONField(name = "data")
-    private String data;
+    @JSONField(name = "org_req_date")
+    private String orgReqDate;
+    /**
+     * 原交易请求流水号
+     */
+    @JSONField(name = "org_req_seq_id")
+    private String orgReqSeqId;
 
     @Override
     public FunctionCodeEnum getFunctionCode() {
@@ -40,43 +45,52 @@ public class V2TradeLgwxSurrogateQueryRequest extends BaseRequest {
     public V2TradeLgwxSurrogateQueryRequest() {
     }
 
-    public V2TradeLgwxSurrogateQueryRequest(String sysId, String productId, String sign, String data) {
-        this.sysId = sysId;
-        this.productId = productId;
-        this.sign = sign;
-        this.data = data;
+    public V2TradeLgwxSurrogateQueryRequest(String reqDate, String reqSeqId, String huifuId, String orgReqDate, String orgReqSeqId) {
+        this.reqDate = reqDate;
+        this.reqSeqId = reqSeqId;
+        this.huifuId = huifuId;
+        this.orgReqDate = orgReqDate;
+        this.orgReqSeqId = orgReqSeqId;
     }
 
-    public String getSysId() {
-        return sysId;
+    public String getReqDate() {
+        return reqDate;
     }
 
-    public void setSysId(String sysId) {
-        this.sysId = sysId;
+    public void setReqDate(String reqDate) {
+        this.reqDate = reqDate;
     }
 
-    public String getProductId() {
-        return productId;
+    public String getReqSeqId() {
+        return reqSeqId;
     }
 
-    public void setProductId(String productId) {
-        this.productId = productId;
+    public void setReqSeqId(String reqSeqId) {
+        this.reqSeqId = reqSeqId;
     }
 
-    public String getSign() {
-        return sign;
+    public String getHuifuId() {
+        return huifuId;
     }
 
-    public void setSign(String sign) {
-        this.sign = sign;
+    public void setHuifuId(String huifuId) {
+        this.huifuId = huifuId;
     }
 
-    public String getData() {
-        return data;
+    public String getOrgReqDate() {
+        return orgReqDate;
     }
 
-    public void setData(String data) {
-        this.data = data;
+    public void setOrgReqDate(String orgReqDate) {
+        this.orgReqDate = orgReqDate;
+    }
+
+    public String getOrgReqSeqId() {
+        return orgReqSeqId;
+    }
+
+    public void setOrgReqSeqId(String orgReqSeqId) {
+        this.orgReqSeqId = orgReqSeqId;
     }
 
 }

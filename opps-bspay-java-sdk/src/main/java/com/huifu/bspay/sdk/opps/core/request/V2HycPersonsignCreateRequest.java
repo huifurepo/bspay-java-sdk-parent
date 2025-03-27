@@ -12,25 +12,30 @@ import com.huifu.bspay.sdk.opps.core.enums.FunctionCodeEnum;
 public class V2HycPersonsignCreateRequest extends BaseRequest {
 
     /**
-     * 系统号
+     * 请求流水号
      */
-    @JSONField(name = "sys_id")
-    private String sysId;
+    @JSONField(name = "req_seq_id")
+    private String reqSeqId;
     /**
-     * 产品号
+     * 请求日期
      */
-    @JSONField(name = "product_id")
-    private String productId;
+    @JSONField(name = "req_date")
+    private String reqDate;
     /**
-     * 加签结果
+     * 用户汇付id
      */
-    @JSONField(name = "sign")
-    private String sign;
+    @JSONField(name = "huifu_id")
+    private String huifuId;
     /**
-     * 数据
+     * 落地公司机构号
      */
-    @JSONField(name = "data")
-    private String data;
+    @JSONField(name = "minor_agent_id")
+    private String minorAgentId;
+    /**
+     * 乐接活请求参数jsonObject格式 合作平台为乐接活时必传
+     */
+    @JSONField(name = "ljh_data")
+    private String ljhData;
 
     @Override
     public FunctionCodeEnum getFunctionCode() {
@@ -40,43 +45,52 @@ public class V2HycPersonsignCreateRequest extends BaseRequest {
     public V2HycPersonsignCreateRequest() {
     }
 
-    public V2HycPersonsignCreateRequest(String sysId, String productId, String sign, String data) {
-        this.sysId = sysId;
-        this.productId = productId;
-        this.sign = sign;
-        this.data = data;
+    public V2HycPersonsignCreateRequest(String reqSeqId, String reqDate, String huifuId, String minorAgentId, String ljhData) {
+        this.reqSeqId = reqSeqId;
+        this.reqDate = reqDate;
+        this.huifuId = huifuId;
+        this.minorAgentId = minorAgentId;
+        this.ljhData = ljhData;
     }
 
-    public String getSysId() {
-        return sysId;
+    public String getReqSeqId() {
+        return reqSeqId;
     }
 
-    public void setSysId(String sysId) {
-        this.sysId = sysId;
+    public void setReqSeqId(String reqSeqId) {
+        this.reqSeqId = reqSeqId;
     }
 
-    public String getProductId() {
-        return productId;
+    public String getReqDate() {
+        return reqDate;
     }
 
-    public void setProductId(String productId) {
-        this.productId = productId;
+    public void setReqDate(String reqDate) {
+        this.reqDate = reqDate;
     }
 
-    public String getSign() {
-        return sign;
+    public String getHuifuId() {
+        return huifuId;
     }
 
-    public void setSign(String sign) {
-        this.sign = sign;
+    public void setHuifuId(String huifuId) {
+        this.huifuId = huifuId;
     }
 
-    public String getData() {
-        return data;
+    public String getMinorAgentId() {
+        return minorAgentId;
     }
 
-    public void setData(String data) {
-        this.data = data;
+    public void setMinorAgentId(String minorAgentId) {
+        this.minorAgentId = minorAgentId;
+    }
+
+    public String getLjhData() {
+        return ljhData;
+    }
+
+    public void setLjhData(String ljhData) {
+        this.ljhData = ljhData;
     }
 
 }

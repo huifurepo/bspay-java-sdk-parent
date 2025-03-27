@@ -60,6 +60,8 @@ public class V2UserBasicdataEntRequestDemo extends BaseCommonDemo {
         request.setLegalCertBeginDate("20120801");
         // 法人证件有效期截止日期日期格式：yyyyMMdd; 非长期有效时必填，长期有效为空；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：20320905&lt;/font&gt;
         request.setLegalCertEndDate("20300801");
+        // 法人国籍法人的证件类型为外国人居留证时，必填，参见《[国籍编码](https://cloudpnrcdn.oss-cn-shanghai.aliyuncs.com/opps/api/prod/download_file/area/%E5%9B%BD%E7%B1%8D.xlsx)》&lt;font color&#x3D;&quot;green&quot;&gt;示例值：CHN&lt;/font&gt;
+        // request.setLegalCertNationality("test");
         // 联系人姓名
         request.setContactName("小的");
         // 联系人手机号
@@ -94,13 +96,13 @@ public class V2UserBasicdataEntRequestDemo extends BaseCommonDemo {
         // 扩展方字段
         extendInfoMap.put("expand_id", "");
         // 文件列表
-        // extendInfoMap.put("file_list", getFileList());
+        // extendInfoMap.put("file_list", get20d74ac41da44b12Aeee688f03e91870());
         // 公司类型
         // extendInfoMap.put("ent_type", "");
         return extendInfoMap;
     }
 
-    private static String getFileList() {
+    private static String get20d74ac41da44b12Aeee688f03e91870() {
         JSONObject dto = new JSONObject();
         // 文件类型
         // dto.put("file_type", "test");

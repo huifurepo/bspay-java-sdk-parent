@@ -26,14 +26,20 @@ public class V2WalletTradeTransferRequestDemo extends BaseCommonDemo {
 
         // 2.组装请求参数
         V2WalletTradeTransferRequest request = new V2WalletTradeTransferRequest();
-        // 系统号
-        // request.setSysId("test");
-        // 产品号
-        // request.setProductId("test");
-        // 加签结果
-        // request.setSign("test");
-        // 数据
-        // request.setData("test");
+        // 请求流水号
+        request.setReqSeqId(SequenceTools.getReqSeqId32());
+        // 请求日期
+        request.setReqDate(DateTools.getCurrentDateYYYYMMDD());
+        // 商户号
+        request.setHuifuId("6666000135653240");
+        // 出款方钱包用户ID
+        request.setUserHuifuId("6666000136655020");
+        // 收款方钱包用户ID
+        request.setInUserHuifuId("6666000136655254");
+        // 订单金额
+        request.setTransAmt("0.03");
+        // 跳转地址
+        request.setFrontUrl("http://www.huifu.com/products-services/");
 
         // 设置非必填字段
         Map<String, Object> extendInfoMap = getExtendInfos();
@@ -51,6 +57,16 @@ public class V2WalletTradeTransferRequestDemo extends BaseCommonDemo {
     private static Map<String, Object> getExtendInfos() {
         // 设置非必填字段
         Map<String, Object> extendInfoMap = new HashMap<>();
+        // 密码页面类型
+        extendInfoMap.put("request_type", "M");
+        // 备注
+        extendInfoMap.put("remark", "remark11");
+        // 商户扩展信息
+        extendInfoMap.put("mer_priv", "mer_priv1");
+        // 订单失效时间
+        // extendInfoMap.put("time_expire", "");
+        // 异步通知地址
+        // extendInfoMap.put("notify_url", "");
         return extendInfoMap;
     }
 

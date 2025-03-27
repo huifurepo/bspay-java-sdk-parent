@@ -33,7 +33,7 @@ public class V2QuickbuckleOnekeyCardbindRequestDemo extends BaseCommonDemo {
         // 汇付Id
         request.setHuifuId("6666000003078984");
         // 顾客用户号 
-        request.setOutCustId("6666000103633619");
+        request.setOutCustId("asdtrw123123123");
         // 银行号
         request.setBankId("01030000");
         // 银行卡开户姓名 

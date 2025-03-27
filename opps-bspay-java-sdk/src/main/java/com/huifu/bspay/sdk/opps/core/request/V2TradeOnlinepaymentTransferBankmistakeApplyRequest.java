@@ -37,12 +37,12 @@ public class V2TradeOnlinepaymentTransferBankmistakeApplyRequest extends BaseReq
     @JSONField(name = "order_type")
     private String orderType;
     /**
-     * 原请求流水号
+     * 原请求流水号order_flag&#x3D;Y时必填；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：2022012514120615009&lt;/font&gt;
      */
     @JSONField(name = "org_req_seq_id")
     private String orgReqSeqId;
     /**
-     * 原请求日期
+     * 原请求日期格式:yyyyMMdd；order_flag&#x3D;Y时必填；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：20220125&lt;/font&gt;
      */
     @JSONField(name = "org_req_date")
     private String orgReqDate;
@@ -51,16 +51,6 @@ public class V2TradeOnlinepaymentTransferBankmistakeApplyRequest extends BaseReq
      */
     @JSONField(name = "notify_url")
     private String notifyUrl;
-    /**
-     * 商品描述
-     */
-    @JSONField(name = "goods_desc")
-    private String goodsDesc;
-    /**
-     * 汇款凭证文件id
-     */
-    @JSONField(name = "certificate_file_id")
-    private String certificateFileId;
 
     @Override
     public FunctionCodeEnum getFunctionCode() {
@@ -70,7 +60,7 @@ public class V2TradeOnlinepaymentTransferBankmistakeApplyRequest extends BaseReq
     public V2TradeOnlinepaymentTransferBankmistakeApplyRequest() {
     }
 
-    public V2TradeOnlinepaymentTransferBankmistakeApplyRequest(String reqSeqId, String reqDate, String huifuId, String transAmt, String orderType, String orgReqSeqId, String orgReqDate, String notifyUrl, String goodsDesc, String certificateFileId) {
+    public V2TradeOnlinepaymentTransferBankmistakeApplyRequest(String reqSeqId, String reqDate, String huifuId, String transAmt, String orderType, String orgReqSeqId, String orgReqDate, String notifyUrl) {
         this.reqSeqId = reqSeqId;
         this.reqDate = reqDate;
         this.huifuId = huifuId;
@@ -79,8 +69,6 @@ public class V2TradeOnlinepaymentTransferBankmistakeApplyRequest extends BaseReq
         this.orgReqSeqId = orgReqSeqId;
         this.orgReqDate = orgReqDate;
         this.notifyUrl = notifyUrl;
-        this.goodsDesc = goodsDesc;
-        this.certificateFileId = certificateFileId;
     }
 
     public String getReqSeqId() {
@@ -145,22 +133,6 @@ public class V2TradeOnlinepaymentTransferBankmistakeApplyRequest extends BaseReq
 
     public void setNotifyUrl(String notifyUrl) {
         this.notifyUrl = notifyUrl;
-    }
-
-    public String getGoodsDesc() {
-        return goodsDesc;
-    }
-
-    public void setGoodsDesc(String goodsDesc) {
-        this.goodsDesc = goodsDesc;
-    }
-
-    public String getCertificateFileId() {
-        return certificateFileId;
-    }
-
-    public void setCertificateFileId(String certificateFileId) {
-        this.certificateFileId = certificateFileId;
     }
 
 }

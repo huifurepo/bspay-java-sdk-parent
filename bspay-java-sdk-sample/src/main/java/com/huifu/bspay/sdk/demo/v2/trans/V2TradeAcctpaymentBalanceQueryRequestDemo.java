@@ -11,7 +11,7 @@ import com.huifu.bspay.sdk.demo.core.Identify;
 import com.huifu.bspay.sdk.opps.core.request.V2TradeAcctpaymentBalanceQueryRequest;
 
 /**
- * 账户余额信息查询接口 - 示例
+ * 账户余额信息查询 - 示例
  *
  * @author sdk-generator
  * @Description

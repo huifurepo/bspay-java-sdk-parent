@@ -41,6 +41,11 @@ public class V2InvoiceClerkRegRequest extends BaseRequest {
      */
     @JSONField(name = "login_password")
     private String loginPassword;
+    /**
+     * 开票员手机号
+     */
+    @JSONField(name = "clerk_phone_no")
+    private String clerkPhoneNo;
 
     @Override
     public FunctionCodeEnum getFunctionCode() {
@@ -50,13 +55,14 @@ public class V2InvoiceClerkRegRequest extends BaseRequest {
     public V2InvoiceClerkRegRequest() {
     }
 
-    public V2InvoiceClerkRegRequest(String reqSeqId, String reqDate, String huifuId, String clerkIdentity, String loginAccount, String loginPassword) {
+    public V2InvoiceClerkRegRequest(String reqSeqId, String reqDate, String huifuId, String clerkIdentity, String loginAccount, String loginPassword, String clerkPhoneNo) {
         this.reqSeqId = reqSeqId;
         this.reqDate = reqDate;
         this.huifuId = huifuId;
         this.clerkIdentity = clerkIdentity;
         this.loginAccount = loginAccount;
         this.loginPassword = loginPassword;
+        this.clerkPhoneNo = clerkPhoneNo;
     }
 
     public String getReqSeqId() {
@@ -105,6 +111,14 @@ public class V2InvoiceClerkRegRequest extends BaseRequest {
 
     public void setLoginPassword(String loginPassword) {
         this.loginPassword = loginPassword;
+    }
+
+    public String getClerkPhoneNo() {
+        return clerkPhoneNo;
+    }
+
+    public void setClerkPhoneNo(String clerkPhoneNo) {
+        this.clerkPhoneNo = clerkPhoneNo;
     }
 
 }

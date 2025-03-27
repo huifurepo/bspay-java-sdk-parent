@@ -52,6 +52,11 @@ public class V2TradeOnlinepaymentWithholdpayRequest extends BaseRequest {
     @JSONField(name = "withhold_type")
     private String withholdType;
     /**
+     * 异步通知地址
+     */
+    @JSONField(name = "notify_url")
+    private String notifyUrl;
+    /**
      * 银行扩展数据
      */
     @JSONField(name = "extend_pay_data")
@@ -66,11 +71,6 @@ public class V2TradeOnlinepaymentWithholdpayRequest extends BaseRequest {
      */
     @JSONField(name = "terminal_device_data")
     private String terminalDeviceData;
-    /**
-     * 异步通知地址
-     */
-    @JSONField(name = "notify_url")
-    private String notifyUrl;
 
     @Override
     public FunctionCodeEnum getFunctionCode() {
@@ -80,7 +80,7 @@ public class V2TradeOnlinepaymentWithholdpayRequest extends BaseRequest {
     public V2TradeOnlinepaymentWithholdpayRequest() {
     }
 
-    public V2TradeOnlinepaymentWithholdpayRequest(String reqDate, String reqSeqId, String huifuId, String userHuifuId, String cardBindId, String transAmt, String goodsDesc, String withholdType, String extendPayData, String riskCheckData, String terminalDeviceData, String notifyUrl) {
+    public V2TradeOnlinepaymentWithholdpayRequest(String reqDate, String reqSeqId, String huifuId, String userHuifuId, String cardBindId, String transAmt, String goodsDesc, String withholdType, String notifyUrl, String extendPayData, String riskCheckData, String terminalDeviceData) {
         this.reqDate = reqDate;
         this.reqSeqId = reqSeqId;
         this.huifuId = huifuId;
@@ -89,10 +89,10 @@ public class V2TradeOnlinepaymentWithholdpayRequest extends BaseRequest {
         this.transAmt = transAmt;
         this.goodsDesc = goodsDesc;
         this.withholdType = withholdType;
+        this.notifyUrl = notifyUrl;
         this.extendPayData = extendPayData;
         this.riskCheckData = riskCheckData;
         this.terminalDeviceData = terminalDeviceData;
-        this.notifyUrl = notifyUrl;
     }
 
     public String getReqDate() {
@@ -159,6 +159,14 @@ public class V2TradeOnlinepaymentWithholdpayRequest extends BaseRequest {
         this.withholdType = withholdType;
     }
 
+    public String getNotifyUrl() {
+        return notifyUrl;
+    }
+
+    public void setNotifyUrl(String notifyUrl) {
+        this.notifyUrl = notifyUrl;
+    }
+
     public String getExtendPayData() {
         return extendPayData;
     }
@@ -181,14 +189,6 @@ public class V2TradeOnlinepaymentWithholdpayRequest extends BaseRequest {
 
     public void setTerminalDeviceData(String terminalDeviceData) {
         this.terminalDeviceData = terminalDeviceData;
-    }
-
-    public String getNotifyUrl() {
-        return notifyUrl;
-    }
-
-    public void setNotifyUrl(String notifyUrl) {
-        this.notifyUrl = notifyUrl;
     }
 
 }

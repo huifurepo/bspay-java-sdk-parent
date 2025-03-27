@@ -46,6 +46,11 @@ public class V2TradeHostingPaymentHtrefundRequest extends BaseRequest {
      */
     @JSONField(name = "terminal_device_data")
     private String terminalDeviceData;
+    /**
+     * 大额转账支付账户信息数据jsonObject格式；银行大额转账支付交易退款申请时必填
+     */
+    @JSONField(name = "bank_info_data")
+    private String bankInfoData;
 
     @Override
     public FunctionCodeEnum getFunctionCode() {
@@ -55,7 +60,7 @@ public class V2TradeHostingPaymentHtrefundRequest extends BaseRequest {
     public V2TradeHostingPaymentHtrefundRequest() {
     }
 
-    public V2TradeHostingPaymentHtrefundRequest(String reqDate, String reqSeqId, String huifuId, String ordAmt, String orgReqDate, String riskCheckData, String terminalDeviceData) {
+    public V2TradeHostingPaymentHtrefundRequest(String reqDate, String reqSeqId, String huifuId, String ordAmt, String orgReqDate, String riskCheckData, String terminalDeviceData, String bankInfoData) {
         this.reqDate = reqDate;
         this.reqSeqId = reqSeqId;
         this.huifuId = huifuId;
@@ -63,6 +68,7 @@ public class V2TradeHostingPaymentHtrefundRequest extends BaseRequest {
         this.orgReqDate = orgReqDate;
         this.riskCheckData = riskCheckData;
         this.terminalDeviceData = terminalDeviceData;
+        this.bankInfoData = bankInfoData;
     }
 
     public String getReqDate() {
@@ -119,6 +125,14 @@ public class V2TradeHostingPaymentHtrefundRequest extends BaseRequest {
 
     public void setTerminalDeviceData(String terminalDeviceData) {
         this.terminalDeviceData = terminalDeviceData;
+    }
+
+    public String getBankInfoData() {
+        return bankInfoData;
+    }
+
+    public void setBankInfoData(String bankInfoData) {
+        this.bankInfoData = bankInfoData;
     }
 
 }

@@ -35,11 +35,11 @@ public class V2TradeOnlinepaymentQuickpayFrontpayRequestDemo extends BaseCommonD
         // 订单金额
         request.setTransAmt("0.01");
         // 银行扩展信息
-        request.setExtendPayData(getExtendPayData());
+        request.setExtendPayData(getA5a44257248146f586ec9275ef51ed56());
         // 设备信息
-        request.setTerminalDeviceData(getTerminalDeviceData());
+        request.setTerminalDeviceData(get843a86e56f334304Ac7c38c6524abd82());
         // 安全信息
-        request.setRiskCheckData(getRiskCheckData());
+        request.setRiskCheckData(getE7f925f2Ab5041919687F439e2fba4ad());
         // 异步通知地址
         request.setNotifyUrl("http://www.baidu.com");
 
@@ -48,7 +48,7 @@ public class V2TradeOnlinepaymentQuickpayFrontpayRequestDemo extends BaseCommonD
         request.setExtendInfo(extendInfoMap);
 
         // 3. 发起API调用
-        Map<String, Object> response = doExecute(request, true);
+        Map<String, Object> response = doExecute(request);
         System.out.println("返回数据:" + JSONObject.toJSONString(response));
     }
 
@@ -72,7 +72,7 @@ public class V2TradeOnlinepaymentQuickpayFrontpayRequestDemo extends BaseCommonD
         // 延时标记
         // extendInfoMap.put("delay_acct_flag", "");
         // 分账串
-        extendInfoMap.put("acct_split_bunch", getAcctSplitBunchRucan());
+        extendInfoMap.put("acct_split_bunch", get82800b8cE35d42b9B688260754e5deef());
         // 手续费扣款标志
         extendInfoMap.put("fee_flag", "2");
         // 备注
@@ -82,7 +82,7 @@ public class V2TradeOnlinepaymentQuickpayFrontpayRequestDemo extends BaseCommonD
         return extendInfoMap;
     }
 
-    private static JSON getAcctInfos() {
+    private static JSON getDef0a935D6a343269064019353c3caf5() {
         JSONObject dto = new JSONObject();
         // 分账接收方ID
         dto.put("huifu_id", "6666000109133323");
@@ -98,10 +98,10 @@ public class V2TradeOnlinepaymentQuickpayFrontpayRequestDemo extends BaseCommonD
         return dtoList;
     }
 
-    private static String getAcctSplitBunchRucan() {
+    private static String get82800b8cE35d42b9B688260754e5deef() {
         JSONObject dto = new JSONObject();
         // 分账明细
-        dto.put("acct_infos", getAcctInfos());
+        dto.put("acct_infos", getDef0a935D6a343269064019353c3caf5());
         // 百分比分账标志
         // dto.put("percentage_flag", "");
         // 是否净值分账
@@ -110,7 +110,7 @@ public class V2TradeOnlinepaymentQuickpayFrontpayRequestDemo extends BaseCommonD
         return dto.toJSONString();
     }
 
-    private static String getExtendPayData() {
+    private static String getA5a44257248146f586ec9275ef51ed56() {
         JSONObject dto = new JSONObject();
         // 商品简称
         dto.put("goods_short_name", "01");
@@ -122,7 +122,7 @@ public class V2TradeOnlinepaymentQuickpayFrontpayRequestDemo extends BaseCommonD
         return dto.toJSONString();
     }
 
-    private static String getTerminalDeviceData() {
+    private static String get843a86e56f334304Ac7c38c6524abd82() {
         JSONObject dto = new JSONObject();
         // 设备类型
         dto.put("device_type", "1");
@@ -144,7 +144,7 @@ public class V2TradeOnlinepaymentQuickpayFrontpayRequestDemo extends BaseCommonD
         return dto.toJSONString();
     }
 
-    private static String getRiskCheckData() {
+    private static String getE7f925f2Ab5041919687F439e2fba4ad() {
         JSONObject dto = new JSONObject();
         // ip地址
         dto.put("ip_addr", "127.0.0.1");

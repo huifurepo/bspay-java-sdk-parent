@@ -38,6 +38,8 @@ public class V2InvoiceClerkRegRequestDemo extends BaseCommonDemo {
         request.setLoginAccount("31011520010");
         // 登录密码
         request.setLoginPassword("1******5");
+        // 开票员手机号
+        request.setClerkPhoneNo("17621100776");
 
         // 设置非必填字段
         Map<String, Object> extendInfoMap = getExtendInfos();
@@ -55,8 +57,6 @@ public class V2InvoiceClerkRegRequestDemo extends BaseCommonDemo {
     private static Map<String, Object> getExtendInfos() {
         // 设置非必填字段
         Map<String, Object> extendInfoMap = new HashMap<>();
-        // 开票员手机号
-        extendInfoMap.put("clerk_phone_no", "17621100776");
         return extendInfoMap;
     }
 

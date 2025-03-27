@@ -53,7 +53,7 @@ public class V2PcreditSolutionCreateRequestDemo extends BaseCommonDemo {
         // 预算提醒手机号列表
         request.setBudgetWarningMobileNoList("13940001100");
         // 子门店信息集合
-        request.setSubShopInfoList(getSubShopInfoList());
+        request.setSubShopInfoList(get5b9e78e1B07f4c27Aea4A87833d62a7e());
 
         // 设置非必填字段
         Map<String, Object> extendInfoMap = getExtendInfos();
@@ -76,7 +76,7 @@ public class V2PcreditSolutionCreateRequestDemo extends BaseCommonDemo {
         return extendInfoMap;
     }
 
-    private static String getSubShopInfoList() {
+    private static String get5b9e78e1B07f4c27Aea4A87833d62a7e() {
         JSONObject dto = new JSONObject();
         // 二级商户号
         dto.put("sub_mer_id", "A4854135335181517376");

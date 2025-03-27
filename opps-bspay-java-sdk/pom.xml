@@ -5,7 +5,7 @@
 
     <groupId>com.huifu.bspay.sdk</groupId>
     <artifactId>dg-java-sdk</artifactId>
-    <version>3.0.22-SNAPSHOT</version>
+    <version>3.0.24</version>
     <packaging>jar</packaging>
     <name>${project.artifactId} - ${project.version}</name>
     <inceptionYear>2021</inceptionYear>
@@ -37,14 +37,25 @@
     </scm>
 
     <distributionManagement>
-            <repository>
+   <!--         <repository>
                 <id>oss</id>
                 <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
             </repository>
             <snapshotRepository>
                 <id>oss</id>
                 <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-            </snapshotRepository>
+            </snapshotRepository>-->
+        <repository>
+            <id>nexus</id>
+            <name>Releases</name>
+            <url>http://nexus.huifutest.com/repository/releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>nexus</id>
+            <name>Snapshots</name>
+            <url>http://nexus.huifutest.com/repository/snapshots/</url>
+        </snapshotRepository>
+
     </distributionManagement>
 
     <build>

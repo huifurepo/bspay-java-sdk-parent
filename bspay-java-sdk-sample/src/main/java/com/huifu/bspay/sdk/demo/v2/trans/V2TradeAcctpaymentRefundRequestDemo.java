@@ -58,15 +58,15 @@ public class V2TradeAcctpaymentRefundRequestDemo extends BaseCommonDemo {
         // 设置非必填字段
         Map<String, Object> extendInfoMap = new HashMap<>();
         // 分账对象
-        // extendInfoMap.put("acct_split_bunch", getAcctSplitBunch());
+        // extendInfoMap.put("acct_split_bunch", get9128befdE59846c78e5b5db4cb062ef2());
         // 安全信息
-        extendInfoMap.put("risk_check_data", getRiskCheckData());
+        extendInfoMap.put("risk_check_data", get506673b064014081830918c73b5747ba());
         // 备注
         extendInfoMap.put("remark", "1234567890");
         return extendInfoMap;
     }
 
-    private static JSON getAcctInfos() {
+    private static JSON get26f8ea3aF58d4562894b3b3360aa8987() {
         JSONObject dto = new JSONObject();
         // 退款金额
         // dto.put("div_amt", "test");
@@ -78,15 +78,15 @@ public class V2TradeAcctpaymentRefundRequestDemo extends BaseCommonDemo {
         return dtoList;
     }
 
-    private static String getAcctSplitBunch() {
+    private static String get9128befdE59846c78e5b5db4cb062ef2() {
         JSONObject dto = new JSONObject();
         // 退账明细
-        // dto.put("acct_infos", getAcctInfos());
+        // dto.put("acct_infos", get26f8ea3aF58d4562894b3b3360aa8987());
 
         return dto.toJSONString();
     }
 
-    private static String getRiskCheckData() {
+    private static String get506673b064014081830918c73b5747ba() {
         JSONObject dto = new JSONObject();
         // 转账原因
         dto.put("transfer_type", "04");

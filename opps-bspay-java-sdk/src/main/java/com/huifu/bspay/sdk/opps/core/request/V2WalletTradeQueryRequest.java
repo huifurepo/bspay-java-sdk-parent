@@ -12,25 +12,25 @@ import com.huifu.bspay.sdk.opps.core.enums.FunctionCodeEnum;
 public class V2WalletTradeQueryRequest extends BaseRequest {
 
     /**
-     * 系统号
+     * 商户号
      */
-    @JSONField(name = "sys_id")
-    private String sysId;
+    @JSONField(name = "huifu_id")
+    private String huifuId;
     /**
-     * 产品号
+     * 原交易请求日期
      */
-    @JSONField(name = "product_id")
-    private String productId;
+    @JSONField(name = "org_req_date")
+    private String orgReqDate;
     /**
-     * 加签结果
+     * 原交易请求流水号
      */
-    @JSONField(name = "sign")
-    private String sign;
+    @JSONField(name = "org_req_seq_id")
+    private String orgReqSeqId;
     /**
-     * 数据
+     * 交易类型
      */
-    @JSONField(name = "data")
-    private String data;
+    @JSONField(name = "trans_type")
+    private String transType;
 
     @Override
     public FunctionCodeEnum getFunctionCode() {
@@ -40,43 +40,43 @@ public class V2WalletTradeQueryRequest extends BaseRequest {
     public V2WalletTradeQueryRequest() {
     }
 
-    public V2WalletTradeQueryRequest(String sysId, String productId, String sign, String data) {
-        this.sysId = sysId;
-        this.productId = productId;
-        this.sign = sign;
-        this.data = data;
+    public V2WalletTradeQueryRequest(String huifuId, String orgReqDate, String orgReqSeqId, String transType) {
+        this.huifuId = huifuId;
+        this.orgReqDate = orgReqDate;
+        this.orgReqSeqId = orgReqSeqId;
+        this.transType = transType;
     }
 
-    public String getSysId() {
-        return sysId;
+    public String getHuifuId() {
+        return huifuId;
     }
 
-    public void setSysId(String sysId) {
-        this.sysId = sysId;
+    public void setHuifuId(String huifuId) {
+        this.huifuId = huifuId;
     }
 
-    public String getProductId() {
-        return productId;
+    public String getOrgReqDate() {
+        return orgReqDate;
     }
 
-    public void setProductId(String productId) {
-        this.productId = productId;
+    public void setOrgReqDate(String orgReqDate) {
+        this.orgReqDate = orgReqDate;
     }
 
-    public String getSign() {
-        return sign;
+    public String getOrgReqSeqId() {
+        return orgReqSeqId;
     }
 
-    public void setSign(String sign) {
-        this.sign = sign;
+    public void setOrgReqSeqId(String orgReqSeqId) {
+        this.orgReqSeqId = orgReqSeqId;
     }
 
-    public String getData() {
-        return data;
+    public String getTransType() {
+        return transType;
     }
 
-    public void setData(String data) {
-        this.data = data;
+    public void setTransType(String transType) {
+        this.transType = transType;
     }
 
 }

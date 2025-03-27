@@ -12,25 +12,15 @@ import com.huifu.bspay.sdk.opps.core.enums.FunctionCodeEnum;
 public class V2WalletTradePayRefundQueryRequest extends BaseRequest {
 
     /**
-     * 系统号
+     * 原退款交易请求日期
      */
-    @JSONField(name = "sys_id")
-    private String sysId;
+    @JSONField(name = "org_req_date")
+    private String orgReqDate;
     /**
-     * 产品号
+     * 原退款交易请求流水号
      */
-    @JSONField(name = "product_id")
-    private String productId;
-    /**
-     * 加签结果
-     */
-    @JSONField(name = "sign")
-    private String sign;
-    /**
-     * 数据
-     */
-    @JSONField(name = "data")
-    private String data;
+    @JSONField(name = "org_req_seq_id")
+    private String orgReqSeqId;
 
     @Override
     public FunctionCodeEnum getFunctionCode() {
@@ -40,43 +30,25 @@ public class V2WalletTradePayRefundQueryRequest extends BaseRequest {
     public V2WalletTradePayRefundQueryRequest() {
     }
 
-    public V2WalletTradePayRefundQueryRequest(String sysId, String productId, String sign, String data) {
-        this.sysId = sysId;
-        this.productId = productId;
-        this.sign = sign;
-        this.data = data;
+    public V2WalletTradePayRefundQueryRequest(String orgReqDate, String orgReqSeqId) {
+        this.orgReqDate = orgReqDate;
+        this.orgReqSeqId = orgReqSeqId;
     }
 
-    public String getSysId() {
-        return sysId;
+    public String getOrgReqDate() {
+        return orgReqDate;
     }
 
-    public void setSysId(String sysId) {
-        this.sysId = sysId;
+    public void setOrgReqDate(String orgReqDate) {
+        this.orgReqDate = orgReqDate;
     }
 
-    public String getProductId() {
-        return productId;
+    public String getOrgReqSeqId() {
+        return orgReqSeqId;
     }
 
-    public void setProductId(String productId) {
-        this.productId = productId;
-    }
-
-    public String getSign() {
-        return sign;
-    }
-
-    public void setSign(String sign) {
-        this.sign = sign;
-    }
-
-    public String getData() {
-        return data;
-    }
-
-    public void setData(String data) {
-        this.data = data;
+    public void setOrgReqSeqId(String orgReqSeqId) {
+        this.orgReqSeqId = orgReqSeqId;
     }
 
 }

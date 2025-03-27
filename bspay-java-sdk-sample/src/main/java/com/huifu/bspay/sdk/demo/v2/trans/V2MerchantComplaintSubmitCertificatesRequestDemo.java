@@ -37,7 +37,7 @@ public class V2MerchantComplaintSubmitCertificatesRequestDemo extends BaseCommon
         // 解限风险类型
         request.setRelieveRiskType("SMID_MERCHANT");
         // 提交的凭证数据
-        request.setRelieveCertDataList(getRelieveCertDataList());
+        request.setRelieveCertDataList(get28cea73e4b8543ad899a4d2cdd0659ab());
 
         // 设置非必填字段
         Map<String, Object> extendInfoMap = getExtendInfos();
@@ -58,7 +58,7 @@ public class V2MerchantComplaintSubmitCertificatesRequestDemo extends BaseCommon
         return extendInfoMap;
     }
 
-    private static String getRelieveCertDataList() {
+    private static String get28cea73e4b8543ad899a4d2cdd0659ab() {
         JSONObject dto = new JSONObject();
         // 凭证的唯一ID
         dto.put("request_id", "1efc8c73afd64fc1b1fc50a834a54be0");

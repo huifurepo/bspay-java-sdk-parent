@@ -11,7 +11,7 @@ import com.huifu.bspay.sdk.demo.core.Identify;
 import com.huifu.bspay.sdk.opps.core.request.V2PcreditFeeDetailRequest;
 
 /**
- * 商户分期配置详情查询 - 示例
+ * 商户分期配置查询 - 示例
  *
  * @author sdk-generator
  * @Description

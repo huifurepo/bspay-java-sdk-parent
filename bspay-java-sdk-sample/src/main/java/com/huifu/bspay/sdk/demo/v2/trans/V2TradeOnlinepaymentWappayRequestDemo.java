@@ -39,11 +39,11 @@ public class V2TradeOnlinepaymentWappayRequestDemo extends BaseCommonDemo {
         // 银行卡号instalments_num不为空时必填；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：6228480031509440000&lt;/font&gt;
         request.setBankCardNo("6222021102043040313");
         // 网联扩展数据
-        request.setExtendPayData(getExtendPayData());
+        request.setExtendPayData(getCf4cb2ef02d648cb9e1b0b20679972ad());
         // 安全信息
-        request.setRiskCheckData(getRiskCheckData());
+        request.setRiskCheckData(get1f8253a4Fbf2498e8907Ca25050286a9());
         // 设备信息
-        request.setTerminalDeviceData(getTerminalDeviceData());
+        request.setTerminalDeviceData(getDc79daa055e84e08A6d9Acb7c6852009());
         // 页面跳转地址
         request.setFrontUrl("http://www.baidu.com");
         // 异步通知地址
@@ -70,7 +70,7 @@ public class V2TradeOnlinepaymentWappayRequestDemo extends BaseCommonDemo {
         // 交易有效期
         extendInfoMap.put("time_expire", "20220406210038");
         // 分账对象
-        extendInfoMap.put("acct_split_bunch", getAcctSplitBunchRucan());
+        extendInfoMap.put("acct_split_bunch", getB6e97b2d46914697Aba811c3a961e747());
         // 备注
         extendInfoMap.put("remark", "");
         // 页面失败跳转地址
@@ -78,7 +78,7 @@ public class V2TradeOnlinepaymentWappayRequestDemo extends BaseCommonDemo {
         return extendInfoMap;
     }
 
-    private static String getExtendPayData() {
+    private static String getCf4cb2ef02d648cb9e1b0b20679972ad() {
         JSONObject dto = new JSONObject();
         // 商品简称
         dto.put("goods_short_name", "一般商品");
@@ -90,7 +90,7 @@ public class V2TradeOnlinepaymentWappayRequestDemo extends BaseCommonDemo {
         return dto.toJSONString();
     }
 
-    private static JSON getAcctInfos() {
+    private static JSON getA82d6734Fde04413B5e365e64f965e1f() {
         JSONObject dto = new JSONObject();
         // 支付金额
         // dto.put("div_amt", "");
@@ -106,10 +106,10 @@ public class V2TradeOnlinepaymentWappayRequestDemo extends BaseCommonDemo {
         return dtoList;
     }
 
-    private static String getAcctSplitBunchRucan() {
+    private static String getB6e97b2d46914697Aba811c3a961e747() {
         JSONObject dto = new JSONObject();
         // 分账信息列表
-        dto.put("acct_infos", getAcctInfos());
+        dto.put("acct_infos", getA82d6734Fde04413B5e365e64f965e1f());
         // 百分比分账标志
         // dto.put("percentage_flag", "");
         // 是否净值分账
@@ -118,7 +118,7 @@ public class V2TradeOnlinepaymentWappayRequestDemo extends BaseCommonDemo {
         return dto.toJSONString();
     }
 
-    private static String getRiskCheckData() {
+    private static String get1f8253a4Fbf2498e8907Ca25050286a9() {
         JSONObject dto = new JSONObject();
         // ip地址
         dto.put("ip_addr", "111");
@@ -132,7 +132,7 @@ public class V2TradeOnlinepaymentWappayRequestDemo extends BaseCommonDemo {
         return dto.toJSONString();
     }
 
-    private static String getTerminalDeviceData() {
+    private static String getDc79daa055e84e08A6d9Acb7c6852009() {
         JSONObject dto = new JSONObject();
         // 交易设备ip
         dto.put("device_ip", "127.0.0.1");

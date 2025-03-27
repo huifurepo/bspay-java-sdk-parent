@@ -51,6 +51,11 @@ public class V2TradeInstallmentPaymentRequest extends BaseRequest {
      */
     @JSONField(name = "jdbt_data")
     private String jdbtData;
+    /**
+     * 银联聚分期信息trans_type&#x3D;YLJFQ-银联聚分期时，必填jsonObject字符串，银联聚分期相关信息通过该参数集上送
+     */
+    @JSONField(name = "yljfq_data")
+    private String yljfqData;
 
     @Override
     public FunctionCodeEnum getFunctionCode() {
@@ -60,7 +65,7 @@ public class V2TradeInstallmentPaymentRequest extends BaseRequest {
     public V2TradeInstallmentPaymentRequest() {
     }
 
-    public V2TradeInstallmentPaymentRequest(String reqDate, String reqSeqId, String huifuId, String transAmt, String installmentNum, String goodsDesc, String riskCheckData, String jdbtData) {
+    public V2TradeInstallmentPaymentRequest(String reqDate, String reqSeqId, String huifuId, String transAmt, String installmentNum, String goodsDesc, String riskCheckData, String jdbtData, String yljfqData) {
         this.reqDate = reqDate;
         this.reqSeqId = reqSeqId;
         this.huifuId = huifuId;
@@ -69,6 +74,7 @@ public class V2TradeInstallmentPaymentRequest extends BaseRequest {
         this.goodsDesc = goodsDesc;
         this.riskCheckData = riskCheckData;
         this.jdbtData = jdbtData;
+        this.yljfqData = yljfqData;
     }
 
     public String getReqDate() {
@@ -133,6 +139,14 @@ public class V2TradeInstallmentPaymentRequest extends BaseRequest {
 
     public void setJdbtData(String jdbtData) {
         this.jdbtData = jdbtData;
+    }
+
+    public String getYljfqData() {
+        return yljfqData;
+    }
+
+    public void setYljfqData(String yljfqData) {
+        this.yljfqData = yljfqData;
     }
 
 }

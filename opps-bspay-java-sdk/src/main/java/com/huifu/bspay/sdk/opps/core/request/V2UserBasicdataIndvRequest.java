@@ -47,6 +47,11 @@ public class V2UserBasicdataIndvRequest extends BaseRequest {
     @JSONField(name = "cert_begin_date")
     private String certBeginDate;
     /**
+     * 个人国籍个人证件类型为外国人居留证时，必填，参见《[国籍编码](https://cloudpnrcdn.oss-cn-shanghai.aliyuncs.com/opps/api/prod/download_file/area/%E5%9B%BD%E7%B1%8D.xlsx)》&lt;font color&#x3D;&quot;green&quot;&gt;示例值：CHN&lt;/font&gt;
+     */
+    @JSONField(name = "cert_nationality")
+    private String certNationality;
+    /**
      * 手机号
      */
     @JSONField(name = "mobile_no")
@@ -65,7 +70,7 @@ public class V2UserBasicdataIndvRequest extends BaseRequest {
     public V2UserBasicdataIndvRequest() {
     }
 
-    public V2UserBasicdataIndvRequest(String reqSeqId, String reqDate, String name, String certType, String certNo, String certValidityType, String certBeginDate, String mobileNo, String address) {
+    public V2UserBasicdataIndvRequest(String reqSeqId, String reqDate, String name, String certType, String certNo, String certValidityType, String certBeginDate, String certNationality, String mobileNo, String address) {
         this.reqSeqId = reqSeqId;
         this.reqDate = reqDate;
         this.name = name;
@@ -73,6 +78,7 @@ public class V2UserBasicdataIndvRequest extends BaseRequest {
         this.certNo = certNo;
         this.certValidityType = certValidityType;
         this.certBeginDate = certBeginDate;
+        this.certNationality = certNationality;
         this.mobileNo = mobileNo;
         this.address = address;
     }
@@ -131,6 +137,14 @@ public class V2UserBasicdataIndvRequest extends BaseRequest {
 
     public void setCertBeginDate(String certBeginDate) {
         this.certBeginDate = certBeginDate;
+    }
+
+    public String getCertNationality() {
+        return certNationality;
+    }
+
+    public void setCertNationality(String certNationality) {
+        this.certNationality = certNationality;
     }
 
     public String getMobileNo() {

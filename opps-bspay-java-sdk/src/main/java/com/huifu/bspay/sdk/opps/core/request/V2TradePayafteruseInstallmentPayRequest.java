@@ -42,11 +42,6 @@ public class V2TradePayafteruseInstallmentPayRequest extends BaseRequest {
     @JSONField(name = "risk_check_data")
     private String riskCheckData;
     /**
-     * 交易有效期
-     */
-    @JSONField(name = "time_expire")
-    private String timeExpire;
-    /**
      * 支付宝扩展参数集合
      */
     @JSONField(name = "alipay_data")
@@ -60,14 +55,13 @@ public class V2TradePayafteruseInstallmentPayRequest extends BaseRequest {
     public V2TradePayafteruseInstallmentPayRequest() {
     }
 
-    public V2TradePayafteruseInstallmentPayRequest(String reqDate, String reqSeqId, String huifuId, String transAmt, String goodsDesc, String riskCheckData, String timeExpire, String alipayData) {
+    public V2TradePayafteruseInstallmentPayRequest(String reqDate, String reqSeqId, String huifuId, String transAmt, String goodsDesc, String riskCheckData, String alipayData) {
         this.reqDate = reqDate;
         this.reqSeqId = reqSeqId;
         this.huifuId = huifuId;
         this.transAmt = transAmt;
         this.goodsDesc = goodsDesc;
         this.riskCheckData = riskCheckData;
-        this.timeExpire = timeExpire;
         this.alipayData = alipayData;
     }
 
@@ -117,14 +111,6 @@ public class V2TradePayafteruseInstallmentPayRequest extends BaseRequest {
 
     public void setRiskCheckData(String riskCheckData) {
         this.riskCheckData = riskCheckData;
-    }
-
-    public String getTimeExpire() {
-        return timeExpire;
-    }
-
-    public void setTimeExpire(String timeExpire) {
-        this.timeExpire = timeExpire;
     }
 
     public String getAlipayData() {

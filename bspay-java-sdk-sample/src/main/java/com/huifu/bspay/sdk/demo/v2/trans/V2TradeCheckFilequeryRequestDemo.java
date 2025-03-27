@@ -52,7 +52,7 @@ public class V2TradeCheckFilequeryRequestDemo extends BaseCommonDemo {
         // 设置非必填字段
         Map<String, Object> extendInfoMap = new HashMap<>();
         // 文件类型
-        extendInfoMap.put("file_type_query", "2");
+        extendInfoMap.put("bill_type", "TRADE_BILL");
         return extendInfoMap;
     }
 

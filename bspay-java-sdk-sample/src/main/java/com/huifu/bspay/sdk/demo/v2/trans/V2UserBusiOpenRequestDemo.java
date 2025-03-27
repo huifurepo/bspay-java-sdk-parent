@@ -35,7 +35,7 @@ public class V2UserBusiOpenRequestDemo extends BaseCommonDemo {
         // 渠道商/商户汇付Id
         request.setUpperHuifuId("6666000003084836");
         // 乐接活配置当合作平台为乐接活，必填
-        // request.setLjhData(getLjhData());
+        // request.setLjhData(get7928a71736b14ffe9aa0Ee852dc0b86a());
 
         // 设置非必填字段
         Map<String, Object> extendInfoMap = getExtendInfos();
@@ -54,17 +54,17 @@ public class V2UserBusiOpenRequestDemo extends BaseCommonDemo {
         // 设置非必填字段
         Map<String, Object> extendInfoMap = new HashMap<>();
         // 结算信息配置
-        extendInfoMap.put("settle_config", getSettleConfig());
+        extendInfoMap.put("settle_config", getCa71a7df63174cfeB0265628121f36d8());
         // 结算卡信息
-        extendInfoMap.put("card_info", getCardInfo());
+        extendInfoMap.put("card_info", get7a1b78f8D2d9483f9248Ffa360f5ab0b());
         // 取现配置列表
-        extendInfoMap.put("cash_config", getCashConfig());
+        extendInfoMap.put("cash_config", getBc6c0988B7344c1f9279Ab8281cdd2d7());
         // 文件列表
-        extendInfoMap.put("file_list", getFileList());
+        extendInfoMap.put("file_list", getF9126565Dc674812984234c8dee5c990());
         // 延迟入账开关
         // extendInfoMap.put("delay_flag", "");
         // 斗拱e账户功能配置
-        // extendInfoMap.put("elec_acct_config", getElecAcctConfig());
+        // extendInfoMap.put("elec_acct_config", get1aaf2d76E1c3480bAaa933be0552e6ef());
         // 灵活用工开关
         // extendInfoMap.put("open_tax_flag", "");
         // 异步请求地址
@@ -74,7 +74,7 @@ public class V2UserBusiOpenRequestDemo extends BaseCommonDemo {
         return extendInfoMap;
     }
 
-    private static String getSettleConfig() {
+    private static String getCa71a7df63174cfeB0265628121f36d8() {
         JSONObject dto = new JSONObject();
         // 结算周期
         dto.put("settle_cycle", "D1");
@@ -108,7 +108,7 @@ public class V2UserBusiOpenRequestDemo extends BaseCommonDemo {
         return dto.toJSONString();
     }
 
-    private static String getCardInfo() {
+    private static String get7a1b78f8D2d9483f9248Ffa360f5ab0b() {
         JSONObject dto = new JSONObject();
         // 卡类型
         dto.put("card_type", "0");
@@ -142,7 +142,7 @@ public class V2UserBusiOpenRequestDemo extends BaseCommonDemo {
         return dto.toJSONString();
     }
 
-    private static String getCashConfig() {
+    private static String getBc6c0988B7344c1f9279Ab8281cdd2d7() {
         JSONObject dto = new JSONObject();
         // 提现手续费（固定/元）fix_amt与fee_rate至少填写一项， 需保留小数点后两位，不收费请填写0.00；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：1.00&lt;/font&gt;注：当cash_type&#x3D;D1时为节假日取现手续费
         dto.put("fix_amt", "0.03");
@@ -168,7 +168,7 @@ public class V2UserBusiOpenRequestDemo extends BaseCommonDemo {
         return dtoList.toJSONString();
     }
 
-    private static String getFileList() {
+    private static String getF9126565Dc674812984234c8dee5c990() {
         JSONObject dto = new JSONObject();
         // 文件类型
         dto.put("file_type", "F02");
@@ -182,7 +182,7 @@ public class V2UserBusiOpenRequestDemo extends BaseCommonDemo {
         return dtoList.toJSONString();
     }
 
-    private static String getElecCardList() {
+    private static JSON getB48226ab36cc4f0aB7ae23eaa07e30b8() {
         JSONObject dto = new JSONObject();
         // 银行编码
         // dto.put("bank_code", "test");
@@ -211,10 +211,10 @@ public class V2UserBusiOpenRequestDemo extends BaseCommonDemo {
 
         JSONArray dtoList = new JSONArray();
         dtoList.add(dto);
-        return dtoList.toJSONString();
+        return dtoList;
     }
 
-    private static String getElecAcctConfig() {
+    private static String get1aaf2d76E1c3480bAaa933be0552e6ef() {
         JSONObject dto = new JSONObject();
         // 电子账户开关
         // dto.put("switch_state", "test");
@@ -227,14 +227,14 @@ public class V2UserBusiOpenRequestDemo extends BaseCommonDemo {
         // 角色类型(角色编号)
         // dto.put("role_type", "test");
         // 银行卡信息
-        // dto.put("elec_card_list", getElecCardList());
+        // dto.put("elec_card_list", getB48226ab36cc4f0aB7ae23eaa07e30b8());
         // 用户类型
         // dto.put("user_type", "");
 
         return dto.toJSONString();
     }
 
-    private static String getLjhData() {
+    private static String get7928a71736b14ffe9aa0Ee852dc0b86a() {
         JSONObject dto = new JSONObject();
         // 税源地id当合作平台为乐接活，必填
         // dto.put("tax_area_id", "test");

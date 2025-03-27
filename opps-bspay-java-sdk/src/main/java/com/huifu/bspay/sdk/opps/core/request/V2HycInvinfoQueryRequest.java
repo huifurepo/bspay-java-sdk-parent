@@ -12,25 +12,25 @@ import com.huifu.bspay.sdk.opps.core.enums.FunctionCodeEnum;
 public class V2HycInvinfoQueryRequest extends BaseRequest {
 
     /**
-     * 系统号
+     * 请求流水号
      */
-    @JSONField(name = "sys_id")
-    private String sysId;
+    @JSONField(name = "req_seq_id")
+    private String reqSeqId;
     /**
-     * 产品号
+     * 请求日期
      */
-    @JSONField(name = "product_id")
-    private String productId;
+    @JSONField(name = "req_date")
+    private String reqDate;
     /**
-     * 加签结果
+     * 商户汇付id
      */
-    @JSONField(name = "sign")
-    private String sign;
+    @JSONField(name = "huifu_id")
+    private String huifuId;
     /**
-     * 数据
+     * 开票批次号
      */
-    @JSONField(name = "data")
-    private String data;
+    @JSONField(name = "invoice_batch")
+    private String invoiceBatch;
 
     @Override
     public FunctionCodeEnum getFunctionCode() {
@@ -40,43 +40,43 @@ public class V2HycInvinfoQueryRequest extends BaseRequest {
     public V2HycInvinfoQueryRequest() {
     }
 
-    public V2HycInvinfoQueryRequest(String sysId, String productId, String sign, String data) {
-        this.sysId = sysId;
-        this.productId = productId;
-        this.sign = sign;
-        this.data = data;
+    public V2HycInvinfoQueryRequest(String reqSeqId, String reqDate, String huifuId, String invoiceBatch) {
+        this.reqSeqId = reqSeqId;
+        this.reqDate = reqDate;
+        this.huifuId = huifuId;
+        this.invoiceBatch = invoiceBatch;
     }
 
-    public String getSysId() {
-        return sysId;
+    public String getReqSeqId() {
+        return reqSeqId;
     }
 
-    public void setSysId(String sysId) {
-        this.sysId = sysId;
+    public void setReqSeqId(String reqSeqId) {
+        this.reqSeqId = reqSeqId;
     }
 
-    public String getProductId() {
-        return productId;
+    public String getReqDate() {
+        return reqDate;
     }
 
-    public void setProductId(String productId) {
-        this.productId = productId;
+    public void setReqDate(String reqDate) {
+        this.reqDate = reqDate;
     }
 
-    public String getSign() {
-        return sign;
+    public String getHuifuId() {
+        return huifuId;
     }
 
-    public void setSign(String sign) {
-        this.sign = sign;
+    public void setHuifuId(String huifuId) {
+        this.huifuId = huifuId;
     }
 
-    public String getData() {
-        return data;
+    public String getInvoiceBatch() {
+        return invoiceBatch;
     }
 
-    public void setData(String data) {
-        this.data = data;
+    public void setInvoiceBatch(String invoiceBatch) {
+        this.invoiceBatch = invoiceBatch;
     }
 
 }

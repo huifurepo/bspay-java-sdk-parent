@@ -36,16 +36,12 @@ public class V2TradeOnlinepaymentTransferBankmistakeApplyRequestDemo extends Bas
         request.setTransAmt("0.01");
         // 订单类型
         request.setOrderType("REFUND");
-        // 原请求流水号
+        // 原请求流水号order_flag&#x3D;Y时必填；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：2022012514120615009&lt;/font&gt;
         request.setOrgReqSeqId("202308312345678931");
-        // 原请求日期
+        // 原请求日期格式:yyyyMMdd；order_flag&#x3D;Y时必填；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：20220125&lt;/font&gt;
         request.setOrgReqDate("20230831");
         // 异步通知地址
         request.setNotifyUrl("http://www.baidu.com");
-        // 商品描述
-        // request.setGoodsDesc("test");
-        // 汇款凭证文件id
-        // request.setCertificateFileId("test");
 
         // 设置非必填字段
         Map<String, Object> extendInfoMap = getExtendInfos();
@@ -68,35 +64,27 @@ public class V2TradeOnlinepaymentTransferBankmistakeApplyRequestDemo extends Bas
         // 备注
         extendInfoMap.put("remark", "大额支付补入账验证");
         // 银行信息数据
-        extendInfoMap.put("bank_info_data", getBankInfoData());
+        extendInfoMap.put("bank_info_data", getAbecf41199e2427189e378ecb5bc0872());
         // 延时标记
         // extendInfoMap.put("delay_acct_flag", "");
         // 分账对象
-        // extendInfoMap.put("acct_split_bunch", getAcctSplitBunch());
+        // extendInfoMap.put("acct_split_bunch", get887cec5eC9324ee3B2b5282eb708eb87());
         // 实际打款信息
-        // extendInfoMap.put("actual_remit_data", getActualRemitData());
+        // extendInfoMap.put("actual_remit_data", get8bcd25edC7614d4181cf7d7f6bd6e4b5());
         return extendInfoMap;
     }
 
-    private static String getBankInfoData() {
+    private static String getAbecf41199e2427189e378ecb5bc0872() {
         JSONObject dto = new JSONObject();
-        // 省份对公代发必填，[参见省市地区码](https://cloudpnrcdn.oss-cn-shanghai.aliyuncs.com/opps/api/prod/download_file/area/%E6%96%97%E6%8B%B1%E4%BB%A3%E5%8F%91%E7%9C%81%E4%BB%BD%E5%9C%B0%E5%8C%BA%E7%BC%96%E7%A0%81.xlsx)；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：0013&lt;/font&gt;
-        dto.put("province", "0031");
-        // 地区对公代发必填，[参见省市地区码](https://cloudpnrcdn.oss-cn-shanghai.aliyuncs.com/opps/api/prod/download_file/area/%E6%96%97%E6%8B%B1%E4%BB%A3%E5%8F%91%E7%9C%81%E4%BB%BD%E5%9C%B0%E5%8C%BA%E7%BC%96%E7%A0%81.xlsx)；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：1301&lt;/font&gt;
-        dto.put("area", "3100");
         // 银行编号
         dto.put("bank_code", "03080000");
-        // 联行号选填，参见：[银行支行编码](https://paas.huifu.com/open/doc/api/#/csfl/api_csfl_yhzhbm)； &lt;font color&#x3D;&quot;green&quot;&gt;示例值：102290026507&lt;/font&gt;&lt;br/&gt;对私代发非必填；
-        dto.put("correspondent_code", "103290076178");
         // 对公对私标识
         dto.put("card_acct_type", "P");
-        // 支行名
-        dto.put("subbranch_bank_name", "中国农业银行股份有限公司上海联洋支行");
 
         return dto.toJSONString();
     }
 
-    private static JSON getAcctInfos() {
+    private static JSON get7cb41945E40f4907Ab1e1dd0dcfaee14() {
         JSONObject dto = new JSONObject();
         // 支付金额
         // dto.put("div_amt", "");
@@ -108,15 +96,15 @@ public class V2TradeOnlinepaymentTransferBankmistakeApplyRequestDemo extends Bas
         return dtoList;
     }
 
-    private static JSON getAcctSplitBunch() {
+    private static String get887cec5eC9324ee3B2b5282eb708eb87() {
         JSONObject dto = new JSONObject();
         // 分账信息列表
-        // dto.put("acct_infos", getAcctInfos());
+        // dto.put("acct_infos", get7cb41945E40f4907Ab1e1dd0dcfaee14());
 
-        return dto;
+        return dto.toJSONString();
     }
 
-    private static String getActualRemitData() {
+    private static String get8bcd25edC7614d4181cf7d7f6bd6e4b5() {
         JSONObject dto = new JSONObject();
         // 实际打款日期
         // dto.put("actual_remit_date", "test");
@@ -126,14 +114,16 @@ public class V2TradeOnlinepaymentTransferBankmistakeApplyRequestDemo extends Bas
         // dto.put("actual_remit_amt", "test");
         // 实际打款方银行卡号
         // dto.put("actual_remit_card_no", "test");
-        // 实际打款卡号银行名称
-        // dto.put("actual_bank_name", "test");
         // 汇款凭证文件ID
         // dto.put("certificate_file_id", "test");
         // 退款卡标识
         // dto.put("refund_card_flag", "test");
+        // 实际打款卡号银行名称
+        // dto.put("actual_bank_name", "");
 
-        return dto.toJSONString();
+        JSONArray dtoList = new JSONArray();
+        dtoList.add(dto);
+        return dtoList.toJSONString();
     }
 
 }

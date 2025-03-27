@@ -50,7 +50,7 @@ public class V2BankBalanceQueryRequestDemo extends BaseCommonDemo {
         // 设置非必填字段
         Map<String, Object> extendInfoMap = new HashMap<>();
         // 操作类型
-        // extendInfoMap.put("elect_acct_type", "");
+        extendInfoMap.put("elect_acct_type", "MERCH");
         return extendInfoMap;
     }
 

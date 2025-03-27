@@ -26,14 +26,12 @@ public class V2HycMersignQueryRequestDemo extends BaseCommonDemo {
 
         // 2.组装请求参数
         V2HycMersignQueryRequest request = new V2HycMersignQueryRequest();
-        // 系统号
-        // request.setSysId("test");
-        // 产品号
-        // request.setProductId("test");
-        // 加签结果
-        // request.setSign("test");
-        // 数据
-        // request.setData("test");
+        // 请求流水号
+        request.setReqSeqId(SequenceTools.getReqSeqId32());
+        // 请求日期
+        request.setReqDate(DateTools.getCurrentDateYYYYMMDD());
+        // 商户汇付id
+        request.setHuifuId("6666000144060581");
 
         // 设置非必填字段
         Map<String, Object> extendInfoMap = getExtendInfos();
@@ -51,6 +49,10 @@ public class V2HycMersignQueryRequestDemo extends BaseCommonDemo {
     private static Map<String, Object> getExtendInfos() {
         // 设置非必填字段
         Map<String, Object> extendInfoMap = new HashMap<>();
+        // 开始时间
+        extendInfoMap.put("start_date", "20240112");
+        // 结束时间
+        extendInfoMap.put("end_date", "20240112");
         return extendInfoMap;
     }
 

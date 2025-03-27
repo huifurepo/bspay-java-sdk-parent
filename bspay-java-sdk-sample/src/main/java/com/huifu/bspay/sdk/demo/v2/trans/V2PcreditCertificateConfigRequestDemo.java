@@ -33,7 +33,7 @@ public class V2PcreditCertificateConfigRequestDemo extends BaseCommonDemo {
         // 开发者的应用ID
         request.setAppId("2019090666961966");
         // 证书文件列表
-        request.setFileList(getFileList());
+        request.setFileList(getEbe71eceF1a04373A7e1C99bb697b700());
 
         // 设置非必填字段
         Map<String, Object> extendInfoMap = getExtendInfos();
@@ -54,7 +54,7 @@ public class V2PcreditCertificateConfigRequestDemo extends BaseCommonDemo {
         return extendInfoMap;
     }
 
-    private static String getFileList() {
+    private static String getEbe71eceF1a04373A7e1C99bb697b700() {
         JSONObject dto = new JSONObject();
         // 文件类型
         dto.put("file_type", "F120");

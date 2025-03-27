@@ -12,25 +12,15 @@ import com.huifu.bspay.sdk.opps.core.enums.FunctionCodeEnum;
 public class V2HycContractQueryRequest extends BaseRequest {
 
     /**
-     * 系统号
+     * 请求流水号
      */
-    @JSONField(name = "sys_id")
-    private String sysId;
+    @JSONField(name = "req_seq_id")
+    private String reqSeqId;
     /**
-     * 产品号
+     * 请求日期
      */
-    @JSONField(name = "product_id")
-    private String productId;
-    /**
-     * 加签结果
-     */
-    @JSONField(name = "sign")
-    private String sign;
-    /**
-     * 数据
-     */
-    @JSONField(name = "data")
-    private String data;
+    @JSONField(name = "req_date")
+    private String reqDate;
 
     @Override
     public FunctionCodeEnum getFunctionCode() {
@@ -40,43 +30,25 @@ public class V2HycContractQueryRequest extends BaseRequest {
     public V2HycContractQueryRequest() {
     }
 
-    public V2HycContractQueryRequest(String sysId, String productId, String sign, String data) {
-        this.sysId = sysId;
-        this.productId = productId;
-        this.sign = sign;
-        this.data = data;
+    public V2HycContractQueryRequest(String reqSeqId, String reqDate) {
+        this.reqSeqId = reqSeqId;
+        this.reqDate = reqDate;
     }
 
-    public String getSysId() {
-        return sysId;
+    public String getReqSeqId() {
+        return reqSeqId;
     }
 
-    public void setSysId(String sysId) {
-        this.sysId = sysId;
+    public void setReqSeqId(String reqSeqId) {
+        this.reqSeqId = reqSeqId;
     }
 
-    public String getProductId() {
-        return productId;
+    public String getReqDate() {
+        return reqDate;
     }
 
-    public void setProductId(String productId) {
-        this.productId = productId;
-    }
-
-    public String getSign() {
-        return sign;
-    }
-
-    public void setSign(String sign) {
-        this.sign = sign;
-    }
-
-    public String getData() {
-        return data;
-    }
-
-    public void setData(String data) {
-        this.data = data;
+    public void setReqDate(String reqDate) {
+        this.reqDate = reqDate;
     }
 
 }

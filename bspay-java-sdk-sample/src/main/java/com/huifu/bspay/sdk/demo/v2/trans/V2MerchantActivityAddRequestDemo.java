@@ -102,7 +102,7 @@ public class V2MerchantActivityAddRequestDemo extends BaseCommonDemo {
         // 优惠费率承诺函
         extendInfoMap.put("activity_rate_commit_photo", "42204258-967e-373c-88d2-1afa4c7bb8ef");
         // 商户同名银行账户信息
-        extendInfoMap.put("bank_account", getBankAccount());
+        extendInfoMap.put("bank_account", getDb0dd69bF8894f4580daB947400610cc());
         // 银行开户证明图片
         extendInfoMap.put("bank_account_prove_photo", "");
         // 机构银行合作授权函图
@@ -124,7 +124,7 @@ public class V2MerchantActivityAddRequestDemo extends BaseCommonDemo {
         return extendInfoMap;
     }
 
-    private static String getBankAccount() {
+    private static String getDb0dd69bF8894f4580daB947400610cc() {
         JSONObject dto = new JSONObject();
         // 账户名
         dto.put("card_name", "张三");

@@ -12,25 +12,50 @@ import com.huifu.bspay.sdk.opps.core.enums.FunctionCodeEnum;
 public class V2TradeLgwxSurrogateRequest extends BaseRequest {
 
     /**
-     * 系统号
+     * 请求日期
      */
-    @JSONField(name = "sys_id")
-    private String sysId;
+    @JSONField(name = "req_date")
+    private String reqDate;
     /**
-     * 产品号
+     * 请求流水号
      */
-    @JSONField(name = "product_id")
-    private String productId;
+    @JSONField(name = "req_seq_id")
+    private String reqSeqId;
     /**
-     * 加签结果
+     * 出款方商户号
      */
-    @JSONField(name = "sign")
-    private String sign;
+    @JSONField(name = "huifu_id")
+    private String huifuId;
     /**
-     * 数据
+     * 支付金额(元)
      */
-    @JSONField(name = "data")
-    private String data;
+    @JSONField(name = "cash_amt")
+    private String cashAmt;
+    /**
+     * 代发模式
+     */
+    @JSONField(name = "salary_modle_type")
+    private String salaryModleType;
+    /**
+     * 落地公司商户号
+     */
+    @JSONField(name = "bmember_id")
+    private String bmemberId;
+    /**
+     * 子商户应用ID
+     */
+    @JSONField(name = "sub_appid")
+    private String subAppid;
+    /**
+     * 异步通知地址
+     */
+    @JSONField(name = "notify_url")
+    private String notifyUrl;
+    /**
+     * 分账明细
+     */
+    @JSONField(name = "acct_split_bunch")
+    private String acctSplitBunch;
 
     @Override
     public FunctionCodeEnum getFunctionCode() {
@@ -40,43 +65,88 @@ public class V2TradeLgwxSurrogateRequest extends BaseRequest {
     public V2TradeLgwxSurrogateRequest() {
     }
 
-    public V2TradeLgwxSurrogateRequest(String sysId, String productId, String sign, String data) {
-        this.sysId = sysId;
-        this.productId = productId;
-        this.sign = sign;
-        this.data = data;
+    public V2TradeLgwxSurrogateRequest(String reqDate, String reqSeqId, String huifuId, String cashAmt, String salaryModleType, String bmemberId, String subAppid, String notifyUrl, String acctSplitBunch) {
+        this.reqDate = reqDate;
+        this.reqSeqId = reqSeqId;
+        this.huifuId = huifuId;
+        this.cashAmt = cashAmt;
+        this.salaryModleType = salaryModleType;
+        this.bmemberId = bmemberId;
+        this.subAppid = subAppid;
+        this.notifyUrl = notifyUrl;
+        this.acctSplitBunch = acctSplitBunch;
     }
 
-    public String getSysId() {
-        return sysId;
+    public String getReqDate() {
+        return reqDate;
     }
 
-    public void setSysId(String sysId) {
-        this.sysId = sysId;
+    public void setReqDate(String reqDate) {
+        this.reqDate = reqDate;
     }
 
-    public String getProductId() {
-        return productId;
+    public String getReqSeqId() {
+        return reqSeqId;
     }
 
-    public void setProductId(String productId) {
-        this.productId = productId;
+    public void setReqSeqId(String reqSeqId) {
+        this.reqSeqId = reqSeqId;
     }
 
-    public String getSign() {
-        return sign;
+    public String getHuifuId() {
+        return huifuId;
     }
 
-    public void setSign(String sign) {
-        this.sign = sign;
+    public void setHuifuId(String huifuId) {
+        this.huifuId = huifuId;
     }
 
-    public String getData() {
-        return data;
+    public String getCashAmt() {
+        return cashAmt;
     }
 
-    public void setData(String data) {
-        this.data = data;
+    public void setCashAmt(String cashAmt) {
+        this.cashAmt = cashAmt;
+    }
+
+    public String getSalaryModleType() {
+        return salaryModleType;
+    }
+
+    public void setSalaryModleType(String salaryModleType) {
+        this.salaryModleType = salaryModleType;
+    }
+
+    public String getBmemberId() {
+        return bmemberId;
+    }
+
+    public void setBmemberId(String bmemberId) {
+        this.bmemberId = bmemberId;
+    }
+
+    public String getSubAppid() {
+        return subAppid;
+    }
+
+    public void setSubAppid(String subAppid) {
+        this.subAppid = subAppid;
+    }
+
+    public String getNotifyUrl() {
+        return notifyUrl;
+    }
+
+    public void setNotifyUrl(String notifyUrl) {
+        this.notifyUrl = notifyUrl;
+    }
+
+    public String getAcctSplitBunch() {
+        return acctSplitBunch;
+    }
+
+    public void setAcctSplitBunch(String acctSplitBunch) {
+        this.acctSplitBunch = acctSplitBunch;
     }
 
 }

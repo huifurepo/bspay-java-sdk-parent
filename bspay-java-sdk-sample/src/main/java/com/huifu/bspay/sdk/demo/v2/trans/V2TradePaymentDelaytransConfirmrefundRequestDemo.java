@@ -11,7 +11,7 @@ import com.huifu.bspay.sdk.demo.core.Identify;
 import com.huifu.bspay.sdk.opps.core.request.V2TradePaymentDelaytransConfirmrefundRequest;
 
 /**
- * 交易确认退款接口 - 示例
+ * 交易确认退款 - 示例
  *
  * @author sdk-generator
  * @Description
@@ -54,17 +54,19 @@ public class V2TradePaymentDelaytransConfirmrefundRequestDemo extends BaseCommon
         // 设置非必填字段
         Map<String, Object> extendInfoMap = new HashMap<>();
         // 分账对象
-        extendInfoMap.put("acct_split_bunch", getAcctSplitBunch());
+        extendInfoMap.put("acct_split_bunch", get52147df86c694d86B9305a431b675f29());
         // 是否垫资退款
         // extendInfoMap.put("loan_flag", "");
         // 垫资承担者
         // extendInfoMap.put("loan_undertaker", "");
         // 垫资账户类型
         // extendInfoMap.put("loan_acct_type", "");
+        // 备注
+        // extendInfoMap.put("remark", "");
         return extendInfoMap;
     }
 
-    private static JSON getAcctInfos() {
+    private static JSON get8b3eddeaB8474c7f905e858f0050be27() {
         JSONObject dto = new JSONObject();
         // 分账接收方ID
         dto.put("huifu_id", "6666000109133323");
@@ -78,10 +80,10 @@ public class V2TradePaymentDelaytransConfirmrefundRequestDemo extends BaseCommon
         return dtoList;
     }
 
-    private static String getAcctSplitBunch() {
+    private static String get52147df86c694d86B9305a431b675f29() {
         JSONObject dto = new JSONObject();
         // 分账明细
-        dto.put("acct_infos", getAcctInfos());
+        dto.put("acct_infos", get8b3eddeaB8474c7f905e858f0050be27());
 
         return dto.toJSONString();
     }

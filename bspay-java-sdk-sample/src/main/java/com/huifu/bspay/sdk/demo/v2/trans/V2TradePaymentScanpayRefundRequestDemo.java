@@ -60,13 +60,13 @@ public class V2TradePaymentScanpayRefundRequestDemo extends BaseCommonDemo {
         // 原交易请求流水号
         // extendInfoMap.put("org_req_seq_id", "");
         // 分账对象
-        // extendInfoMap.put("acct_split_bunch", getAcctSplitBunchRucan());
+        // extendInfoMap.put("acct_split_bunch", get3b184c4f594a4e5dAd16139e268ea262());
         // 聚合正扫微信拓展参数集合
-        // extendInfoMap.put("wx_data", getWxData());
+        // extendInfoMap.put("wx_data", getEca5a6193ca0415d8858C68b04f2b084());
         // 数字货币扩展参数集合
-        // extendInfoMap.put("digital_currency_data", getDigitalCurrencyData());
+        // extendInfoMap.put("digital_currency_data", get2e8257160acc40feA926348d6b93e397());
         // 补贴支付信息
-        // extendInfoMap.put("combinedpay_data", getCombinedpayData());
+        // extendInfoMap.put("combinedpay_data", get4ff4cb7c1f3441c3A6e42c67977ba3d5());
         // 备注
         // extendInfoMap.put("remark", "");
         // 是否垫资退款
@@ -76,17 +76,17 @@ public class V2TradePaymentScanpayRefundRequestDemo extends BaseCommonDemo {
         // 垫资账户类型
         // extendInfoMap.put("loan_acct_type", "");
         // 安全信息
-        // extendInfoMap.put("risk_check_data", getRiskCheckData());
+        // extendInfoMap.put("risk_check_data", getCf92bb6eC72f4cb99aecD93ab8feb1ad());
         // 设备信息
-        // extendInfoMap.put("terminal_device_data", getTerminalDeviceData());
+        // extendInfoMap.put("terminal_device_data", get4266b1ebBea34de29bee87926120bbe1());
         // 异步通知地址
         // extendInfoMap.put("notify_url", "");
         // 银联参数集合
-        // extendInfoMap.put("unionpay_data", getUnionpayData());
+        // extendInfoMap.put("unionpay_data", getE49018bbB7564fb09a8b095ba2b266e4());
         return extendInfoMap;
     }
 
-    private static JSON getAcctInfosRucan() {
+    private static JSON getF34b22c421e84e59Ba80499431bed84a() {
         JSONObject dto = new JSONObject();
         // 分账金额
         // dto.put("div_amt", "test");
@@ -100,47 +100,51 @@ public class V2TradePaymentScanpayRefundRequestDemo extends BaseCommonDemo {
         return dtoList;
     }
 
-    private static String getAcctSplitBunchRucan() {
+    private static String get3b184c4f594a4e5dAd16139e268ea262() {
         JSONObject dto = new JSONObject();
         // 分账信息列表
-        // dto.put("acct_infos", getAcctInfosRucan());
+        // dto.put("acct_infos", getF34b22c421e84e59Ba80499431bed84a());
 
         return dto.toJSONString();
     }
 
-    private static JSON getGoodsDetail() {
+    private static JSON get5cd41df8Aa5e4da58c2aD4e6e6946efe() {
         JSONObject dto = new JSONObject();
         // 商品编码
         // dto.put("goods_id", "test");
-        // 优惠退款金额
-        // dto.put("refund_amount", "test");
-        // 商品退货数量
+        // 商品退款金额
+        // dto.put("refund_amt", "test");
+        // 商品退款数量
         // dto.put("refund_quantity", "test");
         // 商品单价
         // dto.put("price", "test");
+        // 微信支付商品编码
+        // dto.put("wxpay_goods_id", "");
+        // 商品名称
+        // dto.put("goods_name", "");
 
         JSONArray dtoList = new JSONArray();
         dtoList.add(dto);
         return dtoList;
     }
 
-    private static JSON getDetail() {
+    private static JSON get0993f7b168404b65Ba8bBd063915d7c8() {
         JSONObject dto = new JSONObject();
         // 商品详情列表
-        // dto.put("goods_detail", getGoodsDetail());
+        // dto.put("goods_detail", get5cd41df8Aa5e4da58c2aD4e6e6946efe());
 
         return dto;
     }
 
-    private static JSON getWxData() {
+    private static String getEca5a6193ca0415d8858C68b04f2b084() {
         JSONObject dto = new JSONObject();
         // 退款商品详情
-        // dto.put("detail", getDetail());
+        // dto.put("detail", get0993f7b168404b65Ba8bBd063915d7c8());
 
-        return dto;
+        return dto.toJSONString();
     }
 
-    private static String getDigitalCurrencyData() {
+    private static String get2e8257160acc40feA926348d6b93e397() {
         JSONObject dto = new JSONObject();
         // 退款原因
         // dto.put("refund_desc", "");
@@ -148,7 +152,7 @@ public class V2TradePaymentScanpayRefundRequestDemo extends BaseCommonDemo {
         return dto.toJSONString();
     }
 
-    private static String getCombinedpayData() {
+    private static String get4ff4cb7c1f3441c3A6e42c67977ba3d5() {
         JSONObject dto = new JSONObject();
         // 补贴方汇付编号
         // dto.put("huifu_id", "test");
@@ -164,7 +168,7 @@ public class V2TradePaymentScanpayRefundRequestDemo extends BaseCommonDemo {
         return dtoList.toJSONString();
     }
 
-    private static String getRiskCheckData() {
+    private static String getCf92bb6eC72f4cb99aecD93ab8feb1ad() {
         JSONObject dto = new JSONObject();
         // ip地址
         // dto.put("ip_addr", "");
@@ -178,7 +182,7 @@ public class V2TradePaymentScanpayRefundRequestDemo extends BaseCommonDemo {
         return dto.toJSONString();
     }
 
-    private static String getTerminalDeviceData() {
+    private static String get4266b1ebBea34de29bee87926120bbe1() {
         JSONObject dto = new JSONObject();
         // 设备类型
         // dto.put("device_type", "");
@@ -200,7 +204,7 @@ public class V2TradePaymentScanpayRefundRequestDemo extends BaseCommonDemo {
         return dto.toJSONString();
     }
 
-    private static String getUnionpayData() {
+    private static String getE49018bbB7564fb09a8b095ba2b266e4() {
         JSONObject dto = new JSONObject();
         // 收款方附加数据
         // dto.put("addn_data", "");

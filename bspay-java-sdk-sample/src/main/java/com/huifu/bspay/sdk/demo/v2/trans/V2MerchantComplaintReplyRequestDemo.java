@@ -36,10 +36,6 @@ public class V2MerchantComplaintReplyRequestDemo extends BaseCommonDemo {
         request.setComplaintedMchid("535295270");
         // 回复内容
         request.setResponseContent("该问题请联系商家处理，谢谢。");
-        // 跳转链接
-        request.setJumpUrl("");
-        // 跳转链接文案
-        request.setJumpUrlText("");
         // 微信商户号
         request.setMchId("1502073961");
 
@@ -60,11 +56,15 @@ public class V2MerchantComplaintReplyRequestDemo extends BaseCommonDemo {
         // 设置非必填字段
         Map<String, Object> extendInfoMap = new HashMap<>();
         // 文件列表
-        // extendInfoMap.put("file_info", getFileInfo());
+        // extendInfoMap.put("file_info", get42b0f39dAdb944a8B720B6b3a55f3c41());
+        // 跳转链接
+        extendInfoMap.put("jump_url", "");
+        // 跳转链接文案
+        extendInfoMap.put("jump_url_text", "");
         return extendInfoMap;
     }
 
-    private static String getFileInfo() {
+    private static String get42b0f39dAdb944a8B720B6b3a55f3c41() {
         JSONObject dto = new JSONObject();
         // 回复图片1
         // dto.put("response_pic1", "");

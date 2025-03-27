@@ -4,7 +4,7 @@ import com.alibaba.fastjson.annotation.JSONField;
 import com.huifu.bspay.sdk.opps.core.enums.FunctionCodeEnum;
 
 /**
- * 交易退款查询接口
+ * 扫码交易退款查询
  *
  * @author sdk-generator
  * @Description
@@ -17,7 +17,7 @@ public class V2TradePaymentScanpayRefundqueryRequest extends BaseRequest {
     @JSONField(name = "huifu_id")
     private String huifuId;
     /**
-     * 退款请求日期
+     * 退款请求日期退款发生的日期，格式为yyyyMMdd，&lt;font color&#x3D;&quot;green&quot;&gt;示例值：20220925&lt;/font&gt;；&lt;/br&gt;传入退款全局流水号时，非必填，其他场景必填；
      */
     @JSONField(name = "org_req_date")
     private String orgReqDate;

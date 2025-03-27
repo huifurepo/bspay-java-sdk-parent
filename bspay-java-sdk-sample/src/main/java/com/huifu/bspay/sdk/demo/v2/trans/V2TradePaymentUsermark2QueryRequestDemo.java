@@ -32,8 +32,10 @@ public class V2TradePaymentUsermark2QueryRequestDemo extends BaseCommonDemo {
         request.setReqSeqId(SequenceTools.getReqSeqId32());
         // 商户号
         request.setHuifuId("6666000018328947");
-        // 支付授权码
+        // 授权码
         request.setAuthCode("6264664305553562612");
+        // 银联支付标识
+        request.setAppUpIdentifier("UnionPay/1.0 CloudPay");
 
         // 设置非必填字段
         Map<String, Object> extendInfoMap = getExtendInfos();
@@ -51,8 +53,6 @@ public class V2TradePaymentUsermark2QueryRequestDemo extends BaseCommonDemo {
     private static Map<String, Object> getExtendInfos() {
         // 设置非必填字段
         Map<String, Object> extendInfoMap = new HashMap<>();
-        // 银联支付标识
-        extendInfoMap.put("app_up_identifier", "CloudPay");
         return extendInfoMap;
     }
 

@@ -42,14 +42,14 @@ public class V2TradeOnlinepaymentWithholdpayRequestDemo extends BaseCommonDemo {
         request.setGoodsDesc("代扣test");
         // 代扣类型
         request.setWithholdType("2");
-        // 银行扩展数据
-        request.setExtendPayData(getExtendPayData());
-        // 风控信息
-        request.setRiskCheckData(getRiskCheckData());
-        // 设备信息数据
-        request.setTerminalDeviceData(getTerminalDeviceData());
         // 异步通知地址
         request.setNotifyUrl("http://www.chinapnr.com/");
+        // 银行扩展数据
+        request.setExtendPayData(get3447c39440aa412c90f88699fb6b0663());
+        // 风控信息
+        request.setRiskCheckData(get4e66af86899f45f9800aD701060955fb());
+        // 设备信息数据
+        request.setTerminalDeviceData(get43a4131185884faf8dd848f1dd88efb1());
 
         // 设置非必填字段
         Map<String, Object> extendInfoMap = getExtendInfos();
@@ -74,11 +74,13 @@ public class V2TradeOnlinepaymentWithholdpayRequestDemo extends BaseCommonDemo {
         // 订单失效时间
         extendInfoMap.put("time_expire", "20221212121212");
         // 分账对象
-        // extendInfoMap.put("acct_split_bunch", getAcctSplitBunch());
+        // extendInfoMap.put("acct_split_bunch", get581211bf56df4b98814aCdbda319724e());
+        // 补贴支付信息
+        // extendInfoMap.put("combinedpay_data", get1d0fed46Cfd94d828be3354035b059ba());
         return extendInfoMap;
     }
 
-    private static JSON getAcctInfos() {
+    private static JSON getC775b270E79b4d7cAb26Efb8e716ad46() {
         JSONObject dto = new JSONObject();
         // 支付金额
         // dto.put("div_amt", "");
@@ -92,19 +94,19 @@ public class V2TradeOnlinepaymentWithholdpayRequestDemo extends BaseCommonDemo {
         return dtoList;
     }
 
-    private static JSON getAcctSplitBunch() {
+    private static String get581211bf56df4b98814aCdbda319724e() {
         JSONObject dto = new JSONObject();
         // 分账信息列表
-        // dto.put("acct_infos", getAcctInfos());
+        // dto.put("acct_infos", getC775b270E79b4d7cAb26Efb8e716ad46());
         // 百分比分账标志
         // dto.put("percentage_flag", "");
         // 是否净值分账
         // dto.put("is_clean_split", "");
 
-        return dto;
+        return dto.toJSONString();
     }
 
-    private static String getExtendPayData() {
+    private static String get3447c39440aa412c90f88699fb6b0663() {
         JSONObject dto = new JSONObject();
         // 业务种类
         dto.put("biz_tp", "012345");
@@ -116,7 +118,7 @@ public class V2TradeOnlinepaymentWithholdpayRequestDemo extends BaseCommonDemo {
         return dto.toJSONString();
     }
 
-    private static String getRiskCheckData() {
+    private static String get4e66af86899f45f9800aD701060955fb() {
         JSONObject dto = new JSONObject();
         // 基站地址经纬度、基站地址、IP地址三组信息至少填写一组；&lt;br/&gt;【mcc】+【mnc】+【location_cd】+【lbs_num】&lt;br/&gt;- mcc:移动国家代码，460代表中国；3位长&lt;br/&gt;- mnc：移动网络号码；2位长；&lt;br/&gt;- location_cd：位置区域码，16进制，5位长&lt;br/&gt;- lbs_num：基站编号，16进制，5位长&lt;br/&gt;- 注意若位数不足用空格补足；&lt;br/&gt;&lt;font color&#x3D;&quot;green&quot;&gt;示例值：460001039217563&lt;/font&gt;，460（mcc)， 00(mnc)，10392(location_cd)， 17563(lbs_num)
         dto.put("base_station", "");
@@ -130,7 +132,7 @@ public class V2TradeOnlinepaymentWithholdpayRequestDemo extends BaseCommonDemo {
         return dto.toJSONString();
     }
 
-    private static String getTerminalDeviceData() {
+    private static String get43a4131185884faf8dd848f1dd88efb1() {
         JSONObject dto = new JSONObject();
         // 交易设备ip
         dto.put("device_ip", "172.31.31.145");
@@ -150,6 +152,22 @@ public class V2TradeOnlinepaymentWithholdpayRequestDemo extends BaseCommonDemo {
         // dto.put("device_wifi_mac", "");
 
         return dto.toJSONString();
+    }
+
+    private static String get1d0fed46Cfd94d828be3354035b059ba() {
+        JSONObject dto = new JSONObject();
+        // 补贴方汇付编号
+        // dto.put("huifu_id", "test");
+        // 补贴方类型
+        // dto.put("user_type", "test");
+        // 补贴方账户号
+        // dto.put("acct_id", "test");
+        // 补贴金额
+        // dto.put("amount", "test");
+
+        JSONArray dtoList = new JSONArray();
+        dtoList.add(dto);
+        return dtoList.toJSONString();
     }
 
 }

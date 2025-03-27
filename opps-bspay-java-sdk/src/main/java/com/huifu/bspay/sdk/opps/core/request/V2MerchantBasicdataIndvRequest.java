@@ -4,7 +4,7 @@ import com.alibaba.fastjson.annotation.JSONField;
 import com.huifu.bspay.sdk.opps.core.enums.FunctionCodeEnum;
 
 /**
- * 个人商户基本信息入驻(2022)
+ * 个人商户进件
  *
  * @author sdk-generator
  * @Description
@@ -22,7 +22,7 @@ public class V2MerchantBasicdataIndvRequest extends BaseRequest {
     @JSONField(name = "req_date")
     private String reqDate;
     /**
-     * 上级主体ID
+     * 直属渠道号
      */
     @JSONField(name = "upper_huifu_id")
     private String upperHuifuId;
@@ -32,37 +32,62 @@ public class V2MerchantBasicdataIndvRequest extends BaseRequest {
     @JSONField(name = "reg_name")
     private String regName;
     /**
-     * 经营省
+     * *所属行业*
      */
-    @JSONField(name = "prov_id")
-    private String provId;
+    @JSONField(name = "mcc")
+    private String mcc;
     /**
-     * 经营市
+     * *场景类型*
      */
-    @JSONField(name = "area_id")
-    private String areaId;
+    @JSONField(name = "scene_type")
+    private String sceneType;
     /**
      * 经营区
      */
     @JSONField(name = "district_id")
     private String districtId;
     /**
-     * 经营详细地址
+     * 经营详细地址scene_type字段含有线下场景时必填；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：上海市徐汇区XX路XX号&lt;/font&gt;
      */
     @JSONField(name = "detail_addr")
     private String detailAddr;
     /**
-     * 联系人姓名
+     * *负责人证件号码*
      */
-    @JSONField(name = "contact_name")
-    private String contactName;
+    @JSONField(name = "legal_cert_no")
+    private String legalCertNo;
     /**
-     * 联系人手机号
+     * *负责人证件有效期开始日期*
+     */
+    @JSONField(name = "legal_cert_begin_date")
+    private String legalCertBeginDate;
+    /**
+     * *负责人证件有效期截止日期*
+     */
+    @JSONField(name = "legal_cert_end_date")
+    private String legalCertEndDate;
+    /**
+     * *负责人身份证地址*
+     */
+    @JSONField(name = "legal_addr")
+    private String legalAddr;
+    /**
+     * 负责人身份证国徽面
+     */
+    @JSONField(name = "legal_cert_back_pic")
+    private String legalCertBackPic;
+    /**
+     * 负责人身份证人像面
+     */
+    @JSONField(name = "legal_cert_front_pic")
+    private String legalCertFrontPic;
+    /**
+     * 负责人手机号
      */
     @JSONField(name = "contact_mobile_no")
     private String contactMobileNo;
     /**
-     * 联系人电子邮箱
+     * 负责人电子邮箱
      */
     @JSONField(name = "contact_email")
     private String contactEmail;
@@ -71,6 +96,36 @@ public class V2MerchantBasicdataIndvRequest extends BaseRequest {
      */
     @JSONField(name = "card_info")
     private String cardInfo;
+    /**
+     * 结算卡正面
+     */
+    @JSONField(name = "settle_card_front_pic")
+    private String settleCardFrontPic;
+    /**
+     * *商户ICP备案编号*商户ICP备案编号或网站许可证号；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：沪ICP备06046402号-28 &lt;/font&gt;&lt;br/&gt;类型为PC网站时，且为企业商户，且开通快捷或网银，或大额转账，或余额支付或分账业务（20%（不含）-100%），或为个人商户开通分账业务（10%（不含）-100%），必填
+     */
+    @JSONField(name = "mer_icp")
+    private String merIcp;
+    /**
+     * 店铺门头照文件类型：F22；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：57cc7f00-600a-33ab-b614-6221bbf2e530&lt;/font&gt;&lt;br/&gt;微信/支付宝实名认证个人商户，门头照也使用此字段； &lt;br/&gt;门店场所：提交门店门口照片，要求招牌清晰可见; &lt;br/&gt;小微商户流动经营/便民服务：提交经营/服务现场照片
+     */
+    @JSONField(name = "store_header_pic")
+    private String storeHeaderPic;
+    /**
+     * 店铺内景/工作区域照文件类型：F24；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：57cc7f00-600a-33ab-b614-6221bbf2e530&lt;/font&gt;&lt;br/&gt;微信/支付宝实名认证个人商户，内景照也使用此字段； &lt;br/&gt;门店场所：提交店内环境照片 &lt;br/&gt;小微商户流动经营/便民服务：可提交另一张经营/服务现场照片
+     */
+    @JSONField(name = "store_indoor_pic")
+    private String storeIndoorPic;
+    /**
+     * 店铺收银台/公司前台照商户线下场景需要提供；文件类型：F105；&lt;br/&gt;&lt;font color&#x3D;&quot;green&quot;&gt;示例值：57cc7f00-600a-33ab-b614-6221bbf2e530&lt;/font&gt;
+     */
+    @JSONField(name = "store_cashier_desk_pic")
+    private String storeCashierDeskPic;
+    /**
+     * 上级商户汇付ID如果head_office_flag&#x3D;0，则字段必填&lt;font color&#x3D;&quot;green&quot;&gt;示例值：6666000123123123&lt;/font&gt;
+     */
+    @JSONField(name = "head_huifu_id")
+    private String headHuifuId;
 
     @Override
     public FunctionCodeEnum getFunctionCode() {
@@ -80,19 +135,30 @@ public class V2MerchantBasicdataIndvRequest extends BaseRequest {
     public V2MerchantBasicdataIndvRequest() {
     }
 
-    public V2MerchantBasicdataIndvRequest(String reqSeqId, String reqDate, String upperHuifuId, String regName, String provId, String areaId, String districtId, String detailAddr, String contactName, String contactMobileNo, String contactEmail, String cardInfo) {
+    public V2MerchantBasicdataIndvRequest(String reqSeqId, String reqDate, String upperHuifuId, String regName, String mcc, String sceneType, String districtId, String detailAddr, String legalCertNo, String legalCertBeginDate, String legalCertEndDate, String legalAddr, String legalCertBackPic, String legalCertFrontPic, String contactMobileNo, String contactEmail, String cardInfo, String settleCardFrontPic, String merIcp, String storeHeaderPic, String storeIndoorPic, String storeCashierDeskPic, String headHuifuId) {
         this.reqSeqId = reqSeqId;
         this.reqDate = reqDate;
         this.upperHuifuId = upperHuifuId;
         this.regName = regName;
-        this.provId = provId;
-        this.areaId = areaId;
+        this.mcc = mcc;
+        this.sceneType = sceneType;
         this.districtId = districtId;
         this.detailAddr = detailAddr;
-        this.contactName = contactName;
+        this.legalCertNo = legalCertNo;
+        this.legalCertBeginDate = legalCertBeginDate;
+        this.legalCertEndDate = legalCertEndDate;
+        this.legalAddr = legalAddr;
+        this.legalCertBackPic = legalCertBackPic;
+        this.legalCertFrontPic = legalCertFrontPic;
         this.contactMobileNo = contactMobileNo;
         this.contactEmail = contactEmail;
         this.cardInfo = cardInfo;
+        this.settleCardFrontPic = settleCardFrontPic;
+        this.merIcp = merIcp;
+        this.storeHeaderPic = storeHeaderPic;
+        this.storeIndoorPic = storeIndoorPic;
+        this.storeCashierDeskPic = storeCashierDeskPic;
+        this.headHuifuId = headHuifuId;
     }
 
     public String getReqSeqId() {
@@ -127,20 +193,20 @@ public class V2MerchantBasicdataIndvRequest extends BaseRequest {
         this.regName = regName;
     }
 
-    public String getProvId() {
-        return provId;
+    public String getMcc() {
+        return mcc;
     }
 
-    public void setProvId(String provId) {
-        this.provId = provId;
+    public void setMcc(String mcc) {
+        this.mcc = mcc;
     }
 
-    public String getAreaId() {
-        return areaId;
+    public String getSceneType() {
+        return sceneType;
     }
 
-    public void setAreaId(String areaId) {
-        this.areaId = areaId;
+    public void setSceneType(String sceneType) {
+        this.sceneType = sceneType;
     }
 
     public String getDistrictId() {
@@ -159,12 +225,52 @@ public class V2MerchantBasicdataIndvRequest extends BaseRequest {
         this.detailAddr = detailAddr;
     }
 
-    public String getContactName() {
-        return contactName;
+    public String getLegalCertNo() {
+        return legalCertNo;
     }
 
-    public void setContactName(String contactName) {
-        this.contactName = contactName;
+    public void setLegalCertNo(String legalCertNo) {
+        this.legalCertNo = legalCertNo;
+    }
+
+    public String getLegalCertBeginDate() {
+        return legalCertBeginDate;
+    }
+
+    public void setLegalCertBeginDate(String legalCertBeginDate) {
+        this.legalCertBeginDate = legalCertBeginDate;
+    }
+
+    public String getLegalCertEndDate() {
+        return legalCertEndDate;
+    }
+
+    public void setLegalCertEndDate(String legalCertEndDate) {
+        this.legalCertEndDate = legalCertEndDate;
+    }
+
+    public String getLegalAddr() {
+        return legalAddr;
+    }
+
+    public void setLegalAddr(String legalAddr) {
+        this.legalAddr = legalAddr;
+    }
+
+    public String getLegalCertBackPic() {
+        return legalCertBackPic;
+    }
+
+    public void setLegalCertBackPic(String legalCertBackPic) {
+        this.legalCertBackPic = legalCertBackPic;
+    }
+
+    public String getLegalCertFrontPic() {
+        return legalCertFrontPic;
+    }
+
+    public void setLegalCertFrontPic(String legalCertFrontPic) {
+        this.legalCertFrontPic = legalCertFrontPic;
     }
 
     public String getContactMobileNo() {
@@ -189,6 +295,54 @@ public class V2MerchantBasicdataIndvRequest extends BaseRequest {
 
     public void setCardInfo(String cardInfo) {
         this.cardInfo = cardInfo;
+    }
+
+    public String getSettleCardFrontPic() {
+        return settleCardFrontPic;
+    }
+
+    public void setSettleCardFrontPic(String settleCardFrontPic) {
+        this.settleCardFrontPic = settleCardFrontPic;
+    }
+
+    public String getMerIcp() {
+        return merIcp;
+    }
+
+    public void setMerIcp(String merIcp) {
+        this.merIcp = merIcp;
+    }
+
+    public String getStoreHeaderPic() {
+        return storeHeaderPic;
+    }
+
+    public void setStoreHeaderPic(String storeHeaderPic) {
+        this.storeHeaderPic = storeHeaderPic;
+    }
+
+    public String getStoreIndoorPic() {
+        return storeIndoorPic;
+    }
+
+    public void setStoreIndoorPic(String storeIndoorPic) {
+        this.storeIndoorPic = storeIndoorPic;
+    }
+
+    public String getStoreCashierDeskPic() {
+        return storeCashierDeskPic;
+    }
+
+    public void setStoreCashierDeskPic(String storeCashierDeskPic) {
+        this.storeCashierDeskPic = storeCashierDeskPic;
+    }
+
+    public String getHeadHuifuId() {
+        return headHuifuId;
+    }
+
+    public void setHeadHuifuId(String headHuifuId) {
+        this.headHuifuId = headHuifuId;
     }
 
 }

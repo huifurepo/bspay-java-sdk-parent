@@ -12,25 +12,35 @@ import com.huifu.bspay.sdk.opps.core.enums.FunctionCodeEnum;
 public class V2WalletMobileVerifyRequest extends BaseRequest {
 
     /**
-     * 系统号
+     * 请求流水号
      */
-    @JSONField(name = "sys_id")
-    private String sysId;
+    @JSONField(name = "req_seq_id")
+    private String reqSeqId;
     /**
-     * 产品号
+     * 请求日期
      */
-    @JSONField(name = "product_id")
-    private String productId;
+    @JSONField(name = "req_date")
+    private String reqDate;
     /**
-     * 加签结果
+     * 商户号
      */
-    @JSONField(name = "sign")
-    private String sign;
+    @JSONField(name = "huifu_id")
+    private String huifuId;
     /**
-     * 数据
+     * 钱包用户ID斗拱系统生成的钱包用户ID。&lt;font color&#x3D;&quot;green&quot;&gt;示例值：6666000123122343&lt;/font&gt;&lt;br/&gt;验证类型为2-密码修改和3-密码重置时，必须提供钱包用户的汇付ID。
      */
-    @JSONField(name = "data")
-    private String data;
+    @JSONField(name = "user_huifu_id")
+    private String userHuifuId;
+    /**
+     * 用户手机号
+     */
+    @JSONField(name = "mobile_no")
+    private String mobileNo;
+    /**
+     * 验证类型
+     */
+    @JSONField(name = "type")
+    private String type;
 
     @Override
     public FunctionCodeEnum getFunctionCode() {
@@ -40,43 +50,61 @@ public class V2WalletMobileVerifyRequest extends BaseRequest {
     public V2WalletMobileVerifyRequest() {
     }
 
-    public V2WalletMobileVerifyRequest(String sysId, String productId, String sign, String data) {
-        this.sysId = sysId;
-        this.productId = productId;
-        this.sign = sign;
-        this.data = data;
+    public V2WalletMobileVerifyRequest(String reqSeqId, String reqDate, String huifuId, String userHuifuId, String mobileNo, String type) {
+        this.reqSeqId = reqSeqId;
+        this.reqDate = reqDate;
+        this.huifuId = huifuId;
+        this.userHuifuId = userHuifuId;
+        this.mobileNo = mobileNo;
+        this.type = type;
     }
 
-    public String getSysId() {
-        return sysId;
+    public String getReqSeqId() {
+        return reqSeqId;
     }
 
-    public void setSysId(String sysId) {
-        this.sysId = sysId;
+    public void setReqSeqId(String reqSeqId) {
+        this.reqSeqId = reqSeqId;
     }
 
-    public String getProductId() {
-        return productId;
+    public String getReqDate() {
+        return reqDate;
     }
 
-    public void setProductId(String productId) {
-        this.productId = productId;
+    public void setReqDate(String reqDate) {
+        this.reqDate = reqDate;
     }
 
-    public String getSign() {
-        return sign;
+    public String getHuifuId() {
+        return huifuId;
     }
 
-    public void setSign(String sign) {
-        this.sign = sign;
+    public void setHuifuId(String huifuId) {
+        this.huifuId = huifuId;
     }
 
-    public String getData() {
-        return data;
+    public String getUserHuifuId() {
+        return userHuifuId;
     }
 
-    public void setData(String data) {
-        this.data = data;
+    public void setUserHuifuId(String userHuifuId) {
+        this.userHuifuId = userHuifuId;
+    }
+
+    public String getMobileNo() {
+        return mobileNo;
+    }
+
+    public void setMobileNo(String mobileNo) {
+        this.mobileNo = mobileNo;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
     }
 
 }

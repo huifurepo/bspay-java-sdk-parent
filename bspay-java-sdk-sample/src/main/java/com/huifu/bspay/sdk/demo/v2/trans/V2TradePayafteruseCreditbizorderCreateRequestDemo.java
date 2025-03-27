@@ -34,8 +34,6 @@ public class V2TradePayafteruseCreditbizorderCreateRequestDemo extends BaseCommo
         request.setHuifuId("6666000108281250");
         // 订单总金额
         request.setTransAmt("0.01");
-        // 追踪ID
-        request.setSourceId("MjA4ODcwMjY5OTkwODI1N3wyMDIxMDAzMTUwNjM4MTE2fDE3Mjg1NDk3OTU0OTl8ZmFsc2V8VE9LRU5fSVNfTlVMTA==");
         // 支付宝用户ID
         request.setBuyerId("2088000000000000");
         // 订单标题
@@ -47,7 +45,7 @@ public class V2TradePayafteruseCreditbizorderCreateRequestDemo extends BaseCommo
         // 芝麻信用服务ID
         request.setZmServiceId("2024081500001003000081751200");
         // 商品详细信息
-        request.setItemInfos(getItemInfos());
+        request.setItemInfos(get864f5a50D5064cea9423A5f3ca9e73a7());
 
         // 设置非必填字段
         Map<String, Object> extendInfoMap = getExtendInfos();
@@ -67,16 +65,22 @@ public class V2TradePayafteruseCreditbizorderCreateRequestDemo extends BaseCommo
         Map<String, Object> extendInfoMap = new HashMap<>();
         // 异步通知地址
         extendInfoMap.put("notify_url", "https://mock.uutool.cn/4pga0jqv8vv0");
+        // 追踪ID
+        extendInfoMap.put("source_id", "MjA4ODcwMjY5OTkwODI1N3wyMDIxMDAzMTUwNjM4MTE2fDE3Mjg1NDk3OTU0OTl8ZmFsc2V8VE9LRU5fSVNfTlVMTA==");
         // 支付宝交易号
         extendInfoMap.put("trade_no", "2024092722001408251414114417");
         // 代扣协议签约场景
         extendInfoMap.put("deduct_sign_scene", "INDUSTRY|XIANXIANG_BIKE_CHARGE");
         // 芝麻信用外部类⽬
         extendInfoMap.put("zm_category_id", "credit_pay_for_battery_charging");
+        // 是否不需要核身
+        // extendInfoMap.put("no_need_verify_identity", "");
+        // 开通成功后跳转地址
+        // extendInfoMap.put("acceptance_jump_url", "");
         return extendInfoMap;
     }
 
-    private static JSON getItemInstallmentInfo() {
+    private static JSON get1efd507a9385411f80f998b1c37876d9() {
         JSONObject dto = new JSONObject();
         // 总分期数
         dto.put("period_num", 1);
@@ -88,7 +92,7 @@ public class V2TradePayafteruseCreditbizorderCreateRequestDemo extends BaseCommo
         return dto;
     }
 
-    private static String getItemInfos() {
+    private static String get864f5a50D5064cea9423A5f3ca9e73a7() {
         JSONObject dto = new JSONObject();
         // 商户商品ID
         dto.put("out_item_id", "1234567");
@@ -101,7 +105,7 @@ public class V2TradePayafteruseCreditbizorderCreateRequestDemo extends BaseCommo
         // 商品的编号
         dto.put("goods_id", "Ldkc00001");
         // 商品分期信息
-        dto.put("item_installment_info", getItemInstallmentInfo());
+        dto.put("item_installment_info", get1efd507a9385411f80f998b1c37876d9());
 
         JSONArray dtoList = new JSONArray();
         dtoList.add(dto);

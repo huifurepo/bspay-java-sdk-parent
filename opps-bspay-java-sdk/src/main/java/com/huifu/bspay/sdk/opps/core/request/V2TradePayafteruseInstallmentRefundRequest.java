@@ -31,6 +31,11 @@ public class V2TradePayafteruseInstallmentRefundRequest extends BaseRequest {
      */
     @JSONField(name = "ord_amt")
     private String ordAmt;
+    /**
+     * 原请求日期
+     */
+    @JSONField(name = "org_req_date")
+    private String orgReqDate;
 
     @Override
     public FunctionCodeEnum getFunctionCode() {
@@ -40,11 +45,12 @@ public class V2TradePayafteruseInstallmentRefundRequest extends BaseRequest {
     public V2TradePayafteruseInstallmentRefundRequest() {
     }
 
-    public V2TradePayafteruseInstallmentRefundRequest(String reqDate, String reqSeqId, String huifuId, String ordAmt) {
+    public V2TradePayafteruseInstallmentRefundRequest(String reqDate, String reqSeqId, String huifuId, String ordAmt, String orgReqDate) {
         this.reqDate = reqDate;
         this.reqSeqId = reqSeqId;
         this.huifuId = huifuId;
         this.ordAmt = ordAmt;
+        this.orgReqDate = orgReqDate;
     }
 
     public String getReqDate() {
@@ -77,6 +83,14 @@ public class V2TradePayafteruseInstallmentRefundRequest extends BaseRequest {
 
     public void setOrdAmt(String ordAmt) {
         this.ordAmt = ordAmt;
+    }
+
+    public String getOrgReqDate() {
+        return orgReqDate;
+    }
+
+    public void setOrgReqDate(String orgReqDate) {
+        this.orgReqDate = orgReqDate;
     }
 
 }

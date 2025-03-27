@@ -33,7 +33,7 @@ public class V2TradePayrelationApplyRequestDemo extends BaseCommonDemo {
         // 请求流水号
         request.setReqSeqId(SequenceTools.getReqSeqId32());
         // 付款关系明细
-        request.setPayRelations(getPayRelationsRc());
+        request.setPayRelations(getA4340f0d9f434de0910eC4522943e67d());
 
         // 设置非必填字段
         Map<String, Object> extendInfoMap = getExtendInfos();
@@ -54,7 +54,7 @@ public class V2TradePayrelationApplyRequestDemo extends BaseCommonDemo {
         return extendInfoMap;
     }
 
-    private static String getPayRelationsRc() {
+    private static String getA4340f0d9f434de0910eC4522943e67d() {
         JSONObject dto = new JSONObject();
         // 入账方商户号
         dto.put("in_huifu_id", "6666000104558835");

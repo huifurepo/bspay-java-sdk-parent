@@ -55,6 +55,8 @@ public class V2TradeAcctpaymentAcctlogQueryRequestDemo extends BaseCommonDemo {
         extendInfoMap.put("page_num", "1");
         // 账户号
         // extendInfoMap.put("acct_id", "");
+        // 账户类型
+        extendInfoMap.put("acct_type", "01");
         return extendInfoMap;
     }
 

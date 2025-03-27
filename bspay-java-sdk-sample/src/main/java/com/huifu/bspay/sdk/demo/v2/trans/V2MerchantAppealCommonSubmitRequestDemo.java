@@ -92,11 +92,11 @@ public class V2MerchantAppealCommonSubmitRequestDemo extends BaseCommonDemo {
         // 员工人数
         extendInfoMap.put("employee_cnt", "10");
         // 申诉文件列表
-        extendInfoMap.put("appeal_file_list", getAppealFileList());
+        extendInfoMap.put("appeal_file_list", get0c986afe8b424cad8c63F947666296c8());
         return extendInfoMap;
     }
 
-    private static String getAppealFileList() {
+    private static String get0c986afe8b424cad8c63F947666296c8() {
         JSONObject dto = new JSONObject();
         // 申诉文件名称
         dto.put("item_name", "法人身份证正面");

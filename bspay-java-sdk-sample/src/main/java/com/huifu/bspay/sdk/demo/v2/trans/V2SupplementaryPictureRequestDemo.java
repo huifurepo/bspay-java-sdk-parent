@@ -33,6 +33,8 @@ public class V2SupplementaryPictureRequestDemo extends BaseCommonDemo {
         request.setReqDate(DateTools.getCurrentDateYYYYMMDD());
         // 图片类型
         request.setFileType("F01");
+        // 图片名称
+        // request.setPicture("test");
 
         // 设置非必填字段
         Map<String, Object> extendInfoMap = getExtendInfos();

@@ -26,14 +26,18 @@ public class V2WalletMobileVerifyRequestDemo extends BaseCommonDemo {
 
         // 2.组装请求参数
         V2WalletMobileVerifyRequest request = new V2WalletMobileVerifyRequest();
-        // 系统号
-        // request.setSysId("test");
-        // 产品号
-        // request.setProductId("test");
-        // 加签结果
-        // request.setSign("test");
-        // 数据
-        // request.setData("test");
+        // 请求流水号
+        // request.setReqSeqId(SequenceTools.getReqSeqId32());
+        // 请求日期
+        // request.setReqDate(DateTools.getCurrentDateYYYYMMDD());
+        // 商户号
+        request.setHuifuId("6666000107309462");
+        // 钱包用户ID斗拱系统生成的钱包用户ID。&lt;font color&#x3D;&quot;green&quot;&gt;示例值：6666000123122343&lt;/font&gt;&lt;br/&gt;验证类型为2-密码修改和3-密码重置时，必须提供钱包用户的汇付ID。
+        request.setUserHuifuId("6666000107355468");
+        // 用户手机号
+        request.setMobileNo("13771817106");
+        // 验证类型
+        request.setType("3");
 
         // 设置非必填字段
         Map<String, Object> extendInfoMap = getExtendInfos();

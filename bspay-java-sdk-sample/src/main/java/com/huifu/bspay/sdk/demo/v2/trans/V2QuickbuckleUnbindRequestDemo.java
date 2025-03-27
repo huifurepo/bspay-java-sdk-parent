@@ -33,7 +33,7 @@ public class V2QuickbuckleUnbindRequestDemo extends BaseCommonDemo {
         // 汇付商户Id
         request.setHuifuId("6666000109133323");
         // 用户ID
-        request.setOutCustId("6666000103633606");
+        request.setOutCustId("asdtrw123123123");
         // 卡令牌
         request.setTokenNo("10000085852");
 

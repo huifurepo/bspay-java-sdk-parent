@@ -41,7 +41,7 @@ public class V2TradePayscorePayPayscorepayRequestDemo extends BaseCommonDemo {
         // 商品描述
         request.setGoodsDesc("bp充电");
         // 安全信息
-        request.setRiskCheckData(getRiskCheckData());
+        request.setRiskCheckData(get7b611856F3284acbB2b933e5277201fd());
 
         // 设置非必填字段
         Map<String, Object> extendInfoMap = getExtendInfos();
@@ -60,13 +60,13 @@ public class V2TradePayscorePayPayscorepayRequestDemo extends BaseCommonDemo {
         // 设置非必填字段
         Map<String, Object> extendInfoMap = new HashMap<>();
         // 聚合反扫微信参数集合
-        // extendInfoMap.put("wx_data", getWxData());
+        // extendInfoMap.put("wx_data", get26abfe33D15b4d88969eE4b82e981c40());
         // 是否延迟交易
         // extendInfoMap.put("delay_acct_flag", "");
         // 分账对象
-        // extendInfoMap.put("acct_split_bunch", getAcctSplitBunch());
+        // extendInfoMap.put("acct_split_bunch", getB4a7c01e8049417cBfaf23cca015476e());
         // 设备信息
-        // extendInfoMap.put("terminal_device_info", getTerminalDeviceInfo());
+        // extendInfoMap.put("terminal_device_info", get18bf806b138f41fb9eb85470b909b79b());
         // 交易备注
         // extendInfoMap.put("remark", "");
         // 商户回调地址
@@ -74,7 +74,7 @@ public class V2TradePayscorePayPayscorepayRequestDemo extends BaseCommonDemo {
         return extendInfoMap;
     }
 
-    private static String getWxData() {
+    private static String get26abfe33D15b4d88969eE4b82e981c40() {
         JSONObject dto = new JSONObject();
         // 子商户用户标识
         // dto.put("sub_openid", "test");
@@ -88,7 +88,7 @@ public class V2TradePayscorePayPayscorepayRequestDemo extends BaseCommonDemo {
         return dto.toJSONString();
     }
 
-    private static JSON getAcctInfos() {
+    private static JSON get74fe15d7F3cf4781880dA528d270b475() {
         JSONObject dto = new JSONObject();
         // 分账金额
         // dto.put("div_amt", "test");
@@ -100,15 +100,15 @@ public class V2TradePayscorePayPayscorepayRequestDemo extends BaseCommonDemo {
         return dtoList;
     }
 
-    private static String getAcctSplitBunch() {
+    private static String getB4a7c01e8049417cBfaf23cca015476e() {
         JSONObject dto = new JSONObject();
         // 分账明细
-        // dto.put("acct_infos", getAcctInfos());
+        // dto.put("acct_infos", get74fe15d7F3cf4781880dA528d270b475());
 
         return dto.toJSONString();
     }
 
-    private static String getRiskCheckData() {
+    private static String get7b611856F3284acbB2b933e5277201fd() {
         JSONObject dto = new JSONObject();
         // ip地址
         dto.put("ip_address", "127.0.0.1");
@@ -122,7 +122,7 @@ public class V2TradePayscorePayPayscorepayRequestDemo extends BaseCommonDemo {
         return dto.toJSONString();
     }
 
-    private static String getTerminalDeviceInfo() {
+    private static String get18bf806b138f41fb9eb85470b909b79b() {
         JSONObject dto = new JSONObject();
         // 设备类型
         // dto.put("device_type", "");

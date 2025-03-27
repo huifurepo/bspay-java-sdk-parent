@@ -26,14 +26,12 @@ public class V2HycInvcategoryQueryRequestDemo extends BaseCommonDemo {
 
         // 2.组装请求参数
         V2HycInvcategoryQueryRequest request = new V2HycInvcategoryQueryRequest();
-        // 系统号
-        // request.setSysId("test");
-        // 产品号
-        // request.setProductId("test");
-        // 加签结果
-        // request.setSign("test");
-        // 数据
-        // request.setData("test");
+        // 请求流水号
+        request.setReqSeqId(SequenceTools.getReqSeqId32());
+        // 请求日期
+        request.setReqDate(DateTools.getCurrentDateYYYYMMDD());
+        // 落地公司机构号
+        request.setMinorAgentId("L20210316173416881");
 
         // 设置非必填字段
         Map<String, Object> extendInfoMap = getExtendInfos();

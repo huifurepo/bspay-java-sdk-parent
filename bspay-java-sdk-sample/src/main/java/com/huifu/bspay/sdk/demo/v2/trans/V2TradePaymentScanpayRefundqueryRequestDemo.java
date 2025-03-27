@@ -11,7 +11,7 @@ import com.huifu.bspay.sdk.demo.core.Identify;
 import com.huifu.bspay.sdk.opps.core.request.V2TradePaymentScanpayRefundqueryRequest;
 
 /**
- * 交易退款查询接口 - 示例
+ * 扫码交易退款查询 - 示例
  *
  * @author sdk-generator
  * @Description
@@ -28,7 +28,7 @@ public class V2TradePaymentScanpayRefundqueryRequestDemo extends BaseCommonDemo 
         V2TradePaymentScanpayRefundqueryRequest request = new V2TradePaymentScanpayRefundqueryRequest();
         // 商户号
         request.setHuifuId("6666000108854952");
-        // 退款请求日期
+        // 退款请求日期退款发生的日期，格式为yyyyMMdd，&lt;font color&#x3D;&quot;green&quot;&gt;示例值：20220925&lt;/font&gt;；&lt;/br&gt;传入退款全局流水号时，非必填，其他场景必填；
         request.setOrgReqDate("20221110");
         // 退款全局流水号退款请求流水号,退款全局流水号,终端订单号三选一不能都为空；&lt;br/&gt;&lt;font color&#x3D;&quot;green&quot;&gt;示例值：0030default220825182711P099ac1f343f00000&lt;/font&gt;
         request.setOrgHfSeqId("003100TOP2B221110093241P139ac139c0c00000");

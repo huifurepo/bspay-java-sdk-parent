@@ -11,7 +11,7 @@ import com.huifu.bspay.sdk.demo.core.Identify;
 import com.huifu.bspay.sdk.opps.core.request.V3TradePaymentDelaytransConfirmqueryRequest;
 
 /**
- * 交易确认查询接口 - 示例
+ * 交易确认查询 - 示例
  *
  * @author sdk-generator
  * @Description

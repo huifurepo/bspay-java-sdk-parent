@@ -37,9 +37,9 @@ public class V2TradeOnlinepaymentUnionpayRequestDemo extends BaseCommonDemo {
         // 商品描述
         request.setOrderDesc("通用性商品1");
         // 安全信息
-        request.setRiskCheckData(getRiskCheckData());
+        request.setRiskCheckData(get039a5a632a524bedBdf01306634c96e2());
         // 三方支付数据jsonObject；pay_scene为云闪付公众号与云闪付小程序时必填
-        // request.setThirdPayData(getThirdPayData());
+        // request.setThirdPayData(getFd7b99d3543a4935Aece1411798bc9d5());
 
         // 设置非必填字段
         Map<String, Object> extendInfoMap = getExtendInfos();
@@ -68,7 +68,7 @@ public class V2TradeOnlinepaymentUnionpayRequestDemo extends BaseCommonDemo {
         // 订单失效时间
         extendInfoMap.put("time_expire", "");
         // 分账对象
-        // extendInfoMap.put("acct_split_bunch", getAcctSplitBunchRucan());
+        // extendInfoMap.put("acct_split_bunch", get962ca1cb6e3c44d8A1c13660223fe9fd());
         // 前端跳转地址
         extendInfoMap.put("front_url", "https://www.service.com/getresp");
         // 异步通知地址
@@ -82,7 +82,7 @@ public class V2TradeOnlinepaymentUnionpayRequestDemo extends BaseCommonDemo {
         return extendInfoMap;
     }
 
-    private static JSON getAcctInfos() {
+    private static JSON get634a1ff623df402fA0a621cd0982a65d() {
         JSONObject dto = new JSONObject();
         // 分账金额
         // dto.put("div_amt", "");
@@ -98,10 +98,10 @@ public class V2TradeOnlinepaymentUnionpayRequestDemo extends BaseCommonDemo {
         return dtoList;
     }
 
-    private static String getAcctSplitBunchRucan() {
+    private static String get962ca1cb6e3c44d8A1c13660223fe9fd() {
         JSONObject dto = new JSONObject();
         // 分账明细
-        // dto.put("acct_infos", getAcctInfos());
+        // dto.put("acct_infos", get634a1ff623df402fA0a621cd0982a65d());
         // 百分比分账标志
         // dto.put("percentage_flag", "");
         // 是否净值分账
@@ -110,7 +110,7 @@ public class V2TradeOnlinepaymentUnionpayRequestDemo extends BaseCommonDemo {
         return dto.toJSONString();
     }
 
-    private static String getRiskCheckData() {
+    private static String get039a5a632a524bedBdf01306634c96e2() {
         JSONObject dto = new JSONObject();
         // 基站地址
         dto.put("base_station", "7");
@@ -124,7 +124,7 @@ public class V2TradeOnlinepaymentUnionpayRequestDemo extends BaseCommonDemo {
         return dto.toJSONString();
     }
 
-    private static String getThirdPayData() {
+    private static String getFd7b99d3543a4935Aece1411798bc9d5() {
         JSONObject dto = new JSONObject();
         // 小程序id
         // dto.put("app_id", "");

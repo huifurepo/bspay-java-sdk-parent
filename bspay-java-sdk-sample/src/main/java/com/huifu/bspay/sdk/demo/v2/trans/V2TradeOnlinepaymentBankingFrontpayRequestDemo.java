@@ -37,11 +37,11 @@ public class V2TradeOnlinepaymentBankingFrontpayRequestDemo extends BaseCommonDe
         // 商品描述
         request.setGoodsDesc("网银支付下单");
         // 网联扩展数据
-        request.setExtendPayData(getExtendPayData());
+        request.setExtendPayData(get3194e7baDdea4c7188127b568d867933());
         // 设备信息
-        request.setTerminalDeviceData(getTerminalDeviceData());
+        request.setTerminalDeviceData(get311c0af960b243a4Ae3797b5e7958321());
         // 安全信息
-        request.setRiskCheckData(getRiskCheckData());
+        request.setRiskCheckData(get3189111156d949719cc958f824f77fbd());
         // 异步通知地址
         request.setNotifyUrl("http://www.chinapnr.com");
 
@@ -78,7 +78,7 @@ public class V2TradeOnlinepaymentBankingFrontpayRequestDemo extends BaseCommonDe
         // 延时标记
         extendInfoMap.put("delay_acct_flag", "N");
         // 分账对象
-        // extendInfoMap.put("acct_split_bunch", getAcctSplitBunchRucan());
+        // extendInfoMap.put("acct_split_bunch", get25c8debcE5ba43afAcd2738c16b98199());
         // 手续费扣款标志
         // extendInfoMap.put("fee_flag", "");
         // 页面跳转地址
@@ -86,7 +86,7 @@ public class V2TradeOnlinepaymentBankingFrontpayRequestDemo extends BaseCommonDe
         return extendInfoMap;
     }
 
-    private static JSON getAcctInfos() {
+    private static JSON getD0d7f539767c4784A84eA384d0e3ee19() {
         JSONObject dto = new JSONObject();
         // 分账金额
         // dto.put("div_amt", "");
@@ -102,10 +102,10 @@ public class V2TradeOnlinepaymentBankingFrontpayRequestDemo extends BaseCommonDe
         return dtoList;
     }
 
-    private static String getAcctSplitBunchRucan() {
+    private static String get25c8debcE5ba43afAcd2738c16b98199() {
         JSONObject dto = new JSONObject();
         // 分账明细
-        // dto.put("acct_infos", getAcctInfos());
+        // dto.put("acct_infos", getD0d7f539767c4784A84eA384d0e3ee19());
         // 百分比分账标志
         // dto.put("percentage_flag", "");
         // 是否净值分账
@@ -114,7 +114,7 @@ public class V2TradeOnlinepaymentBankingFrontpayRequestDemo extends BaseCommonDe
         return dto.toJSONString();
     }
 
-    private static String getExtendPayData() {
+    private static String get3194e7baDdea4c7188127b568d867933() {
         JSONObject dto = new JSONObject();
         // 商品简称
         dto.put("goods_short_name", "011111");
@@ -126,7 +126,7 @@ public class V2TradeOnlinepaymentBankingFrontpayRequestDemo extends BaseCommonDe
         return dto.toJSONString();
     }
 
-    private static String getTerminalDeviceData() {
+    private static String get311c0af960b243a4Ae3797b5e7958321() {
         JSONObject dto = new JSONObject();
         // 交易设备类型
         dto.put("device_type", "1");
@@ -148,7 +148,7 @@ public class V2TradeOnlinepaymentBankingFrontpayRequestDemo extends BaseCommonDe
         return dto.toJSONString();
     }
 
-    private static String getRiskCheckData() {
+    private static String get3189111156d949719cc958f824f77fbd() {
         JSONObject dto = new JSONObject();
         // ip地址
         dto.put("ip_addr", "1");

@@ -12,25 +12,45 @@ import com.huifu.bspay.sdk.opps.core.enums.FunctionCodeEnum;
 public class V2HycInvoiceApplyRequest extends BaseRequest {
 
     /**
-     * 系统号
+     * 请求流水号
      */
-    @JSONField(name = "sys_id")
-    private String sysId;
+    @JSONField(name = "req_seq_id")
+    private String reqSeqId;
     /**
-     * 产品号
+     * 请求日期
      */
-    @JSONField(name = "product_id")
-    private String productId;
+    @JSONField(name = "req_date")
+    private String reqDate;
     /**
-     * 加签结果
+     * 商户汇付id
      */
-    @JSONField(name = "sign")
-    private String sign;
+    @JSONField(name = "huifu_id")
+    private String huifuId;
     /**
-     * 数据
+     * 交易流水列表
      */
-    @JSONField(name = "data")
-    private String data;
+    @JSONField(name = "batch_list")
+    private String batchList;
+    /**
+     * 接收人手机号
+     */
+    @JSONField(name = "receive_mobile")
+    private String receiveMobile;
+    /**
+     * 接收人姓名
+     */
+    @JSONField(name = "receive_name")
+    private String receiveName;
+    /**
+     * 快递地址
+     */
+    @JSONField(name = "courier_address")
+    private String courierAddress;
+    /**
+     * 开票类目
+     */
+    @JSONField(name = "invoice_category")
+    private String invoiceCategory;
 
     @Override
     public FunctionCodeEnum getFunctionCode() {
@@ -40,43 +60,79 @@ public class V2HycInvoiceApplyRequest extends BaseRequest {
     public V2HycInvoiceApplyRequest() {
     }
 
-    public V2HycInvoiceApplyRequest(String sysId, String productId, String sign, String data) {
-        this.sysId = sysId;
-        this.productId = productId;
-        this.sign = sign;
-        this.data = data;
+    public V2HycInvoiceApplyRequest(String reqSeqId, String reqDate, String huifuId, String batchList, String receiveMobile, String receiveName, String courierAddress, String invoiceCategory) {
+        this.reqSeqId = reqSeqId;
+        this.reqDate = reqDate;
+        this.huifuId = huifuId;
+        this.batchList = batchList;
+        this.receiveMobile = receiveMobile;
+        this.receiveName = receiveName;
+        this.courierAddress = courierAddress;
+        this.invoiceCategory = invoiceCategory;
     }
 
-    public String getSysId() {
-        return sysId;
+    public String getReqSeqId() {
+        return reqSeqId;
     }
 
-    public void setSysId(String sysId) {
-        this.sysId = sysId;
+    public void setReqSeqId(String reqSeqId) {
+        this.reqSeqId = reqSeqId;
     }
 
-    public String getProductId() {
-        return productId;
+    public String getReqDate() {
+        return reqDate;
     }
 
-    public void setProductId(String productId) {
-        this.productId = productId;
+    public void setReqDate(String reqDate) {
+        this.reqDate = reqDate;
     }
 
-    public String getSign() {
-        return sign;
+    public String getHuifuId() {
+        return huifuId;
     }
 
-    public void setSign(String sign) {
-        this.sign = sign;
+    public void setHuifuId(String huifuId) {
+        this.huifuId = huifuId;
     }
 
-    public String getData() {
-        return data;
+    public String getBatchList() {
+        return batchList;
     }
 
-    public void setData(String data) {
-        this.data = data;
+    public void setBatchList(String batchList) {
+        this.batchList = batchList;
+    }
+
+    public String getReceiveMobile() {
+        return receiveMobile;
+    }
+
+    public void setReceiveMobile(String receiveMobile) {
+        this.receiveMobile = receiveMobile;
+    }
+
+    public String getReceiveName() {
+        return receiveName;
+    }
+
+    public void setReceiveName(String receiveName) {
+        this.receiveName = receiveName;
+    }
+
+    public String getCourierAddress() {
+        return courierAddress;
+    }
+
+    public void setCourierAddress(String courierAddress) {
+        this.courierAddress = courierAddress;
+    }
+
+    public String getInvoiceCategory() {
+        return invoiceCategory;
+    }
+
+    public void setInvoiceCategory(String invoiceCategory) {
+        this.invoiceCategory = invoiceCategory;
     }
 
 }

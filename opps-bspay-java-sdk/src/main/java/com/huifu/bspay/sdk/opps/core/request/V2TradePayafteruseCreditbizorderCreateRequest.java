@@ -32,11 +32,6 @@ public class V2TradePayafteruseCreditbizorderCreateRequest extends BaseRequest {
     @JSONField(name = "trans_amt")
     private String transAmt;
     /**
-     * 追踪ID
-     */
-    @JSONField(name = "source_id")
-    private String sourceId;
-    /**
      * 支付宝用户ID
      */
     @JSONField(name = "buyer_id")
@@ -75,12 +70,11 @@ public class V2TradePayafteruseCreditbizorderCreateRequest extends BaseRequest {
     public V2TradePayafteruseCreditbizorderCreateRequest() {
     }
 
-    public V2TradePayafteruseCreditbizorderCreateRequest(String reqSeqId, String reqDate, String huifuId, String transAmt, String sourceId, String buyerId, String title, String merchantBizType, String path, String zmServiceId, String itemInfos) {
+    public V2TradePayafteruseCreditbizorderCreateRequest(String reqSeqId, String reqDate, String huifuId, String transAmt, String buyerId, String title, String merchantBizType, String path, String zmServiceId, String itemInfos) {
         this.reqSeqId = reqSeqId;
         this.reqDate = reqDate;
         this.huifuId = huifuId;
         this.transAmt = transAmt;
-        this.sourceId = sourceId;
         this.buyerId = buyerId;
         this.title = title;
         this.merchantBizType = merchantBizType;
@@ -119,14 +113,6 @@ public class V2TradePayafteruseCreditbizorderCreateRequest extends BaseRequest {
 
     public void setTransAmt(String transAmt) {
         this.transAmt = transAmt;
-    }
-
-    public String getSourceId() {
-        return sourceId;
-    }
-
-    public void setSourceId(String sourceId) {
-        this.sourceId = sourceId;
     }
 
     public String getBuyerId() {

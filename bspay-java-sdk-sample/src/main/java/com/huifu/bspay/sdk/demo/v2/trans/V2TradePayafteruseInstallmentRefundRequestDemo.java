@@ -34,6 +34,8 @@ public class V2TradePayafteruseInstallmentRefundRequestDemo extends BaseCommonDe
         request.setHuifuId("6666000108281250");
         // 申请退款金额
         request.setOrdAmt("0.01");
+        // 原请求日期
+        request.setOrgReqDate("20241010");
 
         // 设置非必填字段
         Map<String, Object> extendInfoMap = getExtendInfos();
@@ -52,11 +54,9 @@ public class V2TradePayafteruseInstallmentRefundRequestDemo extends BaseCommonDe
         // 设置非必填字段
         Map<String, Object> extendInfoMap = new HashMap<>();
         // 分账串
-        // extendInfoMap.put("acct_split_bunch", getAcctSplitBunch());
+        // extendInfoMap.put("acct_split_bunch", getF7787e9670d544d18daf492c5188d4b8());
         // 原请求流水号
         extendInfoMap.put("org_req_seq_id", "20241010test10000111qccrr");
-        // 原请求日期
-        extendInfoMap.put("org_req_date", "20241010");
         // 原全局流水号
         // extendInfoMap.put("org_hf_seq_id", "");
         // 交易备注
@@ -66,7 +66,7 @@ public class V2TradePayafteruseInstallmentRefundRequestDemo extends BaseCommonDe
         return extendInfoMap;
     }
 
-    private static JSON getAcctInfos() {
+    private static JSON get78d9342b81254eae998c1de697882410() {
         JSONObject dto = new JSONObject();
         // 分账金额
         // dto.put("div_amt", "test");
@@ -80,16 +80,16 @@ public class V2TradePayafteruseInstallmentRefundRequestDemo extends BaseCommonDe
         return dtoList;
     }
 
-    private static JSON getAcctSplitBunch() {
+    private static String getF7787e9670d544d18daf492c5188d4b8() {
         JSONObject dto = new JSONObject();
         // 百分比分账标志
         // dto.put("percentage_flag", "");
         // 是否净值分账
         // dto.put("is_clean_split", "");
         // 分账明细
-        // dto.put("acct_infos", getAcctInfos());
+        // dto.put("acct_infos", get78d9342b81254eae998c1de697882410());
 
-        return dto;
+        return dto.toJSONString();
     }
 
 }
