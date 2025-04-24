@@ -8,16 +8,16 @@ import com.huifu.bspay.sdk.demo.init.OppsMerchantConfigDemo;
 import com.huifu.bspay.sdk.opps.core.utils.DateTools;
 import com.huifu.bspay.sdk.opps.core.utils.SequenceTools;
 import com.huifu.bspay.sdk.demo.core.Identify;
-import com.huifu.bspay.sdk.opps.core.request.V2InvoiceClerkRegRequest;
+import com.huifu.bspay.sdk.opps.core.request.V2EfpAcctpaymentRefundQueryRequest;
 
 /**
- * 开票员登记 - 示例
+ * 全渠道资金付款到账户退款查询 - 示例
  *
  * @author sdk-generator
  * @Description
  */
-@Identify(requestClass = V2InvoiceClerkRegRequest.class)
-public class V2InvoiceClerkRegRequestDemo extends BaseCommonDemo {
+@Identify(requestClass = V2EfpAcctpaymentRefundQueryRequest.class)
+public class V2EfpAcctpaymentRefundQueryRequestDemo extends BaseCommonDemo {
 
     public static void main(String[] args) throws Exception {
 
@@ -25,21 +25,17 @@ public class V2InvoiceClerkRegRequestDemo extends BaseCommonDemo {
         doInit(OppsMerchantConfigDemo.getMerchantConfig());
 
         // 2.组装请求参数
-        V2InvoiceClerkRegRequest request = new V2InvoiceClerkRegRequest();
+        V2EfpAcctpaymentRefundQueryRequest request = new V2EfpAcctpaymentRefundQueryRequest();
         // 请求流水号
         request.setReqSeqId(SequenceTools.getReqSeqId32());
-        // 请求时间
+        // 请求日期
         request.setReqDate(DateTools.getCurrentDateYYYYMMDD());
-        // 商户汇付Id
-        request.setHuifuId("6666000149801800");
-        // 开票员登录身份
-        request.setClerkIdentity("04");
-        // 登录账号
-        request.setLoginAccount("31011520010");
-        // 登录密码
-        request.setLoginPassword("1******5");
-        // 开票员手机号
-        request.setClerkPhoneNo("17621100776");
+        // 汇付商户号
+        request.setHuifuId("6666000123123123");
+        // 退款交易请求流水号
+        request.setOrgReqSeqId("2021091708126665002");
+        // 退款交易请求日期
+        request.setOrgReqDate("20221022");
 
         // 设置非必填字段
         Map<String, Object> extendInfoMap = getExtendInfos();
@@ -57,8 +53,6 @@ public class V2InvoiceClerkRegRequestDemo extends BaseCommonDemo {
     private static Map<String, Object> getExtendInfos() {
         // 设置非必填字段
         Map<String, Object> extendInfoMap = new HashMap<>();
-        // 开票员名字
-        extendInfoMap.put("clerk_name", "张三");
         return extendInfoMap;
     }
 

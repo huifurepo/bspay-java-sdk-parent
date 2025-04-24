@@ -11,7 +11,7 @@ import com.huifu.bspay.sdk.demo.core.Identify;
 import com.huifu.bspay.sdk.opps.core.request.V2TradeOnlinepaymentTransferRemittanceRequest;
 
 /**
- * 汇付入账确认 - 示例
+ * 汇付入账通知 - 示例
  *
  * @author sdk-generator
  * @Description

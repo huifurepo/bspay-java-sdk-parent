@@ -47,17 +47,7 @@ public class V2MerchantBusiEfpconfigRequest extends BaseRequest {
     @JSONField(name = "out_order_acct_open_fees")
     private String outOrderAcctOpenFees;
     /**
-     * 全渠道资金管理补充材料id涉及文件类型：[F504-全渠道资金管理补充材料](https://paas.huifu.com/open/doc/api/#/csfl/api_csfl_wjlx)；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：57cc7f00-600a-33ab-b614-6221bbf2e530&lt;/font&gt;
-     */
-    @JSONField(name = "other_payment_institutions_pic")
-    private String otherPaymentInstitutionsPic;
-    /**
-     * XW银行数字证书及电子签名授权委托书out_funds_gate_id为xw0时必填；涉及文件类型：[F534-银行数字证书及电子签名授权委托书](https://paas.huifu.com/open/doc/api/#/csfl/api_csfl_wjlx)；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：57cc7f00-600a-33ab-b614-6221bbf2e530&lt;/font&gt;
-     */
-    @JSONField(name = "xw_digital_certificate_pic")
-    private String xwDigitalCertificatePic;
-    /**
-     * 银行类型
+     * 银行类型switch_state有值时需填写； ht1-华通银行，xw0-XW银行，ss0-苏商银行；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：ht1&lt;/font&gt;
      */
     @JSONField(name = "out_funds_gate_id")
     private String outFundsGateId;
@@ -67,10 +57,100 @@ public class V2MerchantBusiEfpconfigRequest extends BaseRequest {
     @JSONField(name = "sign_user_info")
     private String signUserInfo;
     /**
-     * 入账来源
+     * 入账来源开通全域资金时需填写；01:抖音 02:美团 03:快手 04:拼多多 05:小红书 06:淘宝/天猫/飞猪 07:微信视频号/微信小店 08:京东 09:饿了么 11:得物 12:唯品会 13:携程 14:支付宝直连 15:微信直连 16:滴滴加油 17:团油 18:通联 19:易宝 多个逗号分隔；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：01,02,05&lt;/font&gt;；
      */
     @JSONField(name = "acct_source")
     private String acctSource;
+    /**
+     * 抖音合作证明材料入账来源包含01:抖音时必填 文件类型F535；详见[文件类型说明](https://paas.huifu.com/open/doc/api/#/csfl/api_csfl_wjlx)；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：57cc7f00-600a-33ab-b614-6221bbf2e530&lt;/font&gt;
+     */
+    @JSONField(name = "dy_cooperation_prove_pic")
+    private String dyCooperationProvePic;
+    /**
+     * 美团合作证明材料入账来源包含02:美团时必填 文件类型F536；详见[文件类型说明](https://paas.huifu.com/open/doc/api/#/csfl/api_csfl_wjlx)；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：57cc7f00-600a-33ab-b614-6221bbf2e530&lt;/font&gt;
+     */
+    @JSONField(name = "mt_cooperation_prove_pic")
+    private String mtCooperationProvePic;
+    /**
+     * 快手合作证明材料入账来源包含03:快手时必填 文件类型F537；详见[文件类型说明](https://paas.huifu.com/open/doc/api/#/csfl/api_csfl_wjlx)；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：57cc7f00-600a-33ab-b614-6221bbf2e530&lt;/font&gt;
+     */
+    @JSONField(name = "ks_cooperation_prove_pic")
+    private String ksCooperationProvePic;
+    /**
+     * 拼多多合作证明材料入账来源包含04:拼多多时必填 文件类型F538；详见[文件类型说明](https://paas.huifu.com/open/doc/api/#/csfl/api_csfl_wjlx)；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：57cc7f00-600a-33ab-b614-6221bbf2e530&lt;/font&gt;
+     */
+    @JSONField(name = "pdd_cooperation_prove_pic")
+    private String pddCooperationProvePic;
+    /**
+     * 小红书合作证明材料入账来源包含05:小红书时必填 文件类型F539；详见[文件类型说明](https://paas.huifu.com/open/doc/api/#/csfl/api_csfl_wjlx)；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：57cc7f00-600a-33ab-b614-6221bbf2e530&lt;/font&gt;
+     */
+    @JSONField(name = "xhs_cooperation_prove_pic")
+    private String xhsCooperationProvePic;
+    /**
+     * 淘宝天猫飞猪合作证明材料入账来源包含06:淘宝天猫飞猪时必填 文件类型F540；详见[文件类型说明](https://paas.huifu.com/open/doc/api/#/csfl/api_csfl_wjlx)；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：57cc7f00-600a-33ab-b614-6221bbf2e530&lt;/font&gt;
+     */
+    @JSONField(name = "zfb_cooperation_prove_pic")
+    private String zfbCooperationProvePic;
+    /**
+     * 微信视频号合作证明材料入账来源包含07:微信视频号时必填 文件类型F541；详见[文件类型说明](https://paas.huifu.com/open/doc/api/#/csfl/api_csfl_wjlx)；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：57cc7f00-600a-33ab-b614-6221bbf2e530&lt;/font&gt;
+     */
+    @JSONField(name = "wx_cooperation_prove_pic")
+    private String wxCooperationProvePic;
+    /**
+     * 京东合作证明材料入账来源包含08:京东时必填 文件类型F542；详见[文件类型说明](https://paas.huifu.com/open/doc/api/#/csfl/api_csfl_wjlx)；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：57cc7f00-600a-33ab-b614-6221bbf2e530&lt;/font&gt;
+     */
+    @JSONField(name = "jd_cooperation_prove_pic")
+    private String jdCooperationProvePic;
+    /**
+     * 饿了么合作证明材料入账来源包含09:饿了么时必填 文件类型F543；详见[文件类型说明](https://paas.huifu.com/open/doc/api/#/csfl/api_csfl_wjlx)；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：57cc7f00-600a-33ab-b614-6221bbf2e530&lt;/font&gt;
+     */
+    @JSONField(name = "elm_cooperation_prove_pic")
+    private String elmCooperationProvePic;
+    /**
+     * 得物合作证明材料入账来源包含11:得物时必填 文件类型F591；详见[文件类型说明](https://paas.huifu.com/open/doc/api/#/csfl/api_csfl_wjlx)；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：57cc7f00-600a-33ab-b614-6221bbf2e530&lt;/font&gt;
+     */
+    @JSONField(name = "dw_cooperation_prove_pic")
+    private String dwCooperationProvePic;
+    /**
+     * 唯品会合作证明材料入账来源包含12:唯品会时必填 文件类型F592；详见[文件类型说明](https://paas.huifu.com/open/doc/api/#/csfl/api_csfl_wjlx)；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：57cc7f00-600a-33ab-b614-6221bbf2e530&lt;/font&gt;
+     */
+    @JSONField(name = "wph_cooperation_prove_pic")
+    private String wphCooperationProvePic;
+    /**
+     * 携程合作证明材料入账来源包含13:携程时必填 文件类型F593；详见[文件类型说明](https://paas.huifu.com/open/doc/api/#/csfl/api_csfl_wjlx)；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：57cc7f00-600a-33ab-b614-6221bbf2e530&lt;/font&gt;
+     */
+    @JSONField(name = "xc_cooperation_prove_pic")
+    private String xcCooperationProvePic;
+    /**
+     * 支付宝直连合作证明材料入账来源包含14:支付宝直连时必填 文件类型F594；详见[文件类型说明](https://paas.huifu.com/open/doc/api/#/csfl/api_csfl_wjlx)；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：57cc7f00-600a-33ab-b614-6221bbf2e530&lt;/font&gt;
+     */
+    @JSONField(name = "zfbzl_cooperation_prove_pic")
+    private String zfbzlCooperationProvePic;
+    /**
+     * 微信直连合作证明材料入账来源包含15:微信直连时必填 文件类型F595；详见[文件类型说明](https://paas.huifu.com/open/doc/api/#/csfl/api_csfl_wjlx)；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：57cc7f00-600a-33ab-b614-6221bbf2e530&lt;/font&gt;
+     */
+    @JSONField(name = "wxzl_cooperation_prove_pic")
+    private String wxzlCooperationProvePic;
+    /**
+     * 滴滴加油合作证明材料入账来源包含16:滴滴加油时必填 文件类型F596；详见[文件类型说明](https://paas.huifu.com/open/doc/api/#/csfl/api_csfl_wjlx)；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：57cc7f00-600a-33ab-b614-6221bbf2e530&lt;/font&gt;
+     */
+    @JSONField(name = "ddjy_cooperation_prove_pic")
+    private String ddjyCooperationProvePic;
+    /**
+     * 团油合作证明材料入账来源包含17:团油时必填 文件类型F597；详见[文件类型说明](https://paas.huifu.com/open/doc/api/#/csfl/api_csfl_wjlx)；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：57cc7f00-600a-33ab-b614-6221bbf2e530&lt;/font&gt;
+     */
+    @JSONField(name = "ty_cooperation_prove_pic")
+    private String tyCooperationProvePic;
+    /**
+     * 通联合作证明材料入账来源包含18:通联时必填 文件类型F598；详见[文件类型说明](https://paas.huifu.com/open/doc/api/#/csfl/api_csfl_wjlx)；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：57cc7f00-600a-33ab-b614-6221bbf2e530&lt;/font&gt;
+     */
+    @JSONField(name = "tl_cooperation_prove_pic")
+    private String tlCooperationProvePic;
+    /**
+     * 易宝合作证明材料入账来源包含19:易宝时必填 文件类型F599；详见[文件类型说明](https://paas.huifu.com/open/doc/api/#/csfl/api_csfl_wjlx)；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：57cc7f00-600a-33ab-b614-6221bbf2e530&lt;/font&gt;
+     */
+    @JSONField(name = "yb_cooperation_prove_pic")
+    private String ybCooperationProvePic;
 
     @Override
     public FunctionCodeEnum getFunctionCode() {
@@ -80,7 +160,7 @@ public class V2MerchantBusiEfpconfigRequest extends BaseRequest {
     public V2MerchantBusiEfpconfigRequest() {
     }
 
-    public V2MerchantBusiEfpconfigRequest(String reqSeqId, String reqDate, String huifuId, String upperHuifuId, String outFeeHuifuid, String outOrderAcctCard, String outOrderAcctOpenFees, String otherPaymentInstitutionsPic, String xwDigitalCertificatePic, String outFundsGateId, String signUserInfo, String acctSource) {
+    public V2MerchantBusiEfpconfigRequest(String reqSeqId, String reqDate, String huifuId, String upperHuifuId, String outFeeHuifuid, String outOrderAcctCard, String outOrderAcctOpenFees, String outFundsGateId, String signUserInfo, String acctSource, String dyCooperationProvePic, String mtCooperationProvePic, String ksCooperationProvePic, String pddCooperationProvePic, String xhsCooperationProvePic, String zfbCooperationProvePic, String wxCooperationProvePic, String jdCooperationProvePic, String elmCooperationProvePic, String dwCooperationProvePic, String wphCooperationProvePic, String xcCooperationProvePic, String zfbzlCooperationProvePic, String wxzlCooperationProvePic, String ddjyCooperationProvePic, String tyCooperationProvePic, String tlCooperationProvePic, String ybCooperationProvePic) {
         this.reqSeqId = reqSeqId;
         this.reqDate = reqDate;
         this.huifuId = huifuId;
@@ -88,11 +168,27 @@ public class V2MerchantBusiEfpconfigRequest extends BaseRequest {
         this.outFeeHuifuid = outFeeHuifuid;
         this.outOrderAcctCard = outOrderAcctCard;
         this.outOrderAcctOpenFees = outOrderAcctOpenFees;
-        this.otherPaymentInstitutionsPic = otherPaymentInstitutionsPic;
-        this.xwDigitalCertificatePic = xwDigitalCertificatePic;
         this.outFundsGateId = outFundsGateId;
         this.signUserInfo = signUserInfo;
         this.acctSource = acctSource;
+        this.dyCooperationProvePic = dyCooperationProvePic;
+        this.mtCooperationProvePic = mtCooperationProvePic;
+        this.ksCooperationProvePic = ksCooperationProvePic;
+        this.pddCooperationProvePic = pddCooperationProvePic;
+        this.xhsCooperationProvePic = xhsCooperationProvePic;
+        this.zfbCooperationProvePic = zfbCooperationProvePic;
+        this.wxCooperationProvePic = wxCooperationProvePic;
+        this.jdCooperationProvePic = jdCooperationProvePic;
+        this.elmCooperationProvePic = elmCooperationProvePic;
+        this.dwCooperationProvePic = dwCooperationProvePic;
+        this.wphCooperationProvePic = wphCooperationProvePic;
+        this.xcCooperationProvePic = xcCooperationProvePic;
+        this.zfbzlCooperationProvePic = zfbzlCooperationProvePic;
+        this.wxzlCooperationProvePic = wxzlCooperationProvePic;
+        this.ddjyCooperationProvePic = ddjyCooperationProvePic;
+        this.tyCooperationProvePic = tyCooperationProvePic;
+        this.tlCooperationProvePic = tlCooperationProvePic;
+        this.ybCooperationProvePic = ybCooperationProvePic;
     }
 
     public String getReqSeqId() {
@@ -151,22 +247,6 @@ public class V2MerchantBusiEfpconfigRequest extends BaseRequest {
         this.outOrderAcctOpenFees = outOrderAcctOpenFees;
     }
 
-    public String getOtherPaymentInstitutionsPic() {
-        return otherPaymentInstitutionsPic;
-    }
-
-    public void setOtherPaymentInstitutionsPic(String otherPaymentInstitutionsPic) {
-        this.otherPaymentInstitutionsPic = otherPaymentInstitutionsPic;
-    }
-
-    public String getXwDigitalCertificatePic() {
-        return xwDigitalCertificatePic;
-    }
-
-    public void setXwDigitalCertificatePic(String xwDigitalCertificatePic) {
-        this.xwDigitalCertificatePic = xwDigitalCertificatePic;
-    }
-
     public String getOutFundsGateId() {
         return outFundsGateId;
     }
@@ -189,6 +269,150 @@ public class V2MerchantBusiEfpconfigRequest extends BaseRequest {
 
     public void setAcctSource(String acctSource) {
         this.acctSource = acctSource;
+    }
+
+    public String getDyCooperationProvePic() {
+        return dyCooperationProvePic;
+    }
+
+    public void setDyCooperationProvePic(String dyCooperationProvePic) {
+        this.dyCooperationProvePic = dyCooperationProvePic;
+    }
+
+    public String getMtCooperationProvePic() {
+        return mtCooperationProvePic;
+    }
+
+    public void setMtCooperationProvePic(String mtCooperationProvePic) {
+        this.mtCooperationProvePic = mtCooperationProvePic;
+    }
+
+    public String getKsCooperationProvePic() {
+        return ksCooperationProvePic;
+    }
+
+    public void setKsCooperationProvePic(String ksCooperationProvePic) {
+        this.ksCooperationProvePic = ksCooperationProvePic;
+    }
+
+    public String getPddCooperationProvePic() {
+        return pddCooperationProvePic;
+    }
+
+    public void setPddCooperationProvePic(String pddCooperationProvePic) {
+        this.pddCooperationProvePic = pddCooperationProvePic;
+    }
+
+    public String getXhsCooperationProvePic() {
+        return xhsCooperationProvePic;
+    }
+
+    public void setXhsCooperationProvePic(String xhsCooperationProvePic) {
+        this.xhsCooperationProvePic = xhsCooperationProvePic;
+    }
+
+    public String getZfbCooperationProvePic() {
+        return zfbCooperationProvePic;
+    }
+
+    public void setZfbCooperationProvePic(String zfbCooperationProvePic) {
+        this.zfbCooperationProvePic = zfbCooperationProvePic;
+    }
+
+    public String getWxCooperationProvePic() {
+        return wxCooperationProvePic;
+    }
+
+    public void setWxCooperationProvePic(String wxCooperationProvePic) {
+        this.wxCooperationProvePic = wxCooperationProvePic;
+    }
+
+    public String getJdCooperationProvePic() {
+        return jdCooperationProvePic;
+    }
+
+    public void setJdCooperationProvePic(String jdCooperationProvePic) {
+        this.jdCooperationProvePic = jdCooperationProvePic;
+    }
+
+    public String getElmCooperationProvePic() {
+        return elmCooperationProvePic;
+    }
+
+    public void setElmCooperationProvePic(String elmCooperationProvePic) {
+        this.elmCooperationProvePic = elmCooperationProvePic;
+    }
+
+    public String getDwCooperationProvePic() {
+        return dwCooperationProvePic;
+    }
+
+    public void setDwCooperationProvePic(String dwCooperationProvePic) {
+        this.dwCooperationProvePic = dwCooperationProvePic;
+    }
+
+    public String getWphCooperationProvePic() {
+        return wphCooperationProvePic;
+    }
+
+    public void setWphCooperationProvePic(String wphCooperationProvePic) {
+        this.wphCooperationProvePic = wphCooperationProvePic;
+    }
+
+    public String getXcCooperationProvePic() {
+        return xcCooperationProvePic;
+    }
+
+    public void setXcCooperationProvePic(String xcCooperationProvePic) {
+        this.xcCooperationProvePic = xcCooperationProvePic;
+    }
+
+    public String getZfbzlCooperationProvePic() {
+        return zfbzlCooperationProvePic;
+    }
+
+    public void setZfbzlCooperationProvePic(String zfbzlCooperationProvePic) {
+        this.zfbzlCooperationProvePic = zfbzlCooperationProvePic;
+    }
+
+    public String getWxzlCooperationProvePic() {
+        return wxzlCooperationProvePic;
+    }
+
+    public void setWxzlCooperationProvePic(String wxzlCooperationProvePic) {
+        this.wxzlCooperationProvePic = wxzlCooperationProvePic;
+    }
+
+    public String getDdjyCooperationProvePic() {
+        return ddjyCooperationProvePic;
+    }
+
+    public void setDdjyCooperationProvePic(String ddjyCooperationProvePic) {
+        this.ddjyCooperationProvePic = ddjyCooperationProvePic;
+    }
+
+    public String getTyCooperationProvePic() {
+        return tyCooperationProvePic;
+    }
+
+    public void setTyCooperationProvePic(String tyCooperationProvePic) {
+        this.tyCooperationProvePic = tyCooperationProvePic;
+    }
+
+    public String getTlCooperationProvePic() {
+        return tlCooperationProvePic;
+    }
+
+    public void setTlCooperationProvePic(String tlCooperationProvePic) {
+        this.tlCooperationProvePic = tlCooperationProvePic;
+    }
+
+    public String getYbCooperationProvePic() {
+        return ybCooperationProvePic;
+    }
+
+    public void setYbCooperationProvePic(String ybCooperationProvePic) {
+        this.ybCooperationProvePic = ybCooperationProvePic;
     }
 
 }

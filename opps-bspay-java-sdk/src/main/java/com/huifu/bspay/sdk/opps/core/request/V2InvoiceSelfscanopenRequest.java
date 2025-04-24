@@ -46,11 +46,6 @@ public class V2InvoiceSelfscanopenRequest extends BaseRequest {
      */
     @JSONField(name = "goods_infos")
     private String goodsInfos;
-    /**
-     * 开票人信息
-     */
-    @JSONField(name = "payer_info")
-    private String payerInfo;
 
     @Override
     public FunctionCodeEnum getFunctionCode() {
@@ -60,7 +55,7 @@ public class V2InvoiceSelfscanopenRequest extends BaseRequest {
     public V2InvoiceSelfscanopenRequest() {
     }
 
-    public V2InvoiceSelfscanopenRequest(String reqSeqId, String reqDate, String huifuId, String ivcType, String openType, String orderAmt, String goodsInfos, String payerInfo) {
+    public V2InvoiceSelfscanopenRequest(String reqSeqId, String reqDate, String huifuId, String ivcType, String openType, String orderAmt, String goodsInfos) {
         this.reqSeqId = reqSeqId;
         this.reqDate = reqDate;
         this.huifuId = huifuId;
@@ -68,7 +63,6 @@ public class V2InvoiceSelfscanopenRequest extends BaseRequest {
         this.openType = openType;
         this.orderAmt = orderAmt;
         this.goodsInfos = goodsInfos;
-        this.payerInfo = payerInfo;
     }
 
     public String getReqSeqId() {
@@ -125,14 +119,6 @@ public class V2InvoiceSelfscanopenRequest extends BaseRequest {
 
     public void setGoodsInfos(String goodsInfos) {
         this.goodsInfos = goodsInfos;
-    }
-
-    public String getPayerInfo() {
-        return payerInfo;
-    }
-
-    public void setPayerInfo(String payerInfo) {
-        this.payerInfo = payerInfo;
     }
 
 }

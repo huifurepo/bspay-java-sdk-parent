@@ -35,7 +35,7 @@ public class V2MerchantBasicdataModifyRequestDemo extends BaseCommonDemo {
         // 汇付客户Id
         request.setHuifuId("6666000107932702");
         // 签约人jsonObject格式；agreement_info中选择电子签约时必填；个人商户填本人信息。
-        // request.setSignUserInfo(get791c67b3Cce741158ece6eaaf530de10());
+        // request.setSignUserInfo(get9727fce600f548b6989eF4b876767087());
 
         // 设置非必填字段
         Map<String, Object> extendInfoMap = getExtendInfos();
@@ -124,23 +124,23 @@ public class V2MerchantBasicdataModifyRequestDemo extends BaseCommonDemo {
         // 小票名称
         extendInfoMap.put("receipt_name", "小票上的名称");
         // *结算卡信息配置*
-        extendInfoMap.put("card_info", get3734abd86fec448dB3eeB2650b1e468c());
+        extendInfoMap.put("card_info", getFa610945Ccc54f7aB3e9E11b6b189fb2());
         // 结算协议图片文件
         // extendInfoMap.put("settle_agree_pic", "");
         // 基本存款账户编号或核准号
         // extendInfoMap.put("open_licence_no", "");
         // 取现信息配置
-        extendInfoMap.put("cash_config", getD8f62ec88c7340c8A8fe98e6be019538());
+        extendInfoMap.put("cash_config", getA9ad242d0b334ede84aa7bcd3473a4af());
         // 结算规则配置
-        extendInfoMap.put("settle_config", getBc88ac225ddb46a885bf7be8310e4a4f());
+        extendInfoMap.put("settle_config", getEd1554992d0546ca9db46e24bf6d3b46());
         // 商户主页URL
         // extendInfoMap.put("mer_url", "");
         // 商户ICP备案编号
         // extendInfoMap.put("mer_icp", "");
         // 受益人列表
-        // extendInfoMap.put("beneficiary_info", getB31f324178ea4ab5Bac8Df1e67a566f2());
+        // extendInfoMap.put("beneficiary_info", getDc7f751a36fb4bba8a2cD330d5eaa4b3());
         // 协议信息
-        // extendInfoMap.put("agreement_info", getDc09f955A7824544Aed2D92480b74027());
+        // extendInfoMap.put("agreement_info", get307191896a9f4ed48418Ac7e1980e485());
         // 营业执照图片
         // extendInfoMap.put("license_pic", "");
         // 授权委托书
@@ -154,13 +154,13 @@ public class V2MerchantBasicdataModifyRequestDemo extends BaseCommonDemo {
         // 店铺收银台/公司前台照
         // extendInfoMap.put("store_cashier_desk_pic", "");
         // 扩展资料包
-        // extendInfoMap.put("extended_material_list", get457c26e1370646d085ea7a5cb2f3dc6e());
+        // extendInfoMap.put("extended_material_list", get2ac9cf4671404fbe9997D27236b556fe());
         // 异步通知地址
         extendInfoMap.put("async_return_url", "archer://C_SSPM_NSPOSM_BUSIRESULT");
         // 斗拱e账户功能配置
-        // extendInfoMap.put("elec_acct_config", get0c17625068a141abAe810df61d8514a4());
+        // extendInfoMap.put("elec_acct_config", get0685f20c9ba545bd88c92138dfcb1afd());
         // 股东信息
-        // extendInfoMap.put("share_holder_info_list", get03750dcb69b84148Ac0b225a1f2446d2());
+        // extendInfoMap.put("share_holder_info_list", get3349bf64Eba543fa87b5351697d3a7e3());
         // 外部商户号
         // extendInfoMap.put("ext_mer_id", "");
         // 备注
@@ -168,7 +168,7 @@ public class V2MerchantBasicdataModifyRequestDemo extends BaseCommonDemo {
         return extendInfoMap;
     }
 
-    private static String get3734abd86fec448dB3eeB2650b1e468c() {
+    private static String getFa610945Ccc54f7aB3e9E11b6b189fb2() {
         JSONObject dto = new JSONObject();
         // 结算账户类型
         dto.put("card_type", "1");
@@ -224,7 +224,7 @@ public class V2MerchantBasicdataModifyRequestDemo extends BaseCommonDemo {
         return dto.toJSONString();
     }
 
-    private static String getD8f62ec88c7340c8A8fe98e6be019538() {
+    private static String getA9ad242d0b334ede84aa7bcd3473a4af() {
         JSONObject dto = new JSONObject();
         // 状态
         dto.put("switch_state", "1");
@@ -252,7 +252,7 @@ public class V2MerchantBasicdataModifyRequestDemo extends BaseCommonDemo {
         return dtoList.toJSONString();
     }
 
-    private static String getBc88ac225ddb46a885bf7be8310e4a4f() {
+    private static String getEd1554992d0546ca9db46e24bf6d3b46() {
         JSONObject dto = new JSONObject();
         // 结算开关
         dto.put("settle_status", "1");
@@ -260,9 +260,9 @@ public class V2MerchantBasicdataModifyRequestDemo extends BaseCommonDemo {
         dto.put("settle_cycle", "T1");
         // 结算手续费外扣商户号结算手续费外扣商户号，填写承担手续费的汇付商户号；当out_settle_flag&#x3D;1时必填，否则非必填；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：6666000123123123&lt;/font&gt;
         // dto.put("out_settle_huifuid", "test");
-        // 节假日结算手续费率settle_cycle为D1时必填。单位%，需保留小数点后两位。取值范围[0.00，100.00]，不收费请填写0.00；settle_cycle&#x3D;T1时，不生效 ；settle_cycle为D1时，遇节假日按此费率结算 ；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：0.05&lt;/font&gt;
+        // 节假日结算手续费率settle_cycle为D1、TS时必填。单位%，需保留小数点后两位。取值范围[0.00，100.00]，不收费请填写0.00；settle_cycle&#x3D;T1时，不生效 ；settle_cycle为D1时，遇节假日按此费率结算 ；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：0.05&lt;/font&gt;
         dto.put("fixed_ratio", "0");
-        // 节假日结算手续费固定金额settle_cycle为D1时必填。单位元，需保留小数点后两位。不收费请填写0.00；settle_cycle结算周期为D1时，遇节假日按此费率结算 ；&lt;br/&gt; &lt;font color&#x3D;&quot;green&quot;&gt;示例值：1.00&lt;/font&gt;
+        // 节假日结算手续费固定金额settle_cycle为D1、TS时必填。单位元，需保留小数点后两位。不收费请填写0.00；settle_cycle结算周期为D1时，遇节假日按此费率结算 ；&lt;br/&gt; &lt;font color&#x3D;&quot;green&quot;&gt;示例值：1.00&lt;/font&gt;
         dto.put("constant_amt", "0");
         // 起结金额
         // dto.put("min_amt", "");
@@ -290,7 +290,7 @@ public class V2MerchantBasicdataModifyRequestDemo extends BaseCommonDemo {
         return dto.toJSONString();
     }
 
-    private static String getB31f324178ea4ab5Bac8Df1e67a566f2() {
+    private static String getDc7f751a36fb4bba8a2cD330d5eaa4b3() {
         JSONObject dto = new JSONObject();
         // 受益人名称
         // dto.put("bo_name", "test");
@@ -318,7 +318,7 @@ public class V2MerchantBasicdataModifyRequestDemo extends BaseCommonDemo {
         return dtoList.toJSONString();
     }
 
-    private static String get791c67b3Cce741158ece6eaaf530de10() {
+    private static String get9727fce600f548b6989eF4b876767087() {
         JSONObject dto = new JSONObject();
         // 签约人类型
         // dto.put("type", "test");
@@ -332,7 +332,7 @@ public class V2MerchantBasicdataModifyRequestDemo extends BaseCommonDemo {
         return dto.toJSONString();
     }
 
-    private static String getDc09f955A7824544Aed2D92480b74027() {
+    private static String get307191896a9f4ed48418Ac7e1980e485() {
         JSONObject dto = new JSONObject();
         // 协议类型
         // dto.put("agreement_type", "test");
@@ -348,7 +348,7 @@ public class V2MerchantBasicdataModifyRequestDemo extends BaseCommonDemo {
         return dto.toJSONString();
     }
 
-    private static String get457c26e1370646d085ea7a5cb2f3dc6e() {
+    private static String get2ac9cf4671404fbe9997D27236b556fe() {
         JSONObject dto = new JSONObject();
         // 文件id
         // dto.put("file_id", "test");
@@ -360,7 +360,7 @@ public class V2MerchantBasicdataModifyRequestDemo extends BaseCommonDemo {
         return dtoList.toJSONString();
     }
 
-    private static JSON get6365130a554b468e8b227b293f0e7757() {
+    private static JSON getAf91698b421f492c80990271e81e8d47() {
         JSONObject dto = new JSONObject();
         // 银行编码
         // dto.put("bank_code", "test");
@@ -392,7 +392,7 @@ public class V2MerchantBasicdataModifyRequestDemo extends BaseCommonDemo {
         return dtoList;
     }
 
-    private static String get0c17625068a141abAe810df61d8514a4() {
+    private static String get0685f20c9ba545bd88c92138dfcb1afd() {
         JSONObject dto = new JSONObject();
         // 电子账户开关
         // dto.put("switch_state", "test");
@@ -405,12 +405,12 @@ public class V2MerchantBasicdataModifyRequestDemo extends BaseCommonDemo {
         // 角色类型
         // dto.put("role_type", "test");
         // 银行卡信息
-        // dto.put("elec_card_list", get6365130a554b468e8b227b293f0e7757());
+        // dto.put("elec_card_list", getAf91698b421f492c80990271e81e8d47());
 
         return dto.toJSONString();
     }
 
-    private static String get03750dcb69b84148Ac0b225a1f2446d2() {
+    private static String get3349bf64Eba543fa87b5351697d3a7e3() {
         JSONObject dto = new JSONObject();
         // 股东姓名
         // dto.put("name", "test");

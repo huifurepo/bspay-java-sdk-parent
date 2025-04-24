@@ -37,9 +37,9 @@ public class V2TradePayafteruseInstallmentPayRequestDemo extends BaseCommonDemo 
         // 商品描述
         request.setGoodsDesc("聚合反扫消费");
         // 风控信息
-        request.setRiskCheckData(get0f99e9a637e24d808ff5643156cacfd2());
+        request.setRiskCheckData(get5f3a85d0F5914afaAcacBad2c1d9d0c1());
         // 支付宝扩展参数集合
-        request.setAlipayData(getA9a8f781Dc18421380619fb825922dee());
+        request.setAlipayData(getDc737f3f10584db087acA3bf4f00e91f());
 
         // 设置非必填字段
         Map<String, Object> extendInfoMap = getExtendInfos();
@@ -64,43 +64,43 @@ public class V2TradePayafteruseInstallmentPayRequestDemo extends BaseCommonDemo 
         // 是否延迟交易
         // extendInfoMap.put("delay_acct_flag", "");
         // 分账串
-        // extendInfoMap.put("acct_split_bunch", get23e7206bA8f141df88fa1890cdbc505a());
+        // extendInfoMap.put("acct_split_bunch", getE3ae9a478aec40059dbc91aa66aa0d21());
         // 设备信息
-        extendInfoMap.put("terminal_device_info", getE589e802D94b44faBa3d2aef28256209());
+        extendInfoMap.put("terminal_device_info", getF7961ae67c874fb28754F33b592b7720());
         // 异步通知地址
         extendInfoMap.put("notify_url", "http://www.baidu.com");
         return extendInfoMap;
     }
 
-    private static JSON get2feb0e6aB88441538031A8afd69f177a() {
+    private static JSON get160495108cc94a02B915A460403ce173() {
         JSONObject dto = new JSONObject();
-        // 分账金额
-        // dto.put("div_amt", "test");
         // 分账接收方商户号
         // dto.put("huifu_id", "test");
+        // 分账金额
+        // dto.put("div_amt", "");
         // 分账接收方账户号
         // dto.put("acct_id", "");
-        // 百分比分账标志
-        // dto.put("percentage_flag", "");
+        // 分账百分比%
+        // dto.put("percentage_div", "");
 
         JSONArray dtoList = new JSONArray();
         dtoList.add(dto);
         return dtoList;
     }
 
-    private static String get23e7206bA8f141df88fa1890cdbc505a() {
+    private static String getE3ae9a478aec40059dbc91aa66aa0d21() {
         JSONObject dto = new JSONObject();
         // 百分比分账标志
         // dto.put("percentage_flag", "");
         // 是否净值分账
         // dto.put("is_clean_split", "");
         // 分账明细
-        // dto.put("acct_infos", get2feb0e6aB88441538031A8afd69f177a());
+        // dto.put("acct_infos", get160495108cc94a02B915A460403ce173());
 
         return dto.toJSONString();
     }
 
-    private static String get0f99e9a637e24d808ff5643156cacfd2() {
+    private static String get5f3a85d0F5914afaAcacBad2c1d9d0c1() {
         JSONObject dto = new JSONObject();
         // IP地址
         // dto.put("ip_addr", "test");
@@ -112,7 +112,7 @@ public class V2TradePayafteruseInstallmentPayRequestDemo extends BaseCommonDemo 
         return dto.toJSONString();
     }
 
-    private static String getE589e802D94b44faBa3d2aef28256209() {
+    private static String getF7961ae67c874fb28754F33b592b7720() {
         JSONObject dto = new JSONObject();
         // 商户设备类型
         dto.put("mer_device_type", "01");
@@ -140,7 +140,7 @@ public class V2TradePayafteruseInstallmentPayRequestDemo extends BaseCommonDemo 
         return dto.toJSONString();
     }
 
-    private static JSON getC118b1b9A37343a590ff28b6a9da30fc() {
+    private static JSON get8b2931c7A3cf4d4698bfEd6b6cb91b1f() {
         JSONObject dto = new JSONObject();
         // 商品的编号
         // dto.put("goods_id", "test");
@@ -162,7 +162,7 @@ public class V2TradePayafteruseInstallmentPayRequestDemo extends BaseCommonDemo 
         return dtoList;
     }
 
-    private static JSON getA725f4588c6d4ff09edd868d7c76c732() {
+    private static JSON get4449220bC6ae41b49391E552f87d642b() {
         JSONObject dto = new JSONObject();
         // 业务主单号
         dto.put("trade_component_order_id", "2024101001502300000002570023887054");
@@ -174,10 +174,10 @@ public class V2TradePayafteruseInstallmentPayRequestDemo extends BaseCommonDemo 
         return dto;
     }
 
-    private static String getA9a8f781Dc18421380619fb825922dee() {
+    private static String getDc737f3f10584db087acA3bf4f00e91f() {
         JSONObject dto = new JSONObject();
         // 业务扩展参数
-        dto.put("extend_params", getA725f4588c6d4ff09edd868d7c76c732());
+        dto.put("extend_params", get4449220bC6ae41b49391E552f87d642b());
         // 支付宝的店铺编号
         dto.put("alipay_store_id", "");
         // 商户操作员编号
@@ -185,7 +185,7 @@ public class V2TradePayafteruseInstallmentPayRequestDemo extends BaseCommonDemo 
         // 商户业务信息
         // dto.put("ali_business_params", "");
         // 订单包含的商品列表信息
-        // dto.put("goods_detail", getC118b1b9A37343a590ff28b6a9da30fc());
+        // dto.put("goods_detail", get8b2931c7A3cf4d4698bfEd6b6cb91b1f());
 
         return dto.toJSONString();
     }

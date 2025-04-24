@@ -91,9 +91,9 @@ public class V2MerchantBusiRealnameRequestDemo extends BaseCommonDemo {
         extendInfoMap.put("store_address_code", "");
         // 门店地址
         extendInfoMap.put("store_address", "");
-        // 身份证件正面照片
+        // 身份证件人像面
         extendInfoMap.put("identification_front_copy", "c7faf0e6-39e9-3c35-9075-2312ad6f4ea4");
-        // 身份证件反面照片
+        // 身份证件国徽面
         extendInfoMap.put("identification_back_copy", "c7faf0e6-39e9-3c35-9075-2312ad6f4ea4");
         // 单位证明函照片
         extendInfoMap.put("company_prove_copy", "");

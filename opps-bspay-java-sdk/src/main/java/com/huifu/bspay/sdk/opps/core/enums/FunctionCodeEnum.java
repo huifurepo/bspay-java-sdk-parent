@@ -6,6 +6,46 @@ package com.huifu.bspay.sdk.opps.core.enums;
  */
 public enum FunctionCodeEnum {
     /**
+     * 全渠道资金付款到账户退款查询
+     */
+    V2_EFP_ACCTPAYMENT_REFUND_QUERY("v2.efp.acctpayment.refund.query", "全渠道资金付款到账户退款查询"),
+    /**
+     * 全渠道资金付款到账户退款
+     */
+    V2_EFP_ACCTPAYMENT_REFUND("v2.efp.acctpayment.refund", "全渠道资金付款到账户退款"),
+    /**
+     * 银联统一在线收银台签解约查询接口
+     */
+    V2_TRADE_ONLINEPAYMENT_UNIONSIGNQUERY("v2.trade.onlinepayment.unionsignquery", "银联统一在线收银台签解约查询接口"),
+    /**
+     * 银联统一在线收银台签约接口
+     */
+    V2_TRADE_ONLINEPAYMENT_UNIONSIGN("v2.trade.onlinepayment.unionsign", "银联统一在线收银台签约接口"),
+    /**
+     * 银联统一在线收银台解约接口
+     */
+    V2_TRADE_ONLINEPAYMENT_UNIONCANCEL("v2.trade.onlinepayment.unioncancel", "银联统一在线收银台解约接口"),
+    /**
+     * 扫码交易退款
+     */
+    V3_TRADE_PAYMENT_SCANPAY_REFUND("v3.trade.payment.scanpay.refund", "扫码交易退款"),
+    /**
+     * 扫码交易退款查询
+     */
+    V3_TRADE_PAYMENT_SCANPAY_REFUNDQUERY("v3.trade.payment.scanpay.refundquery", "扫码交易退款查询"),
+    /**
+     * 扫码交易查询
+     */
+    V3_TRADE_PAYMENT_SCANPAY_QUERY("v3.trade.payment.scanpay.query", "扫码交易查询"),
+    /**
+     * 应用场景
+     */
+    V3_TRADE_PAYMENT_JSPAY("v3.trade.payment.jspay", "应用场景"),
+    /**
+     * 聚合反扫
+     */
+    V3_TRADE_PAYMENT_MICROPAY("v3.trade.payment.micropay", "聚合反扫"),
+    /**
      * 防断链子商户号列表查询
      */
     V2_MERCHANT_ATPREVENT_QUERYSUBMERLIST("v2.merchant.atPrevent.querySubMerList", "防断链子商户号列表查询"),

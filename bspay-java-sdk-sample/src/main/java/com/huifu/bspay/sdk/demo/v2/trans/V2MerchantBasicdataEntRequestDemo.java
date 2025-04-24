@@ -97,7 +97,7 @@ public class V2MerchantBasicdataEntRequestDemo extends BaseCommonDemo {
         // 基本存款账户编号或核准号条件选填；当use_head_info_flag&#x3D;Y时不填 ；&lt;br/&gt;基本存款账户信息请填写基本存款账户编号；开户许可证请填写核准号。&lt;br/&gt;当注册地址或经营地址为如下地区时必填：江苏省、浙江省、湖南省、湖北省、云南省、贵州省、陕西省、河南省、吉林省、黑龙江省、福建省、海南省、重庆市、青海省、宁夏回族自治区；&lt;br/&gt;&lt;font color&#x3D;&quot;green&quot;&gt;示例值：J2900123456789&lt;/font&gt;
         request.setOpenLicenceNo("");
         // 银行卡信息配置
-        request.setCardInfo(get08c17ee7B24044da9092F54f82df8595());
+        request.setCardInfo(getCb2942ddBb994d39Bf9e37c966e8ef0d());
         // 卡正面对私必填。通过[图片上传接口](https://paas.huifu.com/open/doc/api/#/shgl/shjj/api_shjj_shtpsc)上传材料；文件类型：F13 ；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：57cc7f00-600a-33ab-b614-6221bbf2e530&lt;/font&gt;
         // request.setSettleCardFrontPic("test");
         // 持卡人身份证国徽面**对私必填**。通过[图片上传接口](https://paas.huifu.com/open/doc/api/#/shgl/shjj/api_shjj_shtpsc)上传材料；文件类型：F56；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：57cc7f00-600a-33ab-b614-6221bbf2e530&lt;/font&gt;
@@ -150,7 +150,7 @@ public class V2MerchantBasicdataEntRequestDemo extends BaseCommonDemo {
         // 法人手机号
         // extendInfoMap.put("legal_mobile_no", "");
         // 受益人列表
-        // extendInfoMap.put("beneficiary_info", get65968afa24de4ebbB0712e55f864d1cb());
+        // extendInfoMap.put("beneficiary_info", getFb3bf1f6E74d4dffBcef0dbd70fffdbc());
         // 联系人姓名
         extendInfoMap.put("contact_name", "联系人");
         // 商户通知标识
@@ -158,9 +158,9 @@ public class V2MerchantBasicdataEntRequestDemo extends BaseCommonDemo {
         // 客服电话
         extendInfoMap.put("service_phone", "021-121111221");
         // 结算业务配置
-        extendInfoMap.put("settle_config", getEba3568c389f430eB5e12de1e6f901dc());
+        extendInfoMap.put("settle_config", get4c20c8d85aca47ad8bf1Db81f7a04e91());
         // 取现业务配置
-        extendInfoMap.put("cash_config", get7e3f9c3516b14b9fA6ec78480141e2cf());
+        extendInfoMap.put("cash_config", get7a3324793e0c4ce5A71c92eff2bb8672());
         // 商户身份
         // extendInfoMap.put("head_office_flag", "");
         // 使用上级资料信息
@@ -174,15 +174,15 @@ public class V2MerchantBasicdataEntRequestDemo extends BaseCommonDemo {
         // 异步请求地址
         extendInfoMap.put("async_return_url", "virgo://http://192.168.85.157:30031/sspm/testVirgo");
         // 斗拱e账户功能配置
-        // extendInfoMap.put("elec_acct_config", getF77c016709b34cd18e3361c9cbd6dab9());
+        // extendInfoMap.put("elec_acct_config", get006f37694de94939Acc47ffcfdbc28c1());
         // 股东信息
-        // extendInfoMap.put("share_holder_info_list", getF51d351e63aa42d1A496633f45a4baca());
+        // extendInfoMap.put("share_holder_info_list", getE69d74470ab24cba8f46Caab23b5dd48());
         // 扩展资料包
-        // extendInfoMap.put("extended_material_list", get9aada87c8da74b7cB3a54169d90d2672());
+        // extendInfoMap.put("extended_material_list", getFced7c627fe94763A4a3Ed66133e9f1f());
         return extendInfoMap;
     }
 
-    private static String get65968afa24de4ebbB0712e55f864d1cb() {
+    private static String getFb3bf1f6E74d4dffBcef0dbd70fffdbc() {
         JSONObject dto = new JSONObject();
         // 受益人名称
         // dto.put("bo_name", "test");
@@ -206,7 +206,7 @@ public class V2MerchantBasicdataEntRequestDemo extends BaseCommonDemo {
         return dtoList.toJSONString();
     }
 
-    private static String get08c17ee7B24044da9092F54f82df8595() {
+    private static String getCb2942ddBb994d39Bf9e37c966e8ef0d() {
         JSONObject dto = new JSONObject();
         // 银行账户类型
         dto.put("card_type", "0");
@@ -240,7 +240,7 @@ public class V2MerchantBasicdataEntRequestDemo extends BaseCommonDemo {
         return dto.toJSONString();
     }
 
-    private static String getEba3568c389f430eB5e12de1e6f901dc() {
+    private static String get4c20c8d85aca47ad8bf1Db81f7a04e91() {
         JSONObject dto = new JSONObject();
         // 结算周期
         dto.put("settle_cycle", "D1");
@@ -276,7 +276,7 @@ public class V2MerchantBasicdataEntRequestDemo extends BaseCommonDemo {
         return dto.toJSONString();
     }
 
-    private static String get7e3f9c3516b14b9fA6ec78480141e2cf() {
+    private static String get7a3324793e0c4ce5A71c92eff2bb8672() {
         JSONObject dto = new JSONObject();
         // 取现手续费（固定/元）fix_amt与fee_rate至少填写一项， 需保留小数点后两位，不收费请填写0.00；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：1.00&lt;/font&gt;注：当cash_type&#x3D;D1时为节假日取现手续费；当cash_type&#x3D;T1时为工作日取现手续费
         dto.put("fix_amt", "1.00");
@@ -302,7 +302,7 @@ public class V2MerchantBasicdataEntRequestDemo extends BaseCommonDemo {
         return dtoList.toJSONString();
     }
 
-    private static JSON get25f5cfc1A4f14d9a8f7a8b88f1bb829d() {
+    private static JSON getA9f6e4e071464c16B765Cc08b75859d7() {
         JSONObject dto = new JSONObject();
         // 银行编码
         // dto.put("bank_code", "test");
@@ -328,7 +328,7 @@ public class V2MerchantBasicdataEntRequestDemo extends BaseCommonDemo {
         return dtoList;
     }
 
-    private static String getF77c016709b34cd18e3361c9cbd6dab9() {
+    private static String get006f37694de94939Acc47ffcfdbc28c1() {
         JSONObject dto = new JSONObject();
         // 电子账户开关
         // dto.put("switch_state", "test");
@@ -341,12 +341,12 @@ public class V2MerchantBasicdataEntRequestDemo extends BaseCommonDemo {
         // 角色类型
         // dto.put("role_type", "test");
         // 银行卡信息
-        // dto.put("elec_card_list", get25f5cfc1A4f14d9a8f7a8b88f1bb829d());
+        // dto.put("elec_card_list", getA9f6e4e071464c16B765Cc08b75859d7());
 
         return dto.toJSONString();
     }
 
-    private static String getF51d351e63aa42d1A496633f45a4baca() {
+    private static String getE69d74470ab24cba8f46Caab23b5dd48() {
         JSONObject dto = new JSONObject();
         // 股东姓名
         // dto.put("name", "test");
@@ -366,7 +366,7 @@ public class V2MerchantBasicdataEntRequestDemo extends BaseCommonDemo {
         return dtoList.toJSONString();
     }
 
-    private static String get9aada87c8da74b7cB3a54169d90d2672() {
+    private static String getFced7c627fe94763A4a3Ed66133e9f1f() {
         JSONObject dto = new JSONObject();
         // 文件id
         // dto.put("file_id", "test");

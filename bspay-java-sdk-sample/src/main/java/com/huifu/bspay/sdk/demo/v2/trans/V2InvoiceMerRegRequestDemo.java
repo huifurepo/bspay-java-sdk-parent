@@ -77,7 +77,7 @@ public class V2InvoiceMerRegRequestDemo extends BaseCommonDemo {
         extendInfoMap.put("valid_period", "1");
         // 自动续约
         extendInfoMap.put("auto_renewal", "Y");
-        // 开票结果异步通知地址
+        // 商户入驻结果异步通知地址
         extendInfoMap.put("callback_url", "http: //service.example.com/to/path");
         return extendInfoMap;
     }

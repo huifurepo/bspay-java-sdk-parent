@@ -82,11 +82,6 @@ public class V2InvoiceOpenRequest extends BaseRequest {
     @JSONField(name = "goods_infos")
     private String goodsInfos;
     /**
-     * 开票人信息
-     */
-    @JSONField(name = "payer_info")
-    private String payerInfo;
-    /**
      * 不动产销售特殊字段specialFlag为05时，必填；jsonArray格式
      */
     @JSONField(name = "estate_sales")
@@ -105,7 +100,7 @@ public class V2InvoiceOpenRequest extends BaseRequest {
     public V2InvoiceOpenRequest() {
     }
 
-    public V2InvoiceOpenRequest(String reqSeqId, String reqDate, String huifuId, String extMerId, String channelId, String ivcType, String openType, String buyerName, String orderAmt, String redApplyReason, String redApplySource, String oriIvcCode, String oriIvcNumber, String goodsInfos, String payerInfo, String estateSales, String estateLease) {
+    public V2InvoiceOpenRequest(String reqSeqId, String reqDate, String huifuId, String extMerId, String channelId, String ivcType, String openType, String buyerName, String orderAmt, String redApplyReason, String redApplySource, String oriIvcCode, String oriIvcNumber, String goodsInfos, String estateSales, String estateLease) {
         this.reqSeqId = reqSeqId;
         this.reqDate = reqDate;
         this.huifuId = huifuId;
@@ -120,7 +115,6 @@ public class V2InvoiceOpenRequest extends BaseRequest {
         this.oriIvcCode = oriIvcCode;
         this.oriIvcNumber = oriIvcNumber;
         this.goodsInfos = goodsInfos;
-        this.payerInfo = payerInfo;
         this.estateSales = estateSales;
         this.estateLease = estateLease;
     }
@@ -235,14 +229,6 @@ public class V2InvoiceOpenRequest extends BaseRequest {
 
     public void setGoodsInfos(String goodsInfos) {
         this.goodsInfos = goodsInfos;
-    }
-
-    public String getPayerInfo() {
-        return payerInfo;
-    }
-
-    public void setPayerInfo(String payerInfo) {
-        this.payerInfo = payerInfo;
     }
 
     public String getEstateSales() {
