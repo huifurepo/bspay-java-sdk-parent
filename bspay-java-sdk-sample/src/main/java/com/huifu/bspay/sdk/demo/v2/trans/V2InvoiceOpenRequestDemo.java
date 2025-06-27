@@ -53,11 +53,11 @@ public class V2InvoiceOpenRequestDemo extends BaseCommonDemo {
         // 原发票号码openType&#x3D;1时必填；参见[发票右上角](https://paas.huifu.com/open/doc/api/#/fp/api_fp_yanglitu.md)；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：20685767&lt;/font&gt;
         request.setOriIvcNumber("150000020026");
         // 开票商品信息
-        request.setGoodsInfos(get1c25f631D7734ad0Bfe823da7968c0f2());
+        request.setGoodsInfos(get740ddc910e02485681dd3ffb8680f7d7());
         // 不动产销售特殊字段specialFlag为05时，必填；jsonArray格式
-        // request.setEstateSales(get305c27dd202b4bf4B2e203dce31d7ec4());
+        // request.setEstateSales(getB2ca7234B54f42bbB4dc24596dcea7f7());
         // 不动产租赁特殊字段specialFlag为16时，必填；jsonArray格式
-        // request.setEstateLease(get616ba0918c104e75A8666e879dd88a10());
+        // request.setEstateLease(getD8f2101bFe454bb8B4f02d090a7f349c());
 
         // 设置非必填字段
         Map<String, Object> extendInfoMap = getExtendInfos();
@@ -100,7 +100,7 @@ public class V2InvoiceOpenRequestDemo extends BaseCommonDemo {
         // 红字信息表编号
         extendInfoMap.put("red_info_number", "");
         // 开票人信息
-        extendInfoMap.put("payer_info", getB61e2485D61f4b3bA6699eec840c7544());
+        extendInfoMap.put("payer_info", get1b28386f4ef74e898f91211c56b6f874());
         // 开票结果异步通知地址
         extendInfoMap.put("callback_url", "virgo://http://192.168.85.157:30031/sspm/testVirgo");
         // 强制开票标识
@@ -108,7 +108,7 @@ public class V2InvoiceOpenRequestDemo extends BaseCommonDemo {
         return extendInfoMap;
     }
 
-    private static String get1c25f631D7734ad0Bfe823da7968c0f2() {
+    private static String get740ddc910e02485681dd3ffb8680f7d7() {
         JSONObject dto = new JSONObject();
         // 发票行性质
         dto.put("ivc_nature", "0");
@@ -148,7 +148,7 @@ public class V2InvoiceOpenRequestDemo extends BaseCommonDemo {
         return dtoList.toJSONString();
     }
 
-    private static String getB61e2485D61f4b3bA6699eec840c7544() {
+    private static String get1b28386f4ef74e898f91211c56b6f874() {
         JSONObject dto = new JSONObject();
         // 开票人
         dto.put("payer_name", "开票人");
@@ -160,29 +160,7 @@ public class V2InvoiceOpenRequestDemo extends BaseCommonDemo {
         return dto.toJSONString();
     }
 
-    private static String get305c27dd202b4bf4B2e203dce31d7ec4() {
-        JSONObject dto = new JSONObject();
-        // 不动产地址
-        // dto.put("addr", "test");
-        // 不动产详细地址
-        // dto.put("detail_addr", "test");
-        // 跨地（市）标志
-        // dto.put("area_flag", "test");
-        // 租赁日期起
-        // dto.put("start_date", "test");
-        // 租赁日期止
-        // dto.put("end_date", "test");
-        // 房屋产权证书/不动产产权号
-        // dto.put("estate_no", "test");
-        // 不动产单位
-        // dto.put("unit", "test");
-
-        JSONArray dtoList = new JSONArray();
-        dtoList.add(dto);
-        return dtoList.toJSONString();
-    }
-
-    private static String get616ba0918c104e75A8666e879dd88a10() {
+    private static String getB2ca7234B54f42bbB4dc24596dcea7f7() {
         JSONObject dto = new JSONObject();
         // 不动产地址
         // dto.put("addr", "test");
@@ -198,6 +176,28 @@ public class V2InvoiceOpenRequestDemo extends BaseCommonDemo {
         // dto.put("total_amt", "test");
         // 实际成交含税金额
         // dto.put("deal_amt", "test");
+        // 房屋产权证书/不动产产权号
+        // dto.put("estate_no", "test");
+        // 不动产单位
+        // dto.put("unit", "test");
+
+        JSONArray dtoList = new JSONArray();
+        dtoList.add(dto);
+        return dtoList.toJSONString();
+    }
+
+    private static String getD8f2101bFe454bb8B4f02d090a7f349c() {
+        JSONObject dto = new JSONObject();
+        // 不动产地址
+        // dto.put("addr", "test");
+        // 不动产详细地址
+        // dto.put("detail_addr", "test");
+        // 跨地（市）标志
+        // dto.put("area_flag", "test");
+        // 租赁日期起
+        // dto.put("start_date", "test");
+        // 租赁日期止
+        // dto.put("end_date", "test");
         // 房屋产权证书/不动产产权号
         // dto.put("estate_no", "test");
         // 不动产单位

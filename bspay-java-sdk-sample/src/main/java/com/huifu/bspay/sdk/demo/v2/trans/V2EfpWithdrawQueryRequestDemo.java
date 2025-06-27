@@ -32,9 +32,9 @@ public class V2EfpWithdrawQueryRequestDemo extends BaseCommonDemo {
         request.setReqDate(DateTools.getCurrentDateYYYYMMDD());
         // 商户汇付id
         request.setHuifuId("6666000108422302");
-        // 原请求流水号
+        // 付款或提现的请求流水号
         request.setOrgReqSeqId("384866372653481984");
-        // 原请求日期
+        // 付款或提现的请求日期
         request.setOrgReqDate("20241203");
 
         // 设置非必填字段

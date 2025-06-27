@@ -59,6 +59,8 @@ public class V2TradePaymentGetelectronicreceiptRequestDemo extends BaseCommonDem
         // extendInfoMap.put("template_type", "");
         // 是否分账
         // extendInfoMap.put("is_div", "");
+        // 电子回单名称显示
+        // extendInfoMap.put("payer_name", "");
         return extendInfoMap;
     }
 

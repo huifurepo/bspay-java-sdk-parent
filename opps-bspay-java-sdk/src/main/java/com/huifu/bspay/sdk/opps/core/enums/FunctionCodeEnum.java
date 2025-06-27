@@ -6,6 +6,118 @@ package com.huifu.bspay.sdk.opps.core.enums;
  */
 public enum FunctionCodeEnum {
     /**
+     * 电子账户资金清分
+     */
+    V2_TRADE_SETTLEMENT_CLEARING_ADD("v2.trade.settlement.clearing.add", "电子账户资金清分"),
+    /**
+     * 电子账户资金清分结果查询
+     */
+    V2_TRADE_SETTLEMENT_CLEARING_QUERY("v2.trade.settlement.clearing.query", "电子账户资金清分结果查询"),
+    /**
+     * 全渠道订单分账明细操作
+     */
+    V2_OCO_ORDER_DETAIL_OPERATE("v2.oco.order.detail.operate", "全渠道订单分账明细操作"),
+    /**
+     * 全渠道订单分账接收方查询
+     */
+    V2_OCO_ORDER_DETAIL_LIST("v2.oco.order.detail.list", "全渠道订单分账接收方查询"),
+    /**
+     * 全渠道订单分账计算
+     */
+    V2_OCO_ORDER_CALCULATE("v2.oco.order.calculate", "全渠道订单分账计算"),
+    /**
+     * 获取控台页面跳转链接
+     */
+    V2_JUMP_PAGE_GETURL("v2.jump.page.geturl", "获取控台页面跳转链接"),
+    /**
+     * 全渠道订单分账查询
+     */
+    V2_OCO_ORDER_LIST("v2.oco.order.list", "全渠道订单分账查询"),
+    /**
+     * 美团卡券校验
+     */
+    V2_COUPON_MEITUAN_PREPARE("v2.coupon.meituan.prepare", "美团卡券校验"),
+    /**
+     * 美团卡券核销结果查询
+     */
+    V2_COUPON_MEITUAN_QUERY("v2.coupon.meituan.query", "美团卡券核销结果查询"),
+    /**
+     * 美团卡券核销
+     */
+    V2_COUPON_MEITUAN_CONSUME("v2.coupon.meituan.consume", "美团卡券核销"),
+    /**
+     * 美团卡券撤销
+     */
+    V2_COUPON_MEITUAN_CANCEL("v2.coupon.meituan.cancel", "美团卡券撤销"),
+    /**
+     * 美团餐饮门店套餐映射
+     */
+    V2_COUPON_MEAL_QUERY("v2.coupon.meal.query", "美团餐饮门店套餐映射"),
+    /**
+     * 三方门店解绑
+     */
+    V2_LINKAPP_STORE_UNBIND("v2.linkapp.store.unbind", "三方门店解绑"),
+    /**
+     * 三方门店查询（三方门店绑定一阶段）
+     */
+    V2_LINKAPP_STORE_SHOPLIST("v2.linkapp.store.shoplist", "三方门店查询（三方门店绑定一阶段）"),
+    /**
+     * 三方门店绑定（二阶段）
+     */
+    V2_LINKAPP_STORE_BIND("v2.linkapp.store.bind", "三方门店绑定（二阶段）"),
+    /**
+     * 门店绑定列表查询
+     */
+    V2_LINKAPP_STORE_QUERY("v2.linkapp.store.query", "门店绑定列表查询"),
+    /**
+     * 美团非餐饮获取团购信息
+     */
+    V2_COUPON_SHOPDEAL_QUERY("v2.coupon.shopdeal.query", "美团非餐饮获取团购信息"),
+    /**
+     * 授权结果查询
+     */
+    V2_LINKAPP_AUTH_RESULT("v2.linkapp.auth.result", "授权结果查询"),
+    /**
+     * 商户公域授权
+     */
+    V2_LINKAPP_AUTH_DO("v2.linkapp.auth.do", "商户公域授权"),
+    /**
+     * 查询授权记录
+     */
+    V2_LINKAPP_AUTH_QUERY("v2.linkapp.auth.query", "查询授权记录"),
+    /**
+     * 抖音套餐映射接口
+     */
+    V2_COUPON_DOUYIN_PRODUCT_QUERY("v2.coupon.douyin.product.query", "抖音套餐映射接口"),
+    /**
+     * 抖音券状态批量查询
+     */
+    V2_COUPON_DOUYIN_CERTIFICATE_QUERY("v2.coupon.douyin.certificate.query", "抖音券状态批量查询"),
+    /**
+     * 抖音卡券校验
+     */
+    V2_COUPON_DOUYIN_PREPARE("v2.coupon.douyin.prepare", "抖音卡券校验"),
+    /**
+     * 抖音卡券核销
+     */
+    V2_COUPON_DOUYIN_CONSUME("v2.coupon.douyin.consume", "抖音卡券核销"),
+    /**
+     * 抖音卡券撤销
+     */
+    V2_COUPON_DOUYIN_CANCEL("v2.coupon.douyin.cancel", "抖音卡券撤销"),
+    /**
+     * 银行大额支付固定转账标识申请接口
+     */
+    V2_TRADE_ONLINEPAYMENT_TRANSFER_FIXEDFLAG_APPLY("v2.trade.onlinepayment.transfer.fixedflag.apply", "银行大额支付固定转账标识申请接口"),
+    /**
+     * 电子账户付款查询
+     */
+    V2_TRADE_PAYMENT_ZXE_ACCTPYERQUERY("v2.trade.payment.zxe.acctpyerquery", "电子账户付款查询"),
+    /**
+     * 电子账户付款
+     */
+    V2_TRADE_PAYMENT_ZXE_ACCTPYER("v2.trade.payment.zxe.acctpyer", "电子账户付款"),
+    /**
      * 全渠道资金付款到账户退款查询
      */
     V2_EFP_ACCTPAYMENT_REFUND_QUERY("v2.efp.acctpayment.refund.query", "全渠道资金付款到账户退款查询"),

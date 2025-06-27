@@ -51,6 +51,8 @@ public class V2BankBalanceQueryRequestDemo extends BaseCommonDemo {
         Map<String, Object> extendInfoMap = new HashMap<>();
         // 操作类型
         extendInfoMap.put("elect_acct_type", "MERCH");
+        // 登记簿类型
+        // extendInfoMap.put("register_attr", "");
         return extendInfoMap;
     }
 

@@ -36,6 +36,11 @@ public class V2UserBusiModifyRequest extends BaseRequest {
      */
     @JSONField(name = "ljh_data")
     private String ljhData;
+    /**
+     * 签约人信息当电子回单配置开关为开通时必填
+     */
+    @JSONField(name = "sign_user_info")
+    private String signUserInfo;
 
     @Override
     public FunctionCodeEnum getFunctionCode() {
@@ -45,12 +50,13 @@ public class V2UserBusiModifyRequest extends BaseRequest {
     public V2UserBusiModifyRequest() {
     }
 
-    public V2UserBusiModifyRequest(String reqSeqId, String reqDate, String upperHuifuId, String huifuId, String ljhData) {
+    public V2UserBusiModifyRequest(String reqSeqId, String reqDate, String upperHuifuId, String huifuId, String ljhData, String signUserInfo) {
         this.reqSeqId = reqSeqId;
         this.reqDate = reqDate;
         this.upperHuifuId = upperHuifuId;
         this.huifuId = huifuId;
         this.ljhData = ljhData;
+        this.signUserInfo = signUserInfo;
     }
 
     public String getReqSeqId() {
@@ -91,6 +97,14 @@ public class V2UserBusiModifyRequest extends BaseRequest {
 
     public void setLjhData(String ljhData) {
         this.ljhData = ljhData;
+    }
+
+    public String getSignUserInfo() {
+        return signUserInfo;
+    }
+
+    public void setSignUserInfo(String signUserInfo) {
+        this.signUserInfo = signUserInfo;
     }
 
 }

@@ -57,7 +57,7 @@ public class V2MerchantBusiEfpconfigRequest extends BaseRequest {
     @JSONField(name = "sign_user_info")
     private String signUserInfo;
     /**
-     * 入账来源开通全域资金时需填写；01:抖音 02:美团 03:快手 04:拼多多 05:小红书 06:淘宝/天猫/飞猪 07:微信视频号/微信小店 08:京东 09:饿了么 11:得物 12:唯品会 13:携程 14:支付宝直连 15:微信直连 16:滴滴加油 17:团油 18:通联 19:易宝 多个逗号分隔；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：01,02,05&lt;/font&gt;；
+     * 入账来源开通全域资金时需填写；01:抖音 02:美团 03:快手 04:拼多多 05:小红书 06:淘宝/天猫/飞猪 07:微信视频号/微信小店 08:京东 09:饿了么 11:得物 12:唯品会 13:携程 14:支付宝直连 15:微信直连 16:滴滴加油 17:团油 18:通联 19:易宝 20:百度 多个逗号分隔；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：01,02,05&lt;/font&gt;；
      */
     @JSONField(name = "acct_source")
     private String acctSource;
@@ -151,6 +151,16 @@ public class V2MerchantBusiEfpconfigRequest extends BaseRequest {
      */
     @JSONField(name = "yb_cooperation_prove_pic")
     private String ybCooperationProvePic;
+    /**
+     * 全渠道资金纸质协议文件协议类型为纸质时必填，文件类型F605；详见[文件类型说明](https://paas.huifu.com/open/doc/api/#/csfl/api_csfl_wjlx)；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：57cc7f00-600a-33ab-b614-6221bbf2e530&lt;/font&gt;
+     */
+    @JSONField(name = "efp_paper_agreement_file")
+    private String efpPaperAgreementFile;
+    /**
+     * 百度合作证明材料入账来源包含20:百度时必填 文件类型F616；详见[文件类型说明](https://paas.huifu.com/open/doc/api/#/csfl/api_csfl_wjlx)；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：57cc7f00-600a-33ab-b614-6221bbf2e530&lt;/font&gt;
+     */
+    @JSONField(name = "bd_cooperation_prove_pic")
+    private String bdCooperationProvePic;
 
     @Override
     public FunctionCodeEnum getFunctionCode() {
@@ -160,7 +170,7 @@ public class V2MerchantBusiEfpconfigRequest extends BaseRequest {
     public V2MerchantBusiEfpconfigRequest() {
     }
 
-    public V2MerchantBusiEfpconfigRequest(String reqSeqId, String reqDate, String huifuId, String upperHuifuId, String outFeeHuifuid, String outOrderAcctCard, String outOrderAcctOpenFees, String outFundsGateId, String signUserInfo, String acctSource, String dyCooperationProvePic, String mtCooperationProvePic, String ksCooperationProvePic, String pddCooperationProvePic, String xhsCooperationProvePic, String zfbCooperationProvePic, String wxCooperationProvePic, String jdCooperationProvePic, String elmCooperationProvePic, String dwCooperationProvePic, String wphCooperationProvePic, String xcCooperationProvePic, String zfbzlCooperationProvePic, String wxzlCooperationProvePic, String ddjyCooperationProvePic, String tyCooperationProvePic, String tlCooperationProvePic, String ybCooperationProvePic) {
+    public V2MerchantBusiEfpconfigRequest(String reqSeqId, String reqDate, String huifuId, String upperHuifuId, String outFeeHuifuid, String outOrderAcctCard, String outOrderAcctOpenFees, String outFundsGateId, String signUserInfo, String acctSource, String dyCooperationProvePic, String mtCooperationProvePic, String ksCooperationProvePic, String pddCooperationProvePic, String xhsCooperationProvePic, String zfbCooperationProvePic, String wxCooperationProvePic, String jdCooperationProvePic, String elmCooperationProvePic, String dwCooperationProvePic, String wphCooperationProvePic, String xcCooperationProvePic, String zfbzlCooperationProvePic, String wxzlCooperationProvePic, String ddjyCooperationProvePic, String tyCooperationProvePic, String tlCooperationProvePic, String ybCooperationProvePic, String efpPaperAgreementFile, String bdCooperationProvePic) {
         this.reqSeqId = reqSeqId;
         this.reqDate = reqDate;
         this.huifuId = huifuId;
@@ -189,6 +199,8 @@ public class V2MerchantBusiEfpconfigRequest extends BaseRequest {
         this.tyCooperationProvePic = tyCooperationProvePic;
         this.tlCooperationProvePic = tlCooperationProvePic;
         this.ybCooperationProvePic = ybCooperationProvePic;
+        this.efpPaperAgreementFile = efpPaperAgreementFile;
+        this.bdCooperationProvePic = bdCooperationProvePic;
     }
 
     public String getReqSeqId() {
@@ -413,6 +425,22 @@ public class V2MerchantBusiEfpconfigRequest extends BaseRequest {
 
     public void setYbCooperationProvePic(String ybCooperationProvePic) {
         this.ybCooperationProvePic = ybCooperationProvePic;
+    }
+
+    public String getEfpPaperAgreementFile() {
+        return efpPaperAgreementFile;
+    }
+
+    public void setEfpPaperAgreementFile(String efpPaperAgreementFile) {
+        this.efpPaperAgreementFile = efpPaperAgreementFile;
+    }
+
+    public String getBdCooperationProvePic() {
+        return bdCooperationProvePic;
+    }
+
+    public void setBdCooperationProvePic(String bdCooperationProvePic) {
+        this.bdCooperationProvePic = bdCooperationProvePic;
     }
 
 }

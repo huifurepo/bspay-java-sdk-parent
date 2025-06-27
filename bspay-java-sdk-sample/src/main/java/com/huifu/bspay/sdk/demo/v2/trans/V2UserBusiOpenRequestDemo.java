@@ -35,7 +35,7 @@ public class V2UserBusiOpenRequestDemo extends BaseCommonDemo {
         // 渠道商/商户汇付Id
         request.setUpperHuifuId("6666000003084836");
         // 乐接活配置当合作平台为乐接活，必填
-        // request.setLjhData(get7928a71736b14ffe9aa0Ee852dc0b86a());
+        // request.setLjhData(get392ac4cc91ff4e4499df1b8129f53b63());
 
         // 设置非必填字段
         Map<String, Object> extendInfoMap = getExtendInfos();
@@ -54,17 +54,17 @@ public class V2UserBusiOpenRequestDemo extends BaseCommonDemo {
         // 设置非必填字段
         Map<String, Object> extendInfoMap = new HashMap<>();
         // 结算信息配置
-        extendInfoMap.put("settle_config", getCa71a7df63174cfeB0265628121f36d8());
+        extendInfoMap.put("settle_config", get4efc24c81c7b4a29Af5003ddb8e54f81());
         // 结算卡信息
-        extendInfoMap.put("card_info", get7a1b78f8D2d9483f9248Ffa360f5ab0b());
+        extendInfoMap.put("card_info", get13b02e818d1d4999A1b9Bb6b6d026539());
         // 取现配置列表
-        extendInfoMap.put("cash_config", getBc6c0988B7344c1f9279Ab8281cdd2d7());
+        extendInfoMap.put("cash_config", get2f2cd701De284c2f8297A4a757c46872());
         // 文件列表
-        extendInfoMap.put("file_list", getF9126565Dc674812984234c8dee5c990());
+        extendInfoMap.put("file_list", get4bef8a345cd84606B08cB735b387281e());
         // 延迟入账开关
         // extendInfoMap.put("delay_flag", "");
         // 斗拱e账户功能配置
-        // extendInfoMap.put("elec_acct_config", get1aaf2d76E1c3480bAaa933be0552e6ef());
+        // extendInfoMap.put("elec_acct_config", get10057f0084234bf7Be696035c59f6d8f());
         // 灵活用工开关
         // extendInfoMap.put("open_tax_flag", "");
         // 异步请求地址
@@ -74,7 +74,7 @@ public class V2UserBusiOpenRequestDemo extends BaseCommonDemo {
         return extendInfoMap;
     }
 
-    private static String getCa71a7df63174cfeB0265628121f36d8() {
+    private static String get4efc24c81c7b4a29Af5003ddb8e54f81() {
         JSONObject dto = new JSONObject();
         // 结算周期
         dto.put("settle_cycle", "D1");
@@ -90,6 +90,8 @@ public class V2UserBusiOpenRequestDemo extends BaseCommonDemo {
         dto.put("settle_time", "");
         // 节假日结算手续费率settle_cycle为D1时必填。单位%，需保留小数点后两位。取值范围[0.00，100.00]，不收费请填写0.00；settle_cycle&#x3D;T1时，不生效 ；settle_cycle为D1时，遇节假日按此费率结算 ；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：0.05&lt;/font&gt;
         dto.put("fixed_ratio", "2");
+        // 节假日结算手续费固定金额settle_cycle为D1时必填。单位元，需保留小数点后两位。不收费请填写0.00；settle_cycle结算周期为D1时，遇节假日按此费率结算 ；&lt;br/&gt; &lt;font color&#x3D;&quot;green&quot;&gt;示例值：1.00&lt;/font&gt;
+        // dto.put("constant_amt", "test");
         // 起结金额
         dto.put("min_amt", "0.01");
         // 留存金额
@@ -108,7 +110,7 @@ public class V2UserBusiOpenRequestDemo extends BaseCommonDemo {
         return dto.toJSONString();
     }
 
-    private static String get7a1b78f8D2d9483f9248Ffa360f5ab0b() {
+    private static String get13b02e818d1d4999A1b9Bb6b6d026539() {
         JSONObject dto = new JSONObject();
         // 卡类型
         dto.put("card_type", "0");
@@ -142,7 +144,7 @@ public class V2UserBusiOpenRequestDemo extends BaseCommonDemo {
         return dto.toJSONString();
     }
 
-    private static String getBc6c0988B7344c1f9279Ab8281cdd2d7() {
+    private static String get2f2cd701De284c2f8297A4a757c46872() {
         JSONObject dto = new JSONObject();
         // 提现手续费（固定/元）fix_amt与fee_rate至少填写一项， 需保留小数点后两位，不收费请填写0.00；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：1.00&lt;/font&gt;注：当cash_type&#x3D;D1时为节假日取现手续费
         dto.put("fix_amt", "0.03");
@@ -168,7 +170,7 @@ public class V2UserBusiOpenRequestDemo extends BaseCommonDemo {
         return dtoList.toJSONString();
     }
 
-    private static String getF9126565Dc674812984234c8dee5c990() {
+    private static String get4bef8a345cd84606B08cB735b387281e() {
         JSONObject dto = new JSONObject();
         // 文件类型
         dto.put("file_type", "F02");
@@ -182,7 +184,7 @@ public class V2UserBusiOpenRequestDemo extends BaseCommonDemo {
         return dtoList.toJSONString();
     }
 
-    private static JSON getB48226ab36cc4f0aB7ae23eaa07e30b8() {
+    private static JSON get038155786dfc4801Abaf3c39fc590d48() {
         JSONObject dto = new JSONObject();
         // 银行编码
         // dto.put("bank_code", "test");
@@ -214,7 +216,7 @@ public class V2UserBusiOpenRequestDemo extends BaseCommonDemo {
         return dtoList;
     }
 
-    private static String get1aaf2d76E1c3480bAaa933be0552e6ef() {
+    private static String get10057f0084234bf7Be696035c59f6d8f() {
         JSONObject dto = new JSONObject();
         // 电子账户开关
         // dto.put("switch_state", "test");
@@ -226,15 +228,19 @@ public class V2UserBusiOpenRequestDemo extends BaseCommonDemo {
         // dto.put("scene", "test");
         // 角色类型(角色编号)
         // dto.put("role_type", "test");
+        // 签约成功标志
+        // dto.put("sign_success_flag", "test");
         // 银行卡信息
-        // dto.put("elec_card_list", getB48226ab36cc4f0aB7ae23eaa07e30b8());
+        // dto.put("elec_card_list", get038155786dfc4801Abaf3c39fc590d48());
         // 用户类型
         // dto.put("user_type", "");
+        // 中信签约短信流水号
+        // dto.put("elec_acct_sign_seq_id", "");
 
         return dto.toJSONString();
     }
 
-    private static String get7928a71736b14ffe9aa0Ee852dc0b86a() {
+    private static String get392ac4cc91ff4e4499df1b8129f53b63() {
         JSONObject dto = new JSONObject();
         // 税源地id当合作平台为乐接活，必填
         // dto.put("tax_area_id", "test");

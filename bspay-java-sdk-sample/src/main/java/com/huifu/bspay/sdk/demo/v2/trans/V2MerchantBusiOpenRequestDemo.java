@@ -35,11 +35,11 @@ public class V2MerchantBusiOpenRequestDemo extends BaseCommonDemo {
         // 直属渠道号
         request.setUpperHuifuId("6666000003080000");
         // 签约人jsonObject格式；agreement_info中选择电子签约时必填；个人商户填本人信息。
-        // request.setSignUserInfo(get3c8773945ac84362Beb759d7bb693582());
-        // 线上业务类型编码基本信息入驻接口中scene_type&#x3D;ONLINE/ALL时必填；&lt;br/&gt;开通以下业务快捷、网银、余额支付、银行大额转账、分账比例&gt;20%需要提供补充材料，参见[线上业务类型编码及补充材料说明](https://cloudpnrcdn.oss-cn-shanghai.aliyuncs.com/opps/api/prod/download_file/kyc/KYC-%E7%BA%BF%E4%B8%8A%E4%B8%9A%E5%8A%A1%E7%B1%BB%E5%9E%8B%E7%BC%96%E7%A0%81%E5%8F%8A%E8%A1%A5%E5%85%85%E6%9D%90%E6%96%99%E8%AF%B4%E6%98%8E.xlsx)；材料通过[图片上传接口](https://paas.huifu.com/open/doc/api/#/shgl/shjj/api_shjj_shtpsc)上传&lt;font color&#x3D;&quot;green&quot;&gt;示例值：H7999AL&lt;/font&gt;
+        // request.setSignUserInfo(get15f56b1675ab4288856a3bf1d33a3ef7());
+        // 线上业务类型编码基本信息入驻接口中scene_type&#x3D;ONLINE/ALL时必填；&lt;br/&gt;开通以下业务快捷、网银、余额支付、银行大额转账、分账比例&gt;30%需要提供补充材料，参见[线上业务类型编码及补充材料说明](https://cloudpnrcdn.oss-cn-shanghai.aliyuncs.com/opps/api/prod/download_file/kyc/KYC-%E7%BA%BF%E4%B8%8A%E4%B8%9A%E5%8A%A1%E7%B1%BB%E5%9E%8B%E7%BC%96%E7%A0%81%E5%8F%8A%E8%A1%A5%E5%85%85%E6%9D%90%E6%96%99%E8%AF%B4%E6%98%8E.xlsx)；材料通过[图片上传接口](https://paas.huifu.com/open/doc/api/#/shgl/shjj/api_shjj_shtpsc)上传&lt;font color&#x3D;&quot;green&quot;&gt;示例值：H7999AL&lt;/font&gt;
         // request.setOnlineBusiType("test");
         // *协议信息实体*jsonObject字符串；[签约协议材料说明](https://cloudpnrcdn.oss-cn-shanghai.aliyuncs.com/opps/api/prod/download_file/kyc/KYC-%E5%95%86%E6%88%B7%E5%90%88%E5%90%8C%E7%AD%BE%E7%BA%A6%E8%A7%84%E5%88%99.xlsx) &lt;br/&gt;若未签署过协议的情况下，调用该接口时必填 ，且注册地址或经营地址为如下地区（江苏省、浙江省、湖南省、湖北省、云南省、贵州省、陕西省、河南省、吉林省、黑龙江省、福建省、海南省、重庆市、青海省、宁夏回族自治区）开通银联二维码或刷卡业务不支持挂网协议；&lt;br/&gt;若已签署过纸质或电子协议下，调用该接口时必填，且只可以选择纸质或电子协议；&lt;br/&gt;若已签署过挂网协议下，调用该接口时，选填。
-        request.setAgreementInfo(getCae5994403d54f2793fc6707d49c65e2());
+        request.setAgreementInfo(get9504e10345644d4cB841929c8eabe0ff());
 
         // 设置非必填字段
         Map<String, Object> extendInfoMap = getExtendInfos();
@@ -74,39 +74,39 @@ public class V2MerchantBusiOpenRequestDemo extends BaseCommonDemo {
         // 交易手续费外扣时的账户类型
         extendInfoMap.put("out_fee_acct_type", "");
         // 支付宝配置对象
-        extendInfoMap.put("ali_conf_list", getCce4f6b4Cb6e4987A7c94b2e13ec7864());
+        extendInfoMap.put("ali_conf_list", getFf84e2ea355a4407A18e532179f8beb8());
         // 支付宝直连配置对象
-        // extendInfoMap.put("ali_zl_conf", getCba04562B3bd4694Ac92461821c76e5c());
+        // extendInfoMap.put("ali_zl_conf", get64351250C6c34a01A755Af11f150876d());
         // 开通支付宝预授权
         extendInfoMap.put("alipay_pre_auth_flag", "N");
         // 微信配置对象
-        extendInfoMap.put("wx_conf_list", getA24609c706004e31A26f5a757b429ff0());
+        extendInfoMap.put("wx_conf_list", getE0e8e68dA83c481a99b9C70119e41551());
         // 微信直连配置对象
-        // extendInfoMap.put("wx_zl_conf", getAf8ab85b9604403683a78b5ae84603ec());
+        // extendInfoMap.put("wx_zl_conf", get317493260f7b463dA50f6dca045a3ada());
         // 开通微信预授权
         extendInfoMap.put("wechatpay_pre_auth_flag", "N");
         // 银联二维码配置
-        extendInfoMap.put("union_conf_list", get275b51178b29435dB687485ea185bd04());
+        extendInfoMap.put("union_conf_list", get70492fccAe03435693fbD5bd4d3ce984());
         // 银行卡业务配置
-        extendInfoMap.put("bank_card_conf", getC49684f523a84969B1a81fed50b9183e());
+        extendInfoMap.put("bank_card_conf", getF0820562F99647caBf131d196303adb3());
         // 线上费率配置
-        // extendInfoMap.put("online_fee_conf_list", get172600159b014ad99697E59f938c8cc8());
+        // extendInfoMap.put("online_fee_conf_list", get214728b640324accA062Fb391045260c());
         // 线上手续费承担方配置
-        // extendInfoMap.put("online_pay_fee_conf_list", get0cfe5f55Dac84f819bac5abe3c5575d5());
+        // extendInfoMap.put("online_pay_fee_conf_list", getEf2b6b024f3446e5B3d13f6cef67ec5c());
         // 运营媒介
-        // extendInfoMap.put("online_media_info_list", get6681da60033643d8A489C56e9e7ce373());
+        // extendInfoMap.put("online_media_info_list", get243674517225497495a81179b607fbdb());
         // *余额支付配置*
-        extendInfoMap.put("balance_pay_config", getE6cec91d25d24e99Bab20a351c29ccfe());
+        extendInfoMap.put("balance_pay_config", get41051891Bdb34e87Bb64Fcc02e3dc143());
         // 全域资金管理配置(华通银行)
-        // extendInfoMap.put("out_order_funds_config", getB1b25c693cf24d6c82d40014b506576d());
+        // extendInfoMap.put("out_order_funds_config", getB750d687Cbab47bbB2f939569cfd39c2());
         // 补贴支付
-        extendInfoMap.put("combine_pay_config", get837a3f99414c425693f546da41f44a57());
+        extendInfoMap.put("combine_pay_config", getD77571fd775c4ffaB24d27b2631c7421());
         // 花呗分期费率配置
-        extendInfoMap.put("hb_fq_fee_config", get0cbcad0a58204d33908366e38da2f129());
+        extendInfoMap.put("hb_fq_fee_config", get8bd47a8b556f4c5eA2e4Fde9a5b8f12d());
         // 汇总结算配置
-        // extendInfoMap.put("collection_settle_config_list", get3873d02eA6a04c9f85aa82622b13a2d8());
+        // extendInfoMap.put("collection_settle_config_list", get4e59e7546a174159B1e821e0768db386());
         // 分账配置信息
-        // extendInfoMap.put("split_conf_info", get1738a0c45e0f42f6Be9490016d79537d());
+        // extendInfoMap.put("split_conf_info", get5f62d9af0034458d97267394d0e4bd35());
         // 延迟入账开关
         extendInfoMap.put("delay_flag", "Y");
         // 商户开通强制延迟标记
@@ -114,7 +114,7 @@ public class V2MerchantBusiOpenRequestDemo extends BaseCommonDemo {
         // 使用上级微信、支付宝商户号发起交易
         // extendInfoMap.put("use_chains_flag", "");
         // *补充文件信息*
-        // extendInfoMap.put("extended_material_list", get9dabc2a9159b401f9fa9B38eccd227f1());
+        // extendInfoMap.put("extended_material_list", getC7c1288217674b2f9d145174d898624c());
         // 开户费用值(元)
         // extendInfoMap.put("enter_fee", "");
         // 开户费用类型
@@ -132,19 +132,21 @@ public class V2MerchantBusiOpenRequestDemo extends BaseCommonDemo {
         // 交易异步应答地址
         extendInfoMap.put("recon_resp_addr", "http://192.168.85.157:30031/sspm/testVirgo");
         // 银联线上收银台
-        // extendInfoMap.put("uni_app_payment_config", get7fdb8e3c73ac47a8A60768494068edf4());
+        // extendInfoMap.put("uni_app_payment_config", get75f009beBfba4a169871E24bb939dd52());
         // 资金归集开通标记
         // extendInfoMap.put("fund_collection_flag", "");
         // 代发配置
-        // extendInfoMap.put("surrogate_config_list", get70c4a8202f234f7c9060Dc4a575fbf98());
+        // extendInfoMap.put("surrogate_config_list", getE22a0671642844c8A5588737d635fd80());
         // 大额支付配置
-        // extendInfoMap.put("large_amt_pay_config", get82733ccbB9704fb8B34376a69c5cadc3());
+        // extendInfoMap.put("large_amt_pay_config", get17139b700e124e52B2d1Ecc7a918954e());
         // 托管支付开关
         // extendInfoMap.put("half_pay_host_flag", "");
+        // 代发复核配置
+        // extendInfoMap.put("agent_recheck_config", getB5f37d9e6b1f4ef3B934C2c9da731dea());
         return extendInfoMap;
     }
 
-    private static String get3c8773945ac84362Beb759d7bb693582() {
+    private static String get15f56b1675ab4288856a3bf1d33a3ef7() {
         JSONObject dto = new JSONObject();
         // 签约人类型
         // dto.put("type", "test");
@@ -158,7 +160,7 @@ public class V2MerchantBusiOpenRequestDemo extends BaseCommonDemo {
         return dto.toJSONString();
     }
 
-    private static String get0624536693a148a5877fC84cab147155() {
+    private static String get6cdf5e7eCd5e4de2946fC22a2fee41e3() {
         JSONObject dto = new JSONObject();
         // 联系人身份证号码
         // dto.put("id_card_number", "test");
@@ -170,7 +172,7 @@ public class V2MerchantBusiOpenRequestDemo extends BaseCommonDemo {
         return dto.toJSONString();
     }
 
-    private static String getB8eeb6d2Dfd74747A7d144dffef9854e() {
+    private static String get71d7834574454966Ae5aF76e886455d9() {
         JSONObject dto = new JSONObject();
         // 证件持有人类型
         // dto.put("legal_type", "");
@@ -196,7 +198,7 @@ public class V2MerchantBusiOpenRequestDemo extends BaseCommonDemo {
         return dto.toJSONString();
     }
 
-    private static JSON get5798c16d189743e594c60e9c38f286a1() {
+    private static JSON get6a420a0c1ee44c2dB371Fec6fc3f0c5e() {
         JSONObject dto = new JSONObject();
         // 是否金融机构
         // dto.put("finance_institution_flag", "");
@@ -209,14 +211,14 @@ public class V2MerchantBusiOpenRequestDemo extends BaseCommonDemo {
         // 特殊行业id
         // dto.put("special_category_id", "");
         // 联系人信息对象
-        // dto.put("contact_person_info", get0624536693a148a5877fC84cab147155());
+        // dto.put("contact_person_info", get6cdf5e7eCd5e4de2946fC22a2fee41e3());
         // 法人身份信息
-        // dto.put("legal_person_info", getB8eeb6d2Dfd74747A7d144dffef9854e());
+        // dto.put("legal_person_info", get71d7834574454966Ae5aF76e886455d9());
 
         return dto;
     }
 
-    private static String getCce4f6b4Cb6e4987A7c94b2e13ec7864() {
+    private static String getFf84e2ea355a4407A18e532179f8beb8() {
         JSONObject dto = new JSONObject();
         // 支付场景
         dto.put("pay_scene", "1");
@@ -229,7 +231,7 @@ public class V2MerchantBusiOpenRequestDemo extends BaseCommonDemo {
         // 是否需要实名认证
         // dto.put("is_check_real_name", "");
         // 实名认证信息
-        // dto.put("al_real_name_info", get5798c16d189743e594c60e9c38f286a1());
+        // dto.put("al_real_name_info", get6a420a0c1ee44c2dB371Fec6fc3f0c5e());
         // *商户经营类目*
         dto.put("mcc", "2015091000052157");
 
@@ -238,7 +240,7 @@ public class V2MerchantBusiOpenRequestDemo extends BaseCommonDemo {
         return dtoList.toJSONString();
     }
 
-    private static JSON get4326ae77Ff9147a98f19A7c41e8908d7() {
+    private static JSON get380b78c28dc242b59e2363132c19ad8a() {
         JSONObject dto = new JSONObject();
         // 文件类型
         // dto.put("file_type", "test");
@@ -250,7 +252,7 @@ public class V2MerchantBusiOpenRequestDemo extends BaseCommonDemo {
         return dtoList;
     }
 
-    private static String getCba04562B3bd4694Ac92461821c76e5c() {
+    private static String get64351250C6c34a01A755Af11f150876d() {
         JSONObject dto = new JSONObject();
         // 申请类型
         // dto.put("apply_type", "test");
@@ -259,7 +261,7 @@ public class V2MerchantBusiOpenRequestDemo extends BaseCommonDemo {
         // 服务费率仅支持渠道商。平台商户调用不支持该字段服务费率（%），0.38~3之间，精确到0.01。&lt;font color&#x3D;&quot;green&quot;&gt;示例值：0.06&lt;/font&gt;
         // dto.put("fee_rate", "test");
         // 文件列表
-        // dto.put("file_list", get4326ae77Ff9147a98f19A7c41e8908d7());
+        // dto.put("file_list", get380b78c28dc242b59e2363132c19ad8a());
         // 联系人姓名
         // dto.put("contact_name", "");
         // 联系人手机号
@@ -280,7 +282,7 @@ public class V2MerchantBusiOpenRequestDemo extends BaseCommonDemo {
         return dto.toJSONString();
     }
 
-    private static JSON getDdca9ecc99ad4bc396a5B64e67a6dfe1() {
+    private static JSON get55c98ead7994417aBcebA158c8f6ce04() {
         JSONObject dto = new JSONObject();
         // 联系人姓名联系人类型contact_type&#x3D;SUPER时必填。示例值：张三
         // dto.put("name", "test");
@@ -310,7 +312,7 @@ public class V2MerchantBusiOpenRequestDemo extends BaseCommonDemo {
         return dto;
     }
 
-    private static String getA24609c706004e31A26f5a757b429ff0() {
+    private static String getE0e8e68dA83c481a99b9C70119e41551() {
         JSONObject dto = new JSONObject();
         // 支付场景
         dto.put("pay_scene", "1");
@@ -327,14 +329,14 @@ public class V2MerchantBusiOpenRequestDemo extends BaseCommonDemo {
         // 是否需要实名认证
         // dto.put("is_check_real_name", "");
         // 实名认证信息
-        // dto.put("wx_real_name_info", getDdca9ecc99ad4bc396a5B64e67a6dfe1());
+        // dto.put("wx_real_name_info", get55c98ead7994417aBcebA158c8f6ce04());
 
         JSONArray dtoList = new JSONArray();
         dtoList.add(dto);
         return dtoList.toJSONString();
     }
 
-    private static JSON get2d5be541B47a4706860a6b435c2429ab() {
+    private static JSON get156f8e0aF93d436dB7bb8d673f850922() {
         JSONObject dto = new JSONObject();
         // 文件类型
         // dto.put("file_type", "test");
@@ -344,7 +346,7 @@ public class V2MerchantBusiOpenRequestDemo extends BaseCommonDemo {
         return dto;
     }
 
-    private static JSON getE261e0fd3fc34c28A7b9A463f3b59897() {
+    private static JSON get4d03fd2072a8434382d49c4e6668ba37() {
         JSONObject dto = new JSONObject();
         // 联系人类型
         // dto.put("contact_type", "test");
@@ -359,7 +361,7 @@ public class V2MerchantBusiOpenRequestDemo extends BaseCommonDemo {
         // 联系人电子邮箱
         // dto.put("contact_email", "test");
         // 联系人资料联系人类型为经办人时必填F28-联系人身份证国徽面   F29-联系人身份证人像面F227-微信业务办理授权函&lt;br/&gt;&lt;font color&#x3D;&quot;green&quot;&gt;示例值：&lt;/font&gt;
-        // dto.put("contact_file_list", get2d5be541B47a4706860a6b435c2429ab());
+        // dto.put("contact_file_list", get156f8e0aF93d436dB7bb8d673f850922());
         // 证件有效期类型
         // dto.put("contact_cert_validity_type", "test");
         // 证件有效期开始日期
@@ -370,7 +372,7 @@ public class V2MerchantBusiOpenRequestDemo extends BaseCommonDemo {
         return dto;
     }
 
-    private static JSON getA0e3348cB4264adb82bc647b99e81de6() {
+    private static JSON getF9c47476689c48f69842Fa0e76656d03() {
         JSONObject dto = new JSONObject();
         // 文件类型
         // dto.put("file_type", "test");
@@ -382,7 +384,7 @@ public class V2MerchantBusiOpenRequestDemo extends BaseCommonDemo {
         return dtoList;
     }
 
-    private static JSON getAbe2415a9d0c42ee8f453da005678267() {
+    private static JSON get1655f206036a4c6d82ceC5e352e8a045() {
         JSONObject dto = new JSONObject();
         // 证件类型
         // dto.put("ubo_cert_type", "test");
@@ -397,7 +399,7 @@ public class V2MerchantBusiOpenRequestDemo extends BaseCommonDemo {
         // 证件有效期开始日期
         // dto.put("ubo_cert_begin_date", "test");
         // 文件列表
-        // dto.put("ubo_file_list", getA0e3348cB4264adb82bc647b99e81de6());
+        // dto.put("ubo_file_list", getF9c47476689c48f69842Fa0e76656d03());
         // 证件有效期截止日期
         // dto.put("ubo_cert_end_date", "");
 
@@ -406,17 +408,17 @@ public class V2MerchantBusiOpenRequestDemo extends BaseCommonDemo {
         return dtoList;
     }
 
-    private static JSON get1eb6bfb2Dc0a4ec9B569871f04c169d3() {
+    private static JSON getCc8b73a72a164ce2Bb5f900248e2c5b0() {
         JSONObject dto = new JSONObject();
         // 经营者/法人是否为受益人
         // dto.put("ubo_type", "test");
         // 受益人信息列表jsonArray格式,当ubo_type为Y时可不填
-        // dto.put("ubo_info_list", getAbe2415a9d0c42ee8f453da005678267());
+        // dto.put("ubo_info_list", get1655f206036a4c6d82ceC5e352e8a045());
 
         return dto;
     }
 
-    private static JSON get4bd9a972714c4670Acae04a18d57e2fe() {
+    private static JSON get73511282Ba6e495fBab9373a9a8e4ab7() {
         JSONObject dto = new JSONObject();
         // 文件类型
         // dto.put("file_type", "test");
@@ -426,7 +428,7 @@ public class V2MerchantBusiOpenRequestDemo extends BaseCommonDemo {
         return dto;
     }
 
-    private static JSON get4d8de8d69d6d4c4f95e2Fcfdd9c69159() {
+    private static JSON getC2db7d7389f54deeA30771c9fd558b84() {
         JSONObject dto = new JSONObject();
         // 经营场景类型
         // dto.put("sales_scenes_type", "test");
@@ -455,7 +457,7 @@ public class V2MerchantBusiOpenRequestDemo extends BaseCommonDemo {
         // 商家企业微信CorpID开通企业微信场景时填入；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：xxxxx&lt;/font&gt;
         // dto.put("sub_corp_id", "test");
         // 文件列表
-        // dto.put("sales_scenes_file_list", get4bd9a972714c4670Acae04a18d57e2fe());
+        // dto.put("sales_scenes_file_list", get73511282Ba6e495fBab9373a9a8e4ab7());
         // 文件列表
         // dto.put("fee_rate_file_list", "");
         // 门店名称
@@ -468,7 +470,7 @@ public class V2MerchantBusiOpenRequestDemo extends BaseCommonDemo {
         return dto;
     }
 
-    private static JSON getC2e1217632fa4785B16b49c5c68a4b55() {
+    private static JSON get39a5c30f1b2d48828ea394d0e380d935() {
         JSONObject dto = new JSONObject();
         // 文件类型
         // dto.put("file_type", "test");
@@ -480,7 +482,7 @@ public class V2MerchantBusiOpenRequestDemo extends BaseCommonDemo {
         return dtoList;
     }
 
-    private static JSON get3d2fd20aBd614e0d9eb5Af4d4794bcc7() {
+    private static JSON getDa630b8aB1b7456bB27dB705b8b80884() {
         JSONObject dto = new JSONObject();
         // 登记证书类型
         // dto.put("cert_type", "test");
@@ -497,14 +499,14 @@ public class V2MerchantBusiOpenRequestDemo extends BaseCommonDemo {
         // 证书有效期开始日期
         // dto.put("cert_begin_date", "test");
         // 文件列表
-        // dto.put("cert_file_list", getC2e1217632fa4785B16b49c5c68a4b55());
+        // dto.put("cert_file_list", get39a5c30f1b2d48828ea394d0e380d935());
         // 证书有效期截止日期
         // dto.put("cert_end_date", "");
 
         return dto;
     }
 
-    private static JSON get7f099e609ebd4868Afaa0d5e9ed8b446() {
+    private static JSON getA7bb05b9564b4ccdAb7956621ca19377() {
         JSONObject dto = new JSONObject();
         // 账户类型
         // dto.put("card_type", "test");
@@ -526,7 +528,7 @@ public class V2MerchantBusiOpenRequestDemo extends BaseCommonDemo {
         return dto;
     }
 
-    private static JSON get6daaeac4A03a46f49d092c4732287596() {
+    private static JSON get46bda347851045ce9ee807d6de821468() {
         JSONObject dto = new JSONObject();
         // 申请服务
         // dto.put("service_code", "test");
@@ -542,7 +544,7 @@ public class V2MerchantBusiOpenRequestDemo extends BaseCommonDemo {
         return dtoList;
     }
 
-    private static JSON getBca8f3e499444c449581Fa6309f69168() {
+    private static JSON get56ef525c0c094c539f805f2201e66b94() {
         JSONObject dto = new JSONObject();
         // 文件类型
         // dto.put("file_type", "test");
@@ -554,40 +556,40 @@ public class V2MerchantBusiOpenRequestDemo extends BaseCommonDemo {
         return dtoList;
     }
 
-    private static String getAf8ab85b9604403683a78b5ae84603ec() {
+    private static String get317493260f7b463dA50f6dca045a3ada() {
         JSONObject dto = new JSONObject();
         // 微信子商户号微信支付分配的子商户号；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：1632157057&lt;/font&gt;
         // dto.put("sub_mch_id", "test");
         // 联系人信息jsonObject字符串,新增时必填
-        // dto.put("contact_info", getE261e0fd3fc34c28A7b9A463f3b59897());
+        // dto.put("contact_info", get4d03fd2072a8434382d49c4e6668ba37());
         // 最终受益人信息jsonObject字符串，商户类型为企业时，微信侧必填。（如果基本信息里有的话，可以不传取 huifu_id 对应的信息）。新增时填入
-        // dto.put("ubo_info", get1eb6bfb2Dc0a4ec9B569871f04c169d3());
+        // dto.put("ubo_info", getCc8b73a72a164ce2Bb5f900248e2c5b0());
         // 经营场景jsonObject字符串，新增时填入
-        // dto.put("sales_info", get4d8de8d69d6d4c4f95e2Fcfdd9c69159());
+        // dto.put("sales_info", getC2db7d7389f54deeA30771c9fd558b84());
         // 特殊主体登记证书jsonObject字符串，商户营业执照类型为政府机关/事业单位/其他组织时，传入相应信息。新增时需填入
-        // dto.put("certificate_info", get3d2fd20aBd614e0d9eb5Af4d4794bcc7());
+        // dto.put("certificate_info", getDa630b8aB1b7456bB27dB705b8b80884());
         // 银行账户信息jsonObject字符串，该字段不填时，取商户在汇付系统录入的结算账号信息。新增或修改时填入，修改时必填
-        // dto.put("wx_card_info", get7f099e609ebd4868Afaa0d5e9ed8b446());
+        // dto.put("wx_card_info", getA7bb05b9564b4ccdAb7956621ca19377());
         // 配置集合对指定的sub_mch_id做配置
-        // dto.put("wx_zl_pay_conf_list", get6daaeac4A03a46f49d092c4732287596());
+        // dto.put("wx_zl_pay_conf_list", get46bda347851045ce9ee807d6de821468());
         // 操作类型ADD-新增， UPDATE-修改， 默认新增；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：ADD&lt;/font&gt;
         // dto.put("operate_type", "test");
         // 补充说明信息
         // dto.put("business_addition_msg", "");
         // 补充说明文件列表
-        // dto.put("addition_file_list", getBca8f3e499444c449581Fa6309f69168());
+        // dto.put("addition_file_list", get56ef525c0c094c539f805f2201e66b94());
 
         return dto.toJSONString();
     }
 
-    private static String get275b51178b29435dB687485ea185bd04() {
+    private static String get70492fccAe03435693fbD5bd4d3ce984() {
         JSONObject dto = new JSONObject();
         // 借记卡手续费1000以上（%）
         dto.put("debit_fee_rate_up", "0.55");
-        // 贷记卡手续费1000以上（%）
-        dto.put("credit_fee_rate_up", "0.56");
         // 借记卡手续费1000以下（%）
         dto.put("debit_fee_rate_down", "0.38");
+        // 贷记卡手续费1000以上（%）
+        dto.put("credit_fee_rate_up", "0.56");
         // 银联二维码业务贷记卡手续费1000以下（%）
         dto.put("credit_fee_rate_down", "0.38");
         // 银联业务手续费类型
@@ -604,7 +606,7 @@ public class V2MerchantBusiOpenRequestDemo extends BaseCommonDemo {
         return dtoList.toJSONString();
     }
 
-    private static String getC49684f523a84969B1a81fed50b9183e() {
+    private static String getF0820562F99647caBf131d196303adb3() {
         JSONObject dto = new JSONObject();
         // 借记卡手续费（%）
         dto.put("debit_fee_rate", "0.38");
@@ -616,6 +618,12 @@ public class V2MerchantBusiOpenRequestDemo extends BaseCommonDemo {
         dto.put("charge_cate_code", "02");
         // 借记卡封顶值
         dto.put("debit_fee_limit", "0.56");
+        // 是否开通小额双免
+        dto.put("is_open_small_flag", "0");
+        // 小额双免单笔限额(元)
+        dto.put("small_free_amt", "1000");
+        // 小额双免手续费（%）
+        dto.put("small_fee_amt", "0.33");
         // 银联手机闪付借记卡手续费1000以上（%）
         dto.put("cloud_debit_fee_rate_up", "0.56");
         // 银联手机闪付借记卡封顶1000以上(元)
@@ -628,17 +636,11 @@ public class V2MerchantBusiOpenRequestDemo extends BaseCommonDemo {
         dto.put("cloud_debit_fee_limit_down", "5");
         // 银联手机闪付贷记卡手续费1000以下（%）
         dto.put("cloud_credit_fee_rate_down", "0.36");
-        // 是否开通小额双免
-        dto.put("is_open_small_flag", "0");
-        // 小额双免单笔限额(元)
-        dto.put("small_free_amt", "1000");
-        // 小额双免手续费（%）
-        dto.put("small_fee_amt", "0.33");
 
         return dto.toJSONString();
     }
 
-    private static String get172600159b014ad99697E59f938c8cc8() {
+    private static String get214728b640324accA062Fb391045260c() {
         JSONObject dto = new JSONObject();
         // 业务类型
         // dto.put("fee_type", "test");
@@ -666,7 +668,7 @@ public class V2MerchantBusiOpenRequestDemo extends BaseCommonDemo {
         return dtoList.toJSONString();
     }
 
-    private static String get0cfe5f55Dac84f819bac5abe3c5575d5() {
+    private static String getEf2b6b024f3446e5B3d13f6cef67ec5c() {
         JSONObject dto = new JSONObject();
         // 业务类型
         // dto.put("pay_type", "");
@@ -682,7 +684,7 @@ public class V2MerchantBusiOpenRequestDemo extends BaseCommonDemo {
         return dtoList.toJSONString();
     }
 
-    private static String get6681da60033643d8A489C56e9e7ce373() {
+    private static String get243674517225497495a81179b607fbdb() {
         JSONObject dto = new JSONObject();
         // *运营媒介类型*
         // dto.put("media_type", "test");
@@ -722,7 +724,7 @@ public class V2MerchantBusiOpenRequestDemo extends BaseCommonDemo {
         return dtoList.toJSONString();
     }
 
-    private static JSON get19917293Eb4e4f69A318D2801aaf1350() {
+    private static JSON getBb0ab046C44b4df399a3B486ea81560f() {
         JSONObject dto = new JSONObject();
         // *业务模式说明*
         // dto.put("busi_instruction", "test");
@@ -734,12 +736,12 @@ public class V2MerchantBusiOpenRequestDemo extends BaseCommonDemo {
         return dto;
     }
 
-    private static String getE6cec91d25d24e99Bab20a351c29ccfe() {
+    private static String get41051891Bdb34e87Bb64Fcc02e3dc143() {
         JSONObject dto = new JSONObject();
         // *业务模式*
         // dto.put("balance_model", "test");
         // 业务情况说明
-        // dto.put("description_info", get19917293Eb4e4f69A318D2801aaf1350());
+        // dto.put("description_info", getBb0ab046C44b4df399a3B486ea81560f());
         // 手续费(%)
         dto.put("fee_rate", "2");
         // 手续费（固定/元）
@@ -756,7 +758,7 @@ public class V2MerchantBusiOpenRequestDemo extends BaseCommonDemo {
         return dto.toJSONString();
     }
 
-    private static JSON getB038ee22379c493282f75a455f9f5e7c() {
+    private static JSON getA794899d09c1489d93c3Dac8c45760e7() {
         JSONObject dto = new JSONObject();
         // 支行联行号card_type为0时必填，参考：[银行支行编码](https://paas.huifu.com/open/doc/api/#/csfl/api_csfl_yhzhbm)；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：102290026507&lt;/font&gt;
         // dto.put("branch_code", "test");
@@ -792,7 +794,7 @@ public class V2MerchantBusiOpenRequestDemo extends BaseCommonDemo {
         return dto;
     }
 
-    private static JSON getC1cd7ac3F96644178b51E0801e79ac7b() {
+    private static JSON get820b941070f64d0690b2C434f7a44612() {
         JSONObject dto = new JSONObject();
         // 开户手续费(元)
         // dto.put("fee_fix_amt", "test");
@@ -804,7 +806,7 @@ public class V2MerchantBusiOpenRequestDemo extends BaseCommonDemo {
         return dto;
     }
 
-    private static String getB1b25c693cf24d6c82d40014b506576d() {
+    private static String getB750d687Cbab47bbB2f939569cfd39c2() {
         JSONObject dto = new JSONObject();
         // 自动入账开关
         // dto.put("out_order_auto_acct_flag", "test");
@@ -821,16 +823,16 @@ public class V2MerchantBusiOpenRequestDemo extends BaseCommonDemo {
         // 交易手续费外扣汇付ID
         // dto.put("out_fee_huifuid", "");
         // 全域资金开户银行卡信息
-        // dto.put("out_order_acct_card", getB038ee22379c493282f75a455f9f5e7c());
+        // dto.put("out_order_acct_card", getA794899d09c1489d93c3Dac8c45760e7());
         // 全域资金开户手续费
-        // dto.put("out_order_acct_open_fees", getC1cd7ac3F96644178b51E0801e79ac7b());
+        // dto.put("out_order_acct_open_fees", get820b941070f64d0690b2C434f7a44612());
         // 全域支付业务模式
         // dto.put("business_model", "");
 
         return dto.toJSONString();
     }
 
-    private static String get837a3f99414c425693f546da41f44a57() {
+    private static String getD77571fd775c4ffaB24d27b2631c7421() {
         JSONObject dto = new JSONObject();
         // 是否交易手续费外扣
         // dto.put("out_fee_flag", "test");
@@ -846,7 +848,7 @@ public class V2MerchantBusiOpenRequestDemo extends BaseCommonDemo {
         return dto.toJSONString();
     }
 
-    private static String get0cbcad0a58204d33908366e38da2f129() {
+    private static String get8bd47a8b556f4c5eA2e4Fde9a5b8f12d() {
         JSONObject dto = new JSONObject();
         // 花呗收单分期3期（%）分期费率不为空时，收单费率必填，大于0，保留2位小数，不小于渠道商成本；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：1.0&lt;/font&gt;代表费率为1.00%
         dto.put("acq_three_period", "1.30");
@@ -868,7 +870,7 @@ public class V2MerchantBusiOpenRequestDemo extends BaseCommonDemo {
         return dto.toJSONString();
     }
 
-    private static String get3873d02eA6a04c9f85aa82622b13a2d8() {
+    private static String get4e59e7546a174159B1e821e0768db386() {
         JSONObject dto = new JSONObject();
         // 归集留存金(元)
         // dto.put("out_resv_amt", "test");
@@ -886,7 +888,7 @@ public class V2MerchantBusiOpenRequestDemo extends BaseCommonDemo {
         return dtoList.toJSONString();
     }
 
-    private static JSON getFd9a9a9e1e6f4ae3Bac196d881799d11() {
+    private static JSON getFf54974419424284B74d36ecc8be9024() {
         JSONObject dto = new JSONObject();
         // 分账比例
         // dto.put("fee_rate", "test");
@@ -896,7 +898,7 @@ public class V2MerchantBusiOpenRequestDemo extends BaseCommonDemo {
         return dto;
     }
 
-    private static JSON get2929d74a16024e7eB41f041391199855() {
+    private static JSON getCd3e544c42484c4bAf92C272503382ab() {
         JSONObject dto = new JSONObject();
         // *业务模式说明*
         // dto.put("busi_instruction", "test");
@@ -908,7 +910,7 @@ public class V2MerchantBusiOpenRequestDemo extends BaseCommonDemo {
         return dto;
     }
 
-    private static String get1738a0c45e0f42f6Be9490016d79537d() {
+    private static String get5f62d9af0034458d97267394d0e4bd35() {
         JSONObject dto = new JSONObject();
         // 分账开关
         // dto.put("div_flag", "test");
@@ -921,7 +923,7 @@ public class V2MerchantBusiOpenRequestDemo extends BaseCommonDemo {
         // 分账模式
         // dto.put("scene", "test");
         // 分账明细
-        // dto.put("acct_split_bunch_list", getFd9a9a9e1e6f4ae3Bac196d881799d11());
+        // dto.put("acct_split_bunch_list", getFf54974419424284B74d36ecc8be9024());
         // 手续费外扣开关
         // dto.put("out_fee_flag", "");
         // 手续费外扣时的账户类型
@@ -933,12 +935,12 @@ public class V2MerchantBusiOpenRequestDemo extends BaseCommonDemo {
         // 固定手续费
         // dto.put("per_amt", "");
         // 业务情况说明
-        // dto.put("split_ext_info", get2929d74a16024e7eB41f041391199855());
+        // dto.put("split_ext_info", getCd3e544c42484c4bAf92C272503382ab());
 
         return dto.toJSONString();
     }
 
-    private static String get9dabc2a9159b401f9fa9B38eccd227f1() {
+    private static String getC7c1288217674b2f9d145174d898624c() {
         JSONObject dto = new JSONObject();
         // *文件id*
         // dto.put("file_id", "test");
@@ -950,7 +952,7 @@ public class V2MerchantBusiOpenRequestDemo extends BaseCommonDemo {
         return dtoList.toJSONString();
     }
 
-    private static String getCae5994403d54f2793fc6707d49c65e2() {
+    private static String get9504e10345644d4cB841929c8eabe0ff() {
         JSONObject dto = new JSONObject();
         // *协议类型*
         dto.put("agreement_type", "0");
@@ -968,7 +970,7 @@ public class V2MerchantBusiOpenRequestDemo extends BaseCommonDemo {
         return dto.toJSONString();
     }
 
-    private static String get7fdb8e3c73ac47a8A60768494068edf4() {
+    private static String get75f009beBfba4a169871E24bb939dd52() {
         JSONObject dto = new JSONObject();
         // 借记手续费（%）借记卡费率与贷记卡费率不能同时为空;保留2位小数，最大值100.00，最小值0.00；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：0.02&lt;/font&gt;
         // dto.put("debit_fee_rate", "test");
@@ -988,14 +990,18 @@ public class V2MerchantBusiOpenRequestDemo extends BaseCommonDemo {
         return dto.toJSONString();
     }
 
-    private static String get70c4a8202f234f7c9060Dc4a575fbf98() {
+    private static String getE22a0671642844c8A5588737d635fd80() {
         JSONObject dto = new JSONObject();
         // 代发业务类型
         // dto.put("surrogate_type", "test");
-        // 手续费（固定/元）fix_amt与fee_rate至少填写一项， 需保留小数点后两位；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：1.00&lt;/font&gt;
+        // 手续费（固定/元）手续费（固定/元），保留小数点后两位；fee_formula_type为05，06时必填 &lt;font color&#x3D;&quot;green&quot;&gt;示例值：1.00&lt;/font&gt;
         // dto.put("fix_amt", "test");
-        // 费率（百分比/%）fix_amt与fee_rate至少填写一项，需保留小数点后两位，取值范围[0.00,100.00]；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：0.05&lt;/font&gt;
+        // 手续费（百分比/%）手续费（百分比/%），保留小数点后两位；取值范围[0.00,100.00]；fee_formula_type为01，02，03，06时必填 &lt;font color&#x3D;&quot;green&quot;&gt;示例值：0.05&lt;/font&gt;
         // dto.put("fee_rate", "test");
+        // 手续费封顶值（固定/元）手续费封顶值（固定/元），保留小数点后两位；fee_formula_type为03时必填 &lt;font color&#x3D;&quot;green&quot;&gt;示例值：100.00&lt;/font&gt;
+        // dto.put("fee_max_amt", "test");
+        // 手续费保底值（固定/元）手续费保底值（固定/元），保留小数点后两位；fee_formula_type为02时必填 &lt;font color&#x3D;&quot;green&quot;&gt;示例值：1.00&lt;/font&gt;
+        // dto.put("fee_min_amt", "test");
         // 是否交手续费外扣标记
         // dto.put("out_fee_flag", "");
         // 交易手续费外扣时账户类型
@@ -1004,13 +1010,15 @@ public class V2MerchantBusiOpenRequestDemo extends BaseCommonDemo {
         // dto.put("out_fee_huifu_id", "");
         // 是否允许对私代发
         // dto.put("surrogate_private_flag", "");
+        // 代发手续费计费模式
+        // dto.put("fee_formula_type", "");
 
         JSONArray dtoList = new JSONArray();
         dtoList.add(dto);
         return dtoList.toJSONString();
     }
 
-    private static JSON get9229bdd57f4a40278a8b6abb83cc57c7() {
+    private static JSON getD87e2a4d0ca24ef08f45Ec57a0b8558b() {
         JSONObject dto = new JSONObject();
         // 大额支付业务模式
         // dto.put("business_model", "test");
@@ -1034,10 +1042,10 @@ public class V2MerchantBusiOpenRequestDemo extends BaseCommonDemo {
         return dtoList;
     }
 
-    private static String get82733ccbB9704fb8B34376a69c5cadc3() {
+    private static String get17139b700e124e52B2d1Ecc7a918954e() {
         JSONObject dto = new JSONObject();
         // 大额支付配置列表
-        // dto.put("large_amt_pay_config_info_list", get9229bdd57f4a40278a8b6abb83cc57c7());
+        // dto.put("large_amt_pay_config_info_list", getD87e2a4d0ca24ef08f45Ec57a0b8558b());
         // 交易手续费外扣huifuId交易手续费外扣时必填；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：6666000108854952&lt;/font&gt;
         // dto.put("out_fee_huifu_id", "test");
         // 交易手续费外扣账户号交易手续费外扣时必填；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：F00598602&lt;/font&gt;
@@ -1052,6 +1060,18 @@ public class V2MerchantBusiOpenRequestDemo extends BaseCommonDemo {
         // dto.put("mer_payer_card_type", "");
 
         return dto.toJSONString();
+    }
+
+    private static JSON getB5f37d9e6b1f4ef3B934C2c9da731dea() {
+        JSONObject dto = new JSONObject();
+        // 代发复核开关
+        // dto.put("agent_recheck_flag", "");
+        // 复核授权商户号
+        // dto.put("agent_recheck_huifu_id", "");
+        // 复核类型
+        // dto.put("agent_recheck_type", "");
+
+        return dto;
     }
 
 }

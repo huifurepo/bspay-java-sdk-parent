@@ -53,6 +53,8 @@ public class V2TradePaymentZxeAcctdetailQueryRequestDemo extends BaseCommonDemo 
     private static Map<String, Object> getExtendInfos() {
         // 设置非必填字段
         Map<String, Object> extendInfoMap = new HashMap<>();
+        // 登记薄类型
+        // extendInfoMap.put("register_type", "");
         // 页码
         extendInfoMap.put("page_num", "1");
         return extendInfoMap;

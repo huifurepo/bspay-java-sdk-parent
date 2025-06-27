@@ -54,10 +54,8 @@ public class V2EfpSurrogateRequestDemo extends BaseCommonDemo {
         request.setCertNo("KbQ+WwhycbCOeIbrB+pH+eEsJPcYo2Q1IhMUQosshs00qy7hor+CA71bZLMazVOuFkeJxex9BfhR9W2hQNbRaqdWI4yxkDOTw9Qkx1PDTDl/n8CXpxWqQKhObCE5UEd5b+M/wWe+iKNYGcJkcoyswHdMA8kZoezxqwVUi0tbq//1Ov+kTyMVhmIwNbWJpahDvS+f780opCAtlMbz9hl25EcPpeTtNgbruKY+jeO4j6oejFK0epg616uC9jQalryERsX4EjaLqQrtd5nwZBkASc5Up56xkVqvaOo+6hFQP/KbCymxWbM3J0/PFsJtv/CPM4+9JkWusX/Q1ZEH8wdZ+A==");
         // 统一社会信用代码到账类型标识为E时必填
         request.setLicenceCode("9131000010000595XD");
-        // 挂网协议地址
-        request.setAgreementUrl("https://cloudpnrcdn.oss-cn-shanghai.aliyuncs.com/opps/api/prod/dg_gwxy/PaymentServiceAgreement_surrogate_20241113.html");
         // 入账接收方对象json格式,到账类型标识为H时必填
-        // request.setAcctSplitBunch(getB1ac12b9Cb014748Aadd5b784a17878e());
+        // request.setAcctSplitBunch(getC7cbc7d13883459195cdAff832fb7959());
 
         // 设置非必填字段
         Map<String, Object> extendInfoMap = getExtendInfos();
@@ -88,7 +86,7 @@ public class V2EfpSurrogateRequestDemo extends BaseCommonDemo {
         return extendInfoMap;
     }
 
-    private static JSON get49551ed1E4bf43a29ba35b33c43d08bb() {
+    private static JSON get888e900637594cd0A5f348b6bbde2cef() {
         JSONObject dto = new JSONObject();
         // 入账金额
         // dto.put("div_amt", "test");
@@ -102,10 +100,10 @@ public class V2EfpSurrogateRequestDemo extends BaseCommonDemo {
         return dtoList;
     }
 
-    private static String getB1ac12b9Cb014748Aadd5b784a17878e() {
+    private static String getC7cbc7d13883459195cdAff832fb7959() {
         JSONObject dto = new JSONObject();
         // 入账接收方明细
-        // dto.put("acct_infos", get49551ed1E4bf43a29ba35b33c43d08bb());
+        // dto.put("acct_infos", get888e900637594cd0A5f348b6bbde2cef());
 
         return dto.toJSONString();
     }

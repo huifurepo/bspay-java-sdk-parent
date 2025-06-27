@@ -60,13 +60,21 @@ public class V2UserBasicdataIndvModifyRequestDemo extends BaseCommonDemo {
         // 手机号
         extendInfoMap.put("mobile_no", "15556622000");
         // 文件列表
-        // extendInfoMap.put("file_list", get8ace1c78E20e4c36B860Bf175485748a());
+        // extendInfoMap.put("file_list", getB751a3d0C54d4718808cFd8fbde4bf08());
         // 地址
         // extendInfoMap.put("address", "");
+        // 所属行业
+        // extendInfoMap.put("mcc", "");
+        // 省
+        // extendInfoMap.put("prov_id", "");
+        // 市
+        // extendInfoMap.put("area_id", "");
+        // 区
+        // extendInfoMap.put("district_id", "");
         return extendInfoMap;
     }
 
-    private static String get8ace1c78E20e4c36B860Bf175485748a() {
+    private static String getB751a3d0C54d4718808cFd8fbde4bf08() {
         JSONObject dto = new JSONObject();
         // 文件类型
         // dto.put("file_type", "test");

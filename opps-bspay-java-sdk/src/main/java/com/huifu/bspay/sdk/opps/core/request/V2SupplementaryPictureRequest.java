@@ -26,11 +26,6 @@ public class V2SupplementaryPictureRequest extends BaseRequest {
      */
     @JSONField(name = "file_type")
     private String fileType;
-    /**
-     * 图片名称
-     */
-    @JSONField(name = "picture")
-    private String picture;
 
     @Override
     public FunctionCodeEnum getFunctionCode() {
@@ -40,11 +35,10 @@ public class V2SupplementaryPictureRequest extends BaseRequest {
     public V2SupplementaryPictureRequest() {
     }
 
-    public V2SupplementaryPictureRequest(String reqSeqId, String reqDate, String fileType, String picture) {
+    public V2SupplementaryPictureRequest(String reqSeqId, String reqDate, String fileType) {
         this.reqSeqId = reqSeqId;
         this.reqDate = reqDate;
         this.fileType = fileType;
-        this.picture = picture;
     }
 
     public String getReqSeqId() {
@@ -69,14 +63,6 @@ public class V2SupplementaryPictureRequest extends BaseRequest {
 
     public void setFileType(String fileType) {
         this.fileType = fileType;
-    }
-
-    public String getPicture() {
-        return picture;
-    }
-
-    public void setPicture(String picture) {
-        this.picture = picture;
     }
 
 }

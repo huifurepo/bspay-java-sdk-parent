@@ -41,7 +41,7 @@ public class V2TradePayscorePayPayscorepayRequestDemo extends BaseCommonDemo {
         // 商品描述
         request.setGoodsDesc("bp充电");
         // 安全信息
-        request.setRiskCheckData(get7b611856F3284acbB2b933e5277201fd());
+        request.setRiskCheckData(get52d96afbF87746fd9cb2Beb3e46d7bd5());
 
         // 设置非必填字段
         Map<String, Object> extendInfoMap = getExtendInfos();
@@ -60,13 +60,13 @@ public class V2TradePayscorePayPayscorepayRequestDemo extends BaseCommonDemo {
         // 设置非必填字段
         Map<String, Object> extendInfoMap = new HashMap<>();
         // 聚合反扫微信参数集合
-        // extendInfoMap.put("wx_data", get26abfe33D15b4d88969eE4b82e981c40());
+        // extendInfoMap.put("wx_data", get2678bcc52a4848679dc2413aa3da407f());
         // 是否延迟交易
         // extendInfoMap.put("delay_acct_flag", "");
         // 分账对象
-        // extendInfoMap.put("acct_split_bunch", getB4a7c01e8049417cBfaf23cca015476e());
+        // extendInfoMap.put("acct_split_bunch", get19a634c3D0034464Bcc050d33458448f());
         // 设备信息
-        // extendInfoMap.put("terminal_device_info", get18bf806b138f41fb9eb85470b909b79b());
+        // extendInfoMap.put("terminal_device_info", get471b78176649480eAacf4528fabca41b());
         // 交易备注
         // extendInfoMap.put("remark", "");
         // 商户回调地址
@@ -74,7 +74,7 @@ public class V2TradePayscorePayPayscorepayRequestDemo extends BaseCommonDemo {
         return extendInfoMap;
     }
 
-    private static String get26abfe33D15b4d88969eE4b82e981c40() {
+    private static String get2678bcc52a4848679dc2413aa3da407f() {
         JSONObject dto = new JSONObject();
         // 子商户用户标识
         // dto.put("sub_openid", "test");
@@ -88,7 +88,7 @@ public class V2TradePayscorePayPayscorepayRequestDemo extends BaseCommonDemo {
         return dto.toJSONString();
     }
 
-    private static JSON get74fe15d7F3cf4781880dA528d270b475() {
+    private static JSON getE3905e1c9bd4475c81bcEa7a29aa75f8() {
         JSONObject dto = new JSONObject();
         // 分账金额
         // dto.put("div_amt", "test");
@@ -100,15 +100,15 @@ public class V2TradePayscorePayPayscorepayRequestDemo extends BaseCommonDemo {
         return dtoList;
     }
 
-    private static String getB4a7c01e8049417cBfaf23cca015476e() {
+    private static String get19a634c3D0034464Bcc050d33458448f() {
         JSONObject dto = new JSONObject();
         // 分账明细
-        // dto.put("acct_infos", get74fe15d7F3cf4781880dA528d270b475());
+        // dto.put("acct_infos", getE3905e1c9bd4475c81bcEa7a29aa75f8());
 
         return dto.toJSONString();
     }
 
-    private static String get7b611856F3284acbB2b933e5277201fd() {
+    private static String get52d96afbF87746fd9cb2Beb3e46d7bd5() {
         JSONObject dto = new JSONObject();
         // ip地址
         dto.put("ip_address", "127.0.0.1");
@@ -122,7 +122,7 @@ public class V2TradePayscorePayPayscorepayRequestDemo extends BaseCommonDemo {
         return dto.toJSONString();
     }
 
-    private static String get18bf806b138f41fb9eb85470b909b79b() {
+    private static String get471b78176649480eAacf4528fabca41b() {
         JSONObject dto = new JSONObject();
         // 设备类型
         // dto.put("device_type", "");

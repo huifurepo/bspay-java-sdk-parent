@@ -82,11 +82,6 @@ public class V2EfpSurrogateRequest extends BaseRequest {
     @JSONField(name = "licence_code")
     private String licenceCode;
     /**
-     * 挂网协议地址
-     */
-    @JSONField(name = "agreement_url")
-    private String agreementUrl;
-    /**
      * 入账接收方对象json格式,到账类型标识为H时必填
      */
     @JSONField(name = "acct_split_bunch")
@@ -100,7 +95,7 @@ public class V2EfpSurrogateRequest extends BaseRequest {
     public V2EfpSurrogateRequest() {
     }
 
-    public V2EfpSurrogateRequest(String reqSeqId, String reqDate, String huifuId, String cashAmt, String cardNo, String bankCode, String cardName, String cardAcctType, String provId, String areaId, String mobileNo, String certType, String certNo, String licenceCode, String agreementUrl, String acctSplitBunch) {
+    public V2EfpSurrogateRequest(String reqSeqId, String reqDate, String huifuId, String cashAmt, String cardNo, String bankCode, String cardName, String cardAcctType, String provId, String areaId, String mobileNo, String certType, String certNo, String licenceCode, String acctSplitBunch) {
         this.reqSeqId = reqSeqId;
         this.reqDate = reqDate;
         this.huifuId = huifuId;
@@ -115,7 +110,6 @@ public class V2EfpSurrogateRequest extends BaseRequest {
         this.certType = certType;
         this.certNo = certNo;
         this.licenceCode = licenceCode;
-        this.agreementUrl = agreementUrl;
         this.acctSplitBunch = acctSplitBunch;
     }
 
@@ -229,14 +223,6 @@ public class V2EfpSurrogateRequest extends BaseRequest {
 
     public void setLicenceCode(String licenceCode) {
         this.licenceCode = licenceCode;
-    }
-
-    public String getAgreementUrl() {
-        return agreementUrl;
-    }
-
-    public void setAgreementUrl(String agreementUrl) {
-        this.agreementUrl = agreementUrl;
     }
 
     public String getAcctSplitBunch() {

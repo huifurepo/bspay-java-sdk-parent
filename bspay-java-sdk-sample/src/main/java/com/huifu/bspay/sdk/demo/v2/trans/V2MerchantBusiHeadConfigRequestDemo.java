@@ -54,37 +54,37 @@ public class V2MerchantBusiHeadConfigRequestDemo extends BaseCommonDemo {
         // 设置非必填字段
         Map<String, Object> extendInfoMap = new HashMap<>();
         // 支付宝配置对象
-        // extendInfoMap.put("ali_conf_list", get916e568b03b4448b8442Bc59607f55a9());
+        // extendInfoMap.put("ali_conf_list", get3914bf384f3e4c9591b8893e9fb4f9ee());
         // 微信配置对象
-        // extendInfoMap.put("wx_conf_list", get91a6f3c897084daaA750D460c4223fdd());
+        // extendInfoMap.put("wx_conf_list", get91cc2a27888c46de9614Dbb4516cc335());
         // 银联二维码配置对象
-        // extendInfoMap.put("union_conf_list", get11f18154070b4ef3B79c6bd7442b51bd());
+        // extendInfoMap.put("union_conf_list", get9c1d666eCe3e4aceBea5B208d80d57b2());
         // 银联卡配置对象
-        // extendInfoMap.put("bank_card_config", getD38dbb2fA005448eAefa2631e82a43bd());
+        // extendInfoMap.put("bank_card_config", getEd80633aEa7c4a5d928fD074dc506928());
         // 分账配置对象
-        // extendInfoMap.put("split_config", getD74f8d2cAb1345d7B05859cbc476ef6e());
+        // extendInfoMap.put("split_config", get1676b226Cda745048669B065d29e072c());
         // 微信直连配置对象
-        // extendInfoMap.put("wx_zl_conf_list", get5a0a3440F93241359adcC4c7bd515643());
+        // extendInfoMap.put("wx_zl_conf_list", getA4020a4f009f414f9cf5668882108c30());
         // 支付宝直连配置对象
-        // extendInfoMap.put("ali_zl_conf", getD624c523351a4f1f995f73e7862d4f5c());
+        // extendInfoMap.put("ali_zl_conf", get127ca5f5933b4b8e9876D7a515151d35());
         // 线上配置对象
-        // extendInfoMap.put("online_fee_conf_list", get5ed15ef0B2e847f8A438A8c88a7bab1f());
+        // extendInfoMap.put("online_fee_conf_list", getE483094bF909460c8a17De0b3f59b4c4());
         // 余额支付配置对象
-        // extendInfoMap.put("balance_pay_config", get78b6d2f909434f408f929dd15fee6672());
+        // extendInfoMap.put("balance_pay_config", get715836aeC6334963A7fb2ffc149cf4e8());
         // 补贴支付配置对象
-        // extendInfoMap.put("combine_pay_config", get019b2ffc8bb04a42Aa4f87623ed4ee78());
+        // extendInfoMap.put("combine_pay_config", get43f1b7b2Fb304ac6Bf74297a35a6d6d9());
         // 银行大额转账配置对象
-        // extendInfoMap.put("bank_big_amt_pay_config", getDdb760be91d245959c0c57e3795c2e75());
+        // extendInfoMap.put("bank_big_amt_pay_config", get5b7059499f8846c7Ad482d1d04be7ed1());
         // 全域资金管理配置对象（华通银行）
-        // extendInfoMap.put("out_order_funds_config", get029b9aa1Ef7c445eAee78f34392d75a1());
+        // extendInfoMap.put("out_order_funds_config", getD5931f96E86d48ad8f4e37a2020a3697());
         // 全域资金管理配置(XW银行)
-        // extendInfoMap.put("out_order_funds_new_net_config", get11de5eefC8bc4ddd9bc091896e59685a());
+        // extendInfoMap.put("out_order_funds_new_net_config", getC3f087d6779a41e2Bd7b3be55fd71d60());
         // 结算配置对象
-        // extendInfoMap.put("settle_config_list", getB3273ffb43614889855bF0effa4c544e());
+        // extendInfoMap.put("settle_config_list", get5b4da856D6d24c03Ad2085a10a50b664());
         // 取现配置对象
-        // extendInfoMap.put("cash_config_list", getAb8250102ee14d688a3c697ded75df88());
+        // extendInfoMap.put("cash_config_list", get3049a308Bf07410bAac6A8b4126c73d7());
         // 外扣配置对象
-        // extendInfoMap.put("out_fee_config", get3a66f24451584846865293177b71f238());
+        // extendInfoMap.put("out_fee_config", getD691f7c180444b7bB2c64a1547bd9208());
         // 允许开通支付宝预授权
         // extendInfoMap.put("alipay_pre_auth_flag", "");
         // 允许开通微信预授权
@@ -98,15 +98,15 @@ public class V2MerchantBusiHeadConfigRequestDemo extends BaseCommonDemo {
         // 允许使用上级商户号发起AT交易
         // extendInfoMap.put("use_upper_mer_at_trans_flag", "");
         // 大额支付配置
-        // extendInfoMap.put("large_amt_pay_config_list", getD8c6d0c002ca46cfB9efD110095bd83a());
+        // extendInfoMap.put("large_amt_pay_config_list", get289f1fdaE59244d0B99c447fcd1b5fd1());
         // 全域资金管理配置(苏商)
-        // extendInfoMap.put("out_order_funds_su_shang_config", getD31e7929847346248e31C3f56fb221a4());
+        // extendInfoMap.put("out_order_funds_su_shang_config", get942bf7c5D69d489194e4218efa3bfcd3());
         // 托管支付开关
         // extendInfoMap.put("half_pay_host_flag", "");
         return extendInfoMap;
     }
 
-    private static String get916e568b03b4448b8442Bc59607f55a9() {
+    private static String get3914bf384f3e4c9591b8893e9fb4f9ee() {
         JSONObject dto = new JSONObject();
         // 支付场景
         // dto.put("pay_scene", "test");
@@ -120,7 +120,7 @@ public class V2MerchantBusiHeadConfigRequestDemo extends BaseCommonDemo {
         return dtoList.toJSONString();
     }
 
-    private static String get91a6f3c897084daaA750D460c4223fdd() {
+    private static String get91cc2a27888c46de9614Dbb4516cc335() {
         JSONObject dto = new JSONObject();
         // 支付场景
         // dto.put("pay_scene", "test");
@@ -136,7 +136,7 @@ public class V2MerchantBusiHeadConfigRequestDemo extends BaseCommonDemo {
         return dtoList.toJSONString();
     }
 
-    private static String get11f18154070b4ef3B79c6bd7442b51bd() {
+    private static String get9c1d666eCe3e4aceBea5B208d80d57b2() {
         JSONObject dto = new JSONObject();
         // 借记卡手续费1000以上(%)
         // dto.put("debit_fee_rate_up", "test");
@@ -160,7 +160,7 @@ public class V2MerchantBusiHeadConfigRequestDemo extends BaseCommonDemo {
         return dtoList.toJSONString();
     }
 
-    private static String getD38dbb2fA005448eAefa2631e82a43bd() {
+    private static String getEd80633aEa7c4a5d928fD074dc506928() {
         JSONObject dto = new JSONObject();
         // 借记卡手续费（%）
         // dto.put("debit_fee_rate", "test");
@@ -186,7 +186,7 @@ public class V2MerchantBusiHeadConfigRequestDemo extends BaseCommonDemo {
         return dto.toJSONString();
     }
 
-    private static String getD74f8d2cAb1345d7B05859cbc476ef6e() {
+    private static String get1676b226Cda745048669B065d29e072c() {
         JSONObject dto = new JSONObject();
         // 手续费（%）
         // dto.put("fee_rate", "test");
@@ -198,7 +198,7 @@ public class V2MerchantBusiHeadConfigRequestDemo extends BaseCommonDemo {
         return dto.toJSONString();
     }
 
-    private static String get5a0a3440F93241359adcC4c7bd515643() {
+    private static String getA4020a4f009f414f9cf5668882108c30() {
         JSONObject dto = new JSONObject();
         // 支付场景
         // dto.put("pay_scene", "test");
@@ -212,7 +212,7 @@ public class V2MerchantBusiHeadConfigRequestDemo extends BaseCommonDemo {
         return dtoList.toJSONString();
     }
 
-    private static String getD624c523351a4f1f995f73e7862d4f5c() {
+    private static String get127ca5f5933b4b8e9876D7a515151d35() {
         JSONObject dto = new JSONObject();
         // 手续费（%）
         // dto.put("fee_rate", "test");
@@ -222,7 +222,7 @@ public class V2MerchantBusiHeadConfigRequestDemo extends BaseCommonDemo {
         return dto.toJSONString();
     }
 
-    private static String get5ed15ef0B2e847f8A438A8c88a7bab1f() {
+    private static String getE483094bF909460c8a17De0b3f59b4c4() {
         JSONObject dto = new JSONObject();
         // 业务类型
         // dto.put("bus_type", "test");
@@ -242,7 +242,7 @@ public class V2MerchantBusiHeadConfigRequestDemo extends BaseCommonDemo {
         return dtoList.toJSONString();
     }
 
-    private static String get78b6d2f909434f408f929dd15fee6672() {
+    private static String get715836aeC6334963A7fb2ffc149cf4e8() {
         JSONObject dto = new JSONObject();
         // 手续费（%）
         // dto.put("fee_rate", "test");
@@ -254,7 +254,7 @@ public class V2MerchantBusiHeadConfigRequestDemo extends BaseCommonDemo {
         return dto.toJSONString();
     }
 
-    private static String get019b2ffc8bb04a42Aa4f87623ed4ee78() {
+    private static String get43f1b7b2Fb304ac6Bf74297a35a6d6d9() {
         JSONObject dto = new JSONObject();
         // 手续费（%）
         // dto.put("fee_rate", "test");
@@ -266,7 +266,7 @@ public class V2MerchantBusiHeadConfigRequestDemo extends BaseCommonDemo {
         return dto.toJSONString();
     }
 
-    private static String getDdb760be91d245959c0c57e3795c2e75() {
+    private static String get5b7059499f8846c7Ad482d1d04be7ed1() {
         JSONObject dto = new JSONObject();
         // 手续费（%）
         // dto.put("fee_rate", "test");
@@ -278,7 +278,7 @@ public class V2MerchantBusiHeadConfigRequestDemo extends BaseCommonDemo {
         return dto.toJSONString();
     }
 
-    private static String get029b9aa1Ef7c445eAee78f34392d75a1() {
+    private static String getD5931f96E86d48ad8f4e37a2020a3697() {
         JSONObject dto = new JSONObject();
         // 手续费（%）
         // dto.put("fee_rate", "test");
@@ -292,7 +292,7 @@ public class V2MerchantBusiHeadConfigRequestDemo extends BaseCommonDemo {
         return dto.toJSONString();
     }
 
-    private static String get11de5eefC8bc4ddd9bc091896e59685a() {
+    private static String getC3f087d6779a41e2Bd7b3be55fd71d60() {
         JSONObject dto = new JSONObject();
         // 手续费（%）
         // dto.put("fee_rate", "test");
@@ -308,7 +308,7 @@ public class V2MerchantBusiHeadConfigRequestDemo extends BaseCommonDemo {
         return dto.toJSONString();
     }
 
-    private static String getB3273ffb43614889855bF0effa4c544e() {
+    private static String get5b4da856D6d24c03Ad2085a10a50b664() {
         JSONObject dto = new JSONObject();
         // 业务类型
         // dto.put("bus_type", "test");
@@ -324,7 +324,7 @@ public class V2MerchantBusiHeadConfigRequestDemo extends BaseCommonDemo {
         return dtoList.toJSONString();
     }
 
-    private static String getAb8250102ee14d688a3c697ded75df88() {
+    private static String get3049a308Bf07410bAac6A8b4126c73d7() {
         JSONObject dto = new JSONObject();
         // 业务类型
         // dto.put("bus_type", "test");
@@ -340,7 +340,7 @@ public class V2MerchantBusiHeadConfigRequestDemo extends BaseCommonDemo {
         return dtoList.toJSONString();
     }
 
-    private static String get3a66f24451584846865293177b71f238() {
+    private static String getD691f7c180444b7bB2c64a1547bd9208() {
         JSONObject dto = new JSONObject();
         // 支持结算手续费外扣
         // dto.put("settle_out_fee_flag", "test");
@@ -352,7 +352,7 @@ public class V2MerchantBusiHeadConfigRequestDemo extends BaseCommonDemo {
         return dto.toJSONString();
     }
 
-    private static String getD8c6d0c002ca46cfB9efD110095bd83a() {
+    private static String get289f1fdaE59244d0B99c447fcd1b5fd1() {
         JSONObject dto = new JSONObject();
         // 手续费（%）
         // dto.put("fee_rate", "test");
@@ -372,7 +372,7 @@ public class V2MerchantBusiHeadConfigRequestDemo extends BaseCommonDemo {
         return dto.toJSONString();
     }
 
-    private static String getD31e7929847346248e31C3f56fb221a4() {
+    private static String get942bf7c5D69d489194e4218efa3bfcd3() {
         JSONObject dto = new JSONObject();
         // 手续费（%）
         // dto.put("fee_rate", "test");

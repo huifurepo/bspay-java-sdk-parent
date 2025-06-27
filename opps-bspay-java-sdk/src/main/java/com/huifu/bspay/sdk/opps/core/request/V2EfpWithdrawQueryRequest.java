@@ -27,12 +27,12 @@ public class V2EfpWithdrawQueryRequest extends BaseRequest {
     @JSONField(name = "huifu_id")
     private String huifuId;
     /**
-     * 原请求流水号
+     * 付款或提现的请求流水号
      */
     @JSONField(name = "org_req_seq_id")
     private String orgReqSeqId;
     /**
-     * 原请求日期
+     * 付款或提现的请求日期
      */
     @JSONField(name = "org_req_date")
     private String orgReqDate;

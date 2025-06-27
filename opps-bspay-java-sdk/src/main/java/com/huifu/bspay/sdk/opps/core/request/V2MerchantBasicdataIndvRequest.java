@@ -32,12 +32,12 @@ public class V2MerchantBasicdataIndvRequest extends BaseRequest {
     @JSONField(name = "reg_name")
     private String regName;
     /**
-     * *所属行业*
+     * 所属行业
      */
     @JSONField(name = "mcc")
     private String mcc;
     /**
-     * *场景类型*
+     * 场景类型
      */
     @JSONField(name = "scene_type")
     private String sceneType;
@@ -52,22 +52,22 @@ public class V2MerchantBasicdataIndvRequest extends BaseRequest {
     @JSONField(name = "detail_addr")
     private String detailAddr;
     /**
-     * *负责人证件号码*
+     * 负责人证件号码
      */
     @JSONField(name = "legal_cert_no")
     private String legalCertNo;
     /**
-     * *负责人证件有效期开始日期*
+     * 负责人证件有效期开始日期
      */
     @JSONField(name = "legal_cert_begin_date")
     private String legalCertBeginDate;
     /**
-     * *负责人证件有效期截止日期*
+     * 负责人证件有效期截止日期
      */
     @JSONField(name = "legal_cert_end_date")
     private String legalCertEndDate;
     /**
-     * *负责人身份证地址*
+     * 负责人身份证地址
      */
     @JSONField(name = "legal_addr")
     private String legalAddr;
@@ -102,7 +102,7 @@ public class V2MerchantBasicdataIndvRequest extends BaseRequest {
     @JSONField(name = "settle_card_front_pic")
     private String settleCardFrontPic;
     /**
-     * *商户ICP备案编号*商户ICP备案编号或网站许可证号；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：沪ICP备06046402号-28 &lt;/font&gt;&lt;br/&gt;类型为PC网站时，且为企业商户，且开通快捷或网银，或大额转账，或余额支付或分账业务（20%（不含）-100%），或为个人商户开通分账业务（10%（不含）-100%），必填
+     * 商户ICP备案编号商户ICP备案编号或网站许可证号；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：沪ICP备06046402号-28 &lt;/font&gt;&lt;br/&gt;类型为PC网站时，且为企业商户，且开通快捷或网银，或大额转账，或余额支付或分账业务（20%（不含）-100%），或为个人商户开通分账业务（10%（不含）-100%），必填
      */
     @JSONField(name = "mer_icp")
     private String merIcp;

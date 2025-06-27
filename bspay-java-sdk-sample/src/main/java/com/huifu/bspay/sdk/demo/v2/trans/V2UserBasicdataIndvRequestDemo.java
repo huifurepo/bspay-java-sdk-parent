@@ -74,11 +74,19 @@ public class V2UserBasicdataIndvRequestDemo extends BaseCommonDemo {
         // 拓展方字段
         extendInfoMap.put("expand_id", "");
         // 文件列表
-        extendInfoMap.put("file_list", getA2b3ad80C6e54290Ad01D1bd6ad4753b());
+        extendInfoMap.put("file_list", getDb2bd6a770dd4fbc80f23305842efb38());
+        // 所属行业
+        // extendInfoMap.put("mcc", "");
+        // 省
+        // extendInfoMap.put("prov_id", "");
+        // 市
+        // extendInfoMap.put("area_id", "");
+        // 区
+        // extendInfoMap.put("district_id", "");
         return extendInfoMap;
     }
 
-    private static String getA2b3ad80C6e54290Ad01D1bd6ad4753b() {
+    private static String getDb2bd6a770dd4fbc80f23305842efb38() {
         JSONObject dto = new JSONObject();
         // 文件类型
         dto.put("file_type", "F04");
