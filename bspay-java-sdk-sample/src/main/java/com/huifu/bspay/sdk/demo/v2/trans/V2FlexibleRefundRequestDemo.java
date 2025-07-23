@@ -8,16 +8,16 @@ import com.huifu.bspay.sdk.demo.init.OppsMerchantConfigDemo;
 import com.huifu.bspay.sdk.opps.core.utils.DateTools;
 import com.huifu.bspay.sdk.opps.core.utils.SequenceTools;
 import com.huifu.bspay.sdk.demo.core.Identify;
-import com.huifu.bspay.sdk.opps.core.request.V2TradeHostingPaymentQueryorderinfoRequest;
+import com.huifu.bspay.sdk.opps.core.request.V2FlexibleRefundRequest;
 
 /**
- * 托管交易查询 - 示例
+ * 灵工支付退款 - 示例
  *
  * @author sdk-generator
  * @Description
  */
-@Identify(requestClass = V2TradeHostingPaymentQueryorderinfoRequest.class)
-public class V2TradeHostingPaymentQueryorderinfoRequestDemo extends BaseCommonDemo {
+@Identify(requestClass = V2FlexibleRefundRequest.class)
+public class V2FlexibleRefundRequestDemo extends BaseCommonDemo {
 
     public static void main(String[] args) throws Exception {
 
@@ -25,19 +25,21 @@ public class V2TradeHostingPaymentQueryorderinfoRequestDemo extends BaseCommonDe
         doInit(OppsMerchantConfigDemo.getMerchantConfig());
 
         // 2.组装请求参数
-        V2TradeHostingPaymentQueryorderinfoRequest request = new V2TradeHostingPaymentQueryorderinfoRequest();
-        // 请求日期
-        request.setReqDate(DateTools.getCurrentDateYYYYMMDD());
+        V2FlexibleRefundRequest request = new V2FlexibleRefundRequest();
         // 请求流水号
         request.setReqSeqId(SequenceTools.getReqSeqId32());
-        // 商户号
-        request.setHuifuId("6666000109133323");
-        // 原交易请求日期
-        request.setOrgReqDate("20231020");
-        // 原交易请求流水号与**party_order_id**二选一，必填；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：rQ2021121311173944&lt;/font&gt;
-        request.setOrgReqSeqId("202310201652361987182512");
-        // 用户账单上的商户订单号与**org_req_seq_id**二选一，必填；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：03232109190255105603561&lt;/font&gt;
-        // request.setPartyOrderId("test");
+        // 请求日期
+        request.setReqDate(DateTools.getCurrentDateYYYYMMDD());
+        // 原请求日期
+        request.setOrgReqDate("20250617");
+        // 原灵工支付交易流水号&lt;font color&#x3D;&quot;green&quot;&gt;示例值：2021091708126665231&lt;/font&gt;
+        request.setOrgReqSeqId("20250618710431811test001");
+        // 原灵工支付汇付全局流水号与原灵工支付交易流水号必选其一&lt;font color&#x3D;&quot;green&quot;&gt;示例值：2021091708126665001&lt;/font&gt;
+        request.setOrgHfSeqId("");
+        // 发起方商户号
+        request.setHuifuId("6666000108903745");
+        // 支付金额
+        request.setOrdAmt("10");
 
         // 设置非必填字段
         Map<String, Object> extendInfoMap = getExtendInfos();
@@ -55,6 +57,8 @@ public class V2TradeHostingPaymentQueryorderinfoRequestDemo extends BaseCommonDe
     private static Map<String, Object> getExtendInfos() {
         // 设置非必填字段
         Map<String, Object> extendInfoMap = new HashMap<>();
+        // 备注
+        extendInfoMap.put("remark", "备注11111");
         return extendInfoMap;
     }
 

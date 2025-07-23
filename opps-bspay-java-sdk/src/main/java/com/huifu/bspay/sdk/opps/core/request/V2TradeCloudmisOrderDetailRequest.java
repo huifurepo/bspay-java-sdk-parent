@@ -12,6 +12,11 @@ import com.huifu.bspay.sdk.opps.core.enums.FunctionCodeEnum;
 public class V2TradeCloudmisOrderDetailRequest extends BaseRequest {
 
     /**
+     * 请求流水号
+     */
+    @JSONField(name = "req_id")
+    private String reqId;
+    /**
      * 原MIS请求商户号
      */
     @JSONField(name = "org_huifu_id")
@@ -35,10 +40,19 @@ public class V2TradeCloudmisOrderDetailRequest extends BaseRequest {
     public V2TradeCloudmisOrderDetailRequest() {
     }
 
-    public V2TradeCloudmisOrderDetailRequest(String orgHuifuId, String orgDeviceId, String orgReqDate) {
+    public V2TradeCloudmisOrderDetailRequest(String reqId, String orgHuifuId, String orgDeviceId, String orgReqDate) {
+        this.reqId = reqId;
         this.orgHuifuId = orgHuifuId;
         this.orgDeviceId = orgDeviceId;
         this.orgReqDate = orgReqDate;
+    }
+
+    public String getReqId() {
+        return reqId;
+    }
+
+    public void setReqId(String reqId) {
+        this.reqId = reqId;
     }
 
     public String getOrgHuifuId() {

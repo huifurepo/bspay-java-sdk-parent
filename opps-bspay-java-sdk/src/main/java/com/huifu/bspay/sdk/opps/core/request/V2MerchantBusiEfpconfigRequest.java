@@ -161,6 +161,11 @@ public class V2MerchantBusiEfpconfigRequest extends BaseRequest {
      */
     @JSONField(name = "bd_cooperation_prove_pic")
     private String bdCooperationProvePic;
+    /**
+     * 主店商户号是否店群为是时必填
+     */
+    @JSONField(name = "main_store_huifu_id")
+    private String mainStoreHuifuId;
 
     @Override
     public FunctionCodeEnum getFunctionCode() {
@@ -170,7 +175,7 @@ public class V2MerchantBusiEfpconfigRequest extends BaseRequest {
     public V2MerchantBusiEfpconfigRequest() {
     }
 
-    public V2MerchantBusiEfpconfigRequest(String reqSeqId, String reqDate, String huifuId, String upperHuifuId, String outFeeHuifuid, String outOrderAcctCard, String outOrderAcctOpenFees, String outFundsGateId, String signUserInfo, String acctSource, String dyCooperationProvePic, String mtCooperationProvePic, String ksCooperationProvePic, String pddCooperationProvePic, String xhsCooperationProvePic, String zfbCooperationProvePic, String wxCooperationProvePic, String jdCooperationProvePic, String elmCooperationProvePic, String dwCooperationProvePic, String wphCooperationProvePic, String xcCooperationProvePic, String zfbzlCooperationProvePic, String wxzlCooperationProvePic, String ddjyCooperationProvePic, String tyCooperationProvePic, String tlCooperationProvePic, String ybCooperationProvePic, String efpPaperAgreementFile, String bdCooperationProvePic) {
+    public V2MerchantBusiEfpconfigRequest(String reqSeqId, String reqDate, String huifuId, String upperHuifuId, String outFeeHuifuid, String outOrderAcctCard, String outOrderAcctOpenFees, String outFundsGateId, String signUserInfo, String acctSource, String dyCooperationProvePic, String mtCooperationProvePic, String ksCooperationProvePic, String pddCooperationProvePic, String xhsCooperationProvePic, String zfbCooperationProvePic, String wxCooperationProvePic, String jdCooperationProvePic, String elmCooperationProvePic, String dwCooperationProvePic, String wphCooperationProvePic, String xcCooperationProvePic, String zfbzlCooperationProvePic, String wxzlCooperationProvePic, String ddjyCooperationProvePic, String tyCooperationProvePic, String tlCooperationProvePic, String ybCooperationProvePic, String efpPaperAgreementFile, String bdCooperationProvePic, String mainStoreHuifuId) {
         this.reqSeqId = reqSeqId;
         this.reqDate = reqDate;
         this.huifuId = huifuId;
@@ -201,6 +206,7 @@ public class V2MerchantBusiEfpconfigRequest extends BaseRequest {
         this.ybCooperationProvePic = ybCooperationProvePic;
         this.efpPaperAgreementFile = efpPaperAgreementFile;
         this.bdCooperationProvePic = bdCooperationProvePic;
+        this.mainStoreHuifuId = mainStoreHuifuId;
     }
 
     public String getReqSeqId() {
@@ -441,6 +447,14 @@ public class V2MerchantBusiEfpconfigRequest extends BaseRequest {
 
     public void setBdCooperationProvePic(String bdCooperationProvePic) {
         this.bdCooperationProvePic = bdCooperationProvePic;
+    }
+
+    public String getMainStoreHuifuId() {
+        return mainStoreHuifuId;
+    }
+
+    public void setMainStoreHuifuId(String mainStoreHuifuId) {
+        this.mainStoreHuifuId = mainStoreHuifuId;
     }
 
 }

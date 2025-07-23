@@ -62,11 +62,11 @@ public class V2CouponDouyinConsumeRequestDemo extends BaseCommonDemo {
         // 操作人姓名
         // extendInfoMap.put("operator_name", "");
         // 核销额外参数
-        // extendInfoMap.put("verify_extra", getFb7a9cffD3d449df99461036235bce4c());
+        // extendInfoMap.put("verify_extra", get11f3d825Aad642ec886f1867af6dfb8e());
         return extendInfoMap;
     }
 
-    private static JSON getFb7a9cffD3d449df99461036235bce4c() {
+    private static JSON get11f3d825Aad642ec886f1867af6dfb8e() {
         JSONObject dto = new JSONObject();
         // 开台时间（秒）
         // dto.put("biz_time", "test");

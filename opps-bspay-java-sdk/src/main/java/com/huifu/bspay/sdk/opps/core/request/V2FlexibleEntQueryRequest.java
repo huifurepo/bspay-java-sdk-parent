@@ -4,12 +4,12 @@ import com.alibaba.fastjson.annotation.JSONField;
 import com.huifu.bspay.sdk.opps.core.enums.FunctionCodeEnum;
 
 /**
- * 申请开票
+ * 灵工企业商户信息查询
  *
  * @author sdk-generator
  * @Description
  */
-public class V2HycInvoiceApplyRequest extends BaseRequest {
+public class V2FlexibleEntQueryRequest extends BaseRequest {
 
     /**
      * 请求流水号
@@ -22,35 +22,23 @@ public class V2HycInvoiceApplyRequest extends BaseRequest {
     @JSONField(name = "req_date")
     private String reqDate;
     /**
-     * 商户汇付id
+     * 汇付商户号
      */
     @JSONField(name = "huifu_id")
     private String huifuId;
-    /**
-     * 开票类目
-     */
-    @JSONField(name = "invoice_category")
-    private String invoiceCategory;
-    /**
-     * 汇付全局流水号集合
-     */
-    @JSONField(name = "hf_seq_ids")
-    private String hfSeqIds;
 
     @Override
     public FunctionCodeEnum getFunctionCode() {
-        return FunctionCodeEnum.V2_HYC_INVOICE_APPLY;
+        return FunctionCodeEnum.V2_FLEXIBLE_ENT_QUERY;
     }
 
-    public V2HycInvoiceApplyRequest() {
+    public V2FlexibleEntQueryRequest() {
     }
 
-    public V2HycInvoiceApplyRequest(String reqSeqId, String reqDate, String huifuId, String invoiceCategory, String hfSeqIds) {
+    public V2FlexibleEntQueryRequest(String reqSeqId, String reqDate, String huifuId) {
         this.reqSeqId = reqSeqId;
         this.reqDate = reqDate;
         this.huifuId = huifuId;
-        this.invoiceCategory = invoiceCategory;
-        this.hfSeqIds = hfSeqIds;
     }
 
     public String getReqSeqId() {
@@ -75,22 +63,6 @@ public class V2HycInvoiceApplyRequest extends BaseRequest {
 
     public void setHuifuId(String huifuId) {
         this.huifuId = huifuId;
-    }
-
-    public String getInvoiceCategory() {
-        return invoiceCategory;
-    }
-
-    public void setInvoiceCategory(String invoiceCategory) {
-        this.invoiceCategory = invoiceCategory;
-    }
-
-    public String getHfSeqIds() {
-        return hfSeqIds;
-    }
-
-    public void setHfSeqIds(String hfSeqIds) {
-        this.hfSeqIds = hfSeqIds;
     }
 
 }

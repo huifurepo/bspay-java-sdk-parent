@@ -32,16 +32,10 @@ public class V2HycInvoiceApplyRequestDemo extends BaseCommonDemo {
         request.setReqDate(DateTools.getCurrentDateYYYYMMDD());
         // 商户汇付id
         request.setHuifuId("6666000109133323");
-        // 交易流水列表
-        request.setBatchList(get7087791b2c6441789d3fAa1688a130fb());
-        // 接收人手机号
-        request.setReceiveMobile("13945641357");
-        // 接收人姓名
-        request.setReceiveName("黄二");
-        // 快递地址
-        request.setCourierAddress("长江大街161号上海长江经济园");
         // 开票类目
         request.setInvoiceCategory("信息技术服务*软件测试服务");
+        // 汇付全局流水号集合
+        // request.setHfSeqIds("test");
 
         // 设置非必填字段
         Map<String, Object> extendInfoMap = getExtendInfos();
@@ -61,6 +55,12 @@ public class V2HycInvoiceApplyRequestDemo extends BaseCommonDemo {
         Map<String, Object> extendInfoMap = new HashMap<>();
         // 异步地址
         extendInfoMap.put("asyn_url", "https://www.baidu.com");
+        // 接收人手机号
+        extendInfoMap.put("receive_mobile", "13945641357");
+        // 接收人姓名
+        extendInfoMap.put("receive_name", "黄二");
+        // 快递地址
+        extendInfoMap.put("courier_address", "长江大街161号上海长江经济园");
         // 购方税号
         extendInfoMap.put("invoice_tax_no", "91310230MA1JTWAK98");
         // 购方公司名称
@@ -78,18 +78,6 @@ public class V2HycInvoiceApplyRequestDemo extends BaseCommonDemo {
         // 备注
         extendInfoMap.put("remarks", "");
         return extendInfoMap;
-    }
-
-    private static String get7087791b2c6441789d3fAa1688a130fb() {
-        JSONObject dto = new JSONObject();
-        // 交易流水号
-        dto.put("trans_seq_id", "SSPC8d4406cff4584b2391e113eaa32432bb");
-        // 交易日期
-        dto.put("trans_date", "20240112");
-
-        JSONArray dtoList = new JSONArray();
-        dtoList.add(dto);
-        return dtoList.toJSONString();
     }
 
 }

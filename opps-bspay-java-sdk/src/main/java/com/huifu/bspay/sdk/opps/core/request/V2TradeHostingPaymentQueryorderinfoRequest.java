@@ -32,10 +32,15 @@ public class V2TradeHostingPaymentQueryorderinfoRequest extends BaseRequest {
     @JSONField(name = "org_req_date")
     private String orgReqDate;
     /**
-     * 原交易请求流水号
+     * 原交易请求流水号与**party_order_id**二选一，必填；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：rQ2021121311173944&lt;/font&gt;
      */
     @JSONField(name = "org_req_seq_id")
     private String orgReqSeqId;
+    /**
+     * 用户账单上的商户订单号与**org_req_seq_id**二选一，必填；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：03232109190255105603561&lt;/font&gt;
+     */
+    @JSONField(name = "party_order_id")
+    private String partyOrderId;
 
     @Override
     public FunctionCodeEnum getFunctionCode() {
@@ -45,12 +50,13 @@ public class V2TradeHostingPaymentQueryorderinfoRequest extends BaseRequest {
     public V2TradeHostingPaymentQueryorderinfoRequest() {
     }
 
-    public V2TradeHostingPaymentQueryorderinfoRequest(String reqDate, String reqSeqId, String huifuId, String orgReqDate, String orgReqSeqId) {
+    public V2TradeHostingPaymentQueryorderinfoRequest(String reqDate, String reqSeqId, String huifuId, String orgReqDate, String orgReqSeqId, String partyOrderId) {
         this.reqDate = reqDate;
         this.reqSeqId = reqSeqId;
         this.huifuId = huifuId;
         this.orgReqDate = orgReqDate;
         this.orgReqSeqId = orgReqSeqId;
+        this.partyOrderId = partyOrderId;
     }
 
     public String getReqDate() {
@@ -91,6 +97,14 @@ public class V2TradeHostingPaymentQueryorderinfoRequest extends BaseRequest {
 
     public void setOrgReqSeqId(String orgReqSeqId) {
         this.orgReqSeqId = orgReqSeqId;
+    }
+
+    public String getPartyOrderId() {
+        return partyOrderId;
+    }
+
+    public void setPartyOrderId(String partyOrderId) {
+        this.partyOrderId = partyOrderId;
     }
 
 }

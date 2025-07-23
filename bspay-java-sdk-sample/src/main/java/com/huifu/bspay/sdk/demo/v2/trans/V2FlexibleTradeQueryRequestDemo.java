@@ -8,16 +8,16 @@ import com.huifu.bspay.sdk.demo.init.OppsMerchantConfigDemo;
 import com.huifu.bspay.sdk.opps.core.utils.DateTools;
 import com.huifu.bspay.sdk.opps.core.utils.SequenceTools;
 import com.huifu.bspay.sdk.demo.core.Identify;
-import com.huifu.bspay.sdk.opps.core.request.V2TradeHostingPaymentQueryorderinfoRequest;
+import com.huifu.bspay.sdk.opps.core.request.V2FlexibleTradeQueryRequest;
 
 /**
- * 托管交易查询 - 示例
+ * 灵工支付查询 - 示例
  *
  * @author sdk-generator
  * @Description
  */
-@Identify(requestClass = V2TradeHostingPaymentQueryorderinfoRequest.class)
-public class V2TradeHostingPaymentQueryorderinfoRequestDemo extends BaseCommonDemo {
+@Identify(requestClass = V2FlexibleTradeQueryRequest.class)
+public class V2FlexibleTradeQueryRequestDemo extends BaseCommonDemo {
 
     public static void main(String[] args) throws Exception {
 
@@ -25,19 +25,19 @@ public class V2TradeHostingPaymentQueryorderinfoRequestDemo extends BaseCommonDe
         doInit(OppsMerchantConfigDemo.getMerchantConfig());
 
         // 2.组装请求参数
-        V2TradeHostingPaymentQueryorderinfoRequest request = new V2TradeHostingPaymentQueryorderinfoRequest();
-        // 请求日期
-        request.setReqDate(DateTools.getCurrentDateYYYYMMDD());
+        V2FlexibleTradeQueryRequest request = new V2FlexibleTradeQueryRequest();
         // 请求流水号
         request.setReqSeqId(SequenceTools.getReqSeqId32());
-        // 商户号
-        request.setHuifuId("6666000109133323");
-        // 原交易请求日期
-        request.setOrgReqDate("20231020");
-        // 原交易请求流水号与**party_order_id**二选一，必填；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：rQ2021121311173944&lt;/font&gt;
-        request.setOrgReqSeqId("202310201652361987182512");
-        // 用户账单上的商户订单号与**org_req_seq_id**二选一，必填；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：03232109190255105603561&lt;/font&gt;
-        // request.setPartyOrderId("test");
+        // 请求日期
+        request.setReqDate(DateTools.getCurrentDateYYYYMMDD());
+        // 原请求流水号原请求流水号与原请求全局流水号二选一必填，示例值：2021091708126665001
+        request.setOrgReqSeqId("2025060916130548005test001");
+        // 原请求日期原请求流水号必填则原请求日期必填，格式：yyyyMMdd；示例值：20210917
+        request.setOrgReqDate("20250609");
+        // 汇付商户号
+        request.setHuifuId("6666000107740841");
+        // 原交易全局流水号原请求流水号与原请求全局流水号二选一必填，  &lt;br/&gt;&lt;font color&#x3D;&quot;green&quot;&gt;示例值： 003100TOP1A230816150903P990ac139c0600000&lt;/font&gt;
+        request.setOrgHfSeqId("2025060900000000000078864005");
 
         // 设置非必填字段
         Map<String, Object> extendInfoMap = getExtendInfos();

@@ -22,7 +22,7 @@ public class V2TradePaymentGetelectronicreceiptRequest extends BaseRequest {
     @JSONField(name = "show_feemat")
     private String showFeemat;
     /**
-     * 交易返回的全局流水号1、交易类返回的全局流水号。org_hf_seq_id与（org_req_seq_id、org_req_date、pay_type） 不能同时为空；&lt;br/&gt;2、结算（SETTLE）返回的结算流水编号&lt;br/&gt;&lt;font color&#x3D;&quot;green&quot;&gt;示例值：003500TOP2B211021163242P447ac132fd200000&lt;/font&gt;
+     * 交易返回的全局流水号1、交易类返回的全局流水号。org_hf_seq_id与（org_req_seq_id、org_req_date、pay_type） 不能同时为空；&lt;br/&gt;2、结算（SETTLE）返回的结算流水编号&lt;br/&gt;3、灵工支付返回的电子回单流水号&lt;/br&gt;&lt;font color&#x3D;&quot;green&quot;&gt;示例值：003500TOP2B211021163242P447ac132fd200000&lt;/font&gt;
      */
     @JSONField(name = "org_hf_seq_id")
     private String orgHfSeqId;

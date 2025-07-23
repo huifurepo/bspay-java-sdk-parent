@@ -26,12 +26,14 @@ public class V2TradeCloudmisDeviceInformationMisRequestDemo extends BaseCommonDe
 
         // 2.组装请求参数
         V2TradeCloudmisDeviceInformationMisRequest request = new V2TradeCloudmisDeviceInformationMisRequest();
+        // 请求流水号
+        request.setReqId("20240313115926539uf7cqcmwxl30");
         // 终端设备号
         request.setDeviceId("310000011015000063677");
         // 商户号
         request.setHuifuId("6666000141203565");
         // 交易信息
-        request.setJsonData("{\"transAmount\":\"11\",\"interfaceType\":\"SALE\",\"bgRetUrl\":\"virgo://https://shop.91lpp.com/api/common/huifu/posCallback\",\"thirdOrderId\":\"20240313115926539uf7cqcmwxl30\" }");
+        request.setJsonData("{\"transAmount\":\"11\",\"interfaceType\":\"SALE\",\"thirdOrderId\":\"20240313115926539uf7cqcmwxl30\" }");
 
         // 设置非必填字段
         Map<String, Object> extendInfoMap = getExtendInfos();

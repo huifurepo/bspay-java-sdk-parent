@@ -6,6 +6,46 @@ package com.huifu.bspay.sdk.opps.core.enums;
  */
 public enum FunctionCodeEnum {
     /**
+     * 灵工支付退款查询
+     */
+    V2_FLEXIBLE_REFUND_QUERY("v2.flexible.refund.query", "灵工支付退款查询"),
+    /**
+     * 灵工支付退款
+     */
+    V2_FLEXIBLE_REFUND("v2.flexible.refund", "灵工支付退款"),
+    /**
+     * 灵工支付查询
+     */
+    V2_FLEXIBLE_TRADE_QUERY("v2.flexible.trade.query", "灵工支付查询"),
+    /**
+     * 灵工支付
+     */
+    V2_FLEXIBLE_TRADE("v2.flexible.trade", "灵工支付"),
+    /**
+     * 灵工企业商户业务修改
+     */
+    V2_FLEXIBLE_ENT_MODIFY("v2.flexible.ent.modify", "灵工企业商户业务修改"),
+    /**
+     * 灵工企业商户进件接口
+     */
+    V2_FLEXIBLE_ENT("v2.flexible.ent", "灵工企业商户进件接口"),
+    /**
+     * 灵工企业商户信息查询
+     */
+    V2_FLEXIBLE_ENT_QUERY("v2.flexible.ent.query", "灵工企业商户信息查询"),
+    /**
+     * 灵工个人用户修改
+     */
+    V2_FLEXIBLE_INDV_MODIFY("v2.flexible.indv.modify", "灵工个人用户修改"),
+    /**
+     * 灵工个人用户进件
+     */
+    V2_FLEXIBLE_INDV("v2.flexible.indv", "灵工个人用户进件"),
+    /**
+     * 灵工用户信息查询
+     */
+    V2_FLEXIBLE_INDV_QUERY("v2.flexible.indv.query", "灵工用户信息查询"),
+    /**
      * 电子账户资金清分
      */
     V2_TRADE_SETTLEMENT_CLEARING_ADD("v2.trade.settlement.clearing.add", "电子账户资金清分"),
