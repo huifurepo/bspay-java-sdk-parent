@@ -33,9 +33,9 @@ public class V2FlexibleIndvRequestDemo extends BaseCommonDemo {
         // 渠道商/商户汇付Id
         request.setUpperHuifuId("6666000108900391");
         // 基本信息
-        request.setBasicInfo(getCb18718f36334ed4859eC242d6402fc6());
+        request.setBasicInfo(getC5d70ad2Dabc4349A0cd524ed438f1df());
         // 卡信息
-        request.setCardInfo(get422a0b4910214f9f9356940fca9e771c());
+        request.setCardInfo(get71e41c34D4d04865Bc9eEd4922337ec7());
 
         // 设置非必填字段
         Map<String, Object> extendInfoMap = getExtendInfos();
@@ -54,11 +54,11 @@ public class V2FlexibleIndvRequestDemo extends BaseCommonDemo {
         // 设置非必填字段
         Map<String, Object> extendInfoMap = new HashMap<>();
         // 取现配置列表
-        extendInfoMap.put("cash_config", get905315064b9044d3A4b8D77675b4815b());
+        extendInfoMap.put("cash_config", get7a944d27D6f84205B5e52b5fd821eb88());
         return extendInfoMap;
     }
 
-    private static String getCb18718f36334ed4859eC242d6402fc6() {
+    private static String getC5d70ad2Dabc4349A0cd524ed438f1df() {
         JSONObject dto = new JSONObject();
         // 个人姓名
         dto.put("name", "张三");
@@ -84,7 +84,7 @@ public class V2FlexibleIndvRequestDemo extends BaseCommonDemo {
         return dto.toJSONString();
     }
 
-    private static JSON get905315064b9044d3A4b8D77675b4815b() {
+    private static String get7a944d27D6f84205B5e52b5fd821eb88() {
         JSONObject dto = new JSONObject();
         // 提现手续费（固定/元）fix_amt与fee_rate至少填写一项， 需保留小数点后两位，不收费请填写0.00；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：1.00&lt;/font&gt;注：当cash_type&#x3D;D1时为节假日取现手续费
         dto.put("fix_amt", "");
@@ -107,10 +107,10 @@ public class V2FlexibleIndvRequestDemo extends BaseCommonDemo {
 
         JSONArray dtoList = new JSONArray();
         dtoList.add(dto);
-        return dtoList;
+        return dtoList.toJSONString();
     }
 
-    private static String get422a0b4910214f9f9356940fca9e771c() {
+    private static String get71e41c34D4d04865Bc9eEd4922337ec7() {
         JSONObject dto = new JSONObject();
         // 卡号
         dto.put("card_no", "6217001210064762890");

@@ -32,6 +32,8 @@ public class V2FlexibleIndvModifyRequestDemo extends BaseCommonDemo {
         request.setReqDate(DateTools.getCurrentDateYYYYMMDD());
         // 渠道商/商户汇付Id
         request.setUpperHuifuId("6666000108329682");
+        // 汇付ID
+        request.setHuifuId("6666000108894951");
 
         // 设置非必填字段
         Map<String, Object> extendInfoMap = getExtendInfos();
@@ -50,15 +52,15 @@ public class V2FlexibleIndvModifyRequestDemo extends BaseCommonDemo {
         // 设置非必填字段
         Map<String, Object> extendInfoMap = new HashMap<>();
         // 基本信息
-        // extendInfoMap.put("basic_info", get34a3e4b95be148d7B2547819e1b99346());
+        // extendInfoMap.put("basic_info", get85557b1d7f4945348f719444c35fef3e());
         // 取现配置列表
-        extendInfoMap.put("cash_config", getFe3a0d1d38ec4885B59603888696de3f());
+        extendInfoMap.put("cash_config", getFab986af2f5a46c293be27111b433af5());
         // 卡信息
-        extendInfoMap.put("card_info", getE8224b0485914e82A6f679fce70d1655());
+        extendInfoMap.put("card_info", get7e4fcf80B2eb4346Ae2709b1139d8a3f());
         return extendInfoMap;
     }
 
-    private static String get34a3e4b95be148d7B2547819e1b99346() {
+    private static String get85557b1d7f4945348f719444c35fef3e() {
         JSONObject dto = new JSONObject();
         // 个人证件有效期类型
         // dto.put("cert_validity_type", "");
@@ -72,7 +74,7 @@ public class V2FlexibleIndvModifyRequestDemo extends BaseCommonDemo {
         return dto.toJSONString();
     }
 
-    private static String getFe3a0d1d38ec4885B59603888696de3f() {
+    private static String getFab986af2f5a46c293be27111b433af5() {
         JSONObject dto = new JSONObject();
         // 提现手续费（固定/元）fix_amt与fee_rate至少填写一项， 需保留小数点后两位，不收费请填写0.00；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：1.00&lt;/font&gt;注：当cash_type&#x3D;D1时为节假日取现手续费
         dto.put("fix_amt", "");
@@ -82,6 +84,8 @@ public class V2FlexibleIndvModifyRequestDemo extends BaseCommonDemo {
         dto.put("weekday_fix_amt", "");
         // D1工作日取现手续费率单位%，需保留小数点后两位。取值范围[0.00，100.00]，不收费请填写0.00；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：0.05&lt;/font&gt;D1取现配置时选填，其他取现配置无效；cash_type取现类型为D1时，遇工作日按此费率结算 ，若未配置则默认按照节假日手续费计算
         dto.put("weekday_fee_rate", "");
+        // 开通状态
+        dto.put("switch_state", "1");
         // 业务类型
         dto.put("cash_type", "D0");
         // 是否交易手续费外扣
@@ -92,15 +96,13 @@ public class V2FlexibleIndvModifyRequestDemo extends BaseCommonDemo {
         dto.put("out_fee_acct_type", "");
         // 是否优先到账
         dto.put("is_priority_receipt", "");
-        // 开通状态
-        dto.put("switch_state", "1");
 
         JSONArray dtoList = new JSONArray();
         dtoList.add(dto);
         return dtoList.toJSONString();
     }
 
-    private static String getE8224b0485914e82A6f679fce70d1655() {
+    private static String get7e4fcf80B2eb4346Ae2709b1139d8a3f() {
         JSONObject dto = new JSONObject();
         // 卡号
         dto.put("card_no", "6228481269040908115");

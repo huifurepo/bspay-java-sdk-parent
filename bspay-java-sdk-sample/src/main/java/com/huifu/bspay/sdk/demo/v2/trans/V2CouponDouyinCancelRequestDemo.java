@@ -34,7 +34,7 @@ public class V2CouponDouyinCancelRequestDemo extends BaseCommonDemo {
         request.setHuifuId("6666000107767088");
         // 门店绑定流水号
         request.setBindId("88fd7c9b63e84a259dfe3eecb811fce8");
-        // 加密抖音券码
+        // 抖音券码
         request.setEncryptedCode("5584192259");
         // 核销标识
         request.setVerifyId("3435");

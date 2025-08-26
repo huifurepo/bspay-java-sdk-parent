@@ -27,11 +27,6 @@ public class V2FlexibleTradeRequest extends BaseRequest {
     @JSONField(name = "out_huifu_id")
     private String outHuifuId;
     /**
-     * 出款方账户号
-     */
-    @JSONField(name = "out_acct_id")
-    private String outAcctId;
-    /**
      * 交易阶段操作类型
      */
     @JSONField(name = "stage_operation_type")
@@ -46,6 +41,11 @@ public class V2FlexibleTradeRequest extends BaseRequest {
      */
     @JSONField(name = "ord_amt")
     private String ordAmt;
+    /**
+     * 分账对象
+     */
+    @JSONField(name = "acct_split_bunch")
+    private String acctSplitBunch;
 
     @Override
     public FunctionCodeEnum getFunctionCode() {
@@ -55,14 +55,14 @@ public class V2FlexibleTradeRequest extends BaseRequest {
     public V2FlexibleTradeRequest() {
     }
 
-    public V2FlexibleTradeRequest(String reqSeqId, String reqDate, String outHuifuId, String outAcctId, String stageOperationType, String phaseHfSeqId, String ordAmt) {
+    public V2FlexibleTradeRequest(String reqSeqId, String reqDate, String outHuifuId, String stageOperationType, String phaseHfSeqId, String ordAmt, String acctSplitBunch) {
         this.reqSeqId = reqSeqId;
         this.reqDate = reqDate;
         this.outHuifuId = outHuifuId;
-        this.outAcctId = outAcctId;
         this.stageOperationType = stageOperationType;
         this.phaseHfSeqId = phaseHfSeqId;
         this.ordAmt = ordAmt;
+        this.acctSplitBunch = acctSplitBunch;
     }
 
     public String getReqSeqId() {
@@ -89,14 +89,6 @@ public class V2FlexibleTradeRequest extends BaseRequest {
         this.outHuifuId = outHuifuId;
     }
 
-    public String getOutAcctId() {
-        return outAcctId;
-    }
-
-    public void setOutAcctId(String outAcctId) {
-        this.outAcctId = outAcctId;
-    }
-
     public String getStageOperationType() {
         return stageOperationType;
     }
@@ -119,6 +111,14 @@ public class V2FlexibleTradeRequest extends BaseRequest {
 
     public void setOrdAmt(String ordAmt) {
         this.ordAmt = ordAmt;
+    }
+
+    public String getAcctSplitBunch() {
+        return acctSplitBunch;
+    }
+
+    public void setAcctSplitBunch(String acctSplitBunch) {
+        this.acctSplitBunch = acctSplitBunch;
     }
 
 }

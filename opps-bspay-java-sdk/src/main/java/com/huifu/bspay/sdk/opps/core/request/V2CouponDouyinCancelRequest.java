@@ -32,7 +32,7 @@ public class V2CouponDouyinCancelRequest extends BaseRequest {
     @JSONField(name = "bind_id")
     private String bindId;
     /**
-     * 加密抖音券码
+     * 抖音券码
      */
     @JSONField(name = "encrypted_code")
     private String encryptedCode;

@@ -27,11 +27,6 @@ public class V2MerchantDirectZftRegRequest extends BaseRequest {
     @JSONField(name = "huifu_id")
     private String huifuId;
     /**
-     * 开发者的应用ID
-     */
-    @JSONField(name = "app_id")
-    private String appId;
-    /**
      * 进件的二级商户名称
      */
     @JSONField(name = "name")
@@ -165,11 +160,10 @@ public class V2MerchantDirectZftRegRequest extends BaseRequest {
     public V2MerchantDirectZftRegRequest() {
     }
 
-    public V2MerchantDirectZftRegRequest(String reqSeqId, String reqDate, String huifuId, String appId, String name, String merchantType, String mcc, String certType, String certNo, String certName, String legalName, String legalCertNo, String servicePhone, String provId, String areaId, String districtId, String detailAddr, String contactName, String contactTag, String contactType, String contactMobileNo, String zftCardInfoList, String alipayLogonId, String industryQualificationType, String service, String signTimeWithIsv, String bindingAlipayLogonId, String defaultSettleType, String fileList) {
+    public V2MerchantDirectZftRegRequest(String reqSeqId, String reqDate, String huifuId, String name, String merchantType, String mcc, String certType, String certNo, String certName, String legalName, String legalCertNo, String servicePhone, String provId, String areaId, String districtId, String detailAddr, String contactName, String contactTag, String contactType, String contactMobileNo, String zftCardInfoList, String alipayLogonId, String industryQualificationType, String service, String signTimeWithIsv, String bindingAlipayLogonId, String defaultSettleType, String fileList) {
         this.reqSeqId = reqSeqId;
         this.reqDate = reqDate;
         this.huifuId = huifuId;
-        this.appId = appId;
         this.name = name;
         this.merchantType = merchantType;
         this.mcc = mcc;
@@ -219,14 +213,6 @@ public class V2MerchantDirectZftRegRequest extends BaseRequest {
 
     public void setHuifuId(String huifuId) {
         this.huifuId = huifuId;
-    }
-
-    public String getAppId() {
-        return appId;
-    }
-
-    public void setAppId(String appId) {
-        this.appId = appId;
     }
 
     public String getName() {

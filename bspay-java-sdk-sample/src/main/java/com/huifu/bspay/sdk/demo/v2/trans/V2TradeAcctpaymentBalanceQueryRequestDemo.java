@@ -49,6 +49,8 @@ public class V2TradeAcctpaymentBalanceQueryRequestDemo extends BaseCommonDemo {
         Map<String, Object> extendInfoMap = new HashMap<>();
         // 请求流水号
         extendInfoMap.put("req_seq_id", SequenceTools.getReqSeqId32());
+        // 账务日期
+        // extendInfoMap.put("acct_date", "");
         return extendInfoMap;
     }
 

@@ -75,6 +75,8 @@ public class V2TradeSettlementSurrogateRequestDemo extends BaseCommonDemo {
     private static Map<String, Object> getExtendInfos() {
         // 设置非必填字段
         Map<String, Object> extendInfoMap = new HashMap<>();
+        // 账户号
+        // extendInfoMap.put("acct_id", "");
         // 支行名
         extendInfoMap.put("subbranch_bank_name", "subbranchBankName");
         // 收款方三证合一码

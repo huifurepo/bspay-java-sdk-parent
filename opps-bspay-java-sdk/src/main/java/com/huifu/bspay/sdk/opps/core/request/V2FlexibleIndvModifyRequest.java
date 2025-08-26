@@ -26,6 +26,11 @@ public class V2FlexibleIndvModifyRequest extends BaseRequest {
      */
     @JSONField(name = "upper_huifu_id")
     private String upperHuifuId;
+    /**
+     * 汇付ID
+     */
+    @JSONField(name = "huifu_id")
+    private String huifuId;
 
     @Override
     public FunctionCodeEnum getFunctionCode() {
@@ -35,10 +40,11 @@ public class V2FlexibleIndvModifyRequest extends BaseRequest {
     public V2FlexibleIndvModifyRequest() {
     }
 
-    public V2FlexibleIndvModifyRequest(String reqSeqId, String reqDate, String upperHuifuId) {
+    public V2FlexibleIndvModifyRequest(String reqSeqId, String reqDate, String upperHuifuId, String huifuId) {
         this.reqSeqId = reqSeqId;
         this.reqDate = reqDate;
         this.upperHuifuId = upperHuifuId;
+        this.huifuId = huifuId;
     }
 
     public String getReqSeqId() {
@@ -63,6 +69,14 @@ public class V2FlexibleIndvModifyRequest extends BaseRequest {
 
     public void setUpperHuifuId(String upperHuifuId) {
         this.upperHuifuId = upperHuifuId;
+    }
+
+    public String getHuifuId() {
+        return huifuId;
+    }
+
+    public void setHuifuId(String huifuId) {
+        this.huifuId = huifuId;
     }
 
 }

@@ -22,22 +22,22 @@ public class V2TradeHostingPaymentQueryorderinfoRequest extends BaseRequest {
     @JSONField(name = "req_seq_id")
     private String reqSeqId;
     /**
-     * 商户号
+     * 商户号开户自动生成；商户号不填时必填party_order_id；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：6666000123123123&lt;/font&gt;
      */
     @JSONField(name = "huifu_id")
     private String huifuId;
     /**
-     * 原交易请求日期
+     * 原交易请求日期请求格式：yyyyMMdd；该字段不填时必填party_order_id；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：20221023&lt;/font&gt;
      */
     @JSONField(name = "org_req_date")
     private String orgReqDate;
     /**
-     * 原交易请求流水号与**party_order_id**二选一，必填；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：rQ2021121311173944&lt;/font&gt;
+     * 原交易请求流水号该字段不填时必填party_order_id；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：rQ2021121311173944&lt;/font&gt;
      */
     @JSONField(name = "org_req_seq_id")
     private String orgReqSeqId;
     /**
-     * 用户账单上的商户订单号与**org_req_seq_id**二选一，必填；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：03232109190255105603561&lt;/font&gt;
+     * 用户账单上的商户订单号该字段不填时，商户号、原交易请求日期、原交易请求流水号必填；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：03232109190255105603561&lt;/font&gt;
      */
     @JSONField(name = "party_order_id")
     private String partyOrderId;
