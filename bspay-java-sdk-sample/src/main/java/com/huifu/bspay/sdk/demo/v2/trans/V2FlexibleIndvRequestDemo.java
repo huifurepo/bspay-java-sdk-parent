@@ -33,9 +33,9 @@ public class V2FlexibleIndvRequestDemo extends BaseCommonDemo {
         // 渠道商/商户汇付Id
         request.setUpperHuifuId("6666000108900391");
         // 基本信息
-        request.setBasicInfo(getC5d70ad2Dabc4349A0cd524ed438f1df());
+        request.setBasicInfo(get629fab27E82346a2860242a3c0b0d61a());
         // 卡信息
-        request.setCardInfo(get71e41c34D4d04865Bc9eEd4922337ec7());
+        request.setCardInfo(get30ec05a8D26c45c39e9aA02b3b1711b6());
 
         // 设置非必填字段
         Map<String, Object> extendInfoMap = getExtendInfos();
@@ -54,11 +54,11 @@ public class V2FlexibleIndvRequestDemo extends BaseCommonDemo {
         // 设置非必填字段
         Map<String, Object> extendInfoMap = new HashMap<>();
         // 取现配置列表
-        extendInfoMap.put("cash_config", get7a944d27D6f84205B5e52b5fd821eb88());
+        extendInfoMap.put("cash_config", get2367ebbb376546c292f24ed51433e1fe());
         return extendInfoMap;
     }
 
-    private static String getC5d70ad2Dabc4349A0cd524ed438f1df() {
+    private static String get629fab27E82346a2860242a3c0b0d61a() {
         JSONObject dto = new JSONObject();
         // 个人姓名
         dto.put("name", "张三");
@@ -84,7 +84,7 @@ public class V2FlexibleIndvRequestDemo extends BaseCommonDemo {
         return dto.toJSONString();
     }
 
-    private static String get7a944d27D6f84205B5e52b5fd821eb88() {
+    private static String get2367ebbb376546c292f24ed51433e1fe() {
         JSONObject dto = new JSONObject();
         // 提现手续费（固定/元）fix_amt与fee_rate至少填写一项， 需保留小数点后两位，不收费请填写0.00；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：1.00&lt;/font&gt;注：当cash_type&#x3D;D1时为节假日取现手续费
         dto.put("fix_amt", "");
@@ -110,7 +110,7 @@ public class V2FlexibleIndvRequestDemo extends BaseCommonDemo {
         return dtoList.toJSONString();
     }
 
-    private static String get71e41c34D4d04865Bc9eEd4922337ec7() {
+    private static String get30ec05a8D26c45c39e9aA02b3b1711b6() {
         JSONObject dto = new JSONObject();
         // 卡号
         dto.put("card_no", "6217001210064762890");

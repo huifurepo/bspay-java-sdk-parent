@@ -35,9 +35,9 @@ public class V2TradeOnlinepaymentRefundRequestDemo extends BaseCommonDemo {
         // 退款金额
         request.setOrdAmt("0.01");
         // 设备信息条件必填，当为银行大额支付时可不填，jsonObject格式
-        request.setTerminalDeviceData(get0cb9901c063146159d7a806331eb313d());
+        request.setTerminalDeviceData(get35d4a53eD6c1411a9ced250654fb32bc());
         // 安全信息条件必填，当为银行大额支付时可不填，jsonObject格式
-        request.setRiskCheckData(getC912c5b3F45e4eb5A7cf3acae7215dc3());
+        request.setRiskCheckData(getF25a2614657744d4Bc59741b0034991d());
 
         // 设置非必填字段
         Map<String, Object> extendInfoMap = getExtendInfos();
@@ -62,19 +62,19 @@ public class V2TradeOnlinepaymentRefundRequestDemo extends BaseCommonDemo {
         // 原交易请求流水号
         extendInfoMap.put("org_req_seq_id", "295700155481522176");
         // 分账对象
-        // extendInfoMap.put("acct_split_bunch", get18a433263b5a4564Bb6b0413c84ff21d());
+        // extendInfoMap.put("acct_split_bunch", getB2063bd6B0444da8A946Df04df4862fd());
         // 备注
         // extendInfoMap.put("remark", "");
         // 异步通知地址
         extendInfoMap.put("notify_url", "http://www.baidu.com");
         // 补贴支付信息
-        // extendInfoMap.put("combinedpay_data", getB433aee155d6443eAe81F124df5ee516());
+        // extendInfoMap.put("combinedpay_data", getF6ac280047d84b54Af3cFc21f6942cf0());
         // 大额转账支付账户信息数据
-        // extendInfoMap.put("bank_info_data", getB3bf7acb5626425aB0bf32bd5fb389a7());
+        // extendInfoMap.put("bank_info_data", get289bf626B24d46cdA273Fdaa77310b55());
         return extendInfoMap;
     }
 
-    private static JSON get6973815f508e4f2392720a95415fbd76() {
+    private static JSON get1e71bbb43d3d4de7A4a590b7e2ca4d2c() {
         JSONObject dto = new JSONObject();
         // 商户号
         // dto.put("huifu_id", "test");
@@ -88,15 +88,15 @@ public class V2TradeOnlinepaymentRefundRequestDemo extends BaseCommonDemo {
         return dtoList;
     }
 
-    private static String get18a433263b5a4564Bb6b0413c84ff21d() {
+    private static String getB2063bd6B0444da8A946Df04df4862fd() {
         JSONObject dto = new JSONObject();
         // 分账信息列表
-        // dto.put("acct_infos", get6973815f508e4f2392720a95415fbd76());
+        // dto.put("acct_infos", get1e71bbb43d3d4de7A4a590b7e2ca4d2c());
 
         return dto.toJSONString();
     }
 
-    private static String get0cb9901c063146159d7a806331eb313d() {
+    private static String get35d4a53eD6c1411a9ced250654fb32bc() {
         JSONObject dto = new JSONObject();
         // 交易设备ip
         dto.put("device_ip", "172.31.31.145");
@@ -114,11 +114,13 @@ public class V2TradeOnlinepaymentRefundRequestDemo extends BaseCommonDemo {
         dto.put("device_mac", "01");
         // 交易设备wifimac
         dto.put("device_wifi_mac", "06");
+        // 终端设备号
+        // dto.put("device_id", "");
 
         return dto.toJSONString();
     }
 
-    private static String getC912c5b3F45e4eb5A7cf3acae7215dc3() {
+    private static String getF25a2614657744d4Bc59741b0034991d() {
         JSONObject dto = new JSONObject();
         // 经度
         // dto.put("longitude", "test");
@@ -132,7 +134,7 @@ public class V2TradeOnlinepaymentRefundRequestDemo extends BaseCommonDemo {
         return dto.toJSONString();
     }
 
-    private static String getB433aee155d6443eAe81F124df5ee516() {
+    private static String getF6ac280047d84b54Af3cFc21f6942cf0() {
         JSONObject dto = new JSONObject();
         // 补贴方汇付编号
         // dto.put("huifu_id", "test");
@@ -148,7 +150,7 @@ public class V2TradeOnlinepaymentRefundRequestDemo extends BaseCommonDemo {
         return dtoList.toJSONString();
     }
 
-    private static String getB3bf7acb5626425aB0bf32bd5fb389a7() {
+    private static String get289bf626B24d46cdA273Fdaa77310b55() {
         JSONObject dto = new JSONObject();
         // 银行编号
         // dto.put("bank_code", "");

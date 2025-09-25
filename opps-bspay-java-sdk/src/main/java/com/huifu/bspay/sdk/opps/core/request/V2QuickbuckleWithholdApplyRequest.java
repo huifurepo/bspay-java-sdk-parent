@@ -52,12 +52,12 @@ public class V2QuickbuckleWithholdApplyRequest extends BaseRequest {
     @JSONField(name = "card_id")
     private String cardId;
     /**
-     * 银行卡开户姓名 
+     * 银行卡开户姓名
      */
     @JSONField(name = "card_name")
     private String cardName;
     /**
-     * 银行卡绑定证件类型 
+     * 银行卡绑定证件类型
      */
     @JSONField(name = "cert_type")
     private String certType;
@@ -67,20 +67,10 @@ public class V2QuickbuckleWithholdApplyRequest extends BaseRequest {
     @JSONField(name = "cert_id")
     private String certId;
     /**
-     * 银行卡绑定手机号 
+     * 银行卡绑定手机号
      */
     @JSONField(name = "card_mp")
     private String cardMp;
-    /**
-     * CVV2信用卡代扣专用 需要密文传输，需要密文传输，使用汇付RSA公钥加密(加密前64位，加密后最长2048位），参见[参考文档](https://paas.huifu.com/open/doc/guide/#/api_jiami_jiemi)；
-     */
-    @JSONField(name = "vip_code")
-    private String vipCode;
-    /**
-     * 卡有效期 信用卡代扣专用，格式：MMYY 需要密文传输，使用汇付RSA公钥加密(加密前64位，加密后最长2048位），参见[参考文档](https://paas.huifu.com/open/doc/guide/#/api_jiami_jiemi)；
-     */
-    @JSONField(name = "expiration")
-    private String expiration;
     /**
      * 个人证件有效期类型
      */
@@ -91,11 +81,6 @@ public class V2QuickbuckleWithholdApplyRequest extends BaseRequest {
      */
     @JSONField(name = "cert_begin_date")
     private String certBeginDate;
-    /**
-     * 个人证件有效期到期日长期有效不填.格式：YYYYMMDD；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：20450112&lt;/font&gt;
-     */
-    @JSONField(name = "cert_end_date")
-    private String certEndDate;
     /**
      * 卡的借贷类型
      */
@@ -110,7 +95,7 @@ public class V2QuickbuckleWithholdApplyRequest extends BaseRequest {
     public V2QuickbuckleWithholdApplyRequest() {
     }
 
-    public V2QuickbuckleWithholdApplyRequest(String reqSeqId, String reqDate, String huifuId, String returnUrl, String outCustId, String orderId, String orderDate, String cardId, String cardName, String certType, String certId, String cardMp, String vipCode, String expiration, String certValidityType, String certBeginDate, String certEndDate, String dcType) {
+    public V2QuickbuckleWithholdApplyRequest(String reqSeqId, String reqDate, String huifuId, String returnUrl, String outCustId, String orderId, String orderDate, String cardId, String cardName, String certType, String certId, String cardMp, String certValidityType, String certBeginDate, String dcType) {
         this.reqSeqId = reqSeqId;
         this.reqDate = reqDate;
         this.huifuId = huifuId;
@@ -123,11 +108,8 @@ public class V2QuickbuckleWithholdApplyRequest extends BaseRequest {
         this.certType = certType;
         this.certId = certId;
         this.cardMp = cardMp;
-        this.vipCode = vipCode;
-        this.expiration = expiration;
         this.certValidityType = certValidityType;
         this.certBeginDate = certBeginDate;
-        this.certEndDate = certEndDate;
         this.dcType = dcType;
     }
 
@@ -227,22 +209,6 @@ public class V2QuickbuckleWithholdApplyRequest extends BaseRequest {
         this.cardMp = cardMp;
     }
 
-    public String getVipCode() {
-        return vipCode;
-    }
-
-    public void setVipCode(String vipCode) {
-        this.vipCode = vipCode;
-    }
-
-    public String getExpiration() {
-        return expiration;
-    }
-
-    public void setExpiration(String expiration) {
-        this.expiration = expiration;
-    }
-
     public String getCertValidityType() {
         return certValidityType;
     }
@@ -257,14 +223,6 @@ public class V2QuickbuckleWithholdApplyRequest extends BaseRequest {
 
     public void setCertBeginDate(String certBeginDate) {
         this.certBeginDate = certBeginDate;
-    }
-
-    public String getCertEndDate() {
-        return certEndDate;
-    }
-
-    public void setCertEndDate(String certEndDate) {
-        this.certEndDate = certEndDate;
     }
 
     public String getDcType() {

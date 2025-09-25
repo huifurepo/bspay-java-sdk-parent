@@ -97,7 +97,7 @@ public class V2MerchantBasicdataEntRequestDemo extends BaseCommonDemo {
         // 基本存款账户编号或核准号条件选填；当use_head_info_flag&#x3D;Y时不填 ；&lt;br/&gt;基本存款账户信息请填写基本存款账户编号；开户许可证请填写核准号。&lt;br/&gt;当注册地址或经营地址为如下地区时必填：江苏省、浙江省、湖南省、湖北省、云南省、贵州省、陕西省、河南省、吉林省、黑龙江省、福建省、海南省、重庆市、青海省、宁夏回族自治区；&lt;br/&gt;&lt;font color&#x3D;&quot;green&quot;&gt;示例值：J2900123456789&lt;/font&gt;
         request.setOpenLicenceNo("");
         // 银行卡信息配置
-        request.setCardInfo(getB2327a4a46a74af1B6da314607ca4387());
+        request.setCardInfo(get3c953820559e400183a4Ceb9a4332599());
         // 卡正面**对私必填**。通过[图片上传接口](https://paas.huifu.com/open/doc/api/#/shgl/shjj/api_shjj_shtpsc)上传材料；文件类型：F13；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：57cc7f00-600a-33ab-b614-6221bbf2e530&lt;/font&gt;
         // request.setSettleCardFrontPic("test");
         // 持卡人身份证国徽面**对私必填**。通过[图片上传接口](https://paas.huifu.com/open/doc/api/#/shgl/shjj/api_shjj_shtpsc)上传材料；文件类型：F56；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：57cc7f00-600a-33ab-b614-6221bbf2e530&lt;/font&gt;
@@ -105,7 +105,7 @@ public class V2MerchantBasicdataEntRequestDemo extends BaseCommonDemo {
         // 持卡人身份证人像面**对私必填**。通过[图片上传接口](https://paas.huifu.com/open/doc/api/#/shgl/shjj/api_shjj_shtpsc)上传材料；文件类型：F55；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：57cc7f00-600a-33ab-b614-6221bbf2e530&lt;/font&gt;
         // request.setSettleCertFrontPic("test");
         // 授权委托书**对私非法人、对公非同名结算必填**；通过[图片上传接口](https://paas.huifu.com/open/doc/api/#/shgl/shjj/api_shjj_shtpsc)上传材料；文件类型：F15；开通银行电子账户（中信E管家）需提供F520；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：57cc7f00-600a-33ab-b614-6221bbf2e530&lt;/font&gt;
-        // request.setAuthEnturstPic("test");
+        // request.setAuthEntrustPic("test");
         // 上级汇付Id如果head_office_flag&#x3D;0，则字段必填，如果head_office_flag&#x3D;1，上级汇付Id不可传&lt;br/&gt;如果headOfficeFlag&#x3D;0，useHeadInfoFlag&#x3D;Y,且head_huifu_id不为空则基本信息部分复用上级的基本信息。&lt;br/&gt;&lt;font color&#x3D;&quot;green&quot;&gt;示例值：6666000123123123&lt;/font&gt;
         // request.setHeadHuifuId("test");
         // 商户ICP备案编号商户ICP备案编号或网站许可证号；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：沪ICP备06046402号-28 &lt;/font&gt;&lt;br/&gt;类型为PC网站时，且为企业商户，且开通快捷或网银，或大额转账，或余额支付或分账业务（20%（不含）-100%），或为个人商户开通分账业务（10%（不含）-100%），必填
@@ -150,7 +150,7 @@ public class V2MerchantBasicdataEntRequestDemo extends BaseCommonDemo {
         // 法人手机号
         // extendInfoMap.put("legal_mobile_no", "");
         // 受益人列表
-        // extendInfoMap.put("beneficiary_info", getF13a0b43F23d4aab91a0E326ec89a351());
+        // extendInfoMap.put("beneficiary_info", get685bb3e09f6d41358fff789b2321b8f5());
         // 联系人姓名
         extendInfoMap.put("contact_name", "联系人");
         // 商户通知标识
@@ -158,9 +158,9 @@ public class V2MerchantBasicdataEntRequestDemo extends BaseCommonDemo {
         // 客服电话
         extendInfoMap.put("service_phone", "021-121111221");
         // 结算业务配置
-        extendInfoMap.put("settle_config", getA908da42065845b8852550b11a12c8c0());
+        extendInfoMap.put("settle_config", get1f232226942747548f04836b59894c4f());
         // 取现业务配置
-        extendInfoMap.put("cash_config", get33768d6aA9394ce5A369A88b918d2ea8());
+        extendInfoMap.put("cash_config", getF82b8d02D66149df96e6A8982e03b200());
         // 商户身份
         // extendInfoMap.put("head_office_flag", "");
         // 使用上级资料信息
@@ -174,15 +174,15 @@ public class V2MerchantBasicdataEntRequestDemo extends BaseCommonDemo {
         // 异步请求地址
         extendInfoMap.put("async_return_url", "virgo://http://192.168.85.157:30031/sspm/testVirgo");
         // 斗拱e账户功能配置
-        // extendInfoMap.put("elec_acct_config", get0882475c315d4249A27dFd4dc2d278a6());
+        // extendInfoMap.put("elec_acct_config", get36f9286b687f4deb8237521f1b1691e2());
         // 股东信息
-        // extendInfoMap.put("share_holder_info_list", getC12a6d98Fae14c13B3b1Eb20462fa0af());
+        // extendInfoMap.put("share_holder_info_list", get76c642a762224b489959Cf5921d41a22());
         // 扩展资料包
-        // extendInfoMap.put("extended_material_list", get008cc24b42ff4cd88c31663c087a4836());
+        // extendInfoMap.put("extended_material_list", get3457f985E17b41caBfd4Bb22603e2193());
         return extendInfoMap;
     }
 
-    private static String getF13a0b43F23d4aab91a0E326ec89a351() {
+    private static String get685bb3e09f6d41358fff789b2321b8f5() {
         JSONObject dto = new JSONObject();
         // 受益人名称
         // dto.put("bo_name", "test");
@@ -206,7 +206,7 @@ public class V2MerchantBasicdataEntRequestDemo extends BaseCommonDemo {
         return dtoList.toJSONString();
     }
 
-    private static String getB2327a4a46a74af1B6da314607ca4387() {
+    private static String get3c953820559e400183a4Ceb9a4332599() {
         JSONObject dto = new JSONObject();
         // 银行账户类型
         dto.put("card_type", "0");
@@ -216,8 +216,6 @@ public class V2MerchantBasicdataEntRequestDemo extends BaseCommonDemo {
         dto.put("card_no", "698043508");
         // 银行所在市
         // dto.put("area_id", "test");
-        // 银行编码当card_type&#x3D;0时必填；参考： [银行编码](https://paas.huifu.com/open/doc/api/#/csfl/api_csfl_yhbm)；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：01020000&lt;/font&gt;；
-        // dto.put("bank_code", "test");
         // 联行号当card_type&#x3D;0时必填，参考：[银行支行编码](https://paas.huifu.com/open/doc/api/#/csfl/api_csfl_yhzhbm) 当card_type&#x3D;0时必填， 当card_type&#x3D;1或2时非必填 &lt;br/&gt;&lt;font color&#x3D;&quot;green&quot;&gt;示例值：102290026507&lt;/font&gt;
         dto.put("branch_code", "305290002096");
         // 持卡人证件类型持卡人证件类型，参见《[自然人证件类型](https://paas.huifu.com/open/doc/api/#/api_ggcsbm?id&#x3D;%e8%87%aa%e7%84%b6%e4%ba%ba%e8%af%81%e4%bb%b6%e7%b1%bb%e5%9e%8b)》。&lt;br/&gt; 当card_type&#x3D;0时为空， 当card_type&#x3D;1或2时必填； &lt;font color&#x3D;&quot;green&quot;&gt;示例值：00&lt;/font&gt;&lt;br/&gt;持卡人证件类型04、11需要补充 F101【结算人】港澳台居民来往内地通行证&lt;br/&gt;持卡人证件类型13需要补充 F513【结算人】外国人居留证&lt;br/&gt;持卡人证件类型14、15需要补充 F514【结算人】港澳台居住证&lt;br/&gt;其它持卡人证件类型补充F102【结算人】其它证件材料&lt;br/&gt;补充材料填写在extended_material_list 扩展资料包中
@@ -240,7 +238,7 @@ public class V2MerchantBasicdataEntRequestDemo extends BaseCommonDemo {
         return dto.toJSONString();
     }
 
-    private static String getA908da42065845b8852550b11a12c8c0() {
+    private static String get1f232226942747548f04836b59894c4f() {
         JSONObject dto = new JSONObject();
         // 结算周期
         dto.put("settle_cycle", "D1");
@@ -276,7 +274,7 @@ public class V2MerchantBasicdataEntRequestDemo extends BaseCommonDemo {
         return dto.toJSONString();
     }
 
-    private static String get33768d6aA9394ce5A369A88b918d2ea8() {
+    private static String getF82b8d02D66149df96e6A8982e03b200() {
         JSONObject dto = new JSONObject();
         // 取现手续费（固定/元）fix_amt与fee_rate至少填写一项， 需保留小数点后两位，不收费请填写0.00；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：1.00&lt;/font&gt;注：当cash_type&#x3D;D1时为节假日取现手续费；当cash_type&#x3D;T1时为工作日取现手续费
         dto.put("fix_amt", "1.00");
@@ -302,7 +300,7 @@ public class V2MerchantBasicdataEntRequestDemo extends BaseCommonDemo {
         return dtoList.toJSONString();
     }
 
-    private static JSON get622ded0e267647a8Ba6b9a7009c3ef51() {
+    private static JSON get7f3fd5ddC7fe4d95B85e1e3dcad5215a() {
         JSONObject dto = new JSONObject();
         // 银行编码
         // dto.put("bank_code", "test");
@@ -328,7 +326,7 @@ public class V2MerchantBasicdataEntRequestDemo extends BaseCommonDemo {
         return dtoList;
     }
 
-    private static String get0882475c315d4249A27dFd4dc2d278a6() {
+    private static String get36f9286b687f4deb8237521f1b1691e2() {
         JSONObject dto = new JSONObject();
         // 电子账户开关
         // dto.put("switch_state", "test");
@@ -343,14 +341,14 @@ public class V2MerchantBasicdataEntRequestDemo extends BaseCommonDemo {
         // 签约成功标志
         // dto.put("sign_success_flag", "test");
         // 银行卡信息
-        // dto.put("elec_card_list", get622ded0e267647a8Ba6b9a7009c3ef51());
+        // dto.put("elec_card_list", get7f3fd5ddC7fe4d95B85e1e3dcad5215a());
         // 中信签约短信流水号
         // dto.put("elec_acct_sign_seq_id", "");
 
         return dto.toJSONString();
     }
 
-    private static String getC12a6d98Fae14c13B3b1Eb20462fa0af() {
+    private static String get76c642a762224b489959Cf5921d41a22() {
         JSONObject dto = new JSONObject();
         // 股东姓名
         // dto.put("name", "test");
@@ -370,7 +368,7 @@ public class V2MerchantBasicdataEntRequestDemo extends BaseCommonDemo {
         return dtoList.toJSONString();
     }
 
-    private static String get008cc24b42ff4cd88c31663c087a4836() {
+    private static String get3457f985E17b41caBfd4Bb22603e2193() {
         JSONObject dto = new JSONObject();
         // 文件id
         // dto.put("file_id", "test");

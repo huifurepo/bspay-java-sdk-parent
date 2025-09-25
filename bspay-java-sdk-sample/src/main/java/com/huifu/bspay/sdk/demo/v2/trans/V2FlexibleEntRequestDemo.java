@@ -83,9 +83,9 @@ public class V2FlexibleEntRequestDemo extends BaseCommonDemo {
         // 管理员账号
         request.setLoginName("req2025061853130071");
         // 银行卡信息配置
-        request.setCardInfo(getC80bb3ef55d54757Ad3d546e50bb7cf3());
+        request.setCardInfo(get3697120d1e554ea2Be3395ed8f990ac4());
         // 签约人
-        // request.setSignUserInfo(get3172aeae40e74d48Beb7A232c056b847());
+        // request.setSignUserInfo(get663e295dDc7c49438b356085f56c8509());
 
         // 设置非必填字段
         Map<String, Object> extendInfoMap = getExtendInfos();
@@ -116,17 +116,17 @@ public class V2FlexibleEntRequestDemo extends BaseCommonDemo {
         // 联系人姓名
         extendInfoMap.put("contact_name", "文超");
         // 取现业务配置
-        // extendInfoMap.put("cash_config", getA130ab3d8bd144b8B20cDc541e85864f());
+        // extendInfoMap.put("cash_config", get70d1d1112bbc40089cc8E3f49bc36295());
         // 大额支付配置
-        // extendInfoMap.put("large_amt_pay_config", getEea21dadC2424ffe87a9A958963e6856());
+        // extendInfoMap.put("large_amt_pay_config", get29ce26f2Dda04a83B3911ba8bbe8d795());
         // 是否开通网银充值
         // extendInfoMap.put("online_recharge_flag", "");
         // 线上费率配置
-        // extendInfoMap.put("online_fee_conf_list", getCbe4254a1593462aA141Ce7cc10aa7dd());
+        // extendInfoMap.put("online_fee_conf_list", getDc42e7ecF460429dBa10Ebd7d5258ae0());
         // 线上手续费承担方配置
-        // extendInfoMap.put("online_pay_fee_conf_list", get62a49dfc13fc45ddA8901c26ec48ee52());
+        // extendInfoMap.put("online_pay_fee_conf_list", get614a968f63974184A7df2023b122bdc1());
         // 灵工支付配置
-        // extendInfoMap.put("flexible_pay_config", get0e66ea5fB6ea4760869a44965f3c65d3());
+        // extendInfoMap.put("flexible_pay_config", getFb3b5d4eB9f3497994f87bce5b3a39e8());
         // 电子协议异步通知地址
         // extendInfoMap.put("agreement_async_return_url", "");
         // 异步请求地址
@@ -134,11 +134,11 @@ public class V2FlexibleEntRequestDemo extends BaseCommonDemo {
         // 业务开通结果异步消息接收地址
         // extendInfoMap.put("busi_async_return_url", "");
         // 扩展资料包
-        // extendInfoMap.put("extended_material_list", get212757bcB8744adeA1601c1e54c03820());
+        // extendInfoMap.put("extended_material_list", get1708b87357ec4d5cBc8dC984055d93de());
         return extendInfoMap;
     }
 
-    private static String getC80bb3ef55d54757Ad3d546e50bb7cf3() {
+    private static String get3697120d1e554ea2Be3395ed8f990ac4() {
         JSONObject dto = new JSONObject();
         // 银行账户名
         dto.put("card_name", "圆务铁白事");
@@ -156,7 +156,7 @@ public class V2FlexibleEntRequestDemo extends BaseCommonDemo {
         return dto.toJSONString();
     }
 
-    private static String getA130ab3d8bd144b8B20cDc541e85864f() {
+    private static String get70d1d1112bbc40089cc8E3f49bc36295() {
         JSONObject dto = new JSONObject();
         // 取现手续费（固定/元）fix_amt与fee_rate至少填写一项， 需保留小数点后两位，不收费请填写0.00；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：1.00&lt;/font&gt;注：当cash_type&#x3D;D1时为节假日取现手续费；当cash_type&#x3D;T1时为工作日取现手续费
         // dto.put("fix_amt", "test");
@@ -182,7 +182,7 @@ public class V2FlexibleEntRequestDemo extends BaseCommonDemo {
         return dtoList.toJSONString();
     }
 
-    private static JSON getCadefb13F15d4ae89bd608510de15f87() {
+    private static JSON get978a648b0f0a46b7A333B1f494fc8065() {
         JSONObject dto = new JSONObject();
         // 费率（%）开通大额业务时必须填写一种收费方式；大于0,保留2位小数；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：1.00&lt;/font&gt;
         // dto.put("fee_rate", "test");
@@ -204,10 +204,10 @@ public class V2FlexibleEntRequestDemo extends BaseCommonDemo {
         return dtoList;
     }
 
-    private static String getEea21dadC2424ffe87a9A958963e6856() {
+    private static String get29ce26f2Dda04a83B3911ba8bbe8d795() {
         JSONObject dto = new JSONObject();
         // 大额支付配置列表
-        // dto.put("large_amt_pay_config_info_list", getCadefb13F15d4ae89bd608510de15f87());
+        // dto.put("large_amt_pay_config_info_list", get978a648b0f0a46b7A333B1f494fc8065());
         // 交易手续费外扣huifuId交易手续费外扣时必填；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：6666000108854952&lt;/font&gt;
         // dto.put("out_fee_huifu_id", "test");
         // 交易手续费外扣账户号交易手续费外扣时必填；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：F00598602&lt;/font&gt;
@@ -218,7 +218,7 @@ public class V2FlexibleEntRequestDemo extends BaseCommonDemo {
         return dto.toJSONString();
     }
 
-    private static String getCbe4254a1593462aA141Ce7cc10aa7dd() {
+    private static String getDc42e7ecF460429dBa10Ebd7d5258ae0() {
         JSONObject dto = new JSONObject();
         // 银行编码
         // dto.put("bank_id", "test");
@@ -240,7 +240,7 @@ public class V2FlexibleEntRequestDemo extends BaseCommonDemo {
         return dtoList.toJSONString();
     }
 
-    private static String get62a49dfc13fc45ddA8901c26ec48ee52() {
+    private static String get614a968f63974184A7df2023b122bdc1() {
         JSONObject dto = new JSONObject();
         // 业务类型
         // dto.put("pay_type", "");
@@ -256,7 +256,7 @@ public class V2FlexibleEntRequestDemo extends BaseCommonDemo {
         return dtoList.toJSONString();
     }
 
-    private static String get0e66ea5fB6ea4760869a44965f3c65d3() {
+    private static String getFb3b5d4eB9f3497994f87bce5b3a39e8() {
         JSONObject dto = new JSONObject();
         // 是否交易手续费外扣
         // dto.put("out_fee_flag", "test");
@@ -274,7 +274,7 @@ public class V2FlexibleEntRequestDemo extends BaseCommonDemo {
         return dto.toJSONString();
     }
 
-    private static String get3172aeae40e74d48Beb7A232c056b847() {
+    private static String get663e295dDc7c49438b356085f56c8509() {
         JSONObject dto = new JSONObject();
         // 签约人类型
         // dto.put("type", "test");
@@ -288,7 +288,7 @@ public class V2FlexibleEntRequestDemo extends BaseCommonDemo {
         return dto.toJSONString();
     }
 
-    private static String get212757bcB8744adeA1601c1e54c03820() {
+    private static String get1708b87357ec4d5cBc8dC984055d93de() {
         JSONObject dto = new JSONObject();
         // 文件id
         // dto.put("file_id", "test");

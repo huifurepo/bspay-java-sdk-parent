@@ -5,7 +5,7 @@
 
     <groupId>com.huifu.bspay.sdk</groupId>
     <artifactId>dg-java-sdk</artifactId>
-    <version>3.0.29</version>
+    <version>3.0.30</version>
     <packaging>jar</packaging>
     <name>${project.artifactId} - ${project.version}</name>
     <inceptionYear>2021</inceptionYear>
@@ -70,7 +70,7 @@
                     <encoding>UTF-8</encoding>
                 </configuration>
             </plugin>
-      <!--      <plugin>
+           <!-- <plugin>
                 <groupId>org.sonatype.central</groupId>
                 <artifactId>central-publishing-maven-plugin</artifactId>
                 <version>0.8.0</version>
@@ -110,7 +110,7 @@
                     </execution>
                 </executions>
             </plugin>
-      <!--      <plugin>
+         <!--   <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-gpg-plugin</artifactId>
                 <version>1.5</version>

@@ -35,9 +35,9 @@ public class V2FlexibleEntModifyRequestDemo extends BaseCommonDemo {
         // 渠道商汇付ID
         request.setUpperHuifuId("6666000108329682");
         // 商户基本信息jsonObject格式；其中的contact_info和legal_info联系人和法人信息可能在卡信息修改时需要
-        request.setBasicInfo(get6ce48b5fC0f14f3d84e6F662c7ff0b8e());
+        request.setBasicInfo(getD6a2e6a308d543de84cd9614328bee0d());
         // 签约人
-        request.setSignUserInfo(get9678a202C9be473c870629dd14f73f21());
+        request.setSignUserInfo(getB3d7fb951b7245fbBe967bcfcda2850a());
 
         // 设置非必填字段
         Map<String, Object> extendInfoMap = getExtendInfos();
@@ -56,21 +56,21 @@ public class V2FlexibleEntModifyRequestDemo extends BaseCommonDemo {
         // 设置非必填字段
         Map<String, Object> extendInfoMap = new HashMap<>();
         // 卡信息配置实体
-        // extendInfoMap.put("card_info", getAa8c749575d04f52B0ea01400ea6743d());
+        // extendInfoMap.put("card_info", get08325bfc1aa842b89d71D5e2df6fb678());
         // 取现配置列表
-        extendInfoMap.put("cash_config", getB973ff1c30324923A9a65993d4505b31());
+        extendInfoMap.put("cash_config", getAcbe03fc88834bcf8d6264003808287e());
         // 大额支付配置
-        extendInfoMap.put("large_amt_pay_config", getC7e743627463476b8f86148c1b513b4e());
+        extendInfoMap.put("large_amt_pay_config", getDad807b26ad1464b84b6F739d7ca4291());
         // 是否开通网银充值
         extendInfoMap.put("online_recharge_flag", "Y");
         // 线上费率配置
-        extendInfoMap.put("online_fee_conf_list", getBf6d173e610c4bfc905cB5eabb8b2016());
+        extendInfoMap.put("online_fee_conf_list", getE3c3227e2d95422bA0bd5ffef5c0390a());
         // 线上手续费承担方配置
-        extendInfoMap.put("online_pay_fee_conf_list", get5785d731B3fa4510Ba4137162faa8df7());
+        extendInfoMap.put("online_pay_fee_conf_list", get27e7bed4Be804ba291c24b3ce029aa83());
         // 灵工支付配置
-        // extendInfoMap.put("flexible_pay_config", get661e5b11069a40dd92dd9a7868b22555());
+        // extendInfoMap.put("flexible_pay_config", getC9eaf0d5379d46c0805d960b43fe8ee9());
         // 扩展资料包
-        // extendInfoMap.put("extended_material_list", getD13b7ec9Aafb4fcc8d50E33ef2b628ab());
+        // extendInfoMap.put("extended_material_list", get752de832Bb5e4ca28fdaF322171a5754());
         // 电子协议异步通知地址
         extendInfoMap.put("agreement_async_return_url", "");
         // 异步请求地址
@@ -80,7 +80,7 @@ public class V2FlexibleEntModifyRequestDemo extends BaseCommonDemo {
         return extendInfoMap;
     }
 
-    private static JSON get771213a50a9f4905A71e9a729b282705() {
+    private static JSON getE0ac8dc401114ec8B12bA1266dad1a6a() {
         JSONObject dto = new JSONObject();
         // 营业执照类型
         dto.put("license_type", "CERTIFICATE_TYPE_0001");
@@ -106,7 +106,7 @@ public class V2FlexibleEntModifyRequestDemo extends BaseCommonDemo {
         return dto;
     }
 
-    private static JSON get5c94b48bD32b4609Bf277415b7db2419() {
+    private static JSON getA937b115Cca443eaB3d26c68c22fa0c3() {
         JSONObject dto = new JSONObject();
         // 店铺门头照
         dto.put("store_header_pic", "ececec87-e772-331a-b4fc-fae92732d992");
@@ -116,7 +116,7 @@ public class V2FlexibleEntModifyRequestDemo extends BaseCommonDemo {
         return dto;
     }
 
-    private static JSON getD0ff59d37e2a4277Ba186bf06e0ea178() {
+    private static JSON getD3d0bc019cf847b8B74f586bac709461() {
         JSONObject dto = new JSONObject();
         // 法人姓名
         dto.put("legal_name", "岑晓");
@@ -142,7 +142,7 @@ public class V2FlexibleEntModifyRequestDemo extends BaseCommonDemo {
         return dto;
     }
 
-    private static JSON getEfabf6355f714fb98d4201acd119a60c() {
+    private static JSON get3e5210c844e349b0Ab343ff1675fda52() {
         JSONObject dto = new JSONObject();
         // 联系人姓名
         dto.put("contact_name", "岑晓");
@@ -154,21 +154,21 @@ public class V2FlexibleEntModifyRequestDemo extends BaseCommonDemo {
         return dto;
     }
 
-    private static String get6ce48b5fC0f14f3d84e6F662c7ff0b8e() {
+    private static String getD6a2e6a308d543de84cd9614328bee0d() {
         JSONObject dto = new JSONObject();
         // 营业执照信息
-        dto.put("license_info", get771213a50a9f4905A71e9a729b282705());
+        dto.put("license_info", getE0ac8dc401114ec8B12bA1266dad1a6a());
         // 经营信息
-        dto.put("company_info", get5c94b48bD32b4609Bf277415b7db2419());
+        dto.put("company_info", getA937b115Cca443eaB3d26c68c22fa0c3());
         // 法人信息
-        dto.put("legal_info", getD0ff59d37e2a4277Ba186bf06e0ea178());
+        dto.put("legal_info", getD3d0bc019cf847b8B74f586bac709461());
         // 联系人信息
-        dto.put("contact_info", getEfabf6355f714fb98d4201acd119a60c());
+        dto.put("contact_info", get3e5210c844e349b0Ab343ff1675fda52());
 
         return dto.toJSONString();
     }
 
-    private static String get9678a202C9be473c870629dd14f73f21() {
+    private static String getB3d7fb951b7245fbBe967bcfcda2850a() {
         JSONObject dto = new JSONObject();
         // 签约人类型
         dto.put("type", "CONTACT");
@@ -182,7 +182,7 @@ public class V2FlexibleEntModifyRequestDemo extends BaseCommonDemo {
         return dto.toJSONString();
     }
 
-    private static String getAa8c749575d04f52B0ea01400ea6743d() {
+    private static String get08325bfc1aa842b89d71D5e2df6fb678() {
         JSONObject dto = new JSONObject();
         // 银行账户名
         // dto.put("card_name", "test");
@@ -200,7 +200,7 @@ public class V2FlexibleEntModifyRequestDemo extends BaseCommonDemo {
         return dto.toJSONString();
     }
 
-    private static String getB973ff1c30324923A9a65993d4505b31() {
+    private static String getAcbe03fc88834bcf8d6264003808287e() {
         JSONObject dto = new JSONObject();
         // 是否开通取现
         dto.put("switch_state", "");
@@ -228,7 +228,7 @@ public class V2FlexibleEntModifyRequestDemo extends BaseCommonDemo {
         return dtoList.toJSONString();
     }
 
-    private static JSON get353012125b304419A83304c9fd133f7a() {
+    private static JSON getCf5bb66eCcc24a9e9fdc6e78c43b3325() {
         JSONObject dto = new JSONObject();
         // 费率（%）开通大额业务时必须填写一种收费方式；大于0,保留2位小数；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：1.00&lt;/font&gt;
         dto.put("fee_rate", "4");
@@ -250,10 +250,10 @@ public class V2FlexibleEntModifyRequestDemo extends BaseCommonDemo {
         return dtoList;
     }
 
-    private static String getC7e743627463476b8f86148c1b513b4e() {
+    private static String getDad807b26ad1464b84b6F739d7ca4291() {
         JSONObject dto = new JSONObject();
         // 大额支付配置列表
-        dto.put("large_amt_pay_config_info_list", get353012125b304419A83304c9fd133f7a());
+        dto.put("large_amt_pay_config_info_list", getCf5bb66eCcc24a9e9fdc6e78c43b3325());
         // 交易手续费外扣huifuId交易手续费外扣时必填；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：6666000108854952&lt;/font&gt;
         dto.put("out_fee_huifu_id", "6666000108329682");
         // 交易手续费外扣账户号交易手续费外扣时必填；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：F00598602&lt;/font&gt;
@@ -264,7 +264,7 @@ public class V2FlexibleEntModifyRequestDemo extends BaseCommonDemo {
         return dto.toJSONString();
     }
 
-    private static String getBf6d173e610c4bfc905cB5eabb8b2016() {
+    private static String getE3c3227e2d95422bA0bd5ffef5c0390a() {
         JSONObject dto = new JSONObject();
         // 银行编码
         dto.put("bank_id", "01050000");
@@ -286,7 +286,7 @@ public class V2FlexibleEntModifyRequestDemo extends BaseCommonDemo {
         return dtoList.toJSONString();
     }
 
-    private static String get5785d731B3fa4510Ba4137162faa8df7() {
+    private static String get27e7bed4Be804ba291c24b3ce029aa83() {
         JSONObject dto = new JSONObject();
         // 业务类型
         dto.put("pay_type", "ONLINE_ENT_TOP_UP");
@@ -302,7 +302,7 @@ public class V2FlexibleEntModifyRequestDemo extends BaseCommonDemo {
         return dtoList.toJSONString();
     }
 
-    private static String get661e5b11069a40dd92dd9a7868b22555() {
+    private static String getC9eaf0d5379d46c0805d960b43fe8ee9() {
         JSONObject dto = new JSONObject();
         // 是否交易手续费外扣
         // dto.put("out_fee_flag", "test");
@@ -322,7 +322,7 @@ public class V2FlexibleEntModifyRequestDemo extends BaseCommonDemo {
         return dto.toJSONString();
     }
 
-    private static String getD13b7ec9Aafb4fcc8d50E33ef2b628ab() {
+    private static String get752de832Bb5e4ca28fdaF322171a5754() {
         JSONObject dto = new JSONObject();
         // 文件id
         // dto.put("file_id", "test");

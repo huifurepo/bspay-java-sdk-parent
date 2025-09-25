@@ -32,10 +32,6 @@ public class V2TradeOnlinepaymentTransferBankblotterQueryRequestDemo extends Bas
         request.setReqDate(DateTools.getCurrentDateYYYYMMDD());
         // 商户号
         request.setHuifuId("6666000003100615");
-        // 原请求流水号
-        request.setOrgReqSeqId("2021091708126665001");
-        // 原请求日期
-        request.setOrgReqDate("20231215");
 
         // 设置非必填字段
         Map<String, Object> extendInfoMap = getExtendInfos();
@@ -53,6 +49,10 @@ public class V2TradeOnlinepaymentTransferBankblotterQueryRequestDemo extends Bas
     private static Map<String, Object> getExtendInfos() {
         // 设置非必填字段
         Map<String, Object> extendInfoMap = new HashMap<>();
+        // 原请求流水号
+        extendInfoMap.put("org_req_seq_id", "2021091708126665001");
+        // 原请求日期
+        extendInfoMap.put("org_req_date", "20231215");
         // 实际付款方银行卡号
         // extendInfoMap.put("bank_card_no", "");
         // 实际付款方姓名
@@ -61,8 +61,8 @@ public class V2TradeOnlinepaymentTransferBankblotterQueryRequestDemo extends Bas
         // extendInfoMap.put("trans_date", "");
         // 交易金额
         // extendInfoMap.put("trans_amt", "");
-        // 收款账号/打款备注
-        // extendInfoMap.put("bank_remark", "");
+        // 收款方账号
+        // extendInfoMap.put("payee_acct_no", "");
         return extendInfoMap;
     }
 

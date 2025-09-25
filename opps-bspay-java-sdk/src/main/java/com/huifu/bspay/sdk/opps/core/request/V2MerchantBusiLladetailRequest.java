@@ -4,12 +4,12 @@ import com.alibaba.fastjson.annotation.JSONField;
 import com.huifu.bspay.sdk.opps.core.enums.FunctionCodeEnum;
 
 /**
- * 灵工支付查询
+ * 代运营代扣业务配置查询
  *
  * @author sdk-generator
  * @Description
  */
-public class V2FlexibleTradeQueryRequest extends BaseRequest {
+public class V2MerchantBusiLladetailRequest extends BaseRequest {
 
     /**
      * 请求流水号
@@ -22,34 +22,22 @@ public class V2FlexibleTradeQueryRequest extends BaseRequest {
     @JSONField(name = "req_date")
     private String reqDate;
     /**
-     * 原请求流水号
-     */
-    @JSONField(name = "org_req_seq_id")
-    private String orgReqSeqId;
-    /**
-     * 原请求日期
-     */
-    @JSONField(name = "org_req_date")
-    private String orgReqDate;
-    /**
-     * 汇付商户号
+     * 商户汇付id
      */
     @JSONField(name = "huifu_id")
     private String huifuId;
 
     @Override
     public FunctionCodeEnum getFunctionCode() {
-        return FunctionCodeEnum.V2_FLEXIBLE_TRADE_QUERY;
+        return FunctionCodeEnum.V2_MERCHANT_BUSI_LLADETAIL;
     }
 
-    public V2FlexibleTradeQueryRequest() {
+    public V2MerchantBusiLladetailRequest() {
     }
 
-    public V2FlexibleTradeQueryRequest(String reqSeqId, String reqDate, String orgReqSeqId, String orgReqDate, String huifuId) {
+    public V2MerchantBusiLladetailRequest(String reqSeqId, String reqDate, String huifuId) {
         this.reqSeqId = reqSeqId;
         this.reqDate = reqDate;
-        this.orgReqSeqId = orgReqSeqId;
-        this.orgReqDate = orgReqDate;
         this.huifuId = huifuId;
     }
 
@@ -67,22 +55,6 @@ public class V2FlexibleTradeQueryRequest extends BaseRequest {
 
     public void setReqDate(String reqDate) {
         this.reqDate = reqDate;
-    }
-
-    public String getOrgReqSeqId() {
-        return orgReqSeqId;
-    }
-
-    public void setOrgReqSeqId(String orgReqSeqId) {
-        this.orgReqSeqId = orgReqSeqId;
-    }
-
-    public String getOrgReqDate() {
-        return orgReqDate;
-    }
-
-    public void setOrgReqDate(String orgReqDate) {
-        this.orgReqDate = orgReqDate;
     }
 
     public String getHuifuId() {

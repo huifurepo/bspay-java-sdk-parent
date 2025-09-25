@@ -37,9 +37,9 @@ public class V2TradeOnlinepaymentUnionpayRequestDemo extends BaseCommonDemo {
         // 商品描述
         request.setOrderDesc("通用性商品1");
         // 安全信息
-        request.setRiskCheckData(get78a697deDaac42289ed46a8efebf4302());
+        request.setRiskCheckData(get4f0e0a54526d4f8fAa1c47b75e6f20f1());
         // 三方支付数据jsonObject；pay_scene为云闪付公众号与云闪付小程序时必填
-        // request.setThirdPayData(getFd56600b1aae4377A6464cbb9d5c443a());
+        // request.setThirdPayData(get1f6db52aF76b4284Bbe9Cf520498a4be());
 
         // 设置非必填字段
         Map<String, Object> extendInfoMap = getExtendInfos();
@@ -67,8 +67,6 @@ public class V2TradeOnlinepaymentUnionpayRequestDemo extends BaseCommonDemo {
         // extendInfoMap.put("pay_card_type", "");
         // 订单失效时间
         extendInfoMap.put("time_expire", "");
-        // 分账对象
-        // extendInfoMap.put("acct_split_bunch", get5744b670118e4ce1B173928f87a25f67());
         // 前端跳转地址
         extendInfoMap.put("front_url", "https://www.service.com/getresp");
         // 异步通知地址
@@ -83,10 +81,14 @@ public class V2TradeOnlinepaymentUnionpayRequestDemo extends BaseCommonDemo {
         extendInfoMap.put("delay_acct_flag", "Y");
         // 手续费扣款标志
         // extendInfoMap.put("fee_flag", "");
+        // 分账对象
+        // extendInfoMap.put("acct_split_bunch", getFad2159860044e5f89776fbabd8695a5());
+        // 设备信息数据
+        // extendInfoMap.put("terminal_device_data", get205d7b8fCaae49baAb2a4e66c4603bda());
         return extendInfoMap;
     }
 
-    private static JSON get08fb8ed1C11a40d1B38468f1226832df() {
+    private static JSON get5869f1882aba4cf2A939673ad5d94bca() {
         JSONObject dto = new JSONObject();
         // 分账金额
         // dto.put("div_amt", "");
@@ -102,10 +104,10 @@ public class V2TradeOnlinepaymentUnionpayRequestDemo extends BaseCommonDemo {
         return dtoList;
     }
 
-    private static String get5744b670118e4ce1B173928f87a25f67() {
+    private static String getFad2159860044e5f89776fbabd8695a5() {
         JSONObject dto = new JSONObject();
         // 分账明细
-        // dto.put("acct_infos", get08fb8ed1C11a40d1B38468f1226832df());
+        // dto.put("acct_infos", get5869f1882aba4cf2A939673ad5d94bca());
         // 百分比分账标志
         // dto.put("percentage_flag", "");
         // 是否净值分账
@@ -114,7 +116,7 @@ public class V2TradeOnlinepaymentUnionpayRequestDemo extends BaseCommonDemo {
         return dto.toJSONString();
     }
 
-    private static String get78a697deDaac42289ed46a8efebf4302() {
+    private static String get4f0e0a54526d4f8fAa1c47b75e6f20f1() {
         JSONObject dto = new JSONObject();
         // 基站地址
         dto.put("base_station", "7");
@@ -128,10 +130,18 @@ public class V2TradeOnlinepaymentUnionpayRequestDemo extends BaseCommonDemo {
         return dto.toJSONString();
     }
 
-    private static String getFd56600b1aae4377A6464cbb9d5c443a() {
+    private static String get1f6db52aF76b4284Bbe9Cf520498a4be() {
         JSONObject dto = new JSONObject();
         // 小程序id
         // dto.put("app_id", "");
+
+        return dto.toJSONString();
+    }
+
+    private static String get205d7b8fCaae49baAb2a4e66c4603bda() {
+        JSONObject dto = new JSONObject();
+        // 终端设备号
+        // dto.put("device_id", "test");
 
         return dto.toJSONString();
     }

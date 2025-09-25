@@ -64,13 +64,15 @@ public class V2QuickbuckleWithholdPageGetRequestDemo extends BaseCommonDemo {
         // 异步通知地址
         extendInfoMap.put("notify_url", "https://api.huifu.com");
         // 设备信息域
-        extendInfoMap.put("trx_device_info", getTrxDeviceInfo());
+        extendInfoMap.put("trx_device_info", get3cdad4d518854dd2Bf7f01c72ccc95e0());
         // 风控信息
-        extendInfoMap.put("risk_info", getRiskInfo());
+        extendInfoMap.put("risk_info", getB0c9212aAf3346629c9aB1f11b8075e2());
+        // 代扣绑卡类型
+        // extendInfoMap.put("binding_card_type", "");
         return extendInfoMap;
     }
 
-    private static String getTrxDeviceInfo() {
+    private static JSON get3cdad4d518854dd2Bf7f01c72ccc95e0() {
         JSONObject dto = new JSONObject();
         // 银行预留手机号
         dto.put("trx_mobile_num", "13428722321");
@@ -91,10 +93,10 @@ public class V2QuickbuckleWithholdPageGetRequestDemo extends BaseCommonDemo {
         // 交易设备GPS
         dto.put("trx_device_gps", "gps");
 
-        return dto.toJSONString();
+        return dto;
     }
 
-    private static String getRiskInfo() {
+    private static JSON getB0c9212aAf3346629c9aB1f11b8075e2() {
         JSONObject dto = new JSONObject();
         // IP类型
         dto.put("ip_type", "04");
@@ -106,8 +108,12 @@ public class V2QuickbuckleWithholdPageGetRequestDemo extends BaseCommonDemo {
         dto.put("device_type", "");
         // 银行预留手机号
         dto.put("mobile", "");
+        // 协议编号
+        // dto.put("agreement_no", "");
+        // 协议地址
+        // dto.put("agreement_url", "");
 
-        return dto.toJSONString();
+        return dto;
     }
 
 }

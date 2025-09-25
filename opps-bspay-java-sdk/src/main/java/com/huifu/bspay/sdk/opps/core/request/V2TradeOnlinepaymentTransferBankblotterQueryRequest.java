@@ -26,16 +26,6 @@ public class V2TradeOnlinepaymentTransferBankblotterQueryRequest extends BaseReq
      */
     @JSONField(name = "huifu_id")
     private String huifuId;
-    /**
-     * 原请求流水号
-     */
-    @JSONField(name = "org_req_seq_id")
-    private String orgReqSeqId;
-    /**
-     * 原请求日期
-     */
-    @JSONField(name = "org_req_date")
-    private String orgReqDate;
 
     @Override
     public FunctionCodeEnum getFunctionCode() {
@@ -45,12 +35,10 @@ public class V2TradeOnlinepaymentTransferBankblotterQueryRequest extends BaseReq
     public V2TradeOnlinepaymentTransferBankblotterQueryRequest() {
     }
 
-    public V2TradeOnlinepaymentTransferBankblotterQueryRequest(String reqSeqId, String reqDate, String huifuId, String orgReqSeqId, String orgReqDate) {
+    public V2TradeOnlinepaymentTransferBankblotterQueryRequest(String reqSeqId, String reqDate, String huifuId) {
         this.reqSeqId = reqSeqId;
         this.reqDate = reqDate;
         this.huifuId = huifuId;
-        this.orgReqSeqId = orgReqSeqId;
-        this.orgReqDate = orgReqDate;
     }
 
     public String getReqSeqId() {
@@ -75,22 +63,6 @@ public class V2TradeOnlinepaymentTransferBankblotterQueryRequest extends BaseReq
 
     public void setHuifuId(String huifuId) {
         this.huifuId = huifuId;
-    }
-
-    public String getOrgReqSeqId() {
-        return orgReqSeqId;
-    }
-
-    public void setOrgReqSeqId(String orgReqSeqId) {
-        this.orgReqSeqId = orgReqSeqId;
-    }
-
-    public String getOrgReqDate() {
-        return orgReqDate;
-    }
-
-    public void setOrgReqDate(String orgReqDate) {
-        this.orgReqDate = orgReqDate;
     }
 
 }

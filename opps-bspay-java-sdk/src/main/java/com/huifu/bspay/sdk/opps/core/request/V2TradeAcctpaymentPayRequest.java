@@ -51,6 +51,11 @@ public class V2TradeAcctpaymentPayRequest extends BaseRequest {
      */
     @JSONField(name = "trans_fee_take_flag")
     private String transFeeTakeFlag;
+    /**
+     * 核验值verify_type不为空时必填。当verify_type&#x3D;SMS时，填写用户收到的短信验证码
+     */
+    @JSONField(name = "verify_value")
+    private String verifyValue;
 
     @Override
     public FunctionCodeEnum getFunctionCode() {
@@ -60,7 +65,7 @@ public class V2TradeAcctpaymentPayRequest extends BaseRequest {
     public V2TradeAcctpaymentPayRequest() {
     }
 
-    public V2TradeAcctpaymentPayRequest(String reqSeqId, String reqDate, String outHuifuId, String ordAmt, String acctSplitBunch, String riskCheckData, String fundType, String transFeeTakeFlag) {
+    public V2TradeAcctpaymentPayRequest(String reqSeqId, String reqDate, String outHuifuId, String ordAmt, String acctSplitBunch, String riskCheckData, String fundType, String transFeeTakeFlag, String verifyValue) {
         this.reqSeqId = reqSeqId;
         this.reqDate = reqDate;
         this.outHuifuId = outHuifuId;
@@ -69,6 +74,7 @@ public class V2TradeAcctpaymentPayRequest extends BaseRequest {
         this.riskCheckData = riskCheckData;
         this.fundType = fundType;
         this.transFeeTakeFlag = transFeeTakeFlag;
+        this.verifyValue = verifyValue;
     }
 
     public String getReqSeqId() {
@@ -133,6 +139,14 @@ public class V2TradeAcctpaymentPayRequest extends BaseRequest {
 
     public void setTransFeeTakeFlag(String transFeeTakeFlag) {
         this.transFeeTakeFlag = transFeeTakeFlag;
+    }
+
+    public String getVerifyValue() {
+        return verifyValue;
+    }
+
+    public void setVerifyValue(String verifyValue) {
+        this.verifyValue = verifyValue;
     }
 
 }

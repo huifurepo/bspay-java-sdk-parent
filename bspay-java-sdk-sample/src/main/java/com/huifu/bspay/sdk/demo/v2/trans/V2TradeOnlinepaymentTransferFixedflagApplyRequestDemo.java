@@ -51,6 +51,8 @@ public class V2TradeOnlinepaymentTransferFixedflagApplyRequestDemo extends BaseC
     private static Map<String, Object> getExtendInfos() {
         // 设置非必填字段
         Map<String, Object> extendInfoMap = new HashMap<>();
+        // 银行模式
+        // extendInfoMap.put("bank_mode", "");
         return extendInfoMap;
     }
 

@@ -42,24 +42,18 @@ public class V2QuickbuckleWithholdApplyRequestDemo extends BaseCommonDemo {
         request.setOrderDate("20230525");
         // 银行卡号
         request.setCardId("ZSSW+34A2soLbwLQ5SkZJO4Azy6BknTGkk6EYDTbGA+G0v+zcF3TnU4iYH171KB4ReLjJlY+hSy8MvgVbAx7dL9V7LvLFJd8RE+Lp6XKiIbVUCA1wd2Otp2jI2D32z5gUFqUbB4clRZyRyltXV3xmAWH4fLZDER3H+QwC0/UNF4=");
-        // 银行卡开户姓名 
+        // 银行卡开户姓名
         request.setCardName("H12ShtAyV4I4sOQqbISH4eMQUcmzpYOHggxRcXhxNoForh5qLyFgDrsSTn0nnepnPO8okfZYSWQlWIBzsRyyHYwAk94s2sO2Sz/6q4Jg2xDieeGDGrnrAphc8/OAN2OK8dMdbQzL12MvPQU/GX148MCxJzGvvdRFqTEPRLOLXTs=");
-        // 银行卡绑定证件类型 
+        // 银行卡绑定证件类型
         request.setCertType("00");
         // 银行卡绑定身份证
         request.setCertId("FviSPp2Xv6QYfRSYRZcouGAz4BvfZRS9nFKI/7daIUtn4JmBVMTDtrqKLCWeoY7WP4hQAz3rptjOe8WsuynRG3kQhBsXZB0v6e1X1+POD5FXVojquKQb1BF5tKlaOqTj/+G62URC3SWui26JzQQmjGhCORXXHFD7PPNJKusYhHI=");
-        // 银行卡绑定手机号 
+        // 银行卡绑定手机号
         request.setCardMp("GmMLD+v2Mfc/vr9HOVFKOon3Dl4Q9cjze21X902G8Dnl2/2rpH8wpJUnufoYnI0nR9D2XkOm0ApOJL3ShiZxgLvnTaKrTDjRdrBJexhXbbhbfDx/2x+ZULvZHOEjzRI21tK2WKUzxDhX/lw/iXMjslKNVYlQ7as/aH5bLipf12g=");
-        // CVV2信用卡代扣专用 需要密文传输，需要密文传输，使用汇付RSA公钥加密(加密前64位，加密后最长2048位），参见[参考文档](https://paas.huifu.com/open/doc/guide/#/api_jiami_jiemi)；
-        request.setVipCode("HOVFKOon3Dl4Q9cjze21X902G8Dnl2LvLFJd8RE+Lp6XKiIbVUCA1wd2Otp2jI2D32z5gUFqUbB4clRZyRyltXV3xmAWH4fLZDER3H+YwAk94s2sO2Sz/6q4Jg2xDieesO2Sz/6q4Jg2xDieeGDGbQzL12MvPQU/GX14xJzGvvd=");
-        // 卡有效期 信用卡代扣专用，格式：MMYY 需要密文传输，使用汇付RSA公钥加密(加密前64位，加密后最长2048位），参见[参考文档](https://paas.huifu.com/open/doc/guide/#/api_jiami_jiemi)；
-        request.setExpiration("IUtn4JmBVMTDtrqKLCWeoY7WP4hQAz3rptjOe8WsuySW+34SkZJO4Azy6BknTGkk6EA2soLbwLQ5SkZJO4Azy6BknTGkk6EX902G8Dnl2/2rpH8wpJUnufoYnI0nR9YDTbGA+G0v+ApOJL3ShiZxgLvnTaKrnU4iYH171KB4=");
         // 个人证件有效期类型
         request.setCertValidityType("0");
         // 个人证件有效期起始日
         request.setCertBeginDate("20140504");
-        // 个人证件有效期到期日长期有效不填.格式：YYYYMMDD；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：20450112&lt;/font&gt;
-        request.setCertEndDate("20260504");
         // 卡的借贷类型
         // request.setDcType("test");
 
@@ -81,14 +75,22 @@ public class V2QuickbuckleWithholdApplyRequestDemo extends BaseCommonDemo {
         Map<String, Object> extendInfoMap = new HashMap<>();
         // 页面有效期
         extendInfoMap.put("expire_time", "15");
+        // CVV2
+        extendInfoMap.put("vip_code", "HOVFKOon3Dl4Q9cjze21X902G8Dnl2LvLFJd8RE+Lp6XKiIbVUCA1wd2Otp2jI2D32z5gUFqUbB4clRZyRyltXV3xmAWH4fLZDER3H+YwAk94s2sO2Sz/6q4Jg2xDieesO2Sz/6q4Jg2xDieeGDGbQzL12MvPQU/GX14xJzGvvd=");
+        // 卡有效期
+        extendInfoMap.put("expiration", "IUtn4JmBVMTDtrqKLCWeoY7WP4hQAz3rptjOe8WsuySW+34SkZJO4Azy6BknTGkk6EA2soLbwLQ5SkZJO4Azy6BknTGkk6EX902G8Dnl2/2rpH8wpJUnufoYnI0nR9YDTbGA+G0v+ApOJL3ShiZxgLvnTaKrnU4iYH171KB4=");
+        // 个人证件有效期到期日
+        extendInfoMap.put("cert_end_date", "20260504");
         // 设备信息域
-        extendInfoMap.put("trx_device_info", getTrxDeviceInfo());
+        extendInfoMap.put("trx_device_info", getB56bfbeeE390414999542cc647b3ed9a());
         // 风控信息
-        extendInfoMap.put("risk_info", getRiskInfo());
+        extendInfoMap.put("risk_info", getF494b2e9E5cf4fe592d8Fa81cc893071());
+        // 代扣绑卡类型
+        // extendInfoMap.put("binding_card_type", "");
         return extendInfoMap;
     }
 
-    private static JSON getTrxDeviceInfo() {
+    private static JSON getB56bfbeeE390414999542cc647b3ed9a() {
         JSONObject dto = new JSONObject();
         // 银行预留手机号
         dto.put("trx_mobile_num", "15556622368");
@@ -112,7 +114,7 @@ public class V2QuickbuckleWithholdApplyRequestDemo extends BaseCommonDemo {
         return dto;
     }
 
-    private static String getRiskInfo() {
+    private static JSON getF494b2e9E5cf4fe592d8Fa81cc893071() {
         JSONObject dto = new JSONObject();
         // IP类型
         dto.put("ip_type", "04");
@@ -124,8 +126,12 @@ public class V2QuickbuckleWithholdApplyRequestDemo extends BaseCommonDemo {
         dto.put("device_type", "1");
         // 银行预留手机号
         dto.put("mobile", "13778787106");
+        // 协议编号
+        // dto.put("agreement_no", "");
+        // 协议地址
+        // dto.put("agreement_url", "");
 
-        return dto.toJSONString();
+        return dto;
     }
 
 }

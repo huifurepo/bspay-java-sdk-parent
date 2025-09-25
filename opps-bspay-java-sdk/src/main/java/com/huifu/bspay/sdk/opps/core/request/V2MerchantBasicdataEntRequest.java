@@ -209,8 +209,8 @@ public class V2MerchantBasicdataEntRequest extends BaseRequest {
     /**
      * 授权委托书**对私非法人、对公非同名结算必填**；通过[图片上传接口](https://paas.huifu.com/open/doc/api/#/shgl/shjj/api_shjj_shtpsc)上传材料；文件类型：F15；开通银行电子账户（中信E管家）需提供F520；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：57cc7f00-600a-33ab-b614-6221bbf2e530&lt;/font&gt;
      */
-    @JSONField(name = "auth_enturst_pic")
-    private String authEnturstPic;
+    @JSONField(name = "auth_entrust_pic")
+    private String authEntrustPic;
     /**
      * 上级汇付Id如果head_office_flag&#x3D;0，则字段必填，如果head_office_flag&#x3D;1，上级汇付Id不可传&lt;br/&gt;如果headOfficeFlag&#x3D;0，useHeadInfoFlag&#x3D;Y,且head_huifu_id不为空则基本信息部分复用上级的基本信息。&lt;br/&gt;&lt;font color&#x3D;&quot;green&quot;&gt;示例值：6666000123123123&lt;/font&gt;
      */
@@ -245,7 +245,7 @@ public class V2MerchantBasicdataEntRequest extends BaseRequest {
     public V2MerchantBasicdataEntRequest() {
     }
 
-    public V2MerchantBasicdataEntRequest(String reqSeqId, String reqDate, String upperHuifuId, String regName, String shortName, String receiptName, String entType, String mcc, String busiType, String sceneType, String licensePic, String licenseCode, String licenseValidityType, String licenseBeginDate, String licenseEndDate, String foundDate, String regCapital, String regDistrictId, String regDetail, String districtId, String detailAddr, String legalName, String legalCertType, String legalCertNo, String legalCertValidityType, String legalCertBeginDate, String legalCertEndDate, String legalAddr, String legalCertBackPic, String legalCertFrontPic, String contactMobileNo, String contactEmail, String loginName, String regAcctPic, String openLicenceNo, String cardInfo, String settleCardFrontPic, String settleCertBackPic, String settleCertFrontPic, String authEnturstPic, String headHuifuId, String merIcp, String storeHeaderPic, String storeIndoorPic, String storeCashierDeskPic) {
+    public V2MerchantBasicdataEntRequest(String reqSeqId, String reqDate, String upperHuifuId, String regName, String shortName, String receiptName, String entType, String mcc, String busiType, String sceneType, String licensePic, String licenseCode, String licenseValidityType, String licenseBeginDate, String licenseEndDate, String foundDate, String regCapital, String regDistrictId, String regDetail, String districtId, String detailAddr, String legalName, String legalCertType, String legalCertNo, String legalCertValidityType, String legalCertBeginDate, String legalCertEndDate, String legalAddr, String legalCertBackPic, String legalCertFrontPic, String contactMobileNo, String contactEmail, String loginName, String regAcctPic, String openLicenceNo, String cardInfo, String settleCardFrontPic, String settleCertBackPic, String settleCertFrontPic, String authEntrustPic, String headHuifuId, String merIcp, String storeHeaderPic, String storeIndoorPic, String storeCashierDeskPic) {
         this.reqSeqId = reqSeqId;
         this.reqDate = reqDate;
         this.upperHuifuId = upperHuifuId;
@@ -285,7 +285,7 @@ public class V2MerchantBasicdataEntRequest extends BaseRequest {
         this.settleCardFrontPic = settleCardFrontPic;
         this.settleCertBackPic = settleCertBackPic;
         this.settleCertFrontPic = settleCertFrontPic;
-        this.authEnturstPic = authEnturstPic;
+        this.authEntrustPic = authEntrustPic;
         this.headHuifuId = headHuifuId;
         this.merIcp = merIcp;
         this.storeHeaderPic = storeHeaderPic;
@@ -605,12 +605,12 @@ public class V2MerchantBasicdataEntRequest extends BaseRequest {
         this.settleCertFrontPic = settleCertFrontPic;
     }
 
-    public String getAuthEnturstPic() {
-        return authEnturstPic;
+    public String getAuthEntrustPic() {
+        return authEntrustPic;
     }
 
-    public void setAuthEnturstPic(String authEnturstPic) {
-        this.authEnturstPic = authEnturstPic;
+    public void setAuthEntrustPic(String authEntrustPic) {
+        this.authEntrustPic = authEntrustPic;
     }
 
     public String getHeadHuifuId() {
