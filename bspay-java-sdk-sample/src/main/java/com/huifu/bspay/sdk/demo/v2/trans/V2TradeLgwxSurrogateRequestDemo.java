@@ -43,7 +43,7 @@ public class V2TradeLgwxSurrogateRequestDemo extends BaseCommonDemo {
         // 异步通知地址
         request.setNotifyUrl("virgo://http://www.gangcai.com");
         // 分账明细
-        request.setAcctSplitBunch(get2cc87980007348a7A86e461ee467b2db());
+        request.setAcctSplitBunch(getF1feffe72adf427594625abfeb040860());
 
         // 设置非必填字段
         Map<String, Object> extendInfoMap = getExtendInfos();
@@ -63,10 +63,12 @@ public class V2TradeLgwxSurrogateRequestDemo extends BaseCommonDemo {
         Map<String, Object> extendInfoMap = new HashMap<>();
         // 出款方账户号
         extendInfoMap.put("acct_id", "C02418374");
+        // 合作平台
+        // extendInfoMap.put("lg_platform_type", "");
         return extendInfoMap;
     }
 
-    private static String get2cc87980007348a7A86e461ee467b2db() {
+    private static String getF1feffe72adf427594625abfeb040860() {
         JSONObject dto = new JSONObject();
         // 用户号
         dto.put("huifu_id", "6666000107979716");

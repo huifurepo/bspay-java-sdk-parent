@@ -26,11 +26,6 @@ public class V2InvoicePermissionGrantRequest extends BaseRequest {
      */
     @JSONField(name = "huifu_id")
     private String huifuId;
-    /**
-     * 开通类型
-     */
-    @JSONField(name = "status")
-    private String status;
 
     @Override
     public FunctionCodeEnum getFunctionCode() {
@@ -40,11 +35,10 @@ public class V2InvoicePermissionGrantRequest extends BaseRequest {
     public V2InvoicePermissionGrantRequest() {
     }
 
-    public V2InvoicePermissionGrantRequest(String reqSeqId, String reqDate, String huifuId, String status) {
+    public V2InvoicePermissionGrantRequest(String reqSeqId, String reqDate, String huifuId) {
         this.reqSeqId = reqSeqId;
         this.reqDate = reqDate;
         this.huifuId = huifuId;
-        this.status = status;
     }
 
     public String getReqSeqId() {
@@ -69,14 +63,6 @@ public class V2InvoicePermissionGrantRequest extends BaseRequest {
 
     public void setHuifuId(String huifuId) {
         this.huifuId = huifuId;
-    }
-
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
     }
 
 }

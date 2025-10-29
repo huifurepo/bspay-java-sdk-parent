@@ -47,6 +47,11 @@ public class V2MerchantBusiEfpconfigRequest extends BaseRequest {
     @JSONField(name = "out_order_acct_open_fees")
     private String outOrderAcctOpenFees;
     /**
+     * 业务模式acquiringMode:收单模式 switch_state为1时必填
+     */
+    @JSONField(name = "business_model")
+    private String businessModel;
+    /**
      * 银行类型switch_state有值时需填写； ht1-华通银行，xw0-XW银行，ss0-苏商银行；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：ht1&lt;/font&gt;
      */
     @JSONField(name = "out_funds_gate_id")
@@ -185,7 +190,7 @@ public class V2MerchantBusiEfpconfigRequest extends BaseRequest {
     public V2MerchantBusiEfpconfigRequest() {
     }
 
-    public V2MerchantBusiEfpconfigRequest(String reqSeqId, String reqDate, String huifuId, String upperHuifuId, String outFeeHuifuid, String outOrderAcctCard, String outOrderAcctOpenFees, String outFundsGateId, String signUserInfo, String acctSource, String dyCooperationProvePic, String mtCooperationProvePic, String ksCooperationProvePic, String pddCooperationProvePic, String xhsCooperationProvePic, String zfbCooperationProvePic, String wxCooperationProvePic, String jdCooperationProvePic, String elmCooperationProvePic, String dwCooperationProvePic, String wphCooperationProvePic, String xcCooperationProvePic, String zfbzlCooperationProvePic, String wxzlCooperationProvePic, String ddjyCooperationProvePic, String tyCooperationProvePic, String tlCooperationProvePic, String ybCooperationProvePic, String efpPaperAgreementFile, String bdCooperationProvePic, String mainStoreHuifuId, String sfCooperationProvePic, String xyCooperationProvePic) {
+    public V2MerchantBusiEfpconfigRequest(String reqSeqId, String reqDate, String huifuId, String upperHuifuId, String outFeeHuifuid, String outOrderAcctCard, String outOrderAcctOpenFees, String businessModel, String outFundsGateId, String signUserInfo, String acctSource, String dyCooperationProvePic, String mtCooperationProvePic, String ksCooperationProvePic, String pddCooperationProvePic, String xhsCooperationProvePic, String zfbCooperationProvePic, String wxCooperationProvePic, String jdCooperationProvePic, String elmCooperationProvePic, String dwCooperationProvePic, String wphCooperationProvePic, String xcCooperationProvePic, String zfbzlCooperationProvePic, String wxzlCooperationProvePic, String ddjyCooperationProvePic, String tyCooperationProvePic, String tlCooperationProvePic, String ybCooperationProvePic, String efpPaperAgreementFile, String bdCooperationProvePic, String mainStoreHuifuId, String sfCooperationProvePic, String xyCooperationProvePic) {
         this.reqSeqId = reqSeqId;
         this.reqDate = reqDate;
         this.huifuId = huifuId;
@@ -193,6 +198,7 @@ public class V2MerchantBusiEfpconfigRequest extends BaseRequest {
         this.outFeeHuifuid = outFeeHuifuid;
         this.outOrderAcctCard = outOrderAcctCard;
         this.outOrderAcctOpenFees = outOrderAcctOpenFees;
+        this.businessModel = businessModel;
         this.outFundsGateId = outFundsGateId;
         this.signUserInfo = signUserInfo;
         this.acctSource = acctSource;
@@ -275,6 +281,14 @@ public class V2MerchantBusiEfpconfigRequest extends BaseRequest {
 
     public void setOutOrderAcctOpenFees(String outOrderAcctOpenFees) {
         this.outOrderAcctOpenFees = outOrderAcctOpenFees;
+    }
+
+    public String getBusinessModel() {
+        return businessModel;
+    }
+
+    public void setBusinessModel(String businessModel) {
+        this.businessModel = businessModel;
     }
 
     public String getOutFundsGateId() {

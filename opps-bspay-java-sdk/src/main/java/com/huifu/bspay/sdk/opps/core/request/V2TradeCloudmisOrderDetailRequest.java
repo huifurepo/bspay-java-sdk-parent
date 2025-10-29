@@ -17,6 +17,11 @@ public class V2TradeCloudmisOrderDetailRequest extends BaseRequest {
     @JSONField(name = "req_id")
     private String reqId;
     /**
+     * 原MIS请求的交易订单号
+     */
+    @JSONField(name = "org_third_order_id")
+    private String orgThirdOrderId;
+    /**
      * 原MIS请求商户号
      */
     @JSONField(name = "org_huifu_id")
@@ -40,8 +45,9 @@ public class V2TradeCloudmisOrderDetailRequest extends BaseRequest {
     public V2TradeCloudmisOrderDetailRequest() {
     }
 
-    public V2TradeCloudmisOrderDetailRequest(String reqId, String orgHuifuId, String orgDeviceId, String orgReqDate) {
+    public V2TradeCloudmisOrderDetailRequest(String reqId, String orgThirdOrderId, String orgHuifuId, String orgDeviceId, String orgReqDate) {
         this.reqId = reqId;
+        this.orgThirdOrderId = orgThirdOrderId;
         this.orgHuifuId = orgHuifuId;
         this.orgDeviceId = orgDeviceId;
         this.orgReqDate = orgReqDate;
@@ -53,6 +59,14 @@ public class V2TradeCloudmisOrderDetailRequest extends BaseRequest {
 
     public void setReqId(String reqId) {
         this.reqId = reqId;
+    }
+
+    public String getOrgThirdOrderId() {
+        return orgThirdOrderId;
+    }
+
+    public void setOrgThirdOrderId(String orgThirdOrderId) {
+        this.orgThirdOrderId = orgThirdOrderId;
     }
 
     public String getOrgHuifuId() {

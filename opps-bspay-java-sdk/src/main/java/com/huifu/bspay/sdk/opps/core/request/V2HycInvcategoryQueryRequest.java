@@ -26,6 +26,11 @@ public class V2HycInvcategoryQueryRequest extends BaseRequest {
      */
     @JSONField(name = "minor_agent_id")
     private String minorAgentId;
+    /**
+     * 商户号lg_platform_type为HXY或空时必填
+     */
+    @JSONField(name = "huifu_id")
+    private String huifuId;
 
     @Override
     public FunctionCodeEnum getFunctionCode() {
@@ -35,10 +40,11 @@ public class V2HycInvcategoryQueryRequest extends BaseRequest {
     public V2HycInvcategoryQueryRequest() {
     }
 
-    public V2HycInvcategoryQueryRequest(String reqSeqId, String reqDate, String minorAgentId) {
+    public V2HycInvcategoryQueryRequest(String reqSeqId, String reqDate, String minorAgentId, String huifuId) {
         this.reqSeqId = reqSeqId;
         this.reqDate = reqDate;
         this.minorAgentId = minorAgentId;
+        this.huifuId = huifuId;
     }
 
     public String getReqSeqId() {
@@ -63,6 +69,14 @@ public class V2HycInvcategoryQueryRequest extends BaseRequest {
 
     public void setMinorAgentId(String minorAgentId) {
         this.minorAgentId = minorAgentId;
+    }
+
+    public String getHuifuId() {
+        return huifuId;
+    }
+
+    public void setHuifuId(String huifuId) {
+        this.huifuId = huifuId;
     }
 
 }

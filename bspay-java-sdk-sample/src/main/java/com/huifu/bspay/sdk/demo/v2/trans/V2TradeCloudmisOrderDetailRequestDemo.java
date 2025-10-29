@@ -28,6 +28,8 @@ public class V2TradeCloudmisOrderDetailRequestDemo extends BaseCommonDemo {
         V2TradeCloudmisOrderDetailRequest request = new V2TradeCloudmisOrderDetailRequest();
         // 请求流水号
         // request.setReqId("test");
+        // 原MIS请求的交易订单号
+        request.setOrgThirdOrderId("20240313115926539uf7cqcmwxl30");
         // 原MIS请求商户号
         request.setOrgHuifuId("6666000141203565");
         // 原MIS请求终端号
@@ -51,10 +53,6 @@ public class V2TradeCloudmisOrderDetailRequestDemo extends BaseCommonDemo {
     private static Map<String, Object> getExtendInfos() {
         // 设置非必填字段
         Map<String, Object> extendInfoMap = new HashMap<>();
-        // 原MIS请求流水号
-        extendInfoMap.put("org_req_id", "reqId20240624091729005");
-        // 原MIS请求jsonData中的三方单号
-        extendInfoMap.put("org_third_order_id", "20240313115926539uf7cqcmwxl30");
         return extendInfoMap;
     }
 

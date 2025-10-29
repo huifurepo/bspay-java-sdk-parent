@@ -42,7 +42,7 @@ public class V2TradeOnlinepaymentUnionpayRequest extends BaseRequest {
     @JSONField(name = "risk_check_data")
     private String riskCheckData;
     /**
-     * 三方支付数据jsonObject；pay_scene为云闪付公众号与云闪付小程序时必填
+     * 三方支付数据jsonObject&lt;br/&gt;pay_scene&#x3D;U_JSAPI或pay_scene&#x3D;U_MINIAPP时，必填
      */
     @JSONField(name = "third_pay_data")
     private String thirdPayData;

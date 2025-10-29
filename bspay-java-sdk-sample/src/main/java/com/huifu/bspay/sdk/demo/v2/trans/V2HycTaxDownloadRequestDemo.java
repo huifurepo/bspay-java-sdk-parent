@@ -51,6 +51,8 @@ public class V2HycTaxDownloadRequestDemo extends BaseCommonDemo {
     private static Map<String, Object> getExtendInfos() {
         // 设置非必填字段
         Map<String, Object> extendInfoMap = new HashMap<>();
+        // 合作平台
+        // extendInfoMap.put("lg_platform_type", "");
         return extendInfoMap;
     }
 

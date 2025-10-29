@@ -67,7 +67,7 @@ public class V2MerchantDirectZftRegRequestDemo extends BaseCommonDemo {
         // 联系人手机号
         request.setContactMobileNo("13576266246");
         // 商户结算卡信息jsonArray格式。本业务当前只允许传入一张结算卡。与支付宝账号字段二选一必填
-        request.setZftCardInfoList(get89b50602766148fd8b78E5b1178b7e6d());
+        request.setZftCardInfoList(get0086fad238754ed3B04c0ffb7d8ce54e());
         // 商户支付宝账号商户支付宝账号，用作结算账号。与银行卡对象字段二选一必填。&lt;br/&gt;本字段要求支付宝账号的名称与商户名称mch_name同名，且是实名认证过的支付宝账户。&lt;font color&#x3D;&quot;green&quot;&gt;示例值：test@huifu.com&lt;/font&gt;
         request.setAlipayLogonId("13576266246");
         // 商户行业资质类型当商户是特殊行业时必填，具体取值[参见表格](https://mif-pub.alipayobjects.com/QualificationType.xlsx)。&lt;font color&#x3D;&quot;green&quot;&gt;示例值：310&lt;/font&gt;
@@ -81,7 +81,7 @@ public class V2MerchantDirectZftRegRequestDemo extends BaseCommonDemo {
         // 默认结算类型
         request.setDefaultSettleType("alipayAccount");
         // 文件列表
-        request.setFileList(getDa4424ccD76c449aAd0f0a6cf846ae87());
+        request.setFileList(getA2582375Fa7747589f63B935d5a58216());
 
         // 设置非必填字段
         Map<String, Object> extendInfoMap = getExtendInfos();
@@ -112,7 +112,7 @@ public class V2MerchantDirectZftRegRequestDemo extends BaseCommonDemo {
         // 联系人电子邮箱
         extendInfoMap.put("contact_email", "a066545074@qq.com");
         // 商户站点信息
-        extendInfoMap.put("zft_site_info_list", get74e88be88f46423bB56343dda05a086f());
+        extendInfoMap.put("zft_site_info_list", get75d5b1e84abd448b919eF4973ee262a0());
         // 审核结果异步通知地址
         extendInfoMap.put("async_return_url", "http://192.168.85.157:30031/sspm/testVirgo");
         // 直付通退款不退手续费开关
@@ -120,7 +120,7 @@ public class V2MerchantDirectZftRegRequestDemo extends BaseCommonDemo {
         return extendInfoMap;
     }
 
-    private static String get89b50602766148fd8b78E5b1178b7e6d() {
+    private static String get0086fad238754ed3B04c0ffb7d8ce54e() {
         JSONObject dto = new JSONObject();
         // 卡类型
         dto.put("card_type", "1");
@@ -148,7 +148,7 @@ public class V2MerchantDirectZftRegRequestDemo extends BaseCommonDemo {
         return dtoList.toJSONString();
     }
 
-    private static String get74e88be88f46423bB56343dda05a086f() {
+    private static String get75d5b1e84abd448b919eF4973ee262a0() {
         JSONObject dto = new JSONObject();
         // 站点类型
         dto.put("site_type", "02");
@@ -166,7 +166,7 @@ public class V2MerchantDirectZftRegRequestDemo extends BaseCommonDemo {
         return dtoList.toJSONString();
     }
 
-    private static String getDa4424ccD76c449aAd0f0a6cf846ae87() {
+    private static String getA2582375Fa7747589f63B935d5a58216() {
         JSONObject dto = new JSONObject();
         // 文件类型
         dto.put("file_type", "F41");

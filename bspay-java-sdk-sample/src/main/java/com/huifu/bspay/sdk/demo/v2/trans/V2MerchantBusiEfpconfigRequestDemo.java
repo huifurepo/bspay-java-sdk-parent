@@ -37,13 +37,15 @@ public class V2MerchantBusiEfpconfigRequestDemo extends BaseCommonDemo {
         // 支付手续费外扣汇付ID支付手续费外扣标记为1时必填；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：6666000109812123&lt;/font&gt;
         request.setOutFeeHuifuid("");
         // 全域资金开户使用的银行卡信息首次开通时必填 jsonObject格式
-        request.setOutOrderAcctCard(get619ee92176bc40db9c523ec37f050b41());
+        request.setOutOrderAcctCard(getD0ce9ab0B390402b9fdbF34827a11736());
         // 全域资金开户手续费首次开通时必填 jsonObject格式
-        request.setOutOrderAcctOpenFees(get498e12a8C5d646ddB76805d40555bb0f());
+        request.setOutOrderAcctOpenFees(getFe9977604e1d40c1847b700b9297e703());
+        // 业务模式acquiringMode:收单模式 switch_state为1时必填
+        request.setBusinessModel("acquiringMode");
         // 银行类型switch_state有值时需填写； ht1-华通银行，xw0-XW银行，ss0-苏商银行；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：ht1&lt;/font&gt;
         request.setOutFundsGateId("xw0");
         // 签约人信息switch_state为1时必填 jsonObject格式
-        request.setSignUserInfo(get9d5c7d21865f4411Ba5cDe1e5c556f67());
+        request.setSignUserInfo(getB753cf982237418290194ab71cae54bc());
         // 入账来源开通全域资金时需填写；01:抖音 02:美团 03:快手 04:拼多多 05:小红书 06:淘宝/天猫/飞猪 07:微信视频号/微信小店 08:京东 09:饿了么 11:得物 12:唯品会 13:携程 14:支付宝直连 15:微信直连 16:滴滴加油 17:团油 18:通联 19:易宝 20:百度 21:顺丰22:希音 多个逗号分隔；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：01,02,05&lt;/font&gt;；
         request.setAcctSource("01");
         // 抖音合作证明材料入账来源包含01:抖音时必填 文件类型F535；详见[文件类型说明](https://paas.huifu.com/open/doc/api/#/csfl/api_csfl_wjlx)；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：57cc7f00-600a-33ab-b614-6221bbf2e530&lt;/font&gt;
@@ -119,8 +121,6 @@ public class V2MerchantBusiEfpconfigRequestDemo extends BaseCommonDemo {
         extendInfoMap.put("out_fee_acct_type", "");
         // 支付手续费外扣标记
         extendInfoMap.put("out_fee_flag", "2");
-        // 业务模式
-        extendInfoMap.put("business_model", "acquiringMode");
         // 全渠道资金管理补充材料id
         extendInfoMap.put("other_payment_institutions_pic", "8c4f6254-6c36-3b3c-ae8b-efcf24ca215e");
         // XW银行数字证书及电子签名授权委托书
@@ -134,7 +134,7 @@ public class V2MerchantBusiEfpconfigRequestDemo extends BaseCommonDemo {
         // 申请单日限额
         extendInfoMap.put("pay_every_day", "");
         // 全域资金分账规则
-        // extendInfoMap.put("efp_spb_config", getAc78908549554f45A4337714c15a92a6());
+        // extendInfoMap.put("efp_spb_config", getA2e12207739848638dd3552882612d75());
         // 客户ip地址
         // extendInfoMap.put("ip_address", "");
         // 是否线上场景
@@ -150,9 +150,9 @@ public class V2MerchantBusiEfpconfigRequestDemo extends BaseCommonDemo {
         // 协议类型
         // extendInfoMap.put("agreement_type", "");
         // 全域资金取现手续费配置
-        // extendInfoMap.put("efp_encash_fee_config", getF33df0c389924692B836Ad068dac9842());
+        // extendInfoMap.put("efp_encash_fee_config", getE0e748f9B7ca494680ffA9bef0293827());
         // 全域资金付款手续费配置
-        // extendInfoMap.put("efp_payment_fee_config", get3fbd16f59f014ca094f062911666d28a());
+        // extendInfoMap.put("efp_payment_fee_config", getDd50c87c35c0488cB10eF653d41da1be());
         // 纸质协议开始日期
         // extendInfoMap.put("agree_begin_date", "");
         // 纸质协议结束日期
@@ -166,11 +166,11 @@ public class V2MerchantBusiEfpconfigRequestDemo extends BaseCommonDemo {
         // 经营信息材料
         // extendInfoMap.put("management_file", "");
         // 全域资金分账手续费配置
-        // extendInfoMap.put("efp_spb_fee_config", get4617287337ba4c699f77Ce69aa96e9bd());
+        // extendInfoMap.put("efp_spb_fee_config", get565d55c272674b8598a53609129e29ad());
         return extendInfoMap;
     }
 
-    private static String get619ee92176bc40db9c523ec37f050b41() {
+    private static String getD0ce9ab0B390402b9fdbF34827a11736() {
         JSONObject dto = new JSONObject();
         // 结算账户名
         dto.put("card_name", "圆务铁白事");
@@ -206,7 +206,7 @@ public class V2MerchantBusiEfpconfigRequestDemo extends BaseCommonDemo {
         return dto.toJSONString();
     }
 
-    private static String get498e12a8C5d646ddB76805d40555bb0f() {
+    private static String getFe9977604e1d40c1847b700b9297e703() {
         JSONObject dto = new JSONObject();
         // 开户固定手续费(元)
         dto.put("fee_fix_amt", "0");
@@ -218,7 +218,7 @@ public class V2MerchantBusiEfpconfigRequestDemo extends BaseCommonDemo {
         return dto.toJSONString();
     }
 
-    private static String get9d5c7d21865f4411Ba5cDe1e5c556f67() {
+    private static String getB753cf982237418290194ab71cae54bc() {
         JSONObject dto = new JSONObject();
         // 签约人类型
         dto.put("type", "LEGAL");
@@ -232,7 +232,7 @@ public class V2MerchantBusiEfpconfigRequestDemo extends BaseCommonDemo {
         return dto.toJSONString();
     }
 
-    private static String getB881af6022a64bfaBf9b255477e076b9() {
+    private static String get8232c68c5e4c4a61A13f3f0690d5f863() {
         JSONObject dto = new JSONObject();
         // 分账接收方汇付ID
         // dto.put("huifu_id", "test");
@@ -246,7 +246,7 @@ public class V2MerchantBusiEfpconfigRequestDemo extends BaseCommonDemo {
         return dtoList.toJSONString();
     }
 
-    private static String getAc78908549554f45A4337714c15a92a6() {
+    private static String getA2e12207739848638dd3552882612d75() {
         JSONObject dto = new JSONObject();
         // 分账规则来源
         // dto.put("rule_origin", "test");
@@ -259,12 +259,12 @@ public class V2MerchantBusiEfpconfigRequestDemo extends BaseCommonDemo {
         // 全域资金分账手续费外扣账户类型交易手续费外扣标记为1时必填 01-基本户05-充值户 09-营销户；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：01&lt;/font&gt;；
         // dto.put("out_fee_acct_type", "test");
         // 分账规则明细规则来源为01时必填 jsonArray格式 最多7条
-        // dto.put("rule_detail", getB881af6022a64bfaBf9b255477e076b9());
+        // dto.put("rule_detail", get8232c68c5e4c4a61A13f3f0690d5f863());
 
         return dto.toJSONString();
     }
 
-    private static String getF33df0c389924692B836Ad068dac9842() {
+    private static String getE0e748f9B7ca494680ffA9bef0293827() {
         JSONObject dto = new JSONObject();
         // 全域资金取现手续费百分比
         // dto.put("fee_rate", "test");
@@ -282,7 +282,7 @@ public class V2MerchantBusiEfpconfigRequestDemo extends BaseCommonDemo {
         return dto.toJSONString();
     }
 
-    private static String get3fbd16f59f014ca094f062911666d28a() {
+    private static String getDd50c87c35c0488cB10eF653d41da1be() {
         JSONObject dto = new JSONObject();
         // 全域资金付款手续费百分比
         // dto.put("fee_rate", "test");
@@ -300,7 +300,7 @@ public class V2MerchantBusiEfpconfigRequestDemo extends BaseCommonDemo {
         return dto.toJSONString();
     }
 
-    private static String get4617287337ba4c699f77Ce69aa96e9bd() {
+    private static String get565d55c272674b8598a53609129e29ad() {
         JSONObject dto = new JSONObject();
         // 全域资金分账配置开关
         // dto.put("switch_state", "test");

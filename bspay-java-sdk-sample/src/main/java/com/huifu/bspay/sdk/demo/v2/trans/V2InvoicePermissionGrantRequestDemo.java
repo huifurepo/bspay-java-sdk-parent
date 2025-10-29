@@ -32,8 +32,6 @@ public class V2InvoicePermissionGrantRequestDemo extends BaseCommonDemo {
         request.setReqDate(DateTools.getCurrentDateYYYYMMDD());
         // 开票方汇付ID
         request.setHuifuId("6666000149801800");
-        // 开通类型
-        request.setStatus("Y");
 
         // 设置非必填字段
         Map<String, Object> extendInfoMap = getExtendInfos();
@@ -51,6 +49,10 @@ public class V2InvoicePermissionGrantRequestDemo extends BaseCommonDemo {
     private static Map<String, Object> getExtendInfos() {
         // 设置非必填字段
         Map<String, Object> extendInfoMap = new HashMap<>();
+        // 收费方式
+        // extendInfoMap.put("charge_type", "");
+        // 底价
+        // extendInfoMap.put("floor_price", "");
         return extendInfoMap;
     }
 

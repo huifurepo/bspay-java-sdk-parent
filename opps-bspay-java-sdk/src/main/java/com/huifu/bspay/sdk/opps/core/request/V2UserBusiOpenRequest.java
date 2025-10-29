@@ -36,6 +36,11 @@ public class V2UserBusiOpenRequest extends BaseRequest {
      */
     @JSONField(name = "ljh_data")
     private String ljhData;
+    /**
+     * 汇薪云配置当合作平台为汇薪云，必填
+     */
+    @JSONField(name = "hxy_data")
+    private String hxyData;
 
     @Override
     public FunctionCodeEnum getFunctionCode() {
@@ -45,12 +50,13 @@ public class V2UserBusiOpenRequest extends BaseRequest {
     public V2UserBusiOpenRequest() {
     }
 
-    public V2UserBusiOpenRequest(String huifuId, String reqSeqId, String reqDate, String upperHuifuId, String ljhData) {
+    public V2UserBusiOpenRequest(String huifuId, String reqSeqId, String reqDate, String upperHuifuId, String ljhData, String hxyData) {
         this.huifuId = huifuId;
         this.reqSeqId = reqSeqId;
         this.reqDate = reqDate;
         this.upperHuifuId = upperHuifuId;
         this.ljhData = ljhData;
+        this.hxyData = hxyData;
     }
 
     public String getHuifuId() {
@@ -91,6 +97,14 @@ public class V2UserBusiOpenRequest extends BaseRequest {
 
     public void setLjhData(String ljhData) {
         this.ljhData = ljhData;
+    }
+
+    public String getHxyData() {
+        return hxyData;
+    }
+
+    public void setHxyData(String hxyData) {
+        this.hxyData = hxyData;
     }
 
 }

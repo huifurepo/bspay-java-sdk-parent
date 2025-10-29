@@ -53,11 +53,11 @@ public class V2InvoiceOpenRequestDemo extends BaseCommonDemo {
         // 原发票号码openType&#x3D;1时必填；参见[发票右上角](https://paas.huifu.com/open/doc/api/#/fp/api_fp_yanglitu.md)；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：20685767&lt;/font&gt;
         request.setOriIvcNumber("150000020026");
         // 开票商品信息
-        request.setGoodsInfos(get3bbe0bf336ab4412B2df9d01a1c7c2d0());
+        request.setGoodsInfos(get0836ea582ea54a2eBf31B03c514a80e0());
         // 不动产销售特殊字段specialFlag为05时，必填；jsonArray格式
-        // request.setEstateSales(get2db7b765B68148adBb26Fc16dd2cf1b1());
+        // request.setEstateSales(get61765e5d4e3547ea986fE0b02a336bd0());
         // 不动产租赁特殊字段specialFlag为16时，必填；jsonArray格式
-        // request.setEstateLease(get3e4fc4baEb77414eB701F6aeed431b96());
+        // request.setEstateLease(get5a5792e6625649409ab3956876eba831());
 
         // 设置非必填字段
         Map<String, Object> extendInfoMap = getExtendInfos();
@@ -100,7 +100,7 @@ public class V2InvoiceOpenRequestDemo extends BaseCommonDemo {
         // 红字信息表编号
         extendInfoMap.put("red_info_number", "");
         // 开票人信息
-        extendInfoMap.put("payer_info", getB81206516602427086e4A87dc9054c94());
+        extendInfoMap.put("payer_info", get5ff3cd19637443d4A6faEa720f02c952());
         // 开票结果异步通知地址
         extendInfoMap.put("callback_url", "virgo://http://192.168.85.157:30031/sspm/testVirgo");
         // 强制开票标识
@@ -108,7 +108,7 @@ public class V2InvoiceOpenRequestDemo extends BaseCommonDemo {
         return extendInfoMap;
     }
 
-    private static String get3bbe0bf336ab4412B2df9d01a1c7c2d0() {
+    private static String get0836ea582ea54a2eBf31B03c514a80e0() {
         JSONObject dto = new JSONObject();
         // 发票行性质
         dto.put("ivc_nature", "0");
@@ -116,7 +116,7 @@ public class V2InvoiceOpenRequestDemo extends BaseCommonDemo {
         dto.put("goods_serial_num", "");
         // 商品id二选一必填，税收分类编码优先；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：&lt;/font&gt;
         dto.put("goods_id", "");
-        // 商品税收分类编码&lt;font color&#x3D;&quot;green&quot;&gt;示例值：&lt;/font&gt;
+        // 商品税收分类编码参考[商品编码](https://cloudpnrcdn.oss-cn-shanghai.aliyuncs.com/opps/api/prod/download_file/fp/%E7%94%B5%E5%AD%90%E5%8F%91%E7%A5%A8%E5%95%86%E5%93%81%E7%BC%96%E7%A0%81.xlsx)；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：1010101090000000000&lt;/font&gt;
         dto.put("goods_code", "6010000000000000000");
         // 商品名称goodsCode不为空时必填；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：&lt;/font&gt;
         dto.put("goods_name", "预付卡");
@@ -148,7 +148,7 @@ public class V2InvoiceOpenRequestDemo extends BaseCommonDemo {
         return dtoList.toJSONString();
     }
 
-    private static String getB81206516602427086e4A87dc9054c94() {
+    private static String get5ff3cd19637443d4A6faEa720f02c952() {
         JSONObject dto = new JSONObject();
         // 开票人
         dto.put("payer_name", "开票人");
@@ -160,7 +160,7 @@ public class V2InvoiceOpenRequestDemo extends BaseCommonDemo {
         return dto.toJSONString();
     }
 
-    private static String get2db7b765B68148adBb26Fc16dd2cf1b1() {
+    private static String get61765e5d4e3547ea986fE0b02a336bd0() {
         JSONObject dto = new JSONObject();
         // 不动产地址
         // dto.put("addr", "test");
@@ -186,7 +186,7 @@ public class V2InvoiceOpenRequestDemo extends BaseCommonDemo {
         return dtoList.toJSONString();
     }
 
-    private static String get3e4fc4baEb77414eB701F6aeed431b96() {
+    private static String get5a5792e6625649409ab3956876eba831() {
         JSONObject dto = new JSONObject();
         // 不动产地址
         // dto.put("addr", "test");

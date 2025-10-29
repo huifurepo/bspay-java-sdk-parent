@@ -5,6 +5,7 @@ package com.huifu.bspay.sdk.opps.core.enums;
  * @Author: sdk-generator
  */
 public enum FunctionCodeEnum {
+
     /**
      * 提现记录查询
      */

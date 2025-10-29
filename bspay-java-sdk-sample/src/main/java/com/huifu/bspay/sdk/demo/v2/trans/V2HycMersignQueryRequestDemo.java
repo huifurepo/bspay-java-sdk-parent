@@ -53,6 +53,8 @@ public class V2HycMersignQueryRequestDemo extends BaseCommonDemo {
         extendInfoMap.put("start_date", "20240112");
         // 结束时间
         extendInfoMap.put("end_date", "20240112");
+        // 合作平台
+        // extendInfoMap.put("lg_platform_type", "");
         return extendInfoMap;
     }
 
