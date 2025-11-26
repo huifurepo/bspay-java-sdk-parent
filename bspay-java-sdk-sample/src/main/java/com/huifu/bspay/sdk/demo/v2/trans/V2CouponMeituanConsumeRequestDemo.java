@@ -35,7 +35,7 @@ public class V2CouponMeituanConsumeRequestDemo extends BaseCommonDemo {
         // 门店绑定流水号
         request.setBindId("9c2d91f68ba045a998df46ffe395a9ca");
         // 核销券
-        request.setReceiptCodeInfos(get1220ae0e014040c9Af4d128bcbe56d8a());
+        request.setReceiptCodeInfos(get68087d8eDdd149ef940aF4ddd4dffe4c());
         // 登录账号
         request.setAppShopAccount("123");
         // 登录用户名
@@ -66,7 +66,7 @@ public class V2CouponMeituanConsumeRequestDemo extends BaseCommonDemo {
         return extendInfoMap;
     }
 
-    private static String get1220ae0e014040c9Af4d128bcbe56d8a() {
+    private static String get68087d8eDdd149ef940aF4ddd4dffe4c() {
         JSONObject dto = new JSONObject();
         // 券码
         dto.put("receipt_code", "5729740654");

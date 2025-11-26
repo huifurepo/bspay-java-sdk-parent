@@ -21,7 +21,7 @@ import java.util.*;
  */
 public abstract class AbstractRequest {
 
-    public static final String SDK_VERSION = "3.0.31";
+    public static final String SDK_VERSION = "3.0.32";
 
     protected static enum RequestMethod {
         GET, POST, DELETE, PUT;

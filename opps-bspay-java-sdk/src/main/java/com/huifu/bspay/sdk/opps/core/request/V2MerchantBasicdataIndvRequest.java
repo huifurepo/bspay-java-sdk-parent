@@ -97,7 +97,7 @@ public class V2MerchantBasicdataIndvRequest extends BaseRequest {
     @JSONField(name = "card_info")
     private String cardInfo;
     /**
-     * 结算卡正面
+     * 银行卡卡号面
      */
     @JSONField(name = "settle_card_front_pic")
     private String settleCardFrontPic;

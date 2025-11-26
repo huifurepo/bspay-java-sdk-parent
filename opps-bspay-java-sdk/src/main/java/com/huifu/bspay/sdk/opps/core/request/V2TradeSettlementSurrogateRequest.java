@@ -82,11 +82,6 @@ public class V2TradeSettlementSurrogateRequest extends BaseRequest {
     @JSONField(name = "certificate_type")
     private String certificateType;
     /**
-     * 手机号密文
-     */
-    @JSONField(name = "mobile_no_crypt")
-    private String mobileNoCrypt;
-    /**
      * 到账日期类型
      */
     @JSONField(name = "into_acct_date_type")
@@ -100,7 +95,7 @@ public class V2TradeSettlementSurrogateRequest extends BaseRequest {
     public V2TradeSettlementSurrogateRequest() {
     }
 
-    public V2TradeSettlementSurrogateRequest(String reqSeqId, String reqDate, String huifuId, String cashAmt, String purposeDesc, String province, String area, String bankCode, String correspondentCode, String bankAccountName, String cardAcctType, String bankCardNoCrypt, String certificateNoCrypt, String certificateType, String mobileNoCrypt, String intoAcctDateType) {
+    public V2TradeSettlementSurrogateRequest(String reqSeqId, String reqDate, String huifuId, String cashAmt, String purposeDesc, String province, String area, String bankCode, String correspondentCode, String bankAccountName, String cardAcctType, String bankCardNoCrypt, String certificateNoCrypt, String certificateType, String intoAcctDateType) {
         this.reqSeqId = reqSeqId;
         this.reqDate = reqDate;
         this.huifuId = huifuId;
@@ -115,7 +110,6 @@ public class V2TradeSettlementSurrogateRequest extends BaseRequest {
         this.bankCardNoCrypt = bankCardNoCrypt;
         this.certificateNoCrypt = certificateNoCrypt;
         this.certificateType = certificateType;
-        this.mobileNoCrypt = mobileNoCrypt;
         this.intoAcctDateType = intoAcctDateType;
     }
 
@@ -229,14 +223,6 @@ public class V2TradeSettlementSurrogateRequest extends BaseRequest {
 
     public void setCertificateType(String certificateType) {
         this.certificateType = certificateType;
-    }
-
-    public String getMobileNoCrypt() {
-        return mobileNoCrypt;
-    }
-
-    public void setMobileNoCrypt(String mobileNoCrypt) {
-        this.mobileNoCrypt = mobileNoCrypt;
     }
 
     public String getIntoAcctDateType() {

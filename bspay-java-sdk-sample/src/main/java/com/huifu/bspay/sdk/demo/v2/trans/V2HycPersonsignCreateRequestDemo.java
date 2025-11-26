@@ -35,7 +35,7 @@ public class V2HycPersonsignCreateRequestDemo extends BaseCommonDemo {
         // 落地公司机构号
         request.setMinorAgentId("L20231113140106443");
         // 乐接活请求参数jsonObject格式 合作平台为乐接活时必传
-        // request.setLjhData(get994c979bC5cb4a098e051ddeb2fdcf26());
+        // request.setLjhData(get9da578f4F26f413a84051de657eb1c07());
 
         // 设置非必填字段
         Map<String, Object> extendInfoMap = getExtendInfos();
@@ -62,7 +62,7 @@ public class V2HycPersonsignCreateRequestDemo extends BaseCommonDemo {
         return extendInfoMap;
     }
 
-    private static String get994c979bC5cb4a098e051ddeb2fdcf26() {
+    private static String get9da578f4F26f413a84051de657eb1c07() {
         JSONObject dto = new JSONObject();
         // 合同模板id合作平台为乐接活时必填 数字格式
         // dto.put("contract_template_id", "test");

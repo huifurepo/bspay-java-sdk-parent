@@ -60,15 +60,15 @@ public class V3TradePaymentScanpayRefundRequestDemo extends BaseCommonDemo {
         // 原交易请求流水号
         // extendInfoMap.put("org_req_seq_id", "");
         // 分账对象
-        // extendInfoMap.put("acct_split_bunch", get8e93a7827a1d46e888a74d04308badd6());
+        // extendInfoMap.put("acct_split_bunch", get4629bffb4aeb4056BccfD91677682781());
         // 聚合正扫微信拓展参数集合
-        // extendInfoMap.put("wx_data", get5b74ce8bEc2c45a58286447e7e6621cb());
+        // extendInfoMap.put("wx_data", get8127ea82Bb624aa79327Cc2f375d3de1());
         // 数字货币扩展参数集合
-        // extendInfoMap.put("digital_currency_data", get4c1bd5af86214ed6974bC5ff5d64ca9c());
+        // extendInfoMap.put("digital_currency_data", get200ed59d3a0446c68e4c07c854b89648());
         // 补贴支付信息
-        // extendInfoMap.put("combinedpay_data", getCb401253Bd744c95Aa62C8e630c58087());
+        // extendInfoMap.put("combinedpay_data", getC44b0e407056405aAd573d294d10ef39());
         // 补贴支付手续费承担方信息
-        // extendInfoMap.put("combinedpay_data_fee_info", get9f7f55ed457e450dBfb1863a3c2af720());
+        // extendInfoMap.put("combinedpay_data_fee_info", get3920c70aA6c149efBce679fc1c8d0819());
         // 备注
         // extendInfoMap.put("remark", "");
         // 是否垫资退款
@@ -78,17 +78,17 @@ public class V3TradePaymentScanpayRefundRequestDemo extends BaseCommonDemo {
         // 垫资账户类型
         // extendInfoMap.put("loan_acct_type", "");
         // 安全信息
-        // extendInfoMap.put("risk_check_data", get550ccaf0Be804a21A6c09ddc20cc2fcd());
+        // extendInfoMap.put("risk_check_data", get0b045ad32faa435bBd5574b03e9e9e98());
         // 设备信息
-        // extendInfoMap.put("terminal_device_data", get83812a8eE7ad4bd39aa3A624b5f7f788());
+        // extendInfoMap.put("terminal_device_data", get411d7c00147943a3965dF6bba761ee53());
         // 异步通知地址
         // extendInfoMap.put("notify_url", "");
         // 银联参数集合
-        // extendInfoMap.put("unionpay_data", get622f9aa969c64703B9883e664feb9a03());
+        // extendInfoMap.put("unionpay_data", getCc367526F93249e6A323E13395783a0a());
         return extendInfoMap;
     }
 
-    private static JSON getC12608a1C366480b84d8Efe811b82566() {
+    private static JSON get87cc28b5Fc79456cB1a59d08e88fe304() {
         JSONObject dto = new JSONObject();
         // 分账金额
         // dto.put("div_amt", "test");
@@ -102,15 +102,15 @@ public class V3TradePaymentScanpayRefundRequestDemo extends BaseCommonDemo {
         return dtoList;
     }
 
-    private static String get8e93a7827a1d46e888a74d04308badd6() {
+    private static String get4629bffb4aeb4056BccfD91677682781() {
         JSONObject dto = new JSONObject();
         // 分账信息列表
-        // dto.put("acct_infos", getC12608a1C366480b84d8Efe811b82566());
+        // dto.put("acct_infos", get87cc28b5Fc79456cB1a59d08e88fe304());
 
         return dto.toJSONString();
     }
 
-    private static JSON get3cb43b9c37414e9c8d6eC25984bf20c0() {
+    private static JSON get0059e5f35941405694a8B9ff28bd7946() {
         JSONObject dto = new JSONObject();
         // 商品编码
         // dto.put("goods_id", "test");
@@ -130,23 +130,25 @@ public class V3TradePaymentScanpayRefundRequestDemo extends BaseCommonDemo {
         return dtoList;
     }
 
-    private static JSON get54250eda110c479683a834054605a71e() {
+    private static JSON get0dbb50d42cbf47d9Bf0929cb435e6de5() {
         JSONObject dto = new JSONObject();
         // 商品详情列表
-        // dto.put("goods_detail", get3cb43b9c37414e9c8d6eC25984bf20c0());
+        // dto.put("goods_detail", get0059e5f35941405694a8B9ff28bd7946());
 
         return dto;
     }
 
-    private static String get5b74ce8bEc2c45a58286447e7e6621cb() {
+    private static String get8127ea82Bb624aa79327Cc2f375d3de1() {
         JSONObject dto = new JSONObject();
         // 退款商品详情
-        // dto.put("detail", get54250eda110c479683a834054605a71e());
+        // dto.put("detail", get0dbb50d42cbf47d9Bf0929cb435e6de5());
+        // 退款原因
+        // dto.put("refund_desc", "");
 
         return dto.toJSONString();
     }
 
-    private static String get4c1bd5af86214ed6974bC5ff5d64ca9c() {
+    private static String get200ed59d3a0446c68e4c07c854b89648() {
         JSONObject dto = new JSONObject();
         // 退款原因
         // dto.put("refund_desc", "");
@@ -154,7 +156,7 @@ public class V3TradePaymentScanpayRefundRequestDemo extends BaseCommonDemo {
         return dto.toJSONString();
     }
 
-    private static String getCb401253Bd744c95Aa62C8e630c58087() {
+    private static String getC44b0e407056405aAd573d294d10ef39() {
         JSONObject dto = new JSONObject();
         // 汇付商户号
         // dto.put("huifu_id", "test");
@@ -170,7 +172,7 @@ public class V3TradePaymentScanpayRefundRequestDemo extends BaseCommonDemo {
         return dtoList.toJSONString();
     }
 
-    private static String get9f7f55ed457e450dBfb1863a3c2af720() {
+    private static String get3920c70aA6c149efBce679fc1c8d0819() {
         JSONObject dto = new JSONObject();
         // 补贴支付手续费承担方汇付编号
         // dto.put("huifu_id", "");
@@ -180,7 +182,7 @@ public class V3TradePaymentScanpayRefundRequestDemo extends BaseCommonDemo {
         return dto.toJSONString();
     }
 
-    private static String get550ccaf0Be804a21A6c09ddc20cc2fcd() {
+    private static String get0b045ad32faa435bBd5574b03e9e9e98() {
         JSONObject dto = new JSONObject();
         // ip地址
         // dto.put("ip_addr", "");
@@ -194,7 +196,7 @@ public class V3TradePaymentScanpayRefundRequestDemo extends BaseCommonDemo {
         return dto.toJSONString();
     }
 
-    private static String get83812a8eE7ad4bd39aa3A624b5f7f788() {
+    private static String get411d7c00147943a3965dF6bba761ee53() {
         JSONObject dto = new JSONObject();
         // 设备类型
         // dto.put("device_type", "");
@@ -216,7 +218,7 @@ public class V3TradePaymentScanpayRefundRequestDemo extends BaseCommonDemo {
         return dto.toJSONString();
     }
 
-    private static String get622f9aa969c64703B9883e664feb9a03() {
+    private static String getCc367526F93249e6A323E13395783a0a() {
         JSONObject dto = new JSONObject();
         // 收款方附加数据
         // dto.put("addn_data", "");
