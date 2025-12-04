@@ -17,7 +17,11 @@
             <artifactId>dg-java-sdk</artifactId>
             <version>3.0.32</version>
         </dependency>
-
+        <dependency>
+            <groupId>com.huifu.dg.lightning.sdk</groupId>
+            <artifactId>dg-lightning-sdk</artifactId>
+            <version>1.0.3</version>
+        </dependency>
         <!-- test dependency -->
         <dependency>
             <groupId>junit</groupId>
