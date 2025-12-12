@@ -12,10 +12,12 @@ import com.huifu.dg.lightning.utils.SequenceTools;
 import java.util.Map;
 
 /**
- * @description: 扫码交易关单
- * @author: wang.hu_c
- * @date: 2025年08月28日
- */
+ *
+ *   本示例代码仅用于展示如何聚合交易关单
+ *      文档 https://paas.huifu.com/open/doc/lightning/#/api/扫码交易关单
+ *      api https://api.huifu.com/v2/trade/payment/scanpay/close
+ *   真实数据。Use at your own risk.
+ *  */
 public class TradePaymentScanpayCloseTest {
     public static void transCloseQuery() throws Exception {
         BaseCommonDemoV4.doInit(OppsMerchantConfigDemo.getMerchantConfig());

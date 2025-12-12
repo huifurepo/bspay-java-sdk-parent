@@ -16,9 +16,11 @@ import org.jetbrains.annotations.NotNull;
 import java.util.Map;
 
 /**
- * @author bo.dong
- * @date 2025/10/13 10:40
- * @description微信公众号支付demo
+ *
+ * 本示例代码仅用于展示如何访问
+ *    文档 https://paas.huifu.com/open/doc/lightning/#/api/聚合支付下单
+ *    api https://api.huifu.com/v4/trade/payment/create
+ * 真实数据。Use at your own risk.
  */
 public class T_JSAPITest {
 

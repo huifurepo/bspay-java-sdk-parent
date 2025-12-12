@@ -12,10 +12,12 @@ import com.huifu.dg.lightning.utils.BasePay;
 import java.util.Map;
 
 /**
- * @description: 扫码交易退款
- * @author: wang.hu_c
- * @date: 2025年08月28日
- */
+ *
+ *   本示例代码仅用于展示如何交易退款查询
+ *      文档 https://paas.huifu.com/open/doc/lightning/#/api/交易退款查询
+ *      api https://api.huifu.com/v4/trade/payment/scanpay/refundquery
+ *   真实数据。Use at your own risk.
+ *  */
 public class TradePaymentScanpayRefundTest {
     public static void transRefund() throws Exception {
         BaseCommonDemoV4.doInit(OppsMerchantConfigDemo.getMerchantConfig());

@@ -15,14 +15,17 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.Map;
 /**
- * @author bo.dong
- * @date 2025/10/13 11:23
- * @description 支付宝正扫支付及支付宝JS支付参考该demo
+ *
+ * 本示例代码仅用于展示如何访问
+ *    文档 https://paas.huifu.com/open/doc/lightning/#/api/聚合支付下单
+ *    api https://api.huifu.com/v4/trade/payment/create
+ * 真实数据。Use at your own risk.
  */
 public class A_JSAPITest {
     public static void main(String[] args) throws Exception {
         A_JSAPI_PROD();
     }
+
     public static void A_JSAPI_PROD() throws Exception{
         // 初始化商户配置（与v2一样都需要单独初始化一次）
         BaseCommonDemoV4.doInit(OppsMerchantConfigDemo.getMerchantConfig());

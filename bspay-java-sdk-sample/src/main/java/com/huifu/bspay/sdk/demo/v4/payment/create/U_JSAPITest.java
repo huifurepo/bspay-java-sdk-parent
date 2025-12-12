@@ -16,9 +16,11 @@ import org.jetbrains.annotations.NotNull;
 import java.util.Map;
 
 /**
- * @author bo.dong
- * @date 2025/10/13 11:23
- * @description 银联JS支付demo
+ *
+ * 本示例代码仅用于展示如何访问
+ *    文档 https://paas.huifu.com/open/doc/lightning/#/api/聚合支付下单
+ *    api https://api.huifu.com/v4/trade/payment/create
+ * 真实数据。Use at your own risk.
  */
 public class U_JSAPITest {
     public static void main(String[] args) throws Exception {

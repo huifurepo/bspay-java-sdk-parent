@@ -1,6 +1,7 @@
 欢迎使用 斗拱SDK for Java 。
 
 斗拱SDK for Java让您不用复杂编程即可访斗拱开放平台开放的各项能力，SDK可以自动帮您满足能力调用过程中所需的证书校验、加签、验签、发送HTTP请求等非功能性要求。
+同时，斗拱dg-lightning-sdk提供聚合支付快速接入能力，能大大提升商户接入效率，可以参考dougong-java-lightning-sdk项目，主要包括交易创建、交易查询、交易关闭、交易退款、交易关闭查询、交易退款查询。
 
 ## 环境要求
 1.  斗拱SDK for Java 需要使用`JKD 1.8`或其以上版本。
@@ -16,6 +17,11 @@
           <groupId>com.huifu.bspay.sdk</groupId>
           <artifactId>dg-java-sdk</artifactId>
           <version>3.0.2</version>
+        </dependency>
+        <dependency>
+            <groupId>com.huifu.dg.lightning.sdk</groupId>
+            <artifactId>dg-lightning-sdk</artifactId>
+            <version>1.0.3</version>
         </dependency>
         <dependency>
             <groupId>com.alibaba</groupId>
