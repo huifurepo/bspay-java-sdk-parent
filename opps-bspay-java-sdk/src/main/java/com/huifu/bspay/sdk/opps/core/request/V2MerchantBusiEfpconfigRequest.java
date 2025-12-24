@@ -62,7 +62,7 @@ public class V2MerchantBusiEfpconfigRequest extends BaseRequest {
     @JSONField(name = "sign_user_info")
     private String signUserInfo;
     /**
-     * 入账来源开通全域资金时需填写；01:抖音 02:美团 03:快手 04:拼多多 05:小红书 06:淘宝/天猫/飞猪 07:微信视频号/微信小店 08:京东 09:饿了么 11:得物 12:唯品会 13:携程 14:支付宝直连 15:微信直连 16:滴滴加油 17:团油 18:通联 19:易宝 20:百度 21:顺丰22:希音 多个逗号分隔；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：01,02,05&lt;/font&gt;；
+     * 入账来源开通全域资金时需填写；01:抖音 02:美团 03:快手 04:拼多多 05:小红书 06:淘宝/天猫/飞猪 07:微信视频号/微信小店 08:京东 09:饿了么 11:得物 12:唯品会 13:携程 14:支付宝直连 15:微信直连 16:滴滴加油 17:团油 18:通联 19:易宝 20:百度 21:顺丰22:希音23:高德 多个逗号分隔；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：01,02,05&lt;/font&gt;；
      */
     @JSONField(name = "acct_source")
     private String acctSource;
@@ -181,6 +181,11 @@ public class V2MerchantBusiEfpconfigRequest extends BaseRequest {
      */
     @JSONField(name = "xy_cooperation_prove_pic")
     private String xyCooperationProvePic;
+    /**
+     * 高德合作证明材料入账来源包含23:高德时必填 文件类型F615；详见[文件类型说明](https://paas.huifu.com/open/doc/api/#/csfl/api_csfl_wjlx)；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：57cc7f00-600a-33ab-b614-6221bbf2e530&lt;/font&gt;
+     */
+    @JSONField(name = "gd_cooperation_prove_pic")
+    private String gdCooperationProvePic;
 
     @Override
     public FunctionCodeEnum getFunctionCode() {
@@ -190,7 +195,7 @@ public class V2MerchantBusiEfpconfigRequest extends BaseRequest {
     public V2MerchantBusiEfpconfigRequest() {
     }
 
-    public V2MerchantBusiEfpconfigRequest(String reqSeqId, String reqDate, String huifuId, String upperHuifuId, String outFeeHuifuid, String outOrderAcctCard, String outOrderAcctOpenFees, String businessModel, String outFundsGateId, String signUserInfo, String acctSource, String dyCooperationProvePic, String mtCooperationProvePic, String ksCooperationProvePic, String pddCooperationProvePic, String xhsCooperationProvePic, String zfbCooperationProvePic, String wxCooperationProvePic, String jdCooperationProvePic, String elmCooperationProvePic, String dwCooperationProvePic, String wphCooperationProvePic, String xcCooperationProvePic, String zfbzlCooperationProvePic, String wxzlCooperationProvePic, String ddjyCooperationProvePic, String tyCooperationProvePic, String tlCooperationProvePic, String ybCooperationProvePic, String efpPaperAgreementFile, String bdCooperationProvePic, String mainStoreHuifuId, String sfCooperationProvePic, String xyCooperationProvePic) {
+    public V2MerchantBusiEfpconfigRequest(String reqSeqId, String reqDate, String huifuId, String upperHuifuId, String outFeeHuifuid, String outOrderAcctCard, String outOrderAcctOpenFees, String businessModel, String outFundsGateId, String signUserInfo, String acctSource, String dyCooperationProvePic, String mtCooperationProvePic, String ksCooperationProvePic, String pddCooperationProvePic, String xhsCooperationProvePic, String zfbCooperationProvePic, String wxCooperationProvePic, String jdCooperationProvePic, String elmCooperationProvePic, String dwCooperationProvePic, String wphCooperationProvePic, String xcCooperationProvePic, String zfbzlCooperationProvePic, String wxzlCooperationProvePic, String ddjyCooperationProvePic, String tyCooperationProvePic, String tlCooperationProvePic, String ybCooperationProvePic, String efpPaperAgreementFile, String bdCooperationProvePic, String mainStoreHuifuId, String sfCooperationProvePic, String xyCooperationProvePic, String gdCooperationProvePic) {
         this.reqSeqId = reqSeqId;
         this.reqDate = reqDate;
         this.huifuId = huifuId;
@@ -225,6 +230,7 @@ public class V2MerchantBusiEfpconfigRequest extends BaseRequest {
         this.mainStoreHuifuId = mainStoreHuifuId;
         this.sfCooperationProvePic = sfCooperationProvePic;
         this.xyCooperationProvePic = xyCooperationProvePic;
+        this.gdCooperationProvePic = gdCooperationProvePic;
     }
 
     public String getReqSeqId() {
@@ -497,6 +503,14 @@ public class V2MerchantBusiEfpconfigRequest extends BaseRequest {
 
     public void setXyCooperationProvePic(String xyCooperationProvePic) {
         this.xyCooperationProvePic = xyCooperationProvePic;
+    }
+
+    public String getGdCooperationProvePic() {
+        return gdCooperationProvePic;
+    }
+
+    public void setGdCooperationProvePic(String gdCooperationProvePic) {
+        this.gdCooperationProvePic = gdCooperationProvePic;
     }
 
 }

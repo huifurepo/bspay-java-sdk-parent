@@ -39,7 +39,7 @@ public class V2FlexibleTradeRequestDemo extends BaseCommonDemo {
         // 支付金额
         request.setOrdAmt("20");
         // 分账对象
-        request.setAcctSplitBunch(get5ff7863bFba14fd185823535ee0a9e52());
+        request.setAcctSplitBunch(get2cfe14563b14475eBbdfD9392f16df9d());
 
         // 设置非必填字段
         Map<String, Object> extendInfoMap = getExtendInfos();
@@ -64,7 +64,7 @@ public class V2FlexibleTradeRequestDemo extends BaseCommonDemo {
         return extendInfoMap;
     }
 
-    private static JSON get875acdbcEff4424dBa4551dffa06d840() {
+    private static JSON get82ee536eE9db4db2A5151412ac55ccc9() {
         JSONObject dto = new JSONObject();
         // 分账金额
         dto.put("div_amt", "20.00");
@@ -76,10 +76,10 @@ public class V2FlexibleTradeRequestDemo extends BaseCommonDemo {
         return dto;
     }
 
-    private static String get5ff7863bFba14fd185823535ee0a9e52() {
+    private static String get2cfe14563b14475eBbdfD9392f16df9d() {
         JSONObject dto = new JSONObject();
         // 分账明细
-        dto.put("acct_info", get875acdbcEff4424dBa4551dffa06d840());
+        dto.put("acct_info", get82ee536eE9db4db2A5151412ac55ccc9());
 
         return dto.toJSONString();
     }

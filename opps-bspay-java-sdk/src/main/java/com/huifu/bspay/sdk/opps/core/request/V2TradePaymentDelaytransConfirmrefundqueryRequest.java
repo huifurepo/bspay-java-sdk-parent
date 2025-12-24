@@ -22,7 +22,7 @@ public class V2TradePaymentDelaytransConfirmrefundqueryRequest extends BaseReque
     @JSONField(name = "org_req_date")
     private String orgReqDate;
     /**
-     * 原交易请求流水号指交易确认请求流水号，org_req_seq_id和org_hf_seq_id二选一；&lt;br/&gt;&lt;font color&#x3D;&quot;green&quot;&gt;示例值：2021091708126665002&lt;/font&gt;
+     * 原交易请求流水号指交易确认退款请求流水号，org_req_seq_id和org_hf_seq_id二选一；&lt;br/&gt;&lt;font color&#x3D;&quot;green&quot;&gt;示例值：2021091708126665002&lt;/font&gt;
      */
     @JSONField(name = "org_req_seq_id")
     private String orgReqSeqId;

@@ -22,11 +22,6 @@ public class V2UserBusiModifyRequest extends BaseRequest {
     @JSONField(name = "req_date")
     private String reqDate;
     /**
-     * 渠道商/商户汇付Id
-     */
-    @JSONField(name = "upper_huifu_id")
-    private String upperHuifuId;
-    /**
      * 汇付ID
      */
     @JSONField(name = "huifu_id")
@@ -55,10 +50,9 @@ public class V2UserBusiModifyRequest extends BaseRequest {
     public V2UserBusiModifyRequest() {
     }
 
-    public V2UserBusiModifyRequest(String reqSeqId, String reqDate, String upperHuifuId, String huifuId, String ljhData, String signUserInfo, String hxyData) {
+    public V2UserBusiModifyRequest(String reqSeqId, String reqDate, String huifuId, String ljhData, String signUserInfo, String hxyData) {
         this.reqSeqId = reqSeqId;
         this.reqDate = reqDate;
-        this.upperHuifuId = upperHuifuId;
         this.huifuId = huifuId;
         this.ljhData = ljhData;
         this.signUserInfo = signUserInfo;
@@ -79,14 +73,6 @@ public class V2UserBusiModifyRequest extends BaseRequest {
 
     public void setReqDate(String reqDate) {
         this.reqDate = reqDate;
-    }
-
-    public String getUpperHuifuId() {
-        return upperHuifuId;
-    }
-
-    public void setUpperHuifuId(String upperHuifuId) {
-        this.upperHuifuId = upperHuifuId;
     }
 
     public String getHuifuId() {

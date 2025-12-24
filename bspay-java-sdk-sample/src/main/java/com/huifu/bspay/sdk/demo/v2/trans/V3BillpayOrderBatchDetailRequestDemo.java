@@ -8,16 +8,16 @@ import com.huifu.bspay.sdk.demo.init.OppsMerchantConfigDemo;
 import com.huifu.bspay.sdk.opps.core.utils.DateTools;
 import com.huifu.bspay.sdk.opps.core.utils.SequenceTools;
 import com.huifu.bspay.sdk.demo.core.Identify;
-import com.huifu.bspay.sdk.opps.core.request.V2TradePaymentDelaytransConfirmrefundqueryRequest;
+import com.huifu.bspay.sdk.opps.core.request.V3BillpayOrderBatchDetailRequest;
 
 /**
- * 交易确认退款查询 - 示例
+ * 查询批量账单数据 - 示例
  *
  * @author sdk-generator
  * @Description
  */
-@Identify(requestClass = V2TradePaymentDelaytransConfirmrefundqueryRequest.class)
-public class V2TradePaymentDelaytransConfirmrefundqueryRequestDemo extends BaseCommonDemo {
+@Identify(requestClass = V3BillpayOrderBatchDetailRequest.class)
+public class V3BillpayOrderBatchDetailRequestDemo extends BaseCommonDemo {
 
     public static void main(String[] args) throws Exception {
 
@@ -25,15 +25,19 @@ public class V2TradePaymentDelaytransConfirmrefundqueryRequestDemo extends BaseC
         doInit(OppsMerchantConfigDemo.getMerchantConfig());
 
         // 2.组装请求参数
-        V2TradePaymentDelaytransConfirmrefundqueryRequest request = new V2TradePaymentDelaytransConfirmrefundqueryRequest();
+        V3BillpayOrderBatchDetailRequest request = new V3BillpayOrderBatchDetailRequest();
+        // 请求流水号
+        request.setReqSeqId(SequenceTools.getReqSeqId32());
+        // 请求时间
+        request.setReqDate(DateTools.getCurrentDateYYYYMMDD());
         // 商户号
-        request.setHuifuId("6666000109133323");
-        // 原交易请求日期
-        request.setOrgReqDate("20240426");
-        // 原交易请求流水号指交易确认退款请求流水号，org_req_seq_id和org_hf_seq_id二选一；&lt;br/&gt;&lt;font color&#x3D;&quot;green&quot;&gt;示例值：2021091708126665002&lt;/font&gt;
-        request.setOrgReqSeqId("20211714122436");
-        // 原退款全局流水号原交易确认退款全局流水号。org_req_seq_id和org_hf_seq_id二选一；&lt;br/&gt;&lt;font color&#x3D;&quot;green&quot;&gt;示例值：003500TOP2B211021163242P447ac132fd200000&lt;/font&gt;
-        request.setOrgHfSeqId("003100TOP1A240513112100P256ac139cc000000");
+        request.setHuifuId("6666000123123123");
+        // 账单编号与原创建批量账单数据请求流水号二选一必填，&lt;font color&#x3D;&quot;green&quot;&gt;示例值：BN2025091279190693&lt;/font&gt;;
+        request.setBillNo("BN2025091279190693");
+        // 原创建批量账单数据请求流水号原创建批量账单数据请求流水号，同一商户号当天唯一；与帐单编号二选一必填
+        // request.setOriReqSeqId("test");
+        // 原创建批量账单数据请求日期原创建批量账单数据日期格式：yyyyMMdd，以北京时间为准；与帐单编号二选一必填
+        // request.setOriReqDate("test");
 
         // 设置非必填字段
         Map<String, Object> extendInfoMap = getExtendInfos();

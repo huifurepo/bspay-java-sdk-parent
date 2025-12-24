@@ -43,7 +43,7 @@ public class V2BillEntCreateRequestDemo extends BaseCommonDemo {
         // 账单截止日期
         request.setBillEndDate("20990909");
         // 收款人信息
-        request.setPayeeInfo(get0117bed87ef6433bAc7f831d09c77a76());
+        request.setPayeeInfo(get551f166fCcc84fb6Befa2c09afe1a330());
 
         // 设置非必填字段
         Map<String, Object> extendInfoMap = getExtendInfos();
@@ -64,9 +64,9 @@ public class V2BillEntCreateRequestDemo extends BaseCommonDemo {
         // 账单说明
         extendInfoMap.put("bill_remark", "您本次 SaaS 服务周期为[开始日期]至[结束日期]。费用包括基础服务套餐[X]元，高级功能模块[X]元，总计[X]元。");
         // 汇总信息
-        extendInfoMap.put("bill_summary_info", get00cfe2af4f494258A34084b55e2d10f9());
+        extendInfoMap.put("bill_summary_info", get64b854b2A3ed4adcB3c309c2db6991ab());
         // 更多信息
-        extendInfoMap.put("bill_extend_info", get0d92fec96d1c42aaA519B4fe44b194f4());
+        extendInfoMap.put("bill_extend_info", get940a51738e814906B871796535f30815());
         // 账单推送方式
         extendInfoMap.put("push_type", "EMAIL");
         // 抄送邮箱
@@ -80,7 +80,7 @@ public class V2BillEntCreateRequestDemo extends BaseCommonDemo {
         return extendInfoMap;
     }
 
-    private static String get00cfe2af4f494258A34084b55e2d10f9() {
+    private static String get64b854b2A3ed4adcB3c309c2db6991ab() {
         JSONObject dto = new JSONObject();
         // 字段名
         dto.put("extend_name", "账单金额");
@@ -92,7 +92,7 @@ public class V2BillEntCreateRequestDemo extends BaseCommonDemo {
         return dtoList.toJSONString();
     }
 
-    private static String get0d92fec96d1c42aaA519B4fe44b194f4() {
+    private static String get940a51738e814906B871796535f30815() {
         JSONObject dto = new JSONObject();
         // 字段名
         dto.put("extend_name", "备注");
@@ -104,7 +104,7 @@ public class V2BillEntCreateRequestDemo extends BaseCommonDemo {
         return dtoList.toJSONString();
     }
 
-    private static String get0117bed87ef6433bAc7f831d09c77a76() {
+    private static String get551f166fCcc84fb6Befa2c09afe1a330() {
         JSONObject dto = new JSONObject();
         // 收款联系人姓名
         dto.put("payee_name", "黄云");

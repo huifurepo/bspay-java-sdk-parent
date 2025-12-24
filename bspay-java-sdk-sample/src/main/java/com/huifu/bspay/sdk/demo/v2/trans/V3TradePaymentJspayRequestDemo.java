@@ -11,7 +11,7 @@ import com.huifu.bspay.sdk.demo.core.Identify;
 import com.huifu.bspay.sdk.opps.core.request.V3TradePaymentJspayRequest;
 
 /**
- * 应用场景 - 示例
+ * 聚合正扫 - 示例
  *
  * @author sdk-generator
  * @Description

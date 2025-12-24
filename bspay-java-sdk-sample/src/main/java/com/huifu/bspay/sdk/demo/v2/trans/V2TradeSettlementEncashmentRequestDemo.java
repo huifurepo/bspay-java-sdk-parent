@@ -59,6 +59,8 @@ public class V2TradeSettlementEncashmentRequestDemo extends BaseCommonDemo {
         // extendInfoMap.put("acct_id", "");
         // 取现渠道
         extendInfoMap.put("enchashment_channel", "00");
+        // 中信e账通手续费承担方
+        // extendInfoMap.put("fee_type", "");
         // 备注
         // extendInfoMap.put("remark", "");
         // 异步通知地址

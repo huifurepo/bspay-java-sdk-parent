@@ -5,7 +5,7 @@
 
     <groupId>com.huifu.bspay.sdk</groupId>
     <artifactId>dg-java-sdk</artifactId>
-    <version>3.0.32</version>
+    <version>3.0.33</version>
     <packaging>jar</packaging>
     <name>${project.artifactId} - ${project.version}</name>
     <inceptionYear>2021</inceptionYear>
@@ -45,7 +45,7 @@
                 <id>oss</id>
                 <url>https://oss.sonatype.org/content/repositories/snapshots</url>
             </snapshotRepository>-->
-   <!--     <repository>
+      <!--  <repository>
             <id>nexus</id>
             <name>Releases</name>
             <url>http://nexus.huifutest.com/repository/releases/</url>
@@ -54,8 +54,8 @@
             <id>nexus</id>
             <name>Snapshots</name>
             <url>http://nexus.huifutest.com/repository/snapshots/</url>
-        </snapshotRepository>-->
-
+        </snapshotRepository>
+-->
     </distributionManagement>
 
     <build>
@@ -70,17 +70,17 @@
                     <encoding>UTF-8</encoding>
                 </configuration>
             </plugin>
-       <!--     <plugin>
-                <groupId>org.sonatype.central</groupId>
-                <artifactId>central-publishing-maven-plugin</artifactId>
-                <version>0.8.0</version>
-                <extensions>true</extensions>
-                <configuration>
-                    <publishingServerId>central</publishingServerId>
-                    <autoPublish>true</autoPublish>
-                    <waitUntil>published</waitUntil>
-                </configuration>
-            </plugin>-->
+<!--            <plugin>-->
+<!--                <groupId>org.sonatype.central</groupId>-->
+<!--                <artifactId>central-publishing-maven-plugin</artifactId>-->
+<!--                <version>0.8.0</version>-->
+<!--                <extensions>true</extensions>-->
+<!--                <configuration>-->
+<!--                    <publishingServerId>central</publishingServerId>-->
+<!--                    <autoPublish>true</autoPublish>-->
+<!--                    <waitUntil>published</waitUntil>-->
+<!--                </configuration>-->
+<!--            </plugin>-->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-source-plugin</artifactId>

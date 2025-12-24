@@ -157,7 +157,7 @@ public class V2FlexibleEntRequest extends BaseRequest {
     @JSONField(name = "card_info")
     private String cardInfo;
     /**
-     * 签约人
+     * 签约人jsonObject格式；协议类型&#x3D;电子合同时，必填；
      */
     @JSONField(name = "sign_user_info")
     private String signUserInfo;

@@ -5,6 +5,34 @@ package com.huifu.bspay.sdk.opps.core.enums;
  * @Author: sdk-generator
  */
 public enum FunctionCodeEnum {
+    /**
+     * 账单数据状态变更
+     */
+    V3_BILLPAY_ORDER_CHANGESTAT("v3.billpay.order.changeStat", "账单数据状态变更"),
+    /**
+     * 账单退款接口
+     */
+    V3_BILLPAY_ORDER_PAYMENT_REFUND("v3.billpay.order.payment.refund", "账单退款接口"),
+    /**
+     * 账单数据短信通知
+     */
+    V3_BILLPAY_ORDER_BATCH_SMS("v3.billpay.order.batch.sms", "账单数据短信通知"),
+    /**
+     * 查询批量账单数据
+     */
+    V3_BILLPAY_ORDER_BATCH_DETAIL("v3.billpay.order.batch.detail", "查询批量账单数据"),
+    /**
+     * 创建批量账单数据
+     */
+    V3_BILLPAY_ORDER_BATCH_ADD("v3.billpay.order.batch.add", "创建批量账单数据"),
+    /**
+     * 商户多费率配置
+     */
+    V2_MERCHANT_BUSI_MULTIFEE_CONFIG("v2.merchant.busi.multiFee.config", "商户多费率配置"),
+    /**
+     * 商户多费率配置查询
+     */
+    V2_MERCHANT_BUSI_MULTIFEE_QUERY("v2.merchant.busi.multiFee.query", "商户多费率配置查询"),
 
     /**
      * 提现记录查询
@@ -219,9 +247,9 @@ public enum FunctionCodeEnum {
      */
     V3_TRADE_PAYMENT_SCANPAY_QUERY("v3.trade.payment.scanpay.query", "扫码交易查询"),
     /**
-     * 应用场景
+     * 聚合正扫
      */
-    V3_TRADE_PAYMENT_JSPAY("v3.trade.payment.jspay", "应用场景"),
+    V3_TRADE_PAYMENT_JSPAY("v3.trade.payment.jspay", "聚合正扫"),
     /**
      * 聚合反扫
      */

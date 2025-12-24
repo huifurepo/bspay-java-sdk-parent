@@ -8,16 +8,16 @@ import com.huifu.bspay.sdk.demo.init.OppsMerchantConfigDemo;
 import com.huifu.bspay.sdk.opps.core.utils.DateTools;
 import com.huifu.bspay.sdk.opps.core.utils.SequenceTools;
 import com.huifu.bspay.sdk.demo.core.Identify;
-import com.huifu.bspay.sdk.opps.core.request.V2TradePaymentDelaytransConfirmrefundqueryRequest;
+import com.huifu.bspay.sdk.opps.core.request.V3BillpayOrderBatchSmsRequest;
 
 /**
- * 交易确认退款查询 - 示例
+ * 账单数据短信通知 - 示例
  *
  * @author sdk-generator
  * @Description
  */
-@Identify(requestClass = V2TradePaymentDelaytransConfirmrefundqueryRequest.class)
-public class V2TradePaymentDelaytransConfirmrefundqueryRequestDemo extends BaseCommonDemo {
+@Identify(requestClass = V3BillpayOrderBatchSmsRequest.class)
+public class V3BillpayOrderBatchSmsRequestDemo extends BaseCommonDemo {
 
     public static void main(String[] args) throws Exception {
 
@@ -25,15 +25,15 @@ public class V2TradePaymentDelaytransConfirmrefundqueryRequestDemo extends BaseC
         doInit(OppsMerchantConfigDemo.getMerchantConfig());
 
         // 2.组装请求参数
-        V2TradePaymentDelaytransConfirmrefundqueryRequest request = new V2TradePaymentDelaytransConfirmrefundqueryRequest();
+        V3BillpayOrderBatchSmsRequest request = new V3BillpayOrderBatchSmsRequest();
+        // 请求流水号
+        request.setReqSeqId(SequenceTools.getReqSeqId32());
+        // 请求时间
+        request.setReqDate(DateTools.getCurrentDateYYYYMMDD());
         // 商户号
-        request.setHuifuId("6666000109133323");
-        // 原交易请求日期
-        request.setOrgReqDate("20240426");
-        // 原交易请求流水号指交易确认退款请求流水号，org_req_seq_id和org_hf_seq_id二选一；&lt;br/&gt;&lt;font color&#x3D;&quot;green&quot;&gt;示例值：2021091708126665002&lt;/font&gt;
-        request.setOrgReqSeqId("20211714122436");
-        // 原退款全局流水号原交易确认退款全局流水号。org_req_seq_id和org_hf_seq_id二选一；&lt;br/&gt;&lt;font color&#x3D;&quot;green&quot;&gt;示例值：003500TOP2B211021163242P447ac132fd200000&lt;/font&gt;
-        request.setOrgHfSeqId("003100TOP1A240513112100P256ac139cc000000");
+        request.setHuifuId("6666000107755175");
+        // 账单编号
+        request.setBillNo("BN2025102780101834");
 
         // 设置非必填字段
         Map<String, Object> extendInfoMap = getExtendInfos();
