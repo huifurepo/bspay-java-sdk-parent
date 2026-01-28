@@ -50,15 +50,15 @@ public class V2PcreditFeeConfigRequestDemo extends BaseCommonDemo {
         // 异步通知地址
         extendInfoMap.put("async_return_url", "http://192.168.85.157:30031/sspm/testVirgo");
         // 花呗分期费率
-        extendInfoMap.put("hb_fq_fee_list", get33058a553e95455aA0255248d770c221());
+        extendInfoMap.put("hb_fq_fee_list", get05b26244F3754368911e63e76d5d79a8());
         // 白条分期配置对象
-        // extendInfoMap.put("jdbt_data", get5c64baa01d644dac8995286b4cffca1b());
+        // extendInfoMap.put("jdbt_data", get5ed415516215448cAa71B459248bb501());
         // 银联聚分期配置对象
-        // extendInfoMap.put("yljfq_data", getD940990307634ddcBaafDcdb0dd06c87());
+        // extendInfoMap.put("yljfq_data", get3d393069Ef9f439fA8845a37ee62815b());
         return extendInfoMap;
     }
 
-    private static String get33058a553e95455aA0255248d770c221() {
+    private static String get05b26244F3754368911e63e76d5d79a8() {
         JSONObject dto = new JSONObject();
         // 商户汇付Id
         dto.put("huifu_id", "6666000003156435");
@@ -98,7 +98,7 @@ public class V2PcreditFeeConfigRequestDemo extends BaseCommonDemo {
         return dtoList.toJSONString();
     }
 
-    private static JSON get8e5138faDdb344b6805a94d933246d0d() {
+    private static JSON getBf2960d0062d419582e82c814aaee6b9() {
         JSONObject dto = new JSONObject();
         // 支付场景
         // dto.put("pay_scene", "test");
@@ -122,7 +122,7 @@ public class V2PcreditFeeConfigRequestDemo extends BaseCommonDemo {
         return dtoList;
     }
 
-    private static String get5c64baa01d644dac8995286b4cffca1b() {
+    private static String get5ed415516215448cAa71B459248bb501() {
         JSONObject dto = new JSONObject();
         // 商户汇付Id
         // dto.put("huifu_id", "test");
@@ -133,7 +133,7 @@ public class V2PcreditFeeConfigRequestDemo extends BaseCommonDemo {
         // 挂网协议地址3-挂网协议必填；示例值：https://cloudpnrcdn.oss-cn-shanghai.aliyuncs.com/opps/api/prod/dg_gwxy/PaymentServiceAgreement_xxxx.html
         // dto.put("agreement_url", "test");
         // 京东白条费率数据
-        // dto.put("jdbt_fee_data", get8e5138faDdb344b6805a94d933246d0d());
+        // dto.put("jdbt_fee_data", getBf2960d0062d419582e82c814aaee6b9());
         // 签约人姓名
         // dto.put("name", "");
         // 签约人身份证号
@@ -144,7 +144,7 @@ public class V2PcreditFeeConfigRequestDemo extends BaseCommonDemo {
         return dto.toJSONString();
     }
 
-    private static JSON get582500aeD6b3421eAfa3Aacb46bbc89c() {
+    private static JSON getA022abb7Afe746bb8a807f05ed2d6608() {
         JSONObject dto = new JSONObject();
         // 支付场景
         // dto.put("pay_scene", "test");
@@ -168,7 +168,7 @@ public class V2PcreditFeeConfigRequestDemo extends BaseCommonDemo {
         return dtoList;
     }
 
-    private static JSON get5b3906c269e9412387cf7c5707a32c92() {
+    private static JSON getC4eed850Ec61447c977420b8d9e86d56() {
         JSONObject dto = new JSONObject();
         // 文件id
         // dto.put("file_id", "test");
@@ -180,7 +180,7 @@ public class V2PcreditFeeConfigRequestDemo extends BaseCommonDemo {
         return dtoList;
     }
 
-    private static String getD940990307634ddcBaafDcdb0dd06c87() {
+    private static String get3d393069Ef9f439fA8845a37ee62815b() {
         JSONObject dto = new JSONObject();
         // 商户汇付Id
         // dto.put("huifu_id", "test");
@@ -189,13 +189,13 @@ public class V2PcreditFeeConfigRequestDemo extends BaseCommonDemo {
         // 签约人手机号
         // dto.put("mobile_no", "test");
         // 银联聚分期费率数据
-        // dto.put("yljfq_fee_data", get582500aeD6b3421eAfa3Aacb46bbc89c());
+        // dto.put("yljfq_fee_data", getA022abb7Afe746bb8a807f05ed2d6608());
         // 签约人姓名
         // dto.put("name", "");
         // 签约人身份证号
         // dto.put("cert_no", "");
         // 补充业务信息
-        // dto.put("file_list", get5b3906c269e9412387cf7c5707a32c92());
+        // dto.put("file_list", getC4eed850Ec61447c977420b8d9e86d56());
 
         return dto.toJSONString();
     }

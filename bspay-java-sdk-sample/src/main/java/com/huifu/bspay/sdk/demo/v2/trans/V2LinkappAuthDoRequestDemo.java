@@ -63,6 +63,8 @@ public class V2LinkappAuthDoRequestDemo extends BaseCommonDemo {
         Map<String, Object> extendInfoMap = new HashMap<>();
         // 回调地址
         // extendInfoMap.put("callback_url", "");
+        // 额外业务参数
+        // extendInfoMap.put("erp_biz_params", "");
         // 
         // extendInfoMap.put("以下仅RPA授权输入", "");
         // 登录账号名称

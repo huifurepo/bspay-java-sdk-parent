@@ -32,7 +32,7 @@ public class V2MerchantBusiModifyRequest extends BaseRequest {
     @JSONField(name = "online_busi_type")
     private String onlineBusiType;
     /**
-     * 签约人jsonObject格式；agreement_info中选择电子签约时必填；个人商户填本人信息。
+     * 签约人jsonObject字符串；agreement_info中选择电子签约时必填；个人商户填本人信息。
      */
     @JSONField(name = "sign_user_info")
     private String signUserInfo;

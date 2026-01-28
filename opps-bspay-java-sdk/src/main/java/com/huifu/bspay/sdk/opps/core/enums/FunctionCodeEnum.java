@@ -6,6 +6,10 @@ package com.huifu.bspay.sdk.opps.core.enums;
  */
 public enum FunctionCodeEnum {
     /**
+     * 拆单支付订单查询
+     */
+    V2_TRADE_HOSTING_PAYMENT_SPLITPAY_QUERY("v2.trade.hosting.payment.splitpay.query", "拆单支付订单查询"),
+    /**
      * 账单数据状态变更
      */
     V3_BILLPAY_ORDER_CHANGESTAT("v3.billpay.order.changeStat", "账单数据状态变更"),
@@ -247,9 +251,9 @@ public enum FunctionCodeEnum {
      */
     V3_TRADE_PAYMENT_SCANPAY_QUERY("v3.trade.payment.scanpay.query", "扫码交易查询"),
     /**
-     * 聚合正扫
+     * 应用场景
      */
-    V3_TRADE_PAYMENT_JSPAY("v3.trade.payment.jspay", "聚合正扫"),
+    V3_TRADE_PAYMENT_JSPAY("v3.trade.payment.jspay", "应用场景"),
     /**
      * 聚合反扫
      */

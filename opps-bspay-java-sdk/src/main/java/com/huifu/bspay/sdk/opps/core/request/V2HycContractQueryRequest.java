@@ -21,6 +21,11 @@ public class V2HycContractQueryRequest extends BaseRequest {
      */
     @JSONField(name = "req_date")
     private String reqDate;
+    /**
+     * 合同编号
+     */
+    @JSONField(name = "contract_id")
+    private String contractId;
 
     @Override
     public FunctionCodeEnum getFunctionCode() {
@@ -30,9 +35,10 @@ public class V2HycContractQueryRequest extends BaseRequest {
     public V2HycContractQueryRequest() {
     }
 
-    public V2HycContractQueryRequest(String reqSeqId, String reqDate) {
+    public V2HycContractQueryRequest(String reqSeqId, String reqDate, String contractId) {
         this.reqSeqId = reqSeqId;
         this.reqDate = reqDate;
+        this.contractId = contractId;
     }
 
     public String getReqSeqId() {
@@ -49,6 +55,14 @@ public class V2HycContractQueryRequest extends BaseRequest {
 
     public void setReqDate(String reqDate) {
         this.reqDate = reqDate;
+    }
+
+    public String getContractId() {
+        return contractId;
+    }
+
+    public void setContractId(String contractId) {
+        this.contractId = contractId;
     }
 
 }

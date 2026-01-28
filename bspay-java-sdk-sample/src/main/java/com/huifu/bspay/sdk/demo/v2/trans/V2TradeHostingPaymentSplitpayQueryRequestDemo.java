@@ -8,16 +8,16 @@ import com.huifu.bspay.sdk.demo.init.OppsMerchantConfigDemo;
 import com.huifu.bspay.sdk.opps.core.utils.DateTools;
 import com.huifu.bspay.sdk.opps.core.utils.SequenceTools;
 import com.huifu.bspay.sdk.demo.core.Identify;
-import com.huifu.bspay.sdk.opps.core.request.V2HycContractQueryRequest;
+import com.huifu.bspay.sdk.opps.core.request.V2TradeHostingPaymentSplitpayQueryRequest;
 
 /**
- * 个人签约状态查询 - 示例
+ * 拆单支付订单查询 - 示例
  *
  * @author sdk-generator
  * @Description
  */
-@Identify(requestClass = V2HycContractQueryRequest.class)
-public class V2HycContractQueryRequestDemo extends BaseCommonDemo {
+@Identify(requestClass = V2TradeHostingPaymentSplitpayQueryRequest.class)
+public class V2TradeHostingPaymentSplitpayQueryRequestDemo extends BaseCommonDemo {
 
     public static void main(String[] args) throws Exception {
 
@@ -25,13 +25,17 @@ public class V2HycContractQueryRequestDemo extends BaseCommonDemo {
         doInit(OppsMerchantConfigDemo.getMerchantConfig());
 
         // 2.组装请求参数
-        V2HycContractQueryRequest request = new V2HycContractQueryRequest();
-        // 请求流水号
-        request.setReqSeqId(SequenceTools.getReqSeqId32());
+        V2TradeHostingPaymentSplitpayQueryRequest request = new V2TradeHostingPaymentSplitpayQueryRequest();
         // 请求日期
         request.setReqDate(DateTools.getCurrentDateYYYYMMDD());
-        // 合同编号
-        request.setContractId("202401120202733426");
+        // 请求流水号
+        request.setReqSeqId(SequenceTools.getReqSeqId32());
+        // 商户号
+        request.setHuifuId("6666000109133323");
+        // 原交易请求日期
+        request.setOrgReqDate("20231020");
+        // 原交易请求流水号
+        request.setOrgReqSeqId("202310201652361987182512");
 
         // 设置非必填字段
         Map<String, Object> extendInfoMap = getExtendInfos();
@@ -49,8 +53,6 @@ public class V2HycContractQueryRequestDemo extends BaseCommonDemo {
     private static Map<String, Object> getExtendInfos() {
         // 设置非必填字段
         Map<String, Object> extendInfoMap = new HashMap<>();
-        // 合作平台
-        // extendInfoMap.put("lg_platform_type", "");
         return extendInfoMap;
     }
 

@@ -4,12 +4,12 @@ import com.alibaba.fastjson.annotation.JSONField;
 import com.huifu.bspay.sdk.opps.core.enums.FunctionCodeEnum;
 
 /**
- * 应用场景
+ * 拆单支付订单查询
  *
  * @author sdk-generator
  * @Description
  */
-public class V3TradePaymentJspayRequest extends BaseRequest {
+public class V2TradeHostingPaymentSplitpayQueryRequest extends BaseRequest {
 
     /**
      * 请求日期
@@ -27,36 +27,30 @@ public class V3TradePaymentJspayRequest extends BaseRequest {
     @JSONField(name = "huifu_id")
     private String huifuId;
     /**
-     * 商品描述
+     * 原交易请求日期
      */
-    @JSONField(name = "goods_desc")
-    private String goodsDesc;
+    @JSONField(name = "org_req_date")
+    private String orgReqDate;
     /**
-     * 交易类型
+     * 原交易请求流水号
      */
-    @JSONField(name = "trade_type")
-    private String tradeType;
-    /**
-     * 交易金额
-     */
-    @JSONField(name = "trans_amt")
-    private String transAmt;
+    @JSONField(name = "org_req_seq_id")
+    private String orgReqSeqId;
 
     @Override
     public FunctionCodeEnum getFunctionCode() {
-        return FunctionCodeEnum.V3_TRADE_PAYMENT_JSPAY;
+        return FunctionCodeEnum.V2_TRADE_HOSTING_PAYMENT_SPLITPAY_QUERY;
     }
 
-    public V3TradePaymentJspayRequest() {
+    public V2TradeHostingPaymentSplitpayQueryRequest() {
     }
 
-    public V3TradePaymentJspayRequest(String reqDate, String reqSeqId, String huifuId, String goodsDesc, String tradeType, String transAmt) {
+    public V2TradeHostingPaymentSplitpayQueryRequest(String reqDate, String reqSeqId, String huifuId, String orgReqDate, String orgReqSeqId) {
         this.reqDate = reqDate;
         this.reqSeqId = reqSeqId;
         this.huifuId = huifuId;
-        this.goodsDesc = goodsDesc;
-        this.tradeType = tradeType;
-        this.transAmt = transAmt;
+        this.orgReqDate = orgReqDate;
+        this.orgReqSeqId = orgReqSeqId;
     }
 
     public String getReqDate() {
@@ -83,28 +77,20 @@ public class V3TradePaymentJspayRequest extends BaseRequest {
         this.huifuId = huifuId;
     }
 
-    public String getGoodsDesc() {
-        return goodsDesc;
+    public String getOrgReqDate() {
+        return orgReqDate;
     }
 
-    public void setGoodsDesc(String goodsDesc) {
-        this.goodsDesc = goodsDesc;
+    public void setOrgReqDate(String orgReqDate) {
+        this.orgReqDate = orgReqDate;
     }
 
-    public String getTradeType() {
-        return tradeType;
+    public String getOrgReqSeqId() {
+        return orgReqSeqId;
     }
 
-    public void setTradeType(String tradeType) {
-        this.tradeType = tradeType;
-    }
-
-    public String getTransAmt() {
-        return transAmt;
-    }
-
-    public void setTransAmt(String transAmt) {
-        this.transAmt = transAmt;
+    public void setOrgReqSeqId(String orgReqSeqId) {
+        this.orgReqSeqId = orgReqSeqId;
     }
 
 }

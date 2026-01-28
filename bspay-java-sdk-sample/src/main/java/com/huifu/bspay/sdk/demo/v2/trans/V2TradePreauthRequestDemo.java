@@ -39,7 +39,7 @@ public class V2TradePreauthRequestDemo extends BaseCommonDemo {
         // 支付授权码
         request.setAuthCode("280426995846228615");
         // 安全信息
-        request.setRiskCheckData(get88a48f6c221e4ff5B8006bf8874c4dd3());
+        request.setRiskCheckData(get072323b577db489aAbe28a984765c755());
 
         // 设置非必填字段
         Map<String, Object> extendInfoMap = getExtendInfos();
@@ -72,9 +72,9 @@ public class V2TradePreauthRequestDemo extends BaseCommonDemo {
         // 传入分帐遇到优惠的处理规则
         extendInfoMap.put("term_div_coupon_type", "1");
         // 支付宝扩展参数集合
-        extendInfoMap.put("alipay_data", get386c6c5f282c46f1A7232adc003f8634());
+        extendInfoMap.put("alipay_data", get527f42f43fb44cd989bfEb5777724789());
         // 微信扩展参数集合
-        extendInfoMap.put("wx_data", get7dd691ab53b04a40Bc4085a152d039a5());
+        extendInfoMap.put("wx_data", get4a37db47Bac14ea8Bae74044392e4787());
         // 商户扩展域
         extendInfoMap.put("mer_priv", "{\"callType\":\"01\",\"lc\":\"12345678901234567890123456789012123\",\"softVersion\":\"6.5.3\"}");
         // 备注
@@ -88,7 +88,7 @@ public class V2TradePreauthRequestDemo extends BaseCommonDemo {
         // 输入密码提示
         // extendInfoMap.put("password_trade", "");
         // 设备信息
-        extendInfoMap.put("terminal_device_data", get99f5455594464feeAa6a9f39230613f8());
+        extendInfoMap.put("terminal_device_data", get3b9ac7662b374e8fA3c2Ae7552e65384());
         // 异步通知地址
         extendInfoMap.put("notify_url", "http://www.baidu.com");
         // 账户号
@@ -96,7 +96,7 @@ public class V2TradePreauthRequestDemo extends BaseCommonDemo {
         return extendInfoMap;
     }
 
-    private static JSON getFc5a9d0c6088469684325146af94fd15() {
+    private static JSON get59cefc6c4a8f4876Ab3f6e88cdf0adfb() {
         JSONObject dto = new JSONObject();
         // 卡类型
         dto.put("card_type", "");
@@ -114,7 +114,7 @@ public class V2TradePreauthRequestDemo extends BaseCommonDemo {
         return dto;
     }
 
-    private static JSON get334aa3af21e2449b9ef567aef6e832f3() {
+    private static JSON getEa61a181Bca240f2Ab1f6c561575b036() {
         JSONObject dto = new JSONObject();
         // 商品的编号
         dto.put("goods_id", "12345678901234567890123456789012");
@@ -138,14 +138,14 @@ public class V2TradePreauthRequestDemo extends BaseCommonDemo {
         return dtoList;
     }
 
-    private static String get386c6c5f282c46f1A7232adc003f8634() {
+    private static String get527f42f43fb44cd989bfEb5777724789() {
         JSONObject dto = new JSONObject();
         // 支付宝的店铺编号
         dto.put("alipay_store_id", "");
         // 业务扩展参数
-        dto.put("extend_params", getFc5a9d0c6088469684325146af94fd15());
+        dto.put("extend_params", get59cefc6c4a8f4876Ab3f6e88cdf0adfb());
         // 订单包含的商品列表信息
-        dto.put("goods_detail", get334aa3af21e2449b9ef567aef6e832f3());
+        dto.put("goods_detail", getEa61a181Bca240f2Ab1f6c561575b036());
         // 商户操作员编号
         dto.put("operator_id", "1234567890123456789012345678");
         // 商户门店编号
@@ -154,7 +154,7 @@ public class V2TradePreauthRequestDemo extends BaseCommonDemo {
         return dto.toJSONString();
     }
 
-    private static JSON get1475c6ac101f41fcBb3e7240e5b8b639() {
+    private static JSON getA8112ffd77934b62A480767186e116fa() {
         JSONObject dto = new JSONObject();
         // 商品编码
         dto.put("goods_id", "1232131");
@@ -172,10 +172,10 @@ public class V2TradePreauthRequestDemo extends BaseCommonDemo {
         return dtoList;
     }
 
-    private static JSON get0a4d393026664aa68b07Be0921a28479() {
+    private static JSON getCee31279C17b4ef7Acb9Ce293b3b9964() {
         JSONObject dto = new JSONObject();
         // 单品列表
-        dto.put("goods_detail", get1475c6ac101f41fcBb3e7240e5b8b639());
+        dto.put("goods_detail", getA8112ffd77934b62A480767186e116fa());
         // 订单原价
         dto.put("cost_price", "1");
         // 商品小票ID
@@ -184,7 +184,7 @@ public class V2TradePreauthRequestDemo extends BaseCommonDemo {
         return dto;
     }
 
-    private static JSON get77b20125Baf94a3dA333C5fdeb7033d0() {
+    private static JSON get6e575e922d3e4ff9990aAbca0b4738d5() {
         JSONObject dto = new JSONObject();
         // 门店详细地址
         dto.put("address", "汇付天下桂林路");
@@ -198,33 +198,33 @@ public class V2TradePreauthRequestDemo extends BaseCommonDemo {
         return dto;
     }
 
-    private static JSON get3f7b8679D63e470a90c9F1bda7adaa66() {
+    private static JSON getF69c5b2e6abd46a1A1be16c464fd79ce() {
         JSONObject dto = new JSONObject();
         // 门店信息
-        dto.put("store_info", get77b20125Baf94a3dA333C5fdeb7033d0());
+        dto.put("store_info", get6e575e922d3e4ff9990aAbca0b4738d5());
 
         return dto;
     }
 
-    private static String get7dd691ab53b04a40Bc4085a152d039a5() {
+    private static String get4a37db47Bac14ea8Bae74044392e4787() {
         JSONObject dto = new JSONObject();
         // 附加数据
         dto.put("attach", "");
         // 商品详情
-        dto.put("detail", get0a4d393026664aa68b07Be0921a28479());
+        dto.put("detail", getCee31279C17b4ef7Acb9Ce293b3b9964());
         // 设备号
         dto.put("device_info", "");
         // 订单优惠标记
         dto.put("goods_tag", "12321312");
         // 场景信息
-        dto.put("scene_info", get3f7b8679D63e470a90c9F1bda7adaa66());
+        dto.put("scene_info", getF69c5b2e6abd46a1A1be16c464fd79ce());
         // 子商户公众账号ID
         dto.put("sub_appid", "wx48abf94e085e98e1");
 
         return dto.toJSONString();
     }
 
-    private static String get88a48f6c221e4ff5B8006bf8874c4dd3() {
+    private static String get072323b577db489aAbe28a984765c755() {
         JSONObject dto = new JSONObject();
         // 基站地址
         dto.put("base_station", "192.168.1.1");
@@ -238,7 +238,7 @@ public class V2TradePreauthRequestDemo extends BaseCommonDemo {
         return dto.toJSONString();
     }
 
-    private static String get99f5455594464feeAa6a9f39230613f8() {
+    private static String get3b9ac7662b374e8fA3c2Ae7552e65384() {
         JSONObject dto = new JSONObject();
         // 商户终端版本号
         dto.put("app_version", "");
