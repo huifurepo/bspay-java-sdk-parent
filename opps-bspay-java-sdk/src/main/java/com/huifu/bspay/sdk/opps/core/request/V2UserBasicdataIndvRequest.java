@@ -57,7 +57,7 @@ public class V2UserBasicdataIndvRequest extends BaseRequest {
     @JSONField(name = "mobile_no")
     private String mobileNo;
     /**
-     * 地址开通中信E管家必填
+     * 地址开通中信E管家必填；开通电子回单必填
      */
     @JSONField(name = "address")
     private String address;

@@ -33,9 +33,9 @@ public class V2FlexibleIndvRequestDemo extends BaseCommonDemo {
         // 渠道商/商户汇付Id
         request.setUpperHuifuId("6666000108900391");
         // 基本信息
-        request.setBasicInfo(get629fab27E82346a2860242a3c0b0d61a());
+        request.setBasicInfo(get2e76dd15D0e042bd9c15Cb157d92ed17());
         // 卡信息
-        request.setCardInfo(get30ec05a8D26c45c39e9aA02b3b1711b6());
+        request.setCardInfo(getC1cc575cA6164b41A6c37fb8e366cda2());
 
         // 设置非必填字段
         Map<String, Object> extendInfoMap = getExtendInfos();
@@ -54,11 +54,11 @@ public class V2FlexibleIndvRequestDemo extends BaseCommonDemo {
         // 设置非必填字段
         Map<String, Object> extendInfoMap = new HashMap<>();
         // 取现配置列表
-        extendInfoMap.put("cash_config", get2367ebbb376546c292f24ed51433e1fe());
+        extendInfoMap.put("cash_config", get72c6a66a68b64b7d99ec12d66ea56878());
         return extendInfoMap;
     }
 
-    private static String get629fab27E82346a2860242a3c0b0d61a() {
+    private static String get2e76dd15D0e042bd9c15Cb157d92ed17() {
         JSONObject dto = new JSONObject();
         // 个人姓名
         dto.put("name", "张三");
@@ -74,17 +74,13 @@ public class V2FlexibleIndvRequestDemo extends BaseCommonDemo {
         dto.put("cert_end_date", "20320101");
         // 电子邮箱
         dto.put("email", "");
-        // 管理员账号
-        dto.put("login_name", "LG20250619148194131");
-        // 是否发送短信标识
-        dto.put("sms_send_flag", "");
         // 拓展方字段
         dto.put("expand_id", "");
 
         return dto.toJSONString();
     }
 
-    private static String get2367ebbb376546c292f24ed51433e1fe() {
+    private static String get72c6a66a68b64b7d99ec12d66ea56878() {
         JSONObject dto = new JSONObject();
         // 提现手续费（固定/元）fix_amt与fee_rate至少填写一项， 需保留小数点后两位，不收费请填写0.00；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：1.00&lt;/font&gt;注：当cash_type&#x3D;D1时为节假日取现手续费
         dto.put("fix_amt", "");
@@ -110,7 +106,7 @@ public class V2FlexibleIndvRequestDemo extends BaseCommonDemo {
         return dtoList.toJSONString();
     }
 
-    private static String get30ec05a8D26c45c39e9aA02b3b1711b6() {
+    private static String getC1cc575cA6164b41A6c37fb8e366cda2() {
         JSONObject dto = new JSONObject();
         // 卡号
         dto.put("card_no", "6217001210064762890");

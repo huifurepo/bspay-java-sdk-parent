@@ -8,16 +8,16 @@ import com.huifu.bspay.sdk.demo.init.OppsMerchantConfigDemo;
 import com.huifu.bspay.sdk.opps.core.utils.DateTools;
 import com.huifu.bspay.sdk.opps.core.utils.SequenceTools;
 import com.huifu.bspay.sdk.demo.core.Identify;
-import com.huifu.bspay.sdk.opps.core.request.V2TradeOnlinepaymentTransferFixedflagApplyRequest;
+import com.huifu.bspay.sdk.opps.core.request.V3BillpayPlanModifyRequest;
 
 /**
- * 银行大额支付固定转账标识申请接口 - 示例
+ * 账单计划变更 - 示例
  *
  * @author sdk-generator
  * @Description
  */
-@Identify(requestClass = V2TradeOnlinepaymentTransferFixedflagApplyRequest.class)
-public class V2TradeOnlinepaymentTransferFixedflagApplyRequestDemo extends BaseCommonDemo {
+@Identify(requestClass = V3BillpayPlanModifyRequest.class)
+public class V3BillpayPlanModifyRequestDemo extends BaseCommonDemo {
 
     public static void main(String[] args) throws Exception {
 
@@ -25,15 +25,15 @@ public class V2TradeOnlinepaymentTransferFixedflagApplyRequestDemo extends BaseC
         doInit(OppsMerchantConfigDemo.getMerchantConfig());
 
         // 2.组装请求参数
-        V2TradeOnlinepaymentTransferFixedflagApplyRequest request = new V2TradeOnlinepaymentTransferFixedflagApplyRequest();
-        // 商户号
-        request.setHuifuId("6666000109133323");
-        // 请求日期
-        request.setReqDate(DateTools.getCurrentDateYYYYMMDD());
+        V3BillpayPlanModifyRequest request = new V3BillpayPlanModifyRequest();
         // 请求流水号
         request.setReqSeqId(SequenceTools.getReqSeqId32());
-        // 唯一标识号
-        request.setUniqueNo("250605162707157");
+        // 请求日期
+        request.setReqDate(DateTools.getCurrentDateYYYYMMDD());
+        // 商户号
+        request.setHuifuId("6666000123123123");
+        // 账单计划编号
+        request.setPlanNo("BP202412270001");
 
         // 设置非必填字段
         Map<String, Object> extendInfoMap = getExtendInfos();
@@ -51,10 +51,12 @@ public class V2TradeOnlinepaymentTransferFixedflagApplyRequestDemo extends BaseC
     private static Map<String, Object> getExtendInfos() {
         // 设置非必填字段
         Map<String, Object> extendInfoMap = new HashMap<>();
-        // 用户客户号
-        // extendInfoMap.put("user_huifu_id", "");
-        // 银行模式
-        // extendInfoMap.put("bank_mode", "");
+        // 账单计划有效期
+        extendInfoMap.put("plan_expire_date", "20251231");
+        // 是否发送代扣前短信通知
+        extendInfoMap.put("sms_notify_flag", "Y");
+        // 账单计划状态
+        extendInfoMap.put("plan_status", "PROGRESS");
         return extendInfoMap;
     }
 

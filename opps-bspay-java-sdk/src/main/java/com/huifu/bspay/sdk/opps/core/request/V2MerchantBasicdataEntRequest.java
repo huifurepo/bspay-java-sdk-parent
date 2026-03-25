@@ -162,12 +162,12 @@ public class V2MerchantBasicdataEntRequest extends BaseRequest {
     @JSONField(name = "legal_cert_front_pic")
     private String legalCertFrontPic;
     /**
-     * 联系人手机号
+     * 管理员手机号
      */
     @JSONField(name = "contact_mobile_no")
     private String contactMobileNo;
     /**
-     * 联系人电子邮箱
+     * 管理员电子邮箱
      */
     @JSONField(name = "contact_email")
     private String contactEmail;

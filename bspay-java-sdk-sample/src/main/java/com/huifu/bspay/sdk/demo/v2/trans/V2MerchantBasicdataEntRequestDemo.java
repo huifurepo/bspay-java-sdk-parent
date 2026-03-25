@@ -86,9 +86,9 @@ public class V2MerchantBasicdataEntRequestDemo extends BaseCommonDemo {
         // request.setLegalCertBackPic("test");
         // 法人身份证人像面
         // request.setLegalCertFrontPic("test");
-        // 联系人手机号
+        // 管理员手机号
         request.setContactMobileNo("13111112222");
-        // 联系人电子邮箱
+        // 管理员电子邮箱
         request.setContactEmail("jeff.peng@huifu.com");
         // 管理员账号
         request.setLoginName("LG20220422267883697");
@@ -97,7 +97,7 @@ public class V2MerchantBasicdataEntRequestDemo extends BaseCommonDemo {
         // 基本存款账户编号或核准号条件选填；当use_head_info_flag&#x3D;Y时不填 ；&lt;br/&gt;基本存款账户信息请填写基本存款账户编号；开户许可证请填写核准号。&lt;br/&gt;当注册地址或经营地址为如下地区时必填：江苏省、浙江省、湖南省、湖北省、云南省、贵州省、陕西省、河南省、吉林省、黑龙江省、福建省、海南省、重庆市、青海省、宁夏回族自治区；&lt;br/&gt;&lt;font color&#x3D;&quot;green&quot;&gt;示例值：J2900123456789&lt;/font&gt;
         request.setOpenLicenceNo("");
         // 银行卡信息配置
-        request.setCardInfo(get7e5fb98fE68f4c87A99eAccc6898dc1d());
+        request.setCardInfo(getDb53ab757bd7482a9e320eba9e624932());
         // 银行卡卡号面**对私必填**。通过[图片上传接口](https://paas.huifu.com/open/doc/api/#/shgl/shjj/api_shjj_shtpsc)上传材料；文件类型：F13；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：57cc7f00-600a-33ab-b614-6221bbf2e530&lt;/font&gt;
         // request.setSettleCardFrontPic("test");
         // 持卡人身份证国徽面**对私必填**。通过[图片上传接口](https://paas.huifu.com/open/doc/api/#/shgl/shjj/api_shjj_shtpsc)上传材料；文件类型：F56；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：57cc7f00-600a-33ab-b614-6221bbf2e530&lt;/font&gt;
@@ -150,17 +150,17 @@ public class V2MerchantBasicdataEntRequestDemo extends BaseCommonDemo {
         // 法人手机号
         // extendInfoMap.put("legal_mobile_no", "");
         // 受益人列表
-        // extendInfoMap.put("beneficiary_info", get19d6efce7b774a1cB11bCd0b18433828());
-        // 联系人姓名
+        // extendInfoMap.put("beneficiary_info", getE278ab4672ce4a55B984Cae8d086eab3());
+        // 管理员姓名
         extendInfoMap.put("contact_name", "联系人");
         // 商户通知标识
         extendInfoMap.put("sms_send_flag", "Y");
         // 客服电话
         extendInfoMap.put("service_phone", "021-121111221");
         // 结算业务配置
-        extendInfoMap.put("settle_config", getD59d298518c64b6dB759D351b65d1f1f());
+        extendInfoMap.put("settle_config", getB1067c7008334704Bc1bE66b6125e102());
         // 取现业务配置
-        extendInfoMap.put("cash_config", getD5145881444143dbBfb09d1c2a75ab5c());
+        extendInfoMap.put("cash_config", get272ed8587049485dA5a8B0366e4a7a56());
         // 商户身份
         // extendInfoMap.put("head_office_flag", "");
         // 使用上级资料信息
@@ -174,15 +174,17 @@ public class V2MerchantBasicdataEntRequestDemo extends BaseCommonDemo {
         // 异步请求地址
         extendInfoMap.put("async_return_url", "virgo://http://192.168.85.157:30031/sspm/testVirgo");
         // 斗拱e账户功能配置
-        // extendInfoMap.put("elec_acct_config", get74e1e2070f284e53Aad533e20e2b9307());
+        // extendInfoMap.put("elec_acct_config", getBb03824f21e545f6Ba6cF7511b5d8a58());
         // 股东信息
-        // extendInfoMap.put("share_holder_info_list", get247d97b2203c44e4Bdfa7fb06313af01());
+        // extendInfoMap.put("share_holder_info_list", get6f1b2325295e4941Ba14269eb0fc3303());
         // 扩展资料包
-        // extendInfoMap.put("extended_material_list", get19825e5d2c6e40f78b402bcde4e3a544());
+        // extendInfoMap.put("extended_material_list", get80e5b2d878964f5dAc92Bf39d4fb7031());
+        // 产品大类
+        // extendInfoMap.put("activated_products", "");
         return extendInfoMap;
     }
 
-    private static String get19d6efce7b774a1cB11bCd0b18433828() {
+    private static String getE278ab4672ce4a55B984Cae8d086eab3() {
         JSONObject dto = new JSONObject();
         // 受益人名称
         // dto.put("bo_name", "test");
@@ -206,7 +208,7 @@ public class V2MerchantBasicdataEntRequestDemo extends BaseCommonDemo {
         return dtoList.toJSONString();
     }
 
-    private static String get7e5fb98fE68f4c87A99eAccc6898dc1d() {
+    private static String getDb53ab757bd7482a9e320eba9e624932() {
         JSONObject dto = new JSONObject();
         // 银行账户类型
         dto.put("card_type", "0");
@@ -238,7 +240,7 @@ public class V2MerchantBasicdataEntRequestDemo extends BaseCommonDemo {
         return dto.toJSONString();
     }
 
-    private static String getD59d298518c64b6dB759D351b65d1f1f() {
+    private static String getB1067c7008334704Bc1bE66b6125e102() {
         JSONObject dto = new JSONObject();
         // 结算周期
         dto.put("settle_cycle", "D1");
@@ -274,7 +276,7 @@ public class V2MerchantBasicdataEntRequestDemo extends BaseCommonDemo {
         return dto.toJSONString();
     }
 
-    private static String getD5145881444143dbBfb09d1c2a75ab5c() {
+    private static String get272ed8587049485dA5a8B0366e4a7a56() {
         JSONObject dto = new JSONObject();
         // 取现手续费（固定/元）fix_amt与fee_rate至少填写一项， 需保留小数点后两位，不收费请填写0.00；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：1.00&lt;/font&gt;注：当cash_type&#x3D;D1时为节假日取现手续费；当cash_type&#x3D;T1时为工作日取现手续费
         dto.put("fix_amt", "1.00");
@@ -300,7 +302,7 @@ public class V2MerchantBasicdataEntRequestDemo extends BaseCommonDemo {
         return dtoList.toJSONString();
     }
 
-    private static JSON getFf2a9cfd5f444044B5197d14ba66ea68() {
+    private static JSON getB1480ed011284625B2b05d24d9666703() {
         JSONObject dto = new JSONObject();
         // 银行编码
         // dto.put("bank_code", "test");
@@ -326,7 +328,7 @@ public class V2MerchantBasicdataEntRequestDemo extends BaseCommonDemo {
         return dtoList;
     }
 
-    private static String get74e1e2070f284e53Aad533e20e2b9307() {
+    private static String getBb03824f21e545f6Ba6cF7511b5d8a58() {
         JSONObject dto = new JSONObject();
         // 电子账户开关
         // dto.put("switch_state", "test");
@@ -341,14 +343,14 @@ public class V2MerchantBasicdataEntRequestDemo extends BaseCommonDemo {
         // 签约成功标志
         // dto.put("sign_success_flag", "test");
         // 银行卡信息
-        // dto.put("elec_card_list", getFf2a9cfd5f444044B5197d14ba66ea68());
+        // dto.put("elec_card_list", getB1480ed011284625B2b05d24d9666703());
         // 中信签约短信流水号
         // dto.put("elec_acct_sign_seq_id", "");
 
         return dto.toJSONString();
     }
 
-    private static String get247d97b2203c44e4Bdfa7fb06313af01() {
+    private static String get6f1b2325295e4941Ba14269eb0fc3303() {
         JSONObject dto = new JSONObject();
         // 股东姓名
         // dto.put("name", "test");
@@ -368,7 +370,7 @@ public class V2MerchantBasicdataEntRequestDemo extends BaseCommonDemo {
         return dtoList.toJSONString();
     }
 
-    private static String get19825e5d2c6e40f78b402bcde4e3a544() {
+    private static String get80e5b2d878964f5dAc92Bf39d4fb7031() {
         JSONObject dto = new JSONObject();
         // 文件id
         // dto.put("file_id", "test");

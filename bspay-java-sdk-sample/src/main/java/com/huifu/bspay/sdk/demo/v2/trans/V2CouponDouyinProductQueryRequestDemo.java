@@ -53,6 +53,8 @@ public class V2CouponDouyinProductQueryRequestDemo extends BaseCommonDemo {
         Map<String, Object> extendInfoMap = new HashMap<>();
         // 区分商品创建者的查询方式
         extendInfoMap.put("goods_creator_type", "0");
+        // 新商品查询参数
+        // extendInfoMap.put("goods_query_type", "");
         // 商品名称
         // extendInfoMap.put("product_name", "");
         // 是否查询商品全量关联门店

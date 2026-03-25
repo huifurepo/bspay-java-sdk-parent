@@ -6,6 +6,22 @@ package com.huifu.bspay.sdk.opps.core.enums;
  */
 public enum FunctionCodeEnum {
     /**
+     * 账单计划变更
+     */
+    V3_BILLPAY_PLAN_MODIFY("v3.billpay.plan.modify", "账单计划变更"),
+    /**
+     * 查询账单计划下已生成账单数据
+     */
+    V3_BILLPAY_PLAN_BILL_LIST("v3.billpay.plan.bill.list", "查询账单计划下已生成账单数据"),
+    /**
+     * 查询账单计划详情
+     */
+    V3_BILLPAY_PLAN_DETAIL("v3.billpay.plan.detail", "查询账单计划详情"),
+    /**
+     * 创建账单计划
+     */
+    V3_BILLPAY_PLAN_ADD("v3.billpay.plan.add", "创建账单计划"),
+    /**
      * 拆单支付订单查询
      */
     V2_TRADE_HOSTING_PAYMENT_SPLITPAY_QUERY("v2.trade.hosting.payment.splitpay.query", "拆单支付订单查询"),
@@ -498,9 +514,9 @@ public enum FunctionCodeEnum {
      */
     V2_INVOICE_PERMISSION_QUERY("v2.invoice.permission.query", "电子发票业务开通查询"),
     /**
-     * 电子发票业务开通
+     * 电子发票业务配置
      */
-    V2_INVOICE_PERMISSION_GRANT("v2.invoice.permission.grant", "电子发票业务开通"),
+    V2_INVOICE_PERMISSION_GRANT("v2.invoice.permission.grant", "电子发票业务配置"),
     /**
      * 商户注册状态查询
      */

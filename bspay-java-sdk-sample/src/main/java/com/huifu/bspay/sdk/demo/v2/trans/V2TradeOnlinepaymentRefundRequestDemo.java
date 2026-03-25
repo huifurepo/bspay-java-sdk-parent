@@ -35,9 +35,9 @@ public class V2TradeOnlinepaymentRefundRequestDemo extends BaseCommonDemo {
         // 退款金额
         request.setOrdAmt("0.01");
         // 设备信息条件必填，当为银行大额支付时可不填，jsonObject格式
-        request.setTerminalDeviceData(get35d4a53eD6c1411a9ced250654fb32bc());
+        request.setTerminalDeviceData(get75ed576a25334009B39c9a32ba35a82c());
         // 安全信息条件必填，当为银行大额支付时可不填，jsonObject格式
-        request.setRiskCheckData(getF25a2614657744d4Bc59741b0034991d());
+        request.setRiskCheckData(getE9afd6ee9b9d4d3792ecD7fece10e129());
 
         // 设置非必填字段
         Map<String, Object> extendInfoMap = getExtendInfos();
@@ -62,19 +62,25 @@ public class V2TradeOnlinepaymentRefundRequestDemo extends BaseCommonDemo {
         // 原交易请求流水号
         extendInfoMap.put("org_req_seq_id", "295700155481522176");
         // 分账对象
-        // extendInfoMap.put("acct_split_bunch", getB2063bd6B0444da8A946Df04df4862fd());
+        // extendInfoMap.put("acct_split_bunch", getAdb4ca3e488f4d15Bce4257e00e08036());
         // 备注
         // extendInfoMap.put("remark", "");
         // 异步通知地址
         extendInfoMap.put("notify_url", "http://www.baidu.com");
         // 补贴支付信息
-        // extendInfoMap.put("combinedpay_data", getF6ac280047d84b54Af3cFc21f6942cf0());
+        // extendInfoMap.put("combinedpay_data", get270ca5b037324d64B30165369e52c256());
         // 大额转账支付账户信息数据
-        // extendInfoMap.put("bank_info_data", get289bf626B24d46cdA273Fdaa77310b55());
+        // extendInfoMap.put("bank_info_data", getF6a68fdf9cbc4bc3Ba31B8362ac62484());
+        // 是否垫资
+        // extendInfoMap.put("loan_flag", "");
+        // 垫资承担者
+        // extendInfoMap.put("loan_undertaker", "");
+        // 垫资账户类型
+        // extendInfoMap.put("loan_acct_type", "");
         return extendInfoMap;
     }
 
-    private static JSON get1e71bbb43d3d4de7A4a590b7e2ca4d2c() {
+    private static JSON get089d1506323646b3Be73F47b7c92e50e() {
         JSONObject dto = new JSONObject();
         // 商户号
         // dto.put("huifu_id", "test");
@@ -82,21 +88,23 @@ public class V2TradeOnlinepaymentRefundRequestDemo extends BaseCommonDemo {
         // dto.put("div_amt", "");
         // 账户号
         // dto.put("acct_id", "");
+        // 垫资金额
+        // dto.put("part_loan_amt", "");
 
         JSONArray dtoList = new JSONArray();
         dtoList.add(dto);
         return dtoList;
     }
 
-    private static String getB2063bd6B0444da8A946Df04df4862fd() {
+    private static String getAdb4ca3e488f4d15Bce4257e00e08036() {
         JSONObject dto = new JSONObject();
         // 分账信息列表
-        // dto.put("acct_infos", get1e71bbb43d3d4de7A4a590b7e2ca4d2c());
+        // dto.put("acct_infos", get089d1506323646b3Be73F47b7c92e50e());
 
         return dto.toJSONString();
     }
 
-    private static String get35d4a53eD6c1411a9ced250654fb32bc() {
+    private static String get75ed576a25334009B39c9a32ba35a82c() {
         JSONObject dto = new JSONObject();
         // 交易设备ip
         dto.put("device_ip", "172.31.31.145");
@@ -120,7 +128,7 @@ public class V2TradeOnlinepaymentRefundRequestDemo extends BaseCommonDemo {
         return dto.toJSONString();
     }
 
-    private static String getF25a2614657744d4Bc59741b0034991d() {
+    private static String getE9afd6ee9b9d4d3792ecD7fece10e129() {
         JSONObject dto = new JSONObject();
         // 经度
         // dto.put("longitude", "test");
@@ -134,7 +142,7 @@ public class V2TradeOnlinepaymentRefundRequestDemo extends BaseCommonDemo {
         return dto.toJSONString();
     }
 
-    private static String getF6ac280047d84b54Af3cFc21f6942cf0() {
+    private static String get270ca5b037324d64B30165369e52c256() {
         JSONObject dto = new JSONObject();
         // 补贴方汇付编号
         // dto.put("huifu_id", "test");
@@ -150,10 +158,16 @@ public class V2TradeOnlinepaymentRefundRequestDemo extends BaseCommonDemo {
         return dtoList.toJSONString();
     }
 
-    private static String get289bf626B24d46cdA273Fdaa77310b55() {
+    private static String getF6a68fdf9cbc4bc3Ba31B8362ac62484() {
         JSONObject dto = new JSONObject();
+        // 省份
+        // dto.put("province", "");
+        // 地区
+        // dto.put("area", "");
         // 银行编号
         // dto.put("bank_code", "");
+        // 联行号
+        // dto.put("correspondent_code", "");
         // 付款方账户类型
         // dto.put("card_acct_type", "");
 

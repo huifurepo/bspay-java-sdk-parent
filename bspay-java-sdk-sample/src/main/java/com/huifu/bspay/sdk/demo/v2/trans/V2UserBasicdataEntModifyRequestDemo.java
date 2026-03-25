@@ -69,11 +69,11 @@ public class V2UserBasicdataEntModifyRequestDemo extends BaseCommonDemo {
         extendInfoMap.put("legal_cert_begin_date", "20121010");
         // 法人证件有效期截止日期
         extendInfoMap.put("legal_cert_end_date", "20301010");
-        // 联系人姓名
+        // 管理员姓名
         extendInfoMap.put("contact_name", "花朵");
-        // 联系人电子邮箱
+        // 管理员电子邮箱
         extendInfoMap.put("contact_email", "chang@huifu.com");
-        // 联系人手机号
+        // 管理员手机号
         extendInfoMap.put("contact_mobile", "13764462000");
         // 证照有效期类型
         extendInfoMap.put("license_validity_type", "1");
@@ -90,13 +90,13 @@ public class V2UserBasicdataEntModifyRequestDemo extends BaseCommonDemo {
         // 注册地址(详细信息)
         extendInfoMap.put("reg_detail", "上海市宜山路");
         // 文件列表
-        extendInfoMap.put("file_list", get948fc9d07ecd4fbbB95c02d9a605d463());
+        extendInfoMap.put("file_list", getB5d1ffebC1a9465f89b8041e891a5c3d());
         // 所属行业
         // extendInfoMap.put("mcc", "");
         return extendInfoMap;
     }
 
-    private static String get948fc9d07ecd4fbbB95c02d9a605d463() {
+    private static String getB5d1ffebC1a9465f89b8041e891a5c3d() {
         JSONObject dto = new JSONObject();
         // 文件类型
         dto.put("file_type", "F01");

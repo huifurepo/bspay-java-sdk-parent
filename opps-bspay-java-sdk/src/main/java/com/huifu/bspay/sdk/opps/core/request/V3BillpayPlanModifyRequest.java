@@ -4,12 +4,12 @@ import com.alibaba.fastjson.annotation.JSONField;
 import com.huifu.bspay.sdk.opps.core.enums.FunctionCodeEnum;
 
 /**
- * 电子发票业务配置
+ * 账单计划变更
  *
  * @author sdk-generator
  * @Description
  */
-public class V2InvoicePermissionGrantRequest extends BaseRequest {
+public class V3BillpayPlanModifyRequest extends BaseRequest {
 
     /**
      * 请求流水号
@@ -17,34 +17,34 @@ public class V2InvoicePermissionGrantRequest extends BaseRequest {
     @JSONField(name = "req_seq_id")
     private String reqSeqId;
     /**
-     * 请求时间
+     * 请求日期
      */
     @JSONField(name = "req_date")
     private String reqDate;
     /**
-     * 开票方汇付ID
+     * 商户号
      */
     @JSONField(name = "huifu_id")
     private String huifuId;
     /**
-     * 开通类型
+     * 账单计划编号
      */
-    @JSONField(name = "status")
-    private String status;
+    @JSONField(name = "plan_no")
+    private String planNo;
 
     @Override
     public FunctionCodeEnum getFunctionCode() {
-        return FunctionCodeEnum.V2_INVOICE_PERMISSION_GRANT;
+        return FunctionCodeEnum.V3_BILLPAY_PLAN_MODIFY;
     }
 
-    public V2InvoicePermissionGrantRequest() {
+    public V3BillpayPlanModifyRequest() {
     }
 
-    public V2InvoicePermissionGrantRequest(String reqSeqId, String reqDate, String huifuId, String status) {
+    public V3BillpayPlanModifyRequest(String reqSeqId, String reqDate, String huifuId, String planNo) {
         this.reqSeqId = reqSeqId;
         this.reqDate = reqDate;
         this.huifuId = huifuId;
-        this.status = status;
+        this.planNo = planNo;
     }
 
     public String getReqSeqId() {
@@ -71,12 +71,12 @@ public class V2InvoicePermissionGrantRequest extends BaseRequest {
         this.huifuId = huifuId;
     }
 
-    public String getStatus() {
-        return status;
+    public String getPlanNo() {
+        return planNo;
     }
 
-    public void setStatus(String status) {
-        this.status = status;
+    public void setPlanNo(String planNo) {
+        this.planNo = planNo;
     }
 
 }

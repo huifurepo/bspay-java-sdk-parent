@@ -102,12 +102,12 @@ public class V2UserBasicdataEntRequest extends BaseRequest {
     @JSONField(name = "legal_cert_nationality")
     private String legalCertNationality;
     /**
-     * 联系人姓名
+     * 管理员姓名
      */
     @JSONField(name = "contact_name")
     private String contactName;
     /**
-     * 联系人手机号
+     * 管理员手机号
      */
     @JSONField(name = "contact_mobile")
     private String contactMobile;

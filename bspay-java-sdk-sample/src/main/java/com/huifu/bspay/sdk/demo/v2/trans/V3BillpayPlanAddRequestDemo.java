@@ -8,16 +8,16 @@ import com.huifu.bspay.sdk.demo.init.OppsMerchantConfigDemo;
 import com.huifu.bspay.sdk.opps.core.utils.DateTools;
 import com.huifu.bspay.sdk.opps.core.utils.SequenceTools;
 import com.huifu.bspay.sdk.demo.core.Identify;
-import com.huifu.bspay.sdk.opps.core.request.V3BillpayOrderBatchAddRequest;
+import com.huifu.bspay.sdk.opps.core.request.V3BillpayPlanAddRequest;
 
 /**
- * 创建批量账单数据 - 示例
+ * 创建账单计划 - 示例
  *
  * @author sdk-generator
  * @Description
  */
-@Identify(requestClass = V3BillpayOrderBatchAddRequest.class)
-public class V3BillpayOrderBatchAddRequestDemo extends BaseCommonDemo {
+@Identify(requestClass = V3BillpayPlanAddRequest.class)
+public class V3BillpayPlanAddRequestDemo extends BaseCommonDemo {
 
     public static void main(String[] args) throws Exception {
 
@@ -25,19 +25,27 @@ public class V3BillpayOrderBatchAddRequestDemo extends BaseCommonDemo {
         doInit(OppsMerchantConfigDemo.getMerchantConfig());
 
         // 2.组装请求参数
-        V3BillpayOrderBatchAddRequest request = new V3BillpayOrderBatchAddRequest();
+        V3BillpayPlanAddRequest request = new V3BillpayPlanAddRequest();
         // 请求流水号
         request.setReqSeqId(SequenceTools.getReqSeqId32());
-        // 请求时间
+        // 请求日期
         request.setReqDate(DateTools.getCurrentDateYYYYMMDD());
         // 商户号
         request.setHuifuId("6666000123123123");
         // 账单项目编号
-        request.setProjectNo("BN2025091279190693");
+        // request.setProjectNo("test");
+        // 账单周期
+        request.setPlanCycle("MONTH");
+        // 账单日
+        request.setBillDay("15");
+        // 补发当前周期账单标志枚举:Y-是、N-否；指定账单日时，必填；若填写是，则立即生成当前系统时间所在周期的账单； 滚动账单日时，此字段无效
+        request.setReissueBillFlag("Y");
+        // 代扣信息jsonObject格式；账单计划需自动代扣时必填
+        request.setWithholdInfoData(get49450184739c47e6Bab527b61aa24f1a());
         // 用户资料信息列表
-        // request.setUserDocInfoList(getC2e8906531d04dc8981304f7acdb9361());
+        request.setUserDocInfoList(get919c625f5db74bca802a9a31f9647a55());
         // 账单收费项信息列表
-        // request.setPaymentInfoList(getAfd400dc0f48495881a97bc3c0f33fed());
+        request.setPaymentInfoList(get64292bd749be4204A99cA4e9c977a623());
 
         // 设置非必填字段
         Map<String, Object> extendInfoMap = getExtendInfos();
@@ -55,29 +63,39 @@ public class V3BillpayOrderBatchAddRequestDemo extends BaseCommonDemo {
     private static Map<String, Object> getExtendInfos() {
         // 设置非必填字段
         Map<String, Object> extendInfoMap = new HashMap<>();
-        // 是否生效
-        // extendInfoMap.put("effective_flag", "");
+        // 账单计划有效期
+        extendInfoMap.put("plan_expire_date", "20251231");
         return extendInfoMap;
     }
 
-    private static String getC2e8906531d04dc8981304f7acdb9361() {
+    private static String get49450184739c47e6Bab527b61aa24f1a() {
+        JSONObject dto = new JSONObject();
+        // 卡令牌
+        dto.put("token_no", "CT202412270001");
+        // 是否发送代扣前短信通知
+        dto.put("sms_notify_flag", "Y");
+
+        return dto.toJSONString();
+    }
+
+    private static String get919c625f5db74bca802a9a31f9647a55() {
         JSONObject dto = new JSONObject();
         // 账单表单字段属性ID
-        // dto.put("key_no", "test");
+        dto.put("key_no", "userName");
         // 账单表单字段属性值
-        // dto.put("key_value", "");
+        dto.put("key_value", "张三");
 
         JSONArray dtoList = new JSONArray();
         dtoList.add(dto);
         return dtoList.toJSONString();
     }
 
-    private static String getAfd400dc0f48495881a97bc3c0f33fed() {
+    private static String get64292bd749be4204A99cA4e9c977a623() {
         JSONObject dto = new JSONObject();
         // 账单表单字段属性ID
-        // dto.put("key_no", "test");
+        dto.put("key_no", "propertyFee");
         // 账单表单字段属性值
-        // dto.put("key_value", "");
+        dto.put("key_value", "500.00");
 
         JSONArray dtoList = new JSONArray();
         dtoList.add(dto);

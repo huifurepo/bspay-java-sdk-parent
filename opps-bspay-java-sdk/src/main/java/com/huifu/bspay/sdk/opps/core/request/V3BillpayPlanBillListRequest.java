@@ -4,47 +4,53 @@ import com.alibaba.fastjson.annotation.JSONField;
 import com.huifu.bspay.sdk.opps.core.enums.FunctionCodeEnum;
 
 /**
- * 电子发票业务配置
+ * 查询账单计划下已生成账单数据
  *
  * @author sdk-generator
  * @Description
  */
-public class V2InvoicePermissionGrantRequest extends BaseRequest {
+public class V3BillpayPlanBillListRequest extends BaseRequest {
 
     /**
-     * 请求流水号
+     * 客户请求流水号
      */
     @JSONField(name = "req_seq_id")
     private String reqSeqId;
     /**
-     * 请求时间
+     * 客户请求日期
      */
     @JSONField(name = "req_date")
     private String reqDate;
     /**
-     * 开票方汇付ID
+     * 汇付商户号
      */
     @JSONField(name = "huifu_id")
     private String huifuId;
     /**
-     * 开通类型
+     * 账单计划编号
      */
-    @JSONField(name = "status")
-    private String status;
+    @JSONField(name = "plan_no")
+    private String planNo;
+    /**
+     * 页码
+     */
+    @JSONField(name = "page_num")
+    private String pageNum;
 
     @Override
     public FunctionCodeEnum getFunctionCode() {
-        return FunctionCodeEnum.V2_INVOICE_PERMISSION_GRANT;
+        return FunctionCodeEnum.V3_BILLPAY_PLAN_BILL_LIST;
     }
 
-    public V2InvoicePermissionGrantRequest() {
+    public V3BillpayPlanBillListRequest() {
     }
 
-    public V2InvoicePermissionGrantRequest(String reqSeqId, String reqDate, String huifuId, String status) {
+    public V3BillpayPlanBillListRequest(String reqSeqId, String reqDate, String huifuId, String planNo, String pageNum) {
         this.reqSeqId = reqSeqId;
         this.reqDate = reqDate;
         this.huifuId = huifuId;
-        this.status = status;
+        this.planNo = planNo;
+        this.pageNum = pageNum;
     }
 
     public String getReqSeqId() {
@@ -71,12 +77,20 @@ public class V2InvoicePermissionGrantRequest extends BaseRequest {
         this.huifuId = huifuId;
     }
 
-    public String getStatus() {
-        return status;
+    public String getPlanNo() {
+        return planNo;
     }
 
-    public void setStatus(String status) {
-        this.status = status;
+    public void setPlanNo(String planNo) {
+        this.planNo = planNo;
+    }
+
+    public String getPageNum() {
+        return pageNum;
+    }
+
+    public void setPageNum(String pageNum) {
+        this.pageNum = pageNum;
     }
 
 }

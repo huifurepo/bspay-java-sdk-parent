@@ -32,7 +32,7 @@ public class V2FlexibleTradeRequest extends BaseRequest {
     @JSONField(name = "stage_operation_type")
     private String stageOperationType;
     /**
-     * 前段交易流水号** 当交易阶段操作类型为02时，该字段必填。填写的是交易阶段操作类型为01时交易已完成的交易全局流水号。 &lt;font color&#x3D;&quot;green&quot;&gt;示例值：20250620112533115566896&lt;/font&gt;
+     * 前段交易流水号当交易阶段操作类型为02时，该字段必填。填写的是交易阶段操作类型为01时交易已完成的交易全局流水号。 &lt;font color&#x3D;&quot;green&quot;&gt;示例值：20250620112533115566896&lt;/font&gt;
      */
     @JSONField(name = "phase_hf_seq_id")
     private String phaseHfSeqId;

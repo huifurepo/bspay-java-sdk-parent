@@ -8,16 +8,16 @@ import com.huifu.bspay.sdk.demo.init.OppsMerchantConfigDemo;
 import com.huifu.bspay.sdk.opps.core.utils.DateTools;
 import com.huifu.bspay.sdk.opps.core.utils.SequenceTools;
 import com.huifu.bspay.sdk.demo.core.Identify;
-import com.huifu.bspay.sdk.opps.core.request.V2TradeOnlinepaymentTransferFixedflagApplyRequest;
+import com.huifu.bspay.sdk.opps.core.request.V3BillpayPlanBillListRequest;
 
 /**
- * 银行大额支付固定转账标识申请接口 - 示例
+ * 查询账单计划下已生成账单数据 - 示例
  *
  * @author sdk-generator
  * @Description
  */
-@Identify(requestClass = V2TradeOnlinepaymentTransferFixedflagApplyRequest.class)
-public class V2TradeOnlinepaymentTransferFixedflagApplyRequestDemo extends BaseCommonDemo {
+@Identify(requestClass = V3BillpayPlanBillListRequest.class)
+public class V3BillpayPlanBillListRequestDemo extends BaseCommonDemo {
 
     public static void main(String[] args) throws Exception {
 
@@ -25,15 +25,17 @@ public class V2TradeOnlinepaymentTransferFixedflagApplyRequestDemo extends BaseC
         doInit(OppsMerchantConfigDemo.getMerchantConfig());
 
         // 2.组装请求参数
-        V2TradeOnlinepaymentTransferFixedflagApplyRequest request = new V2TradeOnlinepaymentTransferFixedflagApplyRequest();
-        // 商户号
-        request.setHuifuId("6666000109133323");
-        // 请求日期
-        request.setReqDate(DateTools.getCurrentDateYYYYMMDD());
-        // 请求流水号
+        V3BillpayPlanBillListRequest request = new V3BillpayPlanBillListRequest();
+        // 客户请求流水号
         request.setReqSeqId(SequenceTools.getReqSeqId32());
-        // 唯一标识号
-        request.setUniqueNo("250605162707157");
+        // 客户请求日期
+        request.setReqDate(DateTools.getCurrentDateYYYYMMDD());
+        // 汇付商户号
+        request.setHuifuId("6666000123123123");
+        // 账单计划编号
+        request.setPlanNo("BP202412270001");
+        // 页码
+        request.setPageNum("1");
 
         // 设置非必填字段
         Map<String, Object> extendInfoMap = getExtendInfos();
@@ -51,10 +53,6 @@ public class V2TradeOnlinepaymentTransferFixedflagApplyRequestDemo extends BaseC
     private static Map<String, Object> getExtendInfos() {
         // 设置非必填字段
         Map<String, Object> extendInfoMap = new HashMap<>();
-        // 用户客户号
-        // extendInfoMap.put("user_huifu_id", "");
-        // 银行模式
-        // extendInfoMap.put("bank_mode", "");
         return extendInfoMap;
     }
 
