@@ -11,7 +11,7 @@ import com.huifu.bspay.sdk.demo.core.Identify;
 import com.huifu.bspay.sdk.opps.core.request.V2TradeHostingPaymentQueryrefundinfoRequest;
 
 /**
- * 托管交易退款查询 - 示例
+ * 统一收银台交易退款查询 - 示例
  *
  * @author sdk-generator
  * @Description

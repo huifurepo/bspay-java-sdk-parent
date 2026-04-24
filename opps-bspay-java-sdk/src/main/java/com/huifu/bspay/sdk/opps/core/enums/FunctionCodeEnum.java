@@ -295,9 +295,9 @@ public enum FunctionCodeEnum {
      */
     V2_EFP_SURROGATE("v2.efp.surrogate", "全渠道资金付款申请"),
     /**
-     * 托管交易关单
+     * 统一收银台交易关单
      */
-    V2_TRADE_HOSTING_PAYMENT_CLOSE("v2.trade.hosting.payment.close", "托管交易关单"),
+    V2_TRADE_HOSTING_PAYMENT_CLOSE("v2.trade.hosting.payment.close", "统一收银台交易关单"),
     /**
      * 取现
      */
@@ -627,13 +627,13 @@ public enum FunctionCodeEnum {
      */
     V2_TRADE_ONLINEPAYMENT_TRANSFER_BANKBLOTTER_QUERY("v2.trade.onlinepayment.transfer.bankblotter.query", "银行大额未入账流水列表查询"),
     /**
-     * 托管交易退款查询
+     * 统一收银台交易退款查询
      */
-    V2_TRADE_HOSTING_PAYMENT_QUERYREFUNDINFO("v2.trade.hosting.payment.queryRefundInfo", "托管交易退款查询"),
+    V2_TRADE_HOSTING_PAYMENT_QUERYREFUNDINFO("v2.trade.hosting.payment.queryRefundInfo", "统一收银台交易退款查询"),
     /**
-     * 托管交易退款
+     * 统一收银台交易退款
      */
-    V2_TRADE_HOSTING_PAYMENT_HTREFUND("v2.trade.hosting.payment.htRefund", "托管交易退款"),
+    V2_TRADE_HOSTING_PAYMENT_HTREFUND("v2.trade.hosting.payment.htRefund", "统一收银台交易退款"),
     /**
      * E账户转账及充值查询接口
      */
@@ -659,9 +659,9 @@ public enum FunctionCodeEnum {
      */
     V2_MERCHANT_ELEC_CARD_BIND("v2.merchant.elec.card.bind", "电子账户绑卡"),
     /**
-     * 托管交易查询
+     * 统一收银台交易查询
      */
-    V2_TRADE_HOSTING_PAYMENT_QUERYORDERINFO("v2.trade.hosting.payment.queryorderinfo", "托管交易查询"),
+    V2_TRADE_HOSTING_PAYMENT_QUERYORDERINFO("v2.trade.hosting.payment.queryorderinfo", "统一收银台交易查询"),
     /**
      * 钱包转账下单
      */

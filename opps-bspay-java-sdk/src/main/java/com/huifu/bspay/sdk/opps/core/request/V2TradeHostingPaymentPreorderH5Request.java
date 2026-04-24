@@ -42,7 +42,7 @@ public class V2TradeHostingPaymentPreorderH5Request extends BaseRequest {
     @JSONField(name = "pre_order_type")
     private String preOrderType;
     /**
-     * 半支付托管扩展参数集合
+     * 统一收银台扩展参数集合
      */
     @JSONField(name = "hosting_data")
     private String hostingData;

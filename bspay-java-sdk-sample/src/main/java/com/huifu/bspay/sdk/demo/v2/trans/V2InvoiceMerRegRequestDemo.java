@@ -79,6 +79,10 @@ public class V2InvoiceMerRegRequestDemo extends BaseCommonDemo {
         extendInfoMap.put("auto_renewal", "Y");
         // 商户入驻结果异步通知地址
         extendInfoMap.put("callback_url", "http: //service.example.com/to/path");
+        // 开票模式
+        extendInfoMap.put("issue_mode", "LE_QI_LINK");
+        // 区域代码
+        // extendInfoMap.put("area_code", "");
         return extendInfoMap;
     }
 

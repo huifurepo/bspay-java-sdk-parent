@@ -11,7 +11,7 @@ import com.huifu.bspay.sdk.demo.core.Identify;
 import com.huifu.bspay.sdk.opps.core.request.V2TradeHostingPaymentHtrefundRequest;
 
 /**
- * 托管交易退款 - 示例
+ * 统一收银台交易退款 - 示例
  *
  * @author sdk-generator
  * @Description
@@ -37,11 +37,11 @@ public class V2TradeHostingPaymentHtrefundRequestDemo extends BaseCommonDemo {
         // 原交易请求日期
         request.setOrgReqDate("20240229");
         // 安全信息线上交易退款必填，参见线上退款接口；jsonObject字符串
-        request.setRiskCheckData(getD4cd573b43424f3e9983Ead4f24a05f1());
+        request.setRiskCheckData(get7f70e439E8f340f3Aac98f26d2971bd4());
         // 设备信息线上交易退款必填，参见线上退款接口；jsonObject字符串
-        request.setTerminalDeviceData(get5eab0ab7309b4319934991997b4e02a7());
+        request.setTerminalDeviceData(getF76c79c938b7435085942a78867054da());
         // 大额转账支付账户信息数据jsonObject格式；银行大额转账支付交易退款申请时必填
-        // request.setBankInfoData(get4884ae34D72f4674Bba3Ecf6bd9b6249());
+        // request.setBankInfoData(get7ce83f339ef6473e8e203eeb203e15fd());
 
         // 设置非必填字段
         Map<String, Object> extendInfoMap = getExtendInfos();
@@ -66,7 +66,7 @@ public class V2TradeHostingPaymentHtrefundRequestDemo extends BaseCommonDemo {
         // 原交易请求流水号
         extendInfoMap.put("org_req_seq_id", "202207099803123123199941");
         // 分账对象
-        extendInfoMap.put("acct_split_bunch", getAf13d5ba8edf4124Bca861e10b605ae0());
+        extendInfoMap.put("acct_split_bunch", get9439c978Ac09445589fc798a88275b20());
         // 备注
         // extendInfoMap.put("remark", "");
         // 是否垫资退款
@@ -78,11 +78,11 @@ public class V2TradeHostingPaymentHtrefundRequestDemo extends BaseCommonDemo {
         // 异步通知地址
         extendInfoMap.put("notify_url", "http://www.baidu.com");
         // 抖音拓展参数集合
-        // extendInfoMap.put("dy_data", get7c0cf89bD0ab4d89969195b6b74d6ebd());
+        // extendInfoMap.put("dy_data", getB307963107c54ada8bad0a0c4e1d9cd8());
         return extendInfoMap;
     }
 
-    private static JSON get562e286f9afe4c608dee36bfbfe12c6e() {
+    private static JSON get27ca349c55d04639B266C96deda3910d() {
         JSONObject dto = new JSONObject();
         // 分账金额
         dto.put("div_amt", "0.12");
@@ -96,15 +96,15 @@ public class V2TradeHostingPaymentHtrefundRequestDemo extends BaseCommonDemo {
         return dtoList;
     }
 
-    private static String getAf13d5ba8edf4124Bca861e10b605ae0() {
+    private static String get9439c978Ac09445589fc798a88275b20() {
         JSONObject dto = new JSONObject();
         // 分账明细
-        dto.put("acct_infos", get562e286f9afe4c608dee36bfbfe12c6e());
+        dto.put("acct_infos", get27ca349c55d04639B266C96deda3910d());
 
         return dto.toJSONString();
     }
 
-    private static String getD4cd573b43424f3e9983Ead4f24a05f1() {
+    private static String get7f70e439E8f340f3Aac98f26d2971bd4() {
         JSONObject dto = new JSONObject();
         // ip地址
         // dto.put("ip_addr", "");
@@ -118,7 +118,7 @@ public class V2TradeHostingPaymentHtrefundRequestDemo extends BaseCommonDemo {
         return dto.toJSONString();
     }
 
-    private static String get5eab0ab7309b4319934991997b4e02a7() {
+    private static String getF76c79c938b7435085942a78867054da() {
         JSONObject dto = new JSONObject();
         // 设备类型
         dto.put("device_type", "4");
@@ -140,7 +140,7 @@ public class V2TradeHostingPaymentHtrefundRequestDemo extends BaseCommonDemo {
         return dto.toJSONString();
     }
 
-    private static String get4884ae34D72f4674Bba3Ecf6bd9b6249() {
+    private static String get7ce83f339ef6473e8e203eeb203e15fd() {
         JSONObject dto = new JSONObject();
         // 省份付款方为对公账户时必填，参见省市地区码；示例值：0013
         // dto.put("province", "test");
@@ -156,7 +156,7 @@ public class V2TradeHostingPaymentHtrefundRequestDemo extends BaseCommonDemo {
         return dto.toJSONString();
     }
 
-    private static String get7c0cf89bD0ab4d89969195b6b74d6ebd() {
+    private static String getB307963107c54ada8bad0a0c4e1d9cd8() {
         JSONObject dto = new JSONObject();
         // 退款原因
         // dto.put("refund_desc", "");

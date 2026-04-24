@@ -69,6 +69,8 @@ public class V2InvoiceMerModifyRequestDemo extends BaseCommonDemo {
         extendInfoMap.put("prov_id", "310000");
         // 所属市
         extendInfoMap.put("city_id", "310100");
+        // 区域代码
+        // extendInfoMap.put("area_code", "");
         return extendInfoMap;
     }
 

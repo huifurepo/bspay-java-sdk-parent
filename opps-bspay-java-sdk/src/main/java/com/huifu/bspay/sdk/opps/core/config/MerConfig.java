@@ -51,6 +51,21 @@ public class MerConfig {
     @JSONField(name = "custom_socket_timeout")
     private String customSocketTimeout;
 
+    /**
+     * skill来源版本
+     */
+    @JSONField(name = "skill_source")
+    private String skillSource;
+
+
+    public String getSkillSource() {
+        return skillSource;
+    }
+
+    public void setSkillSource(String skillSource) {
+        this.skillSource = skillSource;
+    }
+
     public String getCustomConnectTimeout() {
         return customConnectTimeout;
     }
@@ -107,4 +122,6 @@ public class MerConfig {
         this.sysId = sysId;
     }
 
+    public void setSkill() {
+    }
 }

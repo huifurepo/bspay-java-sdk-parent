@@ -11,6 +11,7 @@ import com.huifu.bspay.sdk.opps.core.sign.JsonUtils;
 import com.huifu.bspay.sdk.opps.core.utils.HttpClientUtils;
 import com.huifu.bspay.sdk.opps.core.utils.RsaUtils;
 import com.huifu.bspay.sdk.opps.core.utils.StringUtil;
+import org.apache.commons.lang3.StringUtils;
 
 import java.io.File;
 import java.util.*;
@@ -21,7 +22,7 @@ import java.util.*;
  */
 public abstract class AbstractRequest {
 
-    public static final String SDK_VERSION = "3.0.35";
+    public static final String SDK_VERSION = "3.0.36";
 
     protected static enum RequestMethod {
         GET, POST, DELETE, PUT;
@@ -76,6 +77,17 @@ public abstract class AbstractRequest {
         Map<String, String> headers = new HashMap<>(4);
         // 传递SDK版本
         headers.put("sdk_version", "javaSDK_" + SDK_VERSION);
+        // 再传一个jpt前缀的，以便打印至网关log
+        // 传递skill来源版本
+        if (StringUtils.isNotBlank(config.getSkillSource())) {
+            headers.put("jpt-x-skill-source", config.getSkillSource());
+            if (params!=null &&params.get("huifu_id")!=null && StringUtils.isNotBlank(params.get("huifu_id").toString())) {
+                headers.put("jpt-x-skill-huifu_id", params.get("huifu_id").toString());
+            }
+        }
+
+
+
         String reqData = JSONObject.toJSONString(params);
 
         String privateKey = config.getRsaPrivateKey();
