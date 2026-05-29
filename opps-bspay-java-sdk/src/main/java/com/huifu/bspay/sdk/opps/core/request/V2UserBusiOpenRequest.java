@@ -32,16 +32,6 @@ public class V2UserBusiOpenRequest extends BaseRequest {
     @JSONField(name = "upper_huifu_id")
     private String upperHuifuId;
     /**
-     * 乐接活配置当合作平台为乐接活，必填
-     */
-    @JSONField(name = "ljh_data")
-    private String ljhData;
-    /**
-     * 汇薪云配置当合作平台为汇薪云，必填
-     */
-    @JSONField(name = "hxy_data")
-    private String hxyData;
-    /**
      * 签约人信息当电子回单配置开关为开通时必填
      */
     @JSONField(name = "sign_user_info")
@@ -55,13 +45,11 @@ public class V2UserBusiOpenRequest extends BaseRequest {
     public V2UserBusiOpenRequest() {
     }
 
-    public V2UserBusiOpenRequest(String huifuId, String reqSeqId, String reqDate, String upperHuifuId, String ljhData, String hxyData, String signUserInfo) {
+    public V2UserBusiOpenRequest(String huifuId, String reqSeqId, String reqDate, String upperHuifuId, String signUserInfo) {
         this.huifuId = huifuId;
         this.reqSeqId = reqSeqId;
         this.reqDate = reqDate;
         this.upperHuifuId = upperHuifuId;
-        this.ljhData = ljhData;
-        this.hxyData = hxyData;
         this.signUserInfo = signUserInfo;
     }
 
@@ -95,22 +83,6 @@ public class V2UserBusiOpenRequest extends BaseRequest {
 
     public void setUpperHuifuId(String upperHuifuId) {
         this.upperHuifuId = upperHuifuId;
-    }
-
-    public String getLjhData() {
-        return ljhData;
-    }
-
-    public void setLjhData(String ljhData) {
-        this.ljhData = ljhData;
-    }
-
-    public String getHxyData() {
-        return hxyData;
-    }
-
-    public void setHxyData(String hxyData) {
-        this.hxyData = hxyData;
     }
 
     public String getSignUserInfo() {

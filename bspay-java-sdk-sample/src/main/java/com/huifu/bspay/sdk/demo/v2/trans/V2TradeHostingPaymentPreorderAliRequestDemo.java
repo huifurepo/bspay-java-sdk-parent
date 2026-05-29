@@ -39,7 +39,7 @@ public class V2TradeHostingPaymentPreorderAliRequestDemo extends BaseCommonDemo 
         // 商品描述
         request.setGoodsDesc("app跳支付宝消费");
         // app扩展参数集合
-        request.setAppData(getC96db826Fda24b61Bcc530a8adbc4cfb());
+        request.setAppData(get251e70ddF4644a7194c9B499db5a7230());
 
         // 设置非必填字段
         Map<String, Object> extendInfoMap = getExtendInfos();
@@ -62,23 +62,29 @@ public class V2TradeHostingPaymentPreorderAliRequestDemo extends BaseCommonDemo 
         // 是否延迟交易
         extendInfoMap.put("delay_acct_flag", "N");
         // 分账对象
-        extendInfoMap.put("acct_split_bunch", get2def2471Fe4649fbBccc18742d346b09());
+        extendInfoMap.put("acct_split_bunch", get92106cc02b674a3eB6679f12a829bdf1());
+        // 统一收银台扩展参数集合
+        // extendInfoMap.put("hosting_data", get3b455db179284d3eB619Ffea7a9bce50());
         // 交易失效时间
         // extendInfoMap.put("time_expire", "");
         // 业务信息
-        // extendInfoMap.put("biz_info", getEe66efe3E861464f9faf5ce78e173a8a());
+        // extendInfoMap.put("biz_info", get355dbccc43c84ec9958eDd70cf40e145());
         // 异步通知地址
         extendInfoMap.put("notify_url", "https://callback.service.com/xx");
         // 支付宝参数集合
-        // extendInfoMap.put("alipay_data", get10f611c1F1454cc0Af01C1692018b071());
+        // extendInfoMap.put("alipay_data", get06edfd62Bdf8404b9d84C10e0973c3e0());
         // 设备信息
-        // extendInfoMap.put("terminal_device_data", get0d9f105271054da2A43024c1fa35c4c2());
+        // extendInfoMap.put("terminal_device_data", getDafa7070Ef5d469cA535F1277016636b());
         // 手续费场景标识
         // extendInfoMap.put("fee_sign", "");
+        // 是否交易手续费分摊
+        // extendInfoMap.put("fee_split_flag", "");
+        // 手续费扣款标志
+        // extendInfoMap.put("fee_flag", "");
         return extendInfoMap;
     }
 
-    private static JSON get6a9ea90cAe334d5a86b0F3dd2bace8f7() {
+    private static JSON get97d4692c3909455196874eed54442587() {
         JSONObject dto = new JSONObject();
         // 分账金额
         dto.put("div_amt", "0.08");
@@ -94,10 +100,10 @@ public class V2TradeHostingPaymentPreorderAliRequestDemo extends BaseCommonDemo 
         return dtoList;
     }
 
-    private static String get2def2471Fe4649fbBccc18742d346b09() {
+    private static String get92106cc02b674a3eB6679f12a829bdf1() {
         JSONObject dto = new JSONObject();
         // 分账明细
-        dto.put("acct_infos", get6a9ea90cAe334d5a86b0F3dd2bace8f7());
+        dto.put("acct_infos", get97d4692c3909455196874eed54442587());
         // 百分比分账标志
         // dto.put("percentage_flag", "");
         // 是否净值分账
@@ -106,7 +112,15 @@ public class V2TradeHostingPaymentPreorderAliRequestDemo extends BaseCommonDemo 
         return dto.toJSONString();
     }
 
-    private static String getC96db826Fda24b61Bcc530a8adbc4cfb() {
+    private static String get3b455db179284d3eB619Ffea7a9bce50() {
+        JSONObject dto = new JSONObject();
+        // 项目号
+        // dto.put("project_id", "");
+
+        return dto.toJSONString();
+    }
+
+    private static String get251e70ddF4644a7194c9B499db5a7230() {
         JSONObject dto = new JSONObject();
         // 小程序返回码
         dto.put("app_schema", "app跳转链接");
@@ -118,7 +132,7 @@ public class V2TradeHostingPaymentPreorderAliRequestDemo extends BaseCommonDemo 
         return dto.toJSONString();
     }
 
-    private static JSON get2371199bEbb54f83893757f38e7cf99b() {
+    private static JSON get6a5c53336e404b549e23A33a9f8c9e41() {
         JSONObject dto = new JSONObject();
         // 是否提供校验身份信息
         // dto.put("need_check_info", "");
@@ -130,7 +144,7 @@ public class V2TradeHostingPaymentPreorderAliRequestDemo extends BaseCommonDemo 
         return dto;
     }
 
-    private static JSON get21dd44c191f34e7bB89a7fa757de87ab() {
+    private static JSON get8f91b19b445a4067Aa849094e7aed6a1() {
         JSONObject dto = new JSONObject();
         // 姓名
         // dto.put("name", "");
@@ -144,17 +158,17 @@ public class V2TradeHostingPaymentPreorderAliRequestDemo extends BaseCommonDemo 
         return dto;
     }
 
-    private static String getEe66efe3E861464f9faf5ce78e173a8a() {
+    private static String get355dbccc43c84ec9958eDd70cf40e145() {
         JSONObject dto = new JSONObject();
         // 付款人验证（支付宝）
-        // dto.put("payer_check_ali", get2371199bEbb54f83893757f38e7cf99b());
+        // dto.put("payer_check_ali", get6a5c53336e404b549e23A33a9f8c9e41());
         // 个人付款人信息
-        // dto.put("person_payer", get21dd44c191f34e7bB89a7fa757de87ab());
+        // dto.put("person_payer", get8f91b19b445a4067Aa849094e7aed6a1());
 
         return dto.toJSONString();
     }
 
-    private static JSON getCbe23c2bCa1948f6A9e20371deb7b43d() {
+    private static JSON getCab6a29703794f70B0f39b1349f66ca3() {
         JSONObject dto = new JSONObject();
         // 卡类型
         // dto.put("card_type", "");
@@ -176,7 +190,7 @@ public class V2TradeHostingPaymentPreorderAliRequestDemo extends BaseCommonDemo 
         return dto;
     }
 
-    private static JSON get27f17710252b4be2B3f7Af2b74cfc6bf() {
+    private static JSON get4e09ee47F29f438b9a6aA79440d83ac7() {
         JSONObject dto = new JSONObject();
         // 商品的编号
         // dto.put("goods_id", "test");
@@ -200,14 +214,14 @@ public class V2TradeHostingPaymentPreorderAliRequestDemo extends BaseCommonDemo 
         return dtoList;
     }
 
-    private static String get10f611c1F1454cc0Af01C1692018b071() {
+    private static String get06edfd62Bdf8404b9d84C10e0973c3e0() {
         JSONObject dto = new JSONObject();
         // 支付宝的店铺编号
         // dto.put("alipay_store_id", "");
         // 业务扩展参数
-        // dto.put("extend_params", getCbe23c2bCa1948f6A9e20371deb7b43d());
+        // dto.put("extend_params", getCab6a29703794f70B0f39b1349f66ca3());
         // 订单包含的商品列表信息
-        // dto.put("goods_detail", get27f17710252b4be2B3f7Af2b74cfc6bf());
+        // dto.put("goods_detail", get4e09ee47F29f438b9a6aA79440d83ac7());
         // 商户原始订单号
         // dto.put("merchant_order_no", "");
         // 商户操作员编号
@@ -228,7 +242,7 @@ public class V2TradeHostingPaymentPreorderAliRequestDemo extends BaseCommonDemo 
         return dto.toJSONString();
     }
 
-    private static String get0d9f105271054da2A43024c1fa35c4c2() {
+    private static String getDafa7070Ef5d469cA535F1277016636b() {
         JSONObject dto = new JSONObject();
         // 汇付机具号
         // dto.put("devs_id", "test");

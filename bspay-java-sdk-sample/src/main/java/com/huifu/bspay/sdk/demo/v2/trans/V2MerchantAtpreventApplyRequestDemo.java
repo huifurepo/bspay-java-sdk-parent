@@ -49,13 +49,41 @@ public class V2MerchantAtpreventApplyRequestDemo extends BaseCommonDemo {
     private static Map<String, Object> getExtendInfos() {
         // 设置非必填字段
         Map<String, Object> extendInfoMap = new HashMap<>();
-        // 微信开通数
-        extendInfoMap.put("wx_open_count", "0");
-        // 支付宝开通数
-        extendInfoMap.put("ali_open_count", "1");
         // 异步通知地址
         extendInfoMap.put("async_url", "http://service.example.com/to/path");
+        // 微信开通明细
+        extendInfoMap.put("wx_open_list", get4ee5a21dCd974031Aaff86bc6a77ad6e());
+        // 支付宝开通明细
+        extendInfoMap.put("ali_open_list", getAf3f6e6aB58f47f99761E0107d9733be());
         return extendInfoMap;
+    }
+
+    private static JSON get4ee5a21dCd974031Aaff86bc6a77ad6e() {
+        JSONObject dto = new JSONObject();
+        // 渠道号
+        dto.put("pay_channel_id", "10000001");
+        // 线上开通数
+        dto.put("online_open_count", "1");
+        // 线下开通数
+        dto.put("offline_open_count", "1");
+
+        JSONArray dtoList = new JSONArray();
+        dtoList.add(dto);
+        return dtoList;
+    }
+
+    private static JSON getAf3f6e6aB58f47f99761E0107d9733be() {
+        JSONObject dto = new JSONObject();
+        // 渠道号
+        dto.put("pay_channel_id", "10000001");
+        // 线上开通数
+        dto.put("online_open_count", "1");
+        // 线下开通数
+        dto.put("offline_open_count", "1");
+
+        JSONArray dtoList = new JSONArray();
+        dtoList.add(dto);
+        return dtoList;
     }
 
 }

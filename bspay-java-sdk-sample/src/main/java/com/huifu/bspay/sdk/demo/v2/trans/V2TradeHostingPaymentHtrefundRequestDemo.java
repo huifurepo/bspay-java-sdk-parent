@@ -37,11 +37,11 @@ public class V2TradeHostingPaymentHtrefundRequestDemo extends BaseCommonDemo {
         // 原交易请求日期
         request.setOrgReqDate("20240229");
         // 安全信息线上交易退款必填，参见线上退款接口；jsonObject字符串
-        request.setRiskCheckData(get7f70e439E8f340f3Aac98f26d2971bd4());
+        request.setRiskCheckData(getD826c3096785458dBc8b01c6777e35b0());
         // 设备信息线上交易退款必填，参见线上退款接口；jsonObject字符串
-        request.setTerminalDeviceData(getF76c79c938b7435085942a78867054da());
+        request.setTerminalDeviceData(getEd3f08adA40c41768ceaC05bd276cbf7());
         // 大额转账支付账户信息数据jsonObject格式；银行大额转账支付交易退款申请时必填
-        // request.setBankInfoData(get7ce83f339ef6473e8e203eeb203e15fd());
+        // request.setBankInfoData(get849b0a0043c246c1B69bB43d2a2339c1());
 
         // 设置非必填字段
         Map<String, Object> extendInfoMap = getExtendInfos();
@@ -66,7 +66,7 @@ public class V2TradeHostingPaymentHtrefundRequestDemo extends BaseCommonDemo {
         // 原交易请求流水号
         extendInfoMap.put("org_req_seq_id", "202207099803123123199941");
         // 分账对象
-        extendInfoMap.put("acct_split_bunch", get9439c978Ac09445589fc798a88275b20());
+        extendInfoMap.put("acct_split_bunch", get9bd41f6c14e846f09f9363c3ed43df51());
         // 备注
         // extendInfoMap.put("remark", "");
         // 是否垫资退款
@@ -78,11 +78,11 @@ public class V2TradeHostingPaymentHtrefundRequestDemo extends BaseCommonDemo {
         // 异步通知地址
         extendInfoMap.put("notify_url", "http://www.baidu.com");
         // 抖音拓展参数集合
-        // extendInfoMap.put("dy_data", getB307963107c54ada8bad0a0c4e1d9cd8());
+        // extendInfoMap.put("dy_data", get5867b38731174c9d9e4457b715935a28());
         return extendInfoMap;
     }
 
-    private static JSON get27ca349c55d04639B266C96deda3910d() {
+    private static JSON getFe3996d580ce46b8946dF444fe0dcf43() {
         JSONObject dto = new JSONObject();
         // 分账金额
         dto.put("div_amt", "0.12");
@@ -96,15 +96,15 @@ public class V2TradeHostingPaymentHtrefundRequestDemo extends BaseCommonDemo {
         return dtoList;
     }
 
-    private static String get9439c978Ac09445589fc798a88275b20() {
+    private static String get9bd41f6c14e846f09f9363c3ed43df51() {
         JSONObject dto = new JSONObject();
         // 分账明细
-        dto.put("acct_infos", get27ca349c55d04639B266C96deda3910d());
+        dto.put("acct_infos", getFe3996d580ce46b8946dF444fe0dcf43());
 
         return dto.toJSONString();
     }
 
-    private static String get7f70e439E8f340f3Aac98f26d2971bd4() {
+    private static String getD826c3096785458dBc8b01c6777e35b0() {
         JSONObject dto = new JSONObject();
         // ip地址
         // dto.put("ip_addr", "");
@@ -118,7 +118,7 @@ public class V2TradeHostingPaymentHtrefundRequestDemo extends BaseCommonDemo {
         return dto.toJSONString();
     }
 
-    private static String getF76c79c938b7435085942a78867054da() {
+    private static String getEd3f08adA40c41768ceaC05bd276cbf7() {
         JSONObject dto = new JSONObject();
         // 设备类型
         dto.put("device_type", "4");
@@ -140,7 +140,7 @@ public class V2TradeHostingPaymentHtrefundRequestDemo extends BaseCommonDemo {
         return dto.toJSONString();
     }
 
-    private static String get7ce83f339ef6473e8e203eeb203e15fd() {
+    private static String get849b0a0043c246c1B69bB43d2a2339c1() {
         JSONObject dto = new JSONObject();
         // 省份付款方为对公账户时必填，参见省市地区码；示例值：0013
         // dto.put("province", "test");
@@ -156,7 +156,7 @@ public class V2TradeHostingPaymentHtrefundRequestDemo extends BaseCommonDemo {
         return dto.toJSONString();
     }
 
-    private static String getB307963107c54ada8bad0a0c4e1d9cd8() {
+    private static String get5867b38731174c9d9e4457b715935a28() {
         JSONObject dto = new JSONObject();
         // 退款原因
         // dto.put("refund_desc", "");

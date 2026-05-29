@@ -41,11 +41,11 @@ public class V3BillpayPlanAddRequestDemo extends BaseCommonDemo {
         // 补发当前周期账单标志枚举:Y-是、N-否；指定账单日时，必填；若填写是，则立即生成当前系统时间所在周期的账单； 滚动账单日时，此字段无效
         request.setReissueBillFlag("Y");
         // 代扣信息jsonObject格式；账单计划需自动代扣时必填
-        request.setWithholdInfoData(get49450184739c47e6Bab527b61aa24f1a());
+        request.setWithholdInfoData(getE99cbc55Ce184380A307475a77220ad4());
         // 用户资料信息列表
-        request.setUserDocInfoList(get919c625f5db74bca802a9a31f9647a55());
+        request.setUserDocInfoList(getFe462f13Ed914741B68b51220c62772f());
         // 账单收费项信息列表
-        request.setPaymentInfoList(get64292bd749be4204A99cA4e9c977a623());
+        request.setPaymentInfoList(get429cef58C12b49b7B98dAa9a14b2a395());
 
         // 设置非必填字段
         Map<String, Object> extendInfoMap = getExtendInfos();
@@ -68,7 +68,7 @@ public class V3BillpayPlanAddRequestDemo extends BaseCommonDemo {
         return extendInfoMap;
     }
 
-    private static String get49450184739c47e6Bab527b61aa24f1a() {
+    private static String getE99cbc55Ce184380A307475a77220ad4() {
         JSONObject dto = new JSONObject();
         // 卡令牌
         dto.put("token_no", "CT202412270001");
@@ -78,7 +78,7 @@ public class V3BillpayPlanAddRequestDemo extends BaseCommonDemo {
         return dto.toJSONString();
     }
 
-    private static String get919c625f5db74bca802a9a31f9647a55() {
+    private static String getFe462f13Ed914741B68b51220c62772f() {
         JSONObject dto = new JSONObject();
         // 账单表单字段属性ID
         dto.put("key_no", "userName");
@@ -90,7 +90,7 @@ public class V3BillpayPlanAddRequestDemo extends BaseCommonDemo {
         return dtoList.toJSONString();
     }
 
-    private static String get64292bd749be4204A99cA4e9c977a623() {
+    private static String get429cef58C12b49b7B98dAa9a14b2a395() {
         JSONObject dto = new JSONObject();
         // 账单表单字段属性ID
         dto.put("key_no", "propertyFee");

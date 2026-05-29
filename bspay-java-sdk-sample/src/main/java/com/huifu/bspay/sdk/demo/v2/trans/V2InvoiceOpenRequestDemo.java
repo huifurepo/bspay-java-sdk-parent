@@ -53,11 +53,11 @@ public class V2InvoiceOpenRequestDemo extends BaseCommonDemo {
         // 原发票号码openType&#x3D;1时必填；参见[发票右上角](https://paas.huifu.com/open/doc/api/#/fp/api_fp_yanglitu.md)；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：20685767&lt;/font&gt;
         request.setOriIvcNumber("150000020026");
         // 开票商品信息
-        request.setGoodsInfos(getB9c374b774e24c38A0d30007765b1429());
+        request.setGoodsInfos(getFb62b0617dcc4ca2A09aD5ff39bf9d16());
         // 不动产销售特殊字段specialFlag为05时，必填；jsonArray格式
-        // request.setEstateSales(get90e3d2919f5b43cf8a960778d05c49dc());
+        // request.setEstateSales(getF28c6ad5B3b34ebeBf0bC65eec0d4588());
         // 不动产租赁特殊字段specialFlag为16时，必填；jsonArray格式
-        // request.setEstateLease(getBdd8824aF9234864B2feEc68ba379845());
+        // request.setEstateLease(getE4a098258ab442e5B31360deeb7f145a());
 
         // 设置非必填字段
         Map<String, Object> extendInfoMap = getExtendInfos();
@@ -100,7 +100,7 @@ public class V2InvoiceOpenRequestDemo extends BaseCommonDemo {
         // 红字信息表编号
         extendInfoMap.put("red_info_number", "");
         // 开票人信息
-        extendInfoMap.put("payer_info", get2ca77396F23843d2Bd0540fb69ceedbb());
+        extendInfoMap.put("payer_info", getD3495fcdF9f44754Ba04D7c6c321de3d());
         // 开票结果异步通知地址
         extendInfoMap.put("callback_url", "virgo://http://192.168.85.157:30031/sspm/testVirgo");
         // 强制开票标识
@@ -110,7 +110,7 @@ public class V2InvoiceOpenRequestDemo extends BaseCommonDemo {
         return extendInfoMap;
     }
 
-    private static String getB9c374b774e24c38A0d30007765b1429() {
+    private static String getFb62b0617dcc4ca2A09aD5ff39bf9d16() {
         JSONObject dto = new JSONObject();
         // 发票行性质
         dto.put("ivc_nature", "0");
@@ -150,19 +150,19 @@ public class V2InvoiceOpenRequestDemo extends BaseCommonDemo {
         return dtoList.toJSONString();
     }
 
-    private static String get2ca77396F23843d2Bd0540fb69ceedbb() {
+    private static String getD3495fcdF9f44754Ba04D7c6c321de3d() {
         JSONObject dto = new JSONObject();
-        // 开票人
-        dto.put("payer_name", "开票人");
         // 收款人
         dto.put("payee", "收款人");
         // 复核人
         dto.put("reviewer", "复核");
+        // 开票人
+        dto.put("payer_name", "开票人");
 
         return dto.toJSONString();
     }
 
-    private static String get90e3d2919f5b43cf8a960778d05c49dc() {
+    private static String getF28c6ad5B3b34ebeBf0bC65eec0d4588() {
         JSONObject dto = new JSONObject();
         // 不动产地址
         // dto.put("addr", "test");
@@ -188,7 +188,7 @@ public class V2InvoiceOpenRequestDemo extends BaseCommonDemo {
         return dtoList.toJSONString();
     }
 
-    private static String getBdd8824aF9234864B2feEc68ba379845() {
+    private static String getE4a098258ab442e5B31360deeb7f145a() {
         JSONObject dto = new JSONObject();
         // 不动产地址
         // dto.put("addr", "test");

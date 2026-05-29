@@ -6,6 +6,30 @@ package com.huifu.bspay.sdk.opps.core.enums;
  */
 public enum FunctionCodeEnum {
     /**
+     * 开票商品查询
+     */
+    V2_INVOICE_MANAGE_GOODS_QUERYLIST("v2.invoice.manage.goods.queryList", "开票商品查询"),
+    /**
+     * 设置默认开票员
+     */
+    V2_INVOICE_CLERK_DEFAULT_MODIFY("v2.invoice.clerk.default.modify", "设置默认开票员"),
+    /**
+     * 开票员删除
+     */
+    V2_INVOICE_CLERK_DELETE("v2.invoice.clerk.delete", "开票员删除"),
+    /**
+     * 开票员查询
+     */
+    V2_INVOICE_CLERK_LIST_QUERY("v2.invoice.clerk.list.query", "开票员查询"),
+    /**
+     * 开票商品新增
+     */
+    V2_INVOICE_MANAGE_GOODS_ADD("v2.invoice.manage.goods.add", "开票商品新增"),
+    /**
+     * 开票商品修改
+     */
+    V2_MERCHANT_FAPIAO_GOODS_EDIT("v2.merchant.fapiao.goods.edit", "开票商品修改"),
+    /**
      * 账单计划变更
      */
     V3_BILLPAY_PLAN_MODIFY("v3.billpay.plan.modify", "账单计划变更"),

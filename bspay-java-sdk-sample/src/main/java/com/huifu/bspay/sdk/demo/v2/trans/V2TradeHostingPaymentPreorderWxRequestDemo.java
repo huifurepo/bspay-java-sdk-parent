@@ -39,7 +39,7 @@ public class V2TradeHostingPaymentPreorderWxRequestDemo extends BaseCommonDemo {
         // 商品描述
         request.setGoodsDesc("app跳微信消费");
         // 微信小程序扩展参数集合
-        request.setMiniappData(get79ae16abF80243edA1d2716c18993dc8());
+        request.setMiniappData(get8b8212c8Cba14e50Bf2962448e2924da());
 
         // 设置非必填字段
         Map<String, Object> extendInfoMap = getExtendInfos();
@@ -64,25 +64,31 @@ public class V2TradeHostingPaymentPreorderWxRequestDemo extends BaseCommonDemo {
         // 是否拆单支付
         // extendInfoMap.put("split_pay_flag", "");
         // 拆单支付参数集合
-        // extendInfoMap.put("split_pay_data", getB32820656b19491f8493Aedc93824585());
+        // extendInfoMap.put("split_pay_data", get87244e9c3bdc4bd29e265ab64caa6369());
         // 分账对象
-        extendInfoMap.put("acct_split_bunch", getCeb7c110604a4eb38a354b753b81e01b());
+        extendInfoMap.put("acct_split_bunch", get22b8230a38dc4299895fCf6e7e40c27e());
+        // 统一收银台扩展参数集合
+        // extendInfoMap.put("hosting_data", get0c829f9fE7994b99B61896cc3f34acad());
         // 交易失效时间
         // extendInfoMap.put("time_expire", "");
         // 业务信息
-        // extendInfoMap.put("biz_info", get0f1e1b4eA8f9463981573b6d52fca20a());
+        // extendInfoMap.put("biz_info", getA9311effC2e448ba9161C2dcfae5f1ac());
         // 交易异步通知地址
         extendInfoMap.put("notify_url", "https://callback.service.com/xx");
         // 微信参数集合
-        // extendInfoMap.put("wx_data", get3857dabb491b41e9970e2222c78d52fe());
+        // extendInfoMap.put("wx_data", get4da3367fA6914ae3B18926d7ed085490());
         // 设备信息
-        // extendInfoMap.put("terminal_device_data", getAb459ff28d4b44f4Bfc77c6c7dee40fe());
+        // extendInfoMap.put("terminal_device_data", getDb030fcb2b774cbcBe077e8c4a43f1fe());
         // 手续费场景标识
         // extendInfoMap.put("fee_sign", "");
+        // 是否交易手续费分摊
+        // extendInfoMap.put("fee_split_flag", "");
+        // 手续费扣款标志
+        // extendInfoMap.put("fee_flag", "");
         return extendInfoMap;
     }
 
-    private static String getB32820656b19491f8493Aedc93824585() {
+    private static String get87244e9c3bdc4bd29e265ab64caa6369() {
         JSONObject dto = new JSONObject();
         // 商户贴息标记
         // dto.put("fq_mer_discount_flag", "");
@@ -92,7 +98,7 @@ public class V2TradeHostingPaymentPreorderWxRequestDemo extends BaseCommonDemo {
         return dto.toJSONString();
     }
 
-    private static JSON get7b637af0A8a54de5B5b870f0910a95be() {
+    private static JSON getEa988694B7aa4cd490a7Faade635c2f5() {
         JSONObject dto = new JSONObject();
         // 分账金额
         dto.put("div_amt", "0.01");
@@ -108,10 +114,10 @@ public class V2TradeHostingPaymentPreorderWxRequestDemo extends BaseCommonDemo {
         return dtoList;
     }
 
-    private static String getCeb7c110604a4eb38a354b753b81e01b() {
+    private static String get22b8230a38dc4299895fCf6e7e40c27e() {
         JSONObject dto = new JSONObject();
         // 分账明细
-        dto.put("acct_infos", get7b637af0A8a54de5B5b870f0910a95be());
+        dto.put("acct_infos", getEa988694B7aa4cd490a7Faade635c2f5());
         // 百分比分账标志
         // dto.put("percentage_flag", "");
         // 是否净值分账
@@ -120,7 +126,15 @@ public class V2TradeHostingPaymentPreorderWxRequestDemo extends BaseCommonDemo {
         return dto.toJSONString();
     }
 
-    private static String get79ae16abF80243edA1d2716c18993dc8() {
+    private static String get0c829f9fE7994b99B61896cc3f34acad() {
+        JSONObject dto = new JSONObject();
+        // 项目号
+        // dto.put("project_id", "");
+
+        return dto.toJSONString();
+    }
+
+    private static String get8b8212c8Cba14e50Bf2962448e2924da() {
         JSONObject dto = new JSONObject();
         // 是否生成scheme_code
         dto.put("need_scheme", "Y");
@@ -132,7 +146,7 @@ public class V2TradeHostingPaymentPreorderWxRequestDemo extends BaseCommonDemo {
         return dto.toJSONString();
     }
 
-    private static JSON get7ffdabd5E3f746ca982369231061f240() {
+    private static JSON get107c832a6ad64a82B74aE9d059795492() {
         JSONObject dto = new JSONObject();
         // 指定支付者
         // dto.put("limit_payer", "");
@@ -142,7 +156,7 @@ public class V2TradeHostingPaymentPreorderWxRequestDemo extends BaseCommonDemo {
         return dto;
     }
 
-    private static JSON get0793f164B5b145788ff8Fa84a17ca207() {
+    private static JSON getF891e8ab065044a891e8986cd53e1f26() {
         JSONObject dto = new JSONObject();
         // 姓名
         // dto.put("name", "");
@@ -154,17 +168,17 @@ public class V2TradeHostingPaymentPreorderWxRequestDemo extends BaseCommonDemo {
         return dto;
     }
 
-    private static String get0f1e1b4eA8f9463981573b6d52fca20a() {
+    private static String getA9311effC2e448ba9161C2dcfae5f1ac() {
         JSONObject dto = new JSONObject();
         // 付款人验证（微信）
-        // dto.put("payer_check_wx", get7ffdabd5E3f746ca982369231061f240());
+        // dto.put("payer_check_wx", get107c832a6ad64a82B74aE9d059795492());
         // 个人付款人信息
-        // dto.put("person_payer", get0793f164B5b145788ff8Fa84a17ca207());
+        // dto.put("person_payer", getF891e8ab065044a891e8986cd53e1f26());
 
         return dto.toJSONString();
     }
 
-    private static JSON get5ff89689878e4a6e933622ed380efe16() {
+    private static JSON getE8346fe57aec4ede870255d3c8fee776() {
         JSONObject dto = new JSONObject();
         // 商品编码
         // dto.put("goods_id", "");
@@ -182,10 +196,10 @@ public class V2TradeHostingPaymentPreorderWxRequestDemo extends BaseCommonDemo {
         return dtoList;
     }
 
-    private static JSON getDe266714D5b449028d11C7a909c892bd() {
+    private static JSON get51e199e89aa44c94B4a2A1083397b459() {
         JSONObject dto = new JSONObject();
         // 单品列表
-        // dto.put("goods_detail", get5ff89689878e4a6e933622ed380efe16());
+        // dto.put("goods_detail", getE8346fe57aec4ede870255d3c8fee776());
         // 订单原价(元)
         // dto.put("cost_price", "");
         // 商品小票ID
@@ -194,7 +208,7 @@ public class V2TradeHostingPaymentPreorderWxRequestDemo extends BaseCommonDemo {
         return dto;
     }
 
-    private static JSON get786f1eb02d7942e3905fA5d785d10ecd() {
+    private static JSON getA638c7dd0cb9461cBe8a0e1880def5d3() {
         JSONObject dto = new JSONObject();
         // 门店id
         // dto.put("id", "");
@@ -208,15 +222,15 @@ public class V2TradeHostingPaymentPreorderWxRequestDemo extends BaseCommonDemo {
         return dto;
     }
 
-    private static JSON getD0cb0ae880e946238db7025f18752e7c() {
+    private static JSON getA9ed59d382e74283927eFd85baa89458() {
         JSONObject dto = new JSONObject();
         // 门店信息
-        // dto.put("store_info", get786f1eb02d7942e3905fA5d785d10ecd());
+        // dto.put("store_info", getA638c7dd0cb9461cBe8a0e1880def5d3());
 
         return dto;
     }
 
-    private static String get3857dabb491b41e9970e2222c78d52fe() {
+    private static String get4da3367fA6914ae3B18926d7ed085490() {
         JSONObject dto = new JSONObject();
         // 子商户应用ID
         // dto.put("sub_appid", "");
@@ -227,7 +241,7 @@ public class V2TradeHostingPaymentPreorderWxRequestDemo extends BaseCommonDemo {
         // 商品描述
         // dto.put("body", "");
         // 商品详情
-        // dto.put("detail", getDe266714D5b449028d11C7a909c892bd());
+        // dto.put("detail", get51e199e89aa44c94B4a2A1083397b459());
         // 设备号
         // dto.put("device_info", "");
         // 订单优惠标记
@@ -237,7 +251,7 @@ public class V2TradeHostingPaymentPreorderWxRequestDemo extends BaseCommonDemo {
         // 开发票入口开放标识
         // dto.put("receipt", "");
         // 场景信息
-        // dto.put("scene_info", getD0cb0ae880e946238db7025f18752e7c());
+        // dto.put("scene_info", getA9ed59d382e74283927eFd85baa89458());
         // 终端ip
         // dto.put("spbill_create_ip", "");
         // 单品优惠标识
@@ -250,7 +264,7 @@ public class V2TradeHostingPaymentPreorderWxRequestDemo extends BaseCommonDemo {
         return dto.toJSONString();
     }
 
-    private static String getAb459ff28d4b44f4Bfc77c6c7dee40fe() {
+    private static String getDb030fcb2b774cbcBe077e8c4a43f1fe() {
         JSONObject dto = new JSONObject();
         // 汇付机具号
         // dto.put("devs_id", "test");

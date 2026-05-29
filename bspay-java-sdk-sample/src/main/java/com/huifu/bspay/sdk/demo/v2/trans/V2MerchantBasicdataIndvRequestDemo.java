@@ -59,7 +59,7 @@ public class V2MerchantBasicdataIndvRequestDemo extends BaseCommonDemo {
         // 负责人电子邮箱
         request.setContactEmail("jeff.peng@huifu.com");
         // 结算卡信息配置
-        request.setCardInfo(getE66472f287674547A782A4f93b296ae7());
+        request.setCardInfo(getE4d510160efc42e5Afa4Fa4639ca2682());
         // 银行卡卡号面
         // request.setSettleCardFrontPic("test");
         // 商户ICP备案编号商户ICP备案编号或网站许可证号；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：沪ICP备06046402号-28 &lt;/font&gt;&lt;br/&gt;类型为PC网站时，且为企业商户，且开通快捷或网银，或大额转账，或余额支付或分账业务（20%（不含）-100%），或为个人商户开通分账业务（10%（不含）-100%），必填
@@ -100,9 +100,9 @@ public class V2MerchantBasicdataIndvRequestDemo extends BaseCommonDemo {
         // 负责人职业
         // extendInfoMap.put("occupation", "");
         // 结算规则配置
-        extendInfoMap.put("settle_config", getE27d5818314e42e8B024Fc83008d709c());
+        extendInfoMap.put("settle_config", get3fc1e14c47074d97Bc16B6dd843a9ab5());
         // 取现信息配置
-        extendInfoMap.put("cash_config", getC936e4be129540a78c77D4760c3c581a());
+        extendInfoMap.put("cash_config", getF035da8cD9dd4dd3B5feA4907768259f());
         // 商户通知标识
         extendInfoMap.put("sms_send_flag", "1");
         // 管理员账号
@@ -118,13 +118,15 @@ public class V2MerchantBasicdataIndvRequestDemo extends BaseCommonDemo {
         // 商户身份
         // extendInfoMap.put("head_office_flag", "");
         // 斗拱e账户功能配置
-        // extendInfoMap.put("elec_acct_config", get5da5abafC1b84272A6d9468e68131012());
+        // extendInfoMap.put("elec_acct_config", getF815cc1a9cdc46a5B1aa6a3ddfc3828a());
         // 扩展资料包
-        // extendInfoMap.put("extended_material_list", get0602d7b28b514194Ae8fE744b7156bb8());
+        // extendInfoMap.put("extended_material_list", get4057cf2720ef4e7bA5fd9c1ebf0679f0());
+        // 产品大类
+        // extendInfoMap.put("activated_products", "");
         return extendInfoMap;
     }
 
-    private static String getE66472f287674547A782A4f93b296ae7() {
+    private static String getE4d510160efc42e5Afa4Fa4639ca2682() {
         JSONObject dto = new JSONObject();
         // 卡户名
         dto.put("card_name", "张天德");
@@ -154,7 +156,7 @@ public class V2MerchantBasicdataIndvRequestDemo extends BaseCommonDemo {
         return dto.toJSONString();
     }
 
-    private static String getE27d5818314e42e8B024Fc83008d709c() {
+    private static String get3fc1e14c47074d97Bc16B6dd843a9ab5() {
         JSONObject dto = new JSONObject();
         // 结算周期
         dto.put("settle_cycle", "D1");
@@ -190,7 +192,7 @@ public class V2MerchantBasicdataIndvRequestDemo extends BaseCommonDemo {
         return dto.toJSONString();
     }
 
-    private static String getC936e4be129540a78c77D4760c3c581a() {
+    private static String getF035da8cD9dd4dd3B5feA4907768259f() {
         JSONObject dto = new JSONObject();
         // 取现类型
         dto.put("cash_type", "D1");
@@ -216,7 +218,7 @@ public class V2MerchantBasicdataIndvRequestDemo extends BaseCommonDemo {
         return dtoList.toJSONString();
     }
 
-    private static JSON get6894f407Cbb3490e88ff132ad8b2202b() {
+    private static JSON get7a27faf4Cfb843348d049994078a7028() {
         JSONObject dto = new JSONObject();
         // 银行编码
         // dto.put("bank_code", "test");
@@ -248,7 +250,7 @@ public class V2MerchantBasicdataIndvRequestDemo extends BaseCommonDemo {
         return dtoList;
     }
 
-    private static String get5da5abafC1b84272A6d9468e68131012() {
+    private static String getF815cc1a9cdc46a5B1aa6a3ddfc3828a() {
         JSONObject dto = new JSONObject();
         // 电子账户开关
         // dto.put("switch_state", "test");
@@ -263,14 +265,14 @@ public class V2MerchantBasicdataIndvRequestDemo extends BaseCommonDemo {
         // 签约成功标志
         // dto.put("sign_success_flag", "test");
         // 银行卡信息
-        // dto.put("elec_card_list", get6894f407Cbb3490e88ff132ad8b2202b());
+        // dto.put("elec_card_list", get7a27faf4Cfb843348d049994078a7028());
         // 中信签约短信流水号
         // dto.put("elec_acct_sign_seq_id", "");
 
         return dto.toJSONString();
     }
 
-    private static String get0602d7b28b514194Ae8fE744b7156bb8() {
+    private static String get4057cf2720ef4e7bA5fd9c1ebf0679f0() {
         JSONObject dto = new JSONObject();
         // 文件id
         // dto.put("file_id", "test");

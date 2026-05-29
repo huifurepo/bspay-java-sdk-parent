@@ -61,6 +61,14 @@ public class V2MerchantUrlForwardRequestDemo extends BaseCommonDemo {
         // extendInfoMap.put("async_receive_url", "");
         // 模版编号
         extendInfoMap.put("template_id", "155625");
+        // 商户身份
+        // extendInfoMap.put("head_office_flag", "");
+        // 上级汇付Id
+        // extendInfoMap.put("head_huifu_id", "");
+        // 使用上级微信、支付宝商户号发起交易
+        // extendInfoMap.put("use_chains_flag", "");
+        // 小微经营类型
+        // extendInfoMap.put("micro_biz_type", "");
         return extendInfoMap;
     }
 

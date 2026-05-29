@@ -59,6 +59,8 @@ public class V2InvoiceClerkRegRequestDemo extends BaseCommonDemo {
     private static Map<String, Object> getExtendInfos() {
         // 设置非必填字段
         Map<String, Object> extendInfoMap = new HashMap<>();
+        // 是否设置默认开票员
+        // extendInfoMap.put("is_default_set", "");
         return extendInfoMap;
     }
 

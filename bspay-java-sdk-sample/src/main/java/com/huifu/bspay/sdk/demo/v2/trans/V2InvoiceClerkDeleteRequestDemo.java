@@ -8,16 +8,16 @@ import com.huifu.bspay.sdk.demo.init.OppsMerchantConfigDemo;
 import com.huifu.bspay.sdk.opps.core.utils.DateTools;
 import com.huifu.bspay.sdk.opps.core.utils.SequenceTools;
 import com.huifu.bspay.sdk.demo.core.Identify;
-import com.huifu.bspay.sdk.opps.core.request.V2MerchantBusiStatusQueryRequest;
+import com.huifu.bspay.sdk.opps.core.request.V2InvoiceClerkDeleteRequest;
 
 /**
- * 统一进件页面版查询 - 示例
+ * 开票员删除 - 示例
  *
  * @author sdk-generator
  * @Description
  */
-@Identify(requestClass = V2MerchantBusiStatusQueryRequest.class)
-public class V2MerchantBusiStatusQueryRequestDemo extends BaseCommonDemo {
+@Identify(requestClass = V2InvoiceClerkDeleteRequest.class)
+public class V2InvoiceClerkDeleteRequestDemo extends BaseCommonDemo {
 
     public static void main(String[] args) throws Exception {
 
@@ -25,13 +25,15 @@ public class V2MerchantBusiStatusQueryRequestDemo extends BaseCommonDemo {
         doInit(OppsMerchantConfigDemo.getMerchantConfig());
 
         // 2.组装请求参数
-        V2MerchantBusiStatusQueryRequest request = new V2MerchantBusiStatusQueryRequest();
+        V2InvoiceClerkDeleteRequest request = new V2InvoiceClerkDeleteRequest();
         // 请求流水号
         request.setReqSeqId(SequenceTools.getReqSeqId32());
-        // 请求日期
+        // 请求时间
         request.setReqDate(DateTools.getCurrentDateYYYYMMDD());
-        // 门店号
-        request.setStoreId("yu653454308");
+        // 汇付商户号
+        request.setHuifuId("6666000149801800");
+        // 登录账号
+        request.setLoginAccount("31011520010");
 
         // 设置非必填字段
         Map<String, Object> extendInfoMap = getExtendInfos();
@@ -49,8 +51,6 @@ public class V2MerchantBusiStatusQueryRequestDemo extends BaseCommonDemo {
     private static Map<String, Object> getExtendInfos() {
         // 设置非必填字段
         Map<String, Object> extendInfoMap = new HashMap<>();
-        // 渠道商号
-        // extendInfoMap.put("upper_huifu_id", "");
         return extendInfoMap;
     }
 
