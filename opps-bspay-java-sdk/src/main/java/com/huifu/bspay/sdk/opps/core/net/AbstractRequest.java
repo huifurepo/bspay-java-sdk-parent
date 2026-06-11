@@ -22,7 +22,7 @@ import java.util.*;
  */
 public abstract class AbstractRequest {
 
-    public static final String SDK_VERSION = "3.0.37";
+    public static final String SDK_VERSION = "3.0.38";
 
     protected static enum RequestMethod {
         GET, POST, DELETE, PUT;
@@ -78,6 +78,7 @@ public abstract class AbstractRequest {
         // 传递SDK版本
         headers.put("sdk_version", "javaSDK_" + SDK_VERSION);
         // 再传一个jpt前缀的，以便打印至网关log
+        headers.put("jpt-sdk_version", "javaSDK_" + SDK_VERSION);
         // 传递skill来源版本
         if (StringUtils.isNotBlank(config.getSkillSource())) {
             headers.put("jpt-x-skill-source", config.getSkillSource());
@@ -114,7 +115,7 @@ public abstract class AbstractRequest {
         request.put("sys_id", config.getSysId());
         request.put("data", JSONObject.parseObject(reqData));
         request.put("sign", requestSign);
-        request.put("product_id", config.getProcutId());
+        request.put("product_id", config.getProductId());
 
         String requestBody = JSON.toJSONString(request);
         if (BasePay.debug) {

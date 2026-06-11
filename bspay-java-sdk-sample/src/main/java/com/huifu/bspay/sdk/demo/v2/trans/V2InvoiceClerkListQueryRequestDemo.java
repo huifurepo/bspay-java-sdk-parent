@@ -49,8 +49,6 @@ public class V2InvoiceClerkListQueryRequestDemo extends BaseCommonDemo {
         extendInfoMap.put("req_seq_id", SequenceTools.getReqSeqId32());
         // 请求日期
         extendInfoMap.put("req_date", DateTools.getCurrentDateYYYYMMDD());
-        // 登记状态
-        extendInfoMap.put("clerk_state_list", ["S","F","I","P"]);
         return extendInfoMap;
     }
 

@@ -17,7 +17,7 @@ public class BaseCommonDemoV4 {
         com.huifu.dg.lightning.biz.config.MerConfig lightningMerConfig = new com.huifu.dg.lightning.biz.config.MerConfig();
         com.huifu.dg.lightning.utils.BasePay.debug = com.huifu.bspay.sdk.opps.core.BasePay.debug;
         com.huifu.dg.lightning.utils.BasePay.prodMode = com.huifu.bspay.sdk.opps.core.BasePay.prodMode;
-        lightningMerConfig.setProductId(merConfig.getProcutId());
+        lightningMerConfig.setProductId(merConfig.getProductId());
         lightningMerConfig.setSysId(merConfig.getSysId());
         lightningMerConfig.setRsaPrivateKey(merConfig.getRsaPrivateKey());
         lightningMerConfig.setRsaPublicKey(merConfig.getRsaPublicKey());

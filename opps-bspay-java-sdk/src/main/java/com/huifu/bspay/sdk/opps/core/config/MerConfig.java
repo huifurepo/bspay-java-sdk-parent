@@ -27,7 +27,7 @@ public class MerConfig {
      * 产品号，由汇付分配
      */
     @JSONField(name = "product_id")
-    private String procutId;
+    private String productId;
     /**
      * 系统号，由汇付分配
      */
@@ -106,12 +106,12 @@ public class MerConfig {
         this.rsaPublicKey = rsaPublicKey;
     }
 
-    public String getProcutId() {
-        return procutId;
+    public String getProductId() {
+        return productId;
     }
 
-    public void setProcutId(String procutId) {
-        this.procutId = procutId;
+    public void setProductId(String productId) {
+        this.productId = productId;
     }
 
     public String getSysId() {
