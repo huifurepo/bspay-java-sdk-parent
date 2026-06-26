@@ -35,9 +35,9 @@ public class V2TradeAcctpaymentPayRequestDemo extends BaseCommonDemo {
         // 支付金额
         request.setOrdAmt("0.01");
         // 分账对象
-        request.setAcctSplitBunch(get9d0bec22F44249219196A84b6c917fe9());
+        request.setAcctSplitBunch(get9c29fa2e73524f6680262d660bfa5335());
         // 安全信息
-        request.setRiskCheckData(get21c1ce39685d47d0Abd2F5d0467e7471());
+        request.setRiskCheckData(getE947651a90b340abA9110bb2ffa7106b());
         // 资金类型资金类型。支付渠道为中信E管家时，资金类型必填（[详见说明](https://paas.huifu.com/open/doc/api/#/yuer/api_zxegjzllx)）
         // request.setFundType("test");
         // 手续费承担方标识余额支付手续费承担方标识；商户余额支付扣收规则为接口指定承担方时必填！枚举值：&lt;br/&gt;OUT：出款方；&lt;br/&gt;IN：分账接受方。&lt;br/&gt;&lt;font color&#x3D;&quot;green&quot;&gt;示例值：IN&lt;/font&gt;
@@ -73,22 +73,12 @@ public class V2TradeAcctpaymentPayRequestDemo extends BaseCommonDemo {
         // extendInfoMap.put("out_acct_id", "");
         // 支付渠道
         // extendInfoMap.put("acct_channel", "");
-        // 灵活用工标志
-        // extendInfoMap.put("hyc_flag", "");
-        // 灵活用工平台
-        // extendInfoMap.put("lg_platform_type", "");
-        // 落地公司商户号
-        // extendInfoMap.put("bmember_id", "");
-        // 乐接活请求参数集合
-        // extendInfoMap.put("ljh_data", get0684ecf9C4b64c0d88de7d9a0f6077a7());
-        // 异步通知地址
-        // extendInfoMap.put("notify_url", "");
         // 余额支付安全核验方式
         // extendInfoMap.put("verify_type", "");
         return extendInfoMap;
     }
 
-    private static JSON get14a36f48897b45ef815dDb697428ce53() {
+    private static JSON getFae5f7e17de84c098c5dF86a5d97af14() {
         JSONObject dto = new JSONObject();
         // 分账接收方ID
         dto.put("huifu_id", "6666000109133323");
@@ -104,10 +94,10 @@ public class V2TradeAcctpaymentPayRequestDemo extends BaseCommonDemo {
         return dtoList;
     }
 
-    private static String get9d0bec22F44249219196A84b6c917fe9() {
+    private static String get9c29fa2e73524f6680262d660bfa5335() {
         JSONObject dto = new JSONObject();
         // 分账明细
-        dto.put("acct_infos", get14a36f48897b45ef815dDb697428ce53());
+        dto.put("acct_infos", getFae5f7e17de84c098c5dF86a5d97af14());
         // 百分比分账标志
         // dto.put("percentage_flag", "");
         // 是否净值分账
@@ -116,7 +106,7 @@ public class V2TradeAcctpaymentPayRequestDemo extends BaseCommonDemo {
         return dto.toJSONString();
     }
 
-    private static String get21c1ce39685d47d0Abd2F5d0467e7471() {
+    private static String getE947651a90b340abA9110bb2ffa7106b() {
         JSONObject dto = new JSONObject();
         // 转账原因
         dto.put("transfer_type", "04");
@@ -130,16 +120,6 @@ public class V2TradeAcctpaymentPayRequestDemo extends BaseCommonDemo {
         // dto.put("base_station", "");
         // IP地址
         // dto.put("ip_addr", "");
-
-        return dto.toJSONString();
-    }
-
-    private static String get0684ecf9C4b64c0d88de7d9a0f6077a7() {
-        JSONObject dto = new JSONObject();
-        // 税源地ID
-        // dto.put("tax_area_id", "");
-        // 任务模板ID
-        // dto.put("template_id", "");
 
         return dto.toJSONString();
     }

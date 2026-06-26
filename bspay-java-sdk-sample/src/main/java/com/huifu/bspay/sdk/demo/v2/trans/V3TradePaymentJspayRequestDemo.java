@@ -60,27 +60,27 @@ public class V3TradePaymentJspayRequestDemo extends BaseCommonDemo {
         // 交易有效期
         extendInfoMap.put("time_expire", "20250518235959");
         // 微信参数集合
-        extendInfoMap.put("wx_data", get73a9cb1aC28c430eB33c414cdc00a7fb());
+        extendInfoMap.put("wx_data", get332c0c62C4a24a33A2c4D9521ba42073());
         // 支付宝参数集合
-        extendInfoMap.put("alipay_data", get63ad7bd4A91946cf9d47E7e04541d892());
+        extendInfoMap.put("alipay_data", get901e629d449147adAe4a462c1cb6b8f4());
         // 银联参数集合
-        extendInfoMap.put("unionpay_data", get1e92dc2b9aa64f4193a4Aad643e9f72c());
+        extendInfoMap.put("unionpay_data", get020d46ce53e84b9eB1689448d1b6e0f5());
         // 数字人民币参数集合
-        // extendInfoMap.put("dc_data", get1d7f7c5b280c458a8e67F364851286e1());
+        // extendInfoMap.put("dc_data", getFde1209aEe9849ddA32a8abf0936531a());
         // 抖音参数集合
-        // extendInfoMap.put("dy_data", get02ffe4bbFd4742ed9ebc6e8b8b6a83a4());
+        // extendInfoMap.put("dy_data", get49f148141792432b8620C1d9c64e7676());
         // 是否延迟交易
         extendInfoMap.put("delay_acct_flag", "N");
         // 手续费扣款标志
         // extendInfoMap.put("fee_flag", "");
         // 分账对象
-        extendInfoMap.put("acct_split_bunch", getAb9deee601ef483b80339487052b0f86());
+        extendInfoMap.put("acct_split_bunch", get50c2519fF3224cebA08001405e1b86ce());
         // 传入分账遇到优惠的处理规则
         extendInfoMap.put("term_div_coupon_type", "0");
         // 补贴支付信息
-        // extendInfoMap.put("combinedpay_data", getE08a61622d4946b1A337444dd2d5635d());
+        // extendInfoMap.put("combinedpay_data", get5401811f06b7464eB924F1b7d68fe086());
         // 补贴支付手续费承担方信息
-        // extendInfoMap.put("combinedpay_data_fee_info", getF889e9a4Fc1049b9Aac8A8ca85e6a217());
+        // extendInfoMap.put("combinedpay_data_fee_info", get37b7ec0b773142248f08Bac64564b2d4());
         // 禁用信用卡标记
         extendInfoMap.put("limit_pay_type", "NO_CREDIT");
         // 商户贴息标记
@@ -92,19 +92,19 @@ public class V3TradePaymentJspayRequestDemo extends BaseCommonDemo {
         // 备注
         extendInfoMap.put("remark", "string");
         // 安全信息
-        extendInfoMap.put("risk_check_data", get59f6ef0d8f054cfc941d040e89f062e9());
+        extendInfoMap.put("risk_check_data", get74da880a27a14a84816260a709fa719e());
         // 设备信息
-        extendInfoMap.put("terminal_device_data", getE090f351Df9f409e803cEbb3736ba266());
+        extendInfoMap.put("terminal_device_data", get63fef1d1E6214f9483da4eb4c374ade9());
         // 异步通知地址
         extendInfoMap.put("notify_url", "http://www.baidu.com");
         // 手续费补贴信息
-        // extendInfoMap.put("trans_fee_allowance_info", get5b265ccf4ad9484a8fc635cc5776aec0());
+        // extendInfoMap.put("trans_fee_allowance_info", getC910730e4f00437e871fBeb4accaa958());
         // 手续费场景标识
         // extendInfoMap.put("fee_sign", "");
         return extendInfoMap;
     }
 
-    private static JSON get4ef55171Fbe84c77Aab559a00e1e05d7() {
+    private static JSON get564cf0a6F5a94e3aAeaf054ceb31fd9f() {
         JSONObject dto = new JSONObject();
         // 商品编码
         dto.put("goods_id", "6934572310301");
@@ -122,10 +122,10 @@ public class V3TradePaymentJspayRequestDemo extends BaseCommonDemo {
         return dtoList;
     }
 
-    private static JSON get7f306b16C47f4c12A08d35ee0d8928c6() {
+    private static JSON get6ab7323b28824e2183c9C1d8be97b266() {
         JSONObject dto = new JSONObject();
         // 单品列表
-        dto.put("goods_detail", get4ef55171Fbe84c77Aab559a00e1e05d7());
+        dto.put("goods_detail", get564cf0a6F5a94e3aAeaf054ceb31fd9f());
         // 订单原价(元)
         dto.put("cost_price", "43.00");
         // 商品小票ID
@@ -134,7 +134,7 @@ public class V3TradePaymentJspayRequestDemo extends BaseCommonDemo {
         return dto;
     }
 
-    private static JSON getE62e315313ca4aadA9cbF02b4388c166() {
+    private static JSON get81e275c3E1dc4fd0B213A091de4f2470() {
         JSONObject dto = new JSONObject();
         // 门店id
         // dto.put("id", "");
@@ -148,15 +148,15 @@ public class V3TradePaymentJspayRequestDemo extends BaseCommonDemo {
         return dto;
     }
 
-    private static JSON get3a2ee917C08f4fee981cCcc3ed69a69f() {
+    private static JSON get894310144c5c49fe81b915dc3876abfc() {
         JSONObject dto = new JSONObject();
         // 门店信息
-        // dto.put("store_info", getE62e315313ca4aadA9cbF02b4388c166());
+        // dto.put("store_info", get81e275c3E1dc4fd0B213A091de4f2470());
 
         return dto;
     }
 
-    private static String get73a9cb1aC28c430eB33c414cdc00a7fb() {
+    private static String get332c0c62C4a24a33A2c4D9521ba42073() {
         JSONObject dto = new JSONObject();
         // 子商户应用ID
         dto.put("sub_appid", "wxdfe9a5d141f96685");
@@ -167,7 +167,7 @@ public class V3TradePaymentJspayRequestDemo extends BaseCommonDemo {
         // 商品描述
         // dto.put("body", "");
         // 商品详情
-        dto.put("detail", get7f306b16C47f4c12A08d35ee0d8928c6());
+        dto.put("detail", get6ab7323b28824e2183c9C1d8be97b266());
         // 设备号
         // dto.put("device_info", "");
         // 订单优惠标记
@@ -177,7 +177,7 @@ public class V3TradePaymentJspayRequestDemo extends BaseCommonDemo {
         // 开发票入口开放标识
         // dto.put("receipt", "");
         // 场景信息
-        dto.put("scene_info", get3a2ee917C08f4fee981cCcc3ed69a69f());
+        dto.put("scene_info", get894310144c5c49fe81b915dc3876abfc());
         // 终端ip
         // dto.put("spbill_create_ip", "");
         // 单品优惠标识
@@ -190,7 +190,7 @@ public class V3TradePaymentJspayRequestDemo extends BaseCommonDemo {
         return dto.toJSONString();
     }
 
-    private static JSON get9476a04cD35042a087a8Cc1bde9a277d() {
+    private static JSON get0d39865f015143f2B3940a47f8b12081() {
         JSONObject dto = new JSONObject();
         // 卡类型
         dto.put("card_type", "");
@@ -214,7 +214,7 @@ public class V3TradePaymentJspayRequestDemo extends BaseCommonDemo {
         return dto;
     }
 
-    private static JSON getC49dc264E4c4427cB0f526d0824d2266() {
+    private static JSON get3d244f92C48844c696f9Ab65439a9b58() {
         JSONObject dto = new JSONObject();
         // 商品的编号
         dto.put("goods_id", "12312321");
@@ -238,7 +238,7 @@ public class V3TradePaymentJspayRequestDemo extends BaseCommonDemo {
         return dtoList;
     }
 
-    private static JSON get5c1c98d01d174eb5Be82Aa2f920cef82() {
+    private static JSON get48d5541aC92c4437B69e0c6ebeb853ed() {
         JSONObject dto = new JSONObject();
         // 姓名
         // dto.put("name", "");
@@ -258,7 +258,7 @@ public class V3TradePaymentJspayRequestDemo extends BaseCommonDemo {
         return dto;
     }
 
-    private static String get63ad7bd4A91946cf9d47E7e04541d892() {
+    private static String get901e629d449147adAe4a462c1cb6b8f4() {
         JSONObject dto = new JSONObject();
         // 支付宝的店铺编号
         dto.put("alipay_store_id", "");
@@ -267,9 +267,9 @@ public class V3TradePaymentJspayRequestDemo extends BaseCommonDemo {
         // 买家支付宝账号
         dto.put("buyer_logon_id", "string");
         // 业务扩展参数
-        dto.put("extend_params", get9476a04cD35042a087a8Cc1bde9a277d());
+        dto.put("extend_params", get0d39865f015143f2B3940a47f8b12081());
         // 订单包含的商品列表信息
-        dto.put("goods_detail", getC49dc264E4c4427cB0f526d0824d2266());
+        dto.put("goods_detail", get3d244f92C48844c696f9Ab65439a9b58());
         // 商户原始订单号
         dto.put("merchant_order_no", "string");
         // 商户操作员编号
@@ -281,7 +281,7 @@ public class V3TradePaymentJspayRequestDemo extends BaseCommonDemo {
         // 商户门店编号
         dto.put("store_id", "");
         // 外部指定买家
-        // dto.put("ext_user_info", get5c1c98d01d174eb5Be82Aa2f920cef82());
+        // dto.put("ext_user_info", get48d5541aC92c4437B69e0c6ebeb853ed());
         // 订单标题
         // dto.put("subject", "");
         // 商家门店名称
@@ -298,7 +298,7 @@ public class V3TradePaymentJspayRequestDemo extends BaseCommonDemo {
         return dto.toJSONString();
     }
 
-    private static JSON getDeb02c1eC77f482fA2e978d4c6e75986() {
+    private static JSON get9bd84d4f986041c2B962482b46455c36() {
         JSONObject dto = new JSONObject();
         // 商户类别
         // dto.put("mer_cat_code", "");
@@ -312,7 +312,7 @@ public class V3TradePaymentJspayRequestDemo extends BaseCommonDemo {
         return dto;
     }
 
-    private static String get3c1da181B87a4104A54744cf58589069() {
+    private static String getF5e1b8f333d544c79614F6fd1aff032a() {
         JSONObject dto = new JSONObject();
         // 服务商订单编号
         // dto.put("pnr_order_id", "");
@@ -324,7 +324,7 @@ public class V3TradePaymentJspayRequestDemo extends BaseCommonDemo {
         return dto.toJSONString();
     }
 
-    private static String get1e92dc2b9aa64f4193a4Aad643e9f72c() {
+    private static String get020d46ce53e84b9eB1689448d1b6e0f5() {
         JSONObject dto = new JSONObject();
         // 二维码
         // dto.put("qr_code", "");
@@ -341,7 +341,7 @@ public class V3TradePaymentJspayRequestDemo extends BaseCommonDemo {
         // 收款方附言
         // dto.put("payee_comments", "");
         // 收款方信息
-        // dto.put("payee_info", getDeb02c1eC77f482fA2e978d4c6e75986());
+        // dto.put("payee_info", get9bd84d4f986041c2B962482b46455c36());
         // 银联分配的服务商机构标识码
         // dto.put("pnr_ins_id_cd", "");
         // 请求方自定义域
@@ -351,7 +351,7 @@ public class V3TradePaymentJspayRequestDemo extends BaseCommonDemo {
         // 银联用户标识
         // dto.put("user_id", "");
         // 服务商信息
-        // dto.put("pid_info", get3c1da181B87a4104A54744cf58589069());
+        // dto.put("pid_info", getF5e1b8f333d544c79614F6fd1aff032a());
         // 银联支付标识
         // dto.put("app_up_identifier", "");
         // 交易支付渠道
@@ -364,7 +364,7 @@ public class V3TradePaymentJspayRequestDemo extends BaseCommonDemo {
         return dto.toJSONString();
     }
 
-    private static String get1d7f7c5b280c458a8e67F364851286e1() {
+    private static String getFde1209aEe9849ddA32a8abf0936531a() {
         JSONObject dto = new JSONObject();
         // 数字货币银行编号
         // dto.put("digital_bank_no", "");
@@ -372,7 +372,7 @@ public class V3TradePaymentJspayRequestDemo extends BaseCommonDemo {
         return dto.toJSONString();
     }
 
-    private static String get1a2a840948274af4Bb795d7baceed87a() {
+    private static String getF96e81aa5028492dA2bcF4e1ff5f3c44() {
         JSONObject dto = new JSONObject();
         // 场景类型
         // dto.put("type", "");
@@ -388,7 +388,7 @@ public class V3TradePaymentJspayRequestDemo extends BaseCommonDemo {
         return dto.toJSONString();
     }
 
-    private static String get02ffe4bbFd4742ed9ebc6e8b8b6a83a4() {
+    private static String get49f148141792432b8620C1d9c64e7676() {
         JSONObject dto = new JSONObject();
         // 子商户应用ID
         // dto.put("sub_appid", "");
@@ -397,12 +397,12 @@ public class V3TradePaymentJspayRequestDemo extends BaseCommonDemo {
         // 终端ip
         // dto.put("order_ip", "");
         // 抖音H5支付请求信息
-        // dto.put("h5_info", get1a2a840948274af4Bb795d7baceed87a());
+        // dto.put("h5_info", getF96e81aa5028492dA2bcF4e1ff5f3c44());
 
         return dto.toJSONString();
     }
 
-    private static JSON get57d67a04217c4cdb9a15678c08d87c53() {
+    private static JSON get85fcb556C8fe4bb0Bb41E0ed9b73150e() {
         JSONObject dto = new JSONObject();
         // 分账接收方ID
         dto.put("huifu_id", "6666000109133323");
@@ -418,10 +418,10 @@ public class V3TradePaymentJspayRequestDemo extends BaseCommonDemo {
         return dtoList;
     }
 
-    private static String getAb9deee601ef483b80339487052b0f86() {
+    private static String get50c2519fF3224cebA08001405e1b86ce() {
         JSONObject dto = new JSONObject();
         // 分账明细
-        dto.put("acct_infos", get57d67a04217c4cdb9a15678c08d87c53());
+        dto.put("acct_infos", get85fcb556C8fe4bb0Bb41E0ed9b73150e());
         // 百分比分账标志
         // dto.put("percentage_flag", "");
         // 是否净值分账
@@ -430,7 +430,7 @@ public class V3TradePaymentJspayRequestDemo extends BaseCommonDemo {
         return dto.toJSONString();
     }
 
-    private static String getE08a61622d4946b1A337444dd2d5635d() {
+    private static String get5401811f06b7464eB924F1b7d68fe086() {
         JSONObject dto = new JSONObject();
         // 补贴方汇付商户号
         // dto.put("huifu_id", "test");
@@ -446,7 +446,7 @@ public class V3TradePaymentJspayRequestDemo extends BaseCommonDemo {
         return dtoList.toJSONString();
     }
 
-    private static String getF889e9a4Fc1049b9Aac8A8ca85e6a217() {
+    private static String get37b7ec0b773142248f08Bac64564b2d4() {
         JSONObject dto = new JSONObject();
         // 补贴支付手续费承担方汇付编号
         // dto.put("huifu_id", "");
@@ -456,7 +456,7 @@ public class V3TradePaymentJspayRequestDemo extends BaseCommonDemo {
         return dto.toJSONString();
     }
 
-    private static String get59f6ef0d8f054cfc941d040e89f062e9() {
+    private static String get74da880a27a14a84816260a709fa719e() {
         JSONObject dto = new JSONObject();
         // ip地址
         dto.put("ip_addr", "180.167.105.130");
@@ -470,7 +470,7 @@ public class V3TradePaymentJspayRequestDemo extends BaseCommonDemo {
         return dto.toJSONString();
     }
 
-    private static String getE090f351Df9f409e803cEbb3736ba266() {
+    private static String get63fef1d1E6214f9483da4eb4c374ade9() {
         JSONObject dto = new JSONObject();
         // 商户设备类型
         // dto.put("mer_device_type", "test");
@@ -512,7 +512,7 @@ public class V3TradePaymentJspayRequestDemo extends BaseCommonDemo {
         return dto.toJSONString();
     }
 
-    private static String get5b265ccf4ad9484a8fc635cc5776aec0() {
+    private static String getC910730e4f00437e871fBeb4accaa958() {
         JSONObject dto = new JSONObject();
         // 补贴手续费金额
         // dto.put("allowance_fee_amt", "");
