@@ -8,16 +8,16 @@ import com.huifu.bspay.sdk.demo.init.OppsMerchantConfigDemo;
 import com.huifu.bspay.sdk.opps.core.utils.DateTools;
 import com.huifu.bspay.sdk.opps.core.utils.SequenceTools;
 import com.huifu.bspay.sdk.demo.core.Identify;
-import com.huifu.bspay.sdk.opps.core.request.V2LinkappStoreShoplistRequest;
+import com.huifu.bspay.sdk.opps.core.request.V2InvoiceQueryecmsapplylistRequest;
 
 /**
- * 三方门店查询（三方门店绑定一阶段） - 示例
+ * 电子合同申请列表查询 - 示例
  *
  * @author sdk-generator
  * @Description
  */
-@Identify(requestClass = V2LinkappStoreShoplistRequest.class)
-public class V2LinkappStoreShoplistRequestDemo extends BaseCommonDemo {
+@Identify(requestClass = V2InvoiceQueryecmsapplylistRequest.class)
+public class V2InvoiceQueryecmsapplylistRequestDemo extends BaseCommonDemo {
 
     public static void main(String[] args) throws Exception {
 
@@ -25,15 +25,17 @@ public class V2LinkappStoreShoplistRequestDemo extends BaseCommonDemo {
         doInit(OppsMerchantConfigDemo.getMerchantConfig());
 
         // 2.组装请求参数
-        V2LinkappStoreShoplistRequest request = new V2LinkappStoreShoplistRequest();
-        // 请求流水号
-        request.setReqSeqId(SequenceTools.getReqSeqId32());
+        V2InvoiceQueryecmsapplylistRequest request = new V2InvoiceQueryecmsapplylistRequest();
         // 请求日期
         request.setReqDate(DateTools.getCurrentDateYYYYMMDD());
+        // 请求流水号
+        request.setReqSeqId(SequenceTools.getReqSeqId32());
         // 汇付商户号
-        request.setHuifuId("6666000108473193");
-        // 平台类型
-        request.setPlatformType("05");
+        request.setHuifuId("6666000103334211");
+        // 当前页
+        request.setPageNum("1");
+        // 分页大小
+        // request.setPageSize("test");
 
         // 设置非必填字段
         Map<String, Object> extendInfoMap = getExtendInfos();
@@ -51,8 +53,20 @@ public class V2LinkappStoreShoplistRequestDemo extends BaseCommonDemo {
     private static Map<String, Object> getExtendInfos() {
         // 设置非必填字段
         Map<String, Object> extendInfoMap = new HashMap<>();
-        // 三方平台商户号
-        extendInfoMap.put("bid", "7376156418275837952");
+        // 协议编号
+        extendInfoMap.put("agreement_id", "202505210201439711");
+        // 场景类型
+        extendInfoMap.put("scene_code", "MER_KYC");
+        // 协议状态
+        // extendInfoMap.put("sign_status", "");
+        // 申请单号
+        extendInfoMap.put("order_id", "2025052118403054");
+        // 商户名称
+        // extendInfoMap.put("mer_name", "");
+        // 协议类型
+        extendInfoMap.put("agreement_type", "ELECT");
+        // 产品号
+        // extendInfoMap.put("product_id", "");
         return extendInfoMap;
     }
 

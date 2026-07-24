@@ -39,7 +39,7 @@ public class V3TradePaymentMicropayRequestDemo extends BaseCommonDemo {
         // 支付授权码
         request.setAuthCode("131135212661863252");
         // 安全信息
-        request.setRiskCheckData(get8175d7f563104bceB8bf15e34268250f());
+        request.setRiskCheckData(get662dde05Ae07407489b4112cd0fdc2aa());
 
         // 设置非必填字段
         Map<String, Object> extendInfoMap = getExtendInfos();
@@ -68,23 +68,23 @@ public class V3TradePaymentMicropayRequestDemo extends BaseCommonDemo {
         // 渠道号
         // extendInfoMap.put("channel_no", "");
         // 补贴支付信息
-        // extendInfoMap.put("combinedpay_data", get643e6effCd444cdaB0f0Ca287af6958a());
+        // extendInfoMap.put("combinedpay_data", getEe46736f77394ed094ccCd2ec3c2c656());
         // 补贴支付手续费承担方信息
-        // extendInfoMap.put("combinedpay_data_fee_info", getAde25ebd57cf4fb1B98bD27eca7ebe29());
+        // extendInfoMap.put("combinedpay_data_fee_info", get73544a6d326b4917B1dd53b756bba2e5());
         // 场景类型
         // extendInfoMap.put("pay_scene", "");
         // 分账对象
-        // extendInfoMap.put("acct_split_bunch", getDe60f2e86e8943c7Bf24Fb4e5d5e8902());
+        // extendInfoMap.put("acct_split_bunch", get89418fab7825494aB8a9515de2e6e344());
         // 传入分帐遇到优惠的处理规则
         // extendInfoMap.put("term_div_coupon_type", "");
         // 聚合反扫微信参数集合
-        // extendInfoMap.put("wx_data", getE54ec12a9c094899B183Feb50fb73195());
+        // extendInfoMap.put("wx_data", get08682eee3f0d470cBdb4974f20c4baab());
         // 支付宝扩展参数集合
-        // extendInfoMap.put("alipay_data", get799ed61e96344b069a1c32a50a46b56a());
+        // extendInfoMap.put("alipay_data", get17528c7e143040a5B75585fd1a68b81a());
         // 银联参数集合
-        // extendInfoMap.put("unionpay_data", get7000defb2415436595686835066d1820());
+        // extendInfoMap.put("unionpay_data", get94882e5e893949ba9d00290f861b3c08());
         // 设备信息
-        // extendInfoMap.put("terminal_device_info", get04c63cdc70cb4f73Bb055a33c246599a());
+        // extendInfoMap.put("terminal_device_info", getD4cee1857f73447393c83b7127f0025a());
         // 异步通知地址
         extendInfoMap.put("notify_url", "http://www.baidu.com");
         // 交易备注
@@ -92,13 +92,13 @@ public class V3TradePaymentMicropayRequestDemo extends BaseCommonDemo {
         // 账户号
         // extendInfoMap.put("acct_id", "");
         // 手续费补贴信息
-        // extendInfoMap.put("trans_fee_allowance_info", getCb2439af4c7a42f2A3cfBa5d3f08383c());
+        // extendInfoMap.put("trans_fee_allowance_info", getFefc9eeaF0224944A5dfFd07198b753f());
         // 手续费场景标识
         // extendInfoMap.put("fee_sign", "");
         return extendInfoMap;
     }
 
-    private static String get643e6effCd444cdaB0f0Ca287af6958a() {
+    private static String getEe46736f77394ed094ccCd2ec3c2c656() {
         JSONObject dto = new JSONObject();
         // 补贴方汇付商户号
         // dto.put("huifu_id", "test");
@@ -114,7 +114,7 @@ public class V3TradePaymentMicropayRequestDemo extends BaseCommonDemo {
         return dtoList.toJSONString();
     }
 
-    private static String getAde25ebd57cf4fb1B98bD27eca7ebe29() {
+    private static String get73544a6d326b4917B1dd53b756bba2e5() {
         JSONObject dto = new JSONObject();
         // 补贴支付手续费承担方汇付编号
         // dto.put("huifu_id", "");
@@ -124,7 +124,7 @@ public class V3TradePaymentMicropayRequestDemo extends BaseCommonDemo {
         return dto.toJSONString();
     }
 
-    private static JSON get6e29e4d94b1d4f1e9dc5F8fda0debed8() {
+    private static JSON get40001115263c442b83f0E61df0b3536a() {
         JSONObject dto = new JSONObject();
         // 分账接收方ID
         // dto.put("huifu_id", "test");
@@ -140,10 +140,10 @@ public class V3TradePaymentMicropayRequestDemo extends BaseCommonDemo {
         return dtoList;
     }
 
-    private static String getDe60f2e86e8943c7Bf24Fb4e5d5e8902() {
+    private static String get89418fab7825494aB8a9515de2e6e344() {
         JSONObject dto = new JSONObject();
         // 分账明细
-        // dto.put("acct_infos", get6e29e4d94b1d4f1e9dc5F8fda0debed8());
+        // dto.put("acct_infos", get40001115263c442b83f0E61df0b3536a());
         // 百分比分账标志
         // dto.put("percentage_flag", "");
         // 是否净值分账
@@ -152,7 +152,7 @@ public class V3TradePaymentMicropayRequestDemo extends BaseCommonDemo {
         return dto.toJSONString();
     }
 
-    private static JSON get3f3e4df787234cdd8bae24faf8eb10f2() {
+    private static JSON get89fb549f04044fbf895bAe6d41737b9e() {
         JSONObject dto = new JSONObject();
         // 商品编码
         // dto.put("goods_id", "test");
@@ -170,10 +170,10 @@ public class V3TradePaymentMicropayRequestDemo extends BaseCommonDemo {
         return dtoList;
     }
 
-    private static JSON get987a24aa0a9c45b986b39236a4107299() {
+    private static JSON get88aaace5C2f24af79d10E93b063c01ce() {
         JSONObject dto = new JSONObject();
         // 单品列表
-        // dto.put("goods_detail", get3f3e4df787234cdd8bae24faf8eb10f2());
+        // dto.put("goods_detail", get89fb549f04044fbf895bAe6d41737b9e());
         // 订单原价
         // dto.put("cost_price", "");
         // 商品小票ID
@@ -182,7 +182,7 @@ public class V3TradePaymentMicropayRequestDemo extends BaseCommonDemo {
         return dto;
     }
 
-    private static JSON getEbc1319d5e0445caBdd724320cfaf572() {
+    private static JSON get8b1d595d82654e91Ad0c70e1a22710d9() {
         JSONObject dto = new JSONObject();
         // 门店id
         // dto.put("id", "");
@@ -196,15 +196,15 @@ public class V3TradePaymentMicropayRequestDemo extends BaseCommonDemo {
         return dto;
     }
 
-    private static JSON get5a6a635cE2e148568c2c81eda65cebdc() {
+    private static JSON get1c9201dfD5b341e788fe9cf3b255b9e5() {
         JSONObject dto = new JSONObject();
         // 门店信息
-        // dto.put("store_info", getEbc1319d5e0445caBdd724320cfaf572());
+        // dto.put("store_info", get8b1d595d82654e91Ad0c70e1a22710d9());
 
         return dto;
     }
 
-    private static String getE54ec12a9c094899B183Feb50fb73195() {
+    private static String get08682eee3f0d470cBdb4974f20c4baab() {
         JSONObject dto = new JSONObject();
         // 收款设备IP直联模式必填字段；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：192.168.2.2&lt;/font&gt;
         // dto.put("spbill_create_ip", "test");
@@ -217,9 +217,9 @@ public class V3TradePaymentMicropayRequestDemo extends BaseCommonDemo {
         // 附加数据
         // dto.put("attach", "");
         // 商品详情
-        // dto.put("detail", get987a24aa0a9c45b986b39236a4107299());
+        // dto.put("detail", get88aaace5C2f24af79d10E93b063c01ce());
         // 场景信息
-        // dto.put("scene_info", get5a6a635cE2e148568c2c81eda65cebdc());
+        // dto.put("scene_info", get1c9201dfD5b341e788fe9cf3b255b9e5());
         // 单品优惠标识
         // dto.put("promotion_flag", "");
         // 电子发票入口开放标识
@@ -228,7 +228,7 @@ public class V3TradePaymentMicropayRequestDemo extends BaseCommonDemo {
         return dto.toJSONString();
     }
 
-    private static JSON get216aa9b2011c4caeBac1C91200816e6a() {
+    private static JSON getB2817307C99242c3B3eb539ff6858d08() {
         JSONObject dto = new JSONObject();
         // 商品的编号
         // dto.put("goods_id", "test");
@@ -252,7 +252,7 @@ public class V3TradePaymentMicropayRequestDemo extends BaseCommonDemo {
         return dtoList;
     }
 
-    private static JSON get18347e18610f457f98938ddc771830ae() {
+    private static JSON get47bb962e164344caB7c759f106d93529() {
         JSONObject dto = new JSONObject();
         // 卡类型
         // dto.put("card_type", "");
@@ -274,7 +274,7 @@ public class V3TradePaymentMicropayRequestDemo extends BaseCommonDemo {
         return dto;
     }
 
-    private static JSON get41d473249c1d47c387c35fbf21765fac() {
+    private static JSON get713f8fec1ccc4070Bcd3A6723a0baaeb() {
         JSONObject dto = new JSONObject();
         // 姓名
         // dto.put("name", "");
@@ -294,20 +294,20 @@ public class V3TradePaymentMicropayRequestDemo extends BaseCommonDemo {
         return dto;
     }
 
-    private static String get799ed61e96344b069a1c32a50a46b56a() {
+    private static String get17528c7e143040a5B75585fd1a68b81a() {
         JSONObject dto = new JSONObject();
         // 支付宝的店铺编号
         // dto.put("alipay_store_id", "");
         // 订单包含的商品列表信息
-        // dto.put("goods_detail", get216aa9b2011c4caeBac1C91200816e6a());
+        // dto.put("goods_detail", getB2817307C99242c3B3eb539ff6858d08());
         // 业务扩展参数
-        // dto.put("extend_params", get18347e18610f457f98938ddc771830ae());
+        // dto.put("extend_params", get47bb962e164344caB7c759f106d93529());
         // 商户操作员编号
         // dto.put("operator_id", "");
         // 商户门店编号
         // dto.put("store_id", "");
         // 外部指定买家
-        // dto.put("ext_user_info", get41d473249c1d47c387c35fbf21765fac());
+        // dto.put("ext_user_info", get713f8fec1ccc4070Bcd3A6723a0baaeb());
         // 商户业务信息
         // dto.put("ali_business_params", "");
         // 订单描述
@@ -318,7 +318,7 @@ public class V3TradePaymentMicropayRequestDemo extends BaseCommonDemo {
         return dto.toJSONString();
     }
 
-    private static String getDe803662B00f49648e0b5df0f6722989() {
+    private static String getFb0fb42a43ca42b08973Bc1fb63b99b4() {
         JSONObject dto = new JSONObject();
         // 服务商订单编号
         // dto.put("pnr_order_id", "");
@@ -330,7 +330,7 @@ public class V3TradePaymentMicropayRequestDemo extends BaseCommonDemo {
         return dto.toJSONString();
     }
 
-    private static String get7000defb2415436595686835066d1820() {
+    private static String get94882e5e893949ba9d00290f861b3c08() {
         JSONObject dto = new JSONObject();
         // 币种
         // dto.put("currency_code", "");
@@ -347,12 +347,12 @@ public class V3TradePaymentMicropayRequestDemo extends BaseCommonDemo {
         // 收款方附加数据
         // dto.put("addn_data", "");
         // 服务商信息
-        // dto.put("pid_info", getDe803662B00f49648e0b5df0f6722989());
+        // dto.put("pid_info", getFb0fb42a43ca42b08973Bc1fb63b99b4());
 
         return dto.toJSONString();
     }
 
-    private static String get8175d7f563104bceB8bf15e34268250f() {
+    private static String get662dde05Ae07407489b4112cd0fdc2aa() {
         JSONObject dto = new JSONObject();
         // ip地址
         dto.put("ip_addr", "180.167.105.130");
@@ -366,7 +366,7 @@ public class V3TradePaymentMicropayRequestDemo extends BaseCommonDemo {
         return dto.toJSONString();
     }
 
-    private static String get04c63cdc70cb4f73Bb055a33c246599a() {
+    private static String getD4cee1857f73447393c83b7127f0025a() {
         JSONObject dto = new JSONObject();
         // 商户设备类型
         // dto.put("mer_device_type", "test");
@@ -412,7 +412,7 @@ public class V3TradePaymentMicropayRequestDemo extends BaseCommonDemo {
         return dto.toJSONString();
     }
 
-    private static String getCb2439af4c7a42f2A3cfBa5d3f08383c() {
+    private static String getFefc9eeaF0224944A5dfFd07198b753f() {
         JSONObject dto = new JSONObject();
         // 补贴手续费金额
         // dto.put("allowance_fee_amt", "");

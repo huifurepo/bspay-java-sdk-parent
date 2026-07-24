@@ -8,16 +8,16 @@ import com.huifu.bspay.sdk.demo.init.OppsMerchantConfigDemo;
 import com.huifu.bspay.sdk.opps.core.utils.DateTools;
 import com.huifu.bspay.sdk.opps.core.utils.SequenceTools;
 import com.huifu.bspay.sdk.demo.core.Identify;
-import com.huifu.bspay.sdk.opps.core.request.V2LinkappStoreShoplistRequest;
+import com.huifu.bspay.sdk.opps.core.request.V2InvoiceContractrepeatRequest;
 
 /**
- * 三方门店查询（三方门店绑定一阶段） - 示例
+ * 电子合同重发 - 示例
  *
  * @author sdk-generator
  * @Description
  */
-@Identify(requestClass = V2LinkappStoreShoplistRequest.class)
-public class V2LinkappStoreShoplistRequestDemo extends BaseCommonDemo {
+@Identify(requestClass = V2InvoiceContractrepeatRequest.class)
+public class V2InvoiceContractrepeatRequestDemo extends BaseCommonDemo {
 
     public static void main(String[] args) throws Exception {
 
@@ -25,15 +25,13 @@ public class V2LinkappStoreShoplistRequestDemo extends BaseCommonDemo {
         doInit(OppsMerchantConfigDemo.getMerchantConfig());
 
         // 2.组装请求参数
-        V2LinkappStoreShoplistRequest request = new V2LinkappStoreShoplistRequest();
+        V2InvoiceContractrepeatRequest request = new V2InvoiceContractrepeatRequest();
         // 请求流水号
         request.setReqSeqId(SequenceTools.getReqSeqId32());
         // 请求日期
         request.setReqDate(DateTools.getCurrentDateYYYYMMDD());
         // 汇付商户号
-        request.setHuifuId("6666000108473193");
-        // 平台类型
-        request.setPlatformType("05");
+        request.setHuifuId("6666000103334211");
 
         // 设置非必填字段
         Map<String, Object> extendInfoMap = getExtendInfos();
@@ -51,8 +49,10 @@ public class V2LinkappStoreShoplistRequestDemo extends BaseCommonDemo {
     private static Map<String, Object> getExtendInfos() {
         // 设置非必填字段
         Map<String, Object> extendInfoMap = new HashMap<>();
-        // 三方平台商户号
-        extendInfoMap.put("bid", "7376156418275837952");
+        // 协议编号
+        extendInfoMap.put("agreement_id", "130516670601443792");
+        // 个人邮箱
+        extendInfoMap.put("sign_user_email", "zhangsan@huifu.com");
         return extendInfoMap;
     }
 

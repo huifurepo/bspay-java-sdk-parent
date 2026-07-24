@@ -182,11 +182,6 @@ public class V2MerchantBasicdataEntRequest extends BaseRequest {
     @JSONField(name = "reg_acct_pic")
     private String regAcctPic;
     /**
-     * 基本存款账户编号或核准号条件选填；当use_head_info_flag&#x3D;Y时不填 ；&lt;br/&gt;基本存款账户信息请填写基本存款账户编号；开户许可证请填写核准号。&lt;br/&gt;当注册地址或经营地址为如下地区时必填：江苏省、浙江省、湖南省、湖北省、云南省、贵州省、陕西省、河南省、吉林省、黑龙江省、福建省、海南省、重庆市、青海省、宁夏回族自治区；&lt;br/&gt;&lt;font color&#x3D;&quot;green&quot;&gt;示例值：J2900123456789&lt;/font&gt;
-     */
-    @JSONField(name = "open_licence_no")
-    private String openLicenceNo;
-    /**
      * 银行卡信息配置
      */
     @JSONField(name = "card_info")
@@ -245,7 +240,7 @@ public class V2MerchantBasicdataEntRequest extends BaseRequest {
     public V2MerchantBasicdataEntRequest() {
     }
 
-    public V2MerchantBasicdataEntRequest(String reqSeqId, String reqDate, String upperHuifuId, String regName, String shortName, String receiptName, String entType, String mcc, String busiType, String sceneType, String licensePic, String licenseCode, String licenseValidityType, String licenseBeginDate, String licenseEndDate, String foundDate, String regCapital, String regDistrictId, String regDetail, String districtId, String detailAddr, String legalName, String legalCertType, String legalCertNo, String legalCertValidityType, String legalCertBeginDate, String legalCertEndDate, String legalAddr, String legalCertBackPic, String legalCertFrontPic, String contactMobileNo, String contactEmail, String loginName, String regAcctPic, String openLicenceNo, String cardInfo, String settleCardFrontPic, String settleCertBackPic, String settleCertFrontPic, String authEntrustPic, String headHuifuId, String merIcp, String storeHeaderPic, String storeIndoorPic, String storeCashierDeskPic) {
+    public V2MerchantBasicdataEntRequest(String reqSeqId, String reqDate, String upperHuifuId, String regName, String shortName, String receiptName, String entType, String mcc, String busiType, String sceneType, String licensePic, String licenseCode, String licenseValidityType, String licenseBeginDate, String licenseEndDate, String foundDate, String regCapital, String regDistrictId, String regDetail, String districtId, String detailAddr, String legalName, String legalCertType, String legalCertNo, String legalCertValidityType, String legalCertBeginDate, String legalCertEndDate, String legalAddr, String legalCertBackPic, String legalCertFrontPic, String contactMobileNo, String contactEmail, String loginName, String regAcctPic, String cardInfo, String settleCardFrontPic, String settleCertBackPic, String settleCertFrontPic, String authEntrustPic, String headHuifuId, String merIcp, String storeHeaderPic, String storeIndoorPic, String storeCashierDeskPic) {
         this.reqSeqId = reqSeqId;
         this.reqDate = reqDate;
         this.upperHuifuId = upperHuifuId;
@@ -280,7 +275,6 @@ public class V2MerchantBasicdataEntRequest extends BaseRequest {
         this.contactEmail = contactEmail;
         this.loginName = loginName;
         this.regAcctPic = regAcctPic;
-        this.openLicenceNo = openLicenceNo;
         this.cardInfo = cardInfo;
         this.settleCardFrontPic = settleCardFrontPic;
         this.settleCertBackPic = settleCertBackPic;
@@ -563,14 +557,6 @@ public class V2MerchantBasicdataEntRequest extends BaseRequest {
 
     public void setRegAcctPic(String regAcctPic) {
         this.regAcctPic = regAcctPic;
-    }
-
-    public String getOpenLicenceNo() {
-        return openLicenceNo;
-    }
-
-    public void setOpenLicenceNo(String openLicenceNo) {
-        this.openLicenceNo = openLicenceNo;
     }
 
     public String getCardInfo() {

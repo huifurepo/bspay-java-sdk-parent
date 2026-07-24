@@ -6,6 +6,18 @@ package com.huifu.bspay.sdk.opps.core.enums;
  */
 public enum FunctionCodeEnum {
     /**
+     * 电子合同申请列表查询
+     */
+    V2_INVOICE_QUERYECMSAPPLYLIST("v2.invoice.queryEcmsApplyList", "电子合同申请列表查询"),
+    /**
+     * 电子合同拒签
+     */
+    V2_INVOICE_REJECTSIGN("v2.invoice.rejectSign", "电子合同拒签"),
+    /**
+     * 电子合同重发
+     */
+    V2_INVOICE_CONTRACTREPEAT("v2.invoice.contractRepeat", "电子合同重发"),
+    /**
      * 开票商品查询
      */
     V2_INVOICE_MANAGE_GOODS_QUERYLIST("v2.invoice.manage.goods.queryList", "开票商品查询"),

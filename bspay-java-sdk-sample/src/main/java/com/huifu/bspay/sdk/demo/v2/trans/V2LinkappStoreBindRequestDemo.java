@@ -53,6 +53,8 @@ public class V2LinkappStoreBindRequestDemo extends BaseCommonDemo {
     private static Map<String, Object> getExtendInfos() {
         // 设置非必填字段
         Map<String, Object> extendInfoMap = new HashMap<>();
+        // 三方平台商户号
+        // extendInfoMap.put("bid", "");
         return extendInfoMap;
     }
 

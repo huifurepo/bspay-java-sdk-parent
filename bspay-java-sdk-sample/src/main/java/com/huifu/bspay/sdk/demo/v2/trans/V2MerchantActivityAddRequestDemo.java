@@ -102,7 +102,7 @@ public class V2MerchantActivityAddRequestDemo extends BaseCommonDemo {
         // 优惠费率承诺函
         extendInfoMap.put("activity_rate_commit_photo", "42204258-967e-373c-88d2-1afa4c7bb8ef");
         // 商户同名银行账户信息
-        extendInfoMap.put("bank_account", get3dde7d021f8b47e2Babf09e3b7c013e7());
+        extendInfoMap.put("bank_account", get71cc56ac4ffd491aA8d8479c14843976());
         // 银行开户证明图片
         extendInfoMap.put("bank_account_prove_photo", "");
         // 机构银行合作授权函图
@@ -121,10 +121,12 @@ public class V2MerchantActivityAddRequestDemo extends BaseCommonDemo {
         // extendInfoMap.put("expiration_rate", "");
         // 学校号
         // extendInfoMap.put("school_id", "");
+        // 活动到期后最低收取手续费（元）
+        // extendInfoMap.put("low_amt", "");
         return extendInfoMap;
     }
 
-    private static String get3dde7d021f8b47e2Babf09e3b7c013e7() {
+    private static String get71cc56ac4ffd491aA8d8479c14843976() {
         JSONObject dto = new JSONObject();
         // 账户名
         dto.put("card_name", "张三");

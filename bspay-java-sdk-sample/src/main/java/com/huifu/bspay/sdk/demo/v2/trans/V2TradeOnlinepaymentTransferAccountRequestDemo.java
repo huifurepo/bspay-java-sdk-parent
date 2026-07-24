@@ -85,6 +85,10 @@ public class V2TradeOnlinepaymentTransferAccountRequestDemo extends BaseCommonDe
         // extendInfoMap.put("time_expire", "");
         // 手续费扣款标志
         // extendInfoMap.put("fee_flag", "");
+        // 页面跳转地址
+        // extendInfoMap.put("front_url", "");
+        // 付款卡对公对私标识
+        // extendInfoMap.put("pay_card_acct_type", "");
         return extendInfoMap;
     }
 
