@@ -42,11 +42,6 @@ public class V2MerchantDirectWechatSignRequest extends BaseRequest {
     @JSONField(name = "mch_id")
     private String mchId;
     /**
-     * 经营者/法人是否为受益人
-     */
-    @JSONField(name = "owner")
-    private String owner;
-    /**
      * 超级管理员信息
      */
     @JSONField(name = "contact_info")
@@ -56,16 +51,6 @@ public class V2MerchantDirectWechatSignRequest extends BaseRequest {
      */
     @JSONField(name = "sales_scenes_type")
     private String salesScenesType;
-    /**
-     * 经营场景
-     */
-    @JSONField(name = "sales_info")
-    private String salesInfo;
-    /**
-     * 结算信息
-     */
-    @JSONField(name = "settlement_info")
-    private String settlementInfo;
 
     @Override
     public FunctionCodeEnum getFunctionCode() {
@@ -75,18 +60,15 @@ public class V2MerchantDirectWechatSignRequest extends BaseRequest {
     public V2MerchantDirectWechatSignRequest() {
     }
 
-    public V2MerchantDirectWechatSignRequest(String reqSeqId, String reqDate, String huifuId, String upperHuifuId, String appId, String mchId, String owner, String contactInfo, String salesScenesType, String salesInfo, String settlementInfo) {
+    public V2MerchantDirectWechatSignRequest(String reqSeqId, String reqDate, String huifuId, String upperHuifuId, String appId, String mchId, String contactInfo, String salesScenesType) {
         this.reqSeqId = reqSeqId;
         this.reqDate = reqDate;
         this.huifuId = huifuId;
         this.upperHuifuId = upperHuifuId;
         this.appId = appId;
         this.mchId = mchId;
-        this.owner = owner;
         this.contactInfo = contactInfo;
         this.salesScenesType = salesScenesType;
-        this.salesInfo = salesInfo;
-        this.settlementInfo = settlementInfo;
     }
 
     public String getReqSeqId() {
@@ -137,14 +119,6 @@ public class V2MerchantDirectWechatSignRequest extends BaseRequest {
         this.mchId = mchId;
     }
 
-    public String getOwner() {
-        return owner;
-    }
-
-    public void setOwner(String owner) {
-        this.owner = owner;
-    }
-
     public String getContactInfo() {
         return contactInfo;
     }
@@ -159,22 +133,6 @@ public class V2MerchantDirectWechatSignRequest extends BaseRequest {
 
     public void setSalesScenesType(String salesScenesType) {
         this.salesScenesType = salesScenesType;
-    }
-
-    public String getSalesInfo() {
-        return salesInfo;
-    }
-
-    public void setSalesInfo(String salesInfo) {
-        this.salesInfo = salesInfo;
-    }
-
-    public String getSettlementInfo() {
-        return settlementInfo;
-    }
-
-    public void setSettlementInfo(String settlementInfo) {
-        this.settlementInfo = settlementInfo;
     }
 
 }

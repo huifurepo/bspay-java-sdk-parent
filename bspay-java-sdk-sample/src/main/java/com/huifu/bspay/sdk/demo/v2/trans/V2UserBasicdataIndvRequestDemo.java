@@ -70,11 +70,11 @@ public class V2UserBasicdataIndvRequestDemo extends BaseCommonDemo {
         // 管理员账号
         extendInfoMap.put("login_name", "Lg2022022201394910571");
         // 是否发送短信标识
-        extendInfoMap.put("sms_send_flag", "1");
+        extendInfoMap.put("sms_send_flag", "Y");
         // 拓展方字段
         extendInfoMap.put("expand_id", "");
         // 文件列表
-        extendInfoMap.put("file_list", get5f0a1885Bba7488a89ad02827ab6eb69());
+        extendInfoMap.put("file_list", get365f3cb2D654499290f67abce7f11fcf());
         // 所属行业
         // extendInfoMap.put("mcc", "");
         // 省
@@ -86,7 +86,7 @@ public class V2UserBasicdataIndvRequestDemo extends BaseCommonDemo {
         return extendInfoMap;
     }
 
-    private static String get5f0a1885Bba7488a89ad02827ab6eb69() {
+    private static String get365f3cb2D654499290f67abce7f11fcf() {
         JSONObject dto = new JSONObject();
         // 文件类型
         dto.put("file_type", "F04");

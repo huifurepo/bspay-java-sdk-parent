@@ -37,6 +37,12 @@ public class OppsMerchantConfigDemo {
          * 单商户模式
          */
         MerConfig merConfig = new MerConfig();
+
+
+        merConfig.setSignType(DemoTestConstants.DEMO_SIGN_TYPE);
+        merConfig.setSm2PrivateKey(DemoTestConstants.DEMO_SM2_PRIVATE_KEY);
+        merConfig.setSm2PublicKey(DemoTestConstants.DEMO_SM2_PUBLIC_KEY);
+
         merConfig.setProductId(DemoTestConstants.DEMO_PRODUCT_ID);
         merConfig.setSysId(DemoTestConstants.DEMO_SYS_ID);
         merConfig.setRsaPrivateKey(DemoTestConstants.DEMO_RSA_PRIVATE_KEY);

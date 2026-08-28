@@ -55,8 +55,12 @@ public class V2TradeAcctpaymentAcctlogQueryRequestDemo extends BaseCommonDemo {
         extendInfoMap.put("page_num", "1");
         // 账户号
         // extendInfoMap.put("acct_id", "");
+        // 流水号ID
+        // extendInfoMap.put("last_end_log_id", "");
         // 账户类型
         extendInfoMap.put("acct_type", "01");
+        // 汇付全局流水号
+        extendInfoMap.put("hf_seq_id", "00470topo1A211015160805P090ac132fef00000");
         return extendInfoMap;
     }
 

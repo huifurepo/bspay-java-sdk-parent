@@ -32,6 +32,10 @@ public class V2InvoiceContractrepeatRequestDemo extends BaseCommonDemo {
         request.setReqDate(DateTools.getCurrentDateYYYYMMDD());
         // 汇付商户号
         request.setHuifuId("6666000103334211");
+        // 协议编号
+        request.setAgreementId("130516670601443792");
+        // 个人邮箱
+        request.setSignUserEmail("zhangsan@huifu.com");
 
         // 设置非必填字段
         Map<String, Object> extendInfoMap = getExtendInfos();
@@ -49,10 +53,6 @@ public class V2InvoiceContractrepeatRequestDemo extends BaseCommonDemo {
     private static Map<String, Object> getExtendInfos() {
         // 设置非必填字段
         Map<String, Object> extendInfoMap = new HashMap<>();
-        // 协议编号
-        extendInfoMap.put("agreement_id", "130516670601443792");
-        // 个人邮箱
-        extendInfoMap.put("sign_user_email", "zhangsan@huifu.com");
         return extendInfoMap;
     }
 

@@ -4,7 +4,7 @@ import com.alibaba.fastjson.annotation.JSONField;
 import com.huifu.bspay.sdk.opps.core.enums.FunctionCodeEnum;
 
 /**
- * 支付宝直连-申请当面付代签约
+ * 支付宝直连-商户入驻
  *
  * @author sdk-generator
  * @Description
@@ -66,11 +66,6 @@ public class V2MerchantDirectAlipayFacetofacesignApplyRequest extends BaseReques
      */
     @JSONField(name = "rate")
     private String rate;
-    /**
-     * 文件列表
-     */
-    @JSONField(name = "file_list")
-    private String fileList;
 
     @Override
     public FunctionCodeEnum getFunctionCode() {
@@ -80,7 +75,7 @@ public class V2MerchantDirectAlipayFacetofacesignApplyRequest extends BaseReques
     public V2MerchantDirectAlipayFacetofacesignApplyRequest() {
     }
 
-    public V2MerchantDirectAlipayFacetofacesignApplyRequest(String reqSeqId, String reqDate, String huifuId, String upperHuifuId, String directCategory, String appId, String contactName, String contactMobileNo, String contactEmail, String account, String rate, String fileList) {
+    public V2MerchantDirectAlipayFacetofacesignApplyRequest(String reqSeqId, String reqDate, String huifuId, String upperHuifuId, String directCategory, String appId, String contactName, String contactMobileNo, String contactEmail, String account, String rate) {
         this.reqSeqId = reqSeqId;
         this.reqDate = reqDate;
         this.huifuId = huifuId;
@@ -92,7 +87,6 @@ public class V2MerchantDirectAlipayFacetofacesignApplyRequest extends BaseReques
         this.contactEmail = contactEmail;
         this.account = account;
         this.rate = rate;
-        this.fileList = fileList;
     }
 
     public String getReqSeqId() {
@@ -181,14 +175,6 @@ public class V2MerchantDirectAlipayFacetofacesignApplyRequest extends BaseReques
 
     public void setRate(String rate) {
         this.rate = rate;
-    }
-
-    public String getFileList() {
-        return fileList;
-    }
-
-    public void setFileList(String fileList) {
-        this.fileList = fileList;
     }
 
 }

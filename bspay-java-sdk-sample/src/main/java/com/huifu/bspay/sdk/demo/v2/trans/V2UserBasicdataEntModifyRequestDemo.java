@@ -90,13 +90,13 @@ public class V2UserBasicdataEntModifyRequestDemo extends BaseCommonDemo {
         // 注册地址(详细信息)
         extendInfoMap.put("reg_detail", "上海市宜山路");
         // 文件列表
-        extendInfoMap.put("file_list", getB5d1ffebC1a9465f89b8041e891a5c3d());
+        extendInfoMap.put("file_list", getA4993046Fe4b4f64817870b32dc1185f());
         // 所属行业
         // extendInfoMap.put("mcc", "");
         return extendInfoMap;
     }
 
-    private static String getB5d1ffebC1a9465f89b8041e891a5c3d() {
+    private static String getA4993046Fe4b4f64817870b32dc1185f() {
         JSONObject dto = new JSONObject();
         // 文件类型
         dto.put("file_type", "F01");

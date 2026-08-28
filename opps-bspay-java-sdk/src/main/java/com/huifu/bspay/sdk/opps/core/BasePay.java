@@ -24,7 +24,7 @@ public class BasePay {
 	 * 调试模式，打开可以输出更多调试日志
 	 */
 	public static volatile boolean debug = true;
-	
+
 
     public static final String MODE_PROD = "prod"; // 生产环境
     public static final String MODE_TEST = "test"; // 线上联调环境(针对商户联调测试)
@@ -33,7 +33,7 @@ public class BasePay {
 	 * 生产模式
 	 */
 	public static volatile String prodMode = MODE_PROD;
-    
+
 	/**
 	 * 接口生产域名
 	 */
@@ -43,6 +43,8 @@ public class BasePay {
 	 */
 	public static final String apiBaseMock = "https://spin-test.cloudpnr.com";
 	public static final String apiBaseTest = "https://opps-stbmertest.testpnr.com";
+
+	public static final String SM2_ALGORITHM = "SM2";
 
 	/**
 	 * 汇付固定公钥，当未配置汇付侧发送数据的公私钥时，将默认使用此公钥验签
@@ -81,12 +83,12 @@ public class BasePay {
 			throw new Exception("配置信息不能为空");
 		}
 	}
-	
+
 	/***
 	 * @Description: 动态设置参数
 	 * @param huifId 商户号
 	 * @param configs 配置
-	 * @throws Exception 
+	 * @throws Exception
 	 * @author: xianlong.shen
 	 * @date: 2021年6月29日下午6:46:06
 	 */
@@ -95,9 +97,9 @@ public class BasePay {
 		if (StringUtils.isBlank(huifId) || null == configs) {
 			throw new Exception("配置信息不能为空");
 		}
-		
+
 		configMap.put(huifId, configs);
-		
+
 	}
 
 	public static MerConfig getConfig(String sysId) {

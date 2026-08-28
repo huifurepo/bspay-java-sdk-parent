@@ -38,10 +38,10 @@ import org.apache.http.impl.client.HttpClients;
 import org.apache.http.impl.conn.PoolingHttpClientConnectionManager;
 import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.protocol.HttpContext;
-import org.apache.http.ssl.SSLContexts;
 import org.apache.http.util.EntityUtils;
 
-import javax.net.ssl.*;
+import javax.net.ssl.SSLException;
+import javax.net.ssl.SSLHandshakeException;
 import java.io.*;
 import java.net.ConnectException;
 import java.net.SocketTimeoutException;
@@ -49,8 +49,6 @@ import java.net.URISyntaxException;
 import java.net.URL;
 import java.net.UnknownHostException;
 import java.nio.charset.Charset;
-import java.security.KeyManagementException;
-import java.security.cert.X509Certificate;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
@@ -106,22 +104,7 @@ public class HttpClientUtils {
     public static CloseableHttpClient createHttpClient(int maxTotal, int maxPerRoute, int maxRoute, String hostname,
                                                        int port) {
         ConnectionSocketFactory plainsf = PlainConnectionSocketFactory.getSocketFactory();
-        SSLContext sslcontext = SSLContexts.createDefault();
-        TrustManager[] trustAllCerts = new TrustManager[1];
-        X509TrustManager tm = getX509TrustManager();
-        trustAllCerts[0] = tm;
-        try {
-            sslcontext.init(null, trustAllCerts, null);
-        } catch (KeyManagementException localKeyManagementException) {
-        }
-
-        HostnameVerifier hostnameVerifier = new HostnameVerifier() {
-            @Override
-            public boolean verify(String hostname, SSLSession session) {
-                return true;
-            }
-        };
-        LayeredConnectionSocketFactory sslsf = new SSLConnectionSocketFactory(sslcontext, hostnameVerifier);
+        LayeredConnectionSocketFactory sslsf = SSLConnectionSocketFactory.getSocketFactory();
 
         Registry<ConnectionSocketFactory> registry = RegistryBuilder.<ConnectionSocketFactory>create()
                 .register("http", plainsf).register("https", sslsf).build();
@@ -173,23 +156,6 @@ public class HttpClientUtils {
         closeExpiredConnectionsPeriodTask(1, cm);
 
         return httpClient;
-    }
-
-    public static X509TrustManager getX509TrustManager() {
-        return new X509TrustManager() {
-            @Override
-            public void checkClientTrusted(X509Certificate[] arg0, String arg1) {
-            }
-
-            @Override
-            public void checkServerTrusted(X509Certificate[] arg0, String arg1) {
-            }
-
-            @Override
-            public X509Certificate[] getAcceptedIssuers() {
-                return null;
-            }
-        };
     }
 
     private static void closeExpiredConnectionsPeriodTask(int timeUnitBySecond, PoolingHttpClientConnectionManager cm) {

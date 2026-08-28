@@ -11,7 +11,7 @@ import com.huifu.bspay.sdk.demo.core.Identify;
 import com.huifu.bspay.sdk.opps.core.request.V2MerchantDirectAlipayApplyorderstatusQueryRequest;
 
 /**
- * 支付宝直连-查询申请状态 - 示例
+ * 支付宝直连-查询申请单状态 - 示例
  *
  * @author sdk-generator
  * @Description
@@ -31,9 +31,9 @@ public class V2MerchantDirectAlipayApplyorderstatusQueryRequestDemo extends Base
         // 请求日期
         request.setReqDate(DateTools.getCurrentDateYYYYMMDD());
         // 商户汇付Id
-        request.setHuifuId("6666000003079710");
+        // request.setHuifuId("test");
         // 开发者的应用ID
-        request.setAppId("2019091967580486");
+        // request.setAppId("test");
 
         // 设置非必填字段
         Map<String, Object> extendInfoMap = getExtendInfos();
@@ -52,9 +52,9 @@ public class V2MerchantDirectAlipayApplyorderstatusQueryRequestDemo extends Base
         // 设置非必填字段
         Map<String, Object> extendInfoMap = new HashMap<>();
         // 事务编号
-        extendInfoMap.put("batch_no", "3123123");
+        // extendInfoMap.put("batch_no", "");
         // 应用授权令牌
-        extendInfoMap.put("app_auth_token", "201912BBecafff3696694c6d889503949a6adD18");
+        // extendInfoMap.put("app_auth_token", "");
         return extendInfoMap;
     }
 

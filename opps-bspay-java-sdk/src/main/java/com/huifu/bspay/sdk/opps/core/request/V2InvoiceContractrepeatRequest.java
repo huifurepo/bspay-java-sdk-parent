@@ -26,6 +26,16 @@ public class V2InvoiceContractrepeatRequest extends BaseRequest {
      */
     @JSONField(name = "huifu_id")
     private String huifuId;
+    /**
+     * 协议编号
+     */
+    @JSONField(name = "agreement_id")
+    private String agreementId;
+    /**
+     * 个人邮箱
+     */
+    @JSONField(name = "sign_user_email")
+    private String signUserEmail;
 
     @Override
     public FunctionCodeEnum getFunctionCode() {
@@ -35,10 +45,12 @@ public class V2InvoiceContractrepeatRequest extends BaseRequest {
     public V2InvoiceContractrepeatRequest() {
     }
 
-    public V2InvoiceContractrepeatRequest(String reqSeqId, String reqDate, String huifuId) {
+    public V2InvoiceContractrepeatRequest(String reqSeqId, String reqDate, String huifuId, String agreementId, String signUserEmail) {
         this.reqSeqId = reqSeqId;
         this.reqDate = reqDate;
         this.huifuId = huifuId;
+        this.agreementId = agreementId;
+        this.signUserEmail = signUserEmail;
     }
 
     public String getReqSeqId() {
@@ -63,6 +75,22 @@ public class V2InvoiceContractrepeatRequest extends BaseRequest {
 
     public void setHuifuId(String huifuId) {
         this.huifuId = huifuId;
+    }
+
+    public String getAgreementId() {
+        return agreementId;
+    }
+
+    public void setAgreementId(String agreementId) {
+        this.agreementId = agreementId;
+    }
+
+    public String getSignUserEmail() {
+        return signUserEmail;
+    }
+
+    public void setSignUserEmail(String signUserEmail) {
+        this.signUserEmail = signUserEmail;
     }
 
 }

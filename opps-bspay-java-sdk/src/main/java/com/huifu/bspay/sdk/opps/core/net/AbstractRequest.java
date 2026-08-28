@@ -10,8 +10,11 @@ import com.huifu.bspay.sdk.opps.core.exception.FailureCode;
 import com.huifu.bspay.sdk.opps.core.sign.JsonUtils;
 import com.huifu.bspay.sdk.opps.core.utils.HttpClientUtils;
 import com.huifu.bspay.sdk.opps.core.utils.RsaUtils;
+import com.huifu.bspay.sdk.opps.core.utils.Sm2Utils;
 import com.huifu.bspay.sdk.opps.core.utils.StringUtil;
+import org.apache.commons.codec.binary.Hex;
 import org.apache.commons.lang3.StringUtils;
+import org.jetbrains.annotations.Nullable;
 
 import java.io.File;
 import java.util.*;
@@ -22,7 +25,7 @@ import java.util.*;
  */
 public abstract class AbstractRequest {
 
-    public static final String SDK_VERSION = "3.0.40";
+    public static final String SDK_VERSION = "3.0.41";
 
     protected static enum RequestMethod {
         GET, POST, DELETE, PUT;
@@ -86,25 +89,15 @@ public abstract class AbstractRequest {
                 headers.put("jpt-x-skill-huifu_id", params.get("huifu_id").toString());
             }
         }
+        if (StringUtils.isNotBlank(config.getSignType())) {
+            headers.put("signType", config.getSignType());
+        }
 
 
 
         String reqData = JSONObject.toJSONString(params);
 
-        String privateKey = config.getRsaPrivateKey();
-        if (BasePay.debug) {
-            System.out.println("PRIVATE_KEY=" + privateKey);
-        }
-        String requestSign;
-        try {
-            String sortedData = JsonUtils.sort4JsonString(reqData, 0);
-            requestSign = RsaUtils.sign(sortedData, privateKey);
-        } catch (Exception e) {
-            if (BasePay.debug) {
-                e.printStackTrace();
-            }
-            requestSign = null;
-        }
+        String requestSign = obtainSign(config, reqData);
         if ((requestSign == null) || (requestSign.length() == 0)) {
             throw new BasePayException(FailureCode.SECURITY_EXCEPTION.getFailureCode(), "Sign error. Please check your privateKey.");
         }
@@ -154,7 +147,24 @@ public abstract class AbstractRequest {
         JSONObject jo = JSON.parseObject(back);
         JSONObject data = jo.getJSONObject("data");
         String sign = jo.getString("sign");
-        String publicKey = config.getRsaPublicKey();
+        boolean checkSign = checkSignFlag(config, data, sign);
+        if (!checkSign) {
+            if (BasePay.debug) {
+                System.out.println("验证签名失败");
+            }
+            throw new BasePayException(FailureCode.SECURITY_EXCEPTION.getFailureCode(), "Response sign check error. Please check your pubkey.");
+        }
+        return data;
+    }
+
+    private static boolean checkSignFlag(MerConfig config, JSONObject data, String sign) {
+
+        String publicKey;
+        if(BasePay.SM2_ALGORITHM.equals(config.getSignType())){
+            publicKey = config.getSm2PublicKey();
+        }else{
+            publicKey = config.getRsaPublicKey();
+        }
         if (StringUtil.isEmpty(publicKey)) {
             publicKey = BasePay.HUIFU_DEFAULT_PUBLIC_KEY;
         }
@@ -166,21 +176,43 @@ public abstract class AbstractRequest {
         boolean checkSign;
         try {
             String sortedData = JsonUtils.sort4JsonString(JSONObject.toJSONString(data), 5);
-            checkSign = RsaUtils.verify(sortedData, publicKey, sign);
+            checkSign = BasePay.SM2_ALGORITHM.equals(config.getSignType())?Sm2Utils.verify(Hex.encodeHexString(sortedData.getBytes()), publicKey, sign):RsaUtils.verify(sortedData, publicKey, sign);
         } catch (Exception e) {
             if (BasePay.debug) {
                 e.printStackTrace();
             }
             checkSign = false;
         }
-        if (!checkSign) {
-            if (BasePay.debug) {
-                System.out.println("验证签名失败");
-            }
-            throw new BasePayException(FailureCode.SECURITY_EXCEPTION.getFailureCode(), "Response sign check error. Please check your pubkey.");
-        }
-        return data;
+        return checkSign;
     }
+
+    @Nullable
+    private static String obtainSign(MerConfig config, String reqData) {
+        String privateKey;
+        if(BasePay.SM2_ALGORITHM.equals(config.getSignType())){
+            privateKey = config.getSm2PrivateKey();
+        }else{
+            privateKey = config.getRsaPrivateKey();
+        }
+        if (BasePay.debug) {
+            System.out.println("PRIVATE_KEY=" + privateKey);
+        }
+        String requestSign;
+        try {
+            String sortedData = JsonUtils.sort4JsonString(reqData, 0);
+            requestSign = BasePay.SM2_ALGORITHM.equals(config.getSignType())?Sm2Utils.sign(sortedData, privateKey):RsaUtils.sign(sortedData, privateKey);
+        } catch (Exception e) {
+            if (BasePay.debug) {
+                e.printStackTrace();
+            }
+            requestSign = null;
+        }
+        return requestSign;
+    }
+
+
+
+
 
     public static String getOriginalStr(Map<String, Object> map) {
         List<String> listKeys = new ArrayList<>(map.keySet());

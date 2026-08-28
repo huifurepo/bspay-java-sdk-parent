@@ -5,6 +5,7 @@ package com.huifu.bspay.sdk.opps.core.enums;
  * @Author: sdk-generator
  */
 public enum FunctionCodeEnum {
+
     /**
      * 电子合同申请列表查询
      */
@@ -1231,17 +1232,17 @@ public enum FunctionCodeEnum {
      */
     V2_MERCHANT_DIRECT_ZFT_REG("v2.merchant.direct.zft.reg", "直付通商户入驻"),
     /**
-     * 支付宝直连-查询申请状态
+     * 支付宝直连-查询申请单状态
      */
-    V2_MERCHANT_DIRECT_ALIPAY_APPLYORDERSTATUS_QUERY("v2.merchant.direct.alipay.applyorderstatus.query", "支付宝直连-查询申请状态"),
+    V2_MERCHANT_DIRECT_ALIPAY_APPLYORDERSTATUS_QUERY("v2.merchant.direct.alipay.applyorderstatus.query", "支付宝直连-查询申请单状态"),
     /**
      * 支付宝直连-换取应用授权令牌
      */
     V2_MERCHANT_DIRECT_ALIPAY_APPAUTHTOKEN_EXCHANGE("v2.merchant.direct.alipay.appauthtoken.exchange", "支付宝直连-换取应用授权令牌"),
     /**
-     * 支付宝直连-申请当面付代签约
+     * 支付宝直连-商户入驻
      */
-    V2_MERCHANT_DIRECT_ALIPAY_FACETOFACESIGN_APPLY("v2.merchant.direct.alipay.facetofacesign.apply", "支付宝直连-申请当面付代签约"),
+    V2_MERCHANT_DIRECT_ALIPAY_FACETOFACESIGN_APPLY("v2.merchant.direct.alipay.facetofacesign.apply", "支付宝直连-商户入驻"),
     /**
      * 证书登记
      */

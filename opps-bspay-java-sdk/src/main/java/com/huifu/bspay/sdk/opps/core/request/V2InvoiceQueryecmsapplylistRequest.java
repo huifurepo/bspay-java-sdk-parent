@@ -27,6 +27,11 @@ public class V2InvoiceQueryecmsapplylistRequest extends BaseRequest {
     @JSONField(name = "huifu_id")
     private String huifuId;
     /**
+     * 协议类型
+     */
+    @JSONField(name = "agreement_type")
+    private String agreementType;
+    /**
      * 当前页
      */
     @JSONField(name = "page_num")
@@ -45,10 +50,11 @@ public class V2InvoiceQueryecmsapplylistRequest extends BaseRequest {
     public V2InvoiceQueryecmsapplylistRequest() {
     }
 
-    public V2InvoiceQueryecmsapplylistRequest(String reqDate, String reqSeqId, String huifuId, String pageNum, String pageSize) {
+    public V2InvoiceQueryecmsapplylistRequest(String reqDate, String reqSeqId, String huifuId, String agreementType, String pageNum, String pageSize) {
         this.reqDate = reqDate;
         this.reqSeqId = reqSeqId;
         this.huifuId = huifuId;
+        this.agreementType = agreementType;
         this.pageNum = pageNum;
         this.pageSize = pageSize;
     }
@@ -75,6 +81,14 @@ public class V2InvoiceQueryecmsapplylistRequest extends BaseRequest {
 
     public void setHuifuId(String huifuId) {
         this.huifuId = huifuId;
+    }
+
+    public String getAgreementType() {
+        return agreementType;
+    }
+
+    public void setAgreementType(String agreementType) {
+        this.agreementType = agreementType;
     }
 
     public String getPageNum() {

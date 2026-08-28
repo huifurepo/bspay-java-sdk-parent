@@ -32,6 +32,8 @@ public class V2InvoiceRejectsignRequestDemo extends BaseCommonDemo {
         request.setReqSeqId(SequenceTools.getReqSeqId32());
         // 汇付商户号
         request.setHuifuId("6666000103334211");
+        // 协议编号
+        request.setAgreementId("130516670601443792");
 
         // 设置非必填字段
         Map<String, Object> extendInfoMap = getExtendInfos();
@@ -49,8 +51,6 @@ public class V2InvoiceRejectsignRequestDemo extends BaseCommonDemo {
     private static Map<String, Object> getExtendInfos() {
         // 设置非必填字段
         Map<String, Object> extendInfoMap = new HashMap<>();
-        // 协议编号
-        extendInfoMap.put("agreement_id", "130516670601443792");
         return extendInfoMap;
     }
 

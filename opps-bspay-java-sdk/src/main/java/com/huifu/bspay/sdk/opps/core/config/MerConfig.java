@@ -57,6 +57,46 @@ public class MerConfig {
     @JSONField(name = "skill_source")
     private String skillSource;
 
+    /*
+      * 签名类型，默认值RSA，可选SM2、RSA
+     */
+    @JSONField(name = "sign_type")
+    private String signType;
+    /**
+     * 商户私钥，用于商户给交易信息签名
+     */
+    @JSONField(name = "sm2_private_key")
+    private String sm2PrivateKey;
+    /**
+     * 公钥，商户用公钥对汇付返回的信息进行验签
+     */
+    @JSONField(name = "sm2_public_key")
+    private String sm2PublicKey;
+
+
+    public String getSignType() {
+        return signType;
+    }
+
+    public void setSignType(String signType) {
+        this.signType = signType;
+    }
+
+    public String getSm2PrivateKey() {
+        return sm2PrivateKey;
+    }
+
+    public void setSm2PrivateKey(String sm2PrivateKey) {
+        this.sm2PrivateKey = sm2PrivateKey;
+    }
+
+    public String getSm2PublicKey() {
+        return sm2PublicKey;
+    }
+
+    public void setSm2PublicKey(String sm2PublicKey) {
+        this.sm2PublicKey = sm2PublicKey;
+    }
 
     public String getSkillSource() {
         return skillSource;

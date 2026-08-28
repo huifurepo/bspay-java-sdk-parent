@@ -38,4 +38,16 @@ public class DemoTestConstants {
      * 自定义的请求超时时间
      */
     public static final String CUSTOM_SOCKET_TIMEOUT = "20000";
+
+    public static final String DEMO_SIGN_TYPE = "SM2";
+
+    /**
+     * 服务商私钥，用于调用接口时进行签名
+     */
+    public static final String DEMO_SM2_PRIVATE_KEY = "MIGTAgEAMBMGByqGSM49AgEGCCqBHM9VAYItBHkwdwIBAQQgWwviCOu0Ea41UNqqlJdRsFlBpLBuAg7D2r+JvIp9nkugCgYIKoEcz1UBgi2hRANCAATmysRUM25JM9z5gYoszB6e/XXSrDQHxgcabHqLLWez6ql6TXLFMiW8xumIpV1DFsrYvENLQdMkV4pcyp5PnhKF";
+    /**
+     * 汇付公钥，用于对汇付返回报文进行签名验证
+     */
+    public static final String DEMO_SM2_PUBLIC_KEY = "MFkwEwYHKoZIzj0CAQYIKoEcz1UBgi0DQgAEggCQxD+Azw5TRCwahgd3kAgpVEwjS2N+j57EmqXyxfUDKUbjZO7aqo/3Qxf6rWQHrAtMPxhtsFcsk0foHDAwEA==";
+
 }

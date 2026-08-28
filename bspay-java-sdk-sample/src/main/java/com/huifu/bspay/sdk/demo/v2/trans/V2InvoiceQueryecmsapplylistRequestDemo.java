@@ -32,6 +32,8 @@ public class V2InvoiceQueryecmsapplylistRequestDemo extends BaseCommonDemo {
         request.setReqSeqId(SequenceTools.getReqSeqId32());
         // 汇付商户号
         request.setHuifuId("6666000103334211");
+        // 协议类型
+        request.setAgreementType("ELECT");
         // 当前页
         request.setPageNum("1");
         // 分页大小
@@ -63,8 +65,6 @@ public class V2InvoiceQueryecmsapplylistRequestDemo extends BaseCommonDemo {
         extendInfoMap.put("order_id", "2025052118403054");
         // 商户名称
         // extendInfoMap.put("mer_name", "");
-        // 协议类型
-        extendInfoMap.put("agreement_type", "ELECT");
         // 产品号
         // extendInfoMap.put("product_id", "");
         return extendInfoMap;

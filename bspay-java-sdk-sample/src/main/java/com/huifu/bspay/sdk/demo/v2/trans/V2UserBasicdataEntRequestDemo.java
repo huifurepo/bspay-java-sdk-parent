@@ -92,11 +92,11 @@ public class V2UserBasicdataEntRequestDemo extends BaseCommonDemo {
         // 操作员
         extendInfoMap.put("operator_id", "");
         // 是否发送短信标识
-        extendInfoMap.put("sms_send_flag", "1");
+        extendInfoMap.put("sms_send_flag", "Y");
         // 扩展方字段
         extendInfoMap.put("expand_id", "");
         // 文件列表
-        // extendInfoMap.put("file_list", get46c99a78A2384cbcB68aD9873e8acd6c());
+        // extendInfoMap.put("file_list", getEa57237822214ca58bdb2d23030e8a65());
         // 公司类型
         // extendInfoMap.put("ent_type", "");
         // 所属行业
@@ -104,7 +104,7 @@ public class V2UserBasicdataEntRequestDemo extends BaseCommonDemo {
         return extendInfoMap;
     }
 
-    private static String get46c99a78A2384cbcB68aD9873e8acd6c() {
+    private static String getEa57237822214ca58bdb2d23030e8a65() {
         JSONObject dto = new JSONObject();
         // 文件类型
         // dto.put("file_type", "test");

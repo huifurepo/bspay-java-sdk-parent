@@ -26,6 +26,11 @@ public class V2InvoiceRejectsignRequest extends BaseRequest {
      */
     @JSONField(name = "huifu_id")
     private String huifuId;
+    /**
+     * 协议编号
+     */
+    @JSONField(name = "agreement_id")
+    private String agreementId;
 
     @Override
     public FunctionCodeEnum getFunctionCode() {
@@ -35,10 +40,11 @@ public class V2InvoiceRejectsignRequest extends BaseRequest {
     public V2InvoiceRejectsignRequest() {
     }
 
-    public V2InvoiceRejectsignRequest(String reqDate, String reqSeqId, String huifuId) {
+    public V2InvoiceRejectsignRequest(String reqDate, String reqSeqId, String huifuId, String agreementId) {
         this.reqDate = reqDate;
         this.reqSeqId = reqSeqId;
         this.huifuId = huifuId;
+        this.agreementId = agreementId;
     }
 
     public String getReqDate() {
@@ -63,6 +69,14 @@ public class V2InvoiceRejectsignRequest extends BaseRequest {
 
     public void setHuifuId(String huifuId) {
         this.huifuId = huifuId;
+    }
+
+    public String getAgreementId() {
+        return agreementId;
+    }
+
+    public void setAgreementId(String agreementId) {
+        this.agreementId = agreementId;
     }
 
 }
