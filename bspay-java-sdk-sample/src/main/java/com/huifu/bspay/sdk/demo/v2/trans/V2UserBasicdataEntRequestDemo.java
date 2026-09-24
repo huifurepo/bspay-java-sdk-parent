@@ -96,7 +96,7 @@ public class V2UserBasicdataEntRequestDemo extends BaseCommonDemo {
         // 扩展方字段
         extendInfoMap.put("expand_id", "");
         // 文件列表
-        // extendInfoMap.put("file_list", getEa57237822214ca58bdb2d23030e8a65());
+        // extendInfoMap.put("file_list", get3133b4feD98248caAbf94f93f127425c());
         // 公司类型
         // extendInfoMap.put("ent_type", "");
         // 所属行业
@@ -104,7 +104,7 @@ public class V2UserBasicdataEntRequestDemo extends BaseCommonDemo {
         return extendInfoMap;
     }
 
-    private static String getEa57237822214ca58bdb2d23030e8a65() {
+    private static String get3133b4feD98248caAbf94f93f127425c() {
         JSONObject dto = new JSONObject();
         // 文件类型
         // dto.put("file_type", "test");

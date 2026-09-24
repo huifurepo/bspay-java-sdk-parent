@@ -46,18 +46,18 @@ public class V2InvoiceOpenRequestDemo extends BaseCommonDemo {
         request.setOrderAmt("70.00");
         // 冲红原因open_type&#x3D;1时必填01：开票有误02：销货退回03：服务终止04：销售转让
         // request.setRedApplyReason("test");
-        // 冲红申请来源open_type&#x3D;1时必填01：销方02：购方
+        // 冲红申请来源open_type&#x3D;1时必填01：销方02：购方03：第三方
         // request.setRedApplySource("test");
         // 原发票代码openType&#x3D;1时必填；参见[发票右上角](https://paas.huifu.com/open/doc/api/#/fp/api_fp_yanglitu.md)；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：144032209110&lt;/font&gt;
         request.setOriIvcCode("90222082");
         // 原发票号码openType&#x3D;1时必填；参见[发票右上角](https://paas.huifu.com/open/doc/api/#/fp/api_fp_yanglitu.md)；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：20685767&lt;/font&gt;
         request.setOriIvcNumber("150000020026");
         // 开票商品信息
-        request.setGoodsInfos(get238d9ce57f54438c982c71b0975e320f());
+        request.setGoodsInfos(getC6a36685B0564080A1f00db79747ed42());
         // 不动产销售特殊字段specialFlag为05时，必填；jsonArray格式
-        // request.setEstateSales(get4ca5ce26399544ab942e2f8d2572bcfa());
+        // request.setEstateSales(get825c74feC48446519d3aB46871b242af());
         // 不动产租赁特殊字段specialFlag为16时，必填；jsonArray格式
-        // request.setEstateLease(get8f873e58D87e4b07A467C0f82ffc3b62());
+        // request.setEstateLease(get68aea0a200b84510B95fEbf67bf4e1aa());
 
         // 设置非必填字段
         Map<String, Object> extendInfoMap = getExtendInfos();
@@ -89,8 +89,6 @@ public class V2InvoiceOpenRequestDemo extends BaseCommonDemo {
         extendInfoMap.put("buyer_acct_no", "");
         // 购方企业类型
         extendInfoMap.put("buyer_ent_type", "");
-        // 收票人手机号
-        extendInfoMap.put("rec_ivc_phone", "");
         // 收票人邮件
         extendInfoMap.put("rec_ivc_email", "test@126.com");
         // 备注
@@ -100,17 +98,29 @@ public class V2InvoiceOpenRequestDemo extends BaseCommonDemo {
         // 红字信息表编号
         extendInfoMap.put("red_info_number", "");
         // 开票人信息
-        extendInfoMap.put("payer_info", get67b8016609744dc680744d137112211a());
+        extendInfoMap.put("payer_info", get5849a9a316d84bf7966d897f8a655ad6());
         // 开票结果异步通知地址
         extendInfoMap.put("callback_url", "virgo://http://192.168.85.157:30031/sspm/testVirgo");
         // 强制开票标识
         extendInfoMap.put("buyer_info_confirm", "");
         // 交易订单信息
-        extendInfoMap.put("order_info", get6831958258194474Bd67Cc04b725652a());
+        extendInfoMap.put("order_info", getBde9fd3e10a8499dB6e786ba643edb13());
+        // 购方自然人标识
+        // extendInfoMap.put("buyer_nature_person_type", "");
+        // 购方自然人证件类型
+        // extendInfoMap.put("buyer_nature_person_card_type", "");
+        // 购方自然人证件号码
+        // extendInfoMap.put("buyer_nature_person_card_no", "");
+        // 购方自然人国籍代码
+        // extendInfoMap.put("buyer_nature_person_nation_no", "");
+        // 减按征税类型代码
+        // extendInfoMap.put("reduced_tax_type", "");
+        // 二手车信息
+        // extendInfoMap.put("used_car", getB4eb2b8bF10841598176D92e1e6279a9());
         return extendInfoMap;
     }
 
-    private static String get238d9ce57f54438c982c71b0975e320f() {
+    private static String getC6a36685B0564080A1f00db79747ed42() {
         JSONObject dto = new JSONObject();
         // 发票行性质
         dto.put("ivc_nature", "0");
@@ -150,7 +160,7 @@ public class V2InvoiceOpenRequestDemo extends BaseCommonDemo {
         return dtoList.toJSONString();
     }
 
-    private static String get67b8016609744dc680744d137112211a() {
+    private static String get5849a9a316d84bf7966d897f8a655ad6() {
         JSONObject dto = new JSONObject();
         // 收款人
         dto.put("payee", "收款人");
@@ -162,7 +172,7 @@ public class V2InvoiceOpenRequestDemo extends BaseCommonDemo {
         return dto.toJSONString();
     }
 
-    private static String get4ca5ce26399544ab942e2f8d2572bcfa() {
+    private static String get825c74feC48446519d3aB46871b242af() {
         JSONObject dto = new JSONObject();
         // 不动产地址
         // dto.put("addr", "test");
@@ -188,7 +198,7 @@ public class V2InvoiceOpenRequestDemo extends BaseCommonDemo {
         return dtoList.toJSONString();
     }
 
-    private static String get8f873e58D87e4b07A467C0f82ffc3b62() {
+    private static String get68aea0a200b84510B95fEbf67bf4e1aa() {
         JSONObject dto = new JSONObject();
         // 不动产地址
         // dto.put("addr", "test");
@@ -210,12 +220,58 @@ public class V2InvoiceOpenRequestDemo extends BaseCommonDemo {
         return dtoList.toJSONString();
     }
 
-    private static JSON get6831958258194474Bd67Cc04b725652a() {
+    private static JSON getBde9fd3e10a8499dB6e786ba643edb13() {
         JSONObject dto = new JSONObject();
         // 交易订单号
         dto.put("order_id", "002900TOP4A260519173506P786ac13683b000015");
         // 交易订单日期
         dto.put("order_date", "20260701");
+
+        return dto;
+    }
+
+    private static JSON getAb411c71069e4df49eb94d27ccdbb9d6() {
+        JSONObject dto = new JSONObject();
+        // 车牌号码
+        // dto.put("plate_number", "");
+        // 登记证号
+        // dto.put("register_cert_number", "");
+        // 厂牌型号
+        // dto.put("factory_plate_model", "");
+        // 车辆类型代码
+        // dto.put("car_type", "");
+
+        JSONArray dtoList = new JSONArray();
+        dtoList.add(dto);
+        return dtoList;
+    }
+
+    private static JSON getB4eb2b8bF10841598176D92e1e6279a9() {
+        JSONObject dto = new JSONObject();
+        // 二手车销售统一发票正向开票标识
+        // dto.put("direction_type", "");
+        // 二手车企业性质
+        // dto.put("ent_prop_type", "");
+        // 二手车销售统一发票号码
+        // dto.put("unified_sales_inv_number", "");
+        // 卖方自然人标识
+        // dto.put("car_nature_person_type", "");
+        // 卖方自然人证件类型
+        // dto.put("car_nature_person_card_type", "");
+        // 卖方自然人证件号码
+        // dto.put("car_nature_person_card_no", "");
+        // 卖方自然人国籍代码
+        // dto.put("car_nature_person_nation_no", "");
+        // 卖方单位名称/自然人姓名
+        // dto.put("car_nature_ent_name", "");
+        // 卖方税号
+        // dto.put("car_ent_no", "");
+        // 卖方地址/自然人地址
+        // dto.put("car_nature_ent_address", "");
+        // 卖方电话/自然人电话
+        // dto.put("car_nature_ent_tell", "");
+        // 车辆费基本信息集合
+        // dto.put("car_base_list", getAb411c71069e4df49eb94d27ccdbb9d6());
 
         return dto;
     }

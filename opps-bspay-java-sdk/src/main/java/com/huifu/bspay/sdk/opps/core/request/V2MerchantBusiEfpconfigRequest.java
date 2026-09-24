@@ -52,7 +52,7 @@ public class V2MerchantBusiEfpconfigRequest extends BaseRequest {
     @JSONField(name = "business_model")
     private String businessModel;
     /**
-     * 银行类型switch_state有值时需填写； ht1-华通银行，xw0-XW银行，ss0-苏商银行,wz1-微众银行&lt;font color&#x3D;&quot;green&quot;&gt;示例值：ht1&lt;/font&gt;
+     * 银行类型switch_state有值时需填写； ht1-华通银行，xw0-XW银行,wz1-微众银行&lt;font color&#x3D;&quot;green&quot;&gt;示例值：ht1&lt;/font&gt;
      */
     @JSONField(name = "out_funds_gate_id")
     private String outFundsGateId;

@@ -19,7 +19,7 @@ public class BasePay {
 	/**
 	 * 是否使用默认的httpClient
 	 */
-	public static volatile boolean userDefaultCloseableHttpClient = true;
+	public static volatile boolean userDefaultCloseableHttpClient = false;
 	/**
 	 * 调试模式，打开可以输出更多调试日志
 	 */

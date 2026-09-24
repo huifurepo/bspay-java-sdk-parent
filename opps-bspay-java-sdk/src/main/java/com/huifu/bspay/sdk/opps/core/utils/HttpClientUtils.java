@@ -54,8 +54,6 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
-import java.util.concurrent.ScheduledExecutorService;
-import java.util.concurrent.ScheduledThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.ReentrantLock;
 
@@ -65,11 +63,8 @@ import java.util.concurrent.locks.ReentrantLock;
  */
 public class HttpClientUtils {
 
-    private static CloseableHttpClient httpClient;
+    private static volatile CloseableHttpClient httpClient;
     private static RequestConfig requestConfig;
-    private static int connectionRequestTimeout = 30000;
-    private static int socketTimeout = 20000;
-    private static int connectTimout = 20000;
     private static final ReentrantLock lock = new ReentrantLock();
 
     public static CloseableHttpClient getHttpClient(String url) {
@@ -151,28 +146,19 @@ public class HttpClientUtils {
             initRequestConfig();
         }
         CloseableHttpClient httpClient = HttpClients.custom().setConnectionManager(cm)
-                .setDefaultRequestConfig(requestConfig).setRetryHandler(httpRequestRetryHandler).build();
-
-        closeExpiredConnectionsPeriodTask(1, cm);
+                .setDefaultRequestConfig(requestConfig).setRetryHandler(httpRequestRetryHandler)
+                .evictExpiredConnections().build();
 
         return httpClient;
     }
 
-    private static void closeExpiredConnectionsPeriodTask(int timeUnitBySecond, PoolingHttpClientConnectionManager cm) {
-        ScheduledExecutorService executorService = new ScheduledThreadPoolExecutor(1);
-        executorService.scheduleAtFixedRate(new Runnable() {
-            @Override
-            public void run() {
-                if (cm != null) {
-                    cm.closeExpiredConnections();
-                }
-            }
-        }, 10L, timeUnitBySecond, TimeUnit.MINUTES);
-    }
-
     static void initRequestConfig() {
-        requestConfig = RequestConfig.custom().setSocketTimeout(socketTimeout).setConnectTimeout(connectTimout)
-                .setConnectionRequestTimeout(connectionRequestTimeout).build();
+        MerConfig merConfig= BasePay.getConfig("default");
+        requestConfig = RequestConfig.custom()
+                .setConnectTimeout(Integer.parseInt(Optional.ofNullable(merConfig).map(MerConfig::getCustomConnectTimeout).orElse("30000")))
+                .setSocketTimeout(Integer.parseInt(Optional.ofNullable(merConfig).map(MerConfig::getCustomSocketTimeout).orElse("30000")))
+                .setConnectionRequestTimeout(Integer.parseInt(Optional.ofNullable(merConfig).map(MerConfig::getCustomConnectionRequestTimeout).orElse("30000")))
+                .build();
     }
 
     public static String httpPost(String url, Map<String, Object> params, boolean isJson) throws BasePayException {

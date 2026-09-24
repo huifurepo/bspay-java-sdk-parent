@@ -50,7 +50,7 @@ public class V2UserBasicdataIndvModifyRequestDemo extends BaseCommonDemo {
         // 设置非必填字段
         Map<String, Object> extendInfoMap = new HashMap<>();
         // 个人证件有效期类型
-        extendInfoMap.put("cert_validity_type", "2");
+        extendInfoMap.put("cert_validity_type", "1");
         // 个人证件有效期开始日期
         extendInfoMap.put("cert_begin_date", "20200111");
         // 个人证件有效期截止日期
@@ -60,7 +60,7 @@ public class V2UserBasicdataIndvModifyRequestDemo extends BaseCommonDemo {
         // 手机号
         extendInfoMap.put("mobile_no", "15556622000");
         // 文件列表
-        // extendInfoMap.put("file_list", getF93305f7Bad24021Bfab6b92c98e001d());
+        // extendInfoMap.put("file_list", getCfff4e1fAf2f41b2Ba99554f5d7c21dd());
         // 地址
         // extendInfoMap.put("address", "");
         // 所属行业
@@ -74,7 +74,7 @@ public class V2UserBasicdataIndvModifyRequestDemo extends BaseCommonDemo {
         return extendInfoMap;
     }
 
-    private static String getF93305f7Bad24021Bfab6b92c98e001d() {
+    private static String getCfff4e1fAf2f41b2Ba99554f5d7c21dd() {
         JSONObject dto = new JSONObject();
         // 文件类型
         // dto.put("file_type", "test");

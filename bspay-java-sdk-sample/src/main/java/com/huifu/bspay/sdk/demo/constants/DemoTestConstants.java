@@ -39,7 +39,7 @@ public class DemoTestConstants {
      */
     public static final String CUSTOM_SOCKET_TIMEOUT = "20000";
 
-    public static final String DEMO_SIGN_TYPE = "SM2";
+    public static final String DEMO_SIGN_TYPE = "RSA";
 
     /**
      * 服务商私钥，用于调用接口时进行签名

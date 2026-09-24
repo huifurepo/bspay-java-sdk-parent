@@ -73,16 +73,16 @@ public class V2InvoiceMerRegRequestDemo extends BaseCommonDemo {
         extendInfoMap.put("contact", "王姗");
         // 联系人身份证号
         extendInfoMap.put("id_card_no", "210123198702122747");
-        // 业务到期年限
-        extendInfoMap.put("valid_period", "1");
-        // 自动续约
-        extendInfoMap.put("auto_renewal", "Y");
-        // 商户入驻结果异步通知地址
-        extendInfoMap.put("callback_url", "http: //service.example.com/to/path");
         // 开票模式
         extendInfoMap.put("issue_mode", "LE_QI_LINK");
         // 区域代码
         // extendInfoMap.put("area_code", "");
+        // 协议附件
+        // extendInfoMap.put("net_url", "");
+        // 签约商户名称
+        // extendInfoMap.put("mer_name", "");
+        // 生效日期
+        // extendInfoMap.put("start_date", "");
         return extendInfoMap;
     }
 
